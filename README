@@ -1,1 +1,22 @@
 Data Migration Project
+
+git@gitlab.hiringboss.com:truong.pham/datamigration.git
+
+# Git global setup:
+git config --global user.name "Truong Pham"
+git config --global user.email "truong.pham@hrboss.com"
+
+# Create Repository
+mkdir datamigration
+cd datamigration
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@gitlab.hiringboss.com:truong.pham/datamigration.git
+git push -u origin master
+
+# Existing Git Repo?
+cd existing_git_repo
+git remote add origin git@gitlab.hiringboss.com:truong.pham/datamigration.git
+git push -u origin master
