@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>pentaho_export</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit/>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user/>
+  <created_date>2017&#x2f;01&#x2f;20 16&#x3a;14&#x3a;34.085</created_date>
+  <modified_user/>
+  <modified_date>2017&#x2f;01&#x2f;20 16&#x3a;14&#x3a;34.085</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>hansonsearch3</name>
+    <server>dmp.vinceredev.com</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>hansonsearch3</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>p</name>
+    <server>35.158.17.10</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>hansonsearch.vincere.io</database>
+    <port>15432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afed2893bca3804985248bc3f89b</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>15432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Contact Comment</from><to>Database lookup</to><enabled>N</enabled> </hop>
+  <hop> <from>Database lookup</from><to>Table output</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate id</from><to>fe</to><enabled>Y</enabled> </hop>
+  <hop> <from>candidate FE-SFE</from><to>candidate id</to><enabled>Y</enabled> </hop>
+  <hop> <from>fe</from><to>sfe</to><enabled>Y</enabled> </hop>
+  <hop> <from>industry</from><to>candidate_industry</to><enabled>N</enabled> </hop>
+  <hop> <from>sfe</from><to>candidate_functional_expertise</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate id</from><to>industry</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate industry_location</from><to>candidate id</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate id</from><to>common_location InsertUpdate</to><enabled>N</enabled> </hop>
+  <hop> <from>sfe</from><to>Insert &#x2f; Update 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>fe</from><to>Insert &#x2f; Update</to><enabled>N</enabled> </hop>
+  </order>
+  <step>
+    <name>Contact Comment</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>hansonsearch3</connection>
+    <sql>with temp_1 as &#x28;&#xa;        select&#xa;                  c.contactid&#xa;                  , cast&#x28;&#x27;-10&#x27; as int&#x29; as userid&#xa;                --, COALESCE&#x28;c.FirstName &#x2b; &#x27; &#x27; &#x2b; c.LastName, &#x27;&#x27;&#x29; as ContactName&#xa;                , li.LogDate&#xa;                --, u.UserName, li.ShortUser&#xa;                , &#x27;Date&#x3a; &#x27; &#x2b; coalesce&#x28;convert&#x28;varchar&#x28;100&#x29;, li.LogDate, 120&#x29;,&#x27;&#x27;&#x29; &#x2b; char&#x28;10&#x29;&#xa;                &#x2b; &#x27;From&#x3a; &#x27; &#x2b; COALESCE&#x28;u.UserName, li.ShortUser, &#x27;&#x27;&#x29;  &#x2b; char&#x28;10&#x29;&#xa;                &#x2b; &#x27;Subject&#x3a; &#x27; &#x2b; COALESCE&#x28;li.Subject, &#x27;&#x27;&#x29; &#x2b; char&#x28;10&#x29;&#xa;                &#x2b; COALESCE&#x28;&#x27;Body&#x3a; &#x27; &#x2b; ld.Text, &#x27;&#x27;&#x29; &#x2b; char&#x28;10&#x29; as comment&#xa;        -- select count&#x28;&#x2a;&#x29; &#xa;        from dbo.Contacts c&#xa;        left outer join dbo.LogItems li ON c.ContactId &#x3d; li.ItemId&#xa;        left outer join dbo.LogDataIndex ldi ON ldi.LogItemId &#x3d; li.LogItemId&#xa;        left outer join dbo.LogData ld ON ldi.LogDataId &#x3d; ld.LogDataId&#xa;        left outer join dbo.Users u ON li.userid &#x3d; u.UserId&#xa;        where c.descriptor &#x3d; 1 &#x29; -- FOR CONTACT 235647 &#x3e;&#x3e; 70.955&#xa;        --and ld.Text &#x3c;&#x3e; &#x27;&#x27; &#x29; --and ItemId is not null and ltrim&#x28;rtrim&#x28;ItemId&#x29;&#x29; &#x3c;&#x3e; &#x27;&#x27; &#x29;&#xa;select &#x2a; from temp_1 --where contactid in &#x28;&#x27;100016-4726-13112&#x27;&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Database lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>contactid</name>
+        <field>external_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_contactid</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>192</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#x2f; Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate_functional_expertise</table>
+      <key>
+        <name>final_candidate_id</name>
+        <field>candidate_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>final_fe_id</name>
+        <field>functional_expertise_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>final_candidate_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>functional_expertise_id</name>
+        <rename>final_fe_id</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>336</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#x2f; Update 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <commit>1000</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate_functional_expertise</table>
+      <key>
+        <name>final_candidate_id</name>
+        <field>candidate_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>final_fe_id</name>
+        <field>functional_expertise_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>final_sfe_id</name>
+        <field>sub_functional_expertise_id</field>
+        <condition>&#x3d; &#x7e;NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>final_candidate_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>sub_functional_expertise_id</name>
+        <rename>final_sfe_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>functional_expertise_id</name>
+        <rename>final_fe_id</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>432</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <schema>public</schema>
+    <table>contact_comment</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>Y</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field>contactid</partitioning_field>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>contact_id</column_name>
+          <stream_name>actual_contactid</stream_name>
+        </field>
+        <field>
+          <column_name>user_id</column_name>
+          <stream_name>userid</stream_name>
+        </field>
+        <field>
+          <column_name>comment_content</column_name>
+          <stream_name>comment</stream_name>
+        </field>
+        <field>
+          <column_name>insert_timestamp</column_name>
+          <stream_name>LogDate</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>304</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>candidate FE-SFE</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>hansonsearch3</connection>
+    <sql>&#xa;-- CANDIDATE &#x3d; 2&#xa;select&#xa;                  CL.ContactId&#xa;                , CL.FirstName, CL.LastName&#xa;                , Coalesce&#x28;NULLIF&#x28;case&#xa;                        when Segment.Segment &#x3d; &#x27;&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Asset management&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Branding&#x2f;Design&#x27; then &#x27;Branding and Design&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcast&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcasting Agency&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcasting PR&#x27; then &#x27;Broadcast PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Business Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Commercial Support&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Comms&#x27; then &#x27;Communications Planning&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer&#x27; then &#x27;Consumer PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer Tech&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;corporate&#x27; then &#x27;Corporate PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Cross&#x27; then &#x27;Media Cross&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Defence&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;digital&#x27; then &#x27;Digital&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Education&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Energy&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Entertainment&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;financial&#x27; then &#x27;Financial PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Financial Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;FMCG&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;healthcare&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Healthcare &#x2f; Pharma&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;HR&#x27; then &#x27;Human Resources&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Internal Communictions&#x27; then &#x27;Internal Communications&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Internal PR&#x27; then &#x27;Internal Communications&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Luxury&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Management Consultancy&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Reseach&#x2f;Insight&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research &#x2f; Insights&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insight&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insights&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing &#x2f; Insight&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing&#x2f;Insight&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Media&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Medical Education&#x27; then &#x27;Medical Affairs&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Not for profit&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Office&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Planning and Buying Agency&#x27; then &#x27;Planning and Buying&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;PR and Communications&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Production Agency&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Professional Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Project Management&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Public Relations&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Public Sector&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Pure Player&#x27; then &#x27;Pure Play Digital &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Retail&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Sale&#x27; then &#x27;Sales&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Shopping Marketing&#x27; then &#x27;Shopper Marketing&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Strategy Consultancy&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Strategy Consulting&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Supply Side Platform&#x27; then &#x27;Supply Side Platform &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;technology&#x27; then &#x27;Technology  &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Transport&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Utilities&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Web&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Advertising&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer Technology&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer Technology&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Field Marketing&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Field Sales&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Hibernate&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Information Architecture&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Logistics &#x26; Express&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Magento&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Modeling&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;NodeJS&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Objective-c&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;On Rails&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;OOH&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;OS&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;OTC&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Prestashop&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Pricing and Reimbursement&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Print&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Product Design&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Spring&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;SVN&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Swift&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Trade Activation&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Transport&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Unix&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;UX&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;W3C compliance,&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Windows&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Wireless&#x27; then &#x27;&#x27;&#xa;                else Segment.Segment&#xa;                end, &#x27;&#x27;&#x29;, &#x27;Others&#x27;&#x29; as &#x27;FUNCTIONAL_EXPERTISE&#x27; --&#x3e; VC functional_expertise.name&#xa;                &#xa;		--, skill.skill as &#x27;SUB-FUNCTIONAL_EXPERTISE&#x28;old&#x29;&#x27; --&#x3e; VC sub_functional_expertise.name&#xa;		, case&#xa;                        when skill.skill &#x3d; &#x27;Advertising&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Consumer Technology&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Consumer Technology&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Crisis &#x26; Issues Managment&#x27; then &#x27;Crisis &#x26; Issues Management&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Data &#x26; Analysis&#x27; then &#x27;Data Analytics&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Defence and Security&#x27; then &#x27;Defence&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Field Marketing&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Field Sales&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Hibernate&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Information Architecture&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Java&#x27; then &#x27;Javascript&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Logistics &#x26; Express&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Magento&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Measurement &#x26; Evaluation&#x27; then &#x27;Analytics&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Modeling&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;NodeJS&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Objective-c&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;On Rails&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;OOH&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;OS&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;OTC&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;pharmaceuticals&#x27; then &#x27;Pharamaceutical&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Prestashop&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Pricing and Reimbursement&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Print&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Product Design&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Quantitative research&#x27; then &#x27;Quantative Research&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Spring&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;SVN&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Swift&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Trade Activation&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Transport&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Travel &#x26; Tourism&#x27; then &#x27;Travel and Tourism&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Unix&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;UX&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;W3C compliance,&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Windows&#x27; then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Wireless&#x27; then &#x27;&#x27;&#xa;                else skill.skill&#xa;                end as &#x27;SUB-FUNCTIONAL_EXPERTISE&#x27; --&#x3e; VC sub_functional_expertise.name&#xa;-- select count&#x28;&#x2a;&#x29; -- 144592 -- select distinct Segment.Segment --top 10 &#x2a;&#xa;from Contacts CL&#xa;left join &#x28; select distinct c.ContactId, s.segment from contacts c left join SgmtInstances si on c.contactid &#x3d; si.ObjectId left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null &#x29; Segment on CL.contactid &#x3d; Segment.contactid&#xa;left join &#x28; select c.contactid,ss.skill from Contacts c left join SkillInstances si on c.contactid &#x3d; si.objectid  left join skills ss on si.skillid &#x3d; ss.skillid &#x29; skill on CL.contactid &#x3d; skill.contactid&#xa;where cl.descriptor &#x3d; 2&#xa;--and CL.FirstName &#x3d; &#x27;Katy&#x27;&#xa;--and CL.ContactId in &#x28;&#x27;110998-3207-1554&#x27;,&#x27;110452-3164-11130&#x27;,&#x27;110393-3899-1662&#x27;,&#x27;110387-4971-1110&#x27;,&#x27;110362-5188-1540&#x27;,&#x27;110256-8229-9337&#x27;,&#x27;110245-1034-8294&#x27;,&#x27;110206-7622-13100&#x27;,&#x27;110129-5026-15322&#x27;,&#x27;110046-5356-15347&#x27;,&#x27;&#x27;&#x29; &#x3b;&#xa;--and CL.ContactId in &#x28;&#x27;100593-8845-12136&#x27;&#x29; &#xa;--SELECT contactid, Sector, r1 &#x3d; ROW_NUMBER&#x28;&#x29; OVER &#x28;PARTITION BY contactid ORDER BY contactid desc&#x29; from Contacts&#xa;&#xa;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>candidate id</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>ContactId</name>
+        <field>external_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>final_candidate_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>current_location_id</name>
+        <rename>current_location_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>192</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>candidate industry_location</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>hansonsearch3</connection>
+    <sql>&#xa;select &#xa;                  CL.ContactId&#xa;		, ltrim&#x28;Stuff&#x28; Coalesce&#x28;&#x27; &#x27; &#x2b; NULLIF&#x28;CL.Address1, &#x27;&#x27;&#x29;, &#x27;&#x27;&#x29; &#x2b; Coalesce&#x28;&#x27;, &#x27; &#x2b; NULLIF&#x28;CL.Address2, &#x27;&#x27;&#x29;, &#x27;&#x27;&#x29; &#x2b; Coalesce&#x28;&#x27;, &#x27; &#x2b; NULLIF&#x28;CL.Address3, &#x27;&#x27;&#x29;, &#x27;&#x27;&#x29;, 1, 1, &#x27;&#x27;&#x29; &#x29; as &#x27;address&#x27; --&#x3e; VC common_location&#xa;                , ltrim&#x28;Stuff&#x28; Coalesce&#x28;&#x27; &#x27; &#x2b; NULLIF&#x28;CL.City, &#x27;&#x27;&#x29;, &#x27;&#x27;&#x29; &#x2b; Coalesce&#x28;&#x27;, &#x27; &#x2b; NULLIF&#x28;CL.Country, &#x27;&#x27;&#x29;, &#x27;&#x27;&#x29;, 1, 1, &#x27;&#x27;&#x29; &#x29; as &#x27;location_name&#x27; --&#x3e; VC common_location&#xa;		, Coalesce&#x28;NULLIF&#x28;CL.City, &#x27;&#x27;&#x29;, CL.SubLocation&#x29; as &#x27;city&#x27; --&#x3e; VC common_location&#xa;		, CL.County as &#x27;district&#x27; --&#x3e; VC common_location&#xa;		, CL.Country as &#x27;country&#x27; --&#x3e; VC common_location &#x28;UK and France only&#x29;&#xa;&#xa;		--, CL.Sector as &#x27;INDUSTRY&#x27; --&#x3e; VC vertical.name&#xa;                , case&#xa;                        when CL.Sector &#x3d; &#x27;Ad Networks&#x27; then &#x27;Advertising Networks&#x2f;Adtech Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Advertising&#x27; then &#x27;Advertising Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Branding&#x2f;Design&#x27; then &#x27;Branding and Design Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Business Intelligence&#x27; then &#x27;Business Intelligence Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Consulting Services&#x27; then &#x27;&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Digital&#x27; then &#x27;Digital Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Market Research&#x2f;Insights&#x27; then &#x27;Market Research&#x2f;Insights Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Marketing&#x27; then &#x27;Marketing Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Marketing Services&#x27; then &#x27;Marketing Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Media&#x27; then &#x27;Media Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Medical Education&#x27; then &#x27;Medical Education Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Mobile Marketing&#x27; then &#x27;Mobile Marketing Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Non Dept Gov Body&#x27; then &#x27;Non Dept Gov Body&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Pharmacuetical&#x2f;Bio Tech&#x27; then &#x27;Pharmaceutical&#x2f;Bio Tech&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Platforms&#x27; then &#x27;Technology&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;PR and Communications&#x27; then &#x27;PR and Communications Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Public Affairs&#x27; then &#x27;Public Affairs Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Shopping Marketing&#x27; then &#x27;Shopper Marketing Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Social Media&#x27; then &#x27;Social Media Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;Strategy Consulting&#x27; then &#x27;Strategy Consulting Agency&#x27;&#xa;                        when CL.Sector &#x3d; &#x27;&#x27; then &#x27;Content Agency&#x27;&#xa;                        when CL.Sector is null then &#x27;Content Agency&#x27;&#xa;                        else CL.Sector&#xa;                        end as &#x27;INDUSTRY&#x27; --&#x3e; VC vertical.name&#xa;   &#xa;-- select distinct CL.Sector --top 10 &#x2a;&#xa;from Contacts CL&#xa;where cl.descriptor &#x3d; 2&#xa;--and CL.ContactId in &#x28;&#x27;100175-9354-14100&#x27;&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>candidate_functional_expertise</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <schema>public</schema>
+    <table>candidate_functional_expertise</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>Y</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field>contactid</partitioning_field>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>candidate_id</column_name>
+          <stream_name>final_candidate_id</stream_name>
+        </field>
+        <field>
+          <column_name>functional_expertise_id</column_name>
+          <stream_name>final_fe_id</stream_name>
+        </field>
+        <field>
+          <column_name>sub_functional_expertise_id</column_name>
+          <stream_name>final_sfe_id</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>576</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>candidate_industry</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <schema>public</schema>
+    <table>candidate_industry</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>Y</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field>contactid</partitioning_field>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>vertical_id</column_name>
+          <stream_name>final_industry_id</stream_name>
+        </field>
+        <field>
+          <column_name>candidate_id</column_name>
+          <stream_name>final_candidate_id</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>448</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>common_location InsertUpdate</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>common_location</table>
+      <key>
+        <name>current_location_id</name>
+        <field>id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>address</name>
+        <rename>address</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>location_name</name>
+        <rename>location_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>city</name>
+        <rename>city</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>district</name>
+        <rename>district</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>country</name>
+        <rename>country</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>336</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>fe</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>FUNCTIONAL_EXPERTISE</name>
+        <field>name</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>final_fe_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>336</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>industry</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>INDUSTRY</name>
+        <field>name</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>final_industry_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>336</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>sfe</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>sub_functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>SUB-FUNCTIONAL_EXPERTISE</name>
+        <field>name</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>final_fe_id</name>
+        <field>functional_expertise_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>final_sfe_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>432</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
