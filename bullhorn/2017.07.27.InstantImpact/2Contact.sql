@@ -79,7 +79,7 @@ select top 10 *,len(comments) as '(length-contact-comment)' from comments
 		+ Coalesce('Designed Categories: ' + NULLIF(cast(Cl.desiredCategories as varchar(max)), '') + char(10), '')
 		--+ Coalesce('Desired Specialties: ' + NULLIF(cast(Cl.desiredSpecialties as varchar(max)), '') + char(10), '')
 		+ Coalesce('Desired Skills: ' + NULLIF(cast(Cl.desiredSkills as varchar(max)), '') + char(10), '')
-		+ Coalesce('Lead Status: ' + NULLIF(cast(customText1 as varchar(max)), '') + char(10), '')
+		--+ Coalesce('Lead Status: ' + NULLIF(cast(customText1 as varchar(max)), '') + char(10), '')
 		+ Coalesce('Reason Lost: ' + NULLIF(customText12, '') + char(10), '')
 		+ Coalesce('Source: ' + NULLIF(source, '') + char(10), '')
 		+ Coalesce('Referred By: ' + NULLIF(cast(referredByUserID as varchar(max)), '') + char(10), '')
@@ -93,7 +93,7 @@ select top 10 *,len(comments) as '(length-contact-comment)' from comments
 		+ Coalesce('Industry: ' + NULLIF(customText14, '') + char(10), '')
 		+ Coalesce('Last Note: ' + NULLIF( replace(replace(replace(replace(replace(replace([dbo].[udf_StripHTML](UC.lastNote_denormalized),'&nbsp;',''),'&amp;','&'),'&#39;',''''),'&ldquo;','"'),'&rdquo;','"'),'&gt;','') , '') + char(10), '') --cast(UC.lastNote_denormalized as varchar(max))
                 , 1, 0, '') as note
-        -- select distinct customText11 --customText3
+        -- select distinct status -- customText11 --customText3
         from bullhorn1.BH_UserContact UC
         left join tmp_country on UC.countryID = tmp_country.CODE
         left join bullhorn1.BH_Client Cl on Cl.Userid = UC.UserID
@@ -127,7 +127,7 @@ select  UC.clientCorporationID as 'contact-companyId'
 	, note.note as 'contact-Note'
         --, replace(replace(replace(replace(replace(ltrim(rtrim([dbo].[udf_StripHTML](c.comments))),'&nbsp;',''),'&amp;','&'),'&#39;',''''),'&ldquo;','"'),'&rdquo;','"') as 'contact-comment'
 	--, len(replace(c.comments,'&#x0D;','')) as '(length-contact-comment)'
--- select count(*) --10078
+-- select count(*) --10078 -- select distinct status
 from bullhorn1.BH_Client Cl --where isPrimaryOwner = 1
 left join bullhorn1.BH_UserContact UC ON Cl.userID = UC.userID
 left join bullhorn1.BH_UserContact UC2 on Cl.recruiterUserID = UC2.userID

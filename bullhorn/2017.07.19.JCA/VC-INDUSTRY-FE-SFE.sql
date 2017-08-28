@@ -20,7 +20,7 @@ delete from contact_functional_expertise cfe where cfe.contact_id in (
 
 
 ---------------------------------------------------- CANDIDATE ----------------------------------------------------
-select id,external_id, first_name, last_name from candidate where external_id in ('110387-4971-1110') -- id in (124611) or first_name = 'Madeleine' or 
+select id,external_id, first_name, last_name from candidate where external_id in ('992904-5027-13143') -- id in (124611) or first_name = 'Madeleine' or 
 
 -- INDUSTRY
 select * from candidate_industry where candidate_id = 71780 --INDUSTRY
@@ -40,8 +40,11 @@ left join functional_expertise fe on fe.id = cfe.functional_expertise_id
 left join sub_functional_expertise sfe on sfe.id = cfe.sub_functional_expertise_id
 --where c.id in (180668,188793,129047)
 --where c.external_id is not null
-where c.external_id in ('110387-4971-1110','100593-8845-12136')
+where c.external_id in ('992904-5027-13143')
 order by c.first_name asc;
+
+-- INSERT IMPORTED FE & SFE
+insert into candidate_functional_expertise (functional_expertise_id,candidate_id) values (2994,193110);
 
 -- DELETE IMPORTED FE & SFE
 delete from candidate_functional_expertise cfe where cfe.candidate_id in (

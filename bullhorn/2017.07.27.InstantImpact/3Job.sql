@@ -108,10 +108,10 @@ select a.jobPostingID as 'position-externalId'
 	, cast(a.publicDescription as varchar(max)) as 'position-publicDescription'
 	, cast(a.description as varchar(max)) as 'position-internalDescription'
 	, CONVERT(VARCHAR(10),a.startDate,120) as 'position-startDate'
-	, convert(varchar(10),iif(a.status = 'Lead' or a.status = 'Closed',getdate()-2,dateClosed),120) as 'position-endDate'
+	, convert(varchar(10),iif(a.status in ('Placed','Failed','Failed - Internal'),getdate()-2,dateClosed),120) as 'position-endDate'
 	, jobdoc.jobFile as 'position-document'
 	, concat(note.note,placementnote.note) as 'position-note' --left(,32000)
--- select distinct status -- type --employmentType -- select count(*) --918
+-- select distinct status -- select distinct type --employmentType -- select count(*) --918
 from bullhorn1.BH_JobPosting a
 left join bullhorn1.BH_Client b on a.clientUserID = b.userID
 left JOIN bullhorn1.BH_ClientCorporation CC ON b.clientCorporationID = CC.clientCorporationID

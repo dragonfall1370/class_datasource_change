@@ -52,9 +52,10 @@ with
                         --+ Coalesce('Phone 2: ' + NULLIF(cast(CA.phone2 as varchar(max)), '') + char(10), '')
                         + Coalesce('Desired Locations: ' + NULLIF(cast(CA.desiredLocations as varchar(max)), '') + char(10), '')
                         + Coalesce('Skills: ' + NULLIF(cast(SN.SkillName as varchar(max)), '') + char(10), '')
-                        --+ Coalesce('Practice Area / Category: ' + NULLIF(cast(CName.Name as varchar(max)), '') + char(10), '')
-                        --+ Coalesce('Specialty: ' + NULLIF(cast(CA.specialtyIDList as varchar(max)), '') + char(10), '')
-                        --+ Coalesce('Business Sector: ' + NULLIF(cast(BS.BusinessSector as varchar(max)), '') + char(10), '')
+                        + Coalesce('Graduation Date: ' + NULLIF(cast(CA.customText16 as varchar(max)), '') + char(10), '')
+                        + Coalesce('Practice Area / Category: ' + NULLIF(cast(CName.Name as varchar(max)), '') + char(10), '')
+                        + Coalesce('Specialty: ' + NULLIF(cast(CA.specialtyIDList as varchar(max)), '') + char(10), '')
+                        + Coalesce('Business Sector: ' + NULLIF(cast(BS.BusinessSector as varchar(max)), '') + char(10), '')
                         --+ Coalesce('Source: ' + NULLIF(cast(CA.source as varchar(max)), '') + char(10), '')
                         --
                         + Coalesce('How did you hear about us?: ' + NULLIF(cast(CA.customText2 as varchar(max)), '') + char(10), '')
@@ -65,7 +66,7 @@ with
                         + Coalesce('Primary Sector we''d Recommend for: ' + NULLIF(cast(CA.customText3 as varchar(max)), '') + char(10), '')
                         + Coalesce('Secondary Sector we''d Recommend for: ' + NULLIF(cast(CA.customText4 as varchar(max)), '') + char(10), '')
                         + Coalesce('Tertiary Sector we''d Recommend for: ' + NULLIF(cast(CA.customText5 as varchar(max)), '') + char(10), '')
-                        + Coalesce('Sectors we''d recommend for: ' + NULLIF(cast(CA.categoryID as varchar(max)), '') + char(10), '')
+                        + Coalesce('Sectors we''d recommend for: ' + NULLIF(cast(categoryID_name.occupation as varchar(max)), '') + char(10), '')
                         --+ Coalesce('Description: ' + NULLIF(cast(CA.description as varchar(max)), '') + char(10), '')
                         --+ Coalesce('University (U): ' + NULLIF(cast(CA.customText1 as varchar(max)), '') + char(10), '')
                         + Coalesce('If other uni (U): ' + NULLIF(cast(CA.customTextBlock3 as varchar(max)), '') + char(10), '')
@@ -90,12 +91,15 @@ with
         left outer join admission AD on CA.userID = AD.Userid
         left outer join bullhorn1.BH_BusinessSectorList BSL on cast(CA.businessSectorIDList as varchar(max)) = cast(BSL.businessSectorID as varchar(max))
         left outer join CName on CA.userID = CName.Userid
+        left join (select categoryID,occupation from bullhorn1.BH_CategoryList) categoryID_name on categoryID_name.categoryID = CA.categoryID
         left outer join SpeName on CA.userID = SpeName.Userid
         left join oe1 on CA.userID = oe1.ID
         --left join summary on CA.userID = summary.CandidateID
-	where CA.isPrimaryOwner = 1 )
+	where CA.isPrimaryOwner = 1
+	--and (CName.Name is not null or CA.specialtyIDList is not null or BS.BusinessSector is not null
+	)
 --select count(*) from note
---select top 100 * from note --where AddedNote like '%Business Sector%'
+--select top 100 cast(candidateid as int) as candidateID,note from note where candidateid = 83 --AddedNote like '%Business Sector%'
 
 -- COMMENT
 , comment(Userid, comment) as (SELECT Userid, STUFF((SELECT char(10) + 'Date Added: ' + convert(varchar(10), dateAdded, 120) + ' || ' + 'Action: ' + action + ' || ' + cast(comments as varchar(max)) from [bullhorn1].[BH_UserComment] WHERE Userid = a.Userid order by dateAdded desc FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 1, '')  AS URLList FROM [bullhorn1].[BH_UserComment] AS a GROUP BY a.Userid )
@@ -140,7 +144,9 @@ with
 		, C.customText1 as 'candidate-schoolName'
 		
 		--, Education.graduationDate as 'candidate-graduationDate'
-		, C.customText16 as 'candidate-graduationDate'
+		--, C.customText16 as 'candidate-graduationDate'
+		, CASE WHEN PatIndex('[0-9][0-9][0-9][0-9]', C.customText16) > 0 THEN cast( (C.customText16 + '-07-01 00:00:00') as datetime) ELSE null END as 'candidate-graduationDate'
+		--, CASE WHEN PatIndex('[0-9][0-9][0-9][0-9]', C.customText16) > 0 THEN cast(C.customText16 as datetime) ELSE null END as 'candidate-graduationDate'
 		
 		--, Education.degree as 'candidate-degreeName'
 		, C.customText15 as 'candidate-degreeName'
