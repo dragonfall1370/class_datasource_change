@@ -1,0 +1,10 @@
+SqlPackage.exe /a:import /tcs:"Data Source=mynewserver20170403.database.windows.net;Initial Catalog=myMigratedDatabase;User Id=ServerAdmin;Password=<change_to_your_password>" /sf:AdventureWorks2008R2.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
+
+SqlPackage.exe /a:import /tcs:"Data Source=<your_server_name>.database.windows.net;Initial Catalog=<your_new_database_name>;User Id=<change_to_your_admin_user_account>;Password=<change_to_your_password>" /sf:AdventureWorks2008R2.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
+
+1. C:\Program Files\Microsoft SQL Server\130\DAC\bin
+
+2. SqlPackage.exe /a:import /tcs:"Data Source=localhost;Initial Catalog=SkillSolved;User Id=sa;Password=123$%^qwe" /sf:"G:\VC_SkillSolved\RC_SKILLSOLVED-2017-7-22-15-31.bacpac" /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
+
+version 2
+SqlPackage.exe /a:import /tcs:"Data Source=localhost;Initial Catalog=SkillSolved_v2;User Id=sa;Password=123$%^qwe" /sf:"G:\VC_SkillSolvedV2\RC_SKILLSOLVED-2017-9-27-16-47.bacpac" /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
