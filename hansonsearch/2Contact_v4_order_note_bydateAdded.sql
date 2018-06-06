@@ -199,7 +199,7 @@ skill as (select c.contactid,ss.skill from Contacts c left join SkillInstances s
 
 -- select top 10 *
 -- select count(*) --143617-
-from Contacts CL
+from Contacts CL --where cl.descriptor = 1
 left join Companies CC ON CL.CompanyId = CC.CompanyId
 
 left join (SELECT contactid, text = STUFF((SELECT char(10) + 'Note: ' + text + char(10) FROM notes b WHERE b.contactid = a.contactid FOR XML PATH('')), 1, 0, '') FROM notes a GROUP BY contactid) n on CL.contactid = n.contactid

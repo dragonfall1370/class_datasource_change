@@ -127,14 +127,16 @@
   <order>
   <hop> <from>Contact Comment</from><to>Database lookup</to><enabled>N</enabled> </hop>
   <hop> <from>Database lookup</from><to>Table output</to><enabled>N</enabled> </hop>
-  <hop> <from>fe</from><to>sfe</to><enabled>Y</enabled> </hop>
+  <hop> <from>fe</from><to>sfe</to><enabled>N</enabled> </hop>
   <hop> <from>industry</from><to>industry InsertUpdate</to><enabled>N</enabled> </hop>
-  <hop> <from>sfe</from><to>contact_functional_expertise 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>contact id</from><to>fe</to><enabled>Y</enabled> </hop>
-  <hop> <from>contact FE-SFE</from><to>contact id</to><enabled>Y</enabled> </hop>
+  <hop> <from>sfe</from><to>contact_functional_expertise 2</to><enabled>N</enabled> </hop>
+  <hop> <from>contact id</from><to>fe</to><enabled>N</enabled> </hop>
+  <hop> <from>contact FE-SFE</from><to>contact id</to><enabled>N</enabled> </hop>
   <hop> <from>contact id</from><to>industry</to><enabled>N</enabled> </hop>
   <hop> <from>contact id</from><to>common_location InsertUpdate</to><enabled>N</enabled> </hop>
   <hop> <from>contact id</from><to>department_skills</to><enabled>N</enabled> </hop>
+  <hop> <from>contact id</from><to>industry InsertUpdate 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>contact industry</from><to>contact id</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Contact Comment</name>
@@ -314,8 +316,8 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>320</xloc>
-      <yloc>528</yloc>
+      <xloc>336</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -340,8 +342,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>64</xloc>
-      <yloc>336</yloc>
+      <xloc>48</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -484,7 +486,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>336</xloc>
-      <yloc>448</yloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -567,7 +569,7 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>336</xloc>
+      <xloc>400</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
       </GUI>
@@ -665,6 +667,80 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>432</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>industry InsertUpdate 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>p</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>contact_industry</table>
+      <key>
+        <name>final_contact_id</name>
+        <field>contact_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>INDUSTRY</name>
+        <field>industry_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>industry_id</name>
+        <rename>INDUSTRY</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>contact_id</name>
+        <rename>final_contact_id</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>contact industry</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>hansonsearch3</connection>
+    <sql>--------&#xa;with ind as &#x28;&#xa;        SELECT Distinct Contacts.ContactId, Contacts.DisplayName, Sectors.Sector&#xa;        FROM Segments INNER JOIN&#xa;             SgmtInstances ON Segments.SegmentId &#x3d; SgmtInstances.SegmentId INNER JOIN&#xa;             Sectors ON Segments.SectorId &#x3d; Sectors.SectorId INNER JOIN&#xa;             Contacts ON SgmtInstances.ObjectId &#x3d; Contacts.ContactId&#xa;        Where Contacts.Descriptor &#x3d; 1 --Sectors.Sector like &#x27;&#x25;FMCG&#x25;&#x27; &#xa;Union&#xa;        Select Distinct ContactId, DisplayName, Sector from Contacts Where Sector&#x3c;&#x3e;&#x27;&#x27; and Contacts.Descriptor &#x3d; 2 --and Sector like &#x27;&#x25;FMCG&#x25;&#x27; &#xa;&#x29;&#xa;&#xa;--select sector,count&#x28;&#x2a;&#x29; from ind group by sector Order By Sector&#xa;, ind0 as &#x28;&#xa;        select&#xa;        ContactId&#xa;        --, sector&#xa;                , case&#xa;                        when Sector &#x3d; &#x27;Accountancy&#x27; then 28881&#xa;                        when Sector &#x3d; &#x27;Arts and Culture&#x27; then 28883&#xa;                        when Sector &#x3d; &#x27;Asset Management&#x27; then 28884&#xa;                        when Sector &#x3d; &#x27;Automotive&#x27; then 28885&#xa;                        when Sector &#x3d; &#x27;Broadcaster&#x27; then 28887&#xa;                        when Sector &#x3d; &#x27;Charity&#x27; then 28889&#xa;                        when Sector &#x3d; &#x27;Construction&#x27; then 28890&#xa;                        when Sector &#x3d; &#x27;Defence&#x27; then 28891&#xa;                        when Sector &#x3d; &#x27;E-Commerce&#x27; then 28893&#xa;                        when Sector &#x3d; &#x27;Education&#x27; then 28894&#xa;                        when Sector &#x3d; &#x27;Energy&#x27; then 28895&#xa;                        when Sector &#x3d; &#x27;Engineering&#x27; then 28896&#xa;                        when Sector &#x3d; &#x27;Film and Entertainment&#x27; then 28897&#xa;                        when Sector &#x3d; &#x27;Financial Services&#x27; then 28898&#xa;                        when Sector &#x3d; &#x27;FinTech&#x27; then 28899&#xa;                        when Sector &#x3d; &#x27;FMCG&#x27; then 28900&#xa;                        when Sector &#x3d; &#x27;Healthcare&#x27; then 28901&#xa;                        when Sector &#x3d; &#x27;Information Technology&#x27; then 28902&#xa;                        when Sector &#x3d; &#x27;Infrastructure&#x27; then 28903&#xa;                        when Sector &#x3d; &#x27;Insurance&#x27; then 28904&#xa;                        when Sector &#x3d; &#x27;Luxury&#x27; then 28908&#xa;                        when Sector &#x3d; &#x27;Management Consultancy&#x27; then 28909&#xa;                        when Sector &#x3d; &#x27;Marketing Agency&#x27; then 28911&#xa;                        when Sector &#x3d; &#x27;Media Agency&#x27; then 28912&#xa;                        when Sector &#x3d; &#x27;Non Dept Gov Body&#x27; then 28915&#xa;                        when Sector &#x3d; &#x27;Not For Profit&#x27; then 28916&#xa;                        when Sector &#x3d; &#x27;Print and Publishing&#x27; then 28920&#xa;                        when Sector &#x3d; &#x27;Professional Services&#x27; then 28921&#xa;                        when Sector &#x3d; &#x27;Public Affairs Agency&#x27; then 28922&#xa;                        when Sector &#x3d; &#x27;Public Sector&#x27; then 28923&#xa;                        when Sector &#x3d; &#x27;Real Estate&#x27; then 28924&#xa;                        when Sector &#x3d; &#x27;Retail&#x27; then 28926&#xa;                        when Sector &#x3d; &#x27;Retail Banking&#x27; then 28927&#xa;                        when Sector &#x3d; &#x27;Social Media Agency&#x27; then 28929&#xa;                        when Sector &#x3d; &#x27;Sport&#x27; then 28930&#xa;                        when Sector &#x3d; &#x27;Technology&#x27; then 28918&#xa;                        when Sector &#x3d; &#x27;Telecoms&#x27; then 28932&#xa;                        when Sector &#x3d; &#x27;Trade Association&#x27; then 28933&#xa;                        when Sector &#x3d; &#x27;Transport&#x27; then 28934&#xa;                        when Sector &#x3d; &#x27;Utilities&#x27; then 28935&#xa;                        else &#x27;&#x27;&#xa;                        end as &#x27;INDUSTRY&#x27; --&#x3e; VC vertical.name&#xa;        from ind&#x29;&#xa;--select INDUSTRY,count&#x28;&#x2a;&#x29; as AMOUNT from ind0 group by INDUSTRY Order By INDUSTRY&#xa;--select count&#x28;&#x2a;&#x29; from ind0  where INDUSTRY &#x3c;&#x3e; &#x27;&#x27; --56309&#xa;select &#x2a; from ind0  where INDUSTRY &#x3c;&#x3e; &#x27;&#x27;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

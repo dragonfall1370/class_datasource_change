@@ -13,7 +13,7 @@ with EmailBody as (
                 --mr.userID,mr.folder,mr.recipientType, mr.email, mr.sendingUserID, mr.subjectSort
                 --,mr.userID,mr.folder,mr.recipientType, mr.email, mr.externalFrom
                 ,umf.att --,umf.name, umf.directory
-        -- select count(*) -- select top 2000 *
+        -- select count(*) -- select top 300 *
         from bullhorn1.BH_UserMessage um
         left join bullhorn1.BH_MessageRecipient mr on mr.userMessageID = um.userMessageID
         --left join bullhorn1.BH_UserMessageFile umf on umf.userMessageID = um.userMessageID

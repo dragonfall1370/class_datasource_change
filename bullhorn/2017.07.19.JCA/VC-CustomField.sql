@@ -1,4 +1,5 @@
 
+-- CANDIDATE
 SELECT top 300
          CA.candidateID as additional_id  
         , 'add_cand_info' as additional_type
@@ -31,3 +32,27 @@ field_id	int,
 field_value	varchar(max) )
 select * from cf
 */
+
+
+-- CONTACT
+-- Last Contacted Date
+select top 100
+        Cl.clientID as additional_id
+        , 'add_con_info' as additional_type
+        , 1004 as form_id
+        , 1015 as field_id
+        , UC.dateAdded as field_date_value        
+from bullhorn1.BH_UserContact UC
+left join bullhorn1.BH_Client Cl on Cl.Userid = UC.UserID
+where Cl.isPrimaryOwner = 1 and Cl.clientID = 6899 --and Cl.isDeleted = 0
+
+-- Bullhorn Added Date
+select top 100
+        Cl.clientID as additional_id
+        , 'add_con_info' as additional_type
+        , 1004 as form_id
+        , 1016 field_id
+        , UC.dateLastComment as field_date_value        
+from bullhorn1.BH_UserContact UC
+left join bullhorn1.BH_Client Cl on Cl.Userid = UC.UserID
+where Cl.isPrimaryOwner = 1 and Cl.clientID = 6899 --and Cl.isDeleted = 0

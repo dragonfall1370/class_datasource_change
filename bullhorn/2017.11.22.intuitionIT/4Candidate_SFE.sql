@@ -3,6 +3,8 @@ with
 -- SkillName: split by separate rows by comma, then combine them into SkillName
   SkillName0(userid, skillID) as (SELECT userid, Split.a.value('.', 'VARCHAR(2000)') AS skillID FROM (SELECT userid, CAST('<M>' + REPLACE(cast(skillIDList as varchar(max)),',','</M><M>') + '</M>' AS XML) AS x FROM  bullhorn1.Candidate where isPrimaryOwner = 1) t CROSS APPLY x.nodes('/M') AS Split(a) )
 , SkillName(userId, SkillName) as (SELECT userId, SL.name from SkillName0 left join bullhorn1.BH_SkillList SL ON SkillName0.skillID = SL.skillID WHERE SkillName0.skillID <> '')
+select SkillName,count(*) as AMOUNT from SkillName  group by SkillName Order By SkillName
+--select * from SkillName where userid in (680, 563, 48283)
 , sfe as (
                 select
                  C.candidateID, concat(C.FirstName,' ',C.LastName) as fullname
@@ -1320,7 +1322,8 @@ end as 'sfe'
                 where C.isPrimaryOwner = 1 and  SN.userId is not null
 )
 --select count(*) from sfe where sfe is not null 
-select * from sfe where sfe is not null and candidateID <100
+--select * from sfe where sfe is not null and candidateID <100
 --select count(distinct ltrim(SkillName)) as Skill from SkillName --where SkillName
 --select distinct ltrim(SkillName) as Skill from SkillName --where SkillName
+select sfe,count(*) as AMOUNT from sfe group by sfe Order By sfe
 -- select * from bullhorn1.BH_SkillList SL where name in ('Product Mgmt & Marketing','Customer/Data Analytics','Cash Ops','Investment/Portfolio Mgmt','Investment research and analysis','Credit admin/ops','Card Ops','HR Analytics','Compensation','Benefits','L&D','Robotic process automation (RPA)','AI & machine learning','JD Edwards ERP','Avaloq','Cognos','Hyperion','Bloomberg','Reuters','Matlab','Labview','Pro E+','SAS','Qlikview','Tableau','R Programming','SPSS','Mobile app developer','Assistant Manager','Senior Manager','Local','Startup','Social Insights & Analytics','Art Creative Director','Copy Art Director','Integrated Marketing','Digital media','Customer/Data Analytics','Risk & Compliance','Advisory/Sales','Investment/Portfolio Mgmt','Project Mgmt/Transformation','Client Service/Call Centre','Capex or Opex category sourcing','Chemical sourcing','Consumables category','Electrical category','Electronic component category','EMS category','Flavour category','Frangrance category','IT category sourcing','Logistic category sourcing','Marketing category sourcing','Mechanical category','NPI category sourcing','Oil & gas sourcing','Professional category sourcing','Project category sourcing','Supplier mgmt','Raw material sourcing','Reverse auction','Distribution','Media research')

@@ -63,3 +63,5 @@ left join copperq.cantempperm ctp ON vc.tempperm = ctp.ID
 #select userid, count(*) from bullhorn1.BH_Client
 #where isPrimaryOwner = 1
 #group by userID having count(*) > 1
+
+select concat(vc.vacid,"copperq") as 'position-externalId', VacDate  from copperq.vacancy vc where cast(VacDate as date) < '2017-01-01 00:00:00'

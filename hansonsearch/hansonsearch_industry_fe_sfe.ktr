@@ -101,7 +101,7 @@
     </attributes>
   </connection>
   <connection>
-    <name>p</name>
+    <name>fra</name>
     <server>35.158.17.10</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
@@ -125,11 +125,9 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Contact Comment</from><to>Database lookup</to><enabled>N</enabled> </hop>
-  <hop> <from>Database lookup</from><to>Table output</to><enabled>N</enabled> </hop>
-  <hop> <from>candidate id</from><to>fe</to><enabled>Y</enabled> </hop>
-  <hop> <from>candidate FE-SFE</from><to>candidate id</to><enabled>Y</enabled> </hop>
-  <hop> <from>fe</from><to>sfe</to><enabled>Y</enabled> </hop>
+  <hop> <from>candidate id</from><to>fe</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate FE-SFE</from><to>candidate id</to><enabled>N</enabled> </hop>
+  <hop> <from>fe</from><to>sfe</to><enabled>N</enabled> </hop>
   <hop> <from>industry</from><to>candidate_industry</to><enabled>N</enabled> </hop>
   <hop> <from>sfe</from><to>candidate_functional_expertise</to><enabled>N</enabled> </hop>
   <hop> <from>candidate id</from><to>industry</to><enabled>N</enabled> </hop>
@@ -137,75 +135,12 @@
   <hop> <from>candidate id</from><to>common_location InsertUpdate</to><enabled>N</enabled> </hop>
   <hop> <from>sfe</from><to>Insert &#x2f; Update 2</to><enabled>Y</enabled> </hop>
   <hop> <from>fe</from><to>Insert &#x2f; Update</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate FE-SFE 2</from><to>candidate id</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate FE-SFE 2 2</from><to>candidate id</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate id</from><to>Insert &#x2f; Update</to><enabled>N</enabled> </hop>
+  <hop> <from>candidate FE-SFE 2 2 2</from><to>candidate id</to><enabled>Y</enabled> </hop>
+  <hop> <from>candidate id</from><to>sfe</to><enabled>Y</enabled> </hop>
   </order>
-  <step>
-    <name>Contact Comment</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>hansonsearch3</connection>
-    <sql>with temp_1 as &#x28;&#xa;        select&#xa;                  c.contactid&#xa;                  , cast&#x28;&#x27;-10&#x27; as int&#x29; as userid&#xa;                --, COALESCE&#x28;c.FirstName &#x2b; &#x27; &#x27; &#x2b; c.LastName, &#x27;&#x27;&#x29; as ContactName&#xa;                , li.LogDate&#xa;                --, u.UserName, li.ShortUser&#xa;                , &#x27;Date&#x3a; &#x27; &#x2b; coalesce&#x28;convert&#x28;varchar&#x28;100&#x29;, li.LogDate, 120&#x29;,&#x27;&#x27;&#x29; &#x2b; char&#x28;10&#x29;&#xa;                &#x2b; &#x27;From&#x3a; &#x27; &#x2b; COALESCE&#x28;u.UserName, li.ShortUser, &#x27;&#x27;&#x29;  &#x2b; char&#x28;10&#x29;&#xa;                &#x2b; &#x27;Subject&#x3a; &#x27; &#x2b; COALESCE&#x28;li.Subject, &#x27;&#x27;&#x29; &#x2b; char&#x28;10&#x29;&#xa;                &#x2b; COALESCE&#x28;&#x27;Body&#x3a; &#x27; &#x2b; ld.Text, &#x27;&#x27;&#x29; &#x2b; char&#x28;10&#x29; as comment&#xa;        -- select count&#x28;&#x2a;&#x29; &#xa;        from dbo.Contacts c&#xa;        left outer join dbo.LogItems li ON c.ContactId &#x3d; li.ItemId&#xa;        left outer join dbo.LogDataIndex ldi ON ldi.LogItemId &#x3d; li.LogItemId&#xa;        left outer join dbo.LogData ld ON ldi.LogDataId &#x3d; ld.LogDataId&#xa;        left outer join dbo.Users u ON li.userid &#x3d; u.UserId&#xa;        where c.descriptor &#x3d; 1 &#x29; -- FOR CONTACT 235647 &#x3e;&#x3e; 70.955&#xa;        --and ld.Text &#x3c;&#x3e; &#x27;&#x27; &#x29; --and ItemId is not null and ltrim&#x28;rtrim&#x28;ItemId&#x29;&#x29; &#x3c;&#x3e; &#x27;&#x27; &#x29;&#xa;select &#x2a; from temp_1 --where contactid in &#x28;&#x27;100016-4726-13112&#x27;&#x29;</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>64</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>p</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>contact</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>contactid</name>
-        <field>external_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>actual_contactid</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>192</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step>
     <name>Insert &#x2f; Update</name>
     <type>InsertUpdate</type>
@@ -217,7 +152,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
+    <connection>fra</connection>
     <commit>1000</commit>
     <update_bypassed>N</update_bypassed>
     <lookup>
@@ -230,7 +165,7 @@
         <name2/>
       </key>
       <key>
-        <name>final_fe_id</name>
+        <name>FUNCTIONAL_EXPERTISE_ID</name>
         <field>functional_expertise_id</field>
         <condition>&#x3d;</condition>
         <name2/>
@@ -242,7 +177,7 @@
       </value>
       <value>
         <name>functional_expertise_id</name>
-        <rename>final_fe_id</rename>
+        <rename>FUNCTIONAL_EXPERTISE_ID</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -265,7 +200,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
+    <connection>fra</connection>
     <commit>1000</commit>
     <update_bypassed>Y</update_bypassed>
     <lookup>
@@ -278,7 +213,7 @@
         <name2/>
       </key>
       <key>
-        <name>final_fe_id</name>
+        <name>FUNCTIONAL_EXPERTISE_ID</name>
         <field>functional_expertise_id</field>
         <condition>&#x3d;</condition>
         <name2/>
@@ -286,7 +221,7 @@
       <key>
         <name>final_sfe_id</name>
         <field>sub_functional_expertise_id</field>
-        <condition>&#x3d; &#x7e;NULL</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -301,7 +236,7 @@
       </value>
       <value>
         <name>functional_expertise_id</name>
-        <rename>final_fe_id</rename>
+        <rename>FUNCTIONAL_EXPERTISE_ID</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -309,60 +244,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>432</xloc>
       <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>p</connection>
-    <schema>public</schema>
-    <table>contact_comment</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>Y</ignore_errors>
-    <use_batch>N</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field>contactid</partitioning_field>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>contact_id</column_name>
-          <stream_name>actual_contactid</stream_name>
-        </field>
-        <field>
-          <column_name>user_id</column_name>
-          <stream_name>userid</stream_name>
-        </field>
-        <field>
-          <column_name>comment_content</column_name>
-          <stream_name>comment</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>LogDate</stream_name>
-        </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>304</xloc>
-      <yloc>80</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -394,6 +275,32 @@
     </step>
 
   <step>
+    <name>candidate FE-SFE 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>hansonsearch3</connection>
+    <sql>&#xa;-- CANDIDATE &#x3d; 2&#xa;select&#xa;                  CL.ContactId&#xa;                , CL.FirstName, CL.LastName&#xa;                , Coalesce&#x28;NULLIF&#x28;case&#xa;                        when Segment.Segment &#x3d; &#x27;&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Asset management&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Branding&#x2f;Design&#x27; then &#x27;Branding and Design&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcast&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcasting Agency&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcasting PR&#x27; then &#x27;Broadcast PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Business Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Commercial Support&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Comms&#x27; then &#x27;Communications Planning&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer&#x27; then &#x27;Consumer PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer Tech&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;corporate&#x27; then &#x27;Corporate PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Cross&#x27; then &#x27;Media Cross&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Defence&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;digital&#x27; then &#x27;Digital&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Education&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Energy&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Entertainment&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;financial&#x27; then &#x27;Financial PR&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Financial Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;FMCG&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;healthcare&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Healthcare &#x2f; Pharma&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;HR&#x27; then &#x27;Human Resources&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Internal Communictions&#x27; then &#x27;Internal Communications&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Internal PR&#x27; then &#x27;Internal Communications&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Luxury&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Management Consultancy&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Reseach&#x2f;Insight&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research &#x2f; Insights&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insight&#x27; then &#x27;Market Research and Insights &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insights&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing &#x2f; Insight&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing&#x2f;Insight&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Media&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Medical Education&#x27; then &#x27;Medical Affairs&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Not for profit&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Office&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Planning and Buying Agency&#x27; then &#x27;Planning and Buying&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;PR and Communications&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Production Agency&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Professional Services&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Project Management&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Public Relations&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Public Sector&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Pure Player&#x27; then &#x27;Pure Play Digital &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Retail&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Sale&#x27; then &#x27;Sales&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Shopping Marketing&#x27; then &#x27;Shopper Marketing&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Strategy Consultancy&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Strategy Consulting&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Supply Side Platform&#x27; then &#x27;Supply Side Platform &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;technology&#x27; then &#x27;Technology  &#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Transport&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Utilities&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Web&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Advertising&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer Technology&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer Technology&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Field Marketing&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Field Sales&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Hibernate&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Information Architecture&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Logistics &#x26; Express&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Magento&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Modeling&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;NodeJS&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Objective-c&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;On Rails&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;OOH&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;OS&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;OTC&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Prestashop&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Pricing and Reimbursement&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Print&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Product Design&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Spring&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;SVN&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Swift&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Trade Activation&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Transport&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Unix&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;UX&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;W3C compliance,&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Windows&#x27; then &#x27;&#x27;&#xa;                        when Segment.Segment &#x3d; &#x27;Wireless&#x27; then &#x27;&#x27;&#xa;                else Segment.Segment&#xa;                end, &#x27;&#x27;&#x29;, &#x27;Others&#x27;&#x29; as &#x27;FUNCTIONAL_EXPERTISE&#x27; --&#x3e; VC functional_expertise.name&#xa;&#xa;-- select count&#x28;&#x2a;&#x29; -- 144592 -- select distinct Segment.Segment --top 10 &#x2a;&#xa;from Contacts CL&#xa;left join &#x28; select distinct c.ContactId, s.segment from contacts c left join SgmtInstances si on c.contactid &#x3d; si.ObjectId left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null &#x29; Segment on CL.contactid &#x3d; Segment.contactid&#xa;left join &#x28; select c.contactid,ss.skill from Contacts c left join SkillInstances si on c.contactid &#x3d; si.objectid  left join skills ss on si.skillid &#x3d; ss.skillid &#x29; skill on CL.contactid &#x3d; skill.contactid&#xa;where cl.descriptor &#x3d; 2&#xa;--and CL.ContactId in &#x28;&#x27;Ra&#x2f;22929&#x2f;100&#x27;&#x29; &#xa;&#xa;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>candidate id</name>
     <type>DBLookup</type>
     <description/>
@@ -404,9 +311,9 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
+    <connection>fra</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema>public</schema>
@@ -424,13 +331,7 @@
         <name>id</name>
         <rename>final_candidate_id</rename>
         <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>current_location_id</name>
-        <rename>current_location_id</rename>
-        <default/>
-        <type>None</type>
+        <type>Integer</type>
       </value>
     </lookup>
      <cluster_schema/>
@@ -478,7 +379,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
+    <connection>fra</connection>
     <schema>public</schema>
     <table>candidate_functional_expertise</table>
     <commit>1000</commit>
@@ -528,7 +429,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
+    <connection>fra</connection>
     <schema>public</schema>
     <table>candidate_industry</table>
     <commit>1000</commit>
@@ -574,7 +475,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
+    <connection>fra</connection>
     <commit>1000</commit>
     <update_bypassed>N</update_bypassed>
     <lookup>
@@ -631,8 +532,8 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
-    <cache>N</cache>
+    <connection>fra</connection>
+    <cache>Y</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
@@ -657,7 +558,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>336</xloc>
-      <yloc>288</yloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -673,7 +574,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
+    <connection>fra</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -715,9 +616,9 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>p</connection>
+    <connection>fra</connection>
     <cache>Y</cache>
-    <cache_load_all>N</cache_load_all>
+    <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema>public</schema>
@@ -732,7 +633,7 @@
         <name2/>
       </key>
       <key>
-        <name>final_fe_id</name>
+        <name>FUNCTIONAL_EXPERTISE_ID</name>
         <field>functional_expertise_id</field>
         <condition>&#x3d;</condition>
         <name2/>
@@ -748,6 +649,58 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>432</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>candidate FE-SFE 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>hansonsearch3</connection>
+    <sql>&#x2f;&#x2a;&#xa;select top 100 &#x2a; from SgmtInstances where objectId &#x3d; &#x27;101247-5431-12222&#x27;&#xa;select top 100 &#x2a; from segments where segmentId in &#x28;&#x27;430776-2808-13177&#x27;,&#x27;389765-8893-12215&#x27;,&#x27;305976-5896-13179&#x27;&#x29; or segment &#x3d; &#x27;Marketing&#x27;&#xa;select segment,count&#x28;&#x2a;&#x29; from segments group by segment having count&#x28;&#x2a;&#x29; &#x3e; 1&#xa;select top 100 &#x2a; from Contacts&#x3b;&#xa;SELECT contactid, Sector, r1 &#x3d; ROW_NUMBER&#x28;&#x29; OVER &#x28;PARTITION BY contactid ORDER BY contactid desc&#x29; from Contacts&#xa;select &#x2a; from Contacts CL where CL.FirstName &#x3d; &#x27;Alexandra&#x27; and CL.LastName &#x3d; &#x27;Martin&#x27;&#xa;&#xa;&#xa;&#xa;with segment as &#x28; select si.ObjectId, s.segment from SgmtInstances si left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null &#x29;&#xa;select distinct segment from segment&#xa;--select ObjectId from segment group by ObjectId having count&#x28;ObjectId&#x29; &#x3e; 1&#x3b;&#xa;--select &#x2a; from segment where segment &#x3d; &#x27;Corporate PR&#x27;&#xa;--select &#x2a; from segment where objectId in &#x28;&#x27;396072-2164-11215&#x27;,&#x27;881960-4775-15315&#x27;,&#x27;191608-4352-9329&#x27;&#x29;&#xa;&#xa;&#xa;&#xa;with Segment as &#x28;select   c.ContactId, c.FirstName, c.LastName, c.DisplayName&#xa;                  , s.segment&#xa;           from contacts c&#xa;           left join &#x28; select si.ObjectId, s.segment from SgmtInstances si left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null&#x29; s on s.ObjectId &#x3d; c.contactid&#xa;           where c.descriptor &#x3d; 2 &#x29;&#xa;select &#x2a; from Segment where segment &#x3d; &#x27;Marketing&#x27;&#xa;select distinct segment from Segment where lastname &#x3d; &#x27;Stolliday&#x27;&#xa;select segment,count&#x28;segment&#x29; from Segment group by segment&#xa;&#x2a;&#x2f;&#xa;&#xa;&#xa;&#xa;-- CANDIDATE &#x3d; 2&#xa;with fe as &#x28;&#xa;select&#xa;                  distinct CL.ContactId&#xa;                --, CL.FirstName, CL.LastName&#xa;                , Coalesce&#x28;NULLIF&#x28;case&#xa;                        when Segment.Segment &#x3d; &#x27;Advertising&#x27; then 2984&#xa;                        when Segment.Segment &#x3d; &#x27;Analytics&#x27; then 2985&#xa;                        when Segment.Segment &#x3d; &#x27;B2B&#x27; then 2986&#xa;                        when Segment.Segment &#x3d; &#x27;Branding and Design&#x27; then 2987&#xa;                        when Segment.Segment &#x3d; &#x27;Branding&#x2f;Design&#x27; then 2987&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcasting PR&#x27; then 2988&#xa;                        when Segment.Segment &#x3d; &#x27;Business Intelligence&#x27; then 2989&#xa;                        when Segment.Segment &#x3d; &#x27;Comms&#x27; then 2990&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer&#x27; then 2991&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer PR&#x27; then 2991&#xa;                        when Segment.Segment &#x3d; &#x27;Content&#x27; then 2993&#xa;                        when Segment.Segment &#x3d; &#x27;Corporate&#x27; then 2994&#xa;                        when Segment.Segment &#x3d; &#x27;Corporate PR&#x27; then 2994&#xa;                        when Segment.Segment &#x3d; &#x27;Cross&#x27; then 2995&#xa;                        when Segment.Segment &#x3d; &#x27;CSR&#x27; then 2996&#xa;                        when Segment.Segment &#x3d; &#x27;Data Management Platform&#x27; then 2997&#xa;                        when Segment.Segment &#x3d; &#x27;Demand Side Platform&#x27; then 2998&#xa;                        when Segment.Segment &#x3d; &#x27;Digital&#x27; then 2999&#xa;                        when Segment.Segment &#x3d; &#x27;Digital Advertising&#x27; then 3000&#xa;                        when Segment.Segment &#x3d; &#x27;Digital Marketing&#x27; then 3001&#xa;                        when Segment.Segment &#x3d; &#x27;E-Commerce&#x27; then 3002&#xa;                        when Segment.Segment &#x3d; &#x27;Employee Engagement&#x27; then 3003&#xa;                        when Segment.Segment &#x3d; &#x27;Events&#x27; then 3004&#xa;                        when Segment.Segment &#x3d; &#x27;Film&#x27; then 3005&#xa;                        when Segment.Segment &#x3d; &#x27;Finance&#x27; then 3006&#xa;                        when Segment.Segment &#x3d; &#x27;financial&#x27; then 3007&#xa;                        when Segment.Segment &#x3d; &#x27;Financial PR&#x27; then 3007&#xa;                        when Segment.Segment &#x3d; &#x27;Healthcare Advertising&#x27; then 3008&#xa;                        when Segment.Segment &#x3d; &#x27;Healthcare PR&#x27; then 3009&#xa;                        when Segment.Segment &#x3d; &#x27;HR&#x27; then 3010&#xa;                        when Segment.Segment &#x3d; &#x27;In-House Communications&#x27; then 3011&#xa;                        when Segment.Segment &#x3d; &#x27;Innovation&#x27; then 3012&#xa;                        when Segment.Segment &#x3d; &#x27;Internal Communications&#x27; then 3013&#xa;                        when Segment.Segment &#x3d; &#x27;Internal Communictions&#x27; then 3013&#xa;                        when Segment.Segment &#x3d; &#x27;Internal PR&#x27; then 3013&#xa;                        when Segment.Segment &#x3d; &#x27;Investment&#x27; then 3014&#xa;                        when Segment.Segment &#x3d; &#x27;Investor Relations&#x27; then 3015&#xa;                        when Segment.Segment &#x3d; &#x27;IT Strategy&#x27; then 3016&#xa;                        when Segment.Segment &#x3d; &#x27;Market Access&#x27; then 3017&#xa;                        when Segment.Segment &#x3d; &#x27;Market Reseach&#x2f;Insight&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research &#x2f; Insights&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insight&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insights&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing&#x27; then 3019&#xa;                        when Segment.Segment &#x3d; &#x27;Medical Affairs&#x27; then 3045&#xa;                        when Segment.Segment &#x3d; &#x27;Medical Education&#x27; then 3045&#xa;                        when Segment.Segment &#x3d; &#x27;Mobile Marketing&#x27; then 3022&#xa;                        when Segment.Segment &#x3d; &#x27;Offline&#x27; then 3023&#xa;                        when Segment.Segment &#x3d; &#x27;Planning and Buying Agency&#x27; then 3024&#xa;                        when Segment.Segment &#x3d; &#x27;Policy&#x27; then 3025&#xa;                        when Segment.Segment &#x3d; &#x27;Public Affairs&#x27; then 3027&#xa;                        when Segment.Segment &#x3d; &#x27;Pure Player&#x27; then 3028&#xa;                        when Segment.Segment &#x3d; &#x27;Recruitment Marketing&#x27; then 3029&#xa;                        when Segment.Segment &#x3d; &#x27;Sale&#x27; then 3030&#xa;                        when Segment.Segment &#x3d; &#x27;Sales&#x27; then 3030&#xa;                        when Segment.Segment &#x3d; &#x27;Shopping Marketing&#x27; then 3031&#xa;                        when Segment.Segment &#x3d; &#x27;Social Media&#x27; then 3032&#xa;                        when Segment.Segment &#x3d; &#x27;Sponsorship&#x27; then 3033&#xa;                        when Segment.Segment &#x3d; &#x27;strategy&#x27; then 3034&#xa;                        when Segment.Segment &#x3d; &#x27;Supply Side Platform&#x27; then 3035&#xa;                        when Segment.Segment &#x3d; &#x27;technology&#x27; then 3036&#xa;                        when Segment.Segment &#x3d; &#x27;Technology PR&#x27; then 3037&#xa;                        when Segment.Segment &#x3d; &#x27;TV&#x27; then 3038&#xa;                else &#x27;&#x27; --Segment.Segment&#xa;                end, &#x27;&#x27;&#x29;, &#x27;3042&#x27;&#x29; as &#x27;FUNCTIONAL_EXPERTISE_ID&#x27; --&#x3e; VC functional_expertise.name&#xa;-- select count&#x28;&#x2a;&#x29; -- 144592 -- select distinct Segment.Segment --top 10 &#x2a; --240342 26822&#xa;from Contacts CL&#xa;left join &#x28; select si.ObjectId, s.segment from SgmtInstances si left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null&#x29; Segment on Segment.ObjectId &#x3d; cl.contactid&#xa;--left join &#x28; select distinct c.ContactId, s.segment from contacts c left join SgmtInstances si on c.contactid &#x3d; si.ObjectId left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null &#x29; Segment on CL.contactid &#x3d; Segment.contactid&#xa;--left join &#x28; select c.contactid,ss.skill from Contacts c left join SkillInstances si on c.contactid &#x3d; si.objectid  left join skills ss on si.skillid &#x3d; ss.skillid &#x29; skill on CL.contactid &#x3d; skill.contactid&#xa;where cl.descriptor &#x3d; 2&#xa;&#x29;&#xa;&#xa;--select FUNCTIONAL_EXPERTISE_ID,count&#x28;&#x2a;&#x29; from fe group by FUNCTIONAL_EXPERTISE_ID&#xa;--and CL.FirstName &#x3d; &#x27;Katy&#x27;&#xa;--and CL.FirstName &#x3d; &#x27;Lisa&#x27; and CL.LastName &#x3d; &#x27;Seukeran&#x27;&#xa;--or CL.FirstName &#x3d; &#x27;Kate&#x27; and CL.LastName &#x3d; &#x27;Tagge&#x27;&#xa;--or CL.FirstName &#x3d; &#x27;Nicole&#x27; and CL.LastName &#x3d; &#x27;Yost&#x27;&#xa;--or CL.FirstName &#x3d; &#x27;Nicole&#x27; and CL.LastName &#x3d; &#x27;Martin&#x27;&#xa;--or CL.FirstName &#x3d; &#x27;Alexandra&#x27; and CL.LastName &#x3d; &#x27;Martin&#x27;&#xa;--and CL.ContactId in &#x28;&#x27;110998-3207-1554&#x27;,&#x27;110452-3164-11130&#x27;,&#x27;110393-3899-1662&#x27;,&#x27;110387-4971-1110&#x27;,&#x27;110362-5188-1540&#x27;,&#x27;110256-8229-9337&#x27;,&#x27;110245-1034-8294&#x27;,&#x27;110206-7622-13100&#x27;,&#x27;110129-5026-15322&#x27;,&#x27;110046-5356-15347&#x27;,&#x27;&#x27;&#x29; &#x3b;&#xa;--and CL.ContactId in &#x28;&#x27;100593-8845-12136&#x27;&#x29; --&#x28;&#x27;110387-4971-1110&#x27;&#x29; &#xa;&#xa;select &#x2a; from fe </sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>144</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>candidate FE-SFE 2 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>hansonsearch3</connection>
+    <sql>&#xa;-- SUB FUNCTIONAL EXPERTISE&#xa;with fe as &#x28;&#xa;select&#xa;                  distinct CL.ContactId&#xa;                --, CL.FirstName, CL.LastName&#xa;                , Coalesce&#x28;NULLIF&#x28;case&#xa;                        when Segment.Segment &#x3d; &#x27;Advertising&#x27; then 2984&#xa;                        when Segment.Segment &#x3d; &#x27;Analytics&#x27; then 2985&#xa;                        when Segment.Segment &#x3d; &#x27;B2B&#x27; then 2986&#xa;                        when Segment.Segment &#x3d; &#x27;Branding and Design&#x27; then 2987&#xa;                        when Segment.Segment &#x3d; &#x27;Branding&#x2f;Design&#x27; then 2987&#xa;                        when Segment.Segment &#x3d; &#x27;Broadcasting PR&#x27; then 2988&#xa;                        when Segment.Segment &#x3d; &#x27;Business Intelligence&#x27; then 2989&#xa;                        when Segment.Segment &#x3d; &#x27;Comms&#x27; then 2990&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer&#x27; then 2991&#xa;                        when Segment.Segment &#x3d; &#x27;Consumer PR&#x27; then 2991&#xa;                        when Segment.Segment &#x3d; &#x27;Content&#x27; then 2993&#xa;                        when Segment.Segment &#x3d; &#x27;Corporate&#x27; then 2994&#xa;                        when Segment.Segment &#x3d; &#x27;Corporate PR&#x27; then 2994&#xa;                        when Segment.Segment &#x3d; &#x27;Cross&#x27; then 2995&#xa;                        when Segment.Segment &#x3d; &#x27;CSR&#x27; then 2996&#xa;                        when Segment.Segment &#x3d; &#x27;Data Management Platform&#x27; then 2997&#xa;                        when Segment.Segment &#x3d; &#x27;Demand Side Platform&#x27; then 2998&#xa;                        when Segment.Segment &#x3d; &#x27;Digital&#x27; then 2999&#xa;                        when Segment.Segment &#x3d; &#x27;Digital Advertising&#x27; then 3000&#xa;                        when Segment.Segment &#x3d; &#x27;Digital Marketing&#x27; then 3001&#xa;                        when Segment.Segment &#x3d; &#x27;E-Commerce&#x27; then 3002&#xa;                        when Segment.Segment &#x3d; &#x27;Employee Engagement&#x27; then 3003&#xa;                        when Segment.Segment &#x3d; &#x27;Events&#x27; then 3004&#xa;                        when Segment.Segment &#x3d; &#x27;Film&#x27; then 3005&#xa;                        when Segment.Segment &#x3d; &#x27;Finance&#x27; then 3006&#xa;                        when Segment.Segment &#x3d; &#x27;financial&#x27; then 3007&#xa;                        when Segment.Segment &#x3d; &#x27;Financial PR&#x27; then 3007&#xa;                        when Segment.Segment &#x3d; &#x27;Healthcare Advertising&#x27; then 3008&#xa;                        when Segment.Segment &#x3d; &#x27;Healthcare PR&#x27; then 3009&#xa;                        when Segment.Segment &#x3d; &#x27;HR&#x27; then 3010&#xa;                        when Segment.Segment &#x3d; &#x27;In-House Communications&#x27; then 3011&#xa;                        when Segment.Segment &#x3d; &#x27;Innovation&#x27; then 3012&#xa;                        when Segment.Segment &#x3d; &#x27;Internal Communications&#x27; then 3013&#xa;                        when Segment.Segment &#x3d; &#x27;Internal Communictions&#x27; then 3013&#xa;                        when Segment.Segment &#x3d; &#x27;Internal PR&#x27; then 3013&#xa;                        when Segment.Segment &#x3d; &#x27;Investment&#x27; then 3014&#xa;                        when Segment.Segment &#x3d; &#x27;Investor Relations&#x27; then 3015&#xa;                        when Segment.Segment &#x3d; &#x27;IT Strategy&#x27; then 3016&#xa;                        when Segment.Segment &#x3d; &#x27;Market Access&#x27; then 3017&#xa;                        when Segment.Segment &#x3d; &#x27;Market Reseach&#x2f;Insight&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research &#x2f; Insights&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insight&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Market Research&#x2f;Insights&#x27; then 3018&#xa;                        when Segment.Segment &#x3d; &#x27;Marketing&#x27; then 3019&#xa;                        when Segment.Segment &#x3d; &#x27;Medical Affairs&#x27; then 3045&#xa;                        when Segment.Segment &#x3d; &#x27;Medical Education&#x27; then 3045&#xa;                        when Segment.Segment &#x3d; &#x27;Mobile Marketing&#x27; then 3022&#xa;                        when Segment.Segment &#x3d; &#x27;Offline&#x27; then 3023&#xa;                        when Segment.Segment &#x3d; &#x27;Planning and Buying Agency&#x27; then 3024&#xa;                        when Segment.Segment &#x3d; &#x27;Policy&#x27; then 3025&#xa;                        when Segment.Segment &#x3d; &#x27;Public Affairs&#x27; then 3027&#xa;                        when Segment.Segment &#x3d; &#x27;Pure Player&#x27; then 3028&#xa;                        when Segment.Segment &#x3d; &#x27;Recruitment Marketing&#x27; then 3029&#xa;                        when Segment.Segment &#x3d; &#x27;Sale&#x27; then 3030&#xa;                        when Segment.Segment &#x3d; &#x27;Sales&#x27; then 3030&#xa;                        when Segment.Segment &#x3d; &#x27;Shopping Marketing&#x27; then 3031&#xa;                        when Segment.Segment &#x3d; &#x27;Social Media&#x27; then 3032&#xa;                        when Segment.Segment &#x3d; &#x27;Sponsorship&#x27; then 3033&#xa;                        when Segment.Segment &#x3d; &#x27;strategy&#x27; then 3034&#xa;                        when Segment.Segment &#x3d; &#x27;Supply Side Platform&#x27; then 3035&#xa;                        when Segment.Segment &#x3d; &#x27;technology&#x27; then 3036&#xa;                        when Segment.Segment &#x3d; &#x27;Technology PR&#x27; then 3037&#xa;                        when Segment.Segment &#x3d; &#x27;TV&#x27; then 3038&#xa;                else &#x27;&#x27; --Segment.Segment&#xa;                end, &#x27;&#x27;&#x29;, &#x27;3042&#x27;&#x29; as &#x27;FUNCTIONAL_EXPERTISE_ID&#x27; --&#x3e; VC functional_expertise.name&#xa;&#xa;		--, skill.skill as &#x27;SUB-FUNCTIONAL_EXPERTISE&#x28;old&#x29;&#x27; --&#x3e; VC sub_functional_expertise.name&#xa;		, case&#xa;                        when skill.skill is null then &#x27;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Ad hoc&#x27; then &#x27;Ad hoc&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Ad network&#x27; then &#x27;Ad network&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Adtech&#x27; then &#x27;Ad Tech&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Aerospace&#x27; then &#x27;Aerospace&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Affiliates&#x27; then &#x27;Affiliates&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Agriculture&#x27; then &#x27;Agriculture&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Analytics&#x27; then &#x27;Analytics&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Android&#x27; then &#x27;Android&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Animal Health&#x27; then &#x27;Animal Health&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Apps&#x27; then &#x27;Apps&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Arabic Speaker&#x27; then &#x27;Arabic Speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Arabic Writer&#x27; then &#x27;Arabic Writer&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Architecture&#x27; then &#x27;Architecture&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Arts&#x2f;Culture&#x27; then &#x27;Arts and Culture&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Asset Management&#x27; then &#x27;Asset Management&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Automotive&#x27; then &#x27;Automotive&#x27;&#xa;                        when skill.skill &#x3d; &#x27;AV&#x27; then &#x27;AV&#x27;&#xa;                        when skill.skill &#x3d; &#x27;B2B&#x27; then &#x27;B2B&#x27;&#xa;                        when skill.skill &#x3d; &#x27;B2C&#x27; then &#x27;B2C&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Beauty&#x27; then &#x27;Beauty&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Blogger Outreach&#x27; then &#x27;Blogger Outreach&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Brand Development&#x27; then &#x27;Brand Development&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Brand Engagement&#x27; then &#x27;Brand Engagement&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Brand Innovation&#x27; then &#x27;Brand Innovation&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Brand Management&#x27; then &#x27;Brand Management&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Brand Strategy&#x27; then &#x27;Brand Strategy&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Business Development&#x27; then &#x27;Business Development&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Business Intelligence&#x27; then &#x27;Business Intelligence&#x27;&#xa;                        when skill.skill &#x3d; &#x27;C&#x23;&#x27; then &#x27;C&#x23;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;CakePHP&#x27; then &#x27;CakePHP&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Cardiovascular Metabolic&#x27; then &#x27;Cardiovascular Metabolic&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Central Government&#x27; then &#x27;Central Government&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Charities&#x27; then &#x27;Charities&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Communications Planning&#x27; then &#x27;Communications Planning&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Conservative&#x27; then &#x27;Conservative&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Construction&#x27; then &#x27;Construction&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Consumer Health&#x27; then &#x27;Consumer Health&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Content Management&#x27; then &#x27;Content Management&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Copywriting&#x27; then &#x27;Copywriting&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Corporate Affairs&#x27; then &#x27;Corporate Affairs&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Creative&#x27; then &#x27;Creative&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Crisis &#x26; Issues Management&#x27; then &#x27;Crisis &#x26; Issues Management&#x27;&#xa;                        when skill.skill &#x3d; &#x27;CRM&#x27; then &#x27;CRM&#x27;&#xa;                        when skill.skill &#x3d; &#x27;CSR&#x27; then &#x27;CSR&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Data Analytics&#x27; then &#x27;Data Analytics&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Defence&#x27; then &#x27;Defence&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Diabetes&#x27; then &#x27;Diabetes&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Digital&#x27; then &#x27;Digital&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Display&#x27; then &#x27;Display&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Drink&#x27; then &#x27;Drink&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Drupal&#x27; then &#x27;Drupal&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Econometrics&#x27; then &#x27;Econometrics&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Editing&#x27; then &#x27;Editing&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Education&#x27; then &#x27;Education&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Email Marketing&#x27; then &#x27;Email Marketing&#x27;&#xa;                        when skill.skill &#x3d; &#x27;EMEA Experience&#x27; then &#x27;EMEA Experience&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Employer Branding&#x27; then &#x27;Employer Branding&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Energy&#x27; then &#x27;Energy&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Engineering&#x27; then &#x27;Engineering&#x27;&#xa;                        when skill.skill &#x3d; &#x27;English Speaker&#x27; then &#x27;English Speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Entertainment&#x27; then &#x27;Entertainment&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Ethical&#x27; then &#x27;Ethical&#x27;&#xa;                        when skill.skill &#x3d; &#x27;EU Political Experience&#x27; then &#x27;EU Political Experience&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Events&#x27; then &#x27;Events&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Experiential&#x27; then &#x27;Experiential&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Fashion&#x27; then &#x27;Fashion&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Fieldwork&#x27; then &#x27;Fieldwork&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Film&#x27; then &#x27;Film&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Financial Services&#x27; then &#x27;Financial Services&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Financial Tech&#x27; then &#x27;Financial Tech&#x27;&#xa;                        when skill.skill &#x3d; &#x27;FMCG&#x27; then &#x27;FMCG&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Food&#x27; then &#x27;Food&#x27;&#xa;                        when skill.skill &#x3d; &#x27;French Speaker&#x27; then &#x27;French Speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Gambling&#x27; then &#x27;Gambling&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Gaming&#x27; then &#x27;Gaming&#x27;&#xa;                        when skill.skill &#x3d; &#x27;German Speaker&#x27; then &#x27;German Speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Global Experience&#x27; then &#x27;Global Experience&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Government&#x27; then &#x27;Government&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Health Economics&#x27; then &#x27;Health Economics&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Healthcare&#x27; then &#x27;Healthcare&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Hospitality&#x27; then &#x27;Hospitality&#x27;&#xa;                        when skill.skill &#x3d; &#x27;HR&#x27; then &#x27;HR&#x27;&#xa;                        when skill.skill &#x3d; &#x27;HTML&#x27; then &#x27;HTML&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Industrials&#x27; then &#x27;Industrials&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Infrastructure&#x27; then &#x27;Infrastructure&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Innovation&#x27; then &#x27;Innovation&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Insight&#x27; then &#x27;Insight&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Insurance&#x27; then &#x27;Insurance&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Interior Design&#x27; then &#x27;Interior Design&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Internal Communications&#x27; then &#x27;Internal Communications&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Investor Relations&#x27; then &#x27;Investor Relations&#x27;&#xa;                        when skill.skill &#x3d; &#x27;IOS&#x27; then &#x27;IOS&#x27;&#xa;                        when skill.skill &#x3d; &#x27;IT Services&#x27; then &#x27;IT Services&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Italian Speaker&#x27; then &#x27;Italian Speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Javascript&#x27; then &#x27;Javascript&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Journalism&#x27; then &#x27;Journalism&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Labour&#x27; then &#x27;Labour&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Legal&#x27; then &#x27;Legal&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Lib Dem&#x27; then &#x27;Lib Dem&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Life Sciences&#x27; then &#x27;Life Sciences&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Lifestyle&#x27; then &#x27;Lifestyle&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Local Government&#x27; then &#x27;Local Government&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Logistics and Transport&#x27; then &#x27;Logistics and Transport&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Luxury&#x27; then &#x27;Luxury&#x27;&#xa;                        when skill.skill &#x3d; &#x27;M&#x26;A&#x27; then &#x27;M&#x26;A&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Mandarin speaker&#x27; then &#x27;Mandarin speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Market Access&#x27; then &#x27;Market Access&#x27;&#xa;                        when skill.skill &#x3d; &#x27;MBA&#x27; then &#x27;MBA&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Media&#x27; then &#x27;Media&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Media Buying&#x27; then &#x27;Media Buying&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Media planning&#x27; then &#x27;Media Planning&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Media Relations&#x27; then &#x27;Media Relations&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Media Training&#x27; then &#x27;Media Training&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Medical Devices&#x27; then &#x27;Medical Devices&#x27;&#xa;                        when skill.skill &#x3d; &#x27;medical education&#x27; then &#x27;Medical Education&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Medical Writing&#x27; then &#x27;Medical Writing&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Mobile&#x27; then &#x27;Mobile&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Music&#x27; then &#x27;Music&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Natural Resources&#x27; then &#x27;Natural Resources&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Neurology&#x27; then &#x27;Neurology&#x27;&#xa;                        when skill.skill &#x3d; &#x27;NICE&#x27; then &#x27;NICE&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Nutrition&#x27; then &#x27;Nutrition&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Oncology&#x27; then &#x27;Oncology&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Oracle&#x27; then &#x27;Oracle&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Outcomes Research&#x27; then &#x27;Outcomes Research&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Packaging&#x27; then &#x27;Packaging&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Personal Finance&#x27; then &#x27;Personal Finance&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Pharamaceutical&#x27; then &#x27;Pharmaceutical&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Pharmaceutical&#x27; then &#x27;Pharmaceutical&#x27;&#xa;                        when skill.skill &#x3d; &#x27;PHP&#x27; then &#x27;PHP&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Planning Permission&#x27; then &#x27;Planning Permission&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Policy&#x27; then &#x27;Policy&#x27;&#xa;                        when skill.skill &#x3d; &#x27;PPC&#x27; then &#x27;PPC&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Private Equity&#x27; then &#x27;Private Equity&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Professional Services&#x27; then &#x27;Professional Services&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Programmatic &#x28;RTB&#x29;&#x27; then &#x27;Programmatic &#x28;RTB&#x29;&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Project Managment&#x27; then &#x27;Project Management&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Property&#x27; then &#x27;Property&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Public Sector PR&#x27; then &#x27;Public Sector PR&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Publicist&#x27; then &#x27;Publicist&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Publishing&#x27; then &#x27;Publishing&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Qualitative Research&#x27; then &#x27;Qualitative Research&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Quantative Research&#x27; then &#x27;Quantative Research&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Recruitment Advertising &#x27; then &#x27;Recruitment Advertising&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Recruitment Marketing &#x27; then &#x27;Recruitment Marketing&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Regulatory Affairs&#x27; then &#x27;Regulatory Affairs&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Renewable Energy&#x27; then &#x27;Renewable Energy&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Research&#x27; then &#x27;Research&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Respiratory Inflammation Autoimmune&#x27; then &#x27;Respiratory Inflammation Autoimmune&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Restaurant&#x27; then &#x27;Restaurant&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Retail&#x27; then &#x27;Retail&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Russian Speaker&#x27; then &#x27;Russian Speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;SaaS&#x27; then &#x27;SaaS&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Sales&#x27; then &#x27;Sales&#x27;&#xa;                        when skill.skill &#x3d; &#x27;SEM&#x27; then &#x27;SEM&#x27;&#xa;                        when skill.skill &#x3d; &#x27;SEO&#x27; then &#x27;SEO&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Social Media&#x27; then &#x27;Social Media&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Social Research&#x27; then &#x27;Social Research&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Spanish Speaker&#x27; then &#x27;Spanish Speaker&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Special Advisor&#x27; then &#x27;Special Advisor&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Sponsorship&#x27; then &#x27;Sponsorship&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Sport&#x27; then &#x27;Sport&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Sports PR&#x27; then &#x27;Sports PR&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Start-ups&#x27; then &#x27;Start-ups&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Supply Chain Management&#x27; then &#x27;Supply Chain Management&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Sustainability&#x27; then &#x27;Sustainability&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Symfony&#x27; then &#x27;Symfony&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Technology&#x27; then &#x27;Technology&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Telecoms&#x27; then &#x27;Telecoms&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Think Tank&#x27; then &#x27;Think Tank&#x27;&#xa;                        when skill.skill &#x3d; &#x27;TMT&#x27; then &#x27;TMT&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Tobacco&#x27; then &#x27;Tobacco&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Trade Association&#x27; then &#x27;Trade Association&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Trade Marketing&#x27; then &#x27;Trade Marketing&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Travel and Tourism&#x27; then &#x27;Travel and Tourism&#x27;&#xa;                        when skill.skill &#x3d; &#x27;TV&#x27; then &#x27;TV&#x27;&#xa;                        when skill.skill &#x3d; &#x27;UI&#x27; then &#x27;UI&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Utilities&#x27; then &#x27;Utilities&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Web Content&#x27; then &#x27;Web Content&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Web Design&#x27; then &#x27;Web Design&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Wordpress&#x27; then &#x27;Wordpress&#x27;&#xa;                        when skill.skill &#x3d; &#x27;Zend&#x27; then &#x27;Zend&#x27;&#xa;                else &#x27;&#x27;&#xa;                end as &#x27;SUB-FUNCTIONAL_EXPERTISE&#x27; --&#x3e; VC sub_functional_expertise.name&#xa;-- select count&#x28;&#x2a;&#x29; -- 144592 -- select distinct Segment.Segment --top 10 &#x2a; --240342 26822&#xa;from Contacts CL&#xa;left join &#x28; select si.ObjectId, s.segment from SgmtInstances si left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null&#x29; Segment on Segment.ObjectId &#x3d; cl.contactid&#xa;--left join &#x28; select distinct c.ContactId, s.segment from contacts c left join SgmtInstances si on c.contactid &#x3d; si.ObjectId left join segments s on s.SegmentId &#x3d; si.SegmentId where s.segment is not null &#x29; Segment on CL.contactid &#x3d; Segment.contactid&#xa;left join &#x28; select c.contactid,ss.skill from Contacts c left join SkillInstances si on c.contactid &#x3d; si.objectid  left join skills ss on si.skillid &#x3d; ss.skillid &#x29; skill on CL.contactid &#x3d; skill.contactid&#xa;where cl.descriptor &#x3d; 2&#xa;&#x29;&#xa;--select &#x5b;SUB-FUNCTIONAL_EXPERTISE&#x5d;,count&#x28;&#x2a;&#x29; from fe group by &#x5b;SUB-FUNCTIONAL_EXPERTISE&#x5d;&#xa;select &#x2a; from fe where &#x5b;SUB-FUNCTIONAL_EXPERTISE&#x5d; &#x3c;&#x3e; &#x27;&#x27;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>240</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

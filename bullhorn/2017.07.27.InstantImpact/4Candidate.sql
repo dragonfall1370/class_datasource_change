@@ -232,3 +232,10 @@ select top 100
                   , note
 from comments where note <> ''
 */
+
+select
+		, C.customText1 as 'candidate-schoolName'
+		, CASE WHEN PatIndex('[0-9][0-9][0-9][0-9]', C.customText16) > 0 THEN cast( (C.customText16 + '-07-01 00:00:00') as datetime) ELSE null END as 'candidate-graduationDate'
+		, C.customText15 as 'candidate-degreeName'
+		--, Education.major as '#candidate-major'
+from bullhorn1.Candidate C where C.isPrimaryOwner = 1

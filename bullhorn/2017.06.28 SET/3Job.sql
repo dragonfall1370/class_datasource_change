@@ -133,3 +133,10 @@ left join placementnote  on a.jobPostingID = placementnote.jobPostingID
 left join doc on a.jobPostingID = doc.jobPostingID
 where b.isPrimaryOwner = 1 --> add isPrimaryOwner = 1 to remove 1 userID having more than 1 clientID
 and job.title <> ''
+
+---
+select
+        jobPostingID,startDate, dateAdded, dateClientInterview --, dateEnd --,dateClosed, customDate1, customDate2, customDate3, correlatedCustomDate1, correlatedCustomDate2, correlatedCustomDate3, dateLastExported
+from bullhorn1.BH_JobPosting
+where dateAdded < '2017-01-01 00:00:00'
+and jobPostingID in (12810,12649,12779)

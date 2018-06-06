@@ -1,0 +1,30 @@
+34.224.155.190
+10.0.11.85
+
+contact-homephone >> First name in Kana
+
+contact-mobile >> Last name in Kana
+
+contact-deparment
+
+contact-personalEmail
+
+-------
+candidate-PersonalEmail >> First name in kana
+
+candidate-Source >> Last name in kana
+
+
+---- CANDIDATE
+Jovan Gonzalez  [  search job orders | make a contact ]
+Ley 73 Mylan Empleado #167-15-015
+Hc 30 Box 36506
+San Lorenzo,PR 00754
+787-246-5576 - ingenierojovan@yahoo.com
+787-736-7166(second#)
+
+
+Tamara Matos  [ make a candidate ]
+Microsoft Caribbean Inc.
+Microsoft BuildingStreet 1, Lot 18, Suite 5000, Guaynabo, PR 00968
+tmatos@microsoft.com

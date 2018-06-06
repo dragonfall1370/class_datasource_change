@@ -1,0 +1,9 @@
+Title First name in Kana
+contact-MobilePhone Last name in Kana
+PersonalEmail Middle name
+homePhone Skype
+dob EMPTY
+
+--
+candidate-Skype  First name in kana
+Website  Last name in kana

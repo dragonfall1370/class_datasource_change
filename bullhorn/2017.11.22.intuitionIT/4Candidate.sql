@@ -360,8 +360,8 @@ with
 	-- select count (*) -- select top 50 hourlyRateLow -- select distinct status --ethnicity -- dateAvailable
 	from bullhorn1.Candidate C --where c.userID in (76938, 100453, 120112) --where C.isPrimaryOwner = 1
 	left join SkillName SN on C.userID = SN.userId
-	--left join tmp_country tc ON c.countryID = tc.code
-	left join tmp_country tc ON c.ethnicity = tc.code -- 
+	left join tmp_country tc ON c.countryID = tc.code
+	--left join tmp_country tc1 ON c.ethnicity = tc1.code -- 
 	left join owner on C.recruiterUserID = owner.recruiterUserID
 	left join e1 on C.userID = e1.ID
 	left join e2 on C.userID = e2.ID

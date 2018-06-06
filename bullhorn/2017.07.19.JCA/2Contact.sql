@@ -187,3 +187,19 @@ select count(*) from comments where externalId is not null --and externalId = 41
 , comments (userID, comments) as (SELECT userID, comments = MAX(comments) FROM r GROUP BY userID)
 select top 10 *,len(comments) as '(length-contact-comment)' from comments
 */
+
+
+/*
+select dateAdded, dateLastVisit from bullhorn1.BH_Client;
+select dateAdded, dateLastComment from bullhorn1.BH_UserContact;
+
+select
+        Cl.clientID
+	, case when (ltrim(replace(UC.firstName,'?','')) = '' or  UC.firstName is null) then 'Firstname' else ltrim(replace(UC.firstName,'?','')) end as 'contact-firstName'
+	, case when (ltrim(replace(UC.lastName,'?','')) = '' or  UC.lastName is null) then concat('Lastname-',Cl.clientID) else ltrim(replace(UC.lastName,'?','')) end as 'contact-Lastname'        
+        --Cl.dateAdded, Cl.dateLastVisit,
+        , UC.dateAdded as 'Bullhorn Added Date', UC.dateLastComment as 'Last Contacted Date'
+from bullhorn1.BH_UserContact UC
+left join bullhorn1.BH_Client Cl on Cl.Userid = UC.UserID
+where Cl.isPrimaryOwner = 1 --and Cl.isDeleted = 0
+*/

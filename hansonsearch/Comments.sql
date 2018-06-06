@@ -3,9 +3,20 @@ CREATE SEQUENCE rid_seq START WITH 6000 INCREMENT BY 1;
 alter table contact_comment alter column id set default nextval('rid_seq');
 commit;
 select * from contact limit 100
-select * from contact_comment
+
+select * from contact_comment limit 100 
 select count(*) from contact_comment --408
 INSERT INTO contact_comment (contact_id, user_id, comment_content, insert_timestamp) VALUES ( 64167, -10, 'TESTING', '2019-01-01 00:00:00' )
+
+select c.id,c.external_id ,cc.comment_content, cc.*
+from contact_comment cc 
+left join contact c on c.id = cc.contact_id 
+where c.external_id is not null 
+--and cc.comment_content like 'Comments%'
+--in ('224941-3462-13149','732809-5396-1211','301111-8289-15155')
+limit 100 
+
+
 -------------------
 
 -- CONTACT
@@ -72,11 +83,31 @@ select * from temp_1 where contactid in ('158672-6004-13345','158514-5567-15273'
 order by contactid,LogDate asc --70955
 --select contactid from temp_1 group by contactid having count(*) > 1
 
-
-
-
-
-
+--AND
+with temp_1 as (
+        select
+                  c.contactid
+                  ,c.FirstName, c.LastName
+                  , cast('-10' as int) as userid
+                  , cast('4' as int) as contact_method
+                  , cast('1' as int) as related_status
+                , c.lastupdate
+                , c.comments
+                --, COALESCE('Comments: ' + cast(c.comments as varchar(max)), '') as comment_content
+                --, COALESCE('Comments: ' + cast(c.comments as varchar(max)), '') as comment_content
+                , COALESCE('Comments: ' + nullif(dbo.DecodeUTF8String(c.comments),''), '') as comment_content
+                --coalesce(NULLIF(CL.Country, ''), CL.Location)
+                --, COALESCE('Comments: ' + convert(varchar(max),cast(c.comments as nvarchar(max)) ), '') as comment_content1
+                --, COALESCE('Comments: ' + dbo.UTF8_TO_NVARCHAR(c.comments), '') as 'comment_content2'
+                --,REPLACE(c.comments COLLATE Latin1_General_BIN,NCHAR(65533) COLLATE Latin1_General_BIN,'') as 'comment_content3'
+        -- select count(*) 
+        from dbo.Contacts c
+        where c.descriptor = 2 and c.comments is not null and c.comments <> '' )
+--select * from temp_1 where contactid in ('100335-1326-16117','827498-7644-15245','732235-5215-8122','508924-1686-15131') --> '43100' 
+SELECT *, NewColumn1 = dbo.DecodeUTF8String(comments) FROM temp_1 WHERE comments <> dbo.DecodeUTF8String(comments) and contactid in ('100335-1326-16117','827498-7644-15245','732235-5215-8122','508924-1686-15131')
+--select * from temp_1 where CONVERT(binary(5000),temp_1.comment_content) != CONVERT(binary(5000),CONVERT(nvarchar(1000),CONVERT(varchar(1000),temp_1.comment_content)))
+SELECT * FROM temp_1 WHERE cast(comment_content AS varchar) like '%' + char(0) +'%';
+UPDATE temp_1 SET comment_text = dbo.removeNullCharacters(comment_content) WHERE cast(comment_text AS varchar) like '%' + char(0) +'%';
 
 
 --OLD-- CANDIDATE 

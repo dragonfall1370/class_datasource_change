@@ -170,7 +170,7 @@ SELECT
 from Companies CC --where CC.CompanyName like '%Hanson Search%' --userid != '' or userid is not null
 left join (SELECT id, filename = STUFF((SELECT DISTINCT ',' + 'com_' + replace(filename,',','') from Attachments WHERE id = a.id FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 1, '') FROM Attachments a GROUP BY id) at on cc.CompanyId = at.Id
 left join (SELECT CompanyId,CompanyName,ROW_NUMBER() OVER(PARTITION BY CC.CompanyName ORDER BY CC.CompanyId DESC) AS rn FROM Companies CC) dup on CC.CompanyId = dup.CompanyId
---where CC.CompanyName like '%Hanson Search%'
+--where CC.CompanyName like '%All Response%'
 --CC.Location is null and CC.Country is not null
 --at.Filename is not null
 --and CC.country is not NULL and CC.country != ''

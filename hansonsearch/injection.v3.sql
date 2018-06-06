@@ -172,10 +172,15 @@ left join ( select distinct c.ContactId, s.segment from contacts c left join Sgm
 left join ( select c.contactid,ss.skill from Contacts c left join SkillInstances si on c.contactid = si.objectid  left join skills ss on si.skillid = ss.skillid ) skill on CL.contactid = skill.contactid
 where cl.descriptor = 2
 --and CL.FirstName = 'Katy'
+and CL.FirstName = 'Lisa' and CL.LastName = 'Seukeran'
+or CL.FirstName = 'Kate' and CL.LastName = 'Tagge'
+or CL.FirstName = 'Nicole' and CL.LastName = 'Yost'
+or CL.FirstName = 'Nicole' and CL.LastName = 'Martin'
+--or CL.FirstName = 'Alexandra' and CL.LastName = 'Martin'
 --and CL.ContactId in ('110998-3207-1554','110452-3164-11130','110393-3899-1662','110387-4971-1110','110362-5188-1540','110256-8229-9337','110245-1034-8294','110206-7622-13100','110129-5026-15322','110046-5356-15347','') ;
 and CL.ContactId in ('100593-8845-12136') --('110387-4971-1110') 
 --SELECT contactid, Sector, r1 = ROW_NUMBER() OVER (PARTITION BY contactid ORDER BY contactid desc) from Contacts
-
+select * from Contacts CL where CL.FirstName = 'Alexandra' and CL.LastName = 'Martin'
 
 
 

@@ -109,8 +109,6 @@ where C.isPrimaryOwner = 1 and C.candidateID = 3099 and
 --group by C.candidateID having count(C.candidateID) > 1
 
 
-
-
 -- CANDIDATES: CustomTextBlock5 - Sectors of Interest
 with
 ind0 (candidateID,customTextBlock5) as (select candidateID,
