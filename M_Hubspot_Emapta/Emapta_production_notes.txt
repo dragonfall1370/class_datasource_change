@@ -1,0 +1,102 @@
+Notes changes on PROD
+1. Company
+- Baxter IP Patent & Trademark Attorneys: already exists
+- add external_id for this company HS31
+- update existing company with external_id
+
+
+2. Contact
+- update external_id for existing contacts
+- import contacts
+- update 2 skipped contacts
+	+ mtaghavi@totaltr.com --> VC ID: 9423 | HS365
+	+ c.sadler@villarilawyers.com.au --> VC ID: 9313 | HS2036
+	+ update contact set external_id = 'HS365' where id = 9423 and deleted_timestamp is NULL;
+	+ update contact set external_id = 'HS2036' where id = 9313 and deleted_timestamp is NULL;
+- update existing contact info (add as comments)
+- update 1 contact (existing contact was deleted)
+	+ Nick Lavidge: VC ID: 9311 | HS2142
+	+ update contact set external_id = 'HS2142' where id = 9311 and deleted_timestamp is NULL;
+- update contact_comment sequence
+	+ CREATE SEQUENCE IF NOT EXISTS contact_comment_id_seq OWNED BY contact_comment.id;
+	ALTER TABLE contact_comment ALTER COLUMN id SET DEFAULT nextval('contact_comment_id_seq'::regclass);
+	SELECT setval('contact_comment_id_seq', (SELECT MAX(id) FROM contact_comment));
+- update highest status of contact stages
+
+/***
+with NonContactCompany as (select DealID, DealStage, AssociatedCompanyID, AssociatedContactID
+	from DealSales 
+	where AssociatedCompanyID is not NULL
+	and AssociatedContactID is NULL
+	and DealID not in (select DealID from NewContactAdded)
+	and DealID not in (select DealID from NewDefaultContact)) --Company without contact -> to be updated 2mr
+
+, MaxContactID as (select AssociatedCompanyID, max(ContactID) as MaxContactID
+	from Contact
+	where AssociatedCompanyID in (select AssociatedCompanyID from NonContactCompany)
+	group by AssociatedCompanyID)
+
+, TotalDealSales as (
+
+	select DealID, DealStage, AssociatedCompanyID, concat('HS',AssociatedContactID) as AssociatedContactID
+	from DealSales
+	where DealID not in (select DealID from NewContactAdded)
+	and DealID not in (select DealID from NewDefaultContact)
+	and AssociatedContactID is not NULL
+
+UNION ALL
+
+	select DealID, DealStage, ncc.AssociatedCompanyID, concat('HS',mc.MaxContactID)
+	from NonContactCompany ncc
+	left join MaxContactID mc on mc.AssociatedCompanyID = ncc.AssociatedCompanyID
+	where MaxContactID is not NULL
+
+UNION ALL
+	select DealID, DealStage, AssociatedCompanyID, concat('HS',NewContactID) from NewContactAdded
+
+UNION ALL
+	select DealID, DealStage, AssociatedCompanyID, concat('HS',newDefaultContactID) from NewDefaultContact)
+
+, Dealstage as (select DealStage
+, DealID
+, AssociatedContactID as ExternalContactID
+, case when DealStage = 'Introduction' or DealStage = 'Qualification ' then 1
+	when DealStage = 'Solution Presentation' or DealStage = 'Proposal' then 2
+	when DealStage = 'Negotiation' then 3
+	when DealStage = 'Closed Lost' or DealStage = 'Nurture' then 3
+	when DealStage = 'Closed Won' then 4
+	else NULL end as 'VCboard'
+, case when DealStage = 'Closed Lost' or DealStage = 'Nurture' then 2
+	else 1 end as 'VCstatus'
+from TotalDealSales)
+
+-- to check if Contact has many stages, get the highest stage
+, SpecialStage as (select ExternalContactID, count(ExternalContactID) as ExternalContactIDCount
+from DealStage
+group by ExternalContactID
+having count(ExternalContactID) > 1)
+
+, StageCount as (SELECT Dealstage.ExternalContactID, Dealstage.VCboard, Dealstage.VCstatus, ROW_NUMBER() OVER(PARTITION BY Dealstage.ExternalContactID ORDER BY VCboard, VCstatus ASC) AS rn 
+FROM SpecialStage
+left join Dealstage on Dealstage.ExternalContactID = SpecialStage.ExternalContactID)
+--where Dealstage.ExternalContactID = 'HS1191'
+
+select * from StageCount
+where rn > 1
+order by ExternalContactID
+***/
+
+	+ update contact set board = 4, status = 1 where external_id = 'HS1952'
+	+ update contact set board = 3, status = 2 where external_id = 'HS237'
+	+ update contact set board = 3, status = 2 where external_id = 'HS303'
+	
+---SCRIPT TO CHECK
+select id, first_name, last_name, email, external_id, deleted_timestamp from contact where first_name = 'Simon' and last_name = 'Hammond'
+
+
+---Emapta queries (5 Oct 2017)
+select * from position_description where company_id in (9357,9951)
+
+select * from position_description where name like '%Full Stack Developer%'
+
+select * from company where id = 9594
