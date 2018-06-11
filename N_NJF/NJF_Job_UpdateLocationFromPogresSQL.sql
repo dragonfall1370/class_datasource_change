@@ -1,0 +1,4 @@
+update position_description
+set company_location_id = contact_location.company_location_id
+from contact_location
+where position_description.contact_id = contact_location.contact_id

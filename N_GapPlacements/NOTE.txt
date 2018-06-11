@@ -1,0 +1,3 @@
+Get list of keyword from excel to mapp wwith candidate keywords on the DB
+need to adđ keyword for company when migrating to production
+use currency in the db for job and candidate - thaibaht is wrong
