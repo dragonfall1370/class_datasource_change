@@ -1,0 +1,2075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>AFR_candidate</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/05/18 13:54:03.651</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/05/18 13:54:03.651</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Improved comment activities (All entities)</note>
+      <xloc>864</xloc>
+      <yloc>192</yloc>
+      <width>231</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Updated candidate source - LinkedIn</note>
+      <xloc>128</xloc>
+      <yloc>672</yloc>
+      <width>204</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Created by is used as Candidate Owner (no need to inject)</note>
+      <xloc>512</xloc>
+      <yloc>576</yloc>
+      <width>315</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>AFR DB</name>
+    <server>10.0.1.65</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>afr</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>AFR PROD</name>
+    <server>10.0.9.228</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>afr.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Insert candidate activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Insert/Update Candidate activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Internal interview as activities</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate entered by/date as activities</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Index Candidate Activity</from>
+      <to>Candidate Activity Table</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Source</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Candidate source lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate source lookup</from>
+      <to>Candidate source update</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Job Application History (v1)</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate created by (user_account_id)</from>
+      <to>User lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>User lookup</from>
+      <to>Update created by</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Job Application History (v2)</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Application related comments</from>
+      <to>Candidate lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>Job lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup 2</from>
+      <to>Insert activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Index Job Activity</from>
+      <to>Job Activity Table</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Source  LinkedIn</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Candidate source update 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Registered date</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Update Registered Date</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Application related comments</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select concat('AFR',p.CandidateNumber) as AFR_CandidateExtID
+	, concat('AFR',p.JobNumber) as AFR_JobExtID
+	, concat_ws(char(10),'[Application related comments]'
+		, coalesce('Match Number: ' + convert(nvarchar(max),p.MatchNumber),'')
+		, coalesce('Comment Date: ' + convert(nvarchar(20),p.comment_datetime,120),'')
+		, coalesce('Candidate Number: ' + convert(varchar(10),p.CandidateNumber),NULL)
+		, coalesce('Candidate Name: ' + coalesce(pp.Name_First,'') + ' ' + coalesce(pp.Name_Middle,'') + ' ' + coalesce(pp.Name_Last,''),NULL)
+		, coalesce('Job Order Number: ' + convert(varchar(10),p.JobNumber),NULL)
+		, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
+		, coalesce('Comments: ' + nullif(p.Comments,''),NULL)
+		) as AFR_comment_activities
+	, -10 as AFR_user_account_id
+	, convert(datetime,p.comment_datetime,120) as AFR_insert_timestamp
+	, 'comment' as AFR_category
+	, case when p.CandidateNumber > 0 then 'candidate'
+	else 'job' end as AFR_type
+from AFR_ApplicationCSV5 p
+left join Person pp on pp.Person_Number = p.CandidateNumber
+left join Job_Order j on j.Job_Order_Number = p.JobNumber
+order by p.CandidateNumber, p.JobNumber
+
+--total: 80465</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Activity Table</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <schema />
+    <table>activity_candidate</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>activity_id</column_name>
+        <stream_name>id</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>candidate_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Job Application History (v1)</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>--JOB APPLICATION HISTORY AS CANDIDATE &amp; JOB ACTIVITIES
+with JobAppOwners as (select m.Match_Number, m.Account_Manager_Person_Number, m.Recruiter_Person_Number, concat_ws(',',u.Email,u2.Email) as JobAppOwners
+	from Match m
+	left join AFR_User u on m.Account_Manager_Person_Number = u.UserID
+	left join AFR_User u2 on m.Recruiter_Person_Number = u2.UserID)
+
+--MAIN SCRIPT
+select s.Match_Number
+, concat('AFR',m.Candidate_Number) as AFR_CandExtID
+, concat_ws(char(10),'[Historical Stage]'
+	, coalesce('Match Number: ' + convert(varchar(10),s.Match_Number),'')
+	, iif(s.Created_DTTM is NULL,NULL,concat('Created date: ', convert(varchar(20),s.Created_DTTM,120)))
+	, coalesce('Created by: ' + concat(u.Firstname,' ',u.Lastname,' - ',u.Email),NULL)
+	, coalesce('Stage Id: ' + convert(varchar(10),s.Stage_Id),NULL)
+	, coalesce('Match Stage: ' + ms.Description,NULL)
+	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
+	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
+	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
+	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
+	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
+	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
+	, coalesce('Job Owners: ' + jao.JobAppOwners,NULL)
+	) as AFR_comment_activities
+, -10 as AFR_user_account_id
+, case when s.Created_DTTM is NULL then GETDATE()
+	else convert(datetime,s.Created_DTTM,120) end as AFR_insert_timestamp
+, 'comment' as AFR_category
+, 'candidate' as AFR_type --candidate | job
+from Stage s --343854
+left join Match_Stage ms on ms.Match_Stage_Id = s.Match_Stage_Id
+left join AFR_User u on u.UserID = s.Created_By_Person_Number
+left join Match m on m.Match_Number = s.Match_Number
+left join Company c on c.Company_Number = m.Company_Number
+left join Person p on p.Person_Number = m.Candidate_Number
+left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
+left join JobAppOwners jao on jao.Match_Number = m.Match_Number
+
+UNION ALL
+
+select i.Match_Number
+, concat('AFR',m.Candidate_Number) as AFR_CandExtID
+, concat_ws(char(10),'[Interview histories]'
+	, coalesce('Match Number: ' + convert(varchar(10),i.Match_Number),'')
+	, iif(i.Interview_DT is NULL,NULL,concat('Interview date: ', convert(varchar(20),i.Interview_DT,120)))
+	, coalesce('Interview with: ' + nullif(i.Interview_With,''),NULL)
+	, coalesce('Stage Id: ' + convert(varchar(10),i.Stage_Id),NULL)
+	, coalesce('Interview Number: ' + convert(varchar(10),i.Interview_Number),NULL)
+	, coalesce('Interview Type: ' + it.Description,NULL)
+	, coalesce('Interview Sequence Number: ' + convert(varchar(10),i.Interview_Sequence_Number),NULL)
+	, coalesce('Interview Description: ' + i.Interview_Description,NULL)
+	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
+	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
+	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
+	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
+	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
+	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
+	) as AFR_comment_activities
+, -10 as AFR_user_account_id
+, case when i.Interview_DT is NULL then GETDATE()
+	else convert(datetime,i.Interview_DT,120) end as AFR_insert_timestamp
+, 'comment' as AFR_category
+, 'candidate' as AFR_type --candidate | job
+from Interview i
+left join Match m on m.Match_Number = i.Match_Number
+left join Company c on c.Company_Number = m.Company_Number
+left join Person p on p.Person_Number = m.Candidate_Number
+left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
+left join Interview_Type it on it.Interview_Type_Id = i.Interview_Type_Id</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Job Application History (v2)</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>--JOB APPLICATION HISTORY AS CANDIDATE &amp; JOB ACTIVITIES
+with JobAppOwners as (select m.Match_Number, m.Account_Manager_Person_Number, m.Recruiter_Person_Number, concat_ws(',',u.Email,u2.Email) as JobAppOwners
+	from Match m
+	left join AFR_User u on m.Account_Manager_Person_Number = u.UserID
+	left join AFR_User u2 on m.Recruiter_Person_Number = u2.UserID)
+
+--MAIN SCRIPT
+, Activities as (select m.Candidate_Number
+, m.Job_Order_Number
+, concat_ws(char(10), coalesce('Match Number: ' + convert(varchar(10),s.Match_Number),'')
+	, iif(s.Created_DTTM is NULL,NULL,concat('Created date: ', convert(varchar(20),s.Created_DTTM,120)))
+	, coalesce('Created by: ' + concat(u.Firstname,' ',u.Lastname,' - ',u.Email),NULL)
+	, coalesce('Stage Id: ' + convert(varchar(10),s.Stage_Id),NULL)
+	, coalesce('Match Stage: ' + ms.Description,NULL)
+	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
+	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
+	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
+	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
+	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
+	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
+	, coalesce('Job Owners: ' + jao.JobAppOwners,NULL)
+	) as Activities
+, -10 as User_account_id
+, 'comment' as Category
+, 'candidate' as Type
+, s.Created_DTTM as Insert_timestamp
+--, convert(varchar(20),s.Created_DTTM,120) as Insert_timestamp
+from Stage s --343854
+left join Match_Stage ms on ms.Match_Stage_Id = s.Match_Stage_Id
+left join AFR_User u on u.UserID = s.Created_By_Person_Number
+left join Match m on m.Match_Number = s.Match_Number
+left join Company c on c.Company_Number = m.Company_Number
+left join Person p on p.Person_Number = m.Candidate_Number
+left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
+left join JobAppOwners jao on jao.Match_Number = m.Match_Number
+
+UNION ALL
+
+select m.Candidate_Number
+, m.Job_Order_Number
+, concat_ws(char(10), coalesce('Match Number: ' + convert(varchar(10),i.Match_Number),'')
+	, iif(i.Interview_DT is NULL,NULL,concat('Interview date: ', convert(varchar(20),i.Interview_DT,120)))
+	, coalesce('Interview with: ' + nullif(i.Interview_With,''),NULL)
+	, coalesce('Stage Id: ' + convert(varchar(10),i.Stage_Id),NULL)
+	, coalesce('Interview Number: ' + convert(varchar(10),i.Interview_Number),NULL)
+	, coalesce('Interview Type: ' + it.Description,NULL)
+	, coalesce('Interview Sequence Number: ' + convert(varchar(10),i.Interview_Sequence_Number),NULL)
+	, coalesce('Interview Description: ' + i.Interview_Description,NULL)
+	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
+	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
+	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
+	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
+	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
+	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
+	) as Activities
+, -10 as User_account_id
+, 'comment' as category
+, 'candidate' as Type
+, i.Interview_DT as Insert_timestamp
+from Interview i
+left join Match m on m.Match_Number = i.Match_Number
+left join Company c on c.Company_Number = m.Company_Number
+left join Person p on p.Person_Number = m.Candidate_Number
+left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
+left join Interview_Type it on it.Interview_Type_Id = i.Interview_Type_Id)
+
+select concat('AFR',Candidate_Number) as AFR_CandidateExtID
+, concat('AFR',Job_Order_Number) as AFR_JobExtID
+, STRING_AGG(Activities, concat(char(10),char(13))) within group (order by Insert_timestamp desc) as AFR_comment_activities
+, max(Insert_timestamp) as AFR_Insert_timestamp
+, max(User_account_id) as AFR_User_account_id
+, max(category) as AFR_category
+, max(Type) as AFR_type
+from Activities
+where Candidate_Number is not NULL and Job_Order_Number is not NULL
+group by Candidate_Number, Job_Order_Number</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Registered date</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select concat('AFR',p.Person_Number) as AFR_CandidateExtID
+, convert(datetime,p.Created_DTTM,120) as AFR_Registered_date
+from Person p
+where p.Created_DTTM is not NULL
+order by p.Person_Number
+
+--total: 66121</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Source</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select concat('AFR',p.Person_Number) as AFR_CandidateExtID
+, p.Referred_Source_Id
+, rs.Description as AFR_candidateSource
+from Person p
+left join Referred_Source rs on rs.Referred_Source_Id = p.Referred_Source_Id
+where p.Referred_Source_Id > 0
+order by p.Person_Number</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Source  LinkedIn</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select concat('AFR', CandidateNumber) as AFR_CandidateExtID
+, Linkedin_URL
+, 29096 as CandidateSource --lookup from database
+from AFR_CandidateCSV1
+where Linkedin_URL is not NULL
+order by CandidateNumber</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate created by (user_account_id)</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select concat('AFR',p.Person_Number) as AFR_CandidateExtID
+, p.Owned_By_Person_Number
+, u.Email as AFR_Candidate_owners
+from Person p
+left join AFR_User u on u.UserID = p.Owned_By_Person_Number
+order by p.Person_Number
+
+--total: 66121</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate entered by/date as activities</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select concat('AFR',p.Person_Number) as AFR_CandidateExtID
+, concat_ws(char(10),'[ENTERED DATE]'
+	, iif(p.Owned_By_Person_Number = '' or p.Owned_By_Person_Number is NULL,NULL,concat('Entered by: ', u.Firstname, ' ', u.Lastname, ' - ', u.Email))
+	, iif(p.Created_DTTM is NULL,NULL,concat('Entered date: ', convert(varchar(20),p.Created_DTTM,120)))
+	) as AFR_comment_activities
+, -10 as AFR_user_account_id
+, case when Created_DTTM is NULL then GETDATE()
+	else convert(datetime,Created_DTTM,120) end as AFR_insert_timestamp
+, 'comment' as AFR_category
+, 'candidate' as AFR_type
+from Person p
+left join AFR_User u on u.UserID = p.Owned_By_Person_Number
+order by p.Person_Number
+
+--total: 66121</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>AFR_CandidateExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name />
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 2</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>AFR_CandidateExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name />
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 3</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>AFR_CandidateExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name />
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate source lookup</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema />
+      <table>candidate_source</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>AFR_candidateSource</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandSourceID</rename>
+        <default />
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate source update</name>
+    <type>InsertUpdate</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema />
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>candidate_source_id</name>
+        <rename>VCCandSourceID</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate source update 2</name>
+    <type>InsertUpdate</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema />
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>candidate_source_id</name>
+        <rename>CandidateSource</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Index Candidate Activity</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <sql>SELECT id
+, candidate_id
+, insert_timestamp
+from activity
+where candidate_id is not NULL and candidate_id > 0</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Index Job Activity</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <sql>SELECT id
+, position_id
+, insert_timestamp
+from activity
+where position_id is not NULL and position_id > 0</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert activities</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>AFR_user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>AFR_type</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>AFR_insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>AFR_comment_activities</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>AFR_category</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate activities</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>AFR_user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>AFR_type</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>AFR_insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>AFR_comment_activities</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>AFR_category</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert/Update Candidate activities</name>
+    <type>InsertUpdate</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>Forward_comment_activities</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>VCCandidateID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>Forward_user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>Forward_comment_activities</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>Forward_insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>Forward_category</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>Forward_type</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Internal interview as activities</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select concat('AFR',p.Person_Number) as AFR_CandidateExtID
+, concat_ws(char(10),'[INTERNAL INTERVIEW]'
+	, iif(a1.InternalInterviewer = '' or a1.InternalInterviewer is NULL,'No internal interviewer',concat('Internal Interviewer: ', a1.InternalInterviewer))
+	, iif(p.Recruiter_Interview_DT is NULL,NULL,concat('Internal Interview Date: ', convert(varchar(20),p.Recruiter_Interview_DT,120)))
+	) as AFR_comment_activities
+, -10 as AFR_user_account_id
+, case when Recruiter_Interview_DT is NULL then GETDATE()
+	else convert(datetime,Recruiter_Interview_DT,120) end as AFR_insert_timestamp
+, 'comment' as AFR_category
+, 'candidate' as AFR_type
+from Person p
+left join AFR_CandidateCSV1 a1 on a1.CandidateNumber = p.Person_Number
+where p.Recruiter_Interview_DT &lt;&gt; '' or p.Recruiter_Interview_DT is not NULL
+order by p.Person_Number
+
+--total: 13856</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job Activity Table</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <schema />
+    <table>activity_job</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>activity_id</column_name>
+        <stream_name>id</stream_name>
+      </field>
+      <field>
+        <column_name>job_id</column_name>
+        <stream_name>position_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup 2</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>AFR_JobExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1216</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update Registered Date</name>
+    <type>InsertUpdate</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema />
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>AFR_Registered_date</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update created by</name>
+    <type>InsertUpdate</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema />
+      <table>candidate</table>
+      <key>
+        <name>AFR_CandidateExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name />
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>user_account_id</name>
+        <rename>VCUserID</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>User lookup</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema />
+      <table>user_account</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>AFR_Candidate_owners</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCUserID</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
