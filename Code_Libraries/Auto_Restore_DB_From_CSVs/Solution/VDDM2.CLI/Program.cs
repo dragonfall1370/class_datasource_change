@@ -127,7 +127,7 @@ namespace VDDM2.CLI
 
 			var textQualifier = args[1];
 
-			if (string.IsNullOrWhiteSpace(textQualifier) || textQualifier.Length != 1)
+			if (textQualifier == null || textQualifier.Length > 1)
 			{
 				Console.WriteLine("Please enter a valid text qualifier character.");
 				return;
@@ -227,7 +227,7 @@ namespace VDDM2.CLI
 
 			var textQualifier = args[2];
 
-			if (string.IsNullOrWhiteSpace(textQualifier) || textQualifier.Length != 1)
+			if (textQualifier == null || textQualifier.Length > 1)
 			{
 				Console.WriteLine("Please enter a valid text qualifier character.");
 				return null;
@@ -264,10 +264,16 @@ namespace VDDM2.CLI
 				}
 			}
 
+			char? finalTextQualifier = null;
+			if(textQualifier.Length == 1)
+			{
+				finalTextQualifier = textQualifier[0];
+			}
+
 			var convertedExcelFilePath = EPPlusProvider.CSV2XLSX(
 				basePath
 				, sourceFile
-				, textQualifier[0]
+				, finalTextQualifier
 				, codePageInt
 				, delimiter[0]
 				, eol);
