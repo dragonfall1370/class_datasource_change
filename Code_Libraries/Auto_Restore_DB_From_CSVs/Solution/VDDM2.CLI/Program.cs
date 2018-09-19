@@ -106,6 +106,45 @@ namespace VDDM2.CLI
 				return;
 			}
 
+			var textQualifier = args[1];
+
+			if (string.IsNullOrWhiteSpace(textQualifier) || textQualifier.Length != 1)
+			{
+				Console.WriteLine("Please enter a valid text qualifier character.");
+				return;
+			}
+
+			var codePage = args[2];
+			int codePageInt = 0;
+
+			if (string.IsNullOrWhiteSpace(codePage) || !int.TryParse(codePage, out codePageInt))
+			{
+				Console.WriteLine("Please enter a valid code page which is a integer.");
+				return;
+			}
+
+			string delimiter = ",";
+			string eol = @"\r\n";
+
+			if (args.Length == 5)
+			{
+				delimiter = args[3];
+
+				if (string.IsNullOrWhiteSpace(delimiter) || delimiter.Length != 1)
+				{
+					Console.WriteLine("Please enter a valid delimiter character.");
+					return;
+				}
+
+				eol = args[4];
+
+				if (string.IsNullOrWhiteSpace(eol) || (eol != @"\r\n" && eol != @"\n"))
+				{
+					Console.WriteLine(@"Please enter a valid end of line characters. That should be either \r\n or \n");
+					return;
+				}
+			}
+
 			try
 			{
 				var dir = new DirectoryInfo(basePath);
@@ -114,7 +153,7 @@ namespace VDDM2.CLI
 				{
 					foreach (var f in fileList)
 					{
-						var ags = new string[] { basePath, f.Name, "\"", "65001", ",", @"\n" };
+						var ags = new string[] { basePath, f.Name, textQualifier, codePage, delimiter, eol };
 						CSV2DB(ags);
 					}
 				}

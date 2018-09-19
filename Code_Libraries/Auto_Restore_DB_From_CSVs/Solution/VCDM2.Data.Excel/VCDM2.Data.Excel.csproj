@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EPPlusProvider.cs" />
-    <Compile Include="MsOfficeInteropExcelProvider.cs" />
     <Compile Include="OLEDBProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
