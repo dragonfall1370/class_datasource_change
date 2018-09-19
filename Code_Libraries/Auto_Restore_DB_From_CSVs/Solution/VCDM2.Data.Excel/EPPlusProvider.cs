@@ -55,7 +55,7 @@ namespace VCDM2.Data.Excel
 
 				if (textQualifier.HasValue)
 				{
-					format.TextQualifier = textQualifier ?? textQualifier.Value;
+					format.TextQualifier = textQualifier.Value;
 				}
 
 				// ty to create output path
