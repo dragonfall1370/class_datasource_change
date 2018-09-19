@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="MasterRecordId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RecordTypeId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BillingStreet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BillingState" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BillingPostalCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCountry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BillingLatitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BillingLongitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BillingGeocodeAccuracy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingStreet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingCity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingState" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingPostalCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingCountry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingLatitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingLongitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingGeocodeAccuracy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Industry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AnnualRevenue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfEmployees" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ownership" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TickerSymbol" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rating" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Site" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CreatedById" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastModifiedById" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SystemModstamp" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastActivityDate" Type="DateTime" Precision="7" />
+    <Property Name="Jigsaw" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="JigsawCompanyId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AccountSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SicDesc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Date_Established__c" Type="DateTime" Precision="7" />
+    <Property Name="AVTRRT__Exchange__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Expiration_date__c" Type="DateTime" Precision="7" />
+    <Property Name="AVTRRT__Fee__c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Flat_Fee__c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Guarantee_Information__c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Jobs_Website__c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Password__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Required__c" Type="Boolean" Nullable="false" />
+    <Property Name="AVTRRT__Revenue__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Symbol__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Terms__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Time_Zone__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__User__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__VMS_Website__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Year_Started__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Lat__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Lon__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Map_Which_Address__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Mapping_Status__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__External_ID__c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="OrcanIntelligenceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Contacts" EntityType="OIModel.Contact" />
+    <EntitySet Name="Users" EntityType="OIModel.User" />
+  </EntityContainer>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="MasterRecordId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AccountId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="Salutation" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="RecordTypeId" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="OtherStreet" Type="String" MaxLength="41" FixedLength="false" Unicode="false" />
+    <Property Name="OtherCity" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="OtherState" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="OtherPostalCode" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="OtherCountry" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="OtherLatitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OtherLongitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OtherGeocodeAccuracy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MailingStreet" Type="String" MaxLength="89" FixedLength="false" Unicode="false" />
+    <Property Name="MailingCity" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MailingState" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MailingPostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MailingCountry" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MailingLatitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MailingLongitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MailingGeocodeAccuracy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+    <Property Name="OtherPhone" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+    <Property Name="AssistantPhone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="ReportsToId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="49" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AssistantName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LeadSource" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="Birthdate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="HasOptedOutOfEmail" Type="Boolean" />
+    <Property Name="HasOptedOutOfFax" Type="Boolean" />
+    <Property Name="DoNotCall" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedById" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedById" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="SystemModstamp" Type="DateTime" Precision="3" />
+    <Property Name="LastActivityDate" Type="DateTime" Precision="3" />
+    <Property Name="LastCURequestDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LastCUUpdateDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EmailBouncedReason" Type="String" MaxLength="175" FixedLength="false" Unicode="false" />
+    <Property Name="EmailBouncedDate" Type="DateTime" Precision="3" />
+    <Property Name="Jigsaw" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="JigsawContactId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__AutoPopulate_Skillset__c" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Availability_To_Interview__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Available_To_Start__c" Type="DateTime" Precision="3" />
+    <Property Name="AVTRRT__Background_Check__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Birthday__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Candidate_Id__c" Type="Single" />
+    <Property Name="AVTRRT__Candidate_Short_List__c" Type="String" MaxLength="486" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Candidate_Status__c" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Candidate_Summary__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Candidate_Write_Up__c" Type="String" MaxLength="37" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Cell_Phone__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__City__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Confirmation__c" Type="Boolean" />
+    <Property Name="AVTRRT__Country__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Cover_Letter__c" Type="String" MaxLength="2087" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Current_Pay__c" Type="Single" />
+    <Property Name="AVTRRT__Department__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Desired_Pay_Range_From__c" Type="Single" />
+    <Property Name="AVTRRT__Education_CandidateProf__c" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Education_Details__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Ethnicity__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Experience__c" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Fax__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Gender__c" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__General_Competency__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__General_Job_Category_Sought__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Home_Email__c" Type="String" MaxLength="33" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__IT_Competency__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Internal_Candidate__c" Type="Boolean" />
+    <Property Name="AVTRRT__Job_Title__c" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Jobs_Notified__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Languages__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Locations_1st_Choice__c" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Notes_and_Comments__c" Type="String" MaxLength="232" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Notify_Candidate__c" Type="Boolean" />
+    <Property Name="AVTRRT__Online_Profile_Link__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Open_For_Relocation__c" Type="Boolean" />
+    <Property Name="AVTRRT__Other_Competency__c" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Other_Emails__c" Type="String" MaxLength="48" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Pager__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Parse_Resume_Migration_Id__c" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Pay_Type__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Percentage_of_Travel__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Phone__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Postal_Code__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Preferred_Job_Term__c" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Previous_Employers__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Previous_Titles__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AVTRRT__Recruiter__c" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Referral_Date__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Referral_Relationship__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Referral_Source__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Resume_Received_Date__c" Type="DateTime" Precision="3" />
+    <Property Name="AVTRRT__Skill_Matched__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Source__c" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__State__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Street_Address__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Time_Zone__c" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Veteran_Status__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Video_Resume_Link__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Status__c" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__X2nd_Choice__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__isRequired__c" Type="Boolean" />
+    <Property Name="AVTRRT__Jobs_Applied__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Jobs_Notified_Long__c" Type="Double" />
+    <Property Name="AVTRRT__Update_Skills__c" Type="Boolean" />
+    <Property Name="AVTRRT__Duplicate_Criteria__c" Type="String" MaxLength="76" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Is_Duplicate__c" Type="Boolean" />
+    <Property Name="AVTRRT__Resume_Attachment_Id__c" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Chatter_Id__c" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Employment_History_Org_Name__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Jobs__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Migration_Id__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Recent_Template__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__ResumeRich__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Resume_Link__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Lat__c" Type="Single" />
+    <Property Name="AVTRRT__Lon__c" Type="Single" />
+    <Property Name="AVTRRT__Map_Which_Address__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Mapping_Status__c" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__CMSProfile__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__Company_Name__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__Password__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__PortalEmailAlert__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__Profile_Manager_Email__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__Registration_Approved__c" Type="Boolean" />
+    <Property Name="FCMS__UserName__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="JOBBS__Daxtra_Candidate_Id__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="JOBBS__Job_Board_ProfileId__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__CallEmAll_Broadcast_Id__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Current_Employer__c" Type="String" MaxLength="106" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Driver_Licence_Number__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Driver_Licence_State__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__New_Email__c" Type="String" MaxLength="37" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Prophecy_Caregiver_ID__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Resume_Name__c" Type="String" MaxLength="116" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__SSN__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Total_Experience_Months__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Total_Experience_Years__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__External_ID__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Updated_Account_from_Current_Employer__c" Type="Boolean" />
+    <Property Name="AVTRRT__Work_Details_History_10__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_11__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_12__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_13__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_14__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_1__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_2__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_3__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_4__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_5__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_6__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_7__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_8__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AVTRRT__Work_Details_History_9__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__Job_Site__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__LinkedInId__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRGTFCMS__Client_Portal_Super_User__c" Type="Boolean" />
+    <Property Name="TRGTFCMS__Publish__c" Type="Boolean" />
+    <Property Name="TRGTFCMS__Vendor_Contact__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRGTFCMS__Vendor_Notes__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRGTFCMS__Vendor__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__FacebookId__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FCMS__GoogleId__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Consent__c" Type="Boolean" />
+    <Property Name="Date_of_Consent__c" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Privacy_consent__c" Type="Boolean" />
+    <Property Name="Email_consent__c" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="29" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+    <Property Name="Division" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Street" Type="String" MaxLength="41" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="Latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GeocodeAccuracy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="37" FixedLength="false" Unicode="false" />
+    <Property Name="SenderEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SenderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Signature" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StayInTouchSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StayInTouchSignature" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StayInTouchNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="Int32" />
+    <Property Name="Fax" Type="Int32" />
+    <Property Name="MobilePhone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Alias" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CommunityNickname" Type="String" MaxLength="39" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsSystemControlled" Type="Boolean" />
+    <Property Name="TimeZoneSidKey" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="UserRoleId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="LocaleSidKey" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ReceivesInfoEmails" Type="Boolean" />
+    <Property Name="ReceivesAdminInfoEmails" Type="Boolean" />
+    <Property Name="EmailEncodingKey" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProfileId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="UserSubtype" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StartDay" Type="Int16" />
+    <Property Name="EndDay" Type="Int16" />
+    <Property Name="LanguageLocaleKey" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DelegatedApproverId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+    <Property Name="LastPasswordChangeDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedById" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedById" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="SystemModstamp" Type="DateTime" Precision="3" />
+    <Property Name="SuAccessExpirationDate" Type="DateTime" Precision="3" />
+    <Property Name="SuOrgAdminExpirationDate" Type="DateTime" Precision="3" />
+    <Property Name="OfflineTrialExpirationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="WirelessTrialExpirationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OfflinePdaTrialExpirationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ForecastEnabled" Type="Boolean" />
+    <Property Name="ContactId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AccountId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="CallCenterId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FederationIdentifier" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AboutMe" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LoginLimit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProfilePhotoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DigestFrequency" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DefaultGroupNotificationFrequency" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="WorkspaceId" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="SharingType" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="ChatterAdoptionStage" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ChatterAdoptionStageModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="BannerPhotoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsProfilePhotoActive" Type="Boolean" />
+    <Property Name="AVTRRT__Candidate_Pool_Account_Name__c" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

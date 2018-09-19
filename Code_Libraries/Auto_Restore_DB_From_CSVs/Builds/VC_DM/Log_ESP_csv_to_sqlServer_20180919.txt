@@ -1,0 +1,308 @@
+Microsoft Windows [Version 10.0.17134.285]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\vincere>e:
+
+E:\>cd E:\Adam\MyUtilities\VCDM\Builds\VC_DM
+
+E:\Adam\MyUtilities\VCDM\Builds\VC_DM>VDDM2.CLI.exe /csvbulk2db E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore """" 65001
+Please enter a valid command name.
+Usage:
+        --csv2excel [base-path] [csv-file-name] [text-qualifier-character] [code-page:integer(ex: 65001 - Unicode (UTF-8), default: 1252 - ANSI Latin 1; Western European (Windows))]
+        --excel2db [base-path] [excel-file-name]
+
+E:\Adam\MyUtilities\VCDM\Builds\VC_DM>VDDM2.CLI.exe \csvbulk2db E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore """" 65001
+Please enter a valid command name.
+Usage:
+        --csv2excel [base-path] [csv-file-name] [text-qualifier-character] [code-page:integer(ex: 65001 - Unicode (UTF-8), default: 1252 - ANSI Latin 1; Western European (Windows))]
+        --excel2db [base-path] [excel-file-name]
+
+E:\Adam\MyUtilities\VCDM\Builds\VC_DM>VDDM2.CLI.exe /bulkcsv2db E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore """" 65001
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Account.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Account.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Account.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Account]' if exists
+Creating table '[dbo].[Account]'
+Start bulk inserting data into table '[dbo].[Account]'
+Finished bulk inserting data into table '[dbo].[Account]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Attachment.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Attachment.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Attachment.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Attachment]' if exists
+Creating table '[dbo].[Attachment]'
+Start bulk inserting data into table '[dbo].[Attachment]'
+Finished bulk inserting data into table '[dbo].[Attachment]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Case.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Case.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Case.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Case]' if exists
+Creating table '[dbo].[Case]'
+Start bulk inserting data into table '[dbo].[Case]'
+Finished bulk inserting data into table '[dbo].[Case]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\ComponentResponseCache.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\ComponentResponseCache.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\ComponentResponseCache.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[ComponentResponseCache]' if exists
+Creating table '[dbo].[ComponentResponseCache]'
+Start bulk inserting data into table '[dbo].[ComponentResponseCache]'
+Finished bulk inserting data into table '[dbo].[ComponentResponseCache]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Contact.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Contact.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Contact.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Contact]' if exists
+Creating table '[dbo].[Contact]'
+Start bulk inserting data into table '[dbo].[Contact]'
+Finished bulk inserting data into table '[dbo].[Contact]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\EmailMessage.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\EmailMessage.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\EmailMessage.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[EmailMessage]' if exists
+Creating table '[dbo].[EmailMessage]'
+Start bulk inserting data into table '[dbo].[EmailMessage]'
+Finished bulk inserting data into table '[dbo].[EmailMessage]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\EntityHistory.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\EntityHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\EntityHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[EntityHistory]' if exists
+Creating table '[dbo].[EntityHistory]'
+Start bulk inserting data into table '[dbo].[EntityHistory]'
+Finished bulk inserting data into table '[dbo].[EntityHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\EntitySubscription.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\EntitySubscription.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\EntitySubscription.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[EntitySubscription]' if exists
+Creating table '[dbo].[EntitySubscription]'
+Start bulk inserting data into table '[dbo].[EntitySubscription]'
+Finished bulk inserting data into table '[dbo].[EntitySubscription]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Event.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Event.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Event.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Event]' if exists
+Creating table '[dbo].[Event]'
+Start bulk inserting data into table '[dbo].[Event]'
+Finished bulk inserting data into table '[dbo].[Event]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\FeedFieldHistory.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FeedFieldHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FeedFieldHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FeedFieldHistory]' if exists
+Creating table '[dbo].[FeedFieldHistory]'
+Start bulk inserting data into table '[dbo].[FeedFieldHistory]'
+Finished bulk inserting data into table '[dbo].[FeedFieldHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\FeedPost.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FeedPost.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FeedPost.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FeedPost]' if exists
+Creating table '[dbo].[FeedPost]'
+Start bulk inserting data into table '[dbo].[FeedPost]'
+Finished bulk inserting data into table '[dbo].[FeedPost]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\FeedTrackedChange.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FeedTrackedChange.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FeedTrackedChange.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FeedTrackedChange]' if exists
+Creating table '[dbo].[FeedTrackedChange]'
+Start bulk inserting data into table '[dbo].[FeedTrackedChange]'
+Finished bulk inserting data into table '[dbo].[FeedTrackedChange]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\FieldHistory.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FieldHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FieldHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FieldHistory]' if exists
+Creating table '[dbo].[FieldHistory]'
+Start bulk inserting data into table '[dbo].[FieldHistory]'
+Finished bulk inserting data into table '[dbo].[FieldHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\FileSearchActivity.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FileSearchActivity.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\FileSearchActivity.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FileSearchActivity]' if exists
+Creating table '[dbo].[FileSearchActivity]'
+Start bulk inserting data into table '[dbo].[FileSearchActivity]'
+Finished bulk inserting data into table '[dbo].[FileSearchActivity]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\GroupSubscription.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\GroupSubscription.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\GroupSubscription.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[GroupSubscription]' if exists
+Creating table '[dbo].[GroupSubscription]'
+Start bulk inserting data into table '[dbo].[GroupSubscription]'
+Finished bulk inserting data into table '[dbo].[GroupSubscription]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\InteractionCountReport.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\InteractionCountReport.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\InteractionCountReport.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[InteractionCountReport]' if exists
+Creating table '[dbo].[InteractionCountReport]'
+Start bulk inserting data into table '[dbo].[InteractionCountReport]'
+Finished bulk inserting data into table '[dbo].[InteractionCountReport]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Lead.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Lead.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Lead.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Lead]' if exists
+Creating table '[dbo].[Lead]'
+Start bulk inserting data into table '[dbo].[Lead]'
+Finished bulk inserting data into table '[dbo].[Lead]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\NewsFeed.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\NewsFeed.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\NewsFeed.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[NewsFeed]' if exists
+Creating table '[dbo].[NewsFeed]'
+Start bulk inserting data into table '[dbo].[NewsFeed]'
+Finished bulk inserting data into table '[dbo].[NewsFeed]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Note.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Note.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Note.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Note]' if exists
+Creating table '[dbo].[Note]'
+Start bulk inserting data into table '[dbo].[Note]'
+Finished bulk inserting data into table '[dbo].[Note]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\NotifDeliveryUserPref.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\NotifDeliveryUserPref.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\NotifDeliveryUserPref.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[NotifDeliveryUserPref]' if exists
+Creating table '[dbo].[NotifDeliveryUserPref]'
+Start bulk inserting data into table '[dbo].[NotifDeliveryUserPref]'
+Finished bulk inserting data into table '[dbo].[NotifDeliveryUserPref]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Opportunity.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Opportunity.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Opportunity.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Opportunity]' if exists
+Creating table '[dbo].[Opportunity]'
+Start bulk inserting data into table '[dbo].[Opportunity]'
+Finished bulk inserting data into table '[dbo].[Opportunity]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\OpportunityContactRole.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\OpportunityContactRole.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\OpportunityContactRole.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[OpportunityContactRole]' if exists
+Creating table '[dbo].[OpportunityContactRole]'
+Start bulk inserting data into table '[dbo].[OpportunityContactRole]'
+Finished bulk inserting data into table '[dbo].[OpportunityContactRole]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\OpportunityHistory.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\OpportunityHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\OpportunityHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[OpportunityHistory]' if exists
+Creating table '[dbo].[OpportunityHistory]'
+Start bulk inserting data into table '[dbo].[OpportunityHistory]'
+Finished bulk inserting data into table '[dbo].[OpportunityHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Task.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Task.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\Task.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Task]' if exists
+Creating table '[dbo].[Task]'
+Start bulk inserting data into table '[dbo].[Task]'
+Finished bulk inserting data into table '[dbo].[Task]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\User.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\User.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\User.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[User]' if exists
+Creating table '[dbo].[User]'
+Start bulk inserting data into table '[dbo].[User]'
+Finished bulk inserting data into table '[dbo].[User]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output
+Start loading source file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\UserAppInfo.csv.
+Start saving destination file E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\UserAppInfo.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\ESP\WE_00D200000001MRhEAM_1_20180913\Data\Need2Restore\Output\UserAppInfo.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[UserAppInfo]' if exists
+Creating table '[dbo].[UserAppInfo]'
+Start bulk inserting data into table '[dbo].[UserAppInfo]'
+Finished bulk inserting data into table '[dbo].[UserAppInfo]'
+Data imported successfully
+
+E:\Adam\MyUtilities\VCDM\Builds\VC_DM>

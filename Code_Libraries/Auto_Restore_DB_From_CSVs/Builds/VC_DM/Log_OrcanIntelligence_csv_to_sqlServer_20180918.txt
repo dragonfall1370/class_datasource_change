@@ -1,0 +1,486 @@
+Microsoft Windows [Version 10.0.17134.285]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\vincere>e:
+
+E:\>cd E:\Adam\MyUtilities\VCDM\Builds\VC_DM
+
+E:\Adam\MyUtilities\VCDM\Builds\VC_DM>VDDM2.CLI.exe /bulkcsv2db E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Confirmed destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Account.xlsx not exist.
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Account.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Account.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Account.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Account]' if exists
+Creating table '[dbo].[Account]'
+Start bulk inserting data into table '[dbo].[Account]'
+Finished bulk inserting data into table '[dbo].[Account]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Confirmed destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Attachment.xlsx not exist.
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Attachment.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Attachment.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Attachment.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Attachment]' if exists
+Creating table '[dbo].[Attachment]'
+Start bulk inserting data into table '[dbo].[Attachment]'
+Finished bulk inserting data into table '[dbo].[Attachment]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Competency_Details__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Competency_Details__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Competency_Details__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Competency_Details__c]' if exists
+Creating table '[dbo].[AVTRRT__Competency_Details__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Competency_Details__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Competency_Details__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Config__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Config__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Config__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Config__c]' if exists
+Creating table '[dbo].[AVTRRT__Config__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Config__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Config__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Educational_History__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Educational_History__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Educational_History__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Educational_History__c]' if exists
+Creating table '[dbo].[AVTRRT__Educational_History__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Educational_History__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Educational_History__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Employment_History__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Employment_History__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Employment_History__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Employment_History__c]' if exists
+Creating table '[dbo].[AVTRRT__Employment_History__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Employment_History__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Employment_History__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__ETCObject__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__ETCObject__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__ETCObject__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__ETCObject__c]' if exists
+Creating table '[dbo].[AVTRRT__ETCObject__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__ETCObject__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__ETCObject__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Interview__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Interview__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Interview__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Interview__c]' if exists
+Creating table '[dbo].[AVTRRT__Interview__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Interview__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Interview__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Job_Applicant__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Job_Applicant__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Job_Applicant__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Job_Applicant__c]' if exists
+Creating table '[dbo].[AVTRRT__Job_Applicant__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Job_Applicant__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Job_Applicant__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Job__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Job__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Job__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Job__c]' if exists
+Creating table '[dbo].[AVTRRT__Job__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Job__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Job__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Placement__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Placement__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Placement__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Placement__c]' if exists
+Creating table '[dbo].[AVTRRT__Placement__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Placement__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Placement__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__References__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__References__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__References__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__References__c]' if exists
+Creating table '[dbo].[AVTRRT__References__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__References__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__References__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\AVTRRT__Search__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Search__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\AVTRRT__Search__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[AVTRRT__Search__c]' if exists
+Creating table '[dbo].[AVTRRT__Search__c]'
+Start bulk inserting data into table '[dbo].[AVTRRT__Search__c]'
+Finished bulk inserting data into table '[dbo].[AVTRRT__Search__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\BCST__Job_Broadcast__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\BCST__Job_Broadcast__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\BCST__Job_Broadcast__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[BCST__Job_Broadcast__c]' if exists
+Creating table '[dbo].[BCST__Job_Broadcast__c]'
+Start bulk inserting data into table '[dbo].[BCST__Job_Broadcast__c]'
+Finished bulk inserting data into table '[dbo].[BCST__Job_Broadcast__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\BCST__Job_Extra_Field__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\BCST__Job_Extra_Field__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\BCST__Job_Extra_Field__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[BCST__Job_Extra_Field__c]' if exists
+Creating table '[dbo].[BCST__Job_Extra_Field__c]'
+Start bulk inserting data into table '[dbo].[BCST__Job_Extra_Field__c]'
+Finished bulk inserting data into table '[dbo].[BCST__Job_Extra_Field__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Contact.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Contact.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Contact.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Contact]' if exists
+Creating table '[dbo].[Contact]'
+Start bulk inserting data into table '[dbo].[Contact]'
+Finished bulk inserting data into table '[dbo].[Contact]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\ContentDocumentLink.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\ContentDocumentLink.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\ContentDocumentLink.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[ContentDocumentLink]' if exists
+Creating table '[dbo].[ContentDocumentLink]'
+Start bulk inserting data into table '[dbo].[ContentDocumentLink]'
+Finished bulk inserting data into table '[dbo].[ContentDocumentLink]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\ContentVersion.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\ContentVersion.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\ContentVersion.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[ContentVersion]' if exists
+Creating table '[dbo].[ContentVersion]'
+Start bulk inserting data into table '[dbo].[ContentVersion]'
+Finished bulk inserting data into table '[dbo].[ContentVersion]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Document.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Document.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Document.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Document]' if exists
+Creating table '[dbo].[Document]'
+Start bulk inserting data into table '[dbo].[Document]'
+Finished bulk inserting data into table '[dbo].[Document]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\EmailMessage.csv.
+Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Text.StringBuilder.ExpandByABlock(Int32 minBlockCharCount)
+   at System.Text.StringBuilder.Append(Char* value, Int32 valueCount)
+   at System.Text.StringBuilder.Append(Char[] value, Int32 startIndex, Int32 charCount)
+   at System.IO.StreamReader.ReadToEnd()
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at OfficeOpenXml.ExcelRangeBase.LoadFromText(FileInfo TextFile, ExcelTextFormat Format, TableStyles TableStyle, Boolean FirstRowIsHeader)
+   at VCDM2.Data.Excel.EPPlusProvider.CSV2XLSX(String basePath, String csvFileName, Nullable`1 textQualifier, Int32 encodingCodePage, Char delimiter, String eol, Boolean firstRowIsHeader) in E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\EPPlusProvider.cs:line 77
+Could not convert csv to excel file.
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\EntityHistory.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\EntityHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\EntityHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[EntityHistory]' if exists
+Creating table '[dbo].[EntityHistory]'
+Start bulk inserting data into table '[dbo].[EntityHistory]'
+Finished bulk inserting data into table '[dbo].[EntityHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Event.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Event.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Event.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Event]' if exists
+Creating table '[dbo].[Event]'
+Start bulk inserting data into table '[dbo].[Event]'
+Finished bulk inserting data into table '[dbo].[Event]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\EventRelation.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\EventRelation.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\EventRelation.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[EventRelation]' if exists
+Creating table '[dbo].[EventRelation]'
+Start bulk inserting data into table '[dbo].[EventRelation]'
+Finished bulk inserting data into table '[dbo].[EventRelation]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FCMS__Block__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__Block__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__Block__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FCMS__Block__c]' if exists
+Creating table '[dbo].[FCMS__Block__c]'
+Start bulk inserting data into table '[dbo].[FCMS__Block__c]'
+Finished bulk inserting data into table '[dbo].[FCMS__Block__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FCMS__CMSProfile__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__CMSProfile__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__CMSProfile__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FCMS__CMSProfile__c]' if exists
+Creating table '[dbo].[FCMS__CMSProfile__c]'
+Start bulk inserting data into table '[dbo].[FCMS__CMSProfile__c]'
+Finished bulk inserting data into table '[dbo].[FCMS__CMSProfile__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FCMS__CMSSiteSetup__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__CMSSiteSetup__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__CMSSiteSetup__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FCMS__CMSSiteSetup__c]' if exists
+Creating table '[dbo].[FCMS__CMSSiteSetup__c]'
+Start bulk inserting data into table '[dbo].[FCMS__CMSSiteSetup__c]'
+Finished bulk inserting data into table '[dbo].[FCMS__CMSSiteSetup__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FCMS__Page__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__Page__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__Page__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FCMS__Page__c]' if exists
+Creating table '[dbo].[FCMS__Page__c]'
+Start bulk inserting data into table '[dbo].[FCMS__Page__c]'
+Finished bulk inserting data into table '[dbo].[FCMS__Page__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FCMS__Permission__c.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__Permission__c.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FCMS__Permission__c.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FCMS__Permission__c]' if exists
+Creating table '[dbo].[FCMS__Permission__c]'
+Start bulk inserting data into table '[dbo].[FCMS__Permission__c]'
+Finished bulk inserting data into table '[dbo].[FCMS__Permission__c]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FeedFieldHistory.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FeedFieldHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FeedFieldHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FeedFieldHistory]' if exists
+Creating table '[dbo].[FeedFieldHistory]'
+Start bulk inserting data into table '[dbo].[FeedFieldHistory]'
+Finished bulk inserting data into table '[dbo].[FeedFieldHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FeedPost.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FeedPost.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FeedPost.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FeedPost]' if exists
+Creating table '[dbo].[FeedPost]'
+Start bulk inserting data into table '[dbo].[FeedPost]'
+Finished bulk inserting data into table '[dbo].[FeedPost]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FeedTrackedChange.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FeedTrackedChange.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FeedTrackedChange.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FeedTrackedChange]' if exists
+Creating table '[dbo].[FeedTrackedChange]'
+Start bulk inserting data into table '[dbo].[FeedTrackedChange]'
+Finished bulk inserting data into table '[dbo].[FeedTrackedChange]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FieldHistory.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FieldHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FieldHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FieldHistory]' if exists
+Creating table '[dbo].[FieldHistory]'
+Start bulk inserting data into table '[dbo].[FieldHistory]'
+Finished bulk inserting data into table '[dbo].[FieldHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\FileSearchActivity.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FileSearchActivity.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\FileSearchActivity.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[FileSearchActivity]' if exists
+Creating table '[dbo].[FileSearchActivity]'
+Start bulk inserting data into table '[dbo].[FileSearchActivity]'
+Finished bulk inserting data into table '[dbo].[FileSearchActivity]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\HammerResultStatus.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\HammerResultStatus.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\HammerResultStatus.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[HammerResultStatus]' if exists
+Creating table '[dbo].[HammerResultStatus]'
+Start bulk inserting data into table '[dbo].[HammerResultStatus]'
+Finished bulk inserting data into table '[dbo].[HammerResultStatus]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\NewsFeed.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\NewsFeed.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\NewsFeed.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[NewsFeed]' if exists
+Creating table '[dbo].[NewsFeed]'
+Start bulk inserting data into table '[dbo].[NewsFeed]'
+Finished bulk inserting data into table '[dbo].[NewsFeed]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Note.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Note.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Note.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Note]' if exists
+Creating table '[dbo].[Note]'
+Start bulk inserting data into table '[dbo].[Note]'
+Finished bulk inserting data into table '[dbo].[Note]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Opportunity.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Opportunity.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Opportunity.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Opportunity]' if exists
+Creating table '[dbo].[Opportunity]'
+Start bulk inserting data into table '[dbo].[Opportunity]'
+Finished bulk inserting data into table '[dbo].[Opportunity]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\OpportunityHistory.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\OpportunityHistory.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\OpportunityHistory.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[OpportunityHistory]' if exists
+Creating table '[dbo].[OpportunityHistory]'
+Start bulk inserting data into table '[dbo].[OpportunityHistory]'
+Finished bulk inserting data into table '[dbo].[OpportunityHistory]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\RecordType.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\RecordType.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\RecordType.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[RecordType]' if exists
+Creating table '[dbo].[RecordType]'
+Start bulk inserting data into table '[dbo].[RecordType]'
+Finished bulk inserting data into table '[dbo].[RecordType]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Task.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Task.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\Task.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[Task]' if exists
+Creating table '[dbo].[Task]'
+Start bulk inserting data into table '[dbo].[Task]'
+Finished bulk inserting data into table '[dbo].[Task]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\TaskRelation.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\TaskRelation.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\TaskRelation.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[TaskRelation]' if exists
+Creating table '[dbo].[TaskRelation]'
+Start bulk inserting data into table '[dbo].[TaskRelation]'
+Finished bulk inserting data into table '[dbo].[TaskRelation]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\User.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\User.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\User.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[User]' if exists
+Creating table '[dbo].[User]'
+Start bulk inserting data into table '[dbo].[User]'
+Finished bulk inserting data into table '[dbo].[User]'
+Data imported successfully
+Prepared output path at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output
+Start loading source file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\UserMetrics.csv.
+Start saving destination file E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\UserMetrics.xlsx.
+Finished converting csv file to xlsx file at: E:\Adam\Projects\OrcanIntelligence\Production2\Data\NeedRestore\Output\UserMetrics.xlsx
+Starting to read into datatable
+File have been read into datatable
+Deleting table '[dbo].[UserMetrics]' if exists
+Creating table '[dbo].[UserMetrics]'
+Start bulk inserting data into table '[dbo].[UserMetrics]'
+Finished bulk inserting data into table '[dbo].[UserMetrics]'
+Data imported successfully
+
+E:\Adam\MyUtilities\VCDM\Builds\VC_DM>
