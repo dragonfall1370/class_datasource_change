@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E12E564F-F35F-4DCD-BDEC-CA74FFA702E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>VDDM2.CLI</RootNamespace>
-    <AssemblyName>VDDM2.CLI</AssemblyName>
+    <RootNamespace>VCDM2.CLI</RootNamespace>
+    <AssemblyName>VCDM2.CLI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

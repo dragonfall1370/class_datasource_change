@@ -26,16 +26,18 @@ namespace VDDM2.CLI
 				bulkcsv2db
 			};
 
+			if(args == null || args.Length == 0)
+			{
+				PrintUsages();
+				return;
+			}
+
 			var command = args[0];
 
 			if (string.IsNullOrWhiteSpace(command) || !supportedCommands.Contains(command))
 			{
 				Console.WriteLine("Please enter a valid command name.");
-
-				Console.WriteLine(
-				@"Usage:
-	--csv2excel [base-path] [csv-file-name] [text-qualifier-character] [code-page:integer(ex: 65001 - Unicode (UTF-8), default: 1252 - ANSI Latin 1; Western European (Windows))]
-	--excel2db [base-path] [excel-file-name]");
+				PrintUsages();
 
 				return;
 			}
@@ -59,6 +61,23 @@ namespace VDDM2.CLI
 				default: break;
 			}
         }
+
+		private static void PrintUsages()
+		{
+			Console.WriteLine(
+							@"Usage:
+========
+
+	/csv2excel [base-path] [csv-file-name] [text-qualifier-character] [code-page:integer(ex: 65001 - Unicode (UTF-8), default: 1252 - ANSI Latin 1; Western European (Windows))] [delimiter-character] [end-of-line-characters]
+	
+	/excel2db [base-path] [excel-file-name]
+	
+	/csv2db [base-path] [csv-file-name] [text-qualifier-character] [code-page:integer(ex: 65001 - Unicode (UTF-8), default: 1252 - ANSI Latin 1; Western European (Windows))] [delimiter-character] [end-of-line-characters]
+	
+	/bulkcsv2db [base-path] [text-qualifier-character] [code-page:integer(ex: 65001 - Unicode (UTF-8), default: 1252 - ANSI Latin 1; Western European (Windows))] [delimiter-character] [end-of-line-characters]
+
+=========");
+		}
 
 		private static void CSV2DB(string[] args)
 		{
