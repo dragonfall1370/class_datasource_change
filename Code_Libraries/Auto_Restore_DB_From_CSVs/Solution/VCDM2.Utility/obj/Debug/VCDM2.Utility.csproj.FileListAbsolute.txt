@@ -1,6 +1,0 @@
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Utility\bin\Debug\VCDM2.Utility.dll
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Utility\bin\Debug\VCDM2.Utility.pdb
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Utility\obj\Debug\VCDM2.Utility.csprojAssemblyReference.cache
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Utility\obj\Debug\VCDM2.Utility.csproj.CoreCompileInputs.cache
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Utility\obj\Debug\VCDM2.Utility.dll
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Utility\obj\Debug\VCDM2.Utility.pdb

@@ -1,9 +1,0 @@
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\bin\Debug\VCDM2.Data.Excel.dll
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\bin\Debug\VCDM2.Data.Excel.pdb
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\bin\Debug\EPPlus.dll
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\bin\Debug\EPPlus.xml
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\obj\Debug\VCDM2.Data.Excel.csproj.CoreCompileInputs.cache
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\obj\Debug\VCDM2.Data.Excel.csproj.CopyComplete
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\obj\Debug\VCDM2.Data.Excel.dll
-E:\Adam\MyUtilities\VCDM\Solution\VCDM2.Data.Excel\obj\Debug\VCDM2.Data.Excel.pdb
