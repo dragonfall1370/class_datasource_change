@@ -1,0 +1,4852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Zitko</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/11/01 15:49:10.386</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/11/01 15:49:10.386</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Zitko Production PostgreSQL</name>
+    <server>rdbm</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>zitko.vincere.io</database>
+    <port>5432</port>
+    <username>jason</username>
+    <password>Encrypted 2be98afc86aa7f2e4861f832588bfa5ee</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Zitko Source</name>
+    <server>localhost</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>ZitkoNew</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQLUseIntegratedSecurity</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>--CreatedBy</from>
+      <to>Database lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup</from>
+      <to>Table output</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>Database lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 2</from>
+      <to>Update</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Annual Revenue</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>form &amp; field ID lookup</from>
+      <to>company ID lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Business Focus</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Company Benefits</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Current Agencies</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Do Not Contact</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Key Problems</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Number of Roles</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Product</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Sector</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Typical Roles</from>
+      <to>form &amp; field ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--CIS confirmation</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Reason For Role</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Reporting To</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Size Of Team</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Key Skill or Qualification</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Role Base</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Working Hours</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--USP</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Callout / Overtime</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Benefits</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Car / Car Allowance</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Vacancy Ownership</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Time Open</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Other Agencies</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Candidates Seen</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Interview Process</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Client Expectations</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Max Pay Rate</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Min Pay Rate</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Date Time)--Estimated Start Date</from>
+      <to>field lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>field lookup</from>
+      <to>job ID lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job ID lookup</from>
+      <to>Addition_form_values 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>form &amp; field ID lookup 2</from>
+      <to>candidate ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate ID lookup 2</from>
+      <to>Addition_form_values 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Table input 34</from>
+      <to>Table input 35</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>(Tick Box)--Do Not Call</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Date Time)--Availability Date</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Date Time)--Candidate Registration Sent</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Candidate Source</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Tick Box)--Clear Criminal Record</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Companies Not Of Interest</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Companies Of Interest</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Contract</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Current Benefits</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Current Employer</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Current Salary</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Degree Subject</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Desired Benefits</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Desired Salary</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Driving Licence</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Financial History</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Tick Box)--Good Health</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List ??)--Graduation Year</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Tick Box)--ID Confirmed</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Key Priority 1</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Key Priority 2</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Key Priority 3</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List ???)--Notice Period</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Other Agencies 2</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Other I/Vs &amp; Applications</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Core Field)--Permanent</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Predicted/Actual Grade</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Reason for looking</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Referrals</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>( Core Field )--Relocation</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Text)--Time Looking</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Tick Box)--Student</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>(Pick List)--Travel - Flexibility</from>
+      <to>form &amp; field ID lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>company ID lookup</from>
+      <to>( Text )Addition_form_values</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>company ID lookup</from>
+      <to>Database lookup 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>company ID lookup</from>
+      <to>(Date) Additional Form Values</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 3</from>
+      <to>Database lookup 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 4</from>
+      <to>pick list</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job ID lookup</from>
+      <to>Database lookup 3 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 3 2</from>
+      <to>Database lookup 4 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 4 2</from>
+      <to>pick list 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job ID lookup</from>
+      <to>(Date) Additional Form Values 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate ID lookup 2</from>
+      <to>Database lookup 3 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 3 3</from>
+      <to>Database lookup 4 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 4 3</from>
+      <to>pick list 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate ID lookup 2</from>
+      <to>(Date) Additional Form Values 3</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>( Core Field )--Relocation</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Relocation
+select contact.Id, Relocation__c
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate'
+and Relocation__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1520</xloc>
+      <yloc>1088</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>( Text )Addition_form_values</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>CustomValue</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Candidate Source</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Candidate Source
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+ts2__Candidate_Source__c as 'CustomValue',
+'Candidate Source' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and ts2__Candidate_Source__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1520</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Current Employer</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Current Employer
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Current_Employer__c as 'CustomValue',
+'Current Employer' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Current_Employer__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Current Salary</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Current Salary
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+ts2__Current_Salary__c as 'CustomValue',
+'Current Salary' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and ts2__Current_Salary__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Desired Benefits</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Desired Benefits
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Desired_Benefits__c as 'CustomValue',
+'Desired Benefits' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Desired_Benefits__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Desired Salary</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Desired Salary
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+ts2__Desired_Salary__c as 'CustomValue',
+'Desired Salary' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and ts2__Desired_Salary__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Max Pay Rate</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Max Pay Rate
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+ts2__Max_Pay_Rate__c as 'CustomValue',
+'Max Pay Rate' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where ts2__Max_Pay_Rate__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>1584</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Min Pay Rate</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Min Pay Rate
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+ts2__Min_Pay_Rate__c as 'CustomValue',
+'Min Pay Rate' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where ts2__Min_Pay_Rate__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>1568</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Core Field)--Permanent</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Permanent
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Permanent__c as 'CustomValue',
+'Permanent' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Permanent__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1216</xloc>
+      <yloc>1136</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Date Time)--Availability Date</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Availability Date
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Availability_Date__c as 'CustomValue',
+'Availability Date' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Availability_Date__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1664</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Date Time)--Candidate Registration Sent</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Candidate Registration Sent
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Candidate_Registration_Sent__c as 'CustomValue',
+'Candidate Registration Sent' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Candidate_Registration_Sent__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1600</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Date Time)--Estimated Start Date</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Estimated Start Date
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+ts2__Estimated_Start_Date__c as 'CustomValue',
+'Estimated Start Date' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>1552</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Date) Additional Form Values</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>Additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>field_date_value</column_name>
+        <stream_name>CustomValue</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Date) Additional Form Values 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>Additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>field_date_value</column_name>
+        <stream_name>CustomValue</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>1120</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Date) Additional Form Values 3</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>Additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>field_date_value</column_name>
+        <stream_name>CustomValue</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List ??)--Graduation Year</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Graduation Year
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Graduation_Year__c as 'CustomValue',
+'Graduation Year' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Graduation_Year__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>752</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List ???)--Notice Period</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Notice Period
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Notice_Period__c as 'CustomValue',
+'Notice Period' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Notice_Period__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>1040</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--CIS confirmation</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--CIS confirmation
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+CIS_confirmation__c as 'CustomValue',
+'CIS confirmation' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where CIS_confirmation__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>992</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Contract</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Contract
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Contract__c as 'CustomValue',
+'Contract' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Contract__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1152</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Do Not Contact</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Do Not Contact
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Do_Not_Contact__c as 'CustomValue',
+'Do Not Contact' as 'lookup_name',
+getdate() as insert_timestamp
+from Account</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Driving Licence</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Driving Licence
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Driving_License__c as 'CustomValue',
+'Driving Licence' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Driving_License__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Financial History</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Financial History
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Financial_History__c as 'CustomValue',
+'Financial History' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Financial_History__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Key Priority 1</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Key Priority 1
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Key_Priority_1__c as 'CustomValue',
+'Key Priority 1' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Key_Priority_1__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>880</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Key Priority 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Key Priority 2
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Key_Priority_2__c as 'CustomValue',
+'Key Priority 2' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Key_Priority_2__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>944</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Key Priority 3</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Key Priority 3
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Key_Priority_3__c as 'CustomValue',
+'Key Priority 3' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Key_Priority_3__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Predicted/Actual Grade</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Predicted/Actual Grade
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Predicted_Actual_Grade__c as 'CustomValue',
+'Predicted/Actual Grade' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Predicted_Actual_Grade__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1296</xloc>
+      <yloc>1168</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Role Base</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Role Base
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Role_Base__c as 'CustomValue',
+'Role Base' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Role_Base__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Sector</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Sector
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Sector__c as 'CustomValue',
+'Sector' as 'lookup_name',
+getdate() as insert_timestamp
+from Account</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Travel - Flexibility</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>
+--Travel - Flexibility
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Travel_Flexibility__c as 'CustomValue',
+'Travel - Flexibility' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Travel_Flexibility__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1760</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Pick List)--Vacancy Ownership</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Vacancy Ownership
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Vacancy_Ownership__c as 'CustomValue',
+'Vacancy Ownership' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Vacancy_Ownership__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>1344</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Annual Revenue</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Annual Revenue
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+AnnualRevenue as 'CustomValue',
+'Annual Revenue' as 'lookup_name',
+getdate() as insert_timestamp
+
+from Account where AnnualRevenue &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Benefits</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Benefits
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Benefits__c as 'CustomValue',
+'Benefits' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Benefits__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>1216</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Business Focus</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Business Focus
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Business_Focus__c as 'CustomValue',
+'Business Focus' as 'lookup_name',
+getdate() as insert_timestamp
+from Account where Business_Focus__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Callout / Overtime</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Callout / Overtime
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Callout_Overtime__c as 'CustomValue',
+'Callout / Overtime' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Callout_Overtime__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>1152</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Candidates Seen</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Candidates Seen
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Candidates_Seen__c as 'CustomValue',
+'Candidates Seen' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Candidates_Seen__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>1472</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Car / Car Allowance</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Car / Car Allowance
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Car_Car_Allowance__c as 'CustomValue',
+'Car / Car Allowance' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Car_Car_Allowance__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>1280</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Client Expectations</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Client Expectations
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Client_Expectations__c as 'CustomValue',
+'Client Expectations' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Client_Expectations__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>1616</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Companies Not Of Interest</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Companies Not Of Interest
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Companies_Not_Of_Interest__c as 'CustomValue',
+'Companies Not Of Interest' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Companies_Not_Of_Interest__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Companies Of Interest</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Companies Of Interest
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Companies_Of_Interest__c as 'CustomValue',
+'Companies Of Interest' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Companies_Of_Interest__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1232</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Company Benefits</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Company Benefits
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Company_Benefits__c as 'CustomValue',
+'Company Benefits' as 'lookup_name',
+getdate() as insert_timestamp
+from Account where Company_Benefits__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Current Agencies</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Current Agencies
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Current_Agencies__c as 'CustomValue',
+'Current Agencies' as 'lookup_name',
+getdate() as insert_timestamp
+from Account where Current_Agencies__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Current Benefits</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Current Benefits
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Current_Benefits__c as 'CustomValue',
+'Current Benefits' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Current_Benefits__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Degree Subject</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Degree Subject
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Degree_Subject__c as 'CustomValue',
+'Degree Subject' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Degree_Subject__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Interview Process</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Interview Process
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Interview_Process__c as 'CustomValue',
+'Interview Process' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Interview_Process__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>1600</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Key Problems</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Key Problems
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Key_Problems__c as 'CustomValue',
+'Key Problems' as 'lookup_name',
+getdate() as insert_timestamp
+from Account where Key_Problems__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Key Skill or Qualification</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Key Skill or Qualification
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Key_Skill_or_Qualification__c as 'CustomValue',
+'Key Skill or Qualification' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Key_Skill_or_Qualification__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>912</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Number of Roles</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Number of Roles
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Number_of_Roles__c as 'CustomValue',
+'Number of Roles' as 'lookup_name',
+getdate() as insert_timestamp
+from Account where Number_of_Roles__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Other Agencies</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Other Agencies
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Other_Agencies__c as 'CustomValue',
+'Other Agencies' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Other_Agencies__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
+      <yloc>1536</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Other Agencies 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Other Agencies
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Other_Agencies__c as 'CustomValue',
+'Other Agencies' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Other_Agencies__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>1072</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Other I/Vs &amp; Applications</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Other I/Vs &amp; Applications
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Other_i_vs_applications__c as 'CustomValue',
+'Other I/Vs &amp; Applications' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Other_i_vs_applications__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Product</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Product
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Product__c as 'CustomValue',
+'Product' as 'lookup_name',
+getdate() as insert_timestamp
+from Account</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Reason For Role</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Reason For Role
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Reason_For_Role__c as 'CustomValue',
+'Reason For Role' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Reason_For_Role__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>960</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Reason for looking</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Reason for looking
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Reason_for_looking__c as 'CustomValue',
+'Reason for looking' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Reason_for_looking__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1376</xloc>
+      <yloc>1136</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Referrals</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>
+--Referrals
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Referrals__c as 'CustomValue',
+'Referrals' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Referrals__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1440</xloc>
+      <yloc>1120</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Reporting To</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Reporting To
+select 'add_job_info' as 'Additional_type',
+a.Id as 'External_id',
+concat(b.LastName,' ',b.FirstName,nullif(concat(' - ',b.email),' - ')) as 'CustomValue',
+'Reporting To' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c a 
+left join Contact b on a.Reporting_To__c = b.Id 
+where Reporting_To__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>944</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Size Of Team</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Size Of Team
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Size_Of_Team__c as 'CustomValue',
+'Size Of Team' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Size_Of_Team__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Time Looking</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Time Looking
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Time_Looking__c as 'CustomValue',
+'Time Looking' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Time_Looking__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1680</xloc>
+      <yloc>1024</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Time Open</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Time Open
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Time_Open__c as 'CustomValue',
+'Time Open' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Time_Open__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>1408</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Typical Roles</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Typical Roles
+select 'add_com_info' as 'Additional_type',
+Id as 'External_id',
+Typical_Roles__c as 'CustomValue',
+'Typical Roles' as 'lookup_name',
+getdate() as insert_timestamp
+from Account where Typical_Roles__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>656</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--USP</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--USP
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+USP__c as 'CustomValue',
+'USP' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where USP__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>1088</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Text)--Working Hours</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Working Hours
+select 'add_job_info' as 'Additional_type',
+Id as 'External_id',
+Working_Hours__c as 'CustomValue',
+'Working Hours' as 'lookup_name',
+getdate() as insert_timestamp
+from ts2__Job__c where Working_Hours__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
+      <yloc>1024</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Tick Box)--Clear Criminal Record</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Clear_Criminal_Record__c as 'CustomValue',
+'Clear Criminal Record' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Clear_Criminal_Record__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1456</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Tick Box)--Do Not Call</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Do Not Call
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+DoNotCall as 'CustomValue',
+'Do Not Call' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1744</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Tick Box)--Good Health</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Good Health
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Good_Health__c as 'CustomValue',
+'Good Health' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Good_Health__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>688</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Tick Box)--ID Confirmed</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--ID Confirmed
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+ID_Confirmed__c as 'CustomValue',
+'ID Confirmed' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and ID_Confirmed__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>(Tick Box)--Student</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--Student
+select 'add_cand_info' as 'Additional_type',
+contact.Id as 'External_id', 
+Student__c as 'CustomValue',
+'Student' as 'lookup_name',
+getdate() as insert_timestamp
+from contact left join RecordType on contact.RecordTypeId+'AAQ' = RecordType.id
+left join [User] on [User].Id = Contact.OwnerId
+where name='Candidate' and Student__c &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1600</xloc>
+      <yloc>1056</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>--CreatedBy</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>--CreatedBy
+select a.Id, b.Username from Account a left join [User] b on a.CreatedById = b.Id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>32</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Addition_form_values 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>job_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>CustomValue</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>1328</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Addition_form_values 3</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>CustomValue</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>lookup table</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>Id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>company_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_language</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>CustomValue</name>
+        <field>translate</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>language_code</name>
+        <rename>language_code</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 3 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_language</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>CustomValue</name>
+        <field>translate</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>language_code</name>
+        <rename>language_code</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 3 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_language</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>CustomValue</name>
+        <field>translate</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>language_code</name>
+        <rename>language_code</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2144</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 4</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_field_value</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>language_code</name>
+        <field>title_language_code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>field_value</name>
+        <rename>field_value_library</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 4 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_field_value</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>language_code</name>
+        <field>title_language_code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>field_value</name>
+        <rename>field_value_library</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>848</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 4 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_field_value</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>language_code</name>
+        <field>title_language_code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>field_value</name>
+        <rename>field_value_library</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2144</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Source</connection>
+    <sql>select distinct a.Id,a.Name from Account a, Account b where a.ID = b.ParentId</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input 34</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <sql>SELECT &lt;values> FROM &lt;table name> WHERE &lt;conditions></sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1848</xloc>
+      <yloc>1652</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input 35</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <sql>SELECT &lt;values> FROM &lt;table name> WHERE &lt;conditions></sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2048</xloc>
+      <yloc>1652</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <schema/>
+    <table/>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>lookup table</table>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate ID lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>External_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>candidate_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>company ID lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>External_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>company_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>field lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_field</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>lookup_name</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>field_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>form_id</name>
+        <rename>form_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>1248</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>form &amp; field ID lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_field</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>lookup_name</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>field_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>form_id</name>
+        <rename>form_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>form &amp; field ID lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>configurable_form_field</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>lookup_name</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>field_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>form_id</name>
+        <rename>form_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1760</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job ID lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>External_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>job_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>1216</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>pick list</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>Additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>field_value_library</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>pick list 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>Additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>field_value_library</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>pick list 3</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Zitko Production PostgreSQL</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>Additional_type</column_name>
+        <stream_name>Additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>field_value_library</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2144</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
