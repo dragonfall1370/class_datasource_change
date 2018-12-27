@@ -1,0 +1,1943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>PRTR_company</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/10/25 17:35:10.168</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/10/25 17:35:10.168</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Company Business Number</note>
+      <xloc>80</xloc>
+      <yloc>32</yloc>
+      <width>158</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>To add VC industry</note>
+      <xloc>80</xloc>
+      <yloc>240</yloc>
+      <width>110</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>(Removed)</note>
+      <xloc>128</xloc>
+      <yloc>160</yloc>
+      <width>68</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>If injected as single line text</note>
+      <xloc>1360</xloc>
+      <yloc>176</yloc>
+      <width>155</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>113</backgroundcolorred>
+      <backgroundcolorgreen>202</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Removed on 1/11/2018</note>
+      <xloc>1184</xloc>
+      <yloc>80</yloc>
+      <width>133</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Updated on 1/11/2018</note>
+      <xloc>928</xloc>
+      <yloc>80</yloc>
+      <width>128</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Company location inserted separately from data import to populate address for Client Address</note>
+      <xloc>880</xloc>
+      <yloc>304</yloc>
+      <width>508</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>PRTR DB</name>
+    <server>localhost</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>prtrlive</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PRTR PROD</name>
+    <server>10.10.10.47</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>prtr.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Comp Business Number</from>
+      <to>Company lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup</from>
+      <to>Insert Company Business No</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company Industry lookup</from>
+      <to>Insert Company Industry VC</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Industry Input</from>
+      <to>VC Industry</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company Industry DB</from>
+      <to>Company lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup</from>
+      <to>Company Industry lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Comp No of Employee</from>
+      <to>Company lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup</from>
+      <to>Insert no of Employee</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company Business</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company Location</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company Note (NEW)</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup 2</from>
+      <to>Insert company location</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup 2</from>
+      <to>Update Company CF</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup 2</from>
+      <to>Insert company fee model</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company Fee model</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Comp Business Number</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>with CompanyAddress as (select c.company_id, company_add1, company_add2, company_city, company_zip, company_country, add_default, company_tax_ID
+	, row_number() over (partition by company_id order by address_id desc) as rn
+	from company.Addresses c
+	)
+
+--To be injected as CUSTOM SCRIPT #2
+select concat('PRTR',company_id) as ComExtID
+	, trim(company_tax_ID) as company_tax_ID
+	from CompanyAddress
+	where rn = 1
+	and company_tax_ID is not NULL and company_tax_ID not in ('','x','xxx','-','NA','n/a','tbc')
+	order by company_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Comp No of Employee</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>select concat('PRTR',company_id) as ComExtID
+, ltrim(rtrim(company_num_emp)) as OriginalNoEmployees
+, ltrim(rtrim(replace(left(company_num_emp,len(company_num_emp)-charindex('.',reverse(company_num_emp))),',',''))) as NoEmployees
+from company.Companies
+where company_num_emp is not NULL and ltrim(rtrim(company_num_emp)) &lt;&gt; ''
+and isnumeric(ltrim(rtrim(company_num_emp))) = 1
+order by company_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company Business</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>select concat('PRTR',company_id) as ComExtID
+, 'add_com_info' as additional_type
+, company_sector as Custom_value
+, 1111 as Form_id
+, 2222 as Field_id
+, getdate() as Insert_timestamp
+from company.Companies
+where company_sector is not NULL
+order by company_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company Fee model</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>--[Candidate Placement] Fee model
+select concat('PRTR',company_id) as ComExtID
+, 'Candidate Placement' as fee_model_name
+, 1 as fee_model_type --% based (Variable)
+, 'thb' as currency --default for PRTR
+, 1 as contract_type --Permanent by default
+, 2 as contract_category
+, 20 as charge_rate --20% as their default
+, 1 as gross_annual_salary --gross annual salary as selection
+, getdate() as insert_timestamp
+from company.Companies
+
+UNION ALL
+
+select concat('PRTR',company_id) as ComExtID
+, 'Deposit Fee' as fee_model_name
+, 2 as fee_model_type --Fixed fee
+, 'thb' as currency --default for PRTR
+, NULL as contract_type --Permanent by default
+, NULL as contract_category
+, NULL as charge_rate --20% as their default
+, NULL as gross_annual_salary --gross annual salary as selection
+, getdate() as insert_timestamp
+from company.Companies
+
+UNION ALL
+
+select concat('PRTR',company_id) as ComExtID
+, 'Background Check' as fee_model_name
+, 2 as fee_model_type --Fixed fee
+, 'thb' as currency --default for PRTR
+, NULL as contract_type --Permanent by default
+, NULL as contract_category
+, NULL as charge_rate --20% as their default
+, NULL as gross_annual_salary --gross annual salary as selection
+, getdate() as insert_timestamp
+from company.Companies
+
+UNION ALL
+
+select concat('PRTR',company_id) as ComExtID
+, 'Management Fee' as fee_model_name
+, 2 as fee_model_type --Fixed fee
+, 'thb' as currency --default for PRTR
+, NULL as contract_type --Permanent by default
+, NULL as contract_category
+, NULL as charge_rate --20% as their default
+, NULL as gross_annual_salary --gross annual salary as selection
+, getdate() as insert_timestamp
+from company.Companies
+UNION ALL
+
+select concat('PRTR',company_id) as ComExtID
+, 'Multiple Placement' as fee_model_name
+, 2 as fee_model_type --Fixed fee
+, 'thb' as currency --default for PRTR
+, NULL as contract_type --Permanent by default
+, NULL as contract_category
+, NULL as charge_rate --20% as their default
+, NULL as gross_annual_salary --gross annual salary as selection
+, getdate() as insert_timestamp
+from company.Companies
+
+UNION ALL
+
+select concat('PRTR',company_id) as ComExtID
+, 'Engagement Fee' as fee_model_name
+, 2 as fee_model_type --Fixed fee
+, 'thb' as currency --default for PRTR
+, NULL as contract_type --Permanent by default
+, NULL as contract_category
+, NULL as charge_rate --20% as their default
+, NULL as gross_annual_salary --gross annual salary as selection
+, getdate() as insert_timestamp
+from company.Companies
+
+UNION ALL
+
+select concat('PRTR',company_id) as ComExtID
+, 'Deduction' as fee_model_name
+, 2 as fee_model_type --Fixed fee
+, 'thb' as currency --default for PRTR
+, NULL as contract_type --Permanent by default
+, NULL as contract_category
+, NULL as charge_rate --20% as their default
+, NULL as gross_annual_salary --gross annual salary as selection
+, getdate() as insert_timestamp
+from company.Companies</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company Industry DB</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>select concat('PRTR',c.company_id) as ComExtID
+, i.NewIndustry
+, getdate() as Insert_timestamp
+from PRTR_company_new_industry c
+left join (select distinct IndustryNo, NewIndustry from PRTR_new_industry) i on i.IndustryNo = c.NewIndustry
+order by c.company_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company Industry lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>Industry</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCIndustryID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company Location</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>with CompanyAddress as (select c.address_id, c.company_id
+	, case when company_add1 in ('','x','xxx','-','NA','n/a','tbc') then NULL
+	else trim(company_add1) end as company_add1
+	, case when company_add2 in ('','x','xxx','-','NA','n/a','tbc') then NULL
+	else trim(company_add2) end as company_add2
+	, case when company_city in ('','x','xxx','-','NA','n/a','tbc') then NULL
+	else trim(company_city) end as company_city
+	, case when company_zip in ('','x','xxx','-','NA','n/a','tbc') then NULL
+	else trim(company_zip) end as company_zip
+	, case when company_country in ('','x','xxx','-','NA','n/a','tbc') then NULL 
+	else trim(company_country) end as company_country
+	, add_default
+	, company_tax_ID
+	, case 
+	when c.company_country = 'Antigua and Barbuda' then 'AG'
+	when c.company_country = 'Siggapore' then 'SG'
+	when c.company_country = 'Finland' then 'FI'
+	when c.company_country = 'U.S.A' then 'US'
+	when c.company_country = 'Thailnd' then 'TH'
+	when c.company_country = 'South Korea' then 'KR'
+	when c.company_country = 'Thialand' then 'TH'
+	when c.company_country = 'Thailang' then 'TH'
+	when c.company_country = 'Vietnam' then 'VN'
+	when c.company_country = 'USA' then 'US'
+	when c.company_country = 'Thailnad' then 'TH'
+	when c.company_country = 'Angola' then 'AO'
+	when c.company_country = 'Tahiland' then 'TH'
+	when c.company_country = 'Italy' then 'IT'
+	when c.company_country = 'TH1' then 'TH'
+	when c.company_country = 'Netherlands' then 'NL'
+	when c.company_country = 'Hong Kong, ' then 'HK'
+	when c.company_country = 'Hong Kong' then 'HK'
+	when c.company_country = 'Malaysia' then 'MY'
+	when c.company_country = ' THAILAND' then 'TH'
+	when c.company_country = 'Indonesia' then 'ID'
+	when c.company_country = 'Thailand.' then 'TH'
+	when c.company_country = 'Germany' then 'DE'
+	when c.company_country = 'Philippines' then 'PH'
+	when c.company_country = 'England' then 'GB'
+	when c.company_country = 'Lithuania' then 'LT'
+	when c.company_country = 'Singapore (SEA HQ)' then 'SG'
+	when c.company_country = 'Thaniland' then 'TH'
+	when c.company_country = 'Singapore 609914' then 'SG'
+	when c.company_country = 'Thailans' then 'TH'
+	when c.company_country = 'SAMUTPRAKARN  THAILAND.' then 'TH'
+	when c.company_country = 'Switzerland' then 'CH'
+	when c.company_country = 'United States' then 'US'
+	when c.company_country = 'Korea' then 'KR'
+	when c.company_country = 'The People’s Republic of China' then 'CN'
+	when c.company_country = 'Thai' then 'TH'
+	when c.company_country = 'Hongkong ' then 'HK'
+	when c.company_country = ' PRC ' then 'CN'
+	when c.company_country = 'Falkland Islands (UK)' then 'GB'
+	when c.company_country = 'Laos' then 'LA'
+	when c.company_country = 'Pathumwan, Bangkok' then 'TH'
+	when c.company_country = 'Thaiiland' then 'TH'
+	when c.company_country = 'Australia' then 'AU'
+	when c.company_country = 'The Netheland ' then 'NL'
+	when c.company_country = 'Bangkok, Thailand' then 'TH'
+	when c.company_country = ' China' then 'CN'
+	when c.company_country = 'Thaialnd' then 'TH'
+	when c.company_country = 'Thailland' then 'TH'
+	when c.company_country = 'Anguilla (UK)' then 'GB'
+	when c.company_country = 'Bangkok 10250' then 'TH'
+	when c.company_country = 'United Kingdom' then 'GB'
+	when c.company_country = 'Mexico' then 'MX'
+	when c.company_country = 'HK' then 'HK'
+	when c.company_country = 'Albania' then 'AL'
+	when c.company_country = 'Myanmar' then 'MM'
+	when c.company_country = 'Khlongtoey Nue, Wattana, Bangkok 10110' then 'TH'
+	when c.company_country = 'Sweden' then 'SE'
+	when c.company_country = 'Netherland' then 'NL'
+	when c.company_country = 'Thaliand' then 'TH'
+	when c.company_country = 'Thailanad' then 'TH'
+	when c.company_country = 'Viet Nam ' then 'VN'
+	when c.company_country = ' Indonesia' then 'ID'
+	when c.company_country = 'Wattana, Bangkok 10110, Thailand ' then 'TH'
+	when c.company_country = 'Britain, Australia' then 'AU'
+	when c.company_country = 'Singapre' then 'SG'
+	when c.company_country = 'China' then 'CN'
+	when c.company_country = 'Argentina' then 'AR'
+	when c.company_country = 'People''s Republic of China ' then 'CN'
+	when c.company_country = 'CA' then 'CA'
+	when c.company_country = 'Armenia' then 'AM'
+	when c.company_country = 'PR. China, Hongkong' then 'HK'
+	when c.company_country = 'German' then 'DE'
+	when c.company_country = '21140 Thailand' then 'TH'
+	when c.company_country = 'Bangna, Bangkok 10260' then 'TH'
+	when c.company_country = 'Bangkok 10110 Thailand' then 'TH'
+	when c.company_country = 'India' then 'IN'
+	when c.company_country = 'Hong Kong (China)' then 'HK'
+	when c.company_country = 'Austria' then 'AT'
+	when c.company_country = 'Greece' then 'GR'
+	when c.company_country = 'United Arab Emirates' then 'AE'
+	when c.company_country = 'Samutprakarn 10270, Thailand.' then 'TH'
+	when c.company_country = 'UK' then 'GB'
+	when c.company_country = 'Israel' then 'IL'
+	when c.company_country = 'Bangrak Bangkok 10500' then 'TH'
+	when c.company_country = 'Kuala Lumpur' then 'ML'
+	when c.company_country = 'Thailandd' then 'TH'
+	when c.company_country = 'West Malaysia' then 'ML'
+	when c.company_country = 'Poland' then 'PL'
+	when c.company_country = 'Canada' then 'CA'
+	when c.company_country = 'TH' then 'TH'
+	when c.company_country = 'Afghanistan' then 'AF'
+	when c.company_country = ' Australia ' then 'AU'
+	when c.company_country = 'Aruba (Netherlands)' then 'NL'
+	when c.company_country = 'Wattana, Bangkok 10110 Thailand' then 'TH'
+	when c.company_country = 'IRELAND' then 'IE'
+	when c.company_country = 'Wantonglang, Bangkok 10110, Thailand' then 'TH'
+	when c.company_country = 'U.S.A.' then 'US'
+	when c.company_country = 'Thnailand' then 'TH'
+	when c.company_country = 'Bangkok 10110' then 'TH'
+	when c.company_country = 'Thailand' then 'TH'
+	when c.company_country = 'Norway' then 'NO'
+	when c.company_country = 'France' then 'FR'
+	when c.company_country = 'THE NETHERLANDS' then 'NL'
+	when c.company_country = ' Singapore' then 'SG'
+	when c.company_country = 'Belgium' then 'BE'
+	when c.company_country = 'Japan' then 'JP'
+	when c.company_country = 'Thaoland' then 'TH'
+	when c.company_country = 'Thaland' then 'TH'
+	when c.company_country = 'Thailand,' then 'TH'
+	when c.company_country = 'Singpapore' then 'SG'
+	when c.company_country = 'Spain' then 'ES'
+	when c.company_country = 'Thaiand' then 'TH'
+	when c.company_country = ' India ' then 'IN'
+	when c.company_country = 'Turkey' then 'TR'
+	when c.company_country = '  Australia' then 'AU'
+	when c.company_country = 'Thailamd' then 'TH'
+	when c.company_country = 'Bangladesh' then 'BD'
+	when c.company_country = 'Denmark' then 'DK'
+	when c.company_country = 'Pakistan' then 'PK'
+	when c.company_country = 'Singapore' then 'SG'
+	when c.company_country = 'Thailamnd' then 'TH'
+	when c.company_country = 'Cambodia' then 'KH'
+	when c.company_country = 'singapore (head office)' then 'SG'
+	when c.company_country = 'HQ - UK' then 'GB'
+	when c.company_country = 'bangkok Thailand 10600' then 'TH'
+	when c.company_country = 'Czech Republic' then 'CZ'
+	when c.company_country = 'Bangkok 10330' then 'TH'
+	when c.company_country = 'Taiwan' then 'TW'
+	when c.company_country = 'Italian' then 'IT'
+	when c.company_country = 'Phuket' then 'TH'
+	when c.company_country = 'SG' then 'SG'
+	when c.company_country = 'Thailan d' then 'TH'
+	else NULL end as countryCode
+	, json_value(custom_field,'$.Address.dxTextBox[0].Value') as AddressTel
+	, row_number() over (partition by company_id order by address_id desc) as rn
+	from company.Addresses c
+	)
+
+select concat('PRTR',company_id) as ComExtID
+, concat_ws(', '
+		, nullif(company_add1,'')
+		, nullif(trim(company_city),'')
+		, nullif(trim(' ' from company_zip),'')
+		, nullif(trim(company_country),'')) as locationName
+, concat_ws(', ', nullif(company_add1,'')
+		, nullif(company_add2,'')
+		, nullif(trim(company_city),'')
+		, nullif(trim(' ' from company_zip),'')
+		, nullif(company_country,'')) as locationAddress
+, trim(company_city) as company_city
+, trim(' ' from company_zip) as company_zip
+, trim(company_country) as country
+, countryCode
+, company_add1
+, company_add2
+, AddressTel as phone_number
+, case when add_default = 1 then 'HEADQUARTER'
+else NULL end as location_type
+, address_id as geo_name_id --used [company_location] > [geo_name_id] for reference
+, concat('PRTR',address_id) as AddressID --to be appened to Note
+, getdate() as  insert_timestamp
+from CompanyAddress
+where (company_add1 is not NULL or company_add2 is not NULL or company_city is not NULL or company_country is not NULL)
+--where rn > 1 --filter to get the latest address | use default address as Headquarters instead
+--where AddressTel is not NULL
+order by company_id desc</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company Note (NEW)</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>with CompTags as (select parent_id
+	, string_agg (rtrim(ltrim(tag_name)), ', ') as tagName
+	from common.Tags
+	where parent_class = 'ComDetail'
+	group by parent_id)
+
+select concat('PRTR',c.company_id) as ComExtID
+, 'add_com_info' as additional_type
+, concat_ws(char(10)
+	, coalesce('Company Type: ' + nullif(c.company_type,''),NULL)
+	, coalesce('Company tags: ' + nullif(t.tagName,''),NULL)
+	, coalesce('Agreed Rate: ' + nullif(c.company_agreed_rate,''),NULL)
+	, coalesce('Other Rate: ' + nullif(c.company_other_rate,''),NULL)
+	, coalesce('Additional Info: ' + nullif(c.company_add_info,''),NULL)
+	) as Custom_value
+, 1006 as Form_id
+, 1015 as Field_id
+, getdate() as Insert_timestamp
+from company.Companies c
+left join CompTags t on t.parent_id = c.company_id
+where (c.company_type is not NULL and c.company_type &lt;&gt; '')
+or t.tagName is not NULL 
+or (c.company_agreed_rate is not NULL and c.company_agreed_rate &lt;&gt; '')
+or (c.company_other_rate is not NULL and c.company_other_rate &lt;&gt; '')
+or (c.company_add_info is not NULL and c.company_add_info &lt;&gt; '')
+order by c.company_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>ComExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCompanyID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>ComExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCompanyID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Company Business No</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <key>
+        <name>VCCompanyID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>business_number</name>
+        <rename>company_tax_ID</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Company Industry VC</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>company_industry</table>
+      <key>
+        <name>VCIndustryID</name>
+        <field>industry_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCompanyID</name>
+        <field>company_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>industry_id</name>
+        <rename>VCIndustryID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>company_id</name>
+        <rename>VCCompanyID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>Insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert company fee model</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <schema/>
+    <table>company_fee_model</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>fee_model_name</column_name>
+        <stream_name>fee_model_name</stream_name>
+      </field>
+      <field>
+        <column_name>fee_model_type</column_name>
+        <stream_name>fee_model_type</stream_name>
+      </field>
+      <field>
+        <column_name>currency</column_name>
+        <stream_name>currency</stream_name>
+      </field>
+      <field>
+        <column_name>contract_type</column_name>
+        <stream_name>contract_type</stream_name>
+      </field>
+      <field>
+        <column_name>contract_category</column_name>
+        <stream_name>contract_category</stream_name>
+      </field>
+      <field>
+        <column_name>charge_rate</column_name>
+        <stream_name>charge_rate</stream_name>
+      </field>
+      <field>
+        <column_name>gross_annual_salary</column_name>
+        <stream_name>gross_annual_salary</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert company location</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <schema/>
+    <table>company_location</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>address</column_name>
+        <stream_name>locationAddress</stream_name>
+      </field>
+      <field>
+        <column_name>location_name</column_name>
+        <stream_name>locationName</stream_name>
+      </field>
+      <field>
+        <column_name>country_code</column_name>
+        <stream_name>countryCode</stream_name>
+      </field>
+      <field>
+        <column_name>city</column_name>
+        <stream_name>company_city</stream_name>
+      </field>
+      <field>
+        <column_name>post_code</column_name>
+        <stream_name>company_zip</stream_name>
+      </field>
+      <field>
+        <column_name>geo_name_id</column_name>
+        <stream_name>geo_name_id</stream_name>
+      </field>
+      <field>
+        <column_name>phone_number</column_name>
+        <stream_name>phone_number</stream_name>
+      </field>
+      <field>
+        <column_name>note</column_name>
+        <stream_name>AddressID</stream_name>
+      </field>
+      <field>
+        <column_name>location_type</column_name>
+        <stream_name>location_type</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert no of Employee</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <key>
+        <name>VCCompanyID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>employees_number</name>
+        <rename>NoEmployees</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update Company CF</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>additional_form_values</table>
+      <key>
+        <name>additional_type</name>
+        <field>additional_type</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCompanyID</name>
+        <field>additional_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Form_id</name>
+        <field>form_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Field_id</name>
+        <field>field_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>additional_type</name>
+        <rename>additional_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>additional_id</name>
+        <rename>VCCompanyID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>form_id</name>
+        <rename>Form_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_id</name>
+        <rename>Field_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_value</name>
+        <rename>Custom_value</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>Insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Industry</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR PROD</connection>
+    <schema>public</schema>
+    <table>vertical</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>Industry</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>Insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Industry Input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PRTR DB</connection>
+    <sql>select distinct NewIndustry
+, getdate() as Insert_timestamp 
+from PRTR_new_industry
+order by NewIndustry</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
