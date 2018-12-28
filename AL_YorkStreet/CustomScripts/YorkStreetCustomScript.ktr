@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>YorkStreetCustomScript</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/08/28 18:14:01.250</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/08/28 18:14:01.250</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>YorkStreet DMPFRA</name>
+    <server>EC2AMAZ-QKOFCH8</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>YorkStreet</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQLUseIntegratedSecurity</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>YorkStreetProd DMPFRA</name>
+    <server>EC2AMAZ-QKOFCH8</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>YorkStreetProd</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQLUseIntegratedSecurity</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>yorkstreet-review.vincere.io</name>
+    <server>rdb</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>yorkstreet-review.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Activities &lt;= Notes</from>
+      <to>VC Candidate Looup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Call Logs</from>
+      <to>VC Candidate Looup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Actions</from>
+      <to>VC Candidate Looup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>CAN &lt;= Status History</from>
+      <to>VC Candidate Looup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Notes</from>
+      <to>VC Contact Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Notes</from>
+      <to>VC Company Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Candidate Looup</from>
+      <to>Insert Candidate activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Contact Lookup</from>
+      <to>Insert Contact activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Company Lookup</from>
+      <to>Insert Company activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>CON &lt;= Status History</from>
+      <to>VC Contact Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Actions</from>
+      <to>VC Contact Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Actions</from>
+      <to>VC Company Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Call Logs</from>
+      <to>VC Contact Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Call Logs</from>
+      <to>VC Company Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Call Logs</from>
+      <to>VC Job Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Actions</from>
+      <to>VC Job Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Notes</from>
+      <to>VC Job Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Job Lookup</from>
+      <to>Insert Job activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Correspondence</from>
+      <to>VC Candidate Looup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Correspondence</from>
+      <to>VC Contact Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Correspondence</from>
+      <to>VC Company Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Correspondence</from>
+      <to>VC Job Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Activities &lt;= Actions</from>
+      <to>Lookup ids for activity inserting</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Activities &lt;= Actions</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>YorkStreet DMPFRA</connection>
+    <sql>-- Activities Comments
+-- Actions
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+ActionID,
+iif(x.CandidateID &lt;&gt; 0, x.CandidateID, null) as CanExtId
+, iif(x.ContactID &lt;&gt; 0, x.ContactID, null) as ConExtId
+, iif(x.CompanyID &lt;&gt; 0, x.CompanyID, null) as ComExtId
+, iif(x.VacancyID &lt;&gt; 0, x.VacancyID, null) as JobExtId
+, x.CreationDate as insert_timestamp
+, concat(
+upper('Actions')
+, @NewLineChar
+, replicate('-', len('Actions'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	iif(len(trim(isnull(ats.Description, ''))) > 0, 'Action Type: ' + trim(isnull(ats.Description, '')), '')
+	, @NewLineChar + 'Action Outcome: ' + iif(x.ActionOutcomeID &lt;&gt; 0, trim(isnull(ao.Description, '')), 'Unknown')
+	, iif(len(trim(isnull(convert(varchar(50), x.StartDate, 111), ''))) > 0,  @NewLineChar + 'Start Date: ' + trim(isnull(convert(varchar(50), x.StartDate, 111), '')), '')
+	, iif(len(trim(isnull(convert(varchar(50), x.EndDate, 111), ''))) > 0,  @NewLineChar + 'End Date: ' + trim(isnull(convert(varchar(50), x.EndDate, 111), '')), '')
+	, iif(len(trim(isnull(convert(varchar(50), x.CompletionDate, 111), ''))) > 0,  @NewLineChar + 'Completion Date: ' + trim(isnull(convert(varchar(50), x.CompletionDate, 111), '')), '')
+	, iif(x.CompanyID &lt;&gt; 0,  @NewLineChar + 'Company: ' + concat(isnull(com.Name, ''), ' (External ID: ', x.CompanyID, ')'), '')
+	, iif(x.ContactID &lt;&gt; 0,  @NewLineChar + 'Contact: ' + concat(isnull(con.FirstName, ''), ' ', isnull(con.Surname, ''), ' (External ID: ', con.ContactID, ')'), '')
+	, iif(x.ContactID &lt;&gt; 0,  @NewLineChar + 'Requires Confirmation from Contact: ' + iif(x.RequiresContactConfirmation is not null and x.RequiresContactConfirmation = 1, 'Yes', 'No'), '')
+	, iif(x.VacancyID &lt;&gt; 0,  @NewLineChar + 'Vacancy: ' + concat(isnull(v.Title, ''), ' (External ID: ', x.VacancyID, ')'), '')
+	, iif(x.CandidateID &lt;&gt; 0,  @NewLineChar + 'Candidate: ' + concat(isnull(can.FirstName, ''), ' ', isnull(can.Surname, ''), ' (External ID: ', can.CandidateID, ')'), '')
+	, iif(x.CandidateID &lt;&gt; 0, @NewLineChar + 'Requires Confirmation from Candidate: ' + iif(x.RequiresCandidateConfirmation is not null and x.RequiresCandidateConfirmation = 1, 'Yes', 'No'), '')
+	, iif(len(trim(isnull(cast(x.Comments as nvarchar(max)), ''))) > 0,  @NewLineChar + 'Comment: ' + trim(isnull(cast(x.Comments as nvarchar(max)), '')), '')
+	, iif(len(trim(isnull(x.Location, ''))) > 0,  @NewLineChar + 'Action Location: ' + trim(isnull(x.Location, '')), '')
+))) as content
+, 'comment' as category
+--, 'candidate' as type
+--, 'contact' as type
+--, 'company' as type
+, 'job' as type
+, -10 as user_account_id
+from Actions x
+left join ActionTypes ats on ats.ActionTypeID = x.ActionTypeID
+left join ActionOutcomes ao on ao.ActionOutcomeID = x.ActionOutcomeID
+left join CompanyDetails com on com.CompanyID = x.CompanyID
+left join Contacts con on con.ContactID = x.ContactID
+left join Candidates can on can.CandidateID = x.CandidateID
+left join Vacancies v on v.VacancyID = x.VacancyID
+where
+x.CandidateID &lt;&gt; 0 or x.ContactID &lt;&gt; 0 or x.CompanyID &lt;&gt; 0 or x.VacancyID &lt;&gt; 0
+order by x.CreationDate</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Activities &lt;= Call Logs</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>YorkStreet DMPFRA</connection>
+    <sql>-- Activities Comments
+-- Call Logs
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+x.TelephoneCallID,
+iif(x.CandidateID &lt;&gt; 0, x.CandidateID, null) as CanExtId
+, iif(x.ContactID &lt;&gt; 0, x.ContactID, null) as ConExtId
+, iif(x.CompanyID &lt;&gt; 0, x.CompanyID, null) as ComExtId
+, iif(x.VacancyID &lt;&gt; 0, x.VacancyID, null) as JobExtId
+, x.CreationDate as insert_timestamp
+, concat(
+upper('Call Log')
+, @NewLineChar
+, replicate('-', len('Call Log'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	iif(len(trim(isnull(ct.Description, ''))) > 0, 'Call Type: ' + trim(isnull(ct.Description, '')), '')
+	, @NewLineChar + 'Call Outcome: ' + iif(x.CallOutcomeID &lt;&gt; 0, trim(isnull(co.Description, '')), 'Unknown')
+	, iif(len(trim(isnull(convert(varchar(50), x.CallDate, 111), ''))) > 0,  @NewLineChar + 'Call Date: ' + trim(isnull(convert(varchar(50), x.CallDate, 111), '')), '')
+	, @NewLineChar + 'Is Outgoing: ' + iif(x.OutGoing = 1, 'Yes', 'No')
+	, iif(x.Duration &lt;&gt; 0, @NewLineChar + 'Duration: ' + isnull(cast(x.Duration as varchar(20)), ''), '')
+	, iif(x.CompanyID &lt;&gt; 0,  @NewLineChar + 'Company: ' + concat(isnull(com.Name, ''), ' (External ID: ', x.CompanyID, ')'), '')
+	, iif(x.ContactID &lt;&gt; 0,  @NewLineChar + 'Contact: ' + concat(isnull(con.FirstName, ''), ' ', isnull(con.Surname, ''), ' (External ID: ', con.ContactID, ')'), '')
+	, iif(x.VacancyID &lt;&gt; 0,  @NewLineChar + 'Vacancy: ' + concat(isnull(v.Title, ''), ' (External ID: ', x.VacancyID, ')'), '')
+	, iif(x.CandidateID &lt;&gt; 0,  @NewLineChar + 'Candidate: ' + concat(isnull(can.FirstName, ''), ' ', isnull(can.Surname, ''), ' (External ID: ', can.CandidateID, ')'), '')
+	, iif(len(trim(isnull(cast(x.Comments as nvarchar(max)), ''))) > 0,  @NewLineChar + 'Comment: ' + trim(isnull(cast(x.Comments as nvarchar(max)), '')), '')
+))) as content
+, 'comment' as category
+--, 'candidate' as type
+--, 'contact' as type
+--, 'company' as type
+, 'job' as type
+, -10 as user_account_id
+from TelephoneCalls x
+left join CallOutcomes co on co.CallOutcomeID = x.CallOutcomeID
+left join CallTypes ct on ct.CallTypeID = x.CallTypeID
+left join CompanyDetails com on com.CompanyID = x.CompanyID
+left join Contacts con on con.ContactID = x.ContactID
+left join Candidates can on can.CandidateID = x.CandidateID
+left join Vacancies v on v.VacancyID = x.VacancyID
+where
+x.CandidateID &lt;&gt; 0 or x.ContactID &lt;&gt; 0 or x.CompanyID &lt;&gt; 0 or x.VacancyID &lt;&gt; 0
+order by x.CreationDate</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Activities &lt;= Correspondence</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>YorkStreet DMPFRA</connection>
+    <sql>-- Activities Comments
+-- Correspondence
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+x.CorrespondenceID,
+iif(x.CandidateID &lt;&gt; 0, x.CandidateID, null) as CanExtId
+, iif(x.ContactID &lt;&gt; 0, x.ContactID, null) as ConExtId
+, iif(x.CompanyID &lt;&gt; 0, x.CompanyID, null) as ComExtId
+, iif(x.VacancyID &lt;&gt; 0, x.VacancyID, null) as JobExtId
+, x.CreationDate as insert_timestamp
+, concat(
+upper('Correspondence')
+, @NewLineChar
+, replicate('-', len('Correspondence'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	iif(len(trim(isnull(x.Title, ''))) > 0, 'Title: ' + trim(isnull(x.Title, '')), '')
+	, @NewLineChar + 'Creator: ' + trim(isnull(x.CreatorDisplayName, ''))
+	, iif(x.CompanyID &lt;&gt; 0,  @NewLineChar + 'Company: ' + concat(isnull(com.Name, ''), ' (External ID: ', x.CompanyID, ')'), '')
+	, iif(x.ContactID &lt;&gt; 0,  @NewLineChar + 'Contact: ' + concat(isnull(con.FirstName, ''), ' ', isnull(con.Surname, ''), ' (External ID: ', con.ContactID, ')'), '')
+	, iif(x.VacancyID &lt;&gt; 0,  @NewLineChar + 'Vacancy: ' + concat(isnull(v.Title, ''), ' (External ID: ', x.VacancyID, ')'), '')
+	, iif(x.CandidateID &lt;&gt; 0,  @NewLineChar + 'Candidate: ' + concat(isnull(can.FirstName, ''), ' ', isnull(can.Surname, ''), ' (External ID: ', can.CandidateID, ')'), '')
+	, iif(len(trim(isnull(convert(varchar(50), x.DateSent, 111), ''))) > 0,  @NewLineChar + 'Sent Date: ' + trim(isnull(convert(varchar(50), x.DateSent, 111), '')), '')
+	, iif(len(trim(isnull(convert(varchar(50), x.EmailDate, 111), ''))) > 0,  @NewLineChar + 'Email Date: ' + trim(isnull(convert(varchar(50), x.EmailDate, 111), '')), '')
+	, @NewLineChar + 'Is Outgoing: ' + iif(x.OutGoing = 1, 'Yes', 'No')
+	, @NewLineChar + 'Completed: ' + iif(x.Completed = 1, 'Yes', 'No')
+	, iif(len(trim(isnull(x.EmailSubject, ''))) > 0, 'Email Subject: ' + trim(isnull(x.EmailSubject, '')), '')
+	, iif(len(trim(isnull(cast(x.FromAddress as nvarchar(max)), ''))) > 0,  @NewLineChar + 'From Address: ' + trim(isnull(cast(x.FromAddress as nvarchar(max)), '')), '')
+	, iif(len(trim(isnull(cast(x.ToAddress as nvarchar(max)), ''))) > 0,  @NewLineChar + 'To Address: ' + trim(isnull(cast(x.ToAddress as nvarchar(max)), '')), '')
+	, iif(len(trim(isnull(cast(x.EmailBody as nvarchar(max)), ''))) > 0,  @NewLineChar + 'Email Body: ' + trim(isnull(cast(x.EmailBody as nvarchar(max)), '')), '')
+))) as content
+, 'comment' as category
+, 'candidate' as type
+--, 'contact' as type
+--, 'company' as type
+--, 'job' as type
+, -10 as user_account_id
+from Correspondence x
+left join CompanyDetails com on com.CompanyID = x.CompanyID
+left join Contacts con on con.ContactID = x.ContactID
+left join Candidates can on can.CandidateID = x.CandidateID
+left join Vacancies v on v.VacancyID = x.VacancyID
+where
+x.CandidateID &lt;&gt; 0 or x.ContactID &lt;&gt; 0 or x.CompanyID &lt;&gt; 0 or x.VacancyID &lt;&gt; 0
+order by x.CreationDate</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Activities &lt;= Notes</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>YorkStreet DMPFRA</connection>
+    <sql>-- Activities Comments
+-- Availability
+-- Notes
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+NoteID,
+iif(x.CandidateID &lt;&gt; 0, x.CandidateID, null) as CanExtId
+, iif(x.ContactID &lt;&gt; 0, x.ContactID, null) as ConExtId
+, iif(x.CompanyID &lt;&gt; 0, x.CompanyID, null) as ComExtId
+, iif(x.VacancyID &lt;&gt; 0, x.VacancyID, null) as JobExtId
+, x.CreationDate as insert_timestamp
+, concat(
+upper('Notes')
+, @NewLineChar
+, replicate('-', len('Notes'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	@NewLineChar + 'Note Type: ' + iif(x.NoteTypeID &lt;&gt; 0, trim(isnull(nt.Description, '')), 'Unknown')
+	, iif(len(trim(isnull(convert(varchar(50), x.NoteDate, 111), ''))) > 0,  @NewLineChar + 'Note Date: ' + trim(isnull(convert(varchar(50), x.NoteDate, 111), '')), '')
+	, @NewLineChar + 'Creator: ' + trim(isnull(x.CreatorDisplayName, ''))
+	, iif(len(trim(isnull(x.Title, ''))) > 0, @NewLineChar + 'Title: ' + trim(isnull(x.Title, '')), '')
+	, iif(x.CompanyID &lt;&gt; 0,  @NewLineChar + 'Company: ' + concat(isnull(com.Name, ''), ' (External ID: ', com.CompanyID, ')'), '')
+	, iif(x.ContactID &lt;&gt; 0,  @NewLineChar + 'Contact: ' + concat(isnull(con.FirstName, ''), ' ', isnull(con.Surname, ''), ' (External ID: ', con.ContactID, ')'), '')
+	, iif(x.VacancyID &lt;&gt; 0,  @NewLineChar + 'Vacancy: ' + concat(isnull(v.Title, ''), ' (External ID: ', v.VacancyID, ')'), '')
+	, iif(x.CandidateID &lt;&gt; 0,  @NewLineChar + 'Candidate: ' + concat(isnull(can.FirstName, ''), ' ', isnull(can.Surname, ''), ' (External ID: ', can.CandidateID, ')'), '')
+	, iif(len(trim(isnull(cast(x.Description as nvarchar(max)), ''))) > 0,  @NewLineChar + 'Description:' + @NewLineChar + trim(isnull(cast(x.Description as nvarchar(max)), '')), '')
+))) as content
+, 'comment' as category
+--, 'candidate' as type
+--, 'contact' as type
+--, 'company' as type
+, 'job' as type
+, -10 as user_account_id
+from Notes x
+left join NoteTypes nt on nt.NoteTypeID = x.NoteTypeID
+left join CompanyDetails com on com.CompanyID = x.CompanyID
+left join Contacts con on con.ContactID = x.ContactID
+left join Candidates can on can.CandidateID = x.CandidateID
+left join Vacancies v on v.VacancyID = x.VacancyID
+where
+x.CandidateID &lt;&gt; 0 or x.ContactID &lt;&gt; 0 or x.CompanyID &lt;&gt; 0 or x.VacancyID &lt;&gt; 0
+order by x.CreationDate</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>CAN &lt;= Status History</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>YorkStreet DMPFRA</connection>
+    <sql>-- Activities Comments
+-- Availability
+-- Status History
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+csh.CandidateID as external_id
+, csh.CreationDate as insert_timestamp
+, upper('Status History') +
+@NewLineChar +
+replicate('-', len('Status History')) +
+@NewLineChar +
+concat_ws(@NewLineChar
+ , 'Status: ' + isnull(es.Description, '')
+ , 'Status Date: ' + isnull(convert(varchar(50), csh.StatusDate, 111), '')
+ , 'Creator: ' + isnull(csh.CreatorDisplayName, '') + ' (ID: ' + cast(csh.CreatorID as varchar(20)) + ')'
+ , 'Comment: ' + isnull(cast(csh.Comments as nvarchar(max)), '')
+) as content
+, 'comment' as category
+, 'candidate' as type
+, -10 as user_account_id
+from CandidateStatusHistory csh
+left join EmploymentStatus es on csh.EmploymentStatusID = es.EmploymentStatusID
+order by csh.CreationDate</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>CON &lt;= Status History</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>YorkStreet DMPFRA</connection>
+    <sql>-- Activities Comments
+-- Contact Status
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+x.ContactStatusHistoryID,
+--iif(x.CandidateID &lt;&gt; 0, x.CandidateID, null) as CanExtId
+iif(x.ContactID &lt;&gt; 0, x.ContactID, null) as ConExtId
+--, iif(x.CompanyID &lt;&gt; 0, x.CompanyID, null) as ComExtId
+, x.CreationDate as insert_timestamp
+, concat(
+upper('Contact Status')
+, @NewLineChar
+, replicate('-', len('Contact Status'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	@NewLineChar + 'Status: ' + iif(x.ContactStatusID &lt;&gt; 0, trim(isnull(cs.Description, '')), 'Unknown')
+	, iif(len(trim(isnull(convert(varchar(50), x.StatusDate, 111), ''))) > 0,  @NewLineChar + 'Status Date: ' + trim(isnull(convert(varchar(50), x.StatusDate, 111), '')), '')
+	, @NewLineChar + 'Creator: ' + trim(isnull(x.CreatorDisplayName, ''))
+	--, iif(len(trim(isnull(x.Title, ''))) > 0, @NewLineChar + 'Title: ' + trim(isnull(x.Title, '')), '')
+	--, iif(x.CompanyID &lt;&gt; 0,  @NewLineChar + 'Company: ' + concat(isnull(com.Name, ''), ' (External ID: ', com.CompanyID, ')'), '')
+	--, iif(x.ContactID &lt;&gt; 0,  @NewLineChar + 'Contact: ' + concat(isnull(con.FirstName, ''), ' ', isnull(con.Surname, ''), ' (External ID: ', con.ContactID, ')'), '')
+	--, iif(x.VacancyID &lt;&gt; 0,  @NewLineChar + 'Vacancy: ' + concat(isnull(v.Title, ''), ' (External ID: ', v.VacancyID, ')'), '')
+	--, iif(x.CandidateID &lt;&gt; 0,  @NewLineChar + 'Candidate: ' + concat(isnull(can.FirstName, ''), ' ', isnull(can.Surname, ''), ' (External ID: ', can.CandidateID, ')'), '')
+	, iif(len(trim(isnull(cast(x.Comments as nvarchar(max)), ''))) > 0,  @NewLineChar + 'Comments:' + @NewLineChar + trim(isnull(cast(x.Comments as nvarchar(max)), '')), '')
+))) as content
+, 'comment' as category
+--, 'candidate' as type
+, 'contact' as type
+--, 'company' as type
+, -10 as user_account_id
+from ContactStatusHistory x
+left join ContactStatus cs on cs.ContactStatusID = x.ContactStatusID
+--left join CompanyDetails com on com.CompanyID = x.CompanyID
+--left join Contacts con on con.ContactID = x.ContactID
+--left join Candidates can on can.CandidateID = x.CandidateID
+--left join Vacancies v on v.VacancyID = x.VacancyID
+where
+--x.CandidateID &lt;&gt; 0
+x.ContactID &lt;&gt; 0
+--or x.CompanyID &lt;&gt; 0
+order by x.CreationDate</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Candidate activities</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>CanId</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Company activities</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>ComID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>719</xloc>
+      <yloc>295</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Contact activities</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>ConID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Job activities</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>JobID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Lookup ids for activity inserting</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <rowlimit>0</rowlimit>
+    <sql>Select
+com.Id as ComID
+, con.Id as ConID
+, job.Id as JobID
+, can.Id as CanID
+from company com
+left join contact con on com.Id = con.company_id
+left join position_description job on con.Id = job.contact_id or com.Id = job.company_id
+left join candidate can on con.Id = can.Contact_id</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>ComExtId</name>
+        <type>String</type>
+      </field>
+      <field>
+        <name>ConExtId</name>
+        <type>String</type>
+      </field>
+      <field>
+        <name>CanExtId</name>
+        <type>String</type>
+      </field>
+      <field>
+        <name>JobExtId</name>
+        <type>String</type>
+      </field>
+    </parameter>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Candidate Looup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>CanExtId</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>CanID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Company Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ComExtId</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ComID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Contact Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ConExtId</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ConID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Job Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>yorkstreet-review.vincere.io</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>JobExtId</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>JobID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Can &lt;= Correspondence</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>YorkStreetProd DMPFRA</connection>
+    <sql>-- Activities Comments
+-- Correspondence
+-- Company
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select top 1
+x.CorrespondenceID
+
+, 'comment' as category
+
+, 'company' as [type]
+
+, trim(u.Email) as UserEmail
+
+, cast(x.CompanyID as varchar(20)) as ComExtId
+
+, x.CreationDate as insert_timestamp
+
+, concat(
+	upper('Correspondence')
+	, @NewLineChar
+	, replicate('-', len('Correspondence')*3)
+	, @NewLineChar
+	, 'Details'
+	, concat(@DoubleNewLine, '*Date Sent: ', convert(datetime, x.CreationDate, 120))
+	, concat(@NewLineChar, 'Outgoing / Incoming: ', iif(x.OutGoing = 1, 'Outgoing', 'Incoming'))
+	, concat(@NewLineChar, 'Sent: ', iif(x.DateSent is not null, 'Yes', 'No'))
+	, concat(@NewLineChar, 'Title: ', trim(isnull(x.Title, '')))
+	, concat(@NewLineChar, 'Type: ', trim(isnull(ct.Description, '')))
+	, concat(@NewLineChar, 'Merge To: ', iif(x.RecordTypeID = 1, 'Companies', 'Candidates'))
+	, concat(@NewLineChar, 'User: ', trim(isnull(u.UserDisplayName, '')))
+	, @DoubleNewLine
+	, 'Relationships'
+	, concat(@DoubleNewLine, 'Company: ', iif(x.CompanyId = 0, 'None Selected', com.ComName))
+	, concat(@NewLineChar, 'Contact: ', iif(x.ContactId = 0, 'None Selected', con.FullName))
+	, concat(@NewLineChar, 'Vacancy: ', iif(x.VacancyId = 0, 'None Selected', job.JobTitle))
+	, concat(@NewLineChar, 'Candidate: ', iif(x.CandidateId = 0, 'None Selected', can.FullName))
+	, @DoubleNewLine
+	, 'Other Information'
+	, concat(@DoubleNewLine, 'Comments:', @DoubleNewLine, trim(isnull(cast(x.Comments as nvarchar(max)), '')))
+	, @DoubleNewLine
+	, 'Email Merge Content'
+	, @DoubleNewLine
+	, [dbo].[ufn_HtmlEncode](replace(cast(MergeContent as nvarchar(max)), '{EmailBody}', cast(EmailBody as nvarchar(max))), 0)
+) as content
+
+from Correspondence x
+left join CorrespondenceTypes ct on x.CorrespondenceTypeID = ct.CorrespondenceTypeID
+left join Users u on x.CreatorID = u.UserID
+left join VCComIdxs com on x.CompanyID = com.ComId
+left join VCConIdxs con on x.ContactID = con.ConId
+left join VCJobIdxs job on x.VacancyID = job.JobId
+left join VCCanIdxs can on x.CandidateID = can.CanId
+
+where
+x.CompanyID &lt;&gt; 0
+order by x.CreationDate
+
+
+--select * from CompanyDetails
+--where CompanyID = 214</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>878</xloc>
+      <yloc>164</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
