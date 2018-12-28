@@ -1,0 +1,5062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>ESP_Activity_Comments</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/11/21 16:52:46.293</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/11/21 16:52:46.293</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>cusDB</name>
+    <server>localhost</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>ESPProd</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQLUseIntegratedSecurity</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>vcdb</name>
+    <server>rdb</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>enterprisesalespersonnel.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Com AC &lt;= Source 1</from>
+      <to>VC User Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup</from>
+      <to>VC Com Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect candidate's activities</from>
+      <to>Clear activity_candidate</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect candidate's activities</from>
+      <to>Insert Into activity_candidate</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect company's activities</from>
+      <to>Clear activity_company</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect company's activities</from>
+      <to>Insert Into activity_company</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect contact's activities</from>
+      <to>Clear activity_contact</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect contact's activities</from>
+      <to>Insert Into activity_contact</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect job's activities</from>
+      <to>Clear activity_job</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>collect job's activities</from>
+      <to>Insert Into activity_job</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Com Lookup</from>
+      <to>Insert Com AC</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Con Lookup</from>
+      <to>Insert Con AC</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup</from>
+      <to>VC Con Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Con AC &lt;= Source 1</from>
+      <to>VC User Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Job Lookup</from>
+      <to>Insert Job AC</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Can Lookup</from>
+      <to>Insert Con AC 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job AC &lt;= Source 1</from>
+      <to>VC User Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup</from>
+      <to>VC Job Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Can AC &lt;= Source 1</from>
+      <to>VC User Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup</from>
+      <to>VC Can Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Com AC &lt;= Source 2</from>
+      <to>VC User Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2</from>
+      <to>VC Com Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2</from>
+      <to>VC Con Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2</from>
+      <to>VC Job Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2</from>
+      <to>VC Can Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Com Lookup 2</from>
+      <to>Insert Com AC 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Con AC &lt;= Source 2</from>
+      <to>VC User Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Con Lookup 2</from>
+      <to>Insert Con AC 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job AC &lt;= Source 2</from>
+      <to>VC User Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Job Lookup 2</from>
+      <to>Insert Job AC 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Can AC &lt;= Source 2</from>
+      <to>VC User Lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Can Lookup 2</from>
+      <to>Insert Con AC 3 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Can AC &lt;= Source 2 2</from>
+      <to>VC User Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Com AC &lt;= Source 2 2</from>
+      <to>VC User Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Con AC &lt;= Source 2 2</from>
+      <to>VC User Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job AC &lt;= Source 2 2</from>
+      <to>VC User Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Can Lookup 2 2</from>
+      <to>Insert Con AC 3 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Com Lookup 2 2</from>
+      <to>Insert Com AC 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Con Lookup 2 2</from>
+      <to>Insert Con AC 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Job Lookup 2 2</from>
+      <to>Insert Job AC 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2 2</from>
+      <to>VC Can Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2 2</from>
+      <to>VC Com Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2 2</from>
+      <to>VC Con Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 2 2</from>
+      <to>VC Job Lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Can AC &lt;= Source 1 2</from>
+      <to>VC User Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Com AC &lt;= Source 1 2</from>
+      <to>VC User Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Con AC &lt;= Source 1 2</from>
+      <to>VC User Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job AC &lt;= Source 1 2</from>
+      <to>VC User Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Can Lookup 3</from>
+      <to>Insert Con AC 3 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Com Lookup 3</from>
+      <to>Insert Com AC 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Con Lookup 3</from>
+      <to>Insert Con AC 3 4</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC Job Lookup 3</from>
+      <to>Insert Job AC 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 3</from>
+      <to>VC Can Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 3</from>
+      <to>VC Com Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 3</from>
+      <to>VC Con Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>VC User Lookup 3</from>
+      <to>VC Job Lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Can AC &lt;= Source 1</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhoId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'candidate' as type
+	, isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Event')
+		, @NewLineChar
+		, replicate('-', len('Event'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', trim(isnull(y.Username, '')), ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, @NewLineChar + 'Private: ' + iif(x.IsPrivate = '1', 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Location, ''))) > 0, @NewLineChar + 'Location: ' + trim(isnull(x.Location, '')), '')
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), ''))) > 0,  @NewLineChar + 'Start: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), '')), '')
+
+			, @NewLineChar + 'All Day Event: ' + iif(x.IsAllDayEvent = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.ShowAs, ''))) > 0, @NewLineChar + 'Show Time As: ' + trim(isnull(x.ShowAs, '')), '')
+
+			, iif(len(trim(isnull(x.DurationInMinutes, ''))) > 0, @NewLineChar + 'Duration In Minutes: ' + trim(isnull(x.DurationInMinutes, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Description: ' + @NewLineChar + trim(isnull(x.Description, '')), '')
+	))) as content
+
+from [Event] x
+left join [User] y on y.Id = x.OwnerId
+where WhoId is not null and WhoId &lt;&gt; '000000000000000AAA'
+and WhoId in (select [candidate-externalId] from VCCandidates) -- 18
+order by isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Can AC &lt;= Source 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+declare @DoubleNewLine char(2) = @NewLineChar + @NewLineChar
+
+select
+	x.ParentId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'candidate' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Notes')
+		, @NewLineChar
+		, replicate('-', len('Notes'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+				iif(len(trim(isnull(x.IsPrivate, ''))) > 0, @NewLineChar + 'Private: ' + iif(trim(isnull(x.IsPrivate, '')) = '0', 'No', 'Yes'), '')
+				, iif(len(trim(isnull(x.Title, ''))) > 0, @NewLineChar + 'Title: ' + trim(isnull(x.Title, '')), '')
+				, iif(len(trim(isnull(x.Body, ''))) > 0,  @NewLineChar + 'Body:' + @DoubleNewLine + trim(isnull(x.Body, '')), '')
+			)
+		)
+	) as content
+
+from [Note] x
+left join [User] y on y.Id = x.OwnerId
+where ParentId is not null and ParentId &lt;&gt; '000000000000000AAA'
+and ParentId in (select [candidate-externalId] from VCCandidates) -- 82
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Clear activity_candidate</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema>public</schema>
+      <table>activity_candidate</table>
+      <key>
+        <name>activity_id</name>
+        <field>activity_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>candidate_id</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Clear activity_company</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema>public</schema>
+      <table>activity_company</table>
+      <key>
+        <name>activity_id</name>
+        <field>activity_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>company_id</name>
+        <field>company_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Clear activity_contact</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema>public</schema>
+      <table>activity_contact</table>
+      <key>
+        <name>activity_id</name>
+        <field>activity_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>contact_id</name>
+        <field>contact_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Clear activity_job</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema>public</schema>
+      <table>activity_job</table>
+      <key>
+        <name>activity_id</name>
+        <field>activity_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>position_id</name>
+        <field>job_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Com AC &lt;= Source 1</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhatId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'company' as type
+	, isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Event')
+		, @NewLineChar
+		, replicate('-', len('Event'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', trim(isnull(y.Username, '')), ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, @NewLineChar + 'Private: ' + iif(x.IsPrivate = '1', 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Location, ''))) > 0, @NewLineChar + 'Location: ' + trim(isnull(x.Location, '')), '')
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), ''))) > 0,  @NewLineChar + 'Start: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), '')), '')
+
+			, @NewLineChar + 'All Day Event: ' + iif(x.IsAllDayEvent = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.ShowAs, ''))) > 0, @NewLineChar + 'Show Time As: ' + trim(isnull(x.ShowAs, '')), '')
+
+			, iif(len(trim(isnull(x.DurationInMinutes, ''))) > 0, @NewLineChar + 'Duration In Minutes: ' + trim(isnull(x.DurationInMinutes, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Description: ' + @NewLineChar + trim(isnull(x.Description, '')), '')
+	))) as content
+
+from [Event] x
+left join [User] y on y.Id = x.OwnerId
+where WhatId is not null and WhatId &lt;&gt; '000000000000000AAA'
+and WhatId in (select [company-externalId] from VCCompanies) -- 0
+order by isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Com AC &lt;= Source 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+declare @DoubleNewLine char(2) = @NewLineChar + @NewLineChar
+
+select
+	x.ParentId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'company' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Notes')
+		, @NewLineChar
+		, replicate('-', len('Notes'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+				iif(len(trim(isnull(x.IsPrivate, ''))) > 0, @NewLineChar + 'Private: ' + iif(trim(isnull(x.IsPrivate, '')) = '0', 'No', 'Yes'), '')
+				, iif(len(trim(isnull(x.Title, ''))) > 0, @NewLineChar + 'Title: ' + trim(isnull(x.Title, '')), '')
+				, iif(len(trim(isnull(x.Body, ''))) > 0,  @NewLineChar + 'Body:' + @DoubleNewLine + trim(isnull(x.Body, '')), '')
+			)
+		)
+	) as content
+
+from [Note] x
+left join [User] y on y.Id = x.OwnerId
+where ParentId is not null and ParentId &lt;&gt; '000000000000000AAA'
+and ParentId in (select [company-externalId] from VCCompanies) -- 299
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Con AC &lt;= Source 1</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhoId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'contact' as type
+	, isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Event')
+		, @NewLineChar
+		, replicate('-', len('Event'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', trim(isnull(y.Username, '')), ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, @NewLineChar + 'Private: ' + iif(x.IsPrivate = '1', 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Location, ''))) > 0, @NewLineChar + 'Location: ' + trim(isnull(x.Location, '')), '')
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), ''))) > 0,  @NewLineChar + 'Start: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), '')), '')
+
+			, @NewLineChar + 'All Day Event: ' + iif(x.IsAllDayEvent = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.ShowAs, ''))) > 0, @NewLineChar + 'Show Time As: ' + trim(isnull(x.ShowAs, '')), '')
+
+			, iif(len(trim(isnull(x.DurationInMinutes, ''))) > 0, @NewLineChar + 'Duration In Minutes: ' + trim(isnull(x.DurationInMinutes, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Description: ' + @NewLineChar + trim(isnull(x.Description, '')), '')
+	))) as content
+
+from [Event] x
+left join [User] y on y.Id = x.OwnerId
+where WhoId is not null and WhoId &lt;&gt; '000000000000000AAA'
+and WhoId in (select [contact-externalId] from VCContacts) -- 54
+order by isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Con AC &lt;= Source 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+declare @DoubleNewLine char(2) = @NewLineChar + @NewLineChar
+
+select
+	x.ParentId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'contact' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Notes')
+		, @NewLineChar
+		, replicate('-', len('Notes'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+				iif(len(trim(isnull(x.IsPrivate, ''))) > 0, @NewLineChar + 'Private: ' + iif(trim(isnull(x.IsPrivate, '')) = '0', 'No', 'Yes'), '')
+				, iif(len(trim(isnull(x.Title, ''))) > 0, @NewLineChar + 'Title: ' + trim(isnull(x.Title, '')), '')
+				, iif(len(trim(isnull(x.Body, ''))) > 0,  @NewLineChar + 'Body:' + @DoubleNewLine + trim(isnull(x.Body, '')), '')
+			)
+		)
+	) as content
+
+from [Note] x
+left join [User] y on y.Id = x.OwnerId
+where ParentId is not null and ParentId &lt;&gt; '000000000000000AAA'
+and ParentId in (select [contact-externalId] from VCContacts) -- 171
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Com AC</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ComID</name>
+        <field>company_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>company_id</name>
+        <rename>ComID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Com AC 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ComID</name>
+        <field>company_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>company_id</name>
+        <rename>ComID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ConID</name>
+        <field>contact_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>contact_id</name>
+        <rename>ConID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ConID</name>
+        <field>contact_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>contact_id</name>
+        <rename>ConID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC 3</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>CanID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>CanID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC 3 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>CanID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>CanID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Into activity_candidate</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <schema>public</schema>
+    <table>activity_candidate</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>activity_id</column_name>
+        <stream_name>activity_id</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>candidate_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>1040</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Into activity_company</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <schema>public</schema>
+    <table>activity_company</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>activity_id</column_name>
+        <stream_name>activity_id</stream_name>
+      </field>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>company_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>1040</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Into activity_contact</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <schema>public</schema>
+    <table>activity_contact</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>activity_id</column_name>
+        <stream_name>activity_id</stream_name>
+      </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>contact_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>1040</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Into activity_job</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <schema>public</schema>
+    <table>activity_job</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>activity_id</column_name>
+        <stream_name>activity_id</stream_name>
+      </field>
+      <field>
+        <column_name>job_id</column_name>
+        <stream_name>position_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>1040</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Job AC</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>JobID</name>
+        <field>position_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_id</name>
+        <rename>JobID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Job AC 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>JobID</name>
+        <field>position_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_id</name>
+        <rename>JobID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job AC &lt;= Source 1</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhatId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'job' as type
+	, isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Event')
+		, @NewLineChar
+		, replicate('-', len('Event'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', trim(isnull(y.Username, '')), ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, @NewLineChar + 'Private: ' + iif(x.IsPrivate = '1', 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Location, ''))) > 0, @NewLineChar + 'Location: ' + trim(isnull(x.Location, '')), '')
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), ''))) > 0,  @NewLineChar + 'Start: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDateTime as datetime), 111), '')), '')
+
+			, @NewLineChar + 'All Day Event: ' + iif(x.IsAllDayEvent = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.ShowAs, ''))) > 0, @NewLineChar + 'Show Time As: ' + trim(isnull(x.ShowAs, '')), '')
+
+			, iif(len(trim(isnull(x.DurationInMinutes, ''))) > 0, @NewLineChar + 'Duration In Minutes: ' + trim(isnull(x.DurationInMinutes, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Description: ' + @NewLineChar + trim(isnull(x.Description, '')), '')
+	))) as content
+
+from [Event] x
+left join [User] y on y.Id = x.OwnerId
+where WhatId is not null and WhatId &lt;&gt; '000000000000000AAA'
+and WhatId in (select [position-externalId] from VCJobs) -- 1
+order by isnull(cast(x.ActivityDateTime as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job AC &lt;= Source 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+declare @DoubleNewLine char(2) = @NewLineChar + @NewLineChar
+
+select
+	x.ParentId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'job' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Notes')
+		, @NewLineChar
+		, replicate('-', len('Notes'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+				iif(len(trim(isnull(x.IsPrivate, ''))) > 0, @NewLineChar + 'Private: ' + iif(trim(isnull(x.IsPrivate, '')) = '0', 'No', 'Yes'), '')
+				, iif(len(trim(isnull(x.Title, ''))) > 0, @NewLineChar + 'Title: ' + trim(isnull(x.Title, '')), '')
+				, iif(len(trim(isnull(x.Body, ''))) > 0,  @NewLineChar + 'Body:' + @DoubleNewLine + trim(isnull(x.Body, '')), '')
+			)
+		)
+	) as content
+
+from [Note] x
+left join [User] y on y.Id = x.OwnerId
+where ParentId is not null and ParentId &lt;&gt; '000000000000000AAA'
+and ParentId in (select [position-externalId] from VCJobs) -- 15
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Can Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>CanID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Can Lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>CanID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Com Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ComID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Com Lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ComID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Con Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ConID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Con Lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ConID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Job Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>JobID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Job Lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>JobID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC User Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>user_account</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>UserEmail</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>user_account_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC User Lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>user_account</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>UserEmail</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>user_account_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>collect candidate's activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <sql>SELECT id as activity_id
+, candidate_id
+, insert_timestamp
+from activity
+where candidate_id is not NULL and candidate_id > 0</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>collect company's activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <sql>SELECT id as activity_id
+, company_id
+, insert_timestamp
+from activity
+where company_id is not NULL and company_id > 0</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>collect contact's activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <sql>SELECT id as activity_id
+, contact_id
+, insert_timestamp
+from activity
+where contact_id is not NULL and contact_id > 0</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>collect job's activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <sql>SELECT id as activity_id
+, position_id
+, insert_timestamp
+from activity
+where position_id is not NULL and position_id > 0</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>912</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Can AC &lt;= Source 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>-- Activities Comments
+-- EmailMessage
+
+declare @NewLineChar as char(2) = char(13) + char(10);
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar;
+
+with
+Tasks as (
+	select x.Id as TaskId, x.WhoId as WhoId
+		, trim(concat(trim(isnull(y.FirstName, '')), ' ' , trim(isnull(y.LastName, '')))) as WhoName
+	from Task x
+	join Contact y on x.WhoId = y.Id
+	join VCCanIdxs canIdxs on y.Id = canIdxs.Id
+	--join Contact y on x.WhoId = y.Id and y.RecordTypeId = '012b0000000J2RD'
+	where x.IsDeleted = 0 and len(trim(isnull(x.Id, ''))) > 0 and
+	(
+		len(trim(isnull(x.WhoId, ''))) > 0
+		and trim(isnull(x.WhoId, '')) &lt;&gt; '000000000000000AAA'
+	)
+	--and WhoId in (
+	--	--select Id from Contact where RecordTypeId = '012b0000000J2RE' -- 11997
+	--	select Id from Contact where RecordTypeId = '012b0000000J2RD' -- 61956
+	--)
+)
+
+select distinct
+--'company'
+--'contact'
+--'job'
+'candidate'
+--'application'
+as [type]
+
+, 'comment' as category
+
+, cast(x.CreatedDate as datetime) as insert_timestamp
+
+, x.Id
+
+, trim(isnull(t.WhoId, '')) as external_id
+
+, u.Username as UserEmail
+
+, concat(
+upper('Email Message')
+, @NewLineChar
+, replicate('-', len('Email Message'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	@DoubleNewLine + 'Related To: ' + concat('Candidate: ', trim(isnull(t.WhoName, '')), ' (', t.WhoId, ')')
+	
+	, @NewLineChar + 'Message Date: ' + convert(varchar(50), x.MessageDate, 111)
+
+	, @NewLineChar + 'Created By: ' + concat(trim(isnull(u.FirstName, '')), ' ', trim(isnull(u.LastName, '')), ' (', u.Username, ')')
+
+	, @NewLineChar + 'Status: ' +
+		case(x.Status)
+			when 0 then 'New'
+			when 1 then 'Read'
+			when 2 then 'Replied'
+			when 3 then 'Sent'
+			when 4 then 'Forwarded'
+			when 5 then 'Draft'
+		end
+
+	, @NewLineChar + 'From Address: ' + trim(isnull(x.FromAddress, ''))
+
+	, @NewLineChar + 'From Name: ' + trim(isnull(x.FromName, ''))
+
+	, @NewLineChar + 'To Address: ' + trim(isnull(x.ToAddress, ''))
+
+	, iif(len(trim(isnull(x.CcAddress, ''))) > 0, @NewLineChar + 'Cc Address: ' + trim(isnull(x.CcAddress, '')), '')
+
+	, iif(len(trim(isnull(x.BccAddress, ''))) > 0, @NewLineChar + 'Bcc Address: ' + trim(isnull(x.BccAddress, '')), '')
+
+	, @DoubleNewLine + 'Subject:' + @NewLineChar + trim(isnull(x.Subject, ''))
+
+	, @DoubleNewLine + 'Text Body:' + @DoubleNewLine + trim(isnull(x.TextBody, ''))
+))) as content
+
+from [EmailMessage] x
+join Tasks t on x.ActivityId = t.TaskId
+--join Account com on com.Id = t.AccountId
+--left join Contact con on con.Id = x.WhoId or con.Id = rel.RelationId
+--join AVTRRT__Job__c job on job.Id = x.RelatedToId
+--left join AVTRRT__Job_Applicant__c app on app.Id = x.WhatId
+--left join AVTRRT__Interview__c inv on inv.Id = x.WhatId
+--left join AVTRRT__Placement__c pla on pla.Id = x.WhatId
+left join [User] u on u.Id = x.CreatedById
+
+where
+x.IsDeleted = 0 and
+(
+	len(trim(isnull(x.ActivityId, ''))) > 0
+	and trim(isnull(x.ActivityId, '')) &lt;&gt; '000000000000000AAA'
+	-- 11965
+	--and trim(isnull(x.ActivityId, '')) in (
+	--	select Id from
+	--	Task -- 37517
+	--	--[Event] -- 0
+	--)
+)
+order by insert_timestamp</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Com AC &lt;= Source 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>-- Activities Comments
+-- EmailMessage
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+'company'
+--, 'contact'
+--, 'job'
+--, 'candidate'
+--, 'application'
+as [type]
+
+, 'comment' as category
+
+, cast(x.CreatedDate as datetime) as insert_timestamp
+
+, x.Id
+
+, trim(isnull(com.Id, '')) as external_id
+
+, u.Username as UserEmail
+
+, concat(
+upper('Email Message')
+, @NewLineChar
+, replicate('-', len('Email Message'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	@DoubleNewLine + 'Related To: ' + concat(trim(isnull(com.Name, '')), ' (', com.Id, ')')
+	
+	, @NewLineChar + 'Message Date: ' + convert(varchar(50), x.MessageDate, 111)
+
+	, @NewLineChar + 'Created By: ' + concat(trim(isnull(u.FirstName, '')), ' ', trim(isnull(u.LastName, '')), ' (', u.Username, ')')
+
+	, @NewLineChar + 'Status: ' +
+		case(x.Status)
+			when 0 then 'New'
+			when 1 then 'Read'
+			when 2 then 'Replied'
+			when 3 then 'Sent'
+			when 4 then 'Forwarded'
+			when 5 then 'Draft'
+		end
+
+	, @NewLineChar + 'From Address: ' + trim(isnull(x.FromAddress, ''))
+
+	, @NewLineChar + 'From Name: ' + trim(isnull(x.FromName, ''))
+
+	, @NewLineChar + 'To Address: ' + trim(isnull(x.ToAddress, ''))
+
+	, iif(len(trim(isnull(x.CcAddress, ''))) > 0, @NewLineChar + 'Cc Address: ' + trim(isnull(x.CcAddress, '')), '')
+
+	, iif(len(trim(isnull(x.BccAddress, ''))) > 0, @NewLineChar + 'Bcc Address: ' + trim(isnull(x.BccAddress, '')), '')
+
+	, @DoubleNewLine + 'Subject:' + @NewLineChar + trim(isnull(x.Subject, ''))
+
+	, @DoubleNewLine + 'Text Body:' + @DoubleNewLine + trim(isnull(x.TextBody, ''))
+))) as content
+
+from [EmailMessage] x
+join Account com on com.Id = x.RelatedToId
+--left join Contact con on con.Id = x.WhoId or con.Id = rel.RelationId
+--left join AVTRRT__Job__c job on job.Id = x.RelatedToId
+--left join AVTRRT__Job_Applicant__c app on app.Id = x.WhatId
+--left join AVTRRT__Interview__c inv on inv.Id = x.WhatId
+--left join AVTRRT__Placement__c pla on pla.Id = x.WhatId
+left join [User] u on u.Id = x.CreatedById
+where
+x.IsDeleted = 0 and
+(
+	len(trim(isnull(RelatedToId, ''))) > 0
+	and trim(isnull(RelatedToId, '')) &lt;&gt; '000000000000000AAA'
+	-- 11965
+	--and trim(isnull(RelatedToId, '')) in (
+	--	select Id from
+	--	Account -- 4
+	--	--Contact where RecordTypeId = '012b0000000J2RE' -- 0
+	--	--Contact where RecordTypeId = '012b0000000J2RD' -- 0
+	--	--AVTRRT__Job__c -- 11961
+	--)
+)
+order by insert_timestamp</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Con AC &lt;= Source 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>-- Activities Comments
+-- EmailMessage
+
+declare @NewLineChar as char(2) = char(13) + char(10);
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar;
+
+with
+Tasks as (
+	select x.Id as TaskId, x.WhoId as WhoId
+		, trim(concat(trim(isnull(y.FirstName, '')), ' ' , trim(isnull(y.LastName, '')))) as WhoName
+	from Task x
+	join Contact y on x.WhoId = y.Id
+	join VCConIdxs conIdxs on y.Id = conIdxs.Id
+	--join Contact y on x.WhoId = y.Id and y.RecordTypeId = '012b0000000J2RD'
+	where x.IsDeleted = 0 and len(trim(isnull(x.Id, ''))) > 0 and
+	(
+		len(trim(isnull(x.WhoId, ''))) > 0
+		and trim(isnull(x.WhoId, '')) &lt;&gt; '000000000000000AAA'
+	)
+	--and WhoId in (
+	--	--select Id from Contact where RecordTypeId = '012b0000000J2RE' -- 11997
+	--	select Id from Contact where RecordTypeId = '012b0000000J2RD' -- 61956
+	--)
+)
+
+select distinct
+--'company'
+'contact'
+--'job'
+--'candidate'
+--'application'
+as [type]
+
+, 'comment' as category
+
+, cast(x.CreatedDate as datetime) as insert_timestamp
+
+, x.Id
+
+, trim(isnull(t.WhoId, '')) as external_id
+
+, u.Username as UserEmail
+
+, concat(
+upper('Email Message')
+, @NewLineChar
+, replicate('-', len('Email Message'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	@DoubleNewLine + 'Related To: ' + concat('Contact: ', trim(isnull(t.WhoName, '')), ' (', t.WhoId, ')')
+	
+	, @NewLineChar + 'Message Date: ' + convert(varchar(50), x.MessageDate, 111)
+
+	, @NewLineChar + 'Created By: ' + concat(trim(isnull(u.FirstName, '')), ' ', trim(isnull(u.LastName, '')), ' (', u.Username, ')')
+
+	, @NewLineChar + 'Status: ' +
+		case(x.Status)
+			when 0 then 'New'
+			when 1 then 'Read'
+			when 2 then 'Replied'
+			when 3 then 'Sent'
+			when 4 then 'Forwarded'
+			when 5 then 'Draft'
+		end
+
+	, @NewLineChar + 'From Address: ' + trim(isnull(x.FromAddress, ''))
+
+	, @NewLineChar + 'From Name: ' + trim(isnull(x.FromName, ''))
+
+	, @NewLineChar + 'To Address: ' + trim(isnull(x.ToAddress, ''))
+
+	, iif(len(trim(isnull(x.CcAddress, ''))) > 0, @NewLineChar + 'Cc Address: ' + trim(isnull(x.CcAddress, '')), '')
+
+	, iif(len(trim(isnull(x.BccAddress, ''))) > 0, @NewLineChar + 'Bcc Address: ' + trim(isnull(x.BccAddress, '')), '')
+
+	, @DoubleNewLine + 'Subject:' + @NewLineChar + trim(isnull(x.Subject, ''))
+
+	, @DoubleNewLine + 'Text Body:' + @DoubleNewLine + trim(isnull(x.TextBody, ''))
+))) as content
+
+from [EmailMessage] x
+join Tasks t on x.ActivityId = t.TaskId
+--join Account com on com.Id = t.AccountId
+--left join Contact con on con.Id = x.WhoId or con.Id = rel.RelationId
+--join AVTRRT__Job__c job on job.Id = x.RelatedToId
+--left join AVTRRT__Job_Applicant__c app on app.Id = x.WhatId
+--left join AVTRRT__Interview__c inv on inv.Id = x.WhatId
+--left join AVTRRT__Placement__c pla on pla.Id = x.WhatId
+left join [User] u on u.Id = x.CreatedById
+
+where
+x.IsDeleted = 0 and
+(
+	len(trim(isnull(x.ActivityId, ''))) > 0
+	and trim(isnull(x.ActivityId, '')) &lt;&gt; '000000000000000AAA'
+	-- 11965
+	--and trim(isnull(x.ActivityId, '')) in (
+	--	select Id from
+	--	Task -- 37517
+	--	--[Event] -- 0
+	--)
+)
+order by insert_timestamp</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Com AC 2 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ComID</name>
+        <field>company_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>company_id</name>
+        <rename>ComID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC 2 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ConID</name>
+        <field>contact_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>contact_id</name>
+        <rename>ConID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC 3 2 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>CanID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>CanID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Job AC 2 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>JobID</name>
+        <field>position_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_id</name>
+        <rename>JobID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job AC &lt;= Source 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>-- Activities Comments
+-- EmailMessage
+
+declare @NewLineChar as char(2) = char(13) + char(10)
+declare @DoubleNewLine as char(4) = @NewLineChar + @NewLineChar
+
+select distinct
+--'company'
+--'contact'
+'job'
+--'candidate'
+--'application'
+as [type]
+
+, 'comment' as category
+
+, cast(x.CreatedDate as datetime) as insert_timestamp
+
+, x.Id
+
+, trim(isnull(job.Id, '')) as external_id
+
+, u.Username as UserEmail
+
+, concat(
+upper('Email Message')
+, @NewLineChar
+, replicate('-', len('Email Message'))
+, @NewLineChar
+, trim(@NewLineChar from concat(
+	@DoubleNewLine + 'Related To: ' + concat('Job => ', trim(isnull(job.JobTitle, '')), ' (', job.Id, ')')
+	
+	, @NewLineChar + 'Message Date: ' + convert(varchar(50), x.MessageDate, 111)
+
+	, @NewLineChar + 'Created By: ' + concat(trim(isnull(u.FirstName, '')), ' ', trim(isnull(u.LastName, '')), ' (', u.Username, ')')
+
+	, @NewLineChar + 'Status: ' +
+		case(x.Status)
+			when 0 then 'New'
+			when 1 then 'Read'
+			when 2 then 'Replied'
+			when 3 then 'Sent'
+			when 4 then 'Forwarded'
+			when 5 then 'Draft'
+		end
+
+	, @NewLineChar + 'From Address: ' + trim(isnull(x.FromAddress, ''))
+
+	, @NewLineChar + 'From Name: ' + trim(isnull(x.FromName, ''))
+
+	, @NewLineChar + 'To Address: ' + trim(isnull(x.ToAddress, ''))
+
+	, iif(len(trim(isnull(x.CcAddress, ''))) > 0, @NewLineChar + 'Cc Address: ' + trim(isnull(x.CcAddress, '')), '')
+
+	, iif(len(trim(isnull(x.BccAddress, ''))) > 0, @NewLineChar + 'Bcc Address: ' + trim(isnull(x.BccAddress, '')), '')
+
+	, @DoubleNewLine + 'Subject:' + @NewLineChar + trim(isnull(x.Subject, ''))
+
+	, @DoubleNewLine + 'Text Body:' + @DoubleNewLine + trim(isnull(x.TextBody, ''))
+))) as content
+
+from [EmailMessage] x
+--join Account com on com.Id = x.RelatedToId
+--left join Contact con on con.Id = x.WhoId or con.Id = rel.RelationId
+join VCJobIdxs job on job.Id = x.RelatedToId
+--left join AVTRRT__Job_Applicant__c app on app.Id = x.WhatId
+--left join AVTRRT__Interview__c inv on inv.Id = x.WhatId
+--left join AVTRRT__Placement__c pla on pla.Id = x.WhatId
+left join [User] u on u.Id = x.CreatedById
+where
+x.IsDeleted = 0 and
+(
+	len(trim(isnull(RelatedToId, ''))) > 0
+	and trim(isnull(RelatedToId, '')) &lt;&gt; '000000000000000AAA'
+	-- 11965
+	--and trim(isnull(RelatedToId, '')) in (
+	--	select Id from
+	--	Account -- 4
+	--	--Contact where RecordTypeId = '012b0000000J2RE' -- 0
+	--	--Contact where RecordTypeId = '012b0000000J2RD' -- 0
+	--	--AVTRRT__Job__c -- 11961
+	--)
+)
+order by insert_timestamp</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Can Lookup 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>CanID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Com Lookup 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ComID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Con Lookup 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ConID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Job Lookup 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>JobID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC User Lookup 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>user_account</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>UserEmail</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>user_account_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Can AC &lt;= Source 1 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhoId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'candidate' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Task')
+		, @NewLineChar
+		, replicate('-', len('Task'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', y.Username, ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), ''))) > 0,  @NewLineChar + 'Due Date: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), '')), '')
+	
+			, @NewLineChar + 'Status: ' + trim(isnull(x.Status, ''))
+
+			, iif(len(trim(isnull(x.EmailMessageId, ''))) > 0, @NewLineChar + 'Email: ' + trim(isnull(x.EmailMessageId, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Comments: ' + trim(isnull(x.Description, '')), '')
+
+			, @NewLineChar + 'Priority: ' + trim(isnull(x.Priority, ''))
+
+			, @NewLineChar + 'Closed: ' + iif(x.IsClosed = 1, 'Yes', 'No')
+
+			, @NewLineChar + 'Archived: ' + iif(x.IsArchived = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.CallDurationInSeconds, ''))) > 0, @NewLineChar + 'Call Duration (s): ' + trim(isnull(x.CallDurationInSeconds, '')), '')
+	))) as content
+
+from [Task] x
+left join [User] y on y.Id = x.OwnerId
+where WhoId is not null and WhoId &lt;&gt; '000000000000000AAA'
+and WhoId in (select [candidate-externalId] from VCCandidates) -- 125279
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Com AC &lt;= Source 1 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhatId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'company' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Task')
+		, @NewLineChar
+		, replicate('-', len('Task'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', y.Username, ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), ''))) > 0,  @NewLineChar + 'Due Date: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), '')), '')
+	
+			, @NewLineChar + 'Status: ' + trim(isnull(x.Status, ''))
+
+			, iif(len(trim(isnull(x.EmailMessageId, ''))) > 0, @NewLineChar + 'Email: ' + trim(isnull(x.EmailMessageId, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Comments: ' + trim(isnull(x.Description, '')), '')
+
+			, @NewLineChar + 'Priority: ' + trim(isnull(x.Priority, ''))
+
+			, @NewLineChar + 'Closed: ' + iif(x.IsClosed = 1, 'Yes', 'No')
+
+			, @NewLineChar + 'Archived: ' + iif(x.IsArchived = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.CallDurationInSeconds, ''))) > 0, @NewLineChar + 'Call Duration (s): ' + trim(isnull(x.CallDurationInSeconds, '')), '')
+	))) as content
+
+from [Task] x
+left join [User] y on y.Id = x.OwnerId
+where WhatId is not null and WhatId &lt;&gt; '000000000000000AAA'
+and WhatId in (select [company-externalId] from VCCompanies) -- 2601
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Con AC &lt;= Source 1 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhoId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'contact' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Task')
+		, @NewLineChar
+		, replicate('-', len('Task'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', y.Username, ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), ''))) > 0,  @NewLineChar + 'Due Date: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), '')), '')
+	
+			, @NewLineChar + 'Status: ' + trim(isnull(x.Status, ''))
+
+			, iif(len(trim(isnull(x.EmailMessageId, ''))) > 0, @NewLineChar + 'Email: ' + trim(isnull(x.EmailMessageId, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Comments: ' + trim(isnull(x.Description, '')), '')
+
+			, @NewLineChar + 'Priority: ' + trim(isnull(x.Priority, ''))
+
+			, @NewLineChar + 'Closed: ' + iif(x.IsClosed = 1, 'Yes', 'No')
+
+			, @NewLineChar + 'Archived: ' + iif(x.IsArchived = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.CallDurationInSeconds, ''))) > 0, @NewLineChar + 'Call Duration (s): ' + trim(isnull(x.CallDurationInSeconds, '')), '')
+	))) as content
+
+from [Task] x
+left join [User] y on y.Id = x.OwnerId
+where WhoId is not null and WhoId &lt;&gt; '000000000000000AAA'
+and WhoId in (select [contact-externalId] from VCContacts) -- 175459
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Com AC 3</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ComID</name>
+        <field>company_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>company_id</name>
+        <rename>ComID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC 3 4</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>ConID</name>
+        <field>contact_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>contact_id</name>
+        <rename>ConID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Con AC 3 3</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>CanID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>CanID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Job AC 3</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>activity</table>
+      <key>
+        <name>JobID</name>
+        <field>position_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>content</name>
+        <field>content</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>insert_timestamp</name>
+        <field>insert_timestamp</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_id</name>
+        <rename>JobID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_account_id</name>
+        <rename>user_account_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>content</name>
+        <rename>content</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>category</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job AC &lt;= Source 1 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>cusDB</connection>
+    <sql>declare @NewLineChar char(1) = char(10);
+
+select
+	x.WhatId as external_id
+	--, cast('-10' as int) as 'user_account_id'
+	, trim(isnull(y.Username, '')) as UserEmail
+	, 'comment' as category
+	, 'job' as type
+	, isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime)) as insert_timestamp
+	, concat(
+		upper('Task')
+		, @NewLineChar
+		, replicate('-', len('Task'))
+		, @NewLineChar
+		, trim(@NewLineChar from concat(
+			'Assigned To: ' + concat(trim(isnull(y.FirstName, '')), ' ', trim(isnull(y.LastName, '')), ' (', y.Username, ')')
+	
+			, @NewLineChar + 'Subject: ' + trim(isnull(x.Subject, ''))
+
+			, iif(len(trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), ''))) > 0,  @NewLineChar + 'Due Date: ' + trim(isnull(convert(varchar(50), cast(x.ActivityDate as datetime), 111), '')), '')
+	
+			, @NewLineChar + 'Status: ' + trim(isnull(x.Status, ''))
+
+			, iif(len(trim(isnull(x.EmailMessageId, ''))) > 0, @NewLineChar + 'Email: ' + trim(isnull(x.EmailMessageId, '')), '')
+
+			, iif(len(trim(isnull(x.Description, ''))) > 0, @NewLineChar + 'Comments: ' + trim(isnull(x.Description, '')), '')
+
+			, @NewLineChar + 'Priority: ' + trim(isnull(x.Priority, ''))
+
+			, @NewLineChar + 'Closed: ' + iif(x.IsClosed = 1, 'Yes', 'No')
+
+			, @NewLineChar + 'Archived: ' + iif(x.IsArchived = 1, 'Yes', 'No')
+
+			, iif(len(trim(isnull(x.Type, ''))) > 0, @NewLineChar + 'Type: ' + trim(isnull(x.Type, '')), '')
+
+			, iif(len(trim(isnull(x.CallDurationInSeconds, ''))) > 0, @NewLineChar + 'Call Duration (s): ' + trim(isnull(x.CallDurationInSeconds, '')), '')
+	))) as content
+
+from [Task] x
+left join [User] y on y.Id = x.OwnerId
+where WhatId is not null and WhatId &lt;&gt; '000000000000000AAA'
+and WhatId in (select [position-externalId] from VCJobs) -- 223
+order by isnull(cast(x.CreatedDate as datetime), cast(x.CreatedDate as datetime))</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Can Lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>CanID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Com Lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ComID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Con Lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ConID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC Job Lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name/>
+        <field>external_id</field>
+        <condition>IS NOT NULL</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>external_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>JobID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC User Lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vcdb</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>user_account</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>UserEmail</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>user_account_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
