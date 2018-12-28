@@ -1,0 +1,1 @@
+select * from dperson where vchforename like 'Jake%' and vchsurname like 'Stacey%' or (vchforename like 'Peter%' and vchsurname like 'Shepherd%' )

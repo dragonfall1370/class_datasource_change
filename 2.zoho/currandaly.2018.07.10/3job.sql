@@ -1,0 +1,234 @@
+
+
+with
+-- select * from Attachments
+attachment as ( 
+       SELECT 
+                ParentID
+              , STUFF((
+                     --SELECT ',' + replace(filename,',','') 
+                     SELECT ',' + replace(filename,',','') as filename
+                     from Attachments
+                     WHERE ParentID = c.ParentID and filename is not NULL and filename <> ''
+                     FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 1, '')  AS filename 
+       FROM Attachments as c 
+       left join JobOpenings on c.ParentID = JobOpenings.JobOpeningID where JobOpenings.JobOpeningID is not null --<<
+       GROUP BY c.ParentID )
+--select * from attachment
+
+--attachment as ( SELECT ParentID, STUFF((SELECT ',' + replace(filename,',','') from Attachments WHERE ParentID = c.ParentID and filename is not NULL and filename <> '' FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 1, '')  AS filename FROM Attachments as c GROUP BY c.ParentID )
+-- SELECT filename,* from JobAttachments where filename like '%,%'
+--select * from attachment a left join JobOpenings c on c.JobOpeningID = a.ParentID where c.JobOpeningID is not null
+
+--JOB DUPLICATION REGCONITION
+, job (JobOpeningId,ClientId,PostingTitle,rn) as (
+       SELECT  a.JobOpeningId as JobOpeningId
+		, cl.clientID as clientID
+		, a.PostingTitle as PostingTitle
+		, ROW_NUMBER() OVER(PARTITION BY cl.ClientId,a.PostingTitle ORDER BY a.JobOpeningId) AS rn 
+	from jobopenings a 
+	left join (select ClientId, ClientName from Clients) cl on cl.ClientId = a.ClientId )
+--select * from job
+
+select --top 20 
+         j.JobOpeningId As 'position-externalId'
+       	, case when j.jobtype is null then 'PERMANENT'
+	       when j.jobtype = 'Contract' then 'CONTRACT'
+	       when j.jobtype = 'Full time' then 'PERMANENT'
+	       when j.jobtype = 'Part time' then 'PERMANENT'
+	       when j.jobtype = 'Temporary' then 'TEMPORARY'
+	       when j.jobtype = 'Temporary to Permanent' then 'TEMPORARY'
+	       else '' end as 'position-type' --PERMANENT, INTERIM_PROJECT_CONSULTING,TEMPORARY,CONTRACT, TEMPORARY_TO_PERMANENT
+       , case when job.rn > 1 then concat(job.PostingTitle,' ',rn) else job.PostingTitle end as 'position-title' --, j.PostingTitle As 'position-title'
+       --, iif(j.DateOpened <> '' ,replace(CONVERT(date,replace(convert(varchar(10),j.DateOpened),'',''),103),'1900-01-01','') ,j.DateOpened ) as 'position-startDate'
+       --, iif(j.TargetDate <> '' ,replace(CONVERT(date,replace(convert(varchar(10),j.TargetDate),'',''),103),'1900-01-01','') ,j.TargetDate ) as 'position-TargetDate'
+       --, iif(j.DateOpened <> '' ,replace(CONVERT(date,j.DateOpened,103),'1900-01-01','') ,j.DateOpened ) as 'position-startDate'
+       --, iif(j.TargetDate <> '' ,replace(CONVERT(date,j.TargetDate,103),'1900-01-01','') ,j.TargetDate ) as 'position-endDate'       
+       , iif(j.DateOpened <> '' ,replace(CONVERT(date,j.DateOpened),'1900-01-01','') ,j.DateOpened ) as 'position-startDate'
+       , iif(j.TargetDate <> '' ,replace(CONVERT(date,j.TargetDate),'1900-01-01','') ,j.TargetDate ) as 'position-endDate'
+       , case when (ltrim(j.ContactID) = '' or j.ContactID is null) then concat(cl.ClientId,'','_default') else ltrim(j.ContactID) end as 'position-ContactID' --, j.ContactID As 'position-ContactID'      
+       , u0.email As 'position-owners'
+	, j.salary as 'position-actualSalary'
+	, j.JobDescription As 'position-publicDescription'
+	, j.NumberofPositions As 'position-headcount'        
+       /*--, j.currency as 'position-currency' --<< empty
+       , cl.ClientId As 'position-companyId'
+       , j.Industry as 'INDUSTRY' --<<
+       , 'FULL_TIME' as 'position-employmentType' -- This field only accepts FULL_TIME, PART_TIME, CASUAL
+       , case j.JobType
+               when 'Contract' then 'CONTRACT'
+               when 'Full time' then 'PERMANENT'
+               when 'Seasonal' then 'INTERIM_PROJECT_CONSULTING'
+               when 'Temporary' then 'TEMPORARY'
+               when 'Temporary to Permanent' then 'TEMPORARY_TO_PERMANENT'
+               end As 'position-Type' --This field only accepts PERMANENT, INTERIM_PROJECT_CONSULTING,TEMPORARY,CONTRACT, TEMPORARY_TO_PERMANENT 
+       --, j.JobOpeningStatus As 'position-status, j.position-note'
+, j.WorkExperience As 'position-internalDescription'
+, j.Skillset As 'position-internalDescription' 
+        , ltrim(Stuff(    Coalesce('Work Experience: ' + NULLIF(j.WorkExperience, '') + char(10), '')
+                        + Coalesce('Skill Set: ' + NULLIF(j.Skillset, '') + char(10), '')
+                , 1, 0, '') ) as 'position-internalDescription'
+
+, j.AccountManager As 'position-note'
+, j.IsHotJobOpening As 'position-note'
+, j.NoofCandidatesAssociated As 'position-note'
+, j.AssociatedTags As 'position-note'
+, j.LastActivityTime As 'position-note'
+, j.JobOpeningStatus As 'position-status, j.position-note'
+, j.CreatedBy As 'position-note'
+, j.ModifiedBy As 'position-note'
+, j.CreatedTime As 'position-note'
+, j.ModifiedTime As 'position-note'
+, j.Stage As 'position-note'
+, j.IsAttachmentPresent As 'position-note'
+, j.IsLocked As 'position-note'
+, j.Country As 'position-note'
+, j.Location As 'position-note'
+, j.NoofCandidatesHired As 'position-note' */
+        , ltrim(Stuff(    
+                            Coalesce('Is Hot JobOpening: ' + NULLIF(j.IsHotJobOpening, '') + char(10), '')
+                        + Coalesce('No of Candidates Associated: ' + NULLIF(j.NoofCandidatesAssociated, '') + char(10), '')
+                        + Coalesce('Last Activity Time: ' + NULLIF(j.LastActivityTime, '') + char(10), '')
+                        + Coalesce('Job Opening Status: ' + NULLIF(j.JobOpeningStatus, '') + char(10), '')
+                        + Coalesce('Country: ' + NULLIF(j.Country, '') + char(10), '')
+                        + Coalesce('Number of Positions: ' + NULLIF(j.NumberofPositions, '') + char(10), '')
+                        + Coalesce('Created By: ' + NULLIF(concat(u1.FirstName,' ',u1.LastName,' - ',u1.email), '') + char(10), '') --j.CreatedBy
+                        + Coalesce('Modified By: ' + NULLIF(concat(u2.FirstName,' ',u2.LastName,' - ',u2.email), '') + char(10), '') --j.ModifiedBy
+                        + Coalesce('Created Time: ' + NULLIF(j.CreatedTime, '') + char(10), '')
+                        + Coalesce('Modified Time: ' + NULLIF(j.ModifiedTime, '') + char(10), '')
+                        + Coalesce('Work Experience: ' + NULLIF(j.WorkExperience, '') + char(10), '')
+                        + Coalesce('Revenue per Position: ' + NULLIF(j.RevenueperPosition, '') + char(10), '')
+                        + Coalesce('Stage: ' + NULLIF(j.Stage, '') + char(10), '')
+                        + Coalesce('Probability (%): ' + NULLIF(j.Probability_, '') + char(10), '')
+                        + Coalesce('Expected Revenue: ' + NULLIF(j.ExpectedRevenue, '') + char(10), '')
+                        + Coalesce('Is Locked: ' + NULLIF(j.IsLocked, '') + char(10), '')
+                        + Coalesce('Location: ' + NULLIF(j.Location, '') + char(10), '')
+                        + Coalesce('Key Qualifications: ' + NULLIF(j.KeyQualifications, '') + char(10), '')
+                        + Coalesce('No of Candidates Hired: ' + NULLIF(j.NoofCandidatesHired, '') + char(10), '')
+                        + Coalesce('Zip/Postal Code: ' + NULLIF(j.ZipPostalCode, '') + char(10), '')
+                        /*Coalesce('AccountManager: ' + NULLIF(u.email, '') + char(10), '') --j.AccountManagerID
+                        + Coalesce('Publish: ' + NULLIF(j.Publish, '') + char(10), '')
+                        + Coalesce('Industry: ' + NULLIF(j.Industry, '') + char(10), '')
+                        + Coalesce('Associated Tags: ' + NULLIF(j.AssociatedTags, '') + char(10), '')
+                        + Coalesce('Created Time: ' + NULLIF(j.CreatedTime, '') + char(10), '')
+                        + Coalesce('Modified Time: ' + NULLIF(j.ModifiedTime, '') + char(10), '')
+                        + Coalesce('Stage: ' + NULLIF(j.Stage, '') + char(10), '')
+                        + Coalesce('Is Attachment Present: ' + NULLIF(j.IsAttachmentPresent, '') + char(10), '')*/
+                , 1, 0, '') ) as 'position-note'
+, a.filename as 'position-document'
+-- select count(*) -- select distinct jobtype -- select top 100 *
+from JobOpenings J
+left join (select ClientId, ClientName from Clients) cl on cl.ClientId = j.ClientId
+--left join (select ContactId, FullName from Contacts) co on co.FullName = c.ContactId
+left join (select userid, email from users) u0 on u0.userid = j.AssignedRecruiter_s
+left join (select userid, FirstName, LastName, email from users) u1 on u1.userid = j.CreatedBy
+left join (select userid, FirstName, LastName, email from users) u2 on u2.userid = j.ModifiedBy
+left join attachment a on a.ParentId = j.JobOpeningId
+left join job on j.JobOpeningId = job.JobOpeningId
+
+
+     
+-- CREATE DEFAULT CONTACT FOR JOBS WHICH NOT LINKED TO ANY CONTACT
+with t as (
+       select
+                j.JobOpeningId As 'position-externalId'
+              , j.PostingTitle as 'position-title' --, j.PostingTitle As 'position-title'
+              , case when (ltrim(cl.ClientId) = '' or cl.ClientId is null) then 'default' else ltrim(cl.ClientId) end as 'companyId' --, cl.ClientId As 'company-externalId' --, j.ClientName As 'External Company ID'
+              , case when (ltrim(co.ContactId) = '' or co.ContactId is null) then concat(cl.ClientId,'','_default') else ltrim(co.ContactId) end as 'contact-externalId' --, j.ContactID As 'position-ContactID'
+              , 'Default Contact' as 'contact-lastname'
+       from JobOpenings J
+       left join (select ClientId, ClientName from Clients) cl on cl.ClientId = j.ClientId
+       left join (select ContactId, firstName, lastName from Contacts) co on co.ContactId = j.ContactID
+)
+select distinct [contact-externalId],[companyId],[contact-lastname] from t where [contact-externalId] like '%_default%'
+
+/*
+with t as (
+select
+         JobOpeningId As 'job-externalId'
+       , case when (ltrim(cl.ClientId) = '' or cl.ClientId is null) then 'default' else ltrim(cl.ClientId) end as 'companyId' --, cl.ClientId As 'company-externalId' --, j.ClientName As 'External Company ID'
+       , case when (ltrim(j.ContactID) = '' or j.ContactID is null) then concat(cl.ClientId,'','_default') else ltrim(j.ContactID) end as 'contact-externalId' --, j.ContactID As 'position-ContactID'
+       , 'Default Contact' as 'contact-lastname'
+--  select count(*)
+from JobOpenings J
+left join (select ClientId, ClientName from Clients) cl on cl.ClientId = j.ClientId
+)
+select distinct [contact-externalId],[companyId],lastname from t where [contact-externalId] like '%_default%'
+*/
+
+
+
+----
+----------
+
+with comment as (
+        select
+                   j.ParentID
+                 --, CONVERT(datetime, replace(convert(varchar(50),j.CreatedTime),'',''),103) as 'comment_timestamp|insert_timestamp'
+                 , CONVERT(datetime, replace(convert(varchar(50),j.CreatedTime),'',''),110) as 'comment_timestamp|insert_timestamp'
+                 , ltrim(Stuff(   Coalesce('Note Owner: ' + NULLIF(u1.email, '') + char(10), '')
+                                + Coalesce('Note Type: ' + NULLIF(j.NoteType, '') + char(10), '')
+                                + Coalesce('Note Content: ' + NULLIF(j.NoteContent, '') + char(10), '')
+                                + Coalesce('Created By: ' + NULLIF(u2.email, '') + char(10), '')
+                                + Coalesce('Created Time: ' + NULLIF(j.CreatedTime, '') + char(10), '')
+                        , 1, 0, '') ) as 'comment'
+        -- select top 100 * 
+        from Notes J
+        left join (select * from users) u1 on u1.userid = j.NoteOwnerId
+        left join (select * from users) u2 on u2.userid = j.CreatedBy
+        --left join Contacts c on c.ContactID = j.ParentID where c.ContactID is not null
+/*UNION ALL
+        select
+                   j.EntityId
+                 , CONVERT(datetime, replace(convert(varchar(50),j.CreatedTime),'',''),120) as 'comment_timestamp|insert_timestamp'
+                 , ltrim(Stuff(   Coalesce('Created Time: ' + NULLIF(j.CreatedTime, '') + char(10), '')
+                                + Coalesce('Modified Time: ' + NULLIF(j.ModifiedTime, '') + char(10), '')
+                                + Coalesce('Created By: ' + NULLIF(j.CreatedBy, '') + char(10), '')
+                                + Coalesce('Subject: ' + NULLIF(j.Subject, '') + char(10), '')
+                        , 1, 0, '') ) as 'comment'
+        -- select * 
+        from Emails J
+        ---left join Contacts c on c.ContactID = j.EntityId where c.ContactID is not null */
+UNION ALL
+        select
+                   i.JobOpeningId
+                 --, i.CandidateId
+                 , CONVERT(datetime, replace(convert(varchar(50),i.CreatedTime),'',''),110) as 'comment_timestamp|insert_timestamp'
+                 , ltrim(Stuff(   'INTERVIEW NOTES:' + char(10)
+                                + Coalesce('Interview Name: ' + NULLIF(i.InterviewName, '') + char(10), '')
+                                + Coalesce('Location: ' + NULLIF(i.Location, '') + char(10), '')
+                                + Coalesce('Company : ' + NULLIF(j1.ClientName, '') + char(10), '') --i.ClientId
+                                + Coalesce('Type: ' + NULLIF(i.Type, '') + char(10), '')
+                                + Coalesce('Job Name: ' + NULLIF(j2.PostingTitle, '') + char(10), '') --i.JobOpeningId
+                                + Coalesce('Interviewer: ' + NULLIF(u2.email, '') + char(10), '') --i.Interviewer
+                                + Coalesce('Last Activity Time: ' + NULLIF(i.LastActivityTime, '') + char(10), '')
+                                + Coalesce('From: ' + NULLIF(i.From_, '') + char(10), '')
+                                + Coalesce('To: ' + NULLIF(i.To_, '') + char(10), '')
+                                + Coalesce('Interview Status: ' + NULLIF(i.InterviewStatus, '') + char(10), '')
+                                + Coalesce('Schedule Comments: ' + NULLIF(i.ScheduleComments, '') + char(10), '')
+                                + Coalesce('Is Attachment Present: ' + NULLIF(i.IsAttachmentPresent, '') + char(10), '')
+                        , 1, 0, '') ) as 'comment'
+        -- select * 
+        from Interviews i
+        left join (select * from Users) u1 on u1.UserID = i.InterviewOwnerId
+        left join (select * from Users) u2 on u2.UserID = i.InterviewName
+        left join (select * from Users) u3 on u3.UserID = i.CreatedBy
+        left join (select * from Users) u4 on u4.UserID = i.ModifiedBy
+        left join (select ClientId,ClientName from Clients) j1 on j1.ClientId = i.ClientId --where j1.ClientId is not null
+        left join (select JobOpeningId,PostingTitle from JobOpenings) j2 on j2.JobOpeningID = i.JobOpeningId --where j2.JobOpeningId is not null
+        --left join (select CandidateId,FullName from Candidates) j3 on j3.CandidateId = i.CandidateId here j3.CandidateId is not null
+/*UNION ALL select eventid, getdate(), title from events
+UNION ALL select taskid, getdate(), subject from tasks */
+)
+--select count(*) from comment where comment.comment is not null --8157
+select
+        c.JobOpeningId as 'externalId'
+        , cast('-10' as int) as 'user_account_id'
+        --, CONVERT(datetime, replace(convert(varchar(50),comment.CreatedTime),'',''),120) 'comment_timestamp|insert_timestamp'
+        , [comment_timestamp|insert_timestamp]
+        , comment.comment  as 'comment_body'
+from JobOpenings c
+left join comment on comment.ParentID = c.JobOpeningId 
+where c.JobOpeningId is not null and comment.comment is not null
+
+

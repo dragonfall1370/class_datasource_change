@@ -1,0 +1,9 @@
+
+Contact-MobilePhone
+ First name in Kana
+
+email
+ Last name in Kana
+
+-- candidate
+
