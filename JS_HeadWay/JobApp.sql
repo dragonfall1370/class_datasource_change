@@ -20,7 +20,7 @@ maxInterviewLevel as (
        where latestUpdate is not null)
 
 , jobApp as (
-       select js.intJobId, j.datStartDate, j.intCompanyId as CompID, js.intCandidateId, tintShortlisted, tintCommunicated, tintInterested, tintSummarySubmit, tintCVSubmit, tintInterview, i.intInterviewProcessId, iif(intInterviewId is null, 999999,intInterviewId) as intInterviewId, i.tintInterviewLevelId, vchInterviewLevelName, i.tintInterviewStatusId, vchInterviewStatusName, tintOffered, tintPlaced, intPlacementId, p.tintPlacementStatusId, vchPlacementStatusName, vchSystemEventAction
+       select js.intJobId, /*j.datStartDate*/ j.dtInserted as datStartDate, j.intCompanyId as CompID, js.intCandidateId, tintShortlisted, tintCommunicated, tintInterested, tintSummarySubmit, tintCVSubmit, tintInterview, i.intInterviewProcessId, iif(intInterviewId is null, 999999,intInterviewId) as intInterviewId, i.tintInterviewLevelId, vchInterviewLevelName, i.tintInterviewStatusId, vchInterviewStatusName, tintOffered, tintPlaced, intPlacementId, p.tintPlacementStatusId, vchPlacementStatusName, vchSystemEventAction
        from dJobShortlist js
        left join tempPlacement p on js.intJobId = p.intJobId and js.intCandidateId = p.intCandidateId
        left join refPlacementStatus ps on p.tintPlacementStatusId = ps.tintPlacementStatusId
