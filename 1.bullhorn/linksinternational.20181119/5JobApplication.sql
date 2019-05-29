@@ -30,10 +30,10 @@ when JR.status = 'Client Submission' then 'SENT'
 when JR.status = 'Final Interview' then 'SECOND_INTERVIEW'
 when JR.status = 'First Interview' then 'FIRST_INTERVIEW'
 when JR.status = 'Interview Scheduled' then 'FIRST_INTERVIEW'
-when JR.status = 'New Lead' then 'CANDIDATES'
+when JR.status = 'New Lead' then 'CANDIDATE'
 when JR.status = 'New Submission' then 'SENT'
 when JR.status = 'Offer Extended' then 'OFFERED'
-when JR.status = 'Placed' then 'PLACEMENT_PERMANENT'
+when JR.status = 'Placed' then 'PLACEMENT_PERMANENT' ---->>
 when JR.status = 'Resume Screened' then 'SHORTLISTED'
 when JR.status = 'Second Interview' then 'SECOND_INTERVIEW'
 when JR.status = 'Submission' then 'SENT'
@@ -69,13 +69,15 @@ UNION
               ,"dateAdded"
               , rn = ROW_NUMBER() OVER (PARTITION BY "application-positionExternalId","application-candidateExternalId","application-Stage" ORDER BY "application-positionExternalId" desc) 
        FROM ja0 
-       where "application-Stage" <> 'CANDIDATE' )
+       where [application-stage] <> '' and "application-Stage" <> 'CANDIDATE' )
 
 
 select "application-positionExternalId","application-candidateExternalId","application-Stage", "dateAdded", current_timestamp as 'TIME_REJECTED'
 from ja1
-where rn = 1 and [application-stage] <> '' and [application-stage] not like 'CANDIDATE%' --and [#Candidate Name] like '%Freeman%'
+where rn = 1 --and [application-stage] <> '' --and [application-stage] not like 'CANDIDATE%' --and [#Candidate Name] like '%Freeman%'
 and [application-stage] = 'PLACEMENT_PERMANENT'
+and [application-positionExternalId] in (select jobPostingID from bullhorn1.BH_JobPosting a  where a.isdeleted <> 1 and a.status <> 'Archive')
+and [application-candidateExternalId] in (select CandidateID from bullhorn1.Candidate C  where C.isdeleted <> 1 and C.status <> 'Archive' )
 order by [application-positionExternalId]  asc,
     CASE [application-stage]
         WHEN 'PLACEMENT_PERMANENT' THEN 1

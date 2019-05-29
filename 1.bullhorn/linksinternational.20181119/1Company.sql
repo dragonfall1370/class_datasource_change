@@ -2,7 +2,7 @@
 with 
 note as (
 	select CC.clientCorporationID
-	, Stuff( Coalesce('Client Corporation ID: ' + NULLIF(cast(CC.clientCorporationID as varchar(max)), '') + char(10), '')
+	, Stuff( Coalesce('BH Company ID: ' + NULLIF(cast(CC.clientCorporationID as varchar(max)), '') + char(10), '')
 --              + Coalesce('Billing Address 1: ' + NULLIF(cast(CC.billingAddress1 as varchar(max)), '') + char(10), '')
 --              + Coalesce('Billing Address 2: ' + NULLIF(cast(CC.billingAddress2 as varchar(max)), '') + char(10), '')
 --              + Coalesce('Billing City: ' + NULLIF(cast(CC.billingCity as varchar(max)), '') + char(10), '')
@@ -84,7 +84,7 @@ note as (
         FROM (select clientCorporationID from bullhorn1.BH_ClientCorporationFile) as a GROUP BY a.clientCorporationID )
 --select CC.NAME, doc.ResumeId as 'company-document' from bullhorn1.BH_ClientCorporation CC left join doc on CC.clientCorporationID = doc.clientCorporationID where doc.ResumeId is not null
 --select directory from bullhorn1.BH_ClientCorporationFile where directory <> ''
---select top 100 * from doc
+--select * from doc
 
 
 , dup as (SELECT clientCorporationID,ltrim(rtrim(name)) as name,ROW_NUMBER() OVER(PARTITION BY ltrim(rtrim(CC.name)) ORDER BY CC.clientCorporationID ASC) AS rn FROM bullhorn1.BH_ClientCorporation CC ) --where name like 'Azurance'
@@ -97,6 +97,12 @@ note as (
        where parentClientCorporationID is not null and parentClientCorporationID <> '' )
 --select clientCorporationID,NAME,parentClientCorporationID from bullhorn1.BH_ClientCorporation where clientCorporationID in (102,153,226,289,656,656,656,774,2056,4936)
 
+, owner0 as (select distinct C.clientCorporationID, C.recruiterUserID, UC.firstName, UC.lastname, UC.email /*, UC.email2, UC.email3, UC.email_old*/ FROM bullhorn1.BH_Client C left join bullhorn1.BH_UserContact UC on UC.userid = C.recruiterUserID where UC.email is not null )
+, owner as (
+       SELECT clientCorporationID
+                     , STUFF((SELECT ',' + email from owner0 WHERE clientCorporationID = a.clientCorporationID FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 1, '')  AS owners
+        FROM (select clientCorporationID from owner0) AS a GROUP BY a.clientCorporationID )
+--select * from owner
 
 
 select --top 100 
@@ -113,21 +119,23 @@ select --top 100
        --, CC.phone as 'company-switchboard'
        , CC.fax as '#company-fax'
        , LEFT(CC.companyURL, 100) as 'company-website' --[limitted by 100 characters]
-       , CC.ownership as 'company-owners'
+       , owner.owners as 'company-owners'
        , doc.ResumeId as 'company-document'
        , [dbo].[fn_ConvertHTMLToText](note.note) as 'company-note'
        --, Coalesce('Company Overview: ' + NULLIF([dbo].[udf_StripHTML](CC.notes), '') + char(10), '') as 'company-comment'
       --, CC.industryList as 'Industry'
        --, CC.numEmployees as 'No. of Employees'
--- select count (*) --560 -- select * -- select distinct CC.ownership
+-- select count (*) --560 -- select top 10 * -- select distinct CC.status
 from bullhorn1.BH_ClientCorporation CC
+left join owner on owner.clientCorporationID = CC.clientCorporationID
 left join tmp_country tc ON CC.countryID = tc.code
 left join note on CC.clientCorporationID = note.clientCorporationID
 left join doc on CC.clientCorporationID = doc.clientCorporationID
 left join dup on CC.clientCorporationID = dup.clientCorporationID
 left join headquarter on headquarter.parentClientCorporationID =  CC.clientCorporationID
---where CC.ClientCorporationID in (8149,5146,8860,8782)
+where CC.status <> 'Archive' --where CC.ClientCorporationID in (8149,5146,8860,8782)
 --where CC.NAME like '%THEQA%'
+
 
 /*
 select --top 100 
@@ -136,5 +144,6 @@ select --top 100
         , CC.numEmployees
        ,  CC.industryList as 'Industry'
 from bullhorn1.BH_ClientCorporation CC
+where CC.clientCorporationID in (12005)
 where CC.numEmployees <> 0
 */

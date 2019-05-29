@@ -4,26 +4,30 @@ with
   mail1 (ID,email) as (select userID, replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(concat(ltrim(rtrim(email)),',',ltrim(rtrim(email2)),',',ltrim(rtrim(email3))),'/',' '),'<',' '),'>',' '),'(',' '),')',' '),':',' '),'.@','@'),'+',' '),'&',' '),'[',' '),']',' '),'?',' '),'''',' ') as email from bullhorn1.BH_UserContact )
 , mail2 (ID,email) as (SELECT ID, email.value as email FROM mail1 m CROSS APPLY STRING_SPLIT(m.email,',') AS email)
 , mail3 (ID,email) as (SELECT ID, case when RIGHT(email, 1) = '.' then LEFT(email, LEN(email) - 1) when LEFT(email, 1) = '.' then RIGHT(email, LEN(email) - 1) else email end as email from mail2 WHERE email like '%_@_%.__%')
-, mail5 (ID,email) as (SELECT ID, STUFF((SELECT DISTINCT ', ' + email from mail3 WHERE ID = a.ID FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 2, '')  AS email FROM mail3 as a GROUP BY a.ID)
+--, mail5 (ID,email) as (SELECT ID, STUFF((SELECT DISTINCT ', ' + email from mail3 WHERE ID = a.ID FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 2, '')  AS email FROM mail3 as a GROUP BY a.ID)
+, mail5 (ID,email) as ( SELECT ID, STRING_AGG(email,',' ) WITHIN GROUP (ORDER BY email) att from mail3 GROUP BY ID )
 --select * from mail5 where id in (39188,14248,30223)
+
 
 --JOB DUPLICATION REGCONITION
 , job (jobPostingID,clientID,title,starDate,rn) as (
 	SELECT  a.jobPostingID as jobPostingID
 		, b.clientID as clientID
-		, iif(a.title <> '', ltrim(rtrim(a.title)), 'No JobTitle') as title
+		, iif(a.title is not null and a.title <> '', ltrim(rtrim(a.title)), 'No JobTitle') as title
 		, CONVERT(VARCHAR(10),a.startDate,120) as starDate
 		, ROW_NUMBER() OVER(PARTITION BY a.clientUserID,a.title,CONVERT(VARCHAR(10),a.startDate,120) ORDER BY a.jobPostingID) AS rn 
 	from bullhorn1.BH_JobPosting a
 	left join bullhorn1.BH_Client b on a.clientUserID = b.userID
-	where b.isPrimaryOwner = 1) --> add isPrimaryOwner = 1 to remove 1 userID having more than 1 clientID
---select * from job where title like '%no%'
+	where a.isdeleted <> 1 and a.status <> 'Archive' /*where b.isPrimaryOwner = 1*/ ) --> add isPrimaryOwner = 1 to remove 1 userID having more than 1 clientID
+--select * from job where title like '%reception%'
+
 
 -- NOTE
 , note as (
         select JP.jobPostingID
 	, Stuff(  
-                 Coalesce('BH Job ID: ' + NULLIF(cast(JP.jobPostingID as varchar(max)), '') + char(10), '')
+                Coalesce('BH Job ID: ' + NULLIF(cast(JP.jobPostingID as varchar(max)), '') + char(10), '')
+              + Coalesce('Status: ' + NULLIF(cast(JP.status as varchar(max)), '') + char(10), '')
               + Coalesce('Client Charge Rate: ' + NULLIF(cast(JP.clientBillRate as varchar(max)), '') + char(10), '')
               + Coalesce('Employee Type: ' + NULLIF(cast(JP.customText4 as varchar(max)), '') + char(10), '')
               + Coalesce('Employment Type: ' + NULLIF(cast(JP.employmentType as varchar(max)), '') + char(10), '')
@@ -77,32 +81,34 @@ with
 --select * from placementnote where jobPostingID in (17,28,30,50,92,115)
 --select jobPostingID from placementnote group by jobPostingID having count(*) > 1
 
+
 --DOCUMENT
-, doc as (SELECT jobPostingID
+/*, doc as (SELECT jobPostingID
                  , STUFF((SELECT DISTINCT ',' + concat(jobPostingFileID,fileExtension) from bullhorn1.View_JobPostingFile WHERE jobPostingID = a.jobPostingID and fileExtension in ('.doc','.docx','.pdf','.xls','.xlsx','.rtf','.html','.txt') FOR XML PATH (''), TYPE).value('.', 'nvarchar(MAX)'), 1, 1, '') AS files 
-                 FROM (select jobPostingID from bullhorn1.View_JobPostingFile) AS a GROUP BY a.jobPostingID)
+                 FROM (select jobPostingID from bullhorn1.View_JobPostingFile) AS a GROUP BY a.jobPostingID)*/
+, doc (jobPostingID,files) as ( SELECT jobPostingID, STRING_AGG(cast(concat(jobPostingFileID,fileExtension) as nvarchar(max)),',' ) WITHIN GROUP (ORDER BY jobPostingID) att from bullhorn1.View_JobPostingFile where isdeleted <> 1 /*and fileExtension in ('.doc','.docx','.pdf','.rtf','.xls','.xlsx','.htm', '.html', '.msg', '.txt')*/ GROUP BY jobPostingID )
 
 
 select --top 100
          a.jobPostingID as 'position-externalId'
-	, b.clientID as 'position-contactId'
+	, iif(b.clientID is null, 'default', convert(varchar(max),b.clientID)) as 'position-contactId'
        --, a.clientUserID as '#UserID', cc.name as '#CompanyName', uc.firstname as '#ContactFirstName', uc.lastname as '#ContactLastName'
 	, case when job.rn > 1 then concat(job.title,' ',rn) else job.title end as 'position-title'
 	, a.numOpenings as 'position-headcount'
 	, mail5.email as 'position-owners'
 	, a.type as 'position-employmentType#' --[FULL_TIME, PART_TIME, CASUAL]
-/*	, case when a.employmentType is null then 'PERMANENT'
+	, case when a.employmentType is null then 'PERMANENT'
 	       when a.employmentType = 'HRO' then 'INTERIM_PROJECT_CONSULTING'
 	       when a.employmentType = 'Permanent' then 'PERMANENT'
 	       when a.employmentType = 'Temp/Contract' then 'CONTRACT'
 	       when a.employmentType = 'Willing to Temp' then 'TEMPORARY'
-	       else '' end as '#position-type#' --[PERMANENT, INTERIM_PROJECT_CONSULTING, TEMPORARY, CONTRACT, TEMPORARY_TO_PERMANENT]*/
-	, case
+	       else '' end as 'position-type' --[PERMANENT, INTERIM_PROJECT_CONSULTING, TEMPORARY, CONTRACT, TEMPORARY_TO_PERMANENT]
+/*	, case
               when a.employmentType in (null,'Permanent') and a.salaryUnit in ('Salary','Yearly') then 'PERMANENT'
 	       when a.employmentType = 'HRO' and a.salaryUnit in ('Per Day','Per Hour','Per Month','Per Week','Per Year') then 'INTERIM_PROJECT_CONSULTING'
 	       when a.employmentType = 'Temp/Contract' and a.salaryUnit in ('Per Day','Per Hour','Per Month','Per Week','Per Year') then 'CONTRACT'
 	       when a.employmentType = 'Willing to Temp' and a.salaryUnit in ('Per Day','Per Hour','Per Month','Per Week','Per Year') then 'TEMPORARY'
-	       else '' end as 'position-type'
+	       else '' end as 'position-type'*/
 	--, a.salary as 'position-actualSalary'
 	, a.customFloat1 as 'SalaryFrom'
 	, a.salary as 'SalaryTo'
@@ -131,18 +137,18 @@ select --top 100
 	, note.note as 'position-note' --left(,32000)
        --, skills as 'skills'
 -- select distinct employmentType -- select distinct Type -- select distinct salaryUnit -- select distinct customText5 -- select count(*) --2574 -- select top 100 startDate  -- select customFloat1, salary, customText5
-from bullhorn1.BH_JobPosting a --where a.jobPostingID = 2539
-left join bullhorn1.BH_Client b on a.clientUserID = b.userID
-left JOIN bullhorn1.BH_ClientCorporation CC ON b.clientCorporationID = CC.clientCorporationID
+from bullhorn1.BH_JobPosting a --where a.jobPostingID = 26311
+left join ( select userID, clientcorporationid, max(clientID) as clientID from bullhorn1.BH_Client where isdeleted <> 1 and status <> 'Archive' group by userID, clientcorporationid ) b on a.clientUserID = b.userID
+left JOIN bullhorn1.BH_ClientCorporation CC ON b.clientcorporationid = CC.clientcorporationid
 left join bullhorn1.BH_UserContact UC on a.clientUserID = UC.userID
 left join job on a.jobPostingID = job.jobPostingID
 left join mail5 ON a.userID = mail5.ID
 left join note on a.jobPostingID = note.jobPostingID
 left join placementnote  on a.jobPostingID = placementnote.jobPostingID
 left join doc on a.jobPostingID = doc.jobPostingID
-where b.isPrimaryOwner = 1 --> add isPrimaryOwner = 1 to remove 1 userID having more than 1 clientID
+where a.isdeleted <> 1 and a.status <> 'Archive' --b.isPrimaryOwner = 1 --> add isPrimaryOwner = 1 to remove 1 userID having more than 1 clientID
 --and job.title <> ''
---and a.jobPostingID in (1847,3,2,33,80,27,130)
+--and a.jobPostingID in (25672)
 
 /*select
 	 len(cast(a.publicDescription as varchar(max))) as 'position-publicDescription'

@@ -1,7 +1,8 @@
 
 with
 -- EMAIL
-  mail1 (ID,email) as (select UC.userID, replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(concat(UC.email,',',UC.email2,',',UC.email3),'/',' '),'<',' '),'>',' '),'(',' '),')',' '),':',' '),'.@','@'),'@.','@'),'+',' '),'&',' '),'[',' '),']',' '),'?',' '),'''',' '),';',' '),'•',' '),'*',' '),'|',' '),'‘',' '),CHAR(9),' ') as mail from bullhorn1.BH_UserContact UC left join bullhorn1.Candidate C on C.userID = UC.UserID where UC.email like '%_@_%.__%' or UC.email2 like '%_@_%.__%' or UC.email3 like '%_@_%.__%' and C.isPrimaryOwner = 1 )
+--  mail1 (ID,email) as (select UC.userID, replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(concat(UC.email,',',UC.email2,',',UC.email3),'/',' '),'<',' '),'>',' '),'(',' '),')',' '),':',' '),'.@','@'),'@.','@'),'+',' '),'&',' '),'[',' '),']',' '),'?',' '),'''',' '),';',' '),'•',' '),'*',' '),'|',' '),'‘',' '),CHAR(9),' ') as mail from bullhorn1.BH_UserContact UC left join bullhorn1.Candidate C on C.userID = UC.UserID where UC.email like '%_@_%.__%' or UC.email2 like '%_@_%.__%' or UC.email3 like '%_@_%.__%' and C.isPrimaryOwner = 1 )
+  mail1 (ID,email) as (select C.candidateID, replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(concat(UC.email,',',UC.email2,',',UC.email3),'/',' '),'<',' '),'>',' '),'(',' '),')',' '),':',' '),'.@','@'),'@.','@'),'+',' '),'&',' '),'[',' '),']',' '),'?',' '),'''',' '),';',' '),'•',' '),'*',' '),'|',' '),'‘',' '),CHAR(9),' ') as mail from bullhorn1.BH_UserContact UC left join bullhorn1.Candidate C on C.userID = UC.UserID where UC.email like '%_@_%.__%' or UC.email2 like '%_@_%.__%' or UC.email3 like '%_@_%.__%' and C.isdeleted <> 1 and C.status <> 'Archive' /*and C.isPrimaryOwner = 1*/ )
 , mail2 (ID,email) as (SELECT ID, email.value as email FROM mail1 m CROSS APPLY STRING_SPLIT(m.email,',') AS email)
 , mail3 (ID,email) as (SELECT ID, case when RIGHT(email, 1) = '.' then LEFT(email, LEN(email) - 1) when LEFT(email, 1) = '.' then RIGHT(email, LEN(email) - 1) else email end as email from mail2 WHERE email like '%_@_%.__%')
 , mail4 (ID,email,rn) as ( SELECT ID, email = ltrim(rtrim(CONVERT(NVARCHAR(MAX), email))), r1 = ROW_NUMBER() OVER (PARTITION BY ID ORDER BY ID desc) FROM mail3 )
@@ -10,7 +11,7 @@ with
 , e2 (ID,email) as (select ID, email from mail4 where rn = 2)
 , e3 (ID,email) as (select ID, email from mail4 where rn = 3)
 , e4 as (select ID, email from mail4 where rn = 4)
---select * from ed
+--select * from ed where email like '%kenaslai@hotmail.com%'
 
 -- OWNER
 , owner as (select distinct CA.recruiterUserID, UC.email from bullhorn1.Candidate CA left join bullhorn1.BH_UserContact UC on CA.recruiterUserID = UC.userID where CA.isPrimaryOwner = 1)
@@ -71,20 +72,20 @@ with
                                                 REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( 
                                                 REPLACE( REPLACE( REPLACE( REPLACE( 
                      stuff(
-                               Coalesce('Date Added: ' + NULLIF(cast(dateAdded as varchar(max)), '') + char(10), '')                   
-                            + Coalesce('Certification: ' + NULLIF(cast(certification as varchar(max)), '') + char(10), '')
-                            + Coalesce('City: ' + NULLIF(cast(city as varchar(max)), '') + char(10), '')
-                            + Coalesce('Comments: ' + NULLIF(cast(comments as varchar(max)), '') + char(10), '')
+                               Coalesce('Date Added: ' + NULLIF(cast(dateAdded AT TIME ZONE 'China Standard Time' as varchar(max)), '') + char(10), '')                   
+                            + Coalesce('Certification: ' + NULLIF(cast(certification as nvarchar(max)), '') + char(10), '')
+                            + Coalesce('City: ' + NULLIF(cast(city as nvarchar(max)), '') + char(10), '')
+                            + Coalesce('Comments: ' + NULLIF(cast(comments as nvarchar(max)), '') + char(10), '')
                             --+ Coalesce('Country: ' + NULLIF(cast(customText1 as varchar(max)), '') + char(10), '')
-                            + Coalesce('Degree: ' + NULLIF(cast(degree as varchar(max)), '') + char(10), '')
-                            + Coalesce('End Date: ' + NULLIF(cast(endDate as varchar(max)), '') + char(10), '')
-                            + Coalesce('Expiration Date: ' + NULLIF(cast(expirationDate as varchar(max)), '') + char(10), '')
-                            + Coalesce('GPA: ' + NULLIF(cast(gpa as varchar(max)), '') + char(10), '')
-                            + Coalesce('Graduation Date: ' + NULLIF(cast(graduationDate as varchar(max)), '') + char(10), '')
-                            + Coalesce('Major: ' + NULLIF(cast(major as varchar(max)), '') + char(10), '')
-                            + Coalesce('School: ' + NULLIF(cast(school as varchar(max)), '') + char(10), '')
-                            + Coalesce('Start Date: ' + NULLIF(cast(startDate as varchar(max)), '') + char(10), '')
-                            + Coalesce('State: ' + NULLIF(cast(state as varchar(max)), '') + char(10), '')
+                            + Coalesce('Degree: ' + NULLIF(cast(degree as nvarchar(max)), '') + char(10), '')
+                            + Coalesce('End Date: ' + NULLIF(cast(endDate AT TIME ZONE 'China Standard Time' as varchar(max)), '') + char(10), '')
+                            + Coalesce('Expiration Date: ' + NULLIF(cast(expirationDate AT TIME ZONE 'China Standard Time' as varchar(max)), '') + char(10), '')
+                            + Coalesce('GPA: ' + NULLIF(cast(gpa as nvarchar(max)), '') + char(10), '')
+                            + Coalesce('Graduation Date: ' + NULLIF(cast(graduationDate AT TIME ZONE 'China Standard Time' as varchar(max)), '') + char(10), '')
+                            + Coalesce('Major: ' + NULLIF(cast(major as nvarchar(max)), '') + char(10), '')
+                            + Coalesce('School: ' + NULLIF(cast(school as nvarchar(max)), '') + char(10), '')
+                            + Coalesce('Start Date: ' + NULLIF(cast(startDate AT TIME ZONE 'China Standard Time' as varchar(max)), '') + char(10), '')
+                            + Coalesce('State: ' + NULLIF(cast(state as nvarchar(max)), '') + char(10), '')
                             --+ Coalesce('Education ID: ' + NULLIF(cast(userEducationID as varchar(max)), '') + char(10), '')
                      , 1, 0, '') 
                                                 ,char(0x0000),'') ,char(0x0001),'') ,char(0x0002),'') ,char(0x0003),'') ,char(0x0004),'') 
@@ -105,7 +106,7 @@ with
 -- select referenceTitle,* from bullhorn1.BH_UserReference where referenceTitle is not null;
 
 
--- Employment History -- select top 10 *  from bullhorn1.BH_userWorkHistory
+-- Employment History -- select top 1000 *  from bullhorn1.BH_userWorkHistory where userid in (158197)
 , EmploymentHistory(userId, eh) as (
        SELECT a.userId, STUFF(( 
                      select char(10) + 
@@ -116,23 +117,23 @@ with
                                                 REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( 
                                                 REPLACE( REPLACE( REPLACE( REPLACE( 
                      stuff(
-                         Coalesce('Bonus: ' + NULLIF(cast(bonus as varchar(max)), '') + char(10), '')
-                     + Coalesce('Client Corporation: ' + NULLIF(cast(clientCorporationID as varchar(max)), '') + char(10), '')
-                     + Coalesce('Comments: ' + NULLIF(cast(comments as varchar(max)), '') + char(10), '')
-                     + Coalesce('Commission: ' + NULLIF(cast(commission as varchar(max)), '') + char(10), '')
-                     + Coalesce('Company Name: ' + NULLIF(cast(companyName as varchar(max)), '') + char(10), '')
+                         Coalesce('Bonus: ' + NULLIF(cast(bonus as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Client Corporation: ' + NULLIF(cast(clientCorporationID as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Comments: ' + NULLIF(cast(comments as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Commission: ' + NULLIF(cast(commission as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Company Name: ' + NULLIF(cast(companyName as nvarchar(max)), '') + char(10), '')
 --                     + Coalesce('Old Date Field: ' + NULLIF(cast(customText1 as varchar(max)), '') + char(10), '')
 --                     + Coalesce('Salary/Pay Rate (Legacy): ' + NULLIF(cast(customText2 as varchar(max)), '') + char(10), '')
-                     + Coalesce('Date Added: ' + NULLIF(cast(dateAdded as varchar(max)), '') + char(10), '')
-                     + Coalesce('End Date: ' + NULLIF(cast(endDate as varchar(max)), '') + char(10), '')
-                     + Coalesce('Job Posting: ' + NULLIF(cast(title as varchar(max)), '') + char(10), '') --jobPostingID
+                     + Coalesce('Date Added: ' + NULLIF(cast(dateAdded AT TIME ZONE 'China Standard Time' as varchar(max)), '') + char(10), '')
+                     + Coalesce('End Date: ' + NULLIF(cast(endDate AT TIME ZONE 'China Standard Time' as varchar(max)), '') + char(10), '')
+                     + Coalesce('Job Posting: ' + NULLIF(cast(title as nvarchar(max)), '') + char(10), '') --jobPostingID
                      --+ Coalesce('Placement: ' + NULLIF(cast(placementID as varchar(max)), '') + char(10), '')
-                     + Coalesce('Salary Low: ' + NULLIF(cast(salary1 as varchar(max)), '') + char(10), '')
-                     + Coalesce('Salary High: ' + NULLIF(cast(salary2 as varchar(max)), '') + char(10), '')
-                     + Coalesce('Salary Type: ' + NULLIF(cast(salaryType as varchar(max)), '') + char(10), '')
-                     + Coalesce('Start Date: ' + NULLIF(cast(startDate as varchar(max)), '') + char(10), '')
-                     + Coalesce('Termination Reason: ' + NULLIF(cast(terminationReason as varchar(max)), '') + char(10), '')
-                     + Coalesce('Title: ' + NULLIF(cast(title as varchar(max)), '') + char(10), '')
+                     + Coalesce('Salary Low: ' + NULLIF(cast(salary1 as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Salary High: ' + NULLIF(cast(salary2 as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Salary Type: ' + NULLIF(cast(salaryType as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Start Date: ' + NULLIF(cast(startDate AT TIME ZONE 'China Standard Time' as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Termination Reason: ' + NULLIF(cast(terminationReason as nvarchar(max)), '') + char(10), '')
+                     + Coalesce('Title: ' + NULLIF(cast(title as nvarchar(max)), '') + char(10), '')
                      --+ Coalesce('User Work History ID: ' + NULLIF(cast(userWorkHistoryID as varchar(max)), '') + char(10), '')
                             --+ Coalesce('Comments: ' + NULLIF(replace([dbo].[udf_StripHTML](comments),'Â ',''), '') + char(10), '')
                             --+ Coalesce('Comments: ' + NULLIF(replace([dbo].[fn_ConvertHTMLToText](comments),'Â ',''), '') + char(10), '')
@@ -152,7 +153,7 @@ with
        --where userid in (164043)
        GROUP BY a.userId 
        )
--- select * from EmploymentHistory where userid in (164043);
+-- select * from EmploymentHistory where userid in (289878);
 
 
 -- Secondary OWNER
@@ -190,17 +191,17 @@ with
 -- NOTE
 , note as (
 	SELECT CA.userID
-		 , Stuff( Coalesce('ID: ' + NULLIF(cast(CA.userID as varchar(max)), '') + char(10), '')  
+		 , Stuff( Coalesce('BH Candidate ID: ' + NULLIF(cast(CA.userID as varchar(max)), '') + char(10), '')  
 		          + Coalesce('Email 2: ' + NULLIF(cast(e2.email as varchar(max)), '') + char(10), '')
 		          + Coalesce('Email 3: ' + NULLIF(cast(e3.email as varchar(max)), '') + char(10), '')
-		          + Coalesce('Visa Status: ' + NULLIF(cast(CA.customText15 as varchar(max)), '') + char(10), '')
-                        + Coalesce('Status: ' + NULLIF(convert(varchar(max),CA.Status), '') + char(10), '')
+		          + Coalesce('Visa Status: ' + NULLIF(cast(CA.customText15 as nvarchar(max)), '') + char(10), '')
+                        + Coalesce('Status: ' + NULLIF(convert(nvarchar(max),CA.Status), '') + char(10), '')
 --                        + Coalesce('HKID#: ' + NULLIF(convert(varchar(max),CA.customText1), '') + char(10), '')
 --                        + Coalesce('Other Phone: ' + NULLIF(convert(varchar(max),CA.phone2), '') + char(10), '')
 --                        + Coalesce('Referred by: ' + NULLIF(convert(varchar(max),CA.referredBy), '') + char(10), '')
 --                        + Coalesce('Referred by 2: ' + NULLIF(convert(varchar(max),CA.referredByUserID), '') + ' - ' + UC.firstname + ' ' + UC.lastname + char(10), '')
                         --+ coalesce('CV: ' + NULLIF([dbo].[fn_ConvertHTMLToText](UC1.description), '') + char(10), '')
-                        + Coalesce('General Comments: ' + NULLIF(convert(varchar(max),CA.comments), '') + char(10), '')
+                        + Coalesce('General Comments: ' + NULLIF(convert(nvarchar(max),CA.comments), '') + char(10), '')
                         --+ coalesce('Latest Comment: ' + NULLIF([dbo].[fn_ConvertHTMLToText](lc.comments), '') + char(10), '')
                         /*+ coalesce('Placements: ' + NULLIF(convert(varchar(max),pm.status), '') + char(10), '') --CA.activePlacements
                         + coalesce('Secondary Owners: ' + nullif(convert(varchar(max),owner2c.name), '') + char(10), '') --CA.secondaryOwners
@@ -249,7 +250,7 @@ with
                         + Coalesce('Bar admission: ' + NULLIF(cast(AD.Admission as varchar(max)), '') + char(10), '')
                          */
                         --+ Coalesce('Summary: ' + NULLIF(cast(summary.summary as varchar(max)), '') + char(10), '')
-                        + coalesce('CV: ' + NULLIF(UW.description, '') + char(10), '')
+                        + coalesce('Resume: ' + NULLIF(UW.description, '') + char(10), '')
                         , 1, 0, '') as note
 	-- select top 10 * -- select count(*) -- select referredBy, referredByUserID
 	from bullhorn1.Candidate CA --where CA.isPrimaryOwner = 1 --where convert(varchar(max),CA.comments) <> ''
@@ -294,7 +295,7 @@ select --top 10
 	, C.mobile as 'candidate-phone'
 	, C.mobile as 'candidate-mobile'
 	, C.phone as 'candidate-homePhone'	
-	, C.workPhone as 'candidate-workPhone'
+	, ltrim(Stuff( Coalesce(' ' + NULLIF(C.Phone2, ''), '') + Coalesce(', ' + NULLIF(C.Phone3, ''), '') + Coalesce(', ' + NULLIF(C.workphone, ''), ''), 1, 1, '') ) as 'candidate-workPhone'
 	, 'PERMANENT' as 'candidate-jobTypes'
 	--, Stuff( coalesce(' ' + nullif(C.address1, ''), '') + coalesce(', ' + nullif(C.address2, ''), ''), 1, 1, '') as 'candidate-address' --, C.address1 as 'candidate-address'
 	, Stuff( coalesce(' ' + nullif(C.address1, ''), '') + coalesce(', ' + nullif(C.address2, ''), '') + Coalesce(' ' + NULLIF(C.city, ''), '') + Coalesce(', ' + NULLIF(C.state, ''), '') + Coalesce(', ' + NULLIF(C.zip, ''), '') + Coalesce(', ' + NULLIF(tc.country, ''), ''), 1, 1, '') as 'candidate-address'
@@ -305,24 +306,24 @@ select --top 10
        , tc.abbreviation as 'candidate-Country' --, CASE WHEN (tc.abbreviation = 'NONE' OR tc.abbreviation in ('NULL','ZR') ) THEN '' ELSE tc.abbreviation END as 'candidate-Country'
 	--, cast(C.salaryLow as int) as 'candidate-currentSalary' --,C.customTextBlock3
 	, cast(C.salaryLow as bigint) as 'candidate-currentSalary'
-	, cast(C.salary as int) as '#candidate-desiredSalary' --,C.customTextBlock2
+--	, cast(C.salary as int) as '#candidate-desiredSalary' --,C.customTextBlock2
 	--, Education.school as 'candidate-schoolName'
 	--, Education.graduationDate as 'candidate-graduationDate'
 	--, Education.degree as 'candidate-degreeName'
 	--, Education.major as '#candidate-major'
 	--, SN.SkillName as 'candidate-skills'
-       , ltrim(Stuff( 
-                     --coalesce(nullif(SN.SkillName, '') + char(10), '')
-                 coalesce(nullif(convert(varchar(max),C.skillset), ''), '')
-                 --+ Coalesce(NULLIF(convert(varchar(max),C.customTextBlock1), '') + char(10), '')
-                 , 1, 0, '') ) as 'candidate-skills'
+--       , ltrim(Stuff( 
+--                     --coalesce(nullif(SN.SkillName, '') + char(10), '')
+--                 coalesce(nullif(convert(varchar(max),C.skillset), ''), '')
+--                 --+ Coalesce(NULLIF(convert(varchar(max),C.customTextBlock1), '') + char(10), '')
+--                 , 1, 0, '') ) as 'candidate-skills'
 	, C.companyName as 'candidate-company1'
 	, C.occupation as 'candidate-jobTitle1'
 	, C.companyName as 'candidate-employer1'
 	, owner.email as 'candidate-owners' --, C.recruiterUserID as '#recruiterUserID'
 	, stuff( coalesce(' ' + nullif(files.ResumeId, ''), '') + coalesce(', ' + nullif(p.placementfile, ''), ''), 1, 1, '') as 'candidate-resume'
 	--, note.note as 'candidate-note'
-	--, eh.eh as 'candidate-workHistory'
+	, eh.eh as 'candidate-workHistory'
        , es.es as 'candidate-education'	
 	--, left(comment.comment,32760) as 'candidate-comments'
        , C.dateAdded 'registration date'
@@ -560,14 +561,14 @@ select --top 10
 		when c.customText7 like 'Zealand%' then 'NZ'
 		when c.customText7 like 'Zimbabw%' then 'ZW'
               else '' end as 'candidate-citizenship'		 	
--- select count (*) -- select distinct customText17 --customText7 --gender --employmentPreference -- select skillset, skillIDlist, customTextBlock1 --select top 10 *
-from bullhorn1.Candidate C --where C.isPrimaryOwner = 1
+-- select count (*) -- select distinct customText17 --customText7 --gender --employmentPreference -- select skillset, skillIDlist, customTextBlock1 --select top 10 * -- select mobile, phone, phone2, phone3, workphone
+from bullhorn1.Candidate C 
+left join owner on C.recruiterUserID = owner.recruiterUserID --where C.isdeleted <> 1 and C.status <> 'Archive'  --where C.isPrimaryOwner = 1
 left join SkillName SN on C.userID = SN.userId --SUB FUNCTIONAL EXPERTISE
 --left join BusinessSector BS on BS.userid = C.userid -- INDUSTRY
---left join EmploymentHistory EH on EH.userid = C.userid --WORK HISTORY --<<<<<<<<<<<<<
+left join EmploymentHistory EH on EH.userid = C.userid --WORK HISTORY --<<<<<<<<<<<<<
 left join tmp_country tc ON c.countryID = tc.code
-left join owner on C.recruiterUserID = owner.recruiterUserID
-left join ed on C.userID = ed.ID -- candidate-email-deduplication
+left join ed on C.candidateid = ed.ID -- candidate-email-deduplication
 --left join e2 on C.userID = e2.ID
 --left join Education on C.userID = Education.userID
 left join EducationSummary es on es.userID = C.userID --<<<<<<<<
@@ -576,13 +577,15 @@ left join files on C.userID = files.candidateUserID
 left join placementfiles p  on p.userid = C.userid
 --left join comment on C.userID = comment.Userid
 --left join note on C.userID = note.Userid --<<<<<<<<<<<<
-where C.isPrimaryOwner = 1
---and C.userid in (37380,5)
+where C.isdeleted <> 1 and C.status <> 'Archive' --C.isPrimaryOwner = 1
+--and C.userid in (158197)
 --and (C.FirstName like '%Partha%' or C.LastName like '%Partha%')
 --and concat (C.FirstName,' ',C.LastName) like '%Partha%'
 --and e1.email = '' or e1.email is null --e1.email <> ''
 --inner join bullhorn1.BH_UserContact UC_2 on C.recruiterUserID = UC_2.userID
 --left join bullhorn1.BH_ClientCorporation CC ON CC.clientCorporationID = C.clientCorporationID
+
+--select count (*) from bullhorn1.Candidate C where C.isdeleted <> 1 and C.status <> 'Archive'
 
 /*
 select    C.candidateID as 'externalId'
@@ -626,3 +629,12 @@ select * from t where candidate_source_id <> 0 and candidate_source_id <> '29093
 --where externalid = 13144
 
 */
+
+/*select    C.candidateID as 'externalId'
+        , Coalesce(NULLIF(replace(C.FirstName,'?',''), ''), 'No Firstname') as 'contact-firstName'
+        , Coalesce(NULLIF(replace(C.LastName,'?',''), ''), concat('Lastname-',C.candidateID)) as 'contact-lastName'
+        , C.source
+-- select distinct(ltrim(rtrim(C.source))) -- select C.source
+from bullhorn1.Candidate C
+where C.userid in (240589, 161367)*/
+
