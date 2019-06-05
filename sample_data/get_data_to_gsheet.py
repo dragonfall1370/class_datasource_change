@@ -135,9 +135,13 @@ def get_data(region, db_type, db_name, table_name, limit):
         cursor.execute("SELECT column_name FROM information_schema.columns WHERE table_name=%s", (table_name,))
         for row in cursor:
             list_columns.append(row[0])
-        
         columns_with_quote = ['"' + x + '"' if '-' in x else x for x in list_columns]
-        join_columns = ','.join(columns_with_quote)
+
+        if db_type == 'postgres':    
+            convert_columns_to_text = [x + '::text' for x in columns_with_quote]
+        elif db_type == 'sql_server':
+            convert_columns_to_text = ['CAST ' + x + 'AS VARCHAR' for x in columns_with_quote]
+        join_columns = ','.join(convert_columns_to_text)
         query = 'SELECT * FROM {0} ORDER BY CASE WHEN COALESCE({1}) IS NOT NULL THEN 1 ELSE 2 END LIMIT {2}'.format(table_name, join_columns, limit)
         df = pd.read_sql_query(query, engine)
         df = df.fillna('')
