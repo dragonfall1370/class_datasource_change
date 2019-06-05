@@ -149,10 +149,10 @@ def get_data(region, db_type, db_name, table_name, limit):
 # ----------------------------------------------------Process start here------------------------------------------------
 print('Starting at {}\n'.format(datetime.now() + timedelta(hours=6)))
 if __name__ == "__main__":
-    url = sys.argv[1]
-    region = sys.argv[2]
-    db_type = sys.argv[3]
-    db_name = sys.argv[4]
+    url = str(sys.argv[1])
+    region = str(sys.argv[2])
+    db_type = str(sys.argv[3])
+    db_name = str(sys.argv[4])
     limit = int(sys.argv[5])
 
     credential_file = Path(os.getcwd() +  '\\google-sheets-4f0fcdc59c49.json')

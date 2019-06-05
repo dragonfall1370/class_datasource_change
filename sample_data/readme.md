@@ -40,17 +40,17 @@ Change directory to `sample_data` folder
 `cd {path}/sample_data/`
 
 Run script
-`python get_data_to_gsheet.py "{google_spreadsheet_url}" "{region}" "{db_type}" "{db_name}" {limit}`
+`python get_data_to_gsheet.py <google_spreadsheet_url> <region> <db_type> <db_name> <limit>`
 
 Params:
-    - google_spreadsheet_url(string): url of spreadsheet
-    - region(string): fra, us, sing
-    - db_type(string): postgres, sql_server
-    - db_name(string): database name
-    - limit(integer): number of sample data you want to put on spreadsheet
++ `google_spreadsheet_url`: url of spreadsheet
++ `region`: fra, us, sing
++ `db_type`: postgres, sql_server
++ `db_name`(string): database name
++ `limit`: number of sample data you want to put on spreadsheet
 
 *IMPORTANT: Before you run script, make sure you have Google Credential JSON file in sample folder, file must be `google-sheets-4f0fcdc59c49.json`*
 *NOTE*:
-+ 2 ways to authorize with google spreadsheets:
-    - Enable shareable link and change permission to 'Any one with the link can edit'
-    - Share spreadsheet with this account: maverick@formidable-feat-241405.iam.gserviceaccount.com
+2 ways to authorize with google spreadsheets:
++ Enable shareable link and change permission to 'Any one with the link can edit'
++ Share spreadsheet with this account: maverick@formidable-feat-241405.iam.gserviceaccount.com
