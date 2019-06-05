@@ -1,18 +1,18 @@
-### H3 Create table from your query
+### Create table from your query
 Use it for:
-    - _01_company_sample
-    - _02_contact_sample
-    - _03_job_sample
-    - _04_candidate_sample
+- _01_company_sample
+- _02_contact_sample
+- _03_job_sample
+- _04_candidate_sample
 
-** For Postgres SQL
+#### For Postgres SQL
 Put below statement on top of your query:
 
 ```DROP TABLE IF EXISTS _01_company_sample;
 CREATE TABLE _01_company_sample AS
 ```
 
-** For SQL Server
+#### For SQL Server
 Put below statement on top of your query:
 ```DROP TABLE IF EXISTS _01_company_sample;
 ```
@@ -26,7 +26,7 @@ and put ```INTO _01_company_sample``` right before ```FROM``` in main query
     FROM ...
     ```
 
-### H3 Put sample data to google spreadsheet
+### Put sample data to google spreadsheet
 Open terminal/command and install below packages:
 - pip install pandas
 - pip install pygsheets
@@ -38,7 +38,8 @@ Open terminal/command and install below packages:
 
 Change directory to sample_data folder
 *cd {path}/sample_data/*
-run script
+
+Run script
 *python get_data_to_gsheet.py "{google_spreadsheet_url}" "{region}" "{db_type}" "{db_name}" {limit}*
 
 Params:
