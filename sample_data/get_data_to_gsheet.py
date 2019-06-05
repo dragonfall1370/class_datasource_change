@@ -145,6 +145,7 @@ def get_data(region, db_type, db_name, table_name, limit):
         query = 'SELECT * FROM {0} ORDER BY CASE WHEN COALESCE({1}) IS NOT NULL THEN 1 ELSE 2 END LIMIT {2}'.format(table_name, join_columns, limit)
         df = pd.read_sql_query(query, engine)
         df = df.fillna('')
+        df = df.applymap(lambda x: ' ' + str(x))
     else:
         print('Table {} not found\n'.format(table_name))
     
