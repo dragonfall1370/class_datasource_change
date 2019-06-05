@@ -164,8 +164,11 @@ if __name__ == "__main__":
 
     sheet = client.open_by_url(url)
 
-    if not sheet.worksheet('title', 'Data'):
-        sheet.add_worksheet(title='Data', rows=limit*4+5)
+    try:
+        sheet.worksheets('title', 'Data')
+    except pygsheets.exceptions.WorksheetNotFound:
+        sheet.add_worksheet(title='Data', rows=(limit*4+5))
+
     working_sheet = sheet.worksheet_by_title('Data')
 
     table_names = ['_01_company_sample', '_02_contact_sample', '_03_job_sample', '_04_candidate_sample']
