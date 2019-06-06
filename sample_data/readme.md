@@ -19,7 +19,7 @@ Put below statement on top of your query:
 
 and put `INTO _01_company_sample` right before `FROM` in main query
 
-*Example: 
+Example: 
     ```WITH(...)
     SELECT ...
     INTO _01_company_sample
