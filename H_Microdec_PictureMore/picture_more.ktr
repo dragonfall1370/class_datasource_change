@@ -1,0 +1,3706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>picture_more</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/05/20 10:35:51.957</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/05/20 10:35:51.957</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Company</note>
+      <xloc>144</xloc>
+      <yloc>0</yloc>
+      <width>62</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Contact</note>
+      <xloc>946</xloc>
+      <yloc>1</yloc>
+      <width>53</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Job</note>
+      <xloc>1680</xloc>
+      <yloc>0</yloc>
+      <width>29</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Candidate</note>
+      <xloc>2320</xloc>
+      <yloc>0</yloc>
+      <width>65</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>prod_db</name>
+    <server>rdbm</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>picturemore.vincere.io</database>
+    <port>5432</port>
+    <username>hoa</username>
+    <password>Encrypted 2be98afc86aa7f2e4801cab22db81a6d0</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>final_picture_more</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ff228dc6fa8c</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Database lookup</from>
+      <to>insert_company_address</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>company_activities</from>
+      <to>company_lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>company_address</from>
+      <to>Database lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>company_lookup 2</from>
+      <to>insert_company_activity</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 4 2</from>
+      <to>insert_contact_document</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>contact_activities</from>
+      <to>contact_lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>contact_document</from>
+      <to>Database lookup 4 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>contact_industry 2 2</from>
+      <to>contact_lookup 3 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>contact_lookup</from>
+      <to>update_contact_other_fields</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>contact_lookup 3</from>
+      <to>insert_contact_activity</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>contact_lookup 3 2</from>
+      <to>industry 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>contact_other_fields</from>
+      <to>contact_lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>industry 2 2</from>
+      <to>insert_udate_contact_industry 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 4 2 2 2</from>
+      <to>insert_job_document</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job_activities</from>
+      <to>job_lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job_document</from>
+      <to>Database lookup 4 2 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job_lookup</from>
+      <to>insert_job_activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 4 2 2</from>
+      <to>insert_candidate_document</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate_activities</from>
+      <to>candidate_lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate_document</from>
+      <to>Database lookup 4 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate_lookup</from>
+      <to>insert_candidate_activities</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 4</from>
+      <to>insert_company_document</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>company_document</from>
+      <to>Database lookup 4</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate_lookup 2 3</from>
+      <to>update_candidate_salary</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate_salary</from>
+      <to>candidate_lookup 2 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 2 3 2</from>
+      <to>insert_update_compensation</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job_compensation</from>
+      <to>Database lookup 2 3 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job_note</from>
+      <to>job_lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job_lookup 2</from>
+      <to>update_note</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>company_registration</from>
+      <to>Database lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup 2</from>
+      <to>update_company_registration</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Database lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>company_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_company_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 2 3 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_job_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1680</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 4</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>company_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_company_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 4 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>contact_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_contact_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 4 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>candidate_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_candidate_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2352</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 4 2 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_job_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1696</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate_activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH candidate AS (
+	SELECT
+	ROW_NUMBER() OVER(PARTITION BY pt.person_ref ORDER BY CASE WHEN l.code = 'C' THEN 1 ELSE 2 END) rn,
+	p.*,
+	c.*,
+	pt.status,
+	CASE
+		WHEN pt.type = 'C' THEN 'PERMANENT'
+		WHEN pt.type = 'A' THEN 'TEMPORARY'
+	END AS candidate_type,
+	pt.availability_confirmed,
+	pt.status_reason
+	FROM candidate c
+	LEFT JOIN person_type pt ON c.person_type_ref = pt.person_type_ref
+	JOIN person p ON pt.person_ref = p.person_ref
+	LEFT JOIN lookup l ON pt.type = l.code
+	WHERE l.code_type = '104'
+	AND l.code IN ('A', 'C')
+),
+event_type AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '123'
+),
+contact_owner AS (
+	SELECT
+		person_ref,
+		type,
+		s.email_address
+	FROM person_type pt
+	LEFT JOIN staff s ON pt.person_type_ref = s.person_type_ref
+	WHERE pt.type LIKE '%Z%'
+	AND s.email_address LIKE '%@%'
+),
+candidate_activity AS (
+	SELECT
+	c.person_ref candidate_id,
+	CONCAT_WS(
+		E'\n',
+		CASE WHEN NULLIF(et.description, '') IS NOT NULL THEN CONCAT('Event type: ', et.description) END,
+		CONCAT('Author: ', p.last_name, ' ', p.first_name),
+		CASE WHEN NULLIF(co.email_address, '') IS NOT NULL THEN CONCAT('Email: ', co.email_address) END,
+		CASE WHEN NULLIF(e.subject, '') IS NOT NULL THEN CONCAT('Subject: ', e.subject) END,
+		CASE WHEN NULLIF(e.notes, '') IS NOT NULL THEN CONCAT('Activity notes: ', E'\n', e.notes) END
+	) AS content,
+	CONCAT(e.event_date, ' ', e.event_time)::TIMESTAMP insert_timestamp,
+	'comment' AS category,
+	'candidate' AS type,
+	-10 AS user_account_id,
+	ROW_NUMBER() OVER(PARTITION BY c.person_ref, CONCAT_WS(
+																												E'\n',
+																												CASE WHEN NULLIF(et.description, 'nan') IS NOT NULL THEN CONCAT('Event type: ', et.description) END,
+																												CONCAT('Author: ', p.last_name, ' ', p.first_name),
+																												CASE WHEN NULLIF(co.email_address, 'nan') IS NOT NULL THEN CONCAT('Email: ', co.email_address) END,
+																												CASE WHEN NULLIF(e.subject, '') IS NOT NULL THEN CONCAT('Subject: ', e.subject) END,
+																												CASE WHEN NULLIF(e.notes, '') IS NOT NULL THEN CONCAT('Activity notes: ', E'\n', e.notes) END
+																											) ORDER BY c.person_ref) AS rn
+
+	FROM event e
+	JOIN event_role er ON e.event_ref = er.event_ref
+	JOIN candidate c ON er.person_ref = c.person_ref AND c.rn = 1
+	LEFT JOIN person p ON e.create_user = p.person_ref
+	LEFT JOIN contact_owner co ON e.create_user = co.person_ref
+	LEFT JOIN event_type et ON e.type = et.code
+	WHERE NULLIF(c.person_ref, '') IS NOT NULL
+	AND NULLIF(e.event_date, '') IS NOT NULL
+)
+
+SELECT *
+FROM candidate_activity
+WHERE rn = 1</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2176</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate_document</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>SELECT
+parent_object_ref candidate_id,
+CONCAT(parent_object_ref, '.', l.linkfile_ref, '.', file_extension) document_name,
+file_extension,
+parent_object_name,
+l.displayname,
+'CANDIDATE' entity_type,
+'resume' document_type
+FROM linkfile l
+JOIN person p ON l.parent_object_ref = p.person_ref
+WHERE parent_object_name = 'person'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2176</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate_lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>candidate_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_candidate_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2352</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate_lookup 2 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>candidate_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_candidate_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2352</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate_salary</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH candidate_type AS (
+	SELECT
+	ROW_NUMBER() OVER(PARTITION BY pt.person_ref ORDER BY CASE WHEN l.code = 'C' THEN 1 ELSE 2 END) rn,
+	p.*,
+	c.*,
+	pt.status,
+	CASE
+		WHEN pt.type = 'C' THEN 'PERMANENT'
+		WHEN pt.type = 'A' THEN 'TEMPORARY'
+	END AS candidate_type,
+	pt.availability_confirmed,
+	pt.status_reason
+	FROM candidate c
+	LEFT JOIN person_type pt ON c.person_type_ref = pt.person_type_ref
+	JOIN person p ON pt.person_ref = p.person_ref
+	LEFT JOIN lookup l ON pt.type = l.code
+	WHERE l.code_type = '104'
+	AND l.code IN ('A', 'C')
+),
+check_dup_email AS (
+	SELECT ROW_NUMBER() OVER(PARTITION BY TRIM(LOWER(email_address)) ORDER BY person_ref) rn_email,
+	*
+	FROM candidate_type
+	WHERE rn = 1
+	AND person_ref IS NOT NULL
+),
+candidate_status AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '105'
+),
+income_mode AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '7'
+)
+
+------------------------------------------------- Main query --------------------------------------------------------------------------
+
+SELECT
+cde.person_ref AS candidate_id,
+candidate_type,
+im.description income_mode,
+CASE
+	WHEN im.description IN ('per hour', 'per week') THEN cde.income_required::INT
+END desire_contract_rate,
+CASE
+	WHEN im.description = 'per month' THEN cde.income_required::INT * 12
+	WHEN im.description = 'per annum' THEN cde.income_required::INT
+END desire_salary,
+CASE
+	WHEN im.description = 'per month' THEN cde.income_required::INT
+END month_salary,
+CASE
+	WHEN im.description = 'per month' THEN 2
+	WHEN im.description = 'per annum' THEN 1
+END salary_type
+
+FROM check_dup_email cde
+LEFT JOIN income_mode im ON cde.income_mode = im.code
+WHERE NULLIF(cde.income_required, '0') IS NOT NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2176</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>company_activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH event_type AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '123'
+),
+company_owner AS (
+	SELECT
+		person_ref,
+		type,
+		s.email_address
+	FROM person_type pt
+	LEFT JOIN staff s ON pt.person_type_ref = s.person_type_ref
+	WHERE pt.type LIKE '%Z%'
+	AND s.email_address LIKE '%@%'
+)
+SELECT
+e.organisation_ref company_id,
+CONCAT_WS(
+	E'\n',
+	CASE WHEN NULLIF(et.description, '') IS NOT NULL THEN CONCAT('Event type: ', et.description) END,
+	CONCAT('Author: ', p.last_name, ' ', p.first_name),
+	CASE WHEN NULLIF(co.email_address, '') IS NOT NULL THEN CONCAT('Email: ', co.email_address) END,
+	CASE WHEN NULLIF(e.subject, '') IS NOT NULL THEN CONCAT('Subject: ', e.subject) END,
+	CASE WHEN NULLIF(e.notes, '') IS NOT NULL THEN CONCAT('Activity notes: ', E'\n', e.notes) END
+) AS content,
+CONCAT(e.event_date, ' ', e.event_time)::TIMESTAMP insert_timestamp,
+'comment' AS category,
+'company' AS type,
+-10 AS user_account_id
+
+FROM event e
+LEFT JOIN person p ON e.create_user = p.person_ref
+LEFT JOIN company_owner co ON e.create_user = co.person_ref
+LEFT JOIN event_type et ON e.type = et.code
+WHERE NULLIF(e.organisation_ref, '') IS NOT NULL
+AND NULLIF(e.event_date, '') IS NOT NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>company_address</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH main_company AS (
+	SELECT *,
+	ROW_NUMBER() OVER(PARTITION BY name ORDER BY create_timestamp) rn
+	FROM organisation
+),
+company_address AS (
+	SELECT
+		CASE 
+			WHEN zipcode IS NOT NULL THEN ROW_NUMBER() OVER(PARTITION BY c.organisation_ref, zipcode ORDER BY CASE WHEN main_address = 'Y' THEN 1 ELSE 2 END, country) 
+			ELSE 1
+		END  AS rn,
+		c.organisation_ref company_id,
+		a.main_address,
+		a.displayname location_name,
+		a.post_town city,
+		a.county_state state,
+		a.zipcode,
+		CASE
+			WHEN a.country = 'United Kingdom' THEN 'GB'
+			WHEN a.country = 'Ireland' THEN 'IE'
+			WHEN a.country = 'New Zealand' THEN 'NZ'
+			WHEN a.country = 'Australia' THEN 'AU'
+			WHEN a.country = 'South Africa' THEN 'ZA'
+			WHEN a.country = 'United States of America' THEN 'US'
+			WHEN a.country = 'Belgium' THEN 'BE'
+			WHEN a.country = 'Hong Kong' THEN 'HK'
+			WHEN a.country = 'Spain' THEN 'ES'
+			WHEN a.country = 'Luxembourg' THEN 'LU'
+			WHEN a.country = 'Germany' THEN 'DE'
+			WHEN a.country = 'Switzerland' THEN 'CH'
+			WHEN a.country = 'France' THEN 'FR'
+			WHEN a.country = 'Norway' THEN 'NO'
+		END AS country,
+		CONCAT_WS(
+			', ',
+			CASE WHEN RIGHT(TRIM(a.address_line_1), 1) = ',' THEN LEFT(TRIM(a.address_line_1), LENGTH(TRIM(a.address_line_1)) - 1) ELSE TRIM(a.address_line_1) END, 
+			CASE WHEN RIGHT(TRIM(a.address_line_2), 1) = ',' THEN LEFT(TRIM(a.address_line_2), LENGTH(TRIM(a.address_line_2)) - 1) ELSE TRIM(a.address_line_2) END,
+			CASE WHEN RIGHT(TRIM(a.address_line_3), 1) = ',' THEN LEFT(TRIM(a.address_line_3), LENGTH(TRIM(a.address_line_3)) - 1) ELSE TRIM(a.address_line_3) END,
+			a.post_town,
+			a.county_state,
+			a.country
+		) AS address,
+		SUBSTRING(SUBSTRING(a."WGS84" FROM STRPOS(a."WGS84", '(') + 1 FOR LENGTH(a."WGS84") - 8) FROM 1 FOR STRPOS(SUBSTRING(a."WGS84" FROM STRPOS(a."WGS84", '(') + 1 FOR LENGTH(a."WGS84") - 8), ' '))::FLOAT longitude,
+		SUBSTRING(SUBSTRING(a."WGS84" FROM STRPOS(a."WGS84", '(') + 1 FOR LENGTH(a."WGS84") - 8) FROM STRPOS(SUBSTRING(a."WGS84" FROM STRPOS(a."WGS84", '(') + 1 FOR LENGTH(a."WGS84") - 8), ' '))::FLOAT latitude
+	FROM main_company c
+	LEFT JOIN address a ON c.organisation_ref = a.organisation_ref
+	WHERE COALESCE(address_line_1, address_line_2, address_line_3, post_town, county_state, zipcode, country) IS NOT NULL
+	ORDER BY company_id,
+					CASE
+						WHEN main_address = 'Y' THEN 1
+						ELSE 2
+					END
+)
+
+SELECT *
+FROM company_address
+WHERE rn = 1</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>company_document</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>SELECT
+parent_object_ref company_id,
+CONCAT(parent_object_ref, '.', l.linkfile_ref, '.', file_extension) document_name,
+file_extension,
+parent_object_name,
+l.displayname,
+'COMPANY' entity_type,
+'legal_document' document_type
+FROM linkfile l
+JOIN organisation o ON l.parent_object_ref = o.organisation_ref
+WHERE parent_object_name = 'organisation'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>company_lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>company_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_company_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>company_registration</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>
+SELECT
+organisation_ref AS company_id,
+create_timestamp::TIMESTAMP AS registration_date
+
+FROM organisation
+WHERE record_status IN ('L', 'D', 'Z')</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>contact_activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH contact_record_status AS (
+	SELECT
+		ROW_NUMBER() OVER(PARTITION BY person_ref ORDER BY CASE WHEN l.code = 'C' THEN 1 ELSE 2 END) rn,
+		CASE
+			WHEN email_address NOT LIKE '%@%' THEN NULL
+			WHEN STRPOS(email_address, '''') = 1 AND RIGHT(email_address, 1) = '''' THEN LEFT(RIGHT(email_address, LENGTH(email_address) - 1), LENGTH(RIGHT(email_address, LENGTH(email_address) - 1)) - 1)
+			ELSE email_address
+		END AS contact_email,
+		p.*
+	FROM position p
+	LEFT JOIN lookup l ON p.record_status = l.code
+	WHERE code_type = '132'
+	AND NULLIF(person_ref, '0') IS NOT NULL
+),
+current_contact AS (
+	SELECT *
+	FROM contact_record_status
+	WHERE rn = 1
+),
+event_type AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '123'
+),
+contact_owner AS (
+	SELECT
+		person_ref,
+		type,
+		s.email_address
+	FROM person_type pt
+	LEFT JOIN staff s ON pt.person_type_ref = s.person_type_ref
+	WHERE pt.type LIKE '%Z%'
+	AND s.email_address LIKE '%@%'
+),
+contact_activity AS (
+	SELECT
+	c.person_ref contact_id,
+	CONCAT_WS(
+		E'\n',
+		CASE WHEN NULLIF(et.description, '') IS NOT NULL THEN CONCAT('Event type: ', et.description) END,
+		CONCAT('Author: ', p.last_name, ' ', p.first_name),
+		CASE WHEN NULLIF(co.email_address, '') IS NOT NULL THEN CONCAT('Email: ', co.email_address) END,
+		CASE WHEN NULLIF(e.subject, '') IS NOT NULL THEN CONCAT('Subject: ', e.subject) END,
+		CASE WHEN NULLIF(e.notes, '') IS NOT NULL THEN CONCAT('Activity notes: ', E'\n', e.notes) END
+	) AS content,
+	CONCAT(e.event_date, ' ', e.event_time)::TIMESTAMP insert_timestamp,
+	'comment' AS category,
+	'contact' AS type,
+	-10 AS user_account_id,
+	ROW_NUMBER() OVER(PARTITION BY c.person_ref, CONCAT_WS(
+																												E'\n',
+																												CASE WHEN NULLIF(et.description, '') IS NOT NULL THEN CONCAT('Event type: ', et.description) END,
+																												CONCAT('Author: ', p.last_name, ' ', p.first_name),
+																												CASE WHEN NULLIF(co.email_address, '') IS NOT NULL THEN CONCAT('Email: ', co.email_address) END,
+																												CASE WHEN NULLIF(e.subject, '') IS NOT NULL THEN CONCAT('Subject: ', e.subject) END,
+																												CASE WHEN NULLIF(e.notes, '') IS NOT NULL THEN CONCAT('Activity notes: ', E'\n', e.notes) END
+																											) ORDER BY c.person_ref) AS rn
+
+	FROM event e
+	JOIN event_role er ON e.event_ref = er.event_ref
+	JOIN current_contact c ON er.person_ref = c.person_ref
+	LEFT JOIN person p ON e.create_user = p.person_ref
+	LEFT JOIN contact_owner co ON e.create_user = co.person_ref
+	LEFT JOIN event_type et ON e.type = et.code
+	WHERE NULLIF(c.person_ref, '') IS NOT NULL
+	AND NULLIF(e.event_date, '') IS NOT NULL
+)
+
+SELECT *
+FROM contact_activity
+WHERE rn = 1</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>contact_document</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>SELECT
+parent_object_ref contact_id,
+CONCAT(parent_object_ref, '.', l.linkfile_ref, '.', file_extension) document_name,
+file_extension,
+parent_object_name,
+l.displayname,
+'CONTACT' entity_type,
+'documents' document_type
+FROM linkfile l
+JOIN "position" p ON l.parent_object_ref = p.person_ref
+WHERE parent_object_name = 'contact'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>contact_industry 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH contact_record_status AS (
+	SELECT
+		ROW_NUMBER() OVER(PARTITION BY person_ref ORDER BY CASE WHEN l.code = 'C' THEN 1 ELSE 2 END) rn,
+		p.*
+	FROM position p
+	LEFT JOIN lookup l ON p.record_status = l.code
+	WHERE code_type = '132'
+	AND NULLIF(person_ref, '0') IS NOT NULL
+),
+current_contact AS (
+	SELECT *
+	FROM contact_record_status
+	WHERE rn = 1
+), 
+contact_industry AS (
+	SELECT
+		sc.person_ref contact_id,
+		sc.code industry_code,
+		ROW_NUMBER() OVER(PARTITION BY sc.person_ref, sc.code ORDER BY sc.person_ref) rn
+	FROM search_code sc
+	JOIN current_contact cc ON sc.person_ref = cc.person_ref
+	WHERE sc.person_ref IS NOT NULL
+	AND sc.code_type = '1005'
+),
+industry AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '1005'
+)
+SELECT
+	ci.contact_id,
+	CASE
+		WHEN i.description = 'IT Services' THEN 'IT Services'
+		WHEN i.description = 'Carpenter' THEN 'Carpenter'
+		WHEN i.description = 'Painting' THEN 'Painting'
+		WHEN i.description = 'Shopfitting' THEN 'Shopfitting'
+		WHEN i.description = 'Civils' THEN 'Civils'
+		WHEN i.description = 'Drylining' THEN 'Drylining'
+		WHEN i.description = 'Interiors' THEN 'Interiors'
+		WHEN i.description = 'Student Accommodation' THEN 'Student Accommodation'
+		WHEN i.description = 'High End Apartments' THEN 'High End Apartments'
+		WHEN i.description = 'BUSINESS SERVICES' THEN 'BUSINESS SERVICES'
+		WHEN i.description = 'Business Services General' THEN 'Business Services General'
+		WHEN i.description = 'Accountancy' THEN 'Accountancy'
+		WHEN i.description = 'Consultancy' THEN 'Consultancy'
+		WHEN i.description = 'Property/Estate Agency' THEN 'Property/Estate Agency'
+		WHEN i.description = 'Recruitment' THEN 'Recruitment'
+		WHEN i.description = 'Training' THEN 'Training'
+		WHEN i.description = 'Solicitors' THEN 'Solicitors'
+		WHEN i.description = 'Call Centre' THEN 'Call Centre'
+		WHEN i.description = 'Payroll' THEN 'Payroll'
+		WHEN i.description = 'Charities' THEN 'Charities'
+		WHEN i.description = 'Agricultural' THEN 'Agricultural'
+		WHEN i.description = 'Dental Products' THEN 'Dental Products'
+		WHEN i.description = 'CONSTRUCTION' THEN 'CONSTRUCTION'
+		WHEN i.description = 'Construction General' THEN 'Construction General'
+		WHEN i.description = 'Building Construction' THEN 'Building Construction'
+		WHEN i.description = 'Buidling Materials' THEN 'Buidling Materials'
+		WHEN i.description = 'FOOD / FMCG / CONSUMER GOODS' THEN 'FOOD / FMCG / CONSUMER GOODS'
+		WHEN i.description = 'Cosmetics, Toiletries' THEN 'Cosmetics, Toiletries'
+		WHEN i.description = 'Food, Drink, Tobacco' THEN 'Food, Drink, Tobacco'
+		WHEN i.description = 'Household Goods' THEN 'Household Goods'
+		WHEN i.description = 'Office Products, Stationery' THEN 'Office Products, Stationery'
+		WHEN i.description = 'Electronics' THEN 'Electronics'
+		WHEN i.description = 'Packaging' THEN 'Packaging'
+		WHEN i.description = 'DISTRIBUTION/WAREHOUSING' THEN 'DISTRIBUTION/WAREHOUSING'
+		WHEN i.description = 'Distribution General' THEN 'Distribution General'
+		WHEN i.description = 'Distribution Automotive' THEN 'Distribution Automotive'
+		WHEN i.description = 'Logistics' THEN 'Logistics'
+		WHEN i.description = 'Warehouse' THEN 'Warehouse'
+		WHEN i.description = 'ENGINEERING' THEN 'ENGINEERING'
+		WHEN i.description = 'Engineering General' THEN 'Engineering General'
+		WHEN i.description = 'Civil Engineering' THEN 'Civil Engineering'
+		WHEN i.description = 'Mechanical Engineering' THEN 'Mechanical Engineering'
+		WHEN i.description = 'Rubber/Plastic/Rope' THEN 'Rubber/Plastic/Rope'
+		WHEN i.description = 'Waste Management Services' THEN 'Waste Management Services'
+		WHEN i.description = 'Electrical Engineering' THEN 'Electrical Engineering'
+		WHEN i.description = 'Mechanical Handling' THEN 'Mechanical Handling'
+		WHEN i.description = 'Precision Engineering' THEN 'Precision Engineering'
+		WHEN i.description = 'MANUFACTURING' THEN 'MANUFACTURING'
+		WHEN i.description = 'Manufacturing General' THEN 'Manufacturing General'
+		WHEN i.description = 'Motor Manufacturing' THEN 'Motor Manufacturing'
+		WHEN i.description = 'Clothing Manufacturing' THEN 'Clothing Manufacturing'
+		WHEN i.description = 'Industrial Manufacturing' THEN 'Industrial Manufacturing'
+		WHEN i.description = 'FINANCE' THEN 'FINANCE'
+		WHEN i.description = 'Finance General' THEN 'Finance General'
+		WHEN i.description = 'Banks / Building Society' THEN 'Banks / Building Society'
+		WHEN i.description = 'Financial Services' THEN 'Financial Services'
+		WHEN i.description = 'Insurance' THEN 'Insurance'
+		WHEN i.description = 'IT &amp; COMMUNICATIONS' THEN 'IT &amp; COMMUNICATIONS'
+		WHEN i.description = 'Communications General' THEN 'Communications General'
+		WHEN i.description = 'IT General' THEN 'IT General'
+		WHEN i.description = 'IT Software' THEN 'IT Software'
+		WHEN i.description = 'IT Training' THEN 'IT Training'
+		WHEN i.description = 'Telecommunications' THEN 'Telecommunications'
+		WHEN i.description = 'CHEMICALS PRODUCTION' THEN 'CHEMICALS PRODUCTION'
+		WHEN i.description = 'Chemicals General' THEN 'Chemicals General'
+		WHEN i.description = 'Oil &amp; Petrochemicals' THEN 'Oil &amp; Petrochemicals'
+		WHEN i.description = 'LEISURE' THEN 'LEISURE'
+		WHEN i.description = 'Leisure General' THEN 'Leisure General'
+		WHEN i.description = 'Breweries' THEN 'Breweries'
+		WHEN i.description = 'Catering' THEN 'Catering'
+		WHEN i.description = 'Entertainment' THEN 'Entertainment'
+		WHEN i.description = 'Hotel' THEN 'Hotel'
+		WHEN i.description = 'Travel' THEN 'Travel'
+		WHEN i.description = 'MEDIA/MARKETING' THEN 'MEDIA/MARKETING'
+		WHEN i.description = 'Media General' THEN 'Media General'
+		WHEN i.description = 'Design Agency' THEN 'Design Agency'
+		WHEN i.description = 'Journalism' THEN 'Journalism'
+		WHEN i.description = 'Books' THEN 'Books'
+		WHEN i.description = 'Newspapers' THEN 'Newspapers'
+		WHEN i.description = 'Printing &amp; Publishing' THEN 'Printing &amp; Publishing'
+		WHEN i.description = 'Advertising' THEN 'Advertising'
+		WHEN i.description = 'Marketing' THEN 'Marketing'
+		WHEN i.description = 'Telemarketing' THEN 'Telemarketing'
+		WHEN i.description = 'PUBLIC SECTOR' THEN 'PUBLIC SECTOR'
+		WHEN i.description = 'Public Sector General' THEN 'Public Sector General'
+		WHEN i.description = 'NHS' THEN 'NHS'
+		WHEN i.description = 'Medical' THEN 'Medical'
+		WHEN i.description = 'Primary Care Trust' THEN 'Primary Care Trust'
+		WHEN i.description = 'Central Government' THEN 'Central Government'
+		WHEN i.description = 'Local Borough' THEN 'Local Borough'
+		WHEN i.description = 'Police' THEN 'Police'
+		WHEN i.description = 'Fire' THEN 'Fire'
+		WHEN i.description = 'Health' THEN 'Health'
+		WHEN i.description = 'Armed Forces' THEN 'Armed Forces'
+		WHEN i.description = 'Education' THEN 'Education'
+		WHEN i.description = 'Council' THEN 'Council'
+		WHEN i.description = 'PHARMACEUTICALS' THEN 'PHARMACEUTICALS'
+		WHEN i.description = 'Pharmaceuticals General' THEN 'Pharmaceuticals General'
+		WHEN i.description = 'Pharmaceutical Equipment' THEN 'Pharmaceutical Equipment'
+		WHEN i.description = 'RETAIL' THEN 'RETAIL'
+		WHEN i.description = 'Retail General' THEN 'Retail General'
+		WHEN i.description = 'Food Retail' THEN 'Food Retail'
+		WHEN i.description = 'DIY Retail' THEN 'DIY Retail'
+		WHEN i.description = 'Home Furnishings' THEN 'Home Furnishings'
+		WHEN i.description = 'Large Multiples' THEN 'Large Multiples'
+		WHEN i.description = 'Fashion' THEN 'Fashion'
+		WHEN i.description = 'TRANSPORT' THEN 'TRANSPORT'
+		WHEN i.description = 'Transport General' THEN 'Transport General'
+		WHEN i.description = 'Automotive' THEN 'Automotive'
+		WHEN i.description = 'Dealership' THEN 'Dealership'
+		WHEN i.description = 'Marine Services' THEN 'Marine Services'
+		WHEN i.description = 'Public Transport' THEN 'Public Transport'
+		WHEN i.description = 'Road/Rail Haulage' THEN 'Road/Rail Haulage'
+		WHEN i.description = 'Shipping' THEN 'Shipping'
+		WHEN i.description = 'Aerospace' THEN 'Aerospace'
+		WHEN i.description = 'Car Hire' THEN 'Car Hire'
+		WHEN i.description = 'UTILITIES' THEN 'UTILITIES'
+		WHEN i.description = 'Utilities General' THEN 'Utilities General'
+		WHEN i.description = 'Gas &amp; Oil' THEN 'Gas &amp; Oil'
+		WHEN i.description = 'Electricity' THEN 'Electricity'
+		WHEN i.description = 'Water' THEN 'Water'
+	END industry,
+	CURRENT_TIMESTAMP insert_timestamp
+FROM contact_industry ci
+JOIN industry i ON ci.industry_code = i.code
+WHERE ci.rn = 1</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>contact_lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>contact_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_contact_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>contact_lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>contact_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_contact_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>contact_lookup 3 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>contact_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_contact_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>contact_other_fields</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH contact_record_status AS (
+	SELECT
+		ROW_NUMBER() OVER(PARTITION BY person_ref ORDER BY CASE WHEN l.code = 'C' THEN 1 ELSE 2 END) rn,
+		CASE
+			WHEN email_address NOT LIKE '%@%' THEN NULL
+			WHEN STRPOS(email_address, '''') = 1 AND RIGHT(email_address, 1) = '''' THEN LEFT(RIGHT(email_address, LENGTH(email_address) - 1), LENGTH(RIGHT(email_address, LENGTH(email_address) - 1)) - 1)
+			ELSE email_address
+		END AS contact_email,
+		p.*
+	FROM position p
+	LEFT JOIN lookup l ON p.record_status = l.code
+	WHERE code_type = '132'
+	AND NULLIF(person_ref, '0') IS NOT NULL
+),
+current_contact AS (
+	SELECT *,
+	ROW_NUMBER() OVER(PARTITION BY TRIM(LOWER(contact_email)) ORDER BY CASE WHEN contact_status = '1' THEN 1 ELSE 2 END) rn_email
+	FROM contact_record_status
+	WHERE rn = 1
+)
+
+------------------------------------------------- Main query --------------------------------------------------------------------------
+
+SELECT
+cc.person_ref contact_id,
+CONCAT_WS( ', ', REGEXP_REPLACE(cc.mobile_telno, '[a-zA-Z!#$%&amp;*,-./:;&lt;=>?@[\]^_`{|}~]','','g'), REGEXP_REPLACE(p.mobile_telno, '[a-zA-Z!#$%&amp;*,-./:;&lt;=>?@[\]^_`{|}~]','','g')) mobile,
+CASE
+	WHEN STRPOS(p.email_address, '''') = 1 AND RIGHT(p.email_address, 1) = '''' THEN LEFT(RIGHT(p.email_address, LENGTH(p.email_address) - 1), LENGTH(RIGHT(p.email_address, LENGTH(p.email_address) - 1)) - 1)
+	ELSE p.email_address
+END AS personal_email
+
+
+FROM current_contact cc
+JOIN person p ON cc.person_ref = p.person_ref</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>industry 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>industry</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_industry_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_candidate_activities</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>actual_candidate_id</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2544</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_candidate_document</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>bulk_upload_document_mapping</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>entity_id</column_name>
+        <stream_name>actual_candidate_id</stream_name>
+      </field>
+      <field>
+        <column_name>file_name</column_name>
+        <stream_name>document_name</stream_name>
+      </field>
+      <field>
+        <column_name>entity_type</column_name>
+        <stream_name>entity_type</stream_name>
+      </field>
+      <field>
+        <column_name>document_type</column_name>
+        <stream_name>document_type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2544</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_company_activity</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>actual_company_id</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_company_address</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>company_location</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>actual_company_id</stream_name>
+      </field>
+      <field>
+        <column_name>location_name</column_name>
+        <stream_name>location_name</stream_name>
+      </field>
+      <field>
+        <column_name>city</column_name>
+        <stream_name>city</stream_name>
+      </field>
+      <field>
+        <column_name>state</column_name>
+        <stream_name>state</stream_name>
+      </field>
+      <field>
+        <column_name>post_code</column_name>
+        <stream_name>zipcode</stream_name>
+      </field>
+      <field>
+        <column_name>country_code</column_name>
+        <stream_name>country</stream_name>
+      </field>
+      <field>
+        <column_name>address</column_name>
+        <stream_name>address</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_company_document</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>bulk_upload_document_mapping</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>entity_id</column_name>
+        <stream_name>actual_company_id</stream_name>
+      </field>
+      <field>
+        <column_name>file_name</column_name>
+        <stream_name>document_name</stream_name>
+      </field>
+      <field>
+        <column_name>entity_type</column_name>
+        <stream_name>entity_type</stream_name>
+      </field>
+      <field>
+        <column_name>document_type</column_name>
+        <stream_name>document_type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_contact_activity</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>actual_contact_id</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_contact_document</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>bulk_upload_document_mapping</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>entity_id</column_name>
+        <stream_name>actual_contact_id</stream_name>
+      </field>
+      <field>
+        <column_name>file_name</column_name>
+        <stream_name>document_name</stream_name>
+      </field>
+      <field>
+        <column_name>entity_type</column_name>
+        <stream_name>entity_type</stream_name>
+      </field>
+      <field>
+        <column_name>document_type</column_name>
+        <stream_name>document_type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_job_activities</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>actual_job_id</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>content</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1872</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_job_document</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <schema>public</schema>
+    <table>bulk_upload_document_mapping</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>entity_id</column_name>
+        <stream_name>actual_job_id</stream_name>
+      </field>
+      <field>
+        <column_name>file_name</column_name>
+        <stream_name>document_name</stream_name>
+      </field>
+      <field>
+        <column_name>entity_type</column_name>
+        <stream_name>entity_type</stream_name>
+      </field>
+      <field>
+        <column_name>document_type</column_name>
+        <stream_name>document_type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1920</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_udate_contact_industry 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>contact_industry</table>
+      <key>
+        <name>actual_contact_id</name>
+        <field>contact_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>actual_industry_id</name>
+        <field>industry_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>industry_id</name>
+        <rename>actual_industry_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>contact_id</name>
+        <rename>actual_contact_id</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1248</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_update_compensation</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>compensation</table>
+      <key>
+        <name>actual_job_id</name>
+        <field>position_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>annual_salary_from</name>
+        <rename>salary_from</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>annual_salary_to</name>
+        <rename>salary_to</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job_activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH event_type AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '123'
+)
+SELECT
+e.opportunity_ref job_id,
+et.description activity_type,
+CONCAT_WS(
+	E'\n',
+	CASE WHEN NULLIF(et.description, '') IS NOT NULL THEN CONCAT('Event type: ', et.description) END,
+	CONCAT('Author: ', p.last_name, ' ', p.first_name),
+	CASE WHEN NULLIF(p.email_address, '') IS NOT NULL THEN CONCAT('Email: ', p.email_address) END,
+	CASE WHEN NULLIF(e.subject, '') IS NOT NULL THEN CONCAT('Subject: ', e.subject) END,
+	CASE WHEN NULLIF(e.notes, '') IS NOT NULL THEN CONCAT('Activity notes: ', E'\n', e.notes) END
+) AS content,
+CONCAT(e.event_date, ' ', e.event_time)::TIMESTAMP insert_timestamp,
+'comment' AS category,
+'job' AS type,
+-10 AS user_account_id
+
+FROM event e
+LEFT JOIN person p ON e.create_user = p.person_ref
+LEFT JOIN event_type et ON e.type = et.code
+WHERE NULLIF(e.opportunity_ref::TEXT, '') IS NOT NULL
+AND NULLIF(e.event_date, '') IS NOT NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job_compensation</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>SELECT
+o.opportunity_ref AS job_id,
+pv.lower_income::INT salary_from,
+pv.upper_income::INT salary_to
+
+FROM opportunity o
+LEFT JOIN permanent_vac pv ON o.opportunity_ref = pv.opportunity_ref
+LEFT JOIN temporary_vac tv ON o.opportunity_ref = tv.opportunity_ref
+WHERE COALESCE(pv.lower_income, pv.upper_income) IS NOT NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job_document</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>SELECT
+parent_object_ref job_id,
+CONCAT(parent_object_ref, '.', l.linkfile_ref, '.', file_extension) document_name,
+file_extension,
+parent_object_name,
+l.displayname,
+'POSITION' entity_type,
+'documents' document_type
+FROM linkfile l
+JOIN opportunity o ON l.parent_object_ref = o.opportunity_ref
+WHERE parent_object_name = 'opportunity'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job_lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_job_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1680</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update_candidate_salary</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>actual_candidate_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>desire_salary</name>
+        <rename>desire_salary</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>desired_contract_rate</name>
+        <rename>desire_contract_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>salary_type</name>
+        <rename>salary_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>months_per_year</name>
+        <rename>month_salary</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2544</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update_company_registration</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <key>
+        <name>actual_company_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>registration_date</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update_contact_other_fields</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <key>
+        <name>actual_contact_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>mobile_phone</name>
+        <rename>mobile</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>personal_email</name>
+        <rename>personal_email</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1200</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job_note</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>source</connection>
+    <sql>WITH current_contact AS (
+	SELECT
+		ROW_NUMBER() OVER(PARTITION BY pos.person_ref ORDER BY CASE WHEN l.code = 'C' THEN 1 ELSE 2 END) rn,
+		pos.*
+	FROM position pos
+	LEFT JOIN lookup l ON pos.record_status = l.code
+	JOIN person p ON pos.person_ref = p.person_ref
+	WHERE code_type = '132'
+	ORDER BY pos.person_ref
+),
+job_contact AS (
+	SELECT
+		o.opportunity_ref AS job_id,
+		o.organisation_ref,
+		er.person_ref,
+		ROW_NUMBER() OVER(PARTITION BY o.opportunity_ref, o.organisation_ref ORDER BY cc.contact_status::INT ASC) rn
+	FROM event e
+	JOIN event_role er ON e.event_ref = er.event_ref
+	JOIN opportunity o ON e.opportunity_ref = o.opportunity_ref
+	JOIN current_contact cc ON er.person_ref = cc.person_ref AND o.organisation_ref = cc.organisation_ref AND rn = 1
+	WHERE er.type IN ('C1','C2','CA1','CB1','CC1')
+	AND er.person_ref IS NOT NULL
+),
+contact_involved_job AS (
+	SELECT 
+		opportunity_ref, 
+		string_agg(contact, ', ') AS all_contacts
+	FROM (
+		SELECT 
+		DISTINCT er.person_ref,
+		CONCAT(p.first_name, ' ', p.last_name, ' (', er.person_ref, ')') AS contact,
+		opportunity_ref
+
+		FROM event e
+		JOIN event_role er ON e.event_ref = er.event_ref
+		JOIN person p ON er.person_ref = p.person_ref
+		WHERE er.type IN ('C1','C2','CA1','CB1','CC1')
+			AND er.person_ref IS NOT NULL
+	) tm
+	GROUP BY opportunity_ref
+),
+contact_company AS (
+	SELECT
+		org.organisation_ref AS company_id,
+		cc.person_ref AS contact_id,
+		l.description,
+		ROW_NUMBER() OVER(PARTITION BY org.organisation_ref ORDER BY l.code::int ASC) rn
+	FROM organisation org
+	LEFT JOIN current_contact cc ON cc.organisation_ref = org.organisation_ref
+	LEFT JOIN lookup l ON cc.contact_status = l.code
+	WHERE code_type = '135'
+	AND cc.rn = 1
+),
+default_contact AS (
+	SELECT
+		o.organisation_ref company_id,
+		cc.contact_id,
+		ROW_NUMBER() OVER(PARTITION BY contact_id ORDER BY company_id) rn
+	FROM opportunity o
+	LEFT JOIN contact_company cc ON o.organisation_ref = cc.company_id
+	WHERE cc.contact_id IS NULL
+),
+distinct_default_contact AS (
+	SELECT
+		company_id,
+		MAX(rn)::text contact_id
+	FROM default_contact
+	GROUP BY company_id
+),
+opportunity_type AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '117'
+),
+job_status AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '119'
+),
+job_status_reason AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '265'
+),
+job_source AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '108'
+),
+job_analysis_category AS (
+	SELECT
+		code,
+		description
+	FROM lookup
+	WHERE code_type = '608'
+),
+job_location AS (
+	SELECT opportunity_ref,
+	string_agg(l.description, ', ') AS locations
+	FROM search_code sc
+	LEFT JOIN lookup l ON sc.code_type = l.code_type AND sc.code = l.code
+	WHERE opportunity_ref IS NOT NULL
+	AND sc.code_type = '1020'
+	GROUP BY opportunity_ref
+),
+job_qualification AS (
+	SELECT opportunity_ref,
+	string_agg(l.description, ', ') AS qualifications
+	FROM search_code sc
+	LEFT JOIN lookup l ON sc.code_type = l.code_type AND sc.code = l.code
+	WHERE opportunity_ref IS NOT NULL
+	AND sc.code_type = '1025'
+	GROUP BY opportunity_ref
+),
+job_language AS (
+	SELECT opportunity_ref,
+	string_agg(l.description, ', ') AS languages
+	FROM search_code sc
+	LEFT JOIN lookup l ON sc.code_type = l.code_type AND sc.code = l.code
+	WHERE opportunity_ref IS NOT NULL
+	AND sc.code_type = '1030'
+	GROUP BY opportunity_ref
+),
+job_industry AS (
+	SELECT opportunity_ref,
+	string_agg(l.description, ', ') AS industries
+	FROM search_code sc
+	LEFT JOIN lookup l ON sc.code_type = l.code_type AND sc.code = l.code
+	WHERE opportunity_ref IS NOT NULL
+	AND sc.code_type = '1005'
+	GROUP BY opportunity_ref
+),
+job_type AS (
+	SELECT opportunity_ref,
+	string_agg(l.description, ', ') AS job_types
+	FROM search_code sc
+	LEFT JOIN lookup l ON sc.code_type = l.code_type AND sc.code = l.code
+	WHERE opportunity_ref IS NOT NULL
+	AND sc.code_type = '1010'
+	GROUP BY opportunity_ref
+),
+job_skill AS (
+	SELECT opportunity_ref,
+	string_agg(l.description, ', ') AS skills
+	FROM search_code sc
+	LEFT JOIN lookup l ON sc.code_type = l.code_type AND sc.code = l.code
+	WHERE opportunity_ref IS NOT NULL
+	AND sc.code_type = '1015'
+	GROUP BY opportunity_ref
+),
+job_owner AS (
+	SELECT
+		person_ref,
+		type,
+		s.email_address
+	FROM person_type pt
+	LEFT JOIN staff s ON pt.person_type_ref = s.person_type_ref
+	WHERE pt.type LIKE '%Z%'
+	AND s.email_address LIKE '%@%'
+)
+
+------------------------------------------------- Main query --------------------------------------------------------------------------
+
+SELECT
+o.opportunity_ref AS job_id,
+CONCAT_WS(
+	E'\n',
+	CASE WHEN cij.all_contacts IS NOT NULL THEN CONCAT('Contact(s) involved: ', cij.all_contacts) END,
+	CASE WHEN js.description IS NOT NULL THEN CONCAT('Status: ', js.description) END,
+	CASE WHEN pv.package IS NOT NULL THEN CONCAT('Package: ', pv.package) END,
+	CASE WHEN jl.locations IS NOT NULL THEN CONCAT('Location: ', jl.locations) END,
+	CASE WHEN jt.job_types IS NOT NULL THEN CONCAT('Job types: ', jt.job_types) END,
+	CASE WHEN o.notes IS NOT NULL THEN CONCAT('Notes: ', E'\n', o.notes) END
+) "position-note"
+
+FROM opportunity o
+LEFT JOIN job_contact jc ON o.opportunity_ref = jc.job_id AND jc.rn = 1
+LEFT JOIN contact_company cc ON o.organisation_ref = cc.company_id AND cc.rn = 1
+LEFT JOIN distinct_default_contact dc ON o.organisation_ref = dc.company_id
+LEFT JOIN opportunity_type ot ON o.type = ot.code
+LEFT JOIN job_owner jo ON o.responsible_user = jo.person_ref
+LEFT JOIN permanent_vac pv ON o.opportunity_ref = pv.opportunity_ref
+LEFT JOIN temporary_vac tv ON o.opportunity_ref = tv.opportunity_ref
+LEFT JOIN job_status js ON o.record_status = js.code
+LEFT JOIN job_status_reason jsr ON o.record_status_reason = jsr.code
+LEFT JOIN job_source jso ON o.source = jso.code
+LEFT JOIN job_location jl ON o.opportunity_ref = jl.opportunity_ref
+LEFT JOIN job_qualification jq ON o.opportunity_ref = jq.opportunity_ref
+LEFT JOIN job_language jla ON o.opportunity_ref = jla.opportunity_ref
+LEFT JOIN job_industry ji ON o.opportunity_ref = ji.opportunity_ref
+LEFT JOIN job_type jt ON o.opportunity_ref = jt.opportunity_ref
+LEFT JOIN job_skill jsk ON o.opportunity_ref = jsk.opportunity_ref
+LEFT JOIN contact_involved_job cij ON o.opportunity_ref = cij.opportunity_ref
+WHERE NULLIF(TRIM(o.displayname), '') IS NOT NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job_lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_job_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1680</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update_note</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <key>
+        <name>actual_job_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>note</name>
+        <rename>position-note</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1856</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>prod_db</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>company_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_company_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
