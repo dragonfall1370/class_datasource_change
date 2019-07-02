@@ -5,7 +5,7 @@ file_extension,
 parent_object_name,
 l.displayname,
 'POSITION' entity_type,
-'documents' document_type
+'job_description' document_type
 FROM linkfile l
 JOIN opportunity o ON l.parent_object_ref = o.opportunity_ref
 WHERE parent_object_name = 'opportunity'
