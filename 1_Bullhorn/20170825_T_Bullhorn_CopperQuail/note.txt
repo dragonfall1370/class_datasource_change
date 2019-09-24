@@ -1,0 +1,16 @@
+All emails that may have been recorded on Intelligence will be contained within the CanContact or CliContact tables 
+(The CanID and CliID fields will relate these records to the Candidate and Client Tables respectively)
+
+------------------
+All documents are stored in BLOB fields in the following tables, again CanID and CliID fields will relate these to Candidates and Client tables
+
+COMPANY:
+CliFiles – Files for Clients
+
+CANDIDATE:
+CanFiles – Files for Candidates
+CVblob – Original CVs usually Word Documents
+fCVblob – the formatted CV for the Candidate
+PhotoBlob – The photo of the candidate
+
+ 
