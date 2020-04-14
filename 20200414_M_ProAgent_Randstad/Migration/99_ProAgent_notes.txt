@@ -1,0 +1,54 @@
+--Randstad PRO AGENT notes
++ Collation: Japanese_XJIS_140_CI_AI
+
+
+--Try 2 methods
++ Using SQL server with defined collation
++ Using PostgreSQL without defined collation
+
+
+--Step to clone / working on cloned tenant
++ update candidate / contact email adress
++ update users (optional)
+
+
+--CANDIDATE
+select id, email
+, '[' || id::text || ']' || email as new_email
+from candidate
+where deleted_timestamp is NULL
+and email ilike '%_@_%.__%'
+
+update candidate
+set email = '[' || id::text || ']' || email
+where deleted_timestamp is NULL
+and email ilike '%_@_%.__%' --updated 69297 rows
+
+--CONTACT
+select id, email
+, '[' || id::text || ']' || email as new_email
+from contact
+where deleted_timestamp is NULL
+and email ilike '%_@_%.__%'
+
+update contact
+set email = '[' || id::text || ']' || email
+where deleted_timestamp is NULL
+and email ilike '%_@_%.__%' --7373 rows
+
+
+--COLLECT ALL DOCUMENTS
+for /r %d in (*) do copy /Y "%d" "E:\DataMigration\Randstad\20200204_backup\Uploading\candidate_resume"
+
+for /r %d in (*) do copy /Y "%d" "E:\DataMigration\Randstad\20200204_backup\Uploading\company_resume"
+
+for /r %d in (*) do copy /Y "%d" "E:\DataMigration\Randstad\20200204_backup\Uploading\job_resume"
+
+
+--USING UPSERT
+using upsert in postgres for appending values
+
+
+--UNICODE CHAR
+using postgres to update so need to prevent using unicode chars or encoding chars
+

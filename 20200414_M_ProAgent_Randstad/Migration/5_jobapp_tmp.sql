@@ -1,0 +1,241 @@
+--JOB打診依頼 | JOB consultation request
+with jobapp as (select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Pending' as app_status
+, [JOB打診依頼実施日] as action_date
+, NULL as rejected_date
+, 'JOB打診依頼' as sub_status
+from csv_status
+where [JOB打診依頼実施日] <> ''
+
+UNION ALL
+--候補案件 | Candidate job
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Pending' as app_status, [候補案件実施日], NULL as rejected_date
+, '候補案件' as sub_status
+from csv_status
+where [候補案件実施日] <> ''
+
+UNION ALL
+--JOB打診 | JOB consultation
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Pending' as app_status, [JOB打診実施日], NULL as rejected_date
+, 'JOB打診' as sub_status
+from csv_status
+where [JOB打診実施日] <> ''
+
+UNION ALL
+--JOB打診NG | JOB consultation NG
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Rejected' as app_status, [JOB打診NG実施日], [JOB打診NG実施日] as rejected_date
+, 'Rejected - Candidate' as sub_status
+from csv_status
+where [JOB打診NG実施日] <> ''
+
+UNION ALL
+--応募準備中 | Preparing for application
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Pending' as app_status, [応募準備中実施日], NULL as rejected_date
+, 'Pitched - Waiting' as sub_status
+from csv_status
+where [応募準備中実施日] <> ''
+
+UNION ALL
+--応募承諾 | Application acceptance
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Pending' as app_status, [応募承諾実施日], NULL as rejected_date
+, '応募承諾' as sub_status
+from csv_status
+where [応募承諾実施日] <> ''
+
+UNION ALL
+--推薦NG | Recommendation NG
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Rejected' as app_status, [推薦NG実施日], [推薦NG実施日] as rejected_date
+, 'Rejected - Consultant' as sub_status
+from csv_status
+where [推薦NG実施日] <> ''
+
+UNION ALL
+--応募辞退 | Decline application
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Rejected' as app_status, [応募辞退実施日], [応募辞退実施日] as rejected_date
+, 'Rejected - Candidate' as sub_status
+from csv_status
+where [応募辞退実施日] <> ''
+
+UNION ALL
+--書類推薦 | Document recommendation
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Sent - Pending' as app_status, [書類推薦実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status
+where [書類推薦実施日] <> ''
+
+UNION ALL
+--筆記試験 | Written exam
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Sent - Pending' as app_status, [筆記試験実施日], NULL as rejected_date
+, '筆記試験' as sub_status
+from csv_status
+where [筆記試験実施日] <> ''
+
+UNION ALL
+--筆記試験 | NG	Written exam NG
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Sent - Rejected' as app_status, [筆記試験ＮＧ実施日], [筆記試験ＮＧ実施日] as rejected_date
+, 'Rejected - Client' as sub_status
+from csv_status where [筆記試験ＮＧ実施日] <> ''
+
+UNION ALL
+--書類OK | Document OK
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Sent - Pending' as app_status, [書類OK実施日], NULL as rejected_date
+, '書類OK' as sub_status
+from csv_status where [書類OK実施日] <> ''
+
+UNION ALL
+--書類NG | Document NG
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Sent - Rejected' as app_status, [書類NG実施日], [書類NG実施日] as rejected_date
+, 'Rejected - Client' as sub_status
+from csv_status where [書類NG実施日] <> ''
+
+UNION ALL
+--面接（一次）| Interview (primary)
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, '1st Interview - Pending' as app_status, [面接（一次）実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [面接（一次）実施日] <> ''
+
+UNION ALL
+--面接（一次）OK | Interview (primary) OK
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, '1st Interview - Pending' as app_status, [面接（一次）OK実施日], NULL as rejected_date
+, '面接OK' as sub_status
+from csv_status where [面接（一次）OK実施日] <> ''
+
+UNION ALL
+--面接（二次）| Interview (secondary)
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, '2nd+ Interview - Pending' as app_status, [面接（二次）実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [面接（二次）実施日] <> ''
+
+UNION ALL
+--面接（二次）OK | Interview (secondary) OK
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, '2nd+ Interview - Pending' as app_status, [面接（二次）OK実施日], NULL as rejected_date
+, '面接OK' as sub_status
+from csv_status where [面接（二次）OK実施日] <> ''
+
+UNION ALL
+--面接（三次以降） | Interview (3rd and later)
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, '2nd+ Interview - Pending' as app_status, [面接（三次以降）実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [面接（三次以降）実施日] <> ''
+
+UNION ALL
+--面接（三次以降）OK | Interview (3rd and later) OK
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, '2nd+ Interview - Pending' as app_status, [面接（三次以降）OK実施日], NULL as rejected_date
+, '面接OK' as sub_status
+from csv_status where [面接（三次以降）OK実施日] <> ''
+
+UNION ALL
+--面接（最終）| Interview (final)
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, '2nd+ Interview - Pending' as app_status, [面接（最終）実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [面接（最終）実施日] <> ''
+
+UNION ALL
+--面接NG | Interview NG
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, case when coalesce(nullif([面接（二次）実施日],'')
+					, nullif([面接（二次）OK実施日], '')
+					, nullif([面接（三次以降）実施日], '')
+					, nullif([面接（三次以降）OK実施日], '')
+					, nullif([面接（最終）実施日], ''), NULL) is NULL then '1st Interview - Rejected'
+	else '2nd+ Interview - Rejected' end as app_status
+, [面接NG実施日]
+, [面接NG実施日] as rejected_date
+, NULL as sub_status
+/* --Audit rules
+, [面接（二次）実施日]
+, [面接（二次）OK実施日]
+, [面接（三次以降）実施日]
+, [面接（三次以降）OK実施日]
+, [面接（最終）実施日] */
+from csv_status where [面接NG実施日] <> ''
+
+UNION ALL
+--内定 | Offer
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Offered - received' as app_status, [内定実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [内定実施日] <> ''
+
+UNION ALL
+--入社承諾 | Acceptance to join
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Placed - Starting' as app_status, [入社承諾実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [入社承諾実施日] <> ''
+
+UNION ALL
+--入社予定 | Plan to join
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Placed - Starting' as app_status, [入社予定実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [入社予定実施日] <> ''
+
+UNION ALL
+--入社 | Join
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Placed - Active' as app_status, [入社実施日], NULL as rejected_date
+, NULL as sub_status
+from csv_status where [入社実施日] <> ''
+
+UNION ALL
+--本人辞退 | Decline
+select [キャンディデイト PANO ] as cand_ext_id
+, [JOB PANO ] as job_ext_id
+, 'Shortlisted - Rejected' as app_status, [本人辞退実施日], NULL as rejected_date
+, 'Rejected - Candidate' as sub_status
+from csv_status where [本人辞退実施日] <> '')
+
+select cand_ext_id
+, job_ext_id
+, app_status
+, convert(date, action_date, 120) as action_date
+, convert(date, rejected_date, 120) as rejected_date
+, sub_status
+--into pa_final_jobapp --temp table for job app
+from jobapp
+--where cand_ext_id = 'CDT001017' and job_ext_id = 'JOB000720'
