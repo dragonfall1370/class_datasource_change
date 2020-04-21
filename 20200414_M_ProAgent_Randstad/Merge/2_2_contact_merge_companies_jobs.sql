@@ -58,7 +58,7 @@ with contact_company as (select c.id, c.external_id
 	join mike_tmp_company_dup_check m on m.vc_pa_company_id = c.company_id
 	where 1=1
 	and deleted_timestamp is NULL
-	and external_id ilike 'REC%' --9614 rows
+	and (external_id ilike 'REC%' or external_id ilike 'DEF%') --9614 rows
 	)
 	
 update contact c
