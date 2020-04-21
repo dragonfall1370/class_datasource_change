@@ -1,0 +1,2436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>3_job</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/09/17 15:58:16.201</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/09/17 15:58:16.201</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Job info</note>
+      <xloc>48</xloc>
+      <yloc>16</yloc>
+      <width>53</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Job compensation</note>
+      <xloc>48</xloc>
+      <yloc>256</yloc>
+      <width>107</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Job leads / Forecast fee</note>
+      <xloc>640</xloc>
+      <yloc>16</yloc>
+      <width>133</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Job CF</note>
+      <xloc>640</xloc>
+      <yloc>256</yloc>
+      <width>45</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Job Industry / FE / SFE</note>
+      <xloc>640</xloc>
+      <yloc>384</yloc>
+      <width>127</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Remove jobs 20200324</note>
+      <xloc>48</xloc>
+      <yloc>480</yloc>
+      <width>130</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>From (DB)</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfox2</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ff228dc6fa8c</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>To (PROD)</name>
+    <server>10.0.9.189</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfox.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Job Reg date</from>
+      <to>job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job lookup</from>
+      <to>Update</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>FromSalary - ToSalary</from>
+      <to>Job lookup - job type</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup - job type</from>
+      <to>Insert job Salary from to</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job pct placement</from>
+      <to>job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job lookup</from>
+      <to>Update pct placement</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job Forecast</from>
+      <to>job leads lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job leads lookup</from>
+      <to>currency</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>currency</from>
+      <to>Update forecast fee</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contract_rate FROM/TO</from>
+      <to>Job lookup - job type</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup - job type</from>
+      <to>Contract salary from to</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job Assignment No.</from>
+      <to>job lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job lookup 2</from>
+      <to>CF free text</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job industry</from>
+      <to>Job lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup 3</from>
+      <to>lookup industry</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job FE/SFE</from>
+      <to>Job lookup 4</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup 4</from>
+      <to>FE lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>FE lookup</from>
+      <to>SFE Lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>SFE Lookup</from>
+      <to>Insert Job FESFE</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>lookup industry</from>
+      <to>Update industry</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job to be removed</from>
+      <to>job lookup 6</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>job lookup 6</from>
+      <to>Update job to be removed</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>CF free text</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>additional_type</column_name>
+        <stream_name>additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>field_value</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contract salary from to</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>compensation</table>
+      <key>
+        <name>VCJobID</name>
+        <field>position_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>contract_rate_from</name>
+        <rename>job_salary_from</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>contract_rate_to</name>
+        <rename>job_salary_to</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_hour_per_day</name>
+        <rename>working_hours_per_day</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_day_per_week</name>
+        <rename>working_days_per_week</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_day_per_month</name>
+        <rename>working_days_per_month</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_week_per_month</name>
+        <rename>working_weeks_per_month</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_hour_per_week</name>
+        <rename>working_hours_per_week</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contract_rate FROM/TO</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+, jobleads as (select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647') --jobs migrated
+	or a.assignmentno in ('2000501','2000876','2000906','2000909','2001060','2001066','2001104','2001122','2001124','2001150','2001158','2001177','2001178','2001179','2001188','2001197','2001225','2001227','2001228','2001231','2001235','2001238','2001239','2001265','2001266','2001276','2001286','2001292','2001306','2001328','2001334','2001335','2001340','2001349','2001353','2001359','2001387','2001392','2001393','2001397','2001398','2001400','2001407','2001421','2001423','2001424','2001443','2001446','2001469','2001484','2001485','2001513','2001518','2001521','2001533','2001536','2001537','2001538','2001549','2001553','2001558','2001565','2001567','2001572','2001583','2001593','2001593','2001596','2001602','2001613','2001618','2001623','2001625','2001628','2001631','2001632','2001634','2001639','2001640','2001648','2001655','2001669','2001670','2001671','1013982','1013999','2000700','2000923','2000924','2000960','2001064','2001102','2001103','2001109','2001112','2001154','2001157','2001175','2001221','2001226','2001229','2001230','2001232','2001233','2001234','2001236','2001237','2001240','2001241','2001242','2001243','2001244','2001245','2001248','2001249','2001350','2001364','2001373','2001380','2001390','2001412','2001419','2001422','2001427','2001434','2001460','2001473','2001494','2001496','2001547','2001548','2001550','2001574','2001585','2001591','2001624','2001627','2001630','2001633','2001642','2001650','2001651','2001653','2001659','2001660','2001661','2001662') --jobs leads
+	)
+	
+, selected_assignment as 
+	(select idassignment
+	from interim
+	
+	UNION
+	select idassignment
+	from jobleads) --select * from selected_assignment
+	
+select idassignment job_ext_id
+, createdon::timestamp as reg_date
+, a.salaryfrom::float job_salary_from --#inject
+, a.salaryto::float job_salary_to --#inject
+, a.successprobability::float pct_chance_of_placement --#inject
+, 2 as position_type
+, 1 as position_category
+--Default working hours for contract
+, 8 as working_hours_per_day
+, 5 as working_days_per_week
+, 40 working_hours_per_week
+, 22 working_days_per_month
+, 4 working_weeks_per_month
+from "assignment" a
+where idassignment in (select idassignment from selected_assignment) --566 jobs
+and coalesce(a.salaryfrom, a.salaryto) is not NULL --266 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>Y</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>FE lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>fe</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCFEID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>FromSalary - ToSalary</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+, jobleads as (select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647') --jobs migrated
+	or a.assignmentno in ('2000501','2000876','2000906','2000909','2001060','2001066','2001104','2001122','2001124','2001150','2001158','2001177','2001178','2001179','2001188','2001197','2001225','2001227','2001228','2001231','2001235','2001238','2001239','2001265','2001266','2001276','2001286','2001292','2001306','2001328','2001334','2001335','2001340','2001349','2001353','2001359','2001387','2001392','2001393','2001397','2001398','2001400','2001407','2001421','2001423','2001424','2001443','2001446','2001469','2001484','2001485','2001513','2001518','2001521','2001533','2001536','2001537','2001538','2001549','2001553','2001558','2001565','2001567','2001572','2001583','2001593','2001593','2001596','2001602','2001613','2001618','2001623','2001625','2001628','2001631','2001632','2001634','2001639','2001640','2001648','2001655','2001669','2001670','2001671','1013982','1013999','2000700','2000923','2000924','2000960','2001064','2001102','2001103','2001109','2001112','2001154','2001157','2001175','2001221','2001226','2001229','2001230','2001232','2001233','2001234','2001236','2001237','2001240','2001241','2001242','2001243','2001244','2001245','2001248','2001249','2001350','2001364','2001373','2001380','2001390','2001412','2001419','2001422','2001427','2001434','2001460','2001473','2001494','2001496','2001547','2001548','2001550','2001574','2001585','2001591','2001624','2001627','2001630','2001633','2001642','2001650','2001651','2001653','2001659','2001660','2001661','2001662') --jobs leads
+	)
+	
+, selected_assignment as 
+	(select idassignment
+	from interim
+	
+	UNION
+	select idassignment
+	from jobleads) --select * from selected_assignment
+	
+select idassignment job_ext_id
+, createdon::timestamp as reg_date
+, a.salaryfrom::float job_salary_from --#inject
+, a.salaryto::float job_salary_to --#inject
+, a.successprobability::float pct_chance_of_placement --#inject
+, 1 as position_type
+, 1 as position_category --1-job 2-job leads
+from "assignment" a
+where idassignment in (select idassignment from selected_assignment) --566 jobs
+and coalesce(a.salaryfrom, a.salaryto) is not NULL --266 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Job FESFE</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema/>
+    <table>position_description_functional_expertise</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>functional_expertise_id</column_name>
+        <stream_name>VCFEID</stream_name>
+      </field>
+      <field>
+        <column_name>sub_functional_expertise_id</column_name>
+        <stream_name>VCSFEID</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert job Salary from to</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>compensation</table>
+      <key>
+        <name>VCJobID</name>
+        <field>position_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>annual_salary_from</name>
+        <rename>job_salary_from</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>annual_salary_to</name>
+        <rename>job_salary_to</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job Assignment No.</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+, jobleads as (select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647') --jobs migrated
+	or a.assignmentno in ('2000501','2000876','2000906','2000909','2001060','2001066','2001104','2001122','2001124','2001150','2001158','2001177','2001178','2001179','2001188','2001197','2001225','2001227','2001228','2001231','2001235','2001238','2001239','2001265','2001266','2001276','2001286','2001292','2001306','2001328','2001334','2001335','2001340','2001349','2001353','2001359','2001387','2001392','2001393','2001397','2001398','2001400','2001407','2001421','2001423','2001424','2001443','2001446','2001469','2001484','2001485','2001513','2001518','2001521','2001533','2001536','2001537','2001538','2001549','2001553','2001558','2001565','2001567','2001572','2001583','2001593','2001593','2001596','2001602','2001613','2001618','2001623','2001625','2001628','2001631','2001632','2001634','2001639','2001640','2001648','2001655','2001669','2001670','2001671','1013982','1013999','2000700','2000923','2000924','2000960','2001064','2001102','2001103','2001109','2001112','2001154','2001157','2001175','2001221','2001226','2001229','2001230','2001232','2001233','2001234','2001236','2001237','2001240','2001241','2001242','2001243','2001244','2001245','2001248','2001249','2001350','2001364','2001373','2001380','2001390','2001412','2001419','2001422','2001427','2001434','2001460','2001473','2001494','2001496','2001547','2001548','2001550','2001574','2001585','2001591','2001624','2001627','2001630','2001633','2001642','2001650','2001651','2001653','2001659','2001660','2001661','2001662') --jobs leads
+	)
+	
+, selected_assignment as 
+	(select idassignment
+	from interim
+	
+	UNION
+	select idassignment
+	from jobleads) --select * from selected_assignment
+	
+select idassignment job_ext_id
+, assignmentno as field_value
+, 'add_job_info' as additional_type
+, 1006 as form_id
+, 11272 as field_id
+, current_timestamp as insert_timestamp
+from "assignment" a
+where idassignment in (select idassignment from selected_assignment) --566 jobs</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job FE/SFE</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with fe_sfe as (select j.parentid as FEID
+	, case when j.parentid = '00000000-0000-0000-0000-000000000000' then 'Other' 
+			else j2.value end as FE
+	, j.idjobfunction as SFEID
+	, j.value as SFE
+	, 'The list extracted from Job Function' note
+	from jobfunction j
+	left join jobfunction j2 on j2.idjobfunction = j.parentid
+	--order by j2.value, j.value --91 rows
+	
+	UNION
+	--Bank &amp; Fin Skills | 186 values
+	select u.parentid as FEID
+	, case when u.parentid = '00000000-0000-0000-0000-000000000000' then 'Bank &amp; Fin Skills' 
+			else 'Bank &amp; Fin Skills' || ' | ' || u2.value end as FE
+	, u.idudskill2 as SFEID
+	, u.value as SFE
+	, 'The list extracted from Bank &amp; Fin Skills' note
+	from udskill2 u
+	left join udskill2 u2 on u2.idudskill2 = u.parentid
+	--order by u2.value, u.value --186 rows
+	)
+
+, interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+, jobleads as (select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647') --jobs migrated
+	or a.assignmentno in ('2000501','2000876','2000906','2000909','2001060','2001066','2001104','2001122','2001124','2001150','2001158','2001177','2001178','2001179','2001188','2001197','2001225','2001227','2001228','2001231','2001235','2001238','2001239','2001265','2001266','2001276','2001286','2001292','2001306','2001328','2001334','2001335','2001340','2001349','2001353','2001359','2001387','2001392','2001393','2001397','2001398','2001400','2001407','2001421','2001423','2001424','2001443','2001446','2001469','2001484','2001485','2001513','2001518','2001521','2001533','2001536','2001537','2001538','2001549','2001553','2001558','2001565','2001567','2001572','2001583','2001593','2001593','2001596','2001602','2001613','2001618','2001623','2001625','2001628','2001631','2001632','2001634','2001639','2001640','2001648','2001655','2001669','2001670','2001671','1013982','1013999','2000700','2000923','2000924','2000960','2001064','2001102','2001103','2001109','2001112','2001154','2001157','2001175','2001221','2001226','2001229','2001230','2001232','2001233','2001234','2001236','2001237','2001240','2001241','2001242','2001243','2001244','2001245','2001248','2001249','2001350','2001364','2001373','2001380','2001390','2001412','2001419','2001422','2001427','2001434','2001460','2001473','2001494','2001496','2001547','2001548','2001550','2001574','2001585','2001591','2001624','2001627','2001630','2001633','2001642','2001650','2001651','2001653','2001659','2001660','2001661','2001662') --jobs leads
+	)
+	
+, selected_assignment as 
+	(select idassignment
+	from interim
+	
+	UNION
+	select idassignment
+	from jobleads)
+
+/* AUDIT CHECK
+select idassignment
+, j.parentid
+, j.value
+from assignmentcode a
+left join jobfunction j on j.idjobfunction = a.codeid
+where idtablemd = '6051cf96-6d44-4aeb-925e-175726d0f97b' --JobFunction
+and idassignment in (select idassignment from selected_assignment)
+*/ --693 rows
+
+select idassignment job_ext_id
+, fe.feid
+, fe.fe
+, fe.sfeid
+, fe.sfe
+from assignmentcode a
+left join jobfunction j on j.idjobfunction = a.codeid
+left join fe_sfe fe on fe.feid = j.parentid and fe.sfeid = j.idjobfunction
+where idtablemd = '6051cf96-6d44-4aeb-925e-175726d0f97b' --JobFunction
+and idassignment in (select idassignment from selected_assignment)</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job Forecast</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--ONLY UPDATE FORECAST FEE FOR JOB LEADS
+select idassignment job_ext_id
+, 2 as job_category --job leads
+, 0 as use_compensation_fee
+, a.estimatedvalue::float as forecast_annual_fee
+, a.idcurrency
+, case when c.value in ('Unknown', '---') then 'EUR'
+		when c.value in ('CZK') then 'EUR'
+		when c.value in ('TRL') then 'TRY'
+		when c.value in ('LTL', 'RON') then 'EUR'
+	else c.value end as currency
+from "assignment" a
+left join currency c on c.idcurrency = a.idcurrency
+where estimatedvalue is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job Reg date</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>/* with cte_job AS (SELECT a.idassignment job_id
+	, a.createdon::date created_date --#inject
+	, a.salaryfrom job_salary_from --#inject
+	, a.salaryto job_salary_to --#inject
+	, a.successprobability pct_chance_of_placement --#inject
+	, ROW_NUMBER() OVER(PARTITION BY a.idassignment ORDER BY ac.contactedon ASC) rn
+	FROM assignmentcontact ac
+	JOIN (select * from assignment where isdeleted = '0') a ON ac.idassignment = a.idassignment
+	WHERE a.isdeleted = '0'
+)
+
+SELECT job_id job_ext_id
+, job_salary_from::float
+, job_salary_to::float
+, created_date
+, pct_chance_of_placement
+FROM cte_job j
+WHERE rn = 1
+--and coalesce(nullif(job_salary_from,''), nullif(job_salary_to,'')) is not NULL
+*/
+
+--LIMITED MIGRATED JOBS
+with interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+, jobleads as (select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647') --jobs migrated
+	or a.assignmentno in ('2000501','2000876','2000906','2000909','2001060','2001066','2001104','2001122','2001124','2001150','2001158','2001177','2001178','2001179','2001188','2001197','2001225','2001227','2001228','2001231','2001235','2001238','2001239','2001265','2001266','2001276','2001286','2001292','2001306','2001328','2001334','2001335','2001340','2001349','2001353','2001359','2001387','2001392','2001393','2001397','2001398','2001400','2001407','2001421','2001423','2001424','2001443','2001446','2001469','2001484','2001485','2001513','2001518','2001521','2001533','2001536','2001537','2001538','2001549','2001553','2001558','2001565','2001567','2001572','2001583','2001593','2001593','2001596','2001602','2001613','2001618','2001623','2001625','2001628','2001631','2001632','2001634','2001639','2001640','2001648','2001655','2001669','2001670','2001671','1013982','1013999','2000700','2000923','2000924','2000960','2001064','2001102','2001103','2001109','2001112','2001154','2001157','2001175','2001221','2001226','2001229','2001230','2001232','2001233','2001234','2001236','2001237','2001240','2001241','2001242','2001243','2001244','2001245','2001248','2001249','2001350','2001364','2001373','2001380','2001390','2001412','2001419','2001422','2001427','2001434','2001460','2001473','2001494','2001496','2001547','2001548','2001550','2001574','2001585','2001591','2001624','2001627','2001630','2001633','2001642','2001650','2001651','2001653','2001659','2001660','2001661','2001662') --jobs leads
+	)
+	
+, selected_assignment as 
+	(select idassignment
+	from interim
+	
+	UNION
+	select idassignment
+	from jobleads) --select * from selected_assignment
+	
+select idassignment job_ext_id
+, createdon::timestamp as reg_date
+from "assignment" a
+where idassignment in (select idassignment from selected_assignment) --566 jobs</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job industry</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select distinct a.idassignment as job_ext_id
+, a.idassignmentsector
+, ast.value as industry
+from assignment a
+left join assignmentsector ast on ast.idassignmentsector = a.idassignmentsector
+where a.idassignmentsector is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup - job type</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>position_type</name>
+        <field>position_type</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>position_category</name>
+        <field>position_category</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup 4</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job pct placement</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>/*
+with cte_job AS (SELECT a.idassignment job_id
+	, a.createdon::date created_date --#inject
+	, a.salaryfrom job_salary_from --#inject
+	, a.salaryto job_salary_to --#inject
+	, a.successprobability pct_chance_of_placement --#inject
+	, ROW_NUMBER() OVER(PARTITION BY a.idassignment ORDER BY ac.contactedon ASC) rn
+	FROM assignmentcontact ac
+	JOIN (select * from assignment where isdeleted = '0') a ON ac.idassignment = a.idassignment
+	WHERE a.isdeleted = '0'
+)
+
+SELECT job_id job_ext_id
+, job_salary_from::float
+, job_salary_to::float
+, created_date
+, pct_chance_of_placement::float
+FROM cte_job j
+WHERE rn = 1
+and nullif(pct_chance_of_placement,'') is not NULL
+*/
+
+with interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+, jobleads as (select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647') --jobs migrated
+	or a.assignmentno in ('2000501','2000876','2000906','2000909','2001060','2001066','2001104','2001122','2001124','2001150','2001158','2001177','2001178','2001179','2001188','2001197','2001225','2001227','2001228','2001231','2001235','2001238','2001239','2001265','2001266','2001276','2001286','2001292','2001306','2001328','2001334','2001335','2001340','2001349','2001353','2001359','2001387','2001392','2001393','2001397','2001398','2001400','2001407','2001421','2001423','2001424','2001443','2001446','2001469','2001484','2001485','2001513','2001518','2001521','2001533','2001536','2001537','2001538','2001549','2001553','2001558','2001565','2001567','2001572','2001583','2001593','2001593','2001596','2001602','2001613','2001618','2001623','2001625','2001628','2001631','2001632','2001634','2001639','2001640','2001648','2001655','2001669','2001670','2001671','1013982','1013999','2000700','2000923','2000924','2000960','2001064','2001102','2001103','2001109','2001112','2001154','2001157','2001175','2001221','2001226','2001229','2001230','2001232','2001233','2001234','2001236','2001237','2001240','2001241','2001242','2001243','2001244','2001245','2001248','2001249','2001350','2001364','2001373','2001380','2001390','2001412','2001419','2001422','2001427','2001434','2001460','2001473','2001494','2001496','2001547','2001548','2001550','2001574','2001585','2001591','2001624','2001627','2001630','2001633','2001642','2001650','2001651','2001653','2001659','2001660','2001661','2001662') --jobs leads
+	)
+	
+, selected_assignment as 
+	(select idassignment
+	from interim
+	
+	UNION
+	select idassignment
+	from jobleads) --select * from selected_assignment
+	
+select idassignment job_ext_id
+, createdon::timestamp as reg_date
+, a.salaryfrom::float job_salary_from --#inject
+, a.salaryto::float job_salary_to --#inject
+, a.successprobability::float pct_chance_of_placement --#inject
+from "assignment" a
+where idassignment in (select idassignment from selected_assignment) --566 jobs
+and a.successprobability is not NULL --266 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>SFE Lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>sub_functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCFEID</name>
+        <field>functional_expertise_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>sfe</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCSFEID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <key>
+        <name>VCJobID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>reg_date</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update forecast fee</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <key>
+        <name>VCJobID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>use_compensation_fee</name>
+        <rename>use_compensation_fee</rename>
+      </value>
+      <value>
+        <name>forecast_annual_fee</name>
+        <rename>forecast_annual_fee</rename>
+      </value>
+      <value>
+        <name>forecast_annual_fee_currency</name>
+        <rename>VCCurrency</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update industry</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <key>
+        <name>VCJobID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>vertical_id</name>
+        <rename>VCIndustryID</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1136</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update pct placement</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <key>
+        <name>VCJobID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>percentage_placement</name>
+        <rename>pct_chance_of_placement</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>currency</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>currencies</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>currency</name>
+        <field>code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>key</name>
+        <rename>VCCurrency</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job leads lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>job_category</name>
+        <field>position_category</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup industry</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>industry</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCIndustryID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job to be removed</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with interim as (
+	select idassignment, assignmenttitle, idcompany, assignmentno
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany, assignmentno
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+)
+
+select idassignment job_ext_id
+, now() as deleted_timestamp
+, 1 position_category --remove only job but not job leads
+, 1 to_be_deleted
+from interim
+where assignmentno::int not in (2001656,2001606,2001386,2001365,2001337,2001331,2001330,2001190,2001138,2001076,2001030,2000998,2000556,2000555,2000486,1008882,1008881,1008860,1008862,1008869,1008857,1008871,1008867,1008859,1008868,1008861,1008864,1008856,1008866)</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update job to be removed</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <key>
+        <name>VCJobID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>deleted_timestamp</name>
+        <rename>deleted_timestamp</rename>
+      </value>
+      <value>
+        <name>hidden_timestamp</name>
+        <rename>deleted_timestamp</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>job lookup 6</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>position_category</name>
+        <field>position_category</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

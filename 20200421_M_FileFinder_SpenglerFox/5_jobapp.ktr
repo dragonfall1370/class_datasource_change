@@ -1,0 +1,3947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>5_jobapp</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/11/22 17:41:54.656</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/11/22 17:41:54.656</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Update permanent placement</note>
+      <xloc>32</xloc>
+      <yloc>208</yloc>
+      <width>169</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Update Placement details as requested
+--PLACED status not supported via data import
+--Set position_type of those jobs = 1 (PERMANENT) as discussed
+--Used for injecting revenue profit split</note>
+      <xloc>16</xloc>
+      <yloc>16</yloc>
+      <width>351</width>
+      <heigth>74</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Dummy offer already created for PERMANENT OFFERED status
+Valid = 1 as default (no need to import)
+Position_type and currency_type added | gross_annual_salary | payrate added</note>
+      <xloc>944</xloc>
+      <yloc>256</yloc>
+      <width>415</width>
+      <heigth>58</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>[Invoice] table only contains PLACED stage</note>
+      <xloc>1120</xloc>
+      <yloc>512</yloc>
+      <width>237</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>pay_rate is affected more than gross_annual_salary</note>
+      <xloc>880</xloc>
+      <yloc>208</yloc>
+      <width>276</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>update placed date in ATS | placed date = hire_date</note>
+      <xloc>672</xloc>
+      <yloc>96</yloc>
+      <width>280</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>From (DB)</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfoxreview</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ff228dc6fa8c</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>To (VC)</name>
+    <server>10.0.9.92</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfox-review.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Job lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup.com</from>
+      <to>Contact lookup.con 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Compensation set</from>
+      <to>Insert offer pay charge - Contract</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Concat Fields Client Name</from>
+      <to>Insert offer personal Info</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Concat Fields Client Name</from>
+      <to>Offer personal info - Contract</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact lookup.con 2</from>
+      <to>Concat Fields Client Name</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Position Candidate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Update App placed date</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Update App status</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Update contract status</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Update job App status</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>JobApp Contract placement</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>JobApp Offer info - PERM</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>JobApp Permanent placement</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>Company lookup.com</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>Compensation set</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>Insert [Invoice]</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>Update Invoice</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>Update Terminated Invoice 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>User.u</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Insert Update [Offer] PERM</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Insert Update [Offer] contract</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Offer</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Placed lookup output</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Update Offer</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>User.u</from>
+      <to>Insert offer_revenue_split</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>User.u</from>
+      <to>Microsoft Excel Writer</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>JobApp Offer info - CONTR</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Profit Split</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Concat Fields Client Name</from>
+      <to>Insert offer personal Info (OFFERED)</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job App PLACED</from>
+      <to>Candidate lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Candidate lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>first_name</name>
+        <rename>c.first_name</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>last_name</name>
+        <rename>c.last_name</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>email</name>
+        <rename>c.email</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company lookup.com</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>pd.company_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>name</name>
+        <rename>com.client_company_name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Compensation set</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>compensation_setting</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>system_code</name>
+        <field>system_code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>comp_setting_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Concat Fields Client Name</name>
+    <type>ConcatFields</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator> </separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>N</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>file</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>txt</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>client_first_name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>client_last_name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <ConcatFields>
+      <targetFieldName>client_contact_name</targetFieldName>
+      <targetFieldLength>0</targetFieldLength>
+      <removeSelectedFields>N</removeSelectedFields>
+    </ConcatFields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact lookup.con 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>pd.client_contact_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>first_name</name>
+        <rename>client_first_name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>last_name</name>
+        <rename>client_last_name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>department</name>
+        <rename>client_department</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Update [Offer] PERM</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>offer</table>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_candidate_id</name>
+        <rename>VCJobAppID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>draft_offer</name>
+        <rename>draft_offer</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>position_type</name>
+        <rename>pd.position_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>currency_type</name>
+        <rename>pd.currency_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>valid</name>
+        <rename>placed_valid</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Update [Offer] contract</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>offer</table>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_candidate_id</name>
+        <rename>VCJobAppID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>draft_offer</name>
+        <rename>draft_offer</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>position_type</name>
+        <rename>pd.position_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>currency_type</name>
+        <rename>pd.currency_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>valid</name>
+        <rename>placed_valid</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>latest_user_id</name>
+        <rename>latest_user_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>latest_update_date</name>
+        <rename>latest_update_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_hour_per_day</name>
+        <rename>working_hours_per_day</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_day_per_week</name>
+        <rename>working_days_per_week</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_hour_per_week</name>
+        <rename>working_hours_per_week</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_day_per_month</name>
+        <rename>working_days_per_month</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>working_week_per_month</name>
+        <rename>working_weeks_per_month</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert [Invoice]</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>invoice</table>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_candidate_id</name>
+        <rename>VCJobAppID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>status</name>
+        <rename>invoicestatus</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>renewal_index</name>
+        <rename>renewal_index</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>renewal_flow_status</name>
+        <rename>renewal_flow_status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>valid</name>
+        <rename>offer_valid</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>latest_update_date</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert offer pay charge - Contract</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>offer_pay_charge</table>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>comp_setting_id</name>
+        <rename>comp_setting_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>pay_rate</name>
+        <rename>pay_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>total_pay_rate</name>
+        <rename>pay_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>profit</name>
+        <rename>profit</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>charge_rate</name>
+        <rename>charge_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>margin_percent</name>
+        <rename>margin_percent</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>markup_percent</name>
+        <rename>markup_percent</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>latest_update_date</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert offer personal Info</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>offer_personal_info</table>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>last_name</name>
+        <rename>c.last_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>first_name</name>
+        <rename>c.first_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>email</name>
+        <rename>c.email</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_company_id</name>
+        <rename>pd.company_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_company_name</name>
+        <rename>com.client_company_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_contact_id</name>
+        <rename>pd.client_contact_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_contact_name</name>
+        <rename>client_contact_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_department</name>
+        <rename>client_department</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>tax_rate</name>
+        <rename>tax_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>export_data_to</name>
+        <rename>export_data_to</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>net_total</name>
+        <rename>net_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>other_invoice_items_total</name>
+        <rename>other_invoice_items_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>invoice_total</name>
+        <rename>invoice_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>start_date</name>
+        <rename>contractstartdate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>placed_date</name>
+        <rename>placement_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>offer_date</name>
+        <rename>offer_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>payslip_email</name>
+        <rename>c.email</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert offer personal Info (OFFERED)</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>offer_personal_info</table>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>last_name</name>
+        <rename>c.last_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>first_name</name>
+        <rename>c.first_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>email</name>
+        <rename>c.email</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_company_id</name>
+        <rename>pd.company_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_company_name</name>
+        <rename>com.client_company_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_contact_id</name>
+        <rename>pd.client_contact_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_contact_name</name>
+        <rename>client_contact_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_department</name>
+        <rename>client_department</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>tax_rate</name>
+        <rename>tax_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>export_data_to</name>
+        <rename>export_data_to</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>net_total</name>
+        <rename>net_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>other_invoice_items_total</name>
+        <rename>other_invoice_items_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>invoice_total</name>
+        <rename>invoice_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>start_date</name>
+        <rename>start_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>placed_date</name>
+        <rename>offer_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>offer_date</name>
+        <rename>offer_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>note</name>
+        <rename>internal_note</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>payslip_email</name>
+        <rename>c.email</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert offer_revenue_split</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>offer_revenue_split</table>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_id</name>
+        <rename>VCUserID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>amount</name>
+        <rename>split_amount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>profit_split_mode</name>
+        <rename>profit_split_mode</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job App PLACED</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_candidate AS (SELECT
+	c.idperson candidate_id,
+	ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+) --586657 rows
+
+, cte_job AS (
+	SELECT a.idassignment job_id,
+	CASE
+		WHEN f.idassignment IS NULL THEN 'PERMANENT'
+		ELSE 'CONTRACT' END job_type
+	, ROW_NUMBER() OVER(PARTITION BY a.idassignment ORDER BY ac.contactedon ASC) rn
+	FROM assignmentcontact ac
+	JOIN (select * from "assignment" where isdeleted = '0') a ON ac.idassignment = a.idassignment
+	LEFT JOIN flex f ON f.idassignment = a.idassignment
+	WHERE a.isdeleted = '0'
+) --21704 rows
+
+, rn_placementdate as (select idassignmentcandidate
+		, coalesce(placementdate::timestamp, createdon::timestamp) as placementdate
+		, row_number() over(partition by idassignmentcandidate order by placementdate::timestamp desc, createdon::timestamp desc) as rn
+		from placement
+		where coalesce(createdon, placementdate) is not NULL)
+		
+, placementdate as (select idassignmentcandidate, placementdate
+		from rn_placementdate
+		where rn = 1)
+
+, map_stage AS (
+	SELECT ac.idassignmentcandidate job_app_ext_id
+	, job_type
+	, ac.idassignment job_id
+	, ac.idperson candidate_id
+	, to_char(ac.createdon::DATE, 'YYYY-MM-DD') actioned_date
+	, coalesce(pd.placementdate::timestamp, ac.contactedon::timestamp, ac.createdon::timestamp) offer_date
+	, coalesce(pd.placementdate::timestamp, ac.contactedon::timestamp, ac.createdon::timestamp) placement_date
+	, coalesce(ct.contractstartdate::timestamp, pd.placementdate, ac.contactedon::timestamp) as contractstartdate
+	, coalesce(f.contractenddate::timestamp, ct.estimatedcontractenddate::timestamp) as contractenddate
+	, f.hoursperday::float
+	, f.daysperweek::float
+	, ct.contractextendedtodate::timestamp renewed_date
+	, CASE cp.value
+		when 'Approach' then 'SHORTLISTED'
+		when 'Arrange Interv' then 'FIRST_INTERVIEW'
+		when 'Client Interview' then 'FIRST_INTERVIEW'
+		when 'CV Benchmark Sent' then 'CANDIDATE'
+		when 'CV Received' then 'SHORTLISTED'
+		when 'CV Sent' then 'CANDIDATE'
+		when 'Follow-Up Conv' then 'SHORTLISTED'
+		when 'Hold' then 'SHORTLISTED'
+		when 'Interview With SF' then 'FIRST_INTERVIEW'
+		when 'Left a Message' then 'SHORTLISTED'
+		when 'Longlist' then 'SHORTLISTED'
+		when 'Marketing Sent' then 'CANDIDATE'
+		when 'Not Interested' then 'SHORTLISTED'
+		when 'Not Interested-Intv' then 'FIRST_INTERVIEW'
+		when 'Off Limits' then 'CANDIDATE'
+		when 'Offer' then 'OFFERED'
+		when 'Offer Withdrew' then 'OFFERED'
+		when 'Offer/Rej' then 'OFFERED'
+		when 'Placed' then 'PLACED'
+		when 'Placed Cand Follow' then 'PLACED'
+		when 'Reject/I' then 'FIRST_INTERVIEW'
+		when 'Reject/S' then 'SECOND_INTERVIEW'
+		when 'Rejected' then 'SHORTLISTED'
+		when 'Rejected Feedback' then 'CANDIDATE'
+		when 'Screening Completed – Not interested' then 'SHORTLISTED'
+		when 'Screening Completed – Rejected' then 'SHORTLISTED'
+		when 'Screening Completed – Spec Sent' then 'SHORTLISTED'
+		when 'Shortlist' then 'SHORTLISTED'
+		when 'SL Cons Approval' then 'SHORTLISTED'
+		when 'SL Preparation' then 'SHORTLISTED'
+		when 'Spec Sent' then 'CANDIDATE'
+		when 'Thank You' then 'CANDIDATE'
+		when 'To Be Contacted' then 'SHORTLISTED'
+		when 'Unreachable' then 'SHORTLISTED'
+		when 'Withdrew -S' then 'SHORTLISTED'
+		else 'CANDIDATE' END application_stage
+	, case when cp.value in ('Not Interested', 'Offer/Rej', 'Offer Withdrew', 'Reject/I', 'Reject/S', 'Rejected', 'Rejected Feedback'
+							, 'Screening Completed – Not interested', 'Screening Completed – Rejected', 'Withdrew -S')
+						then to_char(ac.createdon::DATE, 'YYYY-MM-DD')
+		else NULL end as rejected_date
+	, cp.value sub_status
+	FROM assignmentcandidate ac
+	JOIN (select * from cte_candidate where rn = '1') cc ON ac.idperson = cc.candidate_id
+	JOIN (select * from cte_job where rn = '1') cj ON ac.idassignment = cj.job_id
+	JOIN (select * from candidateprogress where isactive = '1' ) cp ON ac.idcandidateprogress = cp.idcandidateprogress
+	LEFT JOIN flex f ON f.idassignment = ac.idassignment
+	LEFT JOIN contract ct ON ct.idflex = ac.idassignment AND ac.idperson = ct.idperson
+	LEFT JOIN placementdate pd ON pd.idassignmentcandidate = ac.idassignmentcandidate
+	WHERE ac.isexcluded = '0'
+)
+
+, cte_application AS (
+	SELECT job_app_ext_id
+	, job_type
+	, job_id
+	, candidate_id
+	, actioned_date
+	, offer_date
+	, placement_date
+	, contractstartdate
+	, contractenddate
+	, hoursperday
+	, daysperweek
+	, renewed_date
+	, CASE
+		WHEN application_stage IN ('PLACED') THEN 'OFFERED'
+		ELSE application_stage END application_stage_import
+	, application_stage as origin_app_stage
+	, rejected_date
+	, sub_status
+	, ROW_NUMBER() OVER(PARTITION BY job_id, candidate_id ORDER BY CASE application_stage
+																WHEN 'PLACED' THEN 1
+																WHEN 'OFFERED' THEN 2
+																WHEN 'SECOND_INTERVIEW' THEN 3
+																WHEN 'FIRST_INTERVIEW' THEN 4
+																WHEN 'SENT' THEN 5
+																WHEN 'SHORTLISTED' THEN 6
+																END ASC, actioned_date DESC) AS rn
+	FROM map_stage
+	WHERE application_stage IS NOT NULL and application_stage &lt;&gt; 'CANDIDATE'
+)
+
+SELECT job_app_ext_id
+	, case when job_type = 'PERMANENT' then 301
+		when job_type = 'CONTRACT' then 302
+		end as placed_status
+	, job_id as job_ext_id
+	, candidate_id as cand_ext_id
+	, actioned_date
+	, offer_date
+	, placement_date
+	, contractstartdate
+	, contractenddate
+	, hoursperday
+	, daysperweek
+	, renewed_date
+--Contract Type
+	, 1 as placed_valid
+	, 1 as pay_calculation_type
+	, 'markup' as charge_rate_type
+	, 2 as contract_rate_type --daily
+	, 0 as contract_length
+	, 2 as contract_length_type --daily
+	, 8 as working_hours_per_day
+	, 5 as working_days_per_week
+	, 40 as working_hours_per_week
+	, 22 as working_days_per_month
+	, 4.20 as working_weeks_per_month
+--Offer personal info
+	, 3 as draft_offer --used to move offered to placed in vc [offer]
+	, 2 as invoicestatus --used to update invoice status in vc [invoice] as 'active'
+	, 1 as renewal_index --default value in vc [invoice]
+	, 1 as renewal_flow_status --used to update flow status in VC [invoice] as 'placement_active'
+	, 1 as invoice_valid
+	, -10 as latest_user_id
+	, current_timestamp as latest_update_date
+	, 0 as tax_rate
+	, 'other' as export_data_to
+	, 0 as net_total
+	, 0 as other_invoice_items_total
+	, 0 as invoice_total
+FROM cte_application
+WHERE rn = 1
+AND origin_app_stage = 'PLACED'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>company_id</name>
+        <rename>pd.company_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>contact_id</name>
+        <rename>pd.client_contact_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>position_type</name>
+        <rename>pd.position_type</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>currency_type</name>
+        <rename>pd.currency_type</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JobApp Contract placement</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_candidate AS (SELECT
+	c.idperson candidate_id,
+	ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+) --586657 rows
+
+, cte_job AS (
+	SELECT a.idassignment job_id,
+	CASE
+		WHEN f.idassignment IS NULL THEN 'PERMANENT'
+		ELSE 'CONTRACT' END job_type
+	, ROW_NUMBER() OVER(PARTITION BY a.idassignment ORDER BY ac.contactedon ASC) rn
+	FROM assignmentcontact ac
+	JOIN (select * from "assignment" where isdeleted = '0') a ON ac.idassignment = a.idassignment
+	LEFT JOIN flex f ON f.idassignment = a.idassignment
+	WHERE a.isdeleted = '0'
+) --21704 rows
+
+, rn_placementdate as (select idassignmentcandidate
+		, coalesce(placementdate::timestamp, createdon::timestamp) as placementdate
+		, row_number() over(partition by idassignmentcandidate order by placementdate::timestamp desc, createdon::timestamp desc) as rn
+		from placement
+		where coalesce(createdon, placementdate) is not NULL)
+		
+, placementdate as (select idassignmentcandidate, placementdate
+		from rn_placementdate
+		where rn = 1)
+
+, map_stage AS (
+	SELECT ac.idassignmentcandidate job_app_ext_id
+	, job_type
+	, ac.idassignment job_id
+	, ac.idperson candidate_id
+	, to_char(ac.createdon::DATE, 'YYYY-MM-DD') actioned_date
+	, coalesce(pd.placementdate::timestamp, ac.contactedon::timestamp, ac.createdon::timestamp) offer_date
+	, coalesce(pd.placementdate::timestamp, ac.contactedon::timestamp, ac.createdon::timestamp) placement_date
+	, coalesce(ct.contractstartdate::timestamp, pd.placementdate, ac.contactedon::timestamp) as contractstartdate
+	, coalesce(f.contractenddate::timestamp, ct.estimatedcontractenddate::timestamp) as contractenddate
+	, f.hoursperday::float
+	, f.daysperweek::float
+	, ct.contractextendedtodate::timestamp renewed_date
+	, CASE cp.value
+		when 'Approach' then 'SHORTLISTED'
+		when 'Arrange Interv' then 'FIRST_INTERVIEW'
+		when 'Client Interview' then 'FIRST_INTERVIEW'
+		when 'CV Benchmark Sent' then 'CANDIDATE'
+		when 'CV Received' then 'SHORTLISTED'
+		when 'CV Sent' then 'CANDIDATE'
+		when 'Follow-Up Conv' then 'SHORTLISTED'
+		when 'Hold' then 'SHORTLISTED'
+		when 'Interview With SF' then 'FIRST_INTERVIEW'
+		when 'Left a Message' then 'SHORTLISTED'
+		when 'Longlist' then 'SHORTLISTED'
+		when 'Marketing Sent' then 'CANDIDATE'
+		when 'Not Interested' then 'SHORTLISTED'
+		when 'Not Interested-Intv' then 'FIRST_INTERVIEW'
+		when 'Off Limits' then 'CANDIDATE'
+		when 'Offer' then 'OFFERED'
+		when 'Offer Withdrew' then 'OFFERED'
+		when 'Offer/Rej' then 'OFFERED'
+		when 'Placed' then 'PLACED'
+		when 'Placed Cand Follow' then 'PLACED'
+		when 'Reject/I' then 'FIRST_INTERVIEW'
+		when 'Reject/S' then 'SECOND_INTERVIEW'
+		when 'Rejected' then 'SHORTLISTED'
+		when 'Rejected Feedback' then 'CANDIDATE'
+		when 'Screening Completed – Not interested' then 'SHORTLISTED'
+		when 'Screening Completed – Rejected' then 'SHORTLISTED'
+		when 'Screening Completed – Spec Sent' then 'SHORTLISTED'
+		when 'Shortlist' then 'SHORTLISTED'
+		when 'SL Cons Approval' then 'SHORTLISTED'
+		when 'SL Preparation' then 'SHORTLISTED'
+		when 'Spec Sent' then 'CANDIDATE'
+		when 'Thank You' then 'CANDIDATE'
+		when 'To Be Contacted' then 'SHORTLISTED'
+		when 'Unreachable' then 'SHORTLISTED'
+		when 'Withdrew -S' then 'SHORTLISTED'
+		else 'CANDIDATE' END application_stage
+	, case when cp.value in ('Not Interested', 'Offer/Rej', 'Offer Withdrew', 'Reject/I', 'Reject/S', 'Rejected', 'Rejected Feedback'
+							, 'Screening Completed – Not interested', 'Screening Completed – Rejected', 'Withdrew -S')
+						then to_char(ac.createdon::DATE, 'YYYY-MM-DD')
+		else NULL end as rejected_date
+	, cp.value sub_status
+	FROM assignmentcandidate ac
+	JOIN (select * from cte_candidate where rn = '1') cc ON ac.idperson = cc.candidate_id
+	JOIN (select * from cte_job where rn = '1') cj ON ac.idassignment = cj.job_id
+	JOIN (select * from candidateprogress where isactive = '1' ) cp ON ac.idcandidateprogress = cp.idcandidateprogress
+	LEFT JOIN flex f ON f.idassignment = ac.idassignment
+	LEFT JOIN contract ct ON ct.idflex = ac.idassignment AND ac.idperson = ct.idperson
+	LEFT JOIN placementdate pd ON pd.idassignmentcandidate = ac.idassignmentcandidate
+	WHERE ac.isexcluded = '0'
+)
+
+, cte_application AS (
+	SELECT job_app_ext_id
+	, job_type
+	, job_id
+	, candidate_id
+	, actioned_date
+	, offer_date
+	, placement_date
+	, contractstartdate
+	, contractenddate
+	, hoursperday
+	, daysperweek
+	, renewed_date
+	, CASE
+		WHEN application_stage IN ('PLACED') THEN 'OFFERED'
+		ELSE application_stage END application_stage_import
+	, application_stage as origin_app_stage
+	, rejected_date
+	, sub_status
+	, ROW_NUMBER() OVER(PARTITION BY job_id, candidate_id ORDER BY CASE application_stage
+																WHEN 'PLACED' THEN 1
+																WHEN 'OFFERED' THEN 2
+																WHEN 'SECOND_INTERVIEW' THEN 3
+																WHEN 'FIRST_INTERVIEW' THEN 4
+																WHEN 'SENT' THEN 5
+																WHEN 'SHORTLISTED' THEN 6
+																END ASC, actioned_date DESC) AS rn
+	FROM map_stage
+	WHERE application_stage IS NOT NULL and application_stage &lt;&gt; 'CANDIDATE'
+)
+
+SELECT job_app_ext_id
+	, case when job_type = 'PERMANENT' then 301
+		when job_type = 'CONTRACT' then 302
+		end as placed_status
+	, job_id as job_ext_id
+	, candidate_id as cand_ext_id
+	, actioned_date
+	, offer_date
+	, placement_date
+	, contractstartdate
+	, contractenddate
+	, hoursperday
+	, daysperweek
+	, renewed_date
+--Contract Type
+	, 1 as placed_valid
+	, 1 as pay_calculation_type
+	, 'markup' as charge_rate_type
+	, 2 as contract_rate_type --daily
+	, 0 as contract_length
+	, 2 as contract_length_type --daily
+	, 8 as working_hours_per_day
+	, 5 as working_days_per_week
+	, 40 as working_hours_per_week
+	, 22 as working_days_per_month
+	, 4.20 as working_weeks_per_month
+--Offer personal info
+	, 3 as draft_offer --used to move offered to placed in vc [offer]
+	, 2 as invoicestatus --used to update invoice status in vc [invoice] as 'active'
+	, 1 as renewal_index --default value in vc [invoice]
+	, 1 as renewal_flow_status --used to update flow status in VC [invoice] as 'placement_active'
+	, 1 as invoice_valid
+	, -10 as latest_user_id
+	, current_timestamp as latest_update_date
+	, 0 as tax_rate
+	, 'other' as export_data_to
+	, 0 as net_total
+	, 0 as other_invoice_items_total
+	, 0 as invoice_total
+FROM cte_application
+WHERE rn = 1
+AND origin_app_stage = 'PLACED'
+AND job_type = 'CONTRACT'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JobApp Offer info - CONTR</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with jobapp as (select e.__pk as job_app_id
+		, e._fk_candidate_list
+		, e._fk_job
+		, e.colour_code
+		, case when j.contract_type = 'Permanent' then 301
+				when j.contract_type = 'Temp' then 302
+				else 301 end job_type
+		, convert(datetime, e.stamp_created, 103) as actioned_date
+		, row_number() over(partition by e._fk_candidate_list, e._fk_job 
+			order by case e.colour_code
+				when 'Agency Interview' then '3'
+				when 'Candidate Rejected' then '0'
+				when 'Candidate Withdrew' then '0'
+				when 'Closed' then '1'
+				when 'CV Sent' then '2'
+				when 'External Interview 1' then '3'
+				when 'External Interview 2' then '4'
+				when 'Hold/Rejected' then '1'
+				when 'Interview Other' then '3'
+				when 'Offer Accepted' then '5'
+				when 'Offer Made' then '5'
+				when 'Offer Rejected' then '5'
+				when 'Offer Sent' then '5'
+				when 'Other' then '0'
+				when 'Placed' then '6'
+				when 'Telephone Interview' then '3'
+				else 0 end desc, e.stamp_created desc) as rn
+		from [20191030_155243_events] e
+		left join [20191030_155620_jobs] j on j.__pk = e._fk_job
+		where e._fk_candidate_list is not NULL AND e._fk_job is not NULL)
+
+--MAIN SCRIPT
+select ja.job_app_id
+	, concat('AS', _fk_candidate_list) as cand_ext_id
+	, concat('AS', ja._fk_job) as job_ext_id
+	, ja.colour_code as sub_stage
+	, ja.job_type
+	, ja.actioned_date
+--Permanent Type | agency_fee_value_exchanged - agency_fee_percentage
+	, coalesce(nullif(convert(date, p.date_placed, 103),'')
+			, nullif(convert(date, p.date_start_contract, 103),'')
+			, nullif(ja.actioned_date,'')) as placement_date
+	, coalesce(nullif(convert(date, p.date_start_contract, 103),'')
+			, nullif(convert(date, p.date_placed, 103),'')
+			, nullif(ja.actioned_date,'')) as start_date
+	, coalesce(convert(datetime, p.date_end_contract, 103)
+			, dateadd(month, 6, coalesce(nullif(convert(date, p.date_start_contract, 103),'')
+									, nullif(convert(date, p.date_placed, 103),'')
+									, nullif(ja.actioned_date,'')))) as end_date
+	, case when coalesce(p.zc_initial_cost_exchanged, 0) &lt; p.zc_profit_exchanged then p.zc_profit_exchanged
+		else coalesce(p.zc_initial_cost_exchanged, 0) end as pay_rate
+	, case p.zc_fee_type_display 
+		when 'Fixed' then coalesce(nullif(p.zc_profit_exchanged, ''), nullif(p.zc_initial_cost_exchanged, ''), 0)
+		when 'Percent' then coalesce(nullif(p.zc_profit_exchanged, ''), nullif(p.zc_initial_cost_exchanged * p.agency_fee_percentage, ''), 0)
+		else 0 end as profit --aka projected_profit
+	, case p.zc_fee_type_display
+		when 'Fixed' then 100
+		when 'Percent' then p.agency_fee_percentage * 100
+		else 100 end as percentage_of_annual_salary
+	, 1 as use_quick_fee_forecast
+--Contract Type | 
+	, 1 as placed_valid
+	, 1 as pay_calculation_type
+	, 'markup' as charge_rate_type
+	, 2 as contract_rate_type --daily
+	, 0 as contract_length
+	, 2 as contract_length_type --daily
+	, 8 as working_hours_per_day
+	, 5 as working_days_per_week
+	, 40 as working_hours_per_week
+	, 22 as working_days_per_month
+	, 4.20 as working_weeks_per_month
+--Offer personal info
+	, 3 as draft_offer --used to move offered to placed in vc [offer]
+	, 2 as invoicestatus --used to update invoice status in vc [invoice] as 'active'
+	, 1 as renewal_index --default value in vc [invoice]
+	, 1 as renewal_flow_status --used to update flow status in VC [invoice] as 'placement_active'
+	, 1 as invoice_valid
+	, -10 as latest_user_id
+	, current_timestamp as latest_update_date
+	, 0 as tax_rate
+	, 'other' as export_data_to
+	, 0 as net_total
+	, 0 as other_invoice_items_total
+	, 0 as invoice_total
+	, p.contract_salary_exchanged
+	, p.contract_type
+	, p.date_placed
+	, p.date_start_contract
+	, p.date_end_contract
+	, p.zc_fee_type_display
+	, p.zc_initial_cost_exchanged
+	, p.zc_profit_exchanged
+	, p.zc_total_cost_exchanged
+from jobapp ja
+left join [20191030_160020_placements] p on p._fk_contact_candidate = ja._fk_candidate_list and p._fk_job = ja._fk_job
+where ja.rn = 1
+and ja.colour_code in ('Offer Accepted', 'Offer Made', 'Offer Rejected', 'Offer Sent')
+--and job_type = 301 --PERMANENT
+and job_type = 302 --CONTRACT</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JobApp Offer info - PERM</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with jobapp as (select e.__pk as job_app_id
+		, e._fk_candidate_list
+		, e._fk_job
+		, e.colour_code
+		, case when j.contract_type = 'Permanent' then 301
+				when j.contract_type = 'Temp' then 302
+				else 301 end job_type
+		, convert(datetime, e.stamp_created, 103) as actioned_date
+		, row_number() over(partition by e._fk_candidate_list, e._fk_job 
+			order by case e.colour_code
+				when 'Agency Interview' then '3'
+				when 'Candidate Rejected' then '0'
+				when 'Candidate Withdrew' then '0'
+				when 'Closed' then '1'
+				when 'CV Sent' then '2'
+				when 'External Interview 1' then '3'
+				when 'External Interview 2' then '4'
+				when 'Hold/Rejected' then '1'
+				when 'Interview Other' then '3'
+				when 'Offer Accepted' then '5'
+				when 'Offer Made' then '5'
+				when 'Offer Rejected' then '5'
+				when 'Offer Sent' then '5'
+				when 'Other' then '0'
+				when 'Placed' then '6'
+				when 'Telephone Interview' then '3'
+				else 0 end desc, e.stamp_created desc) as rn
+		from [20191030_155243_events] e
+		left join [20191030_155620_jobs] j on j.__pk = e._fk_job
+		where e._fk_candidate_list is not NULL AND e._fk_job is not NULL)
+
+--MAIN SCRIPT
+select ja.job_app_id
+	, concat('AS', _fk_candidate_list) as cand_ext_id
+	, concat('AS', ja._fk_job) as job_ext_id
+	, ja.colour_code as sub_stage
+	, ja.job_type
+	, ja.actioned_date
+--Permanent Type | agency_fee_value_exchanged - agency_fee_percentage
+	, coalesce(nullif(convert(date, p.date_placed, 103),'')
+			, nullif(convert(date, p.date_start_contract, 103),'')
+			, nullif(ja.actioned_date,'')) as placement_date
+	, coalesce(nullif(convert(date, p.date_start_contract, 103),'')
+			, nullif(convert(date, p.date_placed, 103),'')
+			, nullif(ja.actioned_date,'')) as start_date
+	, coalesce(convert(datetime, p.date_end_contract, 103)
+			, dateadd(month, 6, coalesce(nullif(convert(date, p.date_start_contract, 103),'')
+									, nullif(convert(date, p.date_placed, 103),'')
+									, nullif(ja.actioned_date,'')))) as end_date
+	, case when coalesce(p.zc_initial_cost_exchanged, 0) &lt; p.zc_profit_exchanged then p.zc_profit_exchanged
+		else coalesce(p.zc_initial_cost_exchanged, 0) end as pay_rate
+	, case p.zc_fee_type_display 
+		when 'Fixed' then coalesce(nullif(p.zc_profit_exchanged, ''), nullif(p.zc_initial_cost_exchanged, ''), 0)
+		when 'Percent' then coalesce(nullif(p.zc_profit_exchanged, ''), nullif(p.zc_initial_cost_exchanged * p.agency_fee_percentage, ''), 0)
+		else 0 end as profit --aka projected_profit
+	, case p.zc_fee_type_display
+		when 'Fixed' then 100
+		when 'Percent' then p.agency_fee_percentage * 100
+		else 100 end as percentage_of_annual_salary
+	, 1 as use_quick_fee_forecast
+--Contract Type | 
+	, 1 as placed_valid
+	, 1 as pay_calculation_type
+	, 'markup' as charge_rate_type
+	, 2 as contract_rate_type --daily
+	, 0 as contract_length
+	, 2 as contract_length_type --daily
+	, 8 as working_hours_per_day
+	, 5 as working_days_per_week
+	, 40 as working_hours_per_week
+	, 22 as working_days_per_month
+	, 4.20 as working_weeks_per_month
+--Offer personal info
+	, 3 as draft_offer --used to move offered to placed in vc [offer]
+	, 2 as invoicestatus --used to update invoice status in vc [invoice] as 'active'
+	, 1 as renewal_index --default value in vc [invoice]
+	, 1 as renewal_flow_status --used to update flow status in VC [invoice] as 'placement_active'
+	, 1 as invoice_valid
+	, -10 as latest_user_id
+	, current_timestamp as latest_update_date
+	, 0 as tax_rate
+	, 'other' as export_data_to
+	, 0 as net_total
+	, 0 as other_invoice_items_total
+	, 0 as invoice_total
+	, p.contract_salary_exchanged
+	, p.contract_type
+	, p.date_placed
+	, p.date_start_contract
+	, p.date_end_contract
+	, p.zc_fee_type_display
+	, p.zc_initial_cost_exchanged
+	, p.zc_profit_exchanged
+	, p.zc_total_cost_exchanged
+from jobapp ja
+left join [20191030_160020_placements] p on p._fk_contact_candidate = ja._fk_candidate_list and p._fk_job = ja._fk_job
+where ja.rn = 1
+and ja.colour_code in ('Offer Accepted', 'Offer Made', 'Offer Rejected', 'Offer Sent')
+and job_type = 301 --PERMANENT
+--and job_type = 302 --CONTRACT</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JobApp Permanent placement</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_candidate AS (SELECT
+	c.idperson candidate_id,
+	ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+) --586657 rows
+
+, cte_job AS (
+	SELECT a.idassignment job_id,
+	CASE
+		WHEN f.idassignment IS NULL THEN 'PERMANENT'
+		ELSE 'CONTRACT' END job_type
+	, ROW_NUMBER() OVER(PARTITION BY a.idassignment ORDER BY ac.contactedon ASC) rn
+	FROM assignmentcontact ac
+	JOIN (select * from "assignment" where isdeleted = '0') a ON ac.idassignment = a.idassignment
+	LEFT JOIN flex f ON f.idassignment = a.idassignment
+	WHERE a.isdeleted = '0'
+) --21704 rows
+
+, rn_placementdate as (select idassignmentcandidate
+		, coalesce(placementdate::timestamp, createdon::timestamp) as placementdate
+		, row_number() over(partition by idassignmentcandidate order by placementdate::timestamp desc, createdon::timestamp desc) as rn
+		from placement
+		where coalesce(createdon, placementdate) is not NULL)
+		
+, placementdate as (select idassignmentcandidate, placementdate
+		from rn_placementdate
+		where rn = 1)
+
+, map_stage AS (
+	SELECT ac.idassignmentcandidate job_app_ext_id
+	, job_type
+	, ac.idassignment job_id
+	, ac.idperson candidate_id
+	, to_char(ac.createdon::DATE, 'YYYY-MM-DD') actioned_date
+	, coalesce(pd.placementdate::timestamp, ac.contactedon::timestamp, ac.createdon::timestamp) offer_date
+	, coalesce(pd.placementdate::timestamp, ac.contactedon::timestamp, ac.createdon::timestamp) placement_date
+	, coalesce(ct.contractstartdate::timestamp, pd.placementdate, ac.contactedon::timestamp) as contractstartdate
+	, coalesce(f.contractenddate::timestamp, ct.estimatedcontractenddate::timestamp) as contractenddate
+	, f.hoursperday::float
+	, f.daysperweek::float
+	, ct.contractextendedtodate::timestamp renewed_date
+	, CASE cp.value
+		when 'Approach' then 'SHORTLISTED'
+		when 'Arrange Interv' then 'FIRST_INTERVIEW'
+		when 'Client Interview' then 'FIRST_INTERVIEW'
+		when 'CV Benchmark Sent' then 'CANDIDATE'
+		when 'CV Received' then 'SHORTLISTED'
+		when 'CV Sent' then 'CANDIDATE'
+		when 'Follow-Up Conv' then 'SHORTLISTED'
+		when 'Hold' then 'SHORTLISTED'
+		when 'Interview With SF' then 'FIRST_INTERVIEW'
+		when 'Left a Message' then 'SHORTLISTED'
+		when 'Longlist' then 'SHORTLISTED'
+		when 'Marketing Sent' then 'CANDIDATE'
+		when 'Not Interested' then 'SHORTLISTED'
+		when 'Not Interested-Intv' then 'FIRST_INTERVIEW'
+		when 'Off Limits' then 'CANDIDATE'
+		when 'Offer' then 'OFFERED'
+		when 'Offer Withdrew' then 'OFFERED'
+		when 'Offer/Rej' then 'OFFERED'
+		when 'Placed' then 'PLACED'
+		when 'Placed Cand Follow' then 'PLACED'
+		when 'Reject/I' then 'FIRST_INTERVIEW'
+		when 'Reject/S' then 'SECOND_INTERVIEW'
+		when 'Rejected' then 'SHORTLISTED'
+		when 'Rejected Feedback' then 'CANDIDATE'
+		when 'Screening Completed – Not interested' then 'SHORTLISTED'
+		when 'Screening Completed – Rejected' then 'SHORTLISTED'
+		when 'Screening Completed – Spec Sent' then 'SHORTLISTED'
+		when 'Shortlist' then 'SHORTLISTED'
+		when 'SL Cons Approval' then 'SHORTLISTED'
+		when 'SL Preparation' then 'SHORTLISTED'
+		when 'Spec Sent' then 'CANDIDATE'
+		when 'Thank You' then 'CANDIDATE'
+		when 'To Be Contacted' then 'SHORTLISTED'
+		when 'Unreachable' then 'SHORTLISTED'
+		when 'Withdrew -S' then 'SHORTLISTED'
+		else 'CANDIDATE' END application_stage
+	, case when cp.value in ('Not Interested', 'Offer/Rej', 'Offer Withdrew', 'Reject/I', 'Reject/S', 'Rejected', 'Rejected Feedback'
+							, 'Screening Completed – Not interested', 'Screening Completed – Rejected', 'Withdrew -S')
+						then to_char(ac.createdon::DATE, 'YYYY-MM-DD')
+		else NULL end as rejected_date
+	, cp.value sub_status
+	FROM assignmentcandidate ac
+	JOIN (select * from cte_candidate where rn = '1') cc ON ac.idperson = cc.candidate_id
+	JOIN (select * from cte_job where rn = '1') cj ON ac.idassignment = cj.job_id
+	JOIN (select * from candidateprogress where isactive = '1' ) cp ON ac.idcandidateprogress = cp.idcandidateprogress
+	LEFT JOIN flex f ON f.idassignment = ac.idassignment
+	LEFT JOIN contract ct ON ct.idflex = ac.idassignment AND ac.idperson = ct.idperson
+	LEFT JOIN placementdate pd ON pd.idassignmentcandidate = ac.idassignmentcandidate
+	WHERE ac.isexcluded = '0'
+)
+
+, cte_application AS (
+	SELECT job_app_ext_id
+	, job_type
+	, job_id
+	, candidate_id
+	, actioned_date
+	, offer_date
+	, placement_date
+	, contractstartdate
+	, contractenddate
+	, hoursperday
+	, daysperweek
+	, renewed_date
+	, CASE
+		WHEN application_stage IN ('PLACED') THEN 'OFFERED'
+		ELSE application_stage END application_stage_import
+	, application_stage as origin_app_stage
+	, rejected_date
+	, sub_status
+	, ROW_NUMBER() OVER(PARTITION BY job_id, candidate_id ORDER BY CASE application_stage
+																WHEN 'PLACED' THEN 1
+																WHEN 'OFFERED' THEN 2
+																WHEN 'SECOND_INTERVIEW' THEN 3
+																WHEN 'FIRST_INTERVIEW' THEN 4
+																WHEN 'SENT' THEN 5
+																WHEN 'SHORTLISTED' THEN 6
+																END ASC, actioned_date DESC) AS rn
+	FROM map_stage
+	WHERE application_stage IS NOT NULL and application_stage &lt;&gt; 'CANDIDATE'
+)
+
+SELECT job_app_ext_id
+	, case when job_type = 'PERMANENT' then 301
+		when job_type = 'CONTRACT' then 302
+		end as placed_status
+	, job_id as job_ext_id
+	, candidate_id as cand_ext_id
+	, actioned_date
+	, offer_date
+	, placement_date
+	, contractstartdate
+	, contractenddate
+	, hoursperday
+	, daysperweek
+	, renewed_date
+--Contract Type
+	, 1 as placed_valid
+	, 1 as pay_calculation_type
+	, 'markup' as charge_rate_type
+	, 2 as contract_rate_type --daily
+	, 0 as contract_length
+	, 2 as contract_length_type --daily
+	, 8 as working_hours_per_day
+	, 5 as working_days_per_week
+	, 40 as working_hours_per_week
+	, 22 as working_days_per_month
+	, 4.20 as working_weeks_per_month
+--Offer personal info
+	, 3 as draft_offer --used to move offered to placed in vc [offer]
+	, 2 as invoicestatus --used to update invoice status in vc [invoice] as 'active'
+	, 1 as renewal_index --default value in vc [invoice]
+	, 1 as renewal_flow_status --used to update flow status in VC [invoice] as 'placement_active'
+	, 1 as invoice_valid
+	, -10 as latest_user_id
+	, current_timestamp as latest_update_date
+	, 0 as tax_rate
+	, 'other' as export_data_to
+	, 0 as net_total
+	, 0 as other_invoice_items_total
+	, 0 as invoice_total
+FROM cte_application
+WHERE rn = 1
+AND origin_app_stage = 'PLACED'
+AND job_type = 'PERMANENT'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Microsoft Excel Writer</name>
+    <type>TypeExitExcelWriterStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <makeSheetActive>Y</makeSheetActive>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <startingCell>A1</startingCell>
+    <appendOmitHeader>N</appendOmitHeader>
+    <appendOffset>0</appendOffset>
+    <appendEmpty>0</appendEmpty>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <forceFormulaRecalculation>N</forceFormulaRecalculation>
+    <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
+    <appendLines>N</appendLines>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>E:\DataMigration\Randstad\Working\AuditCheck\20191213_profit_split_mapping.xls</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <stream_data>N</stream_data>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <protected_by/>
+      <splitevery>0</splitevery>
+      <if_file_exists>new</if_file_exists>
+      <if_sheet_exists>new</if_sheet_exists>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <sheet_enabled>N</sheet_enabled>
+      <filename>template.xls</filename>
+      <sheetname/>
+      <hidden>N</hidden>
+    </template>
+    <fields>
+      <field>
+        <name>VCOfferID</name>
+        <type>Binary</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>VCUserID</name>
+        <type>Integer</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>profit_split_mode</name>
+        <type>Integer</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>split_amount</name>
+        <type>BigNumber</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>profit_split_user_name</name>
+        <type>None</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>user_email</name>
+        <type>None</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>VCJobAppID</name>
+        <type>BigNumber</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>VCCandidateID</name>
+        <type>BigNumber</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>VCJobID</name>
+        <type>BigNumber</type>
+        <format/>
+        <title/>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Offer</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>offer</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCOfferID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>offer_insert_timestamp</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>valid</name>
+        <rename>offer_valid</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Offer personal info - Contract</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>offer_personal_info</table>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>last_name</name>
+        <rename>c.last_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>first_name</name>
+        <rename>c.first_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>email</name>
+        <rename>c.email</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_company_id</name>
+        <rename>pd.company_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_company_name</name>
+        <rename>com.client_company_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_contact_id</name>
+        <rename>pd.client_contact_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_contact_name</name>
+        <rename>client_contact_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>client_department</name>
+        <rename>client_department</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>tax_rate</name>
+        <rename>tax_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>export_data_to</name>
+        <rename>export_data_to</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>net_total</name>
+        <rename>net_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>other_invoice_items_total</name>
+        <rename>other_invoice_items_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>invoice_total</name>
+        <rename>invoice_total</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>start_date</name>
+        <rename>contractstartdate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>placed_date</name>
+        <rename>placement_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>offer_date</name>
+        <rename>offer_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>end_date</name>
+        <rename>contractenddate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>payslip_email</name>
+        <rename>c.email</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Placed lookup output</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>E:\DataMigration\ApisAlvi\Working\NewRequirements\20190320_Placed_lookup_output.xls</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>candidateextid</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>jobextid</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>placedstage</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>draft_offer</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>position_type</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>currency_type</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>annualsalary</name>
+        <type>BigNumber</type>
+        <format/>
+      </field>
+      <field>
+        <name>percentage_of_annual_salary</name>
+        <type>Number</type>
+        <format/>
+      </field>
+      <field>
+        <name>use_quick_fee_forecast</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>projected_profit</name>
+        <type>Number</type>
+        <format/>
+      </field>
+      <field>
+        <name>startdate</name>
+        <type>Timestamp</type>
+        <format/>
+      </field>
+      <field>
+        <name>placementnote</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>latest_user_id</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>latest_update_date</name>
+        <type>Timestamp</type>
+        <format/>
+      </field>
+      <field>
+        <name>tax_rate</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>export_data_to</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>net_total</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>other_invoice_items_total</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>invoice_total</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>invoicestatus</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>renewal_index</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>renewal_flow_status</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>profit_split_mode</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>insert_timestamp</name>
+        <type>Timestamp</type>
+        <format/>
+      </field>
+      <field>
+        <name>shared</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>amount</name>
+        <type>Number</type>
+        <format/>
+      </field>
+      <field>
+        <name>user_email</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>substatus</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCCandidateID</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>c.first_name</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>c.last_name</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>c.email</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCJobID</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>pd.company_id</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>pd.client_contact_id</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>pd.position_type</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>pd.currency_type</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCJobAppID</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Position Candidate</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobAppID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Profit Split</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--Profit split name
+declare 
+	@string1 nvarchar(50) = N'[担当者ID]', --user id
+	@string2 nvarchar(50) = N'[担当者]', --user name
+	@string3 nvarchar(50) = N'[売上]', --amount split
+	@splitvalue nchar(1) = nchar(9999);
+
+with profit_split as (select [キャンディデイト PANO ] as cand_ext_id
+	, [JOB PANO ] as job_ext_id
+	, [その他売上]
+	, value as profit_split
+	from csv_contract
+	cross apply string_split(replace([その他売上], @string1, @splitvalue), @splitvalue)
+	where [その他売上] &lt;&gt; '')
+
+/* Audit
+select * from profit_split
+where cand_ext_id = 'CDT156466' and job_ext_id = 'JOB057451'
+*/
+
+, profit_split_trim as (select cand_ext_id
+	, job_ext_id
+	, case when charindex(@string2, profit_split) > 1 then left(profit_split, charindex(@string2, profit_split) - 1)
+		else '' end as profit_split_user_id
+	, substring(profit_split
+				, charindex(@string2, profit_split) + len(@string2)
+				, charindex(@string3, profit_split) - charindex(@string2, profit_split) - len(@string2)) as profit_split_user_name
+	, case when len(profit_split) - charindex(@string3, profit_split) - len(@string3) + 1 > 0 then 
+			nullif(right(profit_split, len(profit_split) - charindex(@string3, profit_split) - len(@string3) + 1), '')
+		else 0 end as split_amount
+	from profit_split
+	where profit_split &lt;&gt; '')
+
+select cand_ext_id
+, job_ext_id
+, profit_split_user_id
+, profit_split_user_name
+, u.EmailAddress as user_email
+, convert(float, split_amount) as split_amount
+, 2 as profit_split_mode --amount mode
+from profit_split_trim p
+left join UserMapping u on u.UserID = p.profit_split_user_id
+where 1=1
+and profit_split_user_id &lt;&gt; ''
+and split_amount &lt;&gt; 0
+and u.EmailAddress is not NULL
+
+UNION ALL
+select [キャンディデイト PANO ] as cand_ext_id
+	, [JOB PANO ] as job_ext_id
+	, [売上 担当者1ユーザID]
+	, [売上 担当者1]
+	, u.EmailAddress as user_email
+	, [売上 担当別売上1]
+	, 2 as profit_split_mode
+from csv_contract p
+left join UserMapping u on u.UserID = p.[売上 担当者1ユーザID]
+where nullif([売上 担当者1ユーザID], '') is not NULL
+and nullif([売上 担当別売上1], '') is not NULL
+and u.EmailAddress is not NULL
+
+UNION ALL
+select [キャンディデイト PANO ] as cand_ext_id
+	, [JOB PANO ] as job_ext_id
+	, [売上 担当者2ユーザID]
+	, [売上 担当者2]
+	, u.EmailAddress as user_email
+	, [売上 担当別売上2]
+	, 2 as profit_split_mode
+from csv_contract p
+left join UserMapping u on u.UserID = p.[売上 担当者2ユーザID]
+where nullif([売上 担当者2ユーザID], '') is not NULL
+and nullif([売上 担当別売上2], '') is not NULL
+and u.EmailAddress is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update App placed date</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_candidate</table>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>status</name>
+        <rename>placed_status</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update App status</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_candidate</table>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>status</name>
+        <rename>job_type</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update Invoice</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>invoice</table>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_candidate_id</name>
+        <rename>VCJobAppID</rename>
+      </value>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+      </value>
+      <value>
+        <name>status</name>
+        <rename>InvoiceStatus</rename>
+      </value>
+      <value>
+        <name>renewal_index</name>
+        <rename>renewal_index</rename>
+      </value>
+      <value>
+        <name>renewal_flow_status</name>
+        <rename>renewal_flow_status</rename>
+      </value>
+      <value>
+        <name>valid</name>
+        <rename>valid</rename>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update Offer</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>offer</table>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>draft_offer</name>
+        <rename>draft_offer</rename>
+      </value>
+      <value>
+        <name>position_type</name>
+        <rename>pd.position_type</rename>
+      </value>
+      <value>
+        <name>currency_type</name>
+        <rename>pd.currency_type</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update Terminated Invoice 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>invoice</table>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCOfferID</name>
+        <field>offer_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>position_candidate_id</name>
+        <rename>VCJobAppID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>offer_id</name>
+        <rename>VCOfferID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>status</name>
+        <rename>InvoiceStatus</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>renewal_index</name>
+        <rename>renewal_index</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>renewal_flow_status</name>
+        <rename>renewal_flow_status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>valid</name>
+        <rename>valid</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update contract status</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>position_candidate</table>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>hire_date</name>
+        <rename>placed_date</rename>
+      </value>
+      <value>
+        <name>status</name>
+        <rename>position_status</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update job App status</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>position_candidate</table>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>status</name>
+        <rename>PlacedStage</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>User.u</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (VC)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>user_account</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>user_email</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCUserID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

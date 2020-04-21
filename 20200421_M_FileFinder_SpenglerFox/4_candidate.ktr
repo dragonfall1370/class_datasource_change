@@ -1,0 +1,4765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>4_candidate</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/09/17 15:58:16.201</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/09/17 15:58:16.201</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Candidate info</note>
+      <xloc>32</xloc>
+      <yloc>16</yloc>
+      <width>89</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Common location (included in data import)</note>
+      <xloc>768</xloc>
+      <yloc>128</yloc>
+      <width>242</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>CF Free text</note>
+      <xloc>48</xloc>
+      <yloc>832</yloc>
+      <width>73</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Candidate Source</note>
+      <xloc>768</xloc>
+      <yloc>336</yloc>
+      <width>104</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Candidate documents</note>
+      <xloc>768</xloc>
+      <yloc>592</yloc>
+      <width>128</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>--update candidate current location
+update candidate c
+set current_location_id = cl.id
+from common_location cl
+where cl.current_location_candidate_id = c.id
+and c.external_id is not NULL
+and c.deleted_timestamp is NULL</note>
+      <xloc>1248</xloc>
+      <yloc>176</yloc>
+      <width>249</width>
+      <heigth>122</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Desired Location (included in note)</note>
+      <xloc>768</xloc>
+      <yloc>16</yloc>
+      <width>195</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Candidate GDPR</note>
+      <xloc>768</xloc>
+      <yloc>720</yloc>
+      <width>98</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Insert candidate talent Pool</note>
+      <xloc>48</xloc>
+      <yloc>960</yloc>
+      <width>154</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Candidate Ratings</note>
+      <xloc>768</xloc>
+      <yloc>960</yloc>
+      <width>107</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Update latest_average_feedback_score (only latest score will be shown)
+
+update position_candidate pc
+set latest_average_feedback_score = c.average_rating_score
+from candidate_rating c
+where c.position_candidate_id = pc.id</note>
+      <xloc>1200</xloc>
+      <yloc>1024</yloc>
+      <width>382</width>
+      <heigth>105</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>To be kept job (temp table)</note>
+      <xloc>48</xloc>
+      <yloc>1216</yloc>
+      <width>153</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>From (DB)</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfox2</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ff228dc6fa8c</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>To (PROD)</name>
+    <server>10.0.9.189</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfox.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>candidate reg date</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate reg</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>CF free text</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Custom Tags</from>
+      <to>Candidate lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Source</from>
+      <to>Candidate lookup 4</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 4</from>
+      <to>Candidate source lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate source lookup</from>
+      <to>Update candidate source</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate note</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>update note</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Extract Candidate Documents</from>
+      <to>lookup candidateid</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>lookup candidateid</from>
+      <to>update candidate_document</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Current location</from>
+      <to>Candidate lookup 10</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 10</from>
+      <to>Common location</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Education summary</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>update edu summary</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Compensation</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Update compensation</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate desired location</from>
+      <to>candidate lookup 4 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate lookup 4 2</from>
+      <to>Common location 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate personal phone</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate known as</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Update home phone</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Update known as</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Source Setting</from>
+      <to>Insert candidate_source</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>cand lookup</from>
+      <to>Update Candidate company</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>cand lookup</from>
+      <to>insert_candidate_gdpr</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>candidate umbrella</from>
+      <to>cand lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>gdpr</from>
+      <to>cand lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate market rate</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Desired contract rate</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate talent Pool</from>
+      <to>Add Talent Pool</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Distribution lookup</from>
+      <to>Candidate TP</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate TP list</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Distribution lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate marital status</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Update marital status</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate website</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Update website</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 6</from>
+      <to>Job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Position Candidate</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job App candidate rating</from>
+      <to>Candidate lookup 6</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>cand lookup 2</from>
+      <to>Insert rating questions</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position rating questions</from>
+      <to>cand lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Insert candidate rating</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Candidate Rating</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Position Rating</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Rating</from>
+      <to>Position Candidate</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Rating</from>
+      <to>Insert candidate rating score</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate tobekept</from>
+      <to>Candidate tmp table</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>CF free text</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>additional_type</column_name>
+        <stream_name>additional_type</stream_name>
+      </field>
+      <field>
+        <column_name>additional_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>form_id</column_name>
+        <stream_name>form_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_id</column_name>
+        <stream_name>field_id</stream_name>
+      </field>
+      <field>
+        <column_name>field_value</column_name>
+        <stream_name>field_value</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>880</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Source</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with cte_candidate as (select c.idperson cand_ext_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, REPLACE(po.value, '\x0d\x0a', ' ') as candidate_source
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN personorigin po ON px.idpersonorigin_string = po.idpersonorigin
+	)
+
+select cand_ext_id
+, case when candidate_source = 'Linkedin' then 'LinkedIn'
+		else candidate_source end as candidate_source
+from cte_candidate
+where rn = 1
+and candidate_source is not NULL --100628 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Source Setting</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select distinct value as candidate_source
+, 1 source_type
+, 0 payment_style
+, current_timestamp insert_timestamp
+, current_timestamp periodic_payment_start_date
+, current_timestamp + interval '2 years' periodic_payment_end_date
+, 1 included_job_count
+, 1 show_job
+from personorigin
+--where value not in ('Linkedin', 'Xing')
+order by value</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate desired location</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <sql>select --top 10
+		concat('PR', C.candidateID) as cand_ext_id
+		, concat('Desired Location: ', uc.desiredLocations) as location_name
+		, uc.desiredLocations
+		, getdate() as insert_timestamp
+from bullhorn1.Candidate C --where C.isPrimaryOwner = 1
+left join bullhorn1.BH_UserContact uc on uc.userID = c.userID
+where C.isdeleted &lt;&gt; 1 and C.status &lt;&gt; 'Archive'
+and uc.desiredLocations is not NULL
+and cast(uc.desiredLocations as varchar(max)) &lt;&gt; ''</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate known as</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with 
+--Candidate URLs (may include Linkedin)
+candidateurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidateurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '8c7d16c4-125f-498b-b932-5465373a782b' --URLs
+	and e.commvalue is not NULL
+	)
+--Switchboard | not having multiple switchboard
+, candidate_switchboard as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidate_switchboard
+		from person_eaddress pe
+		left join eaddress e on e.ideaddress = pe.ideaddress
+		where pe.idpersoncommunicationtype = 'dced2973-8162-4152-a75a-a7d7991d1577' --switchboard
+		)
+
+--MAIN SCRIPT FOR INJECTION
+, cte_candidate AS (SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, px.createdon::timestamp created_date
+--Basic information
+	, px.knownas preffered_name --#inject
+	, case mrs.value
+		when 'Married' then 2
+		when 'Widowed' then 4
+		when 'Partner' then 0
+		when 'Seperated' then 5
+		when 'Single' then 1
+		when 'Divorced' then 3
+		else 0 end as marital_stastus --#inject
+--Communication info
+	, px.phonehome home_phone --#ref
+	, cw.candidate_switchboard switchboard --#ref
+	, concat_ws(', ', nullif(px.phonehome, ''), nullif(cw.candidate_switchboard, '')) personal_phone --#inject
+	, canu.candidateurl website --#inject
+--Employment info
+	, px.salary current_salary
+	, px.minimumrequiredrate contract_rate
+	, case when ut.value = 'Day' then 'DAYS' 
+		when ut.value = 'Hour' then 'HOURS'
+		else NULL end as contract_interval
+
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN candidate_switchboard cw on cw.idperson = p.idperson
+	LEFT JOIN candidateurl canu on canu.idperson = p.idperson
+	LEFT JOIN maritalstatus mrs on mrs.idmaritalstatus = px.idmaritalstatus_string
+	LEFT JOIN unittype ut ON ut.idunittype = px.idunittype_string
+)
+
+select candidate_id cand_ext_id
+, created_date as reg_date
+, preffered_name
+, marital_stastus
+, personal_phone
+, website
+, contract_interval
+from cte_candidate
+where rn = 1
+and nullif(preffered_name, '') is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 10</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>880</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 4</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate market rate</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with 
+--Candidate URLs (may include Linkedin)
+candidateurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidateurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '8c7d16c4-125f-498b-b932-5465373a782b' --URLs
+	and e.commvalue is not NULL
+	)
+--Switchboard | not having multiple switchboard
+, candidate_switchboard as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidate_switchboard
+		from person_eaddress pe
+		left join eaddress e on e.ideaddress = pe.ideaddress
+		where pe.idpersoncommunicationtype = 'dced2973-8162-4152-a75a-a7d7991d1577' --switchboard
+		)
+
+--MAIN SCRIPT FOR INJECTION
+, cte_candidate AS (SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, px.createdon::timestamp created_date
+--Basic information
+	, px.knownas preffered_name --#inject
+	, case mrs.value
+		when 'Married' then 2
+		when 'Widowed' then 4
+		when 'Partner' then 0
+		when 'Seperated' then 5
+		when 'Single' then 1
+		when 'Divorced' then 3
+		else 0 end as marital_stastus --#inject
+--Communication info
+	, px.phonehome home_phone --#ref
+	, cw.candidate_switchboard switchboard --#ref
+	, concat_ws(', ', nullif(px.phonehome, ''), nullif(cw.candidate_switchboard, '')) personal_phone --#inject
+	, canu.candidateurl website --#inject
+--Employment info
+	, px.salary current_salary
+	, px.minimumrequiredrate contract_rate
+	, case when ut.value = 'Day' then 'DAYS' 
+		when ut.value = 'Hour' then 'HOURS'
+		else NULL end as contract_interval
+	, marketrate as desired_contract_rate
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN candidate_switchboard cw on cw.idperson = p.idperson
+	LEFT JOIN candidateurl canu on canu.idperson = p.idperson
+	LEFT JOIN maritalstatus mrs on mrs.idmaritalstatus = px.idmaritalstatus_string
+	LEFT JOIN unittype ut ON ut.idunittype = px.idunittype_string
+)
+
+select candidate_id cand_ext_id
+, created_date as reg_date
+, preffered_name
+, marital_stastus
+, personal_phone
+, website
+, contract_interval
+, desired_contract_rate::float as desired_contract_rate
+from cte_candidate
+where rn = 1
+and nullif(desired_contract_rate, '') is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate note</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH 
+split_relocate_location_list AS (
+	SELECT 
+	idperson, 
+	s.relocate_location
+	FROM personx px, UNNEST(string_to_array(px.idrelocatelocation_string_list, ',')) s(relocate_location)
+)
+, relocate_location AS (
+	SELECT
+	idperson,
+	l.value relocate_location
+	FROM split_relocate_location_list srll
+	LEFT JOIN "location" l ON srll.relocate_location = l.idlocation
+)
+, cte_join_relocate_location_list AS (
+	SELECT 
+	idperson, 
+	string_agg(relocate_location, ', ') relocate_location_list
+	FROM relocate_location 
+	GROUP BY idperson
+)
+--Offlimits
+, contact_offlimit as (select a.idperson
+	, string_agg(
+		concat_ws(chr(10)
+			, coalesce('[Off limits] ' || nullif(case when a.isactive = '1' then 'YES' else 'NO' end, ''), NULL)
+			, coalesce('[Off limit type] ' || nullif(REPLACE(olt.value, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('[Off limit by] ' || nullif(a.offlimitby, ''), NULL)
+			, coalesce('[Off limit date from] ' || nullif(a.offlimitdatefrom, ''), NULL)
+			, coalesce('[Off limit date to] ' || nullif(a.offlimitdateto, ''), NULL)
+			, coalesce('[Off limit note] ' || chr(10) || nullif(REPLACE(a.offlimitnote, '\x0d\x0a', ' '), ''), NULL)
+			, chr(10))
+		, chr(13)) as contact_offlimit
+	from personofflimit a
+	left join offlimittype olt on olt.idofflimittype = a.idofflimittype
+	--and a.idcompany = '603ca21b-b343-4869-abc0-4b0a2e2d707b'
+	group by a.idperson)
+
+--Remuneration
+, contact_remuneration as (select r.idremuneration, r.idcompany_person
+		, r.bonus
+		, rb.benefitnote
+		, rb.benefitvalue
+		, b.value as benefit
+	from remuneration r
+	left join remunerationbenefit rb on rb.idremuneration = r.idremuneration
+	left join benefit b on b.idbenefit = rb.idbenefit
+	where r.isdefault = '1'
+	and coalesce(r.bonus, rb.benefitnote, rb.benefitvalue, b.value) is not NULL)
+
+, contact_benefit as (select cp.idperson, cr.idcompany_person, cr.idremuneration
+		, concat_ws(chr(10)
+			, coalesce('[Bonus] ' || nullif(replace(cr.bonus, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('[Benefit note] ' || nullif(replace(cr.benefitnote, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('[Benefit value] ' || nullif(replace(cr.benefitvalue, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('[Benefit type] ' || nullif(replace(cr.benefit, '\x0d\x0a', ' '), ''), NULL)
+			) as contact_benefit
+	from contact_remuneration cr
+	join company_person cp on cp.idcompany_person = cr.idcompany_person)
+
+--Linkedin | not having multiple linkedin
+, linkedin as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as linkedin
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '22cfe759-44fb-4378-9c23-16b19fa00935' --linkedin
+	and e.commvalue is not NULL
+	)
+--GatedTalent | not having multiple GatedTalent
+, gatedtalent as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as gatedtalent
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '6b3fd179-fb26-4c9f-a22e-6eed1cc03aae' --GatedTalent
+	and e.commvalue is not NULL
+	)
+--Company URL
+, companyurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as companyurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = 'd3322ae4-01cf-4302-ac36-6e52504bcb77' --URL Company
+	and e.commvalue is not NULL
+	)
+--Candidate URLs (may include Linkedin)
+, candidateurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidateurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '8c7d16c4-125f-498b-b932-5465373a782b' --URLs
+	and e.commvalue is not NULL
+	)
+--Switchboard | not having multiple switchboard
+, candidate_switchboard as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidate_switchboard
+		from person_eaddress pe
+		left join eaddress e on e.ideaddress = pe.ideaddress
+		where pe.idpersoncommunicationtype = 'dced2973-8162-4152-a75a-a7d7991d1577' --switchboard
+		)
+
+--Documents
+, documents as (select c.idcandidate, c.idperson
+		, d.newdocumentname
+		, reverse(substring(reverse(d.newdocumentname), 1, position('.' in reverse(d.newdocumentname)))) as extension
+		, d.originaldocumentname
+		, d.createdon::timestamp as created
+		from candidate c
+		join entitydocument ed on ed.entityid = c.idperson
+		join document d on d.iddocument = ed.iddocument
+		where ed.entityid is not NULL
+		and d.newdocumentname is not NULL)
+		
+, candidate_document as (select idperson
+		, string_agg(newdocumentname, ',' order by created desc) as candidate_document
+		from documents
+		where extension in ('.doc','.docx','.pdf','.rtf','.xls','.xlsx','.htm', '.html', '.msg', '.txt')
+		group by idperson)
+
+--Contractors
+, contact_contractor as (select c.idcontractor, c.idperson
+		, c.minimumrequiredrate
+		, c.idcurrency
+		, cur.value
+		, cur.currencyname
+		, c.contractoravailabilitycomment
+		, c.contractorpaymentcomment
+		, concat_ws(chr(10)
+			, coalesce('[Minimum required rate] ' || nullif(REPLACE(c.minimumrequiredrate, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('[Currency name] ' || nullif(REPLACE(cur.currencyname, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('[Contractor availability comment]' || chr(10) || nullif(REPLACE(c.contractoravailabilitycomment, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('[Contractor payment comment] ' || chr(10) || nullif(REPLACE(c.contractorpaymentcomment, '\x0d\x0a', ' '), ''), NULL)
+			) as contact_contractor
+		from contractor c
+		left join currency cur on cur.idcurrency = c.idcurrency --value | currencyname
+		where coalesce(c.minimumrequiredrate, c.idcurrency, c.contractoravailabilitycomment, c.contractorpaymentcomment) is not NULL
+		)
+--Candidate work history
+, company_cand as (select *
+		, ROW_NUMBER() OVER(PARTITION BY cp.idperson 
+				ORDER BY cp.sortorder ASC, cp.employmentfrom DESC, cp.isdefaultrole desc, cp.isactiveemployment desc) rn
+		from company_person cp)
+
+, work_history as (select px.idperson, px.idcompany, cp.idcompany, px.companyname
+		, px.jobtitle, px.fromdate, cp.employmentfrom, px.todate, cp.employmentto
+		, px.idpersonstatus_string, px.salary, cp.salary, cp.checkedon, cp.checkedby, cp.employmentassistant, cp.sortorder
+		from personx px
+		left join (select * from company_cand where rn = 1) cp on cp.idperson = px.idperson
+		left join personstatus ps on ps.idpersonstatus = px.idpersonstatus_string
+		where px.isdeleted = '0'
+		--and px.idperson = 'cd2260b2-80b9-42e6-b2ee-4a5c542c87d8'
+		--order by px.idperson
+		)
+--MAIN SCRIPT
+SELECT c.idperson cand_ext_id
+	, concat_ws('&lt;br/>'
+		, coalesce('[Candidate External ID] ' || nullif(REPLACE(px.idperson, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Candidate ID] ' || nullif(REPLACE(px.personid::text, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Candidate status] ' || nullif(REPLACE(ps.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Salutation] ' || nullif(REPLACE(px.salutation, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('&lt;br/>' || nullif(REPLACE(col.contact_offlimit, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Nationality] ' || nullif(REPLACE(px.nationalityvalue_string, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Gated talent] ' || nullif(REPLACE(gt.gatedtalent, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Company URL] ' || nullif(REPLACE(comu.companyurl, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Candidate URL] ' || nullif(REPLACE(canu.candidateurl, '\x0d\x0a', ' '), ''), NULL) --#inject
+		, coalesce('[Salary] ' || nullif(REPLACE(px.salary::text, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Package] ' || nullif(REPLACE(px.package, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce( chr(10) || nullif(REPLACE(cb.contact_benefit, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Location] ' || nullif(REPLACE(l.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Previous candidate] ' || nullif(REPLACE(pc.value, '\x0d\x0a', ' '), ''), NULL) --px.idpreviouscandidate_string
+		, coalesce('[Person rating] ' || nullif(REPLACE(prat.value, '\x0d\x0a', ' '), ''), NULL) --px.idpersonratingstring
+		, coalesce('[Preferred employment type] ' || nullif(REPLACE(pet.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Candidate note] ' || '&lt;br/>' || nullif(REPLACE(px.note, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Candidate comment] ' || '&lt;br/>' || nullif(REPLACE(px.personcomment, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Biography] ' || '&lt;br/>' || nullif(REPLACE(px.biography, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Relocation] ' || nullif(REPLACE(reloc.relocate_location_list, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Is DOB estimated] ' || '&lt;br/>' || nullif(REPLACE(case when px.isdateofbirthestimated = '1' then 'YES' else 'NO' end, '\x0d\x0a', ' '), ''), NULL)	
+		, coalesce('[Family] ' || nullif(REPLACE(px.family, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Unavailable reason] ' || '&lt;br/>' || nullif(REPLACE(cur.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Modified on] ' || nullif(REPLACE(px.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Modified by] ' || nullif(REPLACE(px.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Qualification] ' || nullif(REPLACE(px.qualificationvalue_string, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Next available on] ' || nullif(REPLACE(px.nextavailableon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Rate information on] ' || nullif(REPLACE(ctr.rateinformationon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('&lt;br/>' || nullif(REPLACE(cctr.contact_contractor, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Contractor company name] ' || nullif(REPLACE(ctr.contractorcompanyname, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Contractor company registration number] ' || nullif(REPLACE(ctr.contractorcompanyregistrationnumber, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Processing reason] ' || nullif(REPLACE(pr.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Processing status] ' || nullif(REPLACE(pst.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Origin of data] ' || nullif(REPLACE(px.originofdata, '\x0d\x0a', ' '), ''), NULL)
+	) note
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN personstatus ps ON ps.idpersonstatus = px.idpersonstatus_string
+	LEFT JOIN contact_offlimit col on col.idperson = p.idperson
+	LEFT JOIN linkedin lk on lk.idperson = p.idperson
+	LEFT JOIN candidate_switchboard cw on cw.idperson = p.idperson
+	LEFT JOIN gatedtalent gt on gt.idperson = p.idperson
+	LEFT JOIN companyurl comu on comu.idperson = p.idperson
+	LEFT JOIN candidateurl canu on canu.idperson = p.idperson
+	LEFT JOIN previouscandidate pc ON pc.idpreviouscandidate = px.idpreviouscandidate_string
+	LEFT JOIN personrating prat ON prat.idpersonrating = px.idpersonrating_string
+	LEFT JOIN preferredemploymenttype pet ON pet.idpreferredemploymenttype = px.idpreferredemploymenttype_string
+	LEFT JOIN maritalstatus mrs on mrs.idmaritalstatus = px.idmaritalstatus_string
+	LEFT JOIN contractorunavailablereason cur ON cur.idcontractorunavailablereason = px.idcontractorunavailablereason_string
+	LEFT JOIN countystate cs ON px.addressdefaultcountystate = cs.abbreviation
+	LEFT JOIN (select * from contractor where idcurrency is not NULL) ctr on ctr.idperson = p.idperson
+	LEFT JOIN title t on t.idtitle = px.idtitle_string
+	LEFT JOIN contact_contractor cctr on cctr.idperson = p.idperson
+	LEFT JOIN processingreason pr ON pr.idprocessingreason = px.idprocessingreason_string
+	LEFT JOIN processingstatus pst ON pst.idprocessingstatus = px.idprocessingstatus_string
+	LEFT JOIN "location" l ON l.idlocation = px.idlocation_string
+	LEFT JOIN cte_join_relocate_location_list reloc on reloc.idperson = p.idperson
+	LEFT JOIN contact_benefit cb on cb.idperson = c.idperson</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate personal phone</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with 
+--Candidate URLs (may include Linkedin)
+candidateurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidateurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '8c7d16c4-125f-498b-b932-5465373a782b' --URLs
+	and e.commvalue is not NULL
+	)
+--Switchboard | not having multiple switchboard
+, candidate_switchboard as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidate_switchboard
+		from person_eaddress pe
+		left join eaddress e on e.ideaddress = pe.ideaddress
+		where pe.idpersoncommunicationtype = 'dced2973-8162-4152-a75a-a7d7991d1577' --switchboard
+		)
+
+--MAIN SCRIPT FOR INJECTION
+, cte_candidate AS (SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, px.createdon::timestamp created_date
+--Basic information
+	, px.knownas preffered_name --#inject
+	, case mrs.value
+		when 'Married' then 2
+		when 'Widowed' then 4
+		when 'Partner' then 0
+		when 'Seperated' then 5
+		when 'Single' then 1
+		when 'Divorced' then 3
+		else 0 end as marital_stastus --#inject
+--Communication info
+	, px.phonehome home_phone --#ref
+	, cw.candidate_switchboard switchboard --#ref
+	, concat_ws(', ', nullif(px.phonehome, ''), nullif(cw.candidate_switchboard, '')) personal_phone --#inject
+	, canu.candidateurl website --#inject
+--Employment info
+	, px.salary current_salary
+	, px.minimumrequiredrate contract_rate
+	, case when ut.value = 'Day' then 'DAYS' 
+		when ut.value = 'Hour' then 'HOURS'
+		else NULL end as contract_interval
+
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN candidate_switchboard cw on cw.idperson = p.idperson
+	LEFT JOIN candidateurl canu on canu.idperson = p.idperson
+	LEFT JOIN maritalstatus mrs on mrs.idmaritalstatus = px.idmaritalstatus_string
+	LEFT JOIN unittype ut ON ut.idunittype = px.idunittype_string
+)
+
+select candidate_id cand_ext_id
+, created_date as reg_date
+, preffered_name
+, marital_stastus
+, personal_phone
+, website
+, contract_interval
+from cte_candidate
+where rn = 1
+and nullif(personal_phone, '') is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate reg</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select idperson cand_ext_id
+, createdon::timestamp created_date
+from personx</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate source lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate_source</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>candidate_source</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandSourceID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Common location</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <schema/>
+    <table>common_location</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>post_code</column_name>
+        <stream_name>post_code</stream_name>
+      </field>
+      <field>
+        <column_name>location_name</column_name>
+        <stream_name>location_name</stream_name>
+      </field>
+      <field>
+        <column_name>address</column_name>
+        <stream_name>location_address</stream_name>
+      </field>
+      <field>
+        <column_name>state</column_name>
+        <stream_name>location_state</stream_name>
+      </field>
+      <field>
+        <column_name>current_location_candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Common location 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <schema/>
+    <table>common_location</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>city</column_name>
+        <stream_name>desiredLocations</stream_name>
+      </field>
+      <field>
+        <column_name>location_name</column_name>
+        <stream_name>location_name</stream_name>
+      </field>
+      <field>
+        <column_name>desired_location_candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Compensation</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with 
+--Candidate URLs (may include Linkedin)
+candidateurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidateurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '8c7d16c4-125f-498b-b932-5465373a782b' --URLs
+	and e.commvalue is not NULL
+	)
+--Switchboard | not having multiple switchboard
+, candidate_switchboard as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidate_switchboard
+		from person_eaddress pe
+		left join eaddress e on e.ideaddress = pe.ideaddress
+		where pe.idpersoncommunicationtype = 'dced2973-8162-4152-a75a-a7d7991d1577' --switchboard
+		)
+
+--MAIN SCRIPT FOR INJECTION
+, cte_candidate AS (SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, px.createdon::timestamp created_date
+--Basic information
+	, px.knownas preffered_name --#inject
+	, case mrs.value
+		when 'Married' then 2
+		when 'Widowed' then 4
+		when 'Partner' then 0
+		when 'Seperated' then 5
+		when 'Single' then 1
+		when 'Divorced' then 3
+		else 0 end as marital_stastus --#inject
+--Communication info
+	, px.phonehome home_phone --#ref
+	, cw.candidate_switchboard switchboard --#ref
+	, concat_ws(', ', nullif(px.phonehome, ''), nullif(cw.candidate_switchboard, '')) personal_phone --#inject
+	, canu.candidateurl website --#inject
+--Employment info
+	, px.salary current_salary
+	, px.minimumrequiredrate contract_rate
+	, case when ut.value = 'Day' then 'DAYS' 
+		when ut.value = 'Hour' then 'HOURS'
+		else NULL end as contract_interval
+
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN candidate_switchboard cw on cw.idperson = p.idperson
+	LEFT JOIN candidateurl canu on canu.idperson = p.idperson
+	LEFT JOIN maritalstatus mrs on mrs.idmaritalstatus = px.idmaritalstatus_string
+	LEFT JOIN unittype ut ON ut.idunittype = px.idunittype_string
+)
+
+select candidate_id cand_ext_id
+, created_date as reg_date
+, preffered_name
+, marital_stastus
+, personal_phone
+, website
+, contract_interval
+from cte_candidate
+where rn = 1
+and nullif(contract_interval, '') is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Current location</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--Candidate current address
+select [PANO ] as cand_ext_id
+, concat_ws(', '
+	, coalesce(nullif([住所 都道府県], ''), NULL) --prefecture
+	, coalesce(nullif([住所 住所], ''), NULL) --remaining address
+	) as location_name
+, concat_ws(', '
+	, coalesce('〒' + nullif([住所 〒], ''), NULL) --postal code
+	, coalesce(nullif([住所 都道府県], ''), NULL) --prefecture
+	, coalesce(nullif([住所 住所], ''), NULL) --remaining address
+	) as location_address
+, [住所 都道府県] as location_state
+, [住所 〒] as post_code
+, current_timestamp as insert_timestamp
+from csv_can
+where coalesce(nullif([住所 都道府県], ''), nullif([住所 〒], ''), nullif([住所 住所], '')) is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Custom Tags</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--CANDIDATE TAGS CF
+with tags as (select m._fk_contact, m._fk_tag , t.name as tag_name
+	from [20191030_155622_mapping] m
+	left join [20191030_153350_contacts] c on c.__pk = m._fk_contact
+	left join [20191030_160039_tags] t on t.__pk = m._fk_tag
+	where m._fk_contact > 0
+	and m._fk_tag &lt;&gt; '?' --special characters
+	and c.type = 'Candidate'
+	and m._fk_contact > 79567)
+
+/* AUDIT TAG NAME
+select distinct tag_name from tags
+*/
+
+select concat('AS', _fk_contact) as cand_ext_id
+, 'add_cand_info' as additional_type
+, 1005 as form_id
+, 11265 as field_id
+, string_agg(tag_name, ', ') within group (order by _fk_tag asc) as field_value
+, current_timestamp as insert_timestamp
+from tags
+group by _fk_contact</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>880</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Desired contract rate</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>desired_contract_rate</name>
+        <rename>desired_contract_rate</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Education summary</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--Education
+with edu as (select e.idperson
+		, e.educationestablishment
+		, e.educationsubject
+		, e.idqualification
+		, e.notes
+		, e.educationfrom
+		, e.educationto
+		, e.checkedon
+		, e.checkedby
+		, e.createdon
+		, concat_ws(chr(10)
+					, coalesce('[Education from] ' || nullif(REPLACE(e.educationfrom, '\x0d\x0a', ' '), ''), NULL)
+					, coalesce('[Education to] ' || nullif(REPLACE(e.educationto, '\x0d\x0a', ' '), ''), NULL)
+					, coalesce('[College / University] ' || nullif(REPLACE(e.educationestablishment, '\x0d\x0a', ' '), ''), NULL)
+					, coalesce('[Course] ' || nullif(REPLACE(e.educationsubject, '\x0d\x0a', ' '), ''), NULL) --Education subject
+					, coalesce('[Qualification] ' || nullif(REPLACE(q.value, '\x0d\x0a', ' '), ''), NULL)
+					, coalesce('[Checked by] ' || nullif(REPLACE(e.checkedby, '\x0d\x0a', ' '), ''), NULL)
+					, coalesce('[Checked on] ' || nullif(REPLACE(e.checkedon, '\x0d\x0a', ' '), ''), NULL)
+					, coalesce('[Notes]' || chr(10) || nullif(REPLACE(e.notes, '\x0d\x0a', ' '), ''), NULL)
+					) as edu
+		from education e
+		left join qualification q on e.idqualification = q.idqualification)
+
+, contact_edu as (select idperson
+		, string_agg(edu, chr(10) || chr(13) order by educationto desc, educationfrom desc, createdon asc) as contact_edu
+		from edu
+		group by idperson)
+
+--Language
+, contact_language as (select pc.idperson
+		, string_agg(replace(l.value, '\x0d\x0a', ''), ', ') as contact_language
+		from personcode pc
+		left join language l on l.idlanguage = pc.codeid
+		where idtablemd = 'c69e91b3-9f35-4c73-ba46-2e17ad8ce6aa' --language
+		group by pc.idperson)
+		
+--MAIN SCRIPT
+, cte_candidate AS (SELECT p.idperson contact_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, concat_ws(chr(10)
+		, coalesce('[Education Summary] ' || chr(10) || nullif(REPLACE(cedu.contact_edu, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[International] ' || nullif(REPLACE(px.internationalvalue_string, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('[Language] ' || nullif(REPLACE(cl.contact_language, '\x0d\x0a', ' '), ''), NULL)
+	) as candidate_education
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN contact_edu cedu on cedu.idperson = c.idperson
+	LEFT JOIN contact_language cl on cl.idperson = c.idperson
+	--where c.idperson = '00187105-3e37-4edd-ae25-e0ade4ef8bd4'
+	)
+	
+select contact_id as cand_ext_id
+, candidate_education
+FROM cte_candidate
+WHERE 1=1
+and rn = 1
+and nullif(candidate_education, '') is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Extract Candidate Documents</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select ed.entityid cand_ext_id
+		, d.newdocumentname uploaded_filename
+		, reverse(substring(reverse(d.newdocumentname), 1, position('.' in reverse(d.newdocumentname)))) as extension
+		, d.originaldocumentname real_filename
+		, d.createdon::timestamp as created
+		from entitydocument ed
+		join document d on d.iddocument = ed.iddocument
+		where ed.entityid is not NULL
+		and d.newdocumentname is not NULL
+		and ed.idtablemd = '9203677c-ee73-4174-8b3a-969056adfe2f' --Person</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate_source</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <commit>1000</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate_source</table>
+      <key>
+        <name>candidate_source</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>name</name>
+        <rename>candidate_source</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>source_type</name>
+        <rename>source_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>payment_style</name>
+        <rename>payment_style</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>periodic_payment_start_date</name>
+        <rename>periodic_payment_start_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>periodic_payment_end_date</name>
+        <rename>periodic_payment_end_date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>included_job_count</name>
+        <rename>included_job_count</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>show_job</name>
+        <rename>show_job</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update Candidate company</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <skip_lookup>N</skip_lookup>
+    <commit>300</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>actual_candidate_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>company_name</name>
+        <rename>company_name</rename>
+      </value>
+      <value>
+        <name>company_number</name>
+        <rename>company_number</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>880</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update candidate source</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_source_id</name>
+        <rename>VCCandSourceID</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update compensation</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>contract_interval</name>
+        <rename>contract_interval</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update home phone</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>home_phone</name>
+        <rename>personal_phone</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update known as</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>nickname</name>
+        <rename>preffered_name</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cand lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>idperson</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_candidate_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>784</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate lookup 4 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate reg date</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>created_date</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate umbrella</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <sql>--Candidate company name/number
+select c.id as candidate_id
+, c.limited_company_c
+, case when a."name" is NULL then c.umbrella_company_name_c
+	else a."name" end as company_name
+, a.reg_no_c as company_number --candidate company number (Reg Number)
+, c.umbrella_company_name_c
+from contact c
+left join account a on a.id = c.limited_company_c
+where c.recordtypeid in ('0120Y0000013O5c','0120Y000000RZZV')
+and (c.limited_company_c is not NULL --1123 rows
+		or c.umbrella_company_name_c is not NULL) --1124 rows
+		
+/* AUDIT 1 candidate with umbrella company --0030Y00000csQxEQAU
+--Candidate company name/number
+select c.id as candidate_id
+, c.limited_company_c
+, a."name" as company_name
+, a.reg_no_c as company_number --candidate company number (Reg Number)
+, c.umbrella_company_name_c
+from contact c
+left join account a on a.id = c.limited_company_c
+where c.recordtypeid in ('0120Y0000013O5c','0120Y000000RZZV')
+and (c.limited_company_c is NULL --1123 rows
+		and c.umbrella_company_name_c is not NULL) --1124 rows
+*/</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>880</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>gdpr</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_candidate AS (
+	SELECT c.idperson
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, px.idprocessingreason_string, px.processingreasonby, px.processingreasonon, px.idprocessingstatus_string, px.processingstatusby, px.processingstatuson
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+)
+
+select c.idperson
+	, case 
+		when pr.value = 'Consent' then '1' --consent givent
+		when pr.value = 'Legitimate Interests' then '5' --Legitimate Interest
+		when pr.value = 'Not Required' then '' --unknown
+		when pr.value = 'LI Social Media' then '' --unknown
+		when pr.value = 'Contractual Obligation' then '4' --contract
+		else NULL end as portal_status
+	, 1 explicit_consent --unknown
+	, 3 exercise_right --other
+	, 6 request_through --other
+	, processingreasonon::TIMESTAMP as request_through_date
+	, 6 obtained_through --other
+	, processingstatuson::TIMESTAMP as obtained_through_date
+	, 0 expire --no expire | 1-expire on
+	--, '2024-05-29 00:00:00'::TIMESTAMP expire_date
+	, -10 obtained_by
+	, current_timestamp as insert_timestamp
+from cte_candidate c
+left join processingreason pr on pr.idprocessingreason = c.idprocessingreason_string
+left join processingstatus ps on ps.idprocessingstatus = c.idprocessingstatus_string
+where c.rn = 1
+and coalesce(idprocessingreason_string, idprocessingstatus_string) is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>784</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert_candidate_gdpr</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>candidate_gdpr_compliance</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>actual_candidate_id</stream_name>
+      </field>
+      <field>
+        <column_name>explicit_consent</column_name>
+        <stream_name>explicit_consent</stream_name>
+      </field>
+      <field>
+        <column_name>exercise_right</column_name>
+        <stream_name>exercise_right</stream_name>
+      </field>
+      <field>
+        <column_name>request_through</column_name>
+        <stream_name>request_through</stream_name>
+      </field>
+      <field>
+        <column_name>request_through_date</column_name>
+        <stream_name>request_through_date</stream_name>
+      </field>
+      <field>
+        <column_name>obtained_through</column_name>
+        <stream_name>obtained_through</stream_name>
+      </field>
+      <field>
+        <column_name>obtained_through_date</column_name>
+        <stream_name>obtained_through_date</stream_name>
+      </field>
+      <field>
+        <column_name>expire</column_name>
+        <stream_name>expire</stream_name>
+      </field>
+      <field>
+        <column_name>obtained_by</column_name>
+        <stream_name>obtained_by</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>784</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup candidateid</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>candidateid</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update candidate_document</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>200</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>candidate_document</table>
+      <key>
+        <name>candidateid</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>uploaded_filename</name>
+        <field>uploaded_filename</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>uploaded_filename</name>
+        <rename>real_filename</rename>
+      </value>
+      <value>
+        <name>created</name>
+        <rename>created</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update edu summary</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>education_summary</name>
+        <rename>candidate_education</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update note</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>note</name>
+        <rename>note</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add Talent Pool</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>candidate_group</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>group_name</stream_name>
+      </field>
+      <field>
+        <column_name>owner_id</column_name>
+        <stream_name>owner_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>share_permission</column_name>
+        <stream_name>share_permission</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_group_ext_id</column_name>
+        <stream_name>candidate_group_ext_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate TP list</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+select distinct idassignment job_ext_id
+, idperson cand_ext_id
+from assignmentcandidate
+where idassignment in (select idassignment from interim)</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate talent Pool</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+select distinct idassignment candidate_group_ext_id
+, trim(assignmenttitle) as group_name
+, -10 as owner_id
+, 1 as share_permission --1 public -2 private -3 share
+, now() as insert_timestamp
+from interim</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate TP</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>candidate_group_candidate</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_group_id</column_name>
+        <stream_name>VCCandidateGroupID</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Distribution lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate_group</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>candidate_group_ext_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateGroupID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate marital status</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with 
+--Candidate URLs (may include Linkedin)
+candidateurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidateurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '8c7d16c4-125f-498b-b932-5465373a782b' --URLs
+	and e.commvalue is not NULL
+	)
+--Switchboard | not having multiple switchboard
+, candidate_switchboard as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidate_switchboard
+		from person_eaddress pe
+		left join eaddress e on e.ideaddress = pe.ideaddress
+		where pe.idpersoncommunicationtype = 'dced2973-8162-4152-a75a-a7d7991d1577' --switchboard
+		)
+
+--MAIN SCRIPT FOR INJECTION
+, cte_candidate AS (SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, px.createdon::timestamp created_date
+--Basic information
+	, px.knownas preffered_name --#inject
+	, case mrs.value
+		when 'Married' then 2
+		when 'Widowed' then 4
+		when 'Partner' then 0
+		when 'Seperated' then 5
+		when 'Single' then 1
+		when 'Divorced' then 3
+		else 0 end as marital_stastus --#inject
+--Communication info
+	, px.phonehome home_phone --#ref
+	, cw.candidate_switchboard switchboard --#ref
+	, concat_ws(', ', nullif(px.phonehome, ''), nullif(cw.candidate_switchboard, '')) personal_phone --#inject
+	, canu.candidateurl website --#inject
+--Employment info
+	, px.salary current_salary
+	, px.minimumrequiredrate contract_rate
+	, case when ut.value = 'Day' then 'DAYS' 
+		when ut.value = 'Hour' then 'HOURS'
+		else NULL end as contract_interval
+	, marketrate as desired_contract_rate
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN candidate_switchboard cw on cw.idperson = p.idperson
+	LEFT JOIN candidateurl canu on canu.idperson = p.idperson
+	LEFT JOIN maritalstatus mrs on mrs.idmaritalstatus = px.idmaritalstatus_string
+	LEFT JOIN unittype ut ON ut.idunittype = px.idunittype_string
+)
+
+select candidate_id cand_ext_id
+, created_date as reg_date
+, preffered_name
+, marital_stastus
+, personal_phone
+, website
+, contract_interval
+, desired_contract_rate::float as desired_contract_rate
+from cte_candidate
+where rn = 1
+and marital_stastus is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update marital status</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>maritalstatus</name>
+        <rename>marital_stastus</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate website</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with 
+--Candidate URLs (may include Linkedin)
+candidateurl as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidateurl
+	from person_eaddress pe
+	left join eaddress e on e.ideaddress = pe.ideaddress
+	where pe.idpersoncommunicationtype = '8c7d16c4-125f-498b-b932-5465373a782b' --URLs
+	and e.commvalue is not NULL
+	)
+--Switchboard | not having multiple switchboard
+, candidate_switchboard as (select pe.idperson, pe.idpersoncommunicationtype, e.commvalue as candidate_switchboard
+		from person_eaddress pe
+		left join eaddress e on e.ideaddress = pe.ideaddress
+		where pe.idpersoncommunicationtype = 'dced2973-8162-4152-a75a-a7d7991d1577' --switchboard
+		)
+
+--MAIN SCRIPT FOR INJECTION
+, cte_candidate AS (SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	, px.createdon::timestamp created_date
+--Basic information
+	, px.knownas preffered_name --#inject
+	, case mrs.value
+		when 'Married' then 2
+		when 'Widowed' then 4
+		when 'Partner' then 0
+		when 'Seperated' then 5
+		when 'Single' then 1
+		when 'Divorced' then 3
+		else 0 end as marital_stastus --#inject
+--Communication info
+	, px.phonehome home_phone --#ref
+	, cw.candidate_switchboard switchboard --#ref
+	, concat_ws(', ', nullif(px.phonehome, ''), nullif(cw.candidate_switchboard, '')) personal_phone --#inject
+	, canu.candidateurl website --#inject
+--Employment info
+	, px.salary current_salary
+	, px.minimumrequiredrate contract_rate
+	, case when ut.value = 'Day' then 'DAYS' 
+		when ut.value = 'Hour' then 'HOURS'
+		else NULL end as contract_interval
+
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN candidate_switchboard cw on cw.idperson = p.idperson
+	LEFT JOIN candidateurl canu on canu.idperson = p.idperson
+	LEFT JOIN maritalstatus mrs on mrs.idmaritalstatus = px.idmaritalstatus_string
+	LEFT JOIN unittype ut ON ut.idunittype = px.idunittype_string
+)
+
+select candidate_id cand_ext_id
+, created_date as reg_date
+, preffered_name
+, marital_stastus
+, personal_phone
+, website
+, contract_interval
+from cte_candidate
+where rn = 1
+and nullif(website, '') is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update website</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>website</name>
+        <rename>website</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 6</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job App candidate rating</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_candidate AS (SELECT
+	c.idperson candidate_id,
+	ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+) --586657 rows
+
+, interim as (
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+) --409 rows
+
+, jobleads as (select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647') --jobs migrated
+	or a.assignmentno in ('2000501','2000876','2000906','2000909','2001060','2001066','2001104','2001122','2001124','2001150','2001158','2001177','2001178','2001179','2001188','2001197','2001225','2001227','2001228','2001231','2001235','2001238','2001239','2001265','2001266','2001276','2001286','2001292','2001306','2001328','2001334','2001335','2001340','2001349','2001353','2001359','2001387','2001392','2001393','2001397','2001398','2001400','2001407','2001421','2001423','2001424','2001443','2001446','2001469','2001484','2001485','2001513','2001518','2001521','2001533','2001536','2001537','2001538','2001549','2001553','2001558','2001565','2001567','2001572','2001583','2001593','2001593','2001596','2001602','2001613','2001618','2001623','2001625','2001628','2001631','2001632','2001634','2001639','2001640','2001648','2001655','2001669','2001670','2001671','1013982','1013999','2000700','2000923','2000924','2000960','2001064','2001102','2001103','2001109','2001112','2001154','2001157','2001175','2001221','2001226','2001229','2001230','2001232','2001233','2001234','2001236','2001237','2001240','2001241','2001242','2001243','2001244','2001245','2001248','2001249','2001350','2001364','2001373','2001380','2001390','2001412','2001419','2001422','2001427','2001434','2001460','2001473','2001494','2001496','2001547','2001548','2001550','2001574','2001585','2001591','2001624','2001627','2001630','2001633','2001642','2001650','2001651','2001653','2001659','2001660','2001661','2001662') --jobs leads
+	)
+	
+, selected_assignment as 
+	(select idassignment
+	from interim
+	
+	UNION
+	select idassignment
+	from jobleads)
+
+, cte_job AS (
+	SELECT a.idassignment job_id,
+	CASE
+		WHEN f.idassignment IS NULL THEN 'PERMANENT'
+		ELSE 'CONTRACT' END job_type
+	FROM selected_assignment a
+	LEFT JOIN flex f ON f.idassignment = a.idassignment
+) --select * from cte_job --566 rows
+
+, map_stage AS (
+	SELECT ac.idassignmentcandidate job_app_ext_id
+	, job_type
+	, ac.idassignment job_id
+	, ac.idperson candidate_id
+	, to_char(ac.createdon::DATE, 'YYYY-MM-DD') actioned_date
+	, CASE cp.value
+		when 'Approach' then 'SHORTLISTED'
+		when 'Arrange Interv' then 'FIRST_INTERVIEW'
+		when 'Client Interview' then 'FIRST_INTERVIEW'
+		when 'CV Benchmark Sent' then 'CANDIDATE'
+		when 'CV Received' then 'SHORTLISTED'
+		when 'CV Sent' then 'CANDIDATE'
+		when 'Follow-Up Conv' then 'SHORTLISTED'
+		when 'Hold' then 'SHORTLISTED'
+		when 'Interview With SF' then 'FIRST_INTERVIEW'
+		when 'Left a Message' then 'SHORTLISTED'
+		when 'Longlist' then 'SHORTLISTED'
+		when 'Marketing Sent' then 'CANDIDATE'
+		when 'Not Interested' then 'SHORTLISTED'
+		when 'Not Interested-Intv' then 'FIRST_INTERVIEW'
+		when 'Off Limits' then 'CANDIDATE'
+		when 'Offer' then 'OFFERED'
+		when 'Offer Withdrew' then 'OFFERED'
+		when 'Offer/Rej' then 'OFFERED'
+		when 'Placed' then 'PLACED'
+		when 'Placed Cand Follow' then 'PLACED'
+		when 'Reject/I' then 'FIRST_INTERVIEW'
+		when 'Reject/S' then 'SECOND_INTERVIEW'
+		when 'Rejected' then 'SHORTLISTED'
+		when 'Rejected Feedback' then 'CANDIDATE'
+		when 'Screening Completed – Not interested' then 'SHORTLISTED'
+		when 'Screening Completed – Rejected' then 'SHORTLISTED'
+		when 'Screening Completed – Spec Sent' then 'SHORTLISTED'
+		when 'Shortlist' then 'SHORTLISTED'
+		when 'SL Cons Approval' then 'SHORTLISTED'
+		when 'SL Preparation' then 'SHORTLISTED'
+		when 'Spec Sent' then 'CANDIDATE'
+		when 'Thank You' then 'CANDIDATE'
+		when 'To Be Contacted' then 'SHORTLISTED'
+		when 'Unreachable' then 'SHORTLISTED'
+		when 'Withdrew -S' then 'SHORTLISTED'
+		else 'CANDIDATE' END application_stage
+	, case when cp.value in ('Not Interested', 'Offer/Rej', 'Offer Withdrew', 'Reject/I', 'Reject/S', 'Rejected', 'Rejected Feedback'
+							, 'Screening Completed – Not interested', 'Screening Completed – Rejected', 'Withdrew -S')
+						then to_char(ac.createdon::DATE, 'YYYY-MM-DD')
+		else NULL end as rejected_date
+	, cp.value sub_status
+	, ac.assignmentcandidaterank
+	, case when ac.assignmentcandidaterank in ('1', '2') then 1
+		when ac.assignmentcandidaterank in ('3', '4') then 2
+		when ac.assignmentcandidaterank in ('5', '6') then 3
+		when ac.assignmentcandidaterank in ('7', '8') then 4
+		when ac.assignmentcandidaterank in ('9', '10') then 5
+		when ac.assignmentcandidaterank::int > 10 then 5
+		else NULL end as candidate_rating
+	FROM assignmentcandidate ac
+	JOIN (select * from cte_candidate where rn = '1') cc ON ac.idperson = cc.candidate_id
+	JOIN (select * from cte_job) cj ON ac.idassignment = cj.job_id
+	JOIN (select * from candidateprogress where isactive = '1' ) cp ON ac.idcandidateprogress = cp.idcandidateprogress
+	WHERE ac.isexcluded = '0'
+	and assignmentcandidaterank::int > 0
+)
+, cte_application AS (
+	SELECT job_app_ext_id
+	, job_type
+	, job_id
+	, candidate_id
+	, actioned_date
+	, CASE
+		WHEN application_stage IN ('PLACED') THEN 'OFFERED'
+		ELSE application_stage END application_stage_import
+	, application_stage as origin_app_stage
+	, rejected_date
+	, sub_status
+	, assignmentcandidaterank
+	, candidate_rating
+	, ROW_NUMBER() OVER(PARTITION BY job_id, candidate_id ORDER BY CASE application_stage
+																WHEN 'PLACED' THEN 1
+																WHEN 'OFFERED' THEN 2
+																WHEN 'SECOND_INTERVIEW' THEN 3
+																WHEN 'FIRST_INTERVIEW' THEN 4
+																WHEN 'SENT' THEN 5
+																WHEN 'SHORTLISTED' THEN 6
+																END ASC, actioned_date DESC) AS rn
+	FROM map_stage
+	WHERE application_stage IS NOT NULL and application_stage &lt;&gt; 'CANDIDATE'
+)
+
+SELECT job_app_ext_id
+, case when job_type = 'PERMANENT' then 301
+	when job_type = 'CONTRACT' then 302
+	end as placed_stage
+, job_id job_ext_id
+, candidate_id cand_ext_id
+, application_stage_import app_stage
+, sub_status
+, 'Assignment candidate rank: ' || assignmentcandidaterank as rating_comment --extracted from FF
+, candidate_rating
+, -10 user_id
+, 'Ranking' as skill
+, actioned_date
+FROM cte_application
+WHERE rn = 1
+-- AND real_stage = 'Placed'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Position Candidate</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobAppID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>status</name>
+        <rename>VCStageID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1248</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cand lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>idperson</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>actual_candidate_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>1024</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Position rating questions</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql/>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>1024</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert rating questions</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>position_description_rating_skill</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_description_id</column_name>
+        <stream_name/>
+      </field>
+      <field>
+        <column_name>index</column_name>
+        <stream_name/>
+      </field>
+      <field>
+        <column_name>skill</column_name>
+        <stream_name/>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>1024</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate rating</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>candidate_rating</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_candidate_id</column_name>
+        <stream_name>VCJobAppID</stream_name>
+      </field>
+      <field>
+        <column_name>average_rating_score</column_name>
+        <stream_name>candidate_rating</stream_name>
+      </field>
+      <field>
+        <column_name>rating_comment</column_name>
+        <stream_name>rating_comment</stream_name>
+      </field>
+      <field>
+        <column_name>user_id</column_name>
+        <stream_name>user_id</stream_name>
+      </field>
+      <field>
+        <column_name>stage</column_name>
+        <stream_name>VCStageID</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1408</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Rating</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate_rating</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateRatingID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1248</xloc>
+      <yloc>1296</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Position Rating</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description_rating_skill</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>skill</name>
+        <field>skill</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCPositionRatingID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate rating score</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>candidate_rating_score</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_rating_id</column_name>
+        <stream_name>VCCandidateRatingID</stream_name>
+      </field>
+      <field>
+        <column_name>position_rating_id</column_name>
+        <stream_name>VCPositionRatingID</stream_name>
+      </field>
+      <field>
+        <column_name>rating_score</column_name>
+        <stream_name>candidate_rating</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1408</xloc>
+      <yloc>1296</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate tobekept</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--CANDIDATE TO BE KEPT
+with interim as (
+	select idassignment, assignmenttitle, idcompany, assignmentno
+	from "assignment"
+	where assignmenttitle ilike '%interim%' --408 rows
+	
+	UNION
+	select idassignment, assignmenttitle, idcompany, assignmentno
+	from "assignment"
+	where idcompany in ('826df702-f17e-4939-9566-75dc74e3b21b', 'd6d459aa-4e5e-4771-a0a4-1b99fce610a4')
+)
+
+, selected_job as (select idassignment
+	--, now() as deleted_timestamp
+	--, 1 position_category --remove only job but not job leads
+	--, 1 to_be_deleted
+	from interim
+	where assignmentno::int in (2001656,2001606,2001386,2001365,2001337,2001331,2001330,2001190,2001138,2001076,2001030,2000998,2000556,2000555,2000486,1008882,1008881,1008860,1008862,1008869,1008857,1008871,1008867,1008859,1008868,1008861,1008864,1008856,1008866)
+	
+	
+UNION ALL	
+select idassignment
+	from "assignment" a
+	where a.assignmentno in ('1004879','1007680','1008886','1011960','1013354','2001160','2001522','2001595','2001616','2001645','2001646','2001647')
+)
+
+select distinct idperson
+from assignmentcandidate
+where idassignment in (select idassignment from selected_job)</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>1280</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate tmp table</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>mike_tmp_tobekept_candidate</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>idperson</column_name>
+        <stream_name>idperson</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>1280</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

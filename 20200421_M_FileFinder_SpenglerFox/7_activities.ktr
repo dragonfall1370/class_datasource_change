@@ -1,0 +1,3308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>7_activities</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/10/25 17:35:10.168</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/10/25 17:35:10.168</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>--Index in related tables
+insert into activity_company(activity_id, company_id, insert_timestamp)
+select id
+, company_id
+, insert_timestamp
+from activity
+where id > 158
+and company_id > 0
+and insert_timestamp is not NULL --3048059
+
+insert into activity_contact (activity_id, contact_id, insert_timestamp)
+select id
+, contact_id
+, insert_timestamp
+from activity
+where id > 158
+and contact_id > 0 --
+
+insert into activity_job (activity_id, job_id, insert_timestamp)
+select id
+, position_id
+, insert_timestamp
+from activity
+where id > 158
+and position_id > 0
+and id not in (select activity_id from activity_job)
+
+
+insert into activity_candidate (activity_id, candidate_id, insert_timestamp)
+select id
+, candidate_id
+, insert_timestamp
+from activity
+where id > 158
+and candidate_id > 0
+and id not in (select activity_id from activity_candidate)</note>
+      <xloc>1200</xloc>
+      <yloc>16</yloc>
+      <width>395</width>
+      <heigth>582</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Company log</note>
+      <xloc>32</xloc>
+      <yloc>368</yloc>
+      <width>83</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Contact log - task - appointment - Intelligence</note>
+      <xloc>21</xloc>
+      <yloc>17</yloc>
+      <width>257</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Job log / sources / invoices</note>
+      <xloc>32</xloc>
+      <yloc>496</yloc>
+      <width>154</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Candidate contract - log</note>
+      <xloc>32</xloc>
+      <yloc>976</yloc>
+      <width>140</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>From (DB)</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfox2</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ff228dc6fa8c</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>To (PROD)</name>
+    <server>10.0.9.189</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>spenglerfox.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Company lookup</from>
+      <to>Contact lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact log</from>
+      <to>Company lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact appointment</from>
+      <to>Company lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact campaign</from>
+      <to>Company lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company log</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup 2</from>
+      <to>Contact lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact lookup</from>
+      <to>Insert contact log</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>Insert job log</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact lookup 2</from>
+      <to>Job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Candidate lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job sources</from>
+      <to>Job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job invoices</from>
+      <to>Contact lookup 4</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact lookup 4</from>
+      <to>Job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Insert job invoices</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact intelligence</from>
+      <to>Contact lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job log</from>
+      <to>Contact lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Insert candidate contract</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup 2</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate contract</from>
+      <to>Job lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate compliance</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact lookup 3</from>
+      <to>Insert company log</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact lookup</from>
+      <to>Insert contact int</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>Insert job source</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Insert candidate compliance</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate log</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Insert candidate log</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job fee activities</from>
+      <to>Job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Insert job fee</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job consultant split</from>
+      <to>Job lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup</from>
+      <to>Insert consultant split</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Candidate compliance</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_candidate AS (
+	SELECT c.idperson
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+)
+
+, cte_candidate_activity AS (
+	SELECT cl.idcompliancelog
+	, cl.idperson candidate_id
+	, cl.createdon::timestamp created_date
+	, concat_ws(chr(10)
+			, coalesce('[Candidate compliance]' || chr(10) || 'Created by: ' || nullif(REPLACE(cl.createdby, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Created on: ' || nullif(REPLACE(cl.createdon, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Processing reason value: ' || nullif(REPLACE(cl.processingreasonvalue, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Processing status: ' || nullif(REPLACE(pst.value, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Result: ' || nullif(REPLACE(cl.result, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('GT Error code: ' || nullif(REPLACE(cl.errorcode, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('GT Error description: ' || chr(10) || nullif(REPLACE(cl.errordescription, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Person title: ' || nullif(REPLACE(cl.persontitle, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('First name: ' || nullif(REPLACE(cl.firstname, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Last name: ' || nullif(REPLACE(cl.lastname, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Email: ' || nullif(REPLACE(cl.email, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Person communication type: ' || nullif(REPLACE(pct.value, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Email template: ' || nullif(REPLACE(cl.emailtemplate, '\x0d\x0a', ' '), ''), NULL)
+			--, coalesce('Processing reason by: ' || nullif(REPLACE(px.processingreasonby, '\x0d\x0a', ' '), ''), NULL)
+			--, coalesce('Processing reason on: ' || nullif(REPLACE(px.processingreasonon, '\x0d\x0a', ' '), ''), NULL)
+			--, coalesce('Processing reason log: ' || nullif(REPLACE(px.processingreasonlog, '\x0d\x0a', ' '), ''), NULL)
+			--, coalesce('Reason log: ' || chr(10) || nullif(REPLACE(REPLACE(cl.reasonlog, '\x0d\x0a', ' '), '\x0a', ' '), ''), NULL)
+	) description --gdpr_note
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'candidate' as type
+	FROM compliancelog cl
+	JOIN (select * from cte_candidate where rn = 1) c on c.idperson = cl.idperson
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+	LEFT JOIN processingstatus pst ON pst.idprocessingstatus = px.idprocessingstatus_string
+	LEFT JOIN personcommunicationtype pct ON cl.idpersoncommunicationtype = pct.idpersoncommunicationtype
+)
+
+SELECT candidate_id as cand_ext_id
+, idcompliancelog
+, created_date
+, description
+, user_account_id
+, category
+, type
+FROM cte_candidate_activity
+WHERE description &lt;&gt; ''
+-- LIMIT 100</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate contract</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select c.idcontract --activity_ext_id
+	, c.idperson as cand_ext_id
+	, f.idassignment as job_ext_id
+	, c.createdon::timestamp created_date
+	, concat_ws(chr(10), '[Candidate contract]'
+			, coalesce('Created by: ' || nullif(REPLACE(c.createdby, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Created on: ' || nullif(REPLACE(c.createdon, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Modified on: ' || nullif(REPLACE(c.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Modified by: ' || nullif(REPLACE(c.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Contract type: ' || nullif(REPLACE(ct.value, '\x0d\x0a', ' '), ''), NULL) --c.idcontracttype
+			, coalesce('Contract status: ' || nullif(REPLACE(cs.value, '\x0d\x0a', ' '), ''), NULL) --c.idcontractstatus
+			, coalesce('Contract reference: ' || nullif(REPLACE(c.contractreference, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Contract job title: ' || nullif(REPLACE(c.contractjobtitle, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Contract start date: ' || nullif(REPLACE(c.contractstartdate, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Estimated contract end date: ' || nullif(REPLACE(c.estimatedcontractenddate, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Contract extended to date: ' || nullif(REPLACE(c.contractextendedtodate, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Contract address: ' || nullif(REPLACE(c.contractaddress, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Contract hours per day: ' || nullif(REPLACE(c.contracthoursperday, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Contract note: ' || chr(10) || nullif(REPLACE(c.contractnote, '\x0d\x0a', ' '), ''), NULL)
+		) description
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'candidate' as type
+from contract c
+left join flex f on f.idflex = c.idflex
+left join contracttype ct on ct.idcontracttype = c.idcontracttype
+left join contractstatus cs on cs.idcontractstatus = c.idcontractstatus
+
+/* AUDIT JOB LOG
+--No multiple job
+select idassignment, count(*)
+from flex
+group by idassignment
+having count(*) > 1
+*/</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate log</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_candidate AS (
+	SELECT c.idperson
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+)
+
+, cte_contact_activity AS (SELECT ctc.idperson
+	, ale.idactivitylog
+	, al.createdon::timestamp created_date
+	, concat_ws(chr(10), '[Candidate log]'
+		, coalesce('Created by: ' || nullif(REPLACE(al.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified on: ' || nullif(REPLACE(al.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified by: ' || nullif(REPLACE(al.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity type: ' || nullif(REPLACE(al.activitytype, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task start date: ' || nullif(REPLACE(t.startdate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task completed date: ' || nullif(REPLACE(t.completeddate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task due date: ' || nullif(REPLACE(t.duedate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task status: ' || nullif(REPLACE(ts.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task priority: ' || nullif(REPLACE(tp.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task subject: ' || nullif(REPLACE(t.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task description: ' || chr(10) || nullif(REPLACE(t.description, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task reminder info: ' || nullif(REPLACE(t.reminderinfo, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task created by: ' || nullif(REPLACE(t.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task created on: ' || nullif(REPLACE(t.createdon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task modified by: ' || nullif(REPLACE(t.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task modified on: ' || nullif(REPLACE(t.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity log contact type: ' || nullif(REPLACE(alct.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress table name: ' || nullif(REPLACE(al.progresstablename, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress: ' || nullif(REPLACE(cp.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Template: ' || nullif(REPLACE(al.template, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity subject: ' || nullif(REPLACE(al.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity description: ' || chr(10) || nullif(REPLACE(al.description, '\x0d\x0a', ' '), ''), NULL)
+	) description
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'candidate' as type
+	FROM activitylogentity ale
+	JOIN (select * from cte_candidate where rn = 1) ctc ON ctc.idperson = ale.contextentityid
+	JOIN activitylog al ON al.idactivitylog = ale.idactivitylog
+	LEFT JOIN activitylogcontacttype alct ON alct.idactivitylogcontacttype = al.idactivitylogcontacttype
+	LEFT JOIN (select * from candidateprogress where isactive = '1') cp ON cp.idcandidateprogress = al.progressid
+	LEFT JOIN tasklog tl ON al.idactivitylog = tl.idactivitylog
+	LEFT JOIN task t ON tl.idtask = t.idtask
+	LEFT JOIN taskstatus ts ON t.idtaskstatus = ts.idtaskstatus
+	LEFT JOIN taskpriority tp ON t.idtaskpriority = tp.idtaskpriority
+	WHERE 1=1
+	and ale.contextentitytype = 'Person'
+	and alct.value in ('Introduction Candidate', 'General Contact', 'Assignment Candidate', 'Reference', 'None', 'Assignment Source')
+) 
+
+, distinct_contact_activity AS (
+	SELECT *
+	, ROW_NUMBER() OVER(PARTITION BY idperson, created_date, description ORDER BY idperson) rn
+	FROM cte_contact_activity
+)
+SELECT idperson cand_ext_id
+, idactivitylog
+, created_date
+, description
+, user_account_id
+, category
+, type
+FROM distinct_contact_activity
+WHERE rn = 1
+AND description IS NOT NULL
+--limit 10</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>656</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company log</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_contact AS (
+	SELECT cp.idperson contact_id
+	, ROW_NUMBER() OVER(PARTITION BY cp.idperson ORDER BY cp.sortorder ASC, cp.employmentfrom DESC, cp.isdefaultrole) rn
+	FROM company_person cp
+	JOIN (select * from personx where isdeleted = '0') px ON cp.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON cp.idperson = p.idperson
+)
+
+, cte_candidate AS (
+	SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+)
+
+, cte_company_activity AS (SELECT c.idcompany
+	, ale.idactivitylog
+	, al.createdon::timestamp created_date
+	--, case when alct.value in ('Assignment Candidate', 'Introduction Candidate') then cand.candidate_id
+	--	else NULL end as cand_ext_id
+	, case when alct.value not in ('Assignment Candidate', 'Introduction Candidate') then con.contact_id
+		else NULL end as con_ext_id
+	, concat_ws(chr(10), '[Company log]'
+		, coalesce('Created by: ' || nullif(REPLACE(al.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified on: ' || nullif(REPLACE(al.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified by: ' || nullif(REPLACE(al.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity type: ' || nullif(REPLACE(al.activitytype, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task start date: ' || nullif(REPLACE(t.startdate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task completed date: ' || nullif(REPLACE(t.completeddate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task due date: ' || nullif(REPLACE(t.duedate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task status: ' || nullif(REPLACE(ts.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task priority: ' || nullif(REPLACE(tp.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task subject: ' || nullif(REPLACE(t.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task description: ' || chr(10) || nullif(REPLACE(t.description, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task reminder info: ' || nullif(REPLACE(t.reminderinfo, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task created by: ' || nullif(REPLACE(t.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task created on: ' || nullif(REPLACE(t.createdon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task modified by: ' || nullif(REPLACE(t.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task modified on: ' || nullif(REPLACE(t.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity log contact type: ' || nullif(REPLACE(alct.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress table name: ' || nullif(REPLACE(al.progresstablename, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress: ' || nullif(REPLACE(cp.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Template: ' || nullif(REPLACE(al.template, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity subject: ' || nullif(REPLACE(al.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity description: ' || chr(10) || nullif(REPLACE(al.description, '\x0d\x0a', ' '), ''), NULL)
+	) description
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'company' as type
+	FROM activitylogentity ale
+	JOIN company c ON c.idcompany = ale.contextentityid
+	JOIN activitylog al ON al.idactivitylog = ale.idactivitylog
+	LEFT JOIN (select * from cte_contact where rn = 1) con on con.contact_id = ale.idperson
+	--LEFT JOIN (select * from cte_candidate where rn = 1) cand on cand.candidate_id = ale.idperson
+	LEFT JOIN activitylogcontacttype alct ON alct.idactivitylogcontacttype = al.idactivitylogcontacttype
+	LEFT JOIN (select * from candidateprogress where isactive = '1') cp ON cp.idcandidateprogress = al.progressid
+	LEFT JOIN tasklog tl ON al.idactivitylog = tl.idactivitylog
+	LEFT JOIN task t ON tl.idtask = t.idtask
+	LEFT JOIN taskstatus ts ON t.idtaskstatus = ts.idtaskstatus
+	LEFT JOIN taskpriority tp ON t.idtaskpriority = tp.idtaskpriority
+	WHERE ale.contextentitytype = 'Company'
+) 
+, distinct_company_activity AS (
+	SELECT *
+	, ROW_NUMBER() OVER(PARTITION BY idcompany, created_date, description ORDER BY idcompany) rn
+	FROM cte_company_activity
+)
+SELECT idcompany com_ext_id
+, idactivitylog
+, created_date
+, con_ext_id
+, description
+, user_account_id
+, category
+, type
+FROM distinct_company_activity
+WHERE rn = 1
+--and idactivitylog = 'abf2df63-44d7-4c5f-8fd1-232e02f000e9'
+--limit 100</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>com_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCompanyID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>com_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCompanyID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact appointment</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_contact AS (
+	SELECT cp.idperson
+	, ROW_NUMBER() OVER(PARTITION BY cp.idperson ORDER BY cp.sortorder ASC, cp.employmentfrom DESC, cp.isdefaultrole) rn
+	FROM company_person cp
+	JOIN (select * from personx where isdeleted = '0') px ON cp.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON cp.idperson = p.idperson
+)
+
+, cte_contact_activity AS (SELECT ctc.idperson
+	, ale.idcompany1
+	, ale.idactivitylog
+	, al.createdon::timestamp created_date
+	, concat_ws(chr(10), '[Contact appointment]'
+		, coalesce('Created by: ' || nullif(REPLACE(al.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified on: ' || nullif(REPLACE(al.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified by: ' || nullif(REPLACE(al.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity type: ' || nullif(REPLACE(al.activitytype, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment start date: ' || nullif(REPLACE(ap.startdate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment end date: ' || nullif(REPLACE(ap.enddate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment subject: ' || nullif(REPLACE(ap.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment location: ' || nullif(REPLACE(ap.location, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment description: ' || chr(10) || nullif(REPLACE(ap.description, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment created by: ' || nullif(REPLACE(ap.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment created on: ' || nullif(REPLACE(ap.createdon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment modified by: ' || nullif(REPLACE(ap.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Appointment modified on: ' || nullif(REPLACE(ap.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity log contact type: ' || nullif(REPLACE(alct.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress table name: ' || nullif(REPLACE(al.progresstablename, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress: ' || nullif(REPLACE(cp.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Template: ' || nullif(REPLACE(al.template, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity subject: ' || nullif(REPLACE(al.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity description: ' || chr(10) || nullif(REPLACE(al.description, '\x0d\x0a', ' '), ''), NULL)
+	) description
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'contact' as type
+	FROM appointment ap
+	JOIN appointmentlog apl on apl.idappointment = ap.idappointment
+	JOIN activitylog al ON al.idactivitylog = apl.idactivitylog
+	JOIN activitylogentity ale ON ale.idactivitylog = al.idactivitylog
+	JOIN cte_contact ctc ON ctc.idperson = ale.idperson
+	LEFT JOIN activitylogcontacttype alct ON alct.idactivitylogcontacttype = al.idactivitylogcontacttype
+	LEFT JOIN (select * from candidateprogress where isactive = '1') cp ON cp.idcandidateprogress = al.progressid
+	WHERE 1=1
+	and ctc.rn = 1
+	--and ale.contextentitytype = 'Person'
+) 
+--select count(*) from cte_contact_activity
+, distinct_contact_activity AS (
+	SELECT *
+	, ROW_NUMBER() OVER(PARTITION BY idperson, created_date, description ORDER BY idperson) rn
+	FROM cte_contact_activity
+)
+SELECT idperson con_ext_id
+, idcompany1 com_ext_id
+, idactivitylog
+, created_date
+, description
+, user_account_id
+, category
+, type
+FROM distinct_contact_activity
+WHERE rn = 1
+AND description IS NOT NULL
+--limit 10</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact campaign</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_contact AS (
+	SELECT cp.idperson contact_id
+	, ROW_NUMBER() OVER(PARTITION BY cp.idperson ORDER BY cp.sortorder ASC, cp.employmentfrom DESC, cp.isdefaultrole) rn
+	FROM company_person cp
+	JOIN (select * from personx where isdeleted = '0') px ON cp.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON cp.idperson = p.idperson
+)
+
+, cte_contact_activity AS (select ctc.contact_id as con_ext_id
+	, ale.idcompany1 as com_ext_id
+	, al.idactivitylog
+	, cc.createdon::timestamp created_date
+	, '[Contact Campaign]' || chr(10) ||
+			nullif(concat_ws (chr(10)
+				, coalesce('Campaign title: ' || nullif(REPLACE(c.campaigntitle, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign contacted by: ' || nullif(REPLACE(cc.contactedby, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign contact subject: ' || nullif(REPLACE(cc.contactsubject, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign description: ' || chr(10) || nullif(REPLACE(c.campaigndescription, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign status: ' || nullif(REPLACE(cs.value, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign approximate number of targets: ' || nullif(REPLACE(c.approximatenooftargets, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign budget: ' || nullif(REPLACE(c.campaignbudget, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign final cost: ' || nullif(REPLACE(c.finalcost, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign created by: ' || nullif(REPLACE(c.createdby, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign created on: ' || nullif(REPLACE(c.createdon, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign modified by: ' || nullif(REPLACE(c.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Campaign modified on: ' || nullif(REPLACE(c.modifiedon, '\x0d\x0a', ' '), ''), NULL))
+			, '') description 
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'contact' as type
+	FROM cte_contact ctc
+	JOIN activitylogentity ale ON ale.idperson = ctc.contact_id
+	JOIN activitylog al ON al.idactivitylog = ale.idactivitylog
+	LEFT JOIN (select * from campaigncontact where isexcluded = '0') cc ON cc.idperson = ctc.contact_id
+	LEFT JOIN (select * from campaign where isdeleted = '0') c ON c.idcampaign = cc.idcampaign
+	LEFT JOIN campaignstatus cs ON c.idcampaignstatus = cs.idcampaignstatus
+	WHERE contextentitytype = 'Person'
+	AND ctc.rn = 1
+)
+
+, distinct_contact_activity AS (
+	SELECT *
+	, ROW_NUMBER() OVER(PARTITION BY con_ext_id, created_date, description ORDER BY con_ext_id) rn
+	FROM cte_contact_activity
+)
+SELECT *
+FROM distinct_contact_activity
+WHERE rn = 1
+AND description IS NOT NULL
+--limit 10
+
+/* AUDIT CONTACT CAMPAIGN
+select idcampaign, count(*)
+from campaigncontact
+group by idcampaign
+having count(*) > 1
+*/</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact intelligence</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select i.idintelligence
+, i.createdon::timestamp as created_date
+, ie.entityid as con_ext_id
+, concat_ws(chr(10), '[Contact intelligence]'
+		, coalesce('Created by: ' || nullif(REPLACE(i.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Entity name: ' || nullif(REPLACE(ie.entityname, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Subject: ' || nullif(REPLACE(i.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Intelligence comment: ' || nullif(REPLACE(i.intelligencecomment, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Informer: ' || nullif(REPLACE(i.informer, '\x0d\x0a', ' '), ''), NULL)
+	) description
+, cast('-10' as int) as user_account_id
+, 'comment' as category
+, 'contact' as type
+from intelligenceentity ie
+left join intelligence i on i.idintelligence = ie.idintelligence
+where ie.idtablemd = '9203677c-ee73-4174-8b3a-969056adfe2f' --Person &lt;&gt; f82ea7aa-d88e-4aa8-ba68-211fa4fbfa0e | Company</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact log</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_contact AS (
+	SELECT cp.idperson
+	, ROW_NUMBER() OVER(PARTITION BY cp.idperson ORDER BY cp.sortorder ASC, cp.employmentfrom DESC, cp.isdefaultrole) rn
+	FROM company_person cp
+	JOIN (select * from personx where isdeleted = '0') px ON cp.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON cp.idperson = p.idperson
+)
+
+, cte_contact_activity AS (SELECT ctc.idperson
+	, ale.idcompany1
+	, ale.idactivitylog
+	, al.createdon::timestamp created_date
+	, concat_ws(chr(10), '[Contact log]'
+		, coalesce('Created by: ' || nullif(REPLACE(al.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified on: ' || nullif(REPLACE(al.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified by: ' || nullif(REPLACE(al.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity type: ' || nullif(REPLACE(al.activitytype, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task start date: ' || nullif(REPLACE(t.startdate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task completed date: ' || nullif(REPLACE(t.completeddate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task due date: ' || nullif(REPLACE(t.duedate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task status: ' || nullif(REPLACE(ts.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task priority: ' || nullif(REPLACE(tp.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task subject: ' || nullif(REPLACE(t.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task description: ' || chr(10) || nullif(REPLACE(t.description, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task reminder info: ' || nullif(REPLACE(t.reminderinfo, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task created by: ' || nullif(REPLACE(t.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task created on: ' || nullif(REPLACE(t.createdon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task modified by: ' || nullif(REPLACE(t.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Task modified on: ' || nullif(REPLACE(t.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity log contact type: ' || nullif(REPLACE(alct.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress table name: ' || nullif(REPLACE(al.progresstablename, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Progress: ' || nullif(REPLACE(cp.value, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Template: ' || nullif(REPLACE(al.template, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity subject: ' || nullif(REPLACE(al.subject, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Activity description: ' || chr(10) || nullif(REPLACE(al.description, '\x0d\x0a', ' '), ''), NULL)
+	) description
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'contact' as type
+	FROM activitylogentity ale
+	JOIN (select * from cte_contact where rn = 1) ctc ON ctc.idperson = ale.contextentityid
+	JOIN activitylog al ON al.idactivitylog = ale.idactivitylog
+	LEFT JOIN activitylogcontacttype alct ON alct.idactivitylogcontacttype = al.idactivitylogcontacttype
+	LEFT JOIN (select * from candidateprogress where isactive = '1') cp ON cp.idcandidateprogress = al.progressid
+	LEFT JOIN tasklog tl ON al.idactivitylog = tl.idactivitylog
+	LEFT JOIN task t ON tl.idtask = t.idtask
+	LEFT JOIN taskstatus ts ON t.idtaskstatus = ts.idtaskstatus
+	LEFT JOIN taskpriority tp ON t.idtaskpriority = tp.idtaskpriority
+	WHERE 1=1
+	and ale.contextentitytype = 'Person'
+	and alct.value in ('None', 'Assignment Source', 'General Contact', 'Reference', 'Business Development', 'Client Contact', 'Client Portal', 'Introduction Contact')
+) 
+
+, distinct_contact_activity AS (
+	SELECT *
+	, ROW_NUMBER() OVER(PARTITION BY idperson, created_date, description ORDER BY idperson) rn
+	FROM cte_contact_activity
+)
+SELECT idperson con_ext_id
+, idcompany1 com_ext_id
+, idactivitylog
+, created_date
+, description
+, user_account_id
+, category
+, type
+FROM distinct_contact_activity
+WHERE rn = 1
+AND description IS NOT NULL
+--limit 10</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>con_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCContactID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>con_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCContactID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>con_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCContactID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact lookup 4</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>con_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCContactID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate compliance</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idcompliancelog</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate contract</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idcontract</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate log</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idactivitylog</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert company log</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idactivitylog</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert contact int</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idintelligence</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert contact log</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idactivitylog</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert job invoices</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idinvoice</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert job log</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idactivitylog</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert job source</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idassignmentsource</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>656</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job invoices</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH cte_contact AS (
+	SELECT cp.idperson
+	, ROW_NUMBER() OVER(PARTITION BY cp.idperson ORDER BY cp.sortorder ASC, cp.employmentfrom DESC, cp.isdefaultrole) rn
+	FROM company_person cp
+	JOIN (select * from personx where isdeleted = '0') px ON cp.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON cp.idperson = p.idperson
+)
+
+SELECT i.idinvoice
+, i.idassignment as job_ext_id
+, ip.idperson as con_ext_id
+, i.createdon::timestamp as created_date
+, concat_ws(chr(10), '[Job invoice]'
+		, coalesce('Created by: ' || nullif(REPLACE(i.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Reference: ' || nullif(REPLACE(i.reference, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice date: ' || nullif(REPLACE(i.invoicedate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice type: ' || nullif(REPLACE(i.invoicetype, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice type: ' || nullif(REPLACE(i.invoicetype, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Contact: ' || nullif(REPLACE(i.contact, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Contact jobtitle: ' || nullif(REPLACE(i.contactjobtitle, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Where created: ' || nullif(REPLACE(i.wherecreated, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Signed off by: ' || nullif(REPLACE(i.signedoffby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Is signed off: ' || nullif(REPLACE(case when i.issignedoff = '1' then 'YES' else 'NO' end, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Expected on: ' || nullif(REPLACE(i.expectedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice address: ' || nullif(REPLACE(i.invoiceaddress, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice number: ' || nullif(REPLACE(i.number, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Conversion rate: ' || nullif(REPLACE(i.conversionrate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Currency name: ' || nullif(REPLACE(cur.currencyname, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Currency symbol: ' || nullif(REPLACE(cur.currencysymbol, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice description: ' || nullif(REPLACE(i.invoicedescription, '\x0d\x0a', ' '), ''), NULL)
+		, chr(10) || '[Invoice item details]'
+		, coalesce('Created by: ' || nullif(REPLACE(ii.createdby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Created on: ' || nullif(REPLACE(ii.createdon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified by: ' || nullif(REPLACE(ii.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Modified on: ' || nullif(REPLACE(ii.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice item type: ' || nullif(REPLACE(ii.invoiceitemtype, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Invoice item comment: ' || nullif(REPLACE(ii.invoiceitemcomment, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Tax rate: ' || nullif(REPLACE(ii.taxrate, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Tax amount: ' || nullif(REPLACE(ii.taxamount, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Net amount: ' || nullif(REPLACE(ii.netamount, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Total amount: ' || nullif(REPLACE(ii.totalamount, '\x0d\x0a', ' '), ''), NULL)
+		, coalesce('Item note: ' || chr(10) || nullif(REPLACE(ii.itemnote, '\x0d\x0a', ' '), ''), NULL)
+	) description
+, cast('-10' as int) as user_account_id
+, 'comment' as category
+, 'job' as type
+FROM invoice i
+left join invoiceitem ii on ii.idinvoice = i.idinvoice
+left join invoice_person ip on ip.idinvoice = i.idinvoice
+left join currency cur on cur.idcurrency = i.idcurrency
+left join (select * from cte_contact where rn = 1) c on c.idperson = ip.idperson</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job log</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>WITH all_contacts AS (
+	SELECT cp.idperson contact_id
+	, cp.sortorder
+	, cp.idcompany company_id
+	, px.fullname
+	, cp.createdon
+	, ROW_NUMBER() OVER(PARTITION BY cp.idperson ORDER BY cp.sortorder ASC) rn
+	, ROW_NUMBER() OVER(PARTITION BY cp.idcompany ORDER BY cp.createdon ASC) rn_contact
+	FROM company_person cp
+	JOIN (select * from personx where isdeleted = '0') px ON cp.idperson = px.idperson
+	LEFT JOIN "user" u ON px.iduser = u.iduser
+)
+
+, cte_contact AS (
+	SELECT *
+	FROM all_contacts
+	WHERE rn = 1
+)
+
+, cte_job AS (
+	SELECT a.idassignment job_id
+	, ROW_NUMBER() OVER(PARTITION BY a.idassignment ORDER BY ac.contactedon ASC) rn
+	FROM assignmentcontact ac
+	JOIN (select * from "assignment" where isdeleted = '0') a ON a.idassignment = ac.idassignment
+	LEFT JOIN (select * from cte_contact where rn = 1) cc ON  cc.contact_id = ac.idperson
+	LEFT JOIN (select * from all_contacts where rn_contact = 1) alc ON alc.company_id = a.idcompany
+)
+
+, cte_candidate AS (
+	SELECT c.idperson candidate_id
+	, ROW_NUMBER() OVER(PARTITION BY c.idperson ORDER BY px.createdon DESC) rn
+	FROM candidate c
+	JOIN (select * from personx where isdeleted = '0') px ON c.idperson = px.idperson
+	JOIN (select * from person where isdeleted = '0') p ON c.idperson = p.idperson
+)
+
+/* MAPPING LOG CONTACT TYPE
+select distinct al.idactivitylogcontacttype, alc.value, progresstablename
+from activitylog al
+left join activitylogcontacttype alc on alc.idactivitylogcontacttype = al.idactivitylogcontacttype
+
+01a7007e-5ec1-407a-8b34-9e3293d1fb30	None
+10a9cf4e-ef8a-461f-8c4f-a16af865c234	Assignment Source | AssignmentSourceProgress
+d295fee9-7b82-478c-b48b-b06c0d216b96	Introduction Contact | IntroductionContactStatus
+34bc4f40-5aee-4b87-ab57-99ff88b503db	General Contact
+00000000-0000-0000-0000-000000000000		
+86cda681-9299-4a5c-9496-b98c5b0da117	Business Development | CampaignContactStatus
+2c73bb18-eea5-4b58-a4dc-a6c4cda662a8	Introduction Candidate | IntroductionProgress
+9d4161e4-bcfd-4b4f-ba30-fba6de9c7a26	Client Contact | AssignmentStatus
+468ab0de-1abd-40ce-a289-4da34abfd083	Reference | PersonReferenceProgress
+83aacc52-7890-4e9a-802f-5fb0e10d12f1	Assignment Candidate | CandidateProgress
+*/
+
+--MAIN SCRIPT
+select al.idactivitylog
+	, cj.job_id as job_ext_id
+	, case when alct.value in ('Introduction Candidate', 'Assignment Candidate') then cand.candidate_id
+			else NULL end as cand_ext_id
+	, case when alct.value in ('Introduction Contact', 'Client Contact', 'Assignment Source', 'Business Development') then con.contact_id
+			else NULL end as con_ext_id
+	, al.createdon::timestamp created_date
+	, concat_ws(chr(10), '[Job log]'
+			, coalesce('Created by: ' || nullif(REPLACE(al.createdby, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Modified on: ' || nullif(REPLACE(al.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Modified by: ' || nullif(REPLACE(al.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Activity type: ' || nullif(REPLACE(al.activitytype, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task start date: ' || nullif(REPLACE(t.startdate, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task completed date: ' || nullif(REPLACE(t.completeddate, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task due date: ' || nullif(REPLACE(t.duedate, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task status: ' || nullif(REPLACE(ts.value, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task priority: ' || nullif(REPLACE(tp.value, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task subject: ' || nullif(REPLACE(t.subject, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task description: ' || chr(10) || nullif(REPLACE(t.description, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task reminder info: ' || nullif(REPLACE(t.reminderinfo, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task created by: ' || nullif(REPLACE(t.createdby, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task created on: ' || nullif(REPLACE(t.createdon, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task modified by: ' || nullif(REPLACE(t.modifiedby, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Task modified on: ' || nullif(REPLACE(t.modifiedon, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Activity log contact type: ' || nullif(REPLACE(alct.value, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Progress table name: ' || nullif(REPLACE(al.progresstablename, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Progress: ' || nullif(REPLACE(cp.value, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Template: ' || nullif(REPLACE(al.template, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Activity subject: ' || nullif(REPLACE(al.subject, '\x0d\x0a', ' '), ''), NULL)
+			, coalesce('Activity description: ' || chr(10) || nullif(REPLACE(al.description, '\x0d\x0a', ' '), ''), NULL)
+		) description
+	, cast('-10' as int) as user_account_id
+	, 'comment' as category
+	, 'job' as type
+FROM activitylogentity ale
+JOIN (select * from cte_job where rn = 1) cj ON cj.job_id = ale.contextentityid
+JOIN activitylog al ON al.idactivitylog = ale.idactivitylog
+LEFT JOIN (select * from cte_contact where rn = 1) con on con.contact_id = ale.idperson
+LEFT JOIN (select * from cte_candidate where rn = 1) cand on cand.candidate_id = ale.idperson
+LEFT JOIN activitylogcontacttype alct ON alct.idactivitylogcontacttype = al.idactivitylogcontacttype
+LEFT JOIN (select * from candidateprogress where isactive = '1') cp ON cp.idcandidateprogress = al.progressid
+LEFT JOIN tasklog tl ON al.idactivitylog = tl.idactivitylog
+LEFT JOIN task t ON tl.idtask = t.idtask
+LEFT JOIN taskstatus ts ON t.idtaskstatus = ts.idtaskstatus
+LEFT JOIN taskpriority tp ON t.idtaskpriority = tp.idtaskpriority
+WHERE contextentitytype IN ('Assignment', 'Flex')
+--limit 10</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>752</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job sources</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select idassignmentsource
+, asr.idassignment job_ext_id
+, asr.idperson cand_ext_id
+, concat_ws(chr(10), '[Assignment source]'
+	, coalesce('Contacted by: ' || nullif(REPLACE(asr.contactedby, '\x0d\x0a', ' '), ''))
+	, coalesce('Contacted on: ' || nullif(REPLACE(asr.contactedon, '\x0d\x0a', ' '), ''))
+	, coalesce('Modified on: ' || nullif(REPLACE(asr.modifiedon, '\x0d\x0a', ' '), ''))
+	, coalesce('Assignment Source progress: ' || nullif(REPLACE(asp.value, '\x0d\x0a', ' '), ''))
+	, coalesce('Contact subject: ' || nullif(REPLACE(asr.contactsubject, '\x0d\x0a', ' '), ''))
+	, coalesce('Notes: ' || nullif(REPLACE(asr.notes, '\x0d\x0a', ' '), ''))
+	) description
+, asr.modifiedon::timestamp created_date
+, cast('-10' as int) as user_account_id
+, 'comment' as category
+, 'job' as type
+from assignmentsource asr
+left join assignmentsourceprogress asp on asp.idassignmentsourceprogress = asr.idassignmentsourceprogress</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>656</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job fee activities</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--Fee SPLIT
+with 
+--Selected users
+selected_user as (select iduser, idorganizationunit, title, firstname, lastname
+		, fullname, replace(useremail, 'spenglerfox.eu', 'spenglerfox.com') as useremail, createdon
+		from "user"
+		where isdisabled = '0'
+		and useremail ilike '%_@_%.__%'
+		and (firstname not ilike '%partner%' and jobtitle not ilike '%partner%')
+		)
+
+, users as (select a.idassignment
+		, string_agg(useremail, ', ') as users
+		, string_agg(fullname, ', ') as users_name
+		from "assignment" a
+		left join selected_user u on u.iduser = a.iduser
+		where a.iduser is not NULL
+		group by idassignment)
+		
+, associate as (select a.idassignment
+		, string_agg(useremail, ', ') as associates
+		, string_agg(fullname, ', ') as associates_name
+		from assignmentassociate a
+		left join "user" u on u.iduser = a.iduser
+		where a.iduser is not NULL
+		group by idassignment)
+
+select f.idfee --used for tracking activities external id
+, f.idassignment job_ext_id
+, a.assignmenttitle
+, u.users_name as assignment_owners
+, f.createdon::timestamp as created_date
+, concat_ws(chr(10), '[Fee information]'
+	, coalesce('Assignment owners: ' || nullif(REPLACE(u.users_name, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Assignment associates: ' || nullif(REPLACE(ac.associates_name, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Fee reference: ' || nullif(REPLACE(f.feereference, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Fee description: ' || nullif(REPLACE(f.feedescription, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Fee comment: ' || nullif(REPLACE(f.feecomment, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Expected date: ' || nullif(REPLACE(f.expecteddate, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Actual date: ' || nullif(REPLACE(f.actualdate, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Total amount: ' || nullif(REPLACE(f.totalamount, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Conversion rate: ' || nullif(REPLACE(f.conversionrate, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Net amount: ' || nullif(REPLACE(f.netamount, '\x0d\x0a', ' '), ''), NULL)
+	, coalesce('Currency: ' || nullif(REPLACE(cy.value, '\x0d\x0a', ' '), ''), NULL)
+	) as description
+, cast('-10' as int) as user_account_id
+, 'comment' as category
+, 'job' as type
+from fee f
+join "assignment" a on a.idassignment = f.idassignment
+join company c on c.idcompany = a.idcompany
+join currency cy on cy.idcurrency = f.idcurrency
+left join users u on u.idassignment = f.idassignment
+left join associate ac on ac.idassignment = f.idassignment
+order by f.idassignment</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>752</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert job fee</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>idfee</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>752</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job consultant split</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with consultant_split as (
+--Consultant Split
+		select idfee
+		, idassignment
+		, c.iduser
+		, c.createdon::timestamp as createdon
+		, concat_ws(chr(10)
+				, coalesce('Created on: ' || nullif(REPLACE(c.createdon, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant: ' || nullif(REPLACE(consultant, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee note: ' || nullif(REPLACE(consultantfeenote, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee rate: ' || nullif(REPLACE(consultantfeerate, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Currency: ' || nullif(REPLACE(cy.value, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee percent: ' || nullif(REPLACE(consultantfeepercent, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee description: ' || nullif(REPLACE(consultantfeedescription, '\x0d\x0a', ' '), ''), NULL)
+			) as description
+		, row_number() over(partition by c.idassignment order by createdon::timestamp, idfee, consultantfeenote = 'Originator' desc) rn
+		, 1 rnk
+		from consultantfee c
+		join currency cy on cy.idcurrency = c.idcurrency
+		where 1=1
+		and idfee is not NULL --20453
+		--and idfee is NULL --49083
+		--order by idassignment
+)
+
+--Consultant Split Breakdown
+, consultant_breakdown as (select idfee
+		, idassignment
+		, c.iduser
+		, c.createdon::timestamp as createdon
+		, concat_ws(chr(10)
+				, coalesce('Created on: ' || nullif(REPLACE(c.createdon, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant: ' || nullif(REPLACE(consultant, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee note: ' || nullif(REPLACE(consultantfeenote, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee rate: ' || nullif(REPLACE(consultantfeerate, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Currency: ' || nullif(REPLACE(cy.value, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee percent: ' || nullif(REPLACE(consultantfeepercent, '\x0d\x0a', ' '), ''), NULL)
+				, coalesce('Consultant fee description: ' || nullif(REPLACE(consultantfeedescription, '\x0d\x0a', ' '), ''), NULL)
+			) as description
+		, row_number() over(partition by c.idassignment order by createdon::timestamp, idfee, consultantfeenote = 'Originator' desc) rn
+		, 2 rnk
+		from consultantfee c
+		join currency cy on cy.idcurrency = c.idcurrency
+		where 1=1
+		and idfee is not NULL --20453
+		--and idfee is NULL --49083
+		--order by idassignment
+		) 
+
+, consultant_split_all as	(select idassignment
+	, rnk
+	, '[Consultant split]' || chr(10) || string_agg(description, chr(10) || chr(13) order by rn) as description
+	from consultant_split
+	group by idassignment, rnk
+	
+	UNION ALL
+	select idassignment
+	, rnk
+	, '[Consultant split breakdown]' || chr(10) || string_agg(description, chr(10) || chr(13) order by rn) as description
+	from consultant_breakdown
+	group by idassignment, rnk
+	) --select * from consultant_split_all
+	
+, final_activity as (select idassignment job_ext_id
+	, string_agg(description, chr(10) || chr(13) order by rnk) description
+	from consultant_split_all
+	group by idassignment)
+	
+select *
+, cast('-10' as int) as user_account_id
+, 'comment' as category
+, 'job' as type
+, current_timestamp as created_date
+from final_activity</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>912</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert consultant split</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>created_date</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>description</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+      <field>
+        <column_name>activity_ext_id</column_name>
+        <stream_name>job_ext_id</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>912</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
