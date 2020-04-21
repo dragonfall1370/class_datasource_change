@@ -459,7 +459,7 @@
     <notepad>
       <note>Updated candidate source - LinkedIn</note>
       <xloc>128</xloc>
-      <yloc>672</yloc>
+      <yloc>752</yloc>
       <width>204</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -706,6 +706,26 @@
       <to>Update Registered Date</to>
       <enabled>N</enabled>
     </hop>
+    <hop>
+      <from>Candidate jobApp v3</from>
+      <to>Candidate lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate created by (user_account_id)</from>
+      <to>Candidate lookup 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 4</from>
+      <to>User lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>User lookup</from>
+      <to>Update user_account_id</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Application related comments</name>
@@ -810,7 +830,7 @@ order by p.CandidateNumber, p.JobNumber
     </remotesteps>
     <GUI>
       <xloc>1040</xloc>
-      <yloc>336</yloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1124,7 +1144,7 @@ order by CandidateNumber</sql>
     </remotesteps>
     <GUI>
       <xloc>128</xloc>
-      <yloc>720</yloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1208,6 +1228,102 @@ order by p.Person_Number
     <GUI>
       <xloc>128</xloc>
       <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate jobApp v3</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>with JobApp as (select s.Match_Number
+	, m.Candidate_Number
+	, m.Job_Order_Number
+	, m.Company_Number
+	, concat_ws('; '
+		, coalesce('Stage: ' + ms.Description,NULL)
+		, iif(s.Created_DTTM is NULL,NULL,concat('Created date: ', convert(varchar(20),s.Created_DTTM,120)))
+		, coalesce('Created by: ' + concat(u.Firstname,' ',u.Lastname,' - ',u.Email),NULL)
+		) as Stage
+	, s.Created_DTTM as CreatedDate
+	from Stage s --371126
+	left join Match_Stage ms on ms.Match_Stage_Id = s.Match_Stage_Id --371126
+	left join AFR_User u on u.UserID = s.Created_By_Person_Number --371126
+	left join Match m on m.Match_Number = s.Match_Number --371126
+	
+	--UNION ALL
+	
+	--select i.Match_Number
+	--, m.Candidate_Number
+	--, m.Job_Order_Number
+	--, m.Company_Number
+	--, concat_ws('; '
+	--	, concat('Stage: Interview - ',coalesce(it.Description,NULL))
+	--	, iif(s.Created_DTTM is NULL,NULL,concat('Created date: ', convert(varchar(20),s.Created_DTTM,120)))
+	--	, coalesce('Created by: ' + concat(u.Firstname,' ',u.Lastname,' - ',u.Email),NULL)
+	--	) as Stage
+	--, i.Interview_DT as InterviewDate
+	--from Interview i --16130
+	--left join (select Match_Number, Created_DTTM, Created_By_Person_Number
+	--	, row_number() over(partition by Match_Number order by Created_DTTM desc) as rn
+	--	from Stage
+	--	where Match_Stage_Id = 4) as s on s.Match_Number = i.Match_Number
+	--left join Match m on m.Match_Number = i.Match_Number
+	--left join Interview_Type it on it.Interview_Type_Id = i.Interview_Type_Id
+	--left join AFR_User u on u.UserID = s.Created_By_Person_Number
+	--where s.rn = 1)
+	)
+
+, JobAppGroup as (select Match_Number, Candidate_Number, Job_Order_Number, Company_Number
+	, string_agg(Stage,char(10)) within group (ORDER BY CreatedDate desc) as JobAppStage
+	, max(CreatedDate) as CreatedDate
+	from JobApp
+	group by Match_Number, Candidate_Number, Job_Order_Number, Company_Number)
+
+select ja.Match_Number
+	, concat('AFR',ja.Candidate_Number) as AFR_CandidateExtID
+	, concat('AFR',ja.Job_Order_Number) as AFR_JobExtID
+	, ja.Company_Number
+	, concat_ws(char(10), '[Historical Stages]'
+		, concat(coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL), '; ' ,coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL))
+		, concat(char(10),JobAppStage,char(10))
+		, coalesce('Job Order Number: ' + convert(varchar(10),ja.Job_Order_Number),NULL)
+		, coalesce('Company Number: ' + convert(varchar(10), ja.Company_Number),NULL)
+		, coalesce('Match Number: ' + convert(varchar(10),ja.Match_Number),'')
+		, coalesce('Candidate Number: ' + convert(varchar(10),ja.Candidate_Number),NULL)
+		, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
+	) as AFR_comment_activities
+	, -10 as AFR_user_account_id
+	, CreatedDate as AFR_insert_timestamp
+	, 'comment' as AFR_category
+	, 'job' as AFR_type
+from JobAppGroup ja
+left join Company c on c.Company_Number = ja.Company_Number
+left join Person p on p.Person_Number = ja.Candidate_Number
+left join Job_Order j on j.Job_Order_Number = ja.Job_Order_Number
+--where ja.Match_Number = 73187</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1366,7 +1482,7 @@ order by p.Person_Number
     </remotesteps>
     <GUI>
       <xloc>288</xloc>
-      <yloc>720</yloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1497,7 +1613,7 @@ order by p.Person_Number
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>720</yloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1532,7 +1648,7 @@ where candidate_id is not NULL and candidate_id > 0</sql>
     </remotesteps>
     <GUI>
       <xloc>864</xloc>
-      <yloc>336</yloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1567,7 +1683,7 @@ where position_id is not NULL and position_id > 0</sql>
     </remotesteps>
     <GUI>
       <xloc>864</xloc>
-      <yloc>432</yloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1879,7 +1995,7 @@ order by p.Person_Number
     </remotesteps>
     <GUI>
       <xloc>1040</xloc>
-      <yloc>432</yloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2040,11 +2156,17 @@ order by p.Person_Number
       <table>user_account</table>
       <orderby />
       <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
+      <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
         <name>AFR_Candidate_owners</name>
         <field>email</field>
         <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name />
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
         <name2 />
       </key>
       <value>
@@ -2064,6 +2186,103 @@ order by p.Person_Number
     <GUI>
       <xloc>288</xloc>
       <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 4</name>
+    <type>DBLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby />
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>AFR_CandidateExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name />
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default />
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>672</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update user_account_id</name>
+    <type>Update</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>AFR PROD</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field />
+    <lookup>
+      <schema />
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>user_account_id</name>
+        <rename>VCUserID</rename>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

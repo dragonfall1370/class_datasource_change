@@ -1,0 +1,2 @@
+--Notice when migrating HRS
++ Using vertical tab (VT) char(11) within DB

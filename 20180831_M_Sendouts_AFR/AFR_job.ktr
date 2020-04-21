@@ -2,22 +2,22 @@
 <transformation>
   <info>
     <name>AFR_job</name>
-    <description />
-    <extended_description />
-    <trans_version />
+    <description/>
+    <extended_description/>
+    <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>/</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
       <trans-log-table>
-        <connection />
-        <schema />
-        <table />
-        <size_limit_lines />
-        <interval />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -42,37 +42,37 @@
           <id>LINES_READ</id>
           <enabled>Y</enabled>
           <name>LINES_READ</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_WRITTEN</id>
           <enabled>Y</enabled>
           <name>LINES_WRITTEN</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_UPDATED</id>
           <enabled>Y</enabled>
           <name>LINES_UPDATED</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_INPUT</id>
           <enabled>Y</enabled>
           <name>LINES_INPUT</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_OUTPUT</id>
           <enabled>Y</enabled>
           <name>LINES_OUTPUT</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_REJECTED</id>
           <enabled>Y</enabled>
           <name>LINES_REJECTED</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>ERRORS</id>
@@ -126,11 +126,11 @@
         </field>
       </trans-log-table>
       <perf-log-table>
-        <connection />
-        <schema />
-        <table />
-        <interval />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -208,10 +208,10 @@
         </field>
       </perf-log-table>
       <channel-log-table>
-        <connection />
-        <schema />
-        <table />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -274,10 +274,10 @@
         </field>
       </channel-log-table>
       <step-log-table>
-        <connection />
-        <schema />
-        <table />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -350,10 +350,10 @@
         </field>
       </step-log-table>
       <metrics-log-table>
-        <connection />
-        <schema />
-        <table />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -402,9 +402,9 @@
       </metrics-log-table>
     </log>
     <maxdate>
-      <connection />
-      <table />
-      <field />
+      <connection/>
+      <table/>
+      <field/>
       <offset>0.0</offset>
       <maxdiff>0.0</maxdiff>
     </maxdate>
@@ -415,7 +415,7 @@
     <feedback_shown>Y</feedback_shown>
     <feedback_size>50000</feedback_size>
     <using_thread_priorities>Y</using_thread_priorities>
-    <shared_objects_file />
+    <shared_objects_file/>
     <capture_step_performance>N</capture_step_performance>
     <step_performance_capturing_delay>1000</step_performance_capturing_delay>
     <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
@@ -428,10 +428,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2018/05/14 09:34:14.378</created_date>
+    <created_date>2018&#x2f;05&#x2f;14 09&#x3a;34&#x3a;14.378</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2018/05/14 09:34:14.378</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2018&#x2f;05&#x2f;14 09&#x3a;34&#x3a;14.378</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -457,7 +457,7 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Custom field: Effort level</note>
+      <note>Custom field&#x3a; Effort level</note>
       <xloc>80</xloc>
       <yloc>48</yloc>
       <width>140</width>
@@ -478,8 +478,7 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>This flow can be ignored
-if improved activities (Candidate flow) were run</note>
+      <note>This flow can be ignored&#xa;if improved activities &#x28;Candidate flow&#x29; were run</note>
       <xloc>128</xloc>
       <yloc>768</yloc>
       <width>260</width>
@@ -509,50 +508,20 @@ if improved activities (Candidate flow) were run</note>
     <port>1433</port>
     <username>sa</username>
     <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
-    <servername />
-    <data_tablespace />
-    <index_tablespace />
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
     <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>1433</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
@@ -564,46 +533,19 @@ if improved activities (Candidate flow) were run</note>
     <port>5432</port>
     <username>dbapplication_user</username>
     <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
-    <servername />
-    <data_tablespace />
-    <index_tablespace />
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
     <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>5432</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
@@ -629,7 +571,7 @@ if improved activities (Candidate flow) were run</note>
     </hop>
     <hop>
       <from>Job lookup 2</from>
-      <to>Insert/Update Contact activities</to>
+      <to>Insert&#x2f;Update Contact activities</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -659,7 +601,7 @@ if improved activities (Candidate flow) were run</note>
     </hop>
     <hop>
       <from>Database join</from>
-      <to>Update Custom field (Dropdown Single value)</to>
+      <to>Update Custom field &#x28;Dropdown Single value&#x29;</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -677,46 +619,31 @@ if improved activities (Candidate flow) were run</note>
       <to>Job lookup 2</to>
       <enabled>N</enabled>
     </hop>
+    <hop>
+      <from>JobApp  activities v3</from>
+      <to>Job lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
   </order>
   <step>
     <name>Application comments </name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>select p.CandidateNumber
-	, concat('AFR',p.JobNumber) as AFR_JobExtID
-	, concat_ws(char(10),'[Application related comments]'
-		, coalesce('Match Number: ' + convert(nvarchar(max),p.MatchNumber),'')
-		, coalesce('Comment Date: ' + convert(nvarchar(20),p.comment_datetime,120),'')
-		, coalesce('Candidate Number: ' + convert(varchar(10),p.CandidateNumber),NULL)
-		, coalesce('Candidate Name: ' + coalesce(pp.Name_First,'') + ' ' + coalesce(pp.Name_Middle,'') + ' ' + coalesce(pp.Name_Last,''),NULL)
-		, coalesce('Job Order Number: ' + convert(varchar(10),p.JobNumber),NULL)
-		, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
-		) as AFR_comment_activities
-	, -10 as AFR_user_account_id
-	, p.comment_datetime as AFR_insert_timestamp
-	, 'comment' as AFR_category
-	, 'job' as AFR_type
-from AFR_ApplicationCSV5 p
-left join Person pp on pp.Person_Number = p.CandidateNumber
-left join Job_Order j on j.Job_Order_Number = p.JobNumber
-where p.JobNumber > 0
-order by p.JobNumber
-
---80463 rows</sql>
+    <sql>select p.CandidateNumber&#xa;	, concat&#x28;&#x27;AFR&#x27;,p.JobNumber&#x29; as AFR_JobExtID&#xa;	, concat_ws&#x28;char&#x28;10&#x29;,&#x27;&#x5b;Application related comments&#x5d;&#x27;&#xa;		, coalesce&#x28;&#x27;Match Number&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;max&#x29;,p.MatchNumber&#x29;,&#x27;&#x27;&#x29;&#xa;		, coalesce&#x28;&#x27;Comment Date&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;20&#x29;,p.comment_datetime,120&#x29;,&#x27;&#x27;&#x29;&#xa;		, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,p.CandidateNumber&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;pp.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;pp.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;pp.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,p.JobNumber&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		&#x29; as AFR_comment_activities&#xa;	, -10 as AFR_user_account_id&#xa;	, p.comment_datetime as AFR_insert_timestamp&#xa;	, &#x27;comment&#x27; as AFR_category&#xa;	, &#x27;job&#x27; as AFR_type&#xa;from AFR_ApplicationCSV5 p&#xa;left join Person pp on pp.Person_Number &#x3d; p.CandidateNumber&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; p.JobNumber&#xa;where p.JobNumber &#x3e; 0&#xa;order by p.JobNumber&#xa;&#xa;--80463 rows</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -728,29 +655,22 @@ order by p.JobNumber
       <yloc>784</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Database join</name>
     <type>DBJoin</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
     <rowlimit>0</rowlimit>
-    <sql>select cffv.form_id as join_form_id
-, cffv.field_id as join_field_id
-, cfl.translate as join_field_translate
-, cffv.field_value as join_field_value
-from configurable_form_language cfl
-left join configurable_form_field_value cffv on cffv.title_language_code = cfl.language_code
-where cffv.form_id = ?
-and cffv.field_id = ?
-and cfl.translate = ?</sql>
+    <sql>select cffv.form_id as join_form_id&#xa;, cffv.field_id as join_field_id&#xa;, cfl.translate as join_field_translate&#xa;, cffv.field_value as join_field_value&#xa;from configurable_form_language cfl&#xa;left join configurable_form_field_value cffv on cffv.title_language_code &#x3d; cfl.language_code&#xa;where cffv.form_id &#x3d; &#x3f;&#xa;and cffv.field_id &#x3d; &#x3f;&#xa;and cfl.translate &#x3d; &#x3f;</sql>
     <outer_join>Y</outer_join>
     <replace_vars>N</replace_vars>
     <parameter>
@@ -767,7 +687,7 @@ and cfl.translate = ?</sql>
         <type>String</type>
       </field>
     </parameter>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -779,30 +699,27 @@ and cfl.translate = ?</sql>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Index Job Activity</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
-    <sql>SELECT id
-, position_id
-, insert_timestamp
-from activity
-where position_id is not NULL and position_id > 0</sql>
+    <sql>SELECT id&#xa;, position_id&#xa;, insert_timestamp&#xa;from activity&#xa;where position_id is not NULL and position_id &#x3e; 0</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -814,17 +731,18 @@ where position_id is not NULL and position_id > 0</sql>
       <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Insert job activities</name>
     <type>TableOutput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
     <schema>public</schema>
@@ -835,41 +753,41 @@ where position_id is not NULL and position_id > 0</sql>
     <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field />
+    <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_monthly>Y</partitioning_monthly>
     <tablename_in_field>N</tablename_in_field>
-    <tablename_field />
+    <tablename_field/>
     <tablename_in_table>Y</tablename_in_table>
     <return_keys>N</return_keys>
-    <return_field />
+    <return_field/>
     <fields>
-      <field>
-        <column_name>position_id</column_name>
-        <stream_name>VCJobID</stream_name>
-      </field>
-      <field>
-        <column_name>user_account_id</column_name>
-        <stream_name>AFR_user_account_id</stream_name>
-      </field>
-      <field>
-        <column_name>content</column_name>
-        <stream_name>AFR_comment_activities</stream_name>
-      </field>
-      <field>
-        <column_name>insert_timestamp</column_name>
-        <stream_name>AFR_insert_timestamp</stream_name>
-      </field>
-      <field>
-        <column_name>category</column_name>
-        <stream_name>AFR_category</stream_name>
-      </field>
-      <field>
-        <column_name>type</column_name>
-        <stream_name>AFR_type</stream_name>
-      </field>
+        <field>
+          <column_name>position_id</column_name>
+          <stream_name>VCJobID</stream_name>
+        </field>
+        <field>
+          <column_name>user_account_id</column_name>
+          <stream_name>AFR_user_account_id</stream_name>
+        </field>
+        <field>
+          <column_name>content</column_name>
+          <stream_name>AFR_comment_activities</stream_name>
+        </field>
+        <field>
+          <column_name>insert_timestamp</column_name>
+          <stream_name>AFR_insert_timestamp</stream_name>
+        </field>
+        <field>
+          <column_name>category</column_name>
+          <stream_name>AFR_category</stream_name>
+        </field>
+        <field>
+          <column_name>type</column_name>
+          <stream_name>AFR_type</stream_name>
+        </field>
     </fields>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -881,17 +799,18 @@ where position_id is not NULL and position_id > 0</sql>
       <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
-    <name>Insert/Update Contact activities</name>
+    <name>Insert&#x2f;Update Contact activities</name>
     <type>InsertUpdate</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
     <commit>100</commit>
@@ -902,14 +821,14 @@ where position_id is not NULL and position_id > 0</sql>
       <key>
         <name>VCJobID</name>
         <field>position_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <key>
         <name>Forward_comment_activities</name>
         <field>content</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <value>
         <name>position_id</name>
@@ -942,7 +861,7 @@ where position_id is not NULL and position_id > 0</sql>
         <update>Y</update>
       </value>
     </lookup>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -954,20 +873,21 @@ where position_id is not NULL and position_id > 0</sql>
       <yloc>640</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Job Activity Table</name>
     <type>TableOutput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
-    <schema />
+    <schema/>
     <table>activity_job</table>
     <commit>100</commit>
     <truncate>N</truncate>
@@ -975,29 +895,29 @@ where position_id is not NULL and position_id > 0</sql>
     <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field />
+    <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_monthly>Y</partitioning_monthly>
     <tablename_in_field>N</tablename_in_field>
-    <tablename_field />
+    <tablename_field/>
     <tablename_in_table>Y</tablename_in_table>
     <return_keys>N</return_keys>
-    <return_field />
+    <return_field/>
     <fields>
-      <field>
-        <column_name>activity_id</column_name>
-        <stream_name>id</stream_name>
-      </field>
-      <field>
-        <column_name>job_id</column_name>
-        <stream_name>position_id</stream_name>
-      </field>
-      <field>
-        <column_name>insert_timestamp</column_name>
-        <stream_name>insert_timestamp</stream_name>
-      </field>
+        <field>
+          <column_name>activity_id</column_name>
+          <stream_name>id</stream_name>
+        </field>
+        <field>
+          <column_name>job_id</column_name>
+          <stream_name>position_id</stream_name>
+        </field>
+        <field>
+          <column_name>insert_timestamp</column_name>
+          <stream_name>insert_timestamp</stream_name>
+        </field>
     </fields>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1009,93 +929,27 @@ where position_id is not NULL and position_id > 0</sql>
       <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Job Application as activities</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>--JOB APPLICATION HISTORY AS CANDIDATE &amp; JOB ACTIVITIES
-with JobAppOwners as (select m.Match_Number, m.Account_Manager_Person_Number, m.Recruiter_Person_Number, concat_ws(',',u.Email,u2.Email) as JobAppOwners
-	from Match m
-	left join AFR_User u on m.Account_Manager_Person_Number = u.UserID
-	left join AFR_User u2 on m.Recruiter_Person_Number = u2.UserID)
-
---MAIN SCRIPT
-select s.Match_Number
-, concat('AFR',m.Job_Order_Number) as AFR_JobExtID
-, concat_ws(char(10),'[Historical Stage]'
-	, coalesce('Match Number: ' + convert(varchar(10),s.Match_Number),'')
-	, iif(s.Created_DTTM is NULL,NULL,concat('Created date: ', convert(varchar(20),s.Created_DTTM,120)))
-	, coalesce('Created by: ' + concat(u.Firstname,' ',u.Lastname,' - ',u.Email),NULL)
-	, coalesce('Stage Id: ' + convert(varchar(10),s.Stage_Id),NULL)
-	, coalesce('Match Stage: ' + ms.Description,NULL)
-	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
-	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
-	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
-	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
-	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
-	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
-	, coalesce('Job Owners: ' + jao.JobAppOwners,NULL)
-	) as AFR_comment_activities
-, -10 as AFR_user_account_id
-, case when s.Created_DTTM is NULL then GETDATE()
-	else convert(datetime,s.Created_DTTM,120) end as AFR_insert_timestamp
-, 'comment' as AFR_category
-, 'job' as AFR_type --candidate | job
-from Stage s --343854
-left join Match_Stage ms on ms.Match_Stage_Id = s.Match_Stage_Id
-left join AFR_User u on u.UserID = s.Created_By_Person_Number
-left join Match m on m.Match_Number = s.Match_Number
-left join Company c on c.Company_Number = m.Company_Number
-left join Person p on p.Person_Number = m.Candidate_Number
-left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
-left join JobAppOwners jao on jao.Match_Number = m.Match_Number
-
-UNION ALL
-
-select i.Match_Number
-, concat('AFR',m.Job_Order_Number) as AFR_JobExtID
-, concat_ws(char(10),'[Interview histories]'
-	, coalesce('Match Number: ' + convert(varchar(10),i.Match_Number),'')
-	, iif(i.Interview_DT is NULL,NULL,concat('Interview date: ', convert(varchar(20),i.Interview_DT,120)))
-	, coalesce('Interview with: ' + nullif(i.Interview_With,''),NULL)
-	, coalesce('Stage Id: ' + convert(varchar(10),i.Stage_Id),NULL)
-	, coalesce('Interview Number: ' + convert(varchar(10),i.Interview_Number),NULL)
-	, coalesce('Interview Type: ' + it.Description,NULL)
-	, coalesce('Interview Sequence Number: ' + convert(varchar(10),i.Interview_Sequence_Number),NULL)
-	, coalesce('Interview Description: ' + i.Interview_Description,NULL)
-	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
-	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
-	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
-	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
-	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
-	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
-	) as AFR_comment_activities
-, -10 as AFR_user_account_id
-, case when i.Interview_DT is NULL then GETDATE()
-	else convert(datetime,i.Interview_DT,120) end as AFR_insert_timestamp
-, 'comment' as AFR_category
-, 'job' as AFR_type --candidate | job
-from Interview i
-left join Match m on m.Match_Number = i.Match_Number
-left join Company c on c.Company_Number = m.Company_Number
-left join Person p on p.Person_Number = m.Candidate_Number
-left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
-left join Interview_Type it on it.Interview_Type_Id = i.Interview_Type_Id</sql>
+    <sql>--JOB APPLICATION HISTORY AS CANDIDATE &#x26; JOB ACTIVITIES&#xa;with JobAppOwners as &#x28;select m.Match_Number, m.Account_Manager_Person_Number, m.Recruiter_Person_Number, concat_ws&#x28;&#x27;,&#x27;,u.Email,u2.Email&#x29; as JobAppOwners&#xa;	from Match m&#xa;	left join AFR_User u on m.Account_Manager_Person_Number &#x3d; u.UserID&#xa;	left join AFR_User u2 on m.Recruiter_Person_Number &#x3d; u2.UserID&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;select s.Match_Number&#xa;, concat&#x28;&#x27;AFR&#x27;,m.Job_Order_Number&#x29; as AFR_JobExtID&#xa;, concat_ws&#x28;char&#x28;10&#x29;,&#x27;&#x5b;Historical Stage&#x5d;&#x27;&#xa;	, coalesce&#x28;&#x27;Match Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,s.Match_Number&#x29;,&#x27;&#x27;&#x29;&#xa;	, iif&#x28;s.Created_DTTM is NULL,NULL,concat&#x28;&#x27;Created date&#x3a; &#x27;, convert&#x28;varchar&#x28;20&#x29;,s.Created_DTTM,120&#x29;&#x29;&#x29;&#xa;	, coalesce&#x28;&#x27;Created by&#x3a; &#x27; &#x2b; concat&#x28;u.Firstname,&#x27; &#x27;,u.Lastname,&#x27; - &#x27;,u.Email&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Stage Id&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,s.Stage_Id&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Match Stage&#x3a; &#x27; &#x2b; ms.Description,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Candidate_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;p.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Job_Order_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;, m.Company_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Name&#x3a; &#x27; &#x2b; nullif&#x28;c.Company_Name,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Owners&#x3a; &#x27; &#x2b; jao.JobAppOwners,NULL&#x29;&#xa;	&#x29; as AFR_comment_activities&#xa;, -10 as AFR_user_account_id&#xa;, case when s.Created_DTTM is NULL then GETDATE&#x28;&#x29;&#xa;	else convert&#x28;datetime,s.Created_DTTM,120&#x29; end as AFR_insert_timestamp&#xa;, &#x27;comment&#x27; as AFR_category&#xa;, &#x27;job&#x27; as AFR_type --candidate &#x7c; job&#xa;from Stage s --343854&#xa;left join Match_Stage ms on ms.Match_Stage_Id &#x3d; s.Match_Stage_Id&#xa;left join AFR_User u on u.UserID &#x3d; s.Created_By_Person_Number&#xa;left join Match m on m.Match_Number &#x3d; s.Match_Number&#xa;left join Company c on c.Company_Number &#x3d; m.Company_Number&#xa;left join Person p on p.Person_Number &#x3d; m.Candidate_Number&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; m.Job_Order_Number&#xa;left join JobAppOwners jao on jao.Match_Number &#x3d; m.Match_Number&#xa;&#xa;UNION ALL&#xa;&#xa;select i.Match_Number&#xa;, concat&#x28;&#x27;AFR&#x27;,m.Job_Order_Number&#x29; as AFR_JobExtID&#xa;, concat_ws&#x28;char&#x28;10&#x29;,&#x27;&#x5b;Interview histories&#x5d;&#x27;&#xa;	, coalesce&#x28;&#x27;Match Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Match_Number&#x29;,&#x27;&#x27;&#x29;&#xa;	, iif&#x28;i.Interview_DT is NULL,NULL,concat&#x28;&#x27;Interview date&#x3a; &#x27;, convert&#x28;varchar&#x28;20&#x29;,i.Interview_DT,120&#x29;&#x29;&#x29;&#xa;	, coalesce&#x28;&#x27;Interview with&#x3a; &#x27; &#x2b; nullif&#x28;i.Interview_With,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Stage Id&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Stage_Id&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Interview_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Type&#x3a; &#x27; &#x2b; it.Description,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Sequence Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Interview_Sequence_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Description&#x3a; &#x27; &#x2b; i.Interview_Description,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Candidate_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;p.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Job_Order_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;, m.Company_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Name&#x3a; &#x27; &#x2b; nullif&#x28;c.Company_Name,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	&#x29; as AFR_comment_activities&#xa;, -10 as AFR_user_account_id&#xa;, case when i.Interview_DT is NULL then GETDATE&#x28;&#x29;&#xa;	else convert&#x28;datetime,i.Interview_DT,120&#x29; end as AFR_insert_timestamp&#xa;, &#x27;comment&#x27; as AFR_category&#xa;, &#x27;job&#x27; as AFR_type --candidate &#x7c; job&#xa;from Interview i&#xa;left join Match m on m.Match_Number &#x3d; i.Match_Number&#xa;left join Company c on c.Company_Number &#x3d; m.Company_Number&#xa;left join Person p on p.Person_Number &#x3d; m.Candidate_Number&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; m.Job_Order_Number&#xa;left join Interview_Type it on it.Interview_Type_Id &#x3d; i.Interview_Type_Id</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1107,36 +961,59 @@ left join Interview_Type it on it.Interview_Type_Id = i.Interview_Type_Id</sql>
       <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
-    <name>Job Cancellation fees</name>
+    <name>Job Application as activities v2</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>select 'add_job_info' as AFR_additional_type
-, concat('AFR',j.Job_Number) as AFR_JobExtID
-, 1005 as AFR_form_id
-, 1017 as AFR_field_id
-, cast(j.BilledOvertimeRate as decimal(10,0)) as AFR_CustomValue
-, getdate() as AFR_insert_timestamp
-from AFR_JobCSV3 j
-where j.Job_Number > 0
-order by j.Job_Number
-
---total: 3054</sql>
+    <sql>--JOB APPLICATION HISTORY AS CANDIDATE &#x26; JOB ACTIVITIES&#xa;with JobAppOwners as &#x28;select m.Match_Number, m.Account_Manager_Person_Number, m.Recruiter_Person_Number, concat_ws&#x28;&#x27;,&#x27;,u.Email,u2.Email&#x29; as JobAppOwners&#xa;	from Match m&#xa;	left join AFR_User u on m.Account_Manager_Person_Number &#x3d; u.UserID&#xa;	left join AFR_User u2 on m.Recruiter_Person_Number &#x3d; u2.UserID&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;, Activities as &#x28;select m.Candidate_Number&#xa;, m.Job_Order_Number&#xa;, concat_ws&#x28;char&#x28;10&#x29;, coalesce&#x28;&#x27;Match Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,s.Match_Number&#x29;,&#x27;&#x27;&#x29;&#xa;	, iif&#x28;s.Created_DTTM is NULL,NULL,concat&#x28;&#x27;Created date&#x3a; &#x27;, convert&#x28;varchar&#x28;20&#x29;,s.Created_DTTM,120&#x29;&#x29;&#x29;&#xa;	, coalesce&#x28;&#x27;Created by&#x3a; &#x27; &#x2b; concat&#x28;u.Firstname,&#x27; &#x27;,u.Lastname,&#x27; - &#x27;,u.Email&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Stage Id&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,s.Stage_Id&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Match Stage&#x3a; &#x27; &#x2b; ms.Description,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Candidate_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;p.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Job_Order_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;, m.Company_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Name&#x3a; &#x27; &#x2b; nullif&#x28;c.Company_Name,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Owners&#x3a; &#x27; &#x2b; jao.JobAppOwners,NULL&#x29;&#xa;	&#x29; as Activities&#xa;, -10 as User_account_id&#xa;, &#x27;comment&#x27; as Category&#xa;, &#x27;job&#x27; as Type&#xa;, s.Created_DTTM as Insert_timestamp&#xa;--, convert&#x28;varchar&#x28;20&#x29;,s.Created_DTTM,120&#x29; as Insert_timestamp&#xa;from Stage s --343854&#xa;left join Match_Stage ms on ms.Match_Stage_Id &#x3d; s.Match_Stage_Id&#xa;left join AFR_User u on u.UserID &#x3d; s.Created_By_Person_Number&#xa;left join Match m on m.Match_Number &#x3d; s.Match_Number&#xa;left join Company c on c.Company_Number &#x3d; m.Company_Number&#xa;left join Person p on p.Person_Number &#x3d; m.Candidate_Number&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; m.Job_Order_Number&#xa;left join JobAppOwners jao on jao.Match_Number &#x3d; m.Match_Number&#xa;&#xa;UNION ALL&#xa;&#xa;select m.Candidate_Number&#xa;, m.Job_Order_Number&#xa;, concat_ws&#x28;char&#x28;10&#x29;, coalesce&#x28;&#x27;Match Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Match_Number&#x29;,&#x27;&#x27;&#x29;&#xa;	, iif&#x28;i.Interview_DT is NULL,NULL,concat&#x28;&#x27;Interview date&#x3a; &#x27;, convert&#x28;varchar&#x28;20&#x29;,i.Interview_DT,120&#x29;&#x29;&#x29;&#xa;	, coalesce&#x28;&#x27;Interview with&#x3a; &#x27; &#x2b; nullif&#x28;i.Interview_With,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Stage Id&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Stage_Id&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Interview_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Type&#x3a; &#x27; &#x2b; it.Description,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Sequence Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,i.Interview_Sequence_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Interview Description&#x3a; &#x27; &#x2b; i.Interview_Description,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Candidate_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;p.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Job_Order_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;, m.Company_Number&#x29;,NULL&#x29;&#xa;	, coalesce&#x28;&#x27;Company Name&#x3a; &#x27; &#x2b; nullif&#x28;c.Company_Name,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;	&#x29; as Activities&#xa;, -10 as User_account_id&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;job&#x27; as Type&#xa;, i.Interview_DT as Insert_timestamp&#xa;from Interview i&#xa;left join Match m on m.Match_Number &#x3d; i.Match_Number&#xa;left join Company c on c.Company_Number &#x3d; m.Company_Number&#xa;left join Person p on p.Person_Number &#x3d; m.Candidate_Number&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; m.Job_Order_Number&#xa;left join Interview_Type it on it.Interview_Type_Id &#x3d; i.Interview_Type_Id&#x29;&#xa;&#xa;select concat&#x28;&#x27;AFR&#x27;,Candidate_Number&#x29; as AFR_CandidateExtID&#xa;, concat&#x28;&#x27;AFR&#x27;,Job_Order_Number&#x29; as AFR_JobExtID&#xa;, STRING_AGG&#x28;Activities, concat&#x28;char&#x28;10&#x29;,char&#x28;13&#x29;&#x29;&#x29; within group &#x28;order by Insert_timestamp desc&#x29; as AFR_comment_activities&#xa;, max&#x28;Insert_timestamp&#x29; as AFR_Insert_timestamp&#xa;, max&#x28;User_account_id&#x29; as AFR_User_account_id&#xa;, max&#x28;category&#x29; as AFR_category&#xa;, max&#x28;Type&#x29; as AFR_type&#xa;from Activities&#xa;where Candidate_Number is not NULL and Job_Order_Number is not NULL&#xa;group by Candidate_Number, Job_Order_Number</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Job Cancellation fees</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>AFR DB</connection>
+    <sql>select &#x27;add_job_info&#x27; as AFR_additional_type&#xa;, concat&#x28;&#x27;AFR&#x27;,j.Job_Number&#x29; as AFR_JobExtID&#xa;, 1005 as AFR_form_id&#xa;, 1017 as AFR_field_id&#xa;, cast&#x28;j.BilledOvertimeRate as decimal&#x28;10,0&#x29;&#x29; as AFR_CustomValue&#xa;, getdate&#x28;&#x29; as AFR_insert_timestamp&#xa;from AFR_JobCSV3 j&#xa;where j.Job_Number &#x3e; 0&#xa;order by j.Job_Number&#xa;&#xa;--total&#x3a; 3054</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1148,37 +1025,27 @@ order by j.Job_Number
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Job Position Type - Effort Level</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>select 'add_job_info' as AFR_additional_type
-, concat('AFR',j.Job_Order_Number) as AFR_JobExtID
-, 1005 as AFR_form_id
-, 1016 as AFR_field_id
-, pt.Description as AFR_CustomValue
-, getdate() as AFR_insert_timestamp
-from Job_Order j
-left join Position_Type pt on pt.Position_Type_Id = j.Position_Type_Id
-where j.Position_Type_Id > 0
-order by j.Job_Order_Number
-
---total: 511</sql>
+    <sql>select &#x27;add_job_info&#x27; as AFR_additional_type&#xa;, concat&#x28;&#x27;AFR&#x27;,j.Job_Order_Number&#x29; as AFR_JobExtID&#xa;, 1005 as AFR_form_id&#xa;, 1016 as AFR_field_id&#xa;, pt.Description as AFR_CustomValue&#xa;, getdate&#x28;&#x29; as AFR_insert_timestamp&#xa;from Job_Order j&#xa;left join Position_Type pt on pt.Position_Type_Id &#x3d; j.Position_Type_Id&#xa;where j.Position_Type_Id &#x3e; 0&#xa;order by j.Job_Order_Number&#xa;&#xa;--total&#x3a; 511</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1190,36 +1057,27 @@ order by j.Job_Order_Number
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Job Quarter Closed</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>select 'add_job_info' as AFR_additional_type
-, concat('AFR',j.JobNumber) as AFR_JobExtID
-, 1005 as AFR_form_id
-, 1018 as AFR_field_id
-, j.QuarterJobClosed as AFR_CustomValue
-, getdate() as AFR_insert_timestamp
-from AFR_JobCSV7 j
-where j.JobNumber > 0
-order by j.JobNumber
-
---total: 615</sql>
+    <sql>select &#x27;add_job_info&#x27; as AFR_additional_type&#xa;, concat&#x28;&#x27;AFR&#x27;,j.JobNumber&#x29; as AFR_JobExtID&#xa;, 1005 as AFR_form_id&#xa;, 1018 as AFR_field_id&#xa;, j.QuarterJobClosed as AFR_CustomValue&#xa;, getdate&#x28;&#x29; as AFR_insert_timestamp&#xa;from AFR_JobCSV7 j&#xa;where j.JobNumber &#x3e; 0&#xa;order by j.JobNumber&#xa;&#xa;--total&#x3a; 615</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1231,17 +1089,18 @@ order by j.JobNumber
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Job lookup</name>
     <type>DBLookup</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
     <cache>N</cache>
@@ -1250,23 +1109,23 @@ order by j.JobNumber
     <lookup>
       <schema>public</schema>
       <table>position_description</table>
-      <orderby />
+      <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
         <name>AFR_JobExtID</name>
         <field>external_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <value>
         <name>id</name>
         <rename>VCJobID</rename>
-        <default />
+        <default/>
         <type>Integer</type>
       </value>
     </lookup>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1278,17 +1137,18 @@ order by j.JobNumber
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Job lookup 2</name>
     <type>DBLookup</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
     <cache>N</cache>
@@ -1297,23 +1157,23 @@ order by j.JobNumber
     <lookup>
       <schema>public</schema>
       <table>position_description</table>
-      <orderby />
+      <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
         <name>AFR_JobExtID</name>
         <field>external_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <value>
         <name>id</name>
         <rename>VCJobID</rename>
-        <default />
+        <default/>
         <type>Integer</type>
       </value>
     </lookup>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1325,50 +1185,27 @@ order by j.JobNumber
       <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Offer details as activities</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>select o.Match_Number, o.Stage_Id
-	, concat('AFR',m.Job_Order_Number) as AFR_JobExtID
-	, concat_ws(char(10),'[Offer Info]'
-		, coalesce('Stage ID: ' + convert(nvarchar(max),o.Stage_Id),NULL)
-		, coalesce('Offer Date: ' + convert(nvarchar(10),o.Offer_DT,120),NULL)
-		, coalesce('Offer Amount: ' + convert(nvarchar(max),o.Offer_Amt),NULL)
-		, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
-		, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
-		, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
-		, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
-		, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
-		, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
-		) as AFR_comment_activities
-	, -10 as AFR_user_account_id
-	, case when o.Offer_DT is NULL then GETDATE()
-	else convert(datetime,o.Offer_DT,120) end as AFR_insert_timestamp
-	, 'comment' as AFR_category
-	, 'job' as AFR_type
-from Offer o
-left join Match m on m.Match_Number = o.Match_Number
-left join Person p on p.Person_Number = m.Candidate_Number
-left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
-left join Company c on c.Company_Number = m.Company_Number
---where o.Match_Number = 113971
-order by o.Match_Number</sql>
+    <sql>select o.Match_Number, o.Stage_Id&#xa;	, concat&#x28;&#x27;AFR&#x27;,m.Job_Order_Number&#x29; as AFR_JobExtID&#xa;	, concat_ws&#x28;char&#x28;10&#x29;,&#x27;&#x5b;Offer Info&#x5d;&#x27;&#xa;		, coalesce&#x28;&#x27;Stage ID&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;max&#x29;,o.Stage_Id&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Offer Date&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;10&#x29;,o.Offer_DT,120&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Offer Amount&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;max&#x29;,o.Offer_Amt&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Candidate_Number&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;p.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Job_Order_Number&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Company Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;, m.Company_Number&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Company Name&#x3a; &#x27; &#x2b; nullif&#x28;c.Company_Name,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		&#x29; as AFR_comment_activities&#xa;	, -10 as AFR_user_account_id&#xa;	, case when o.Offer_DT is NULL then GETDATE&#x28;&#x29;&#xa;	else convert&#x28;datetime,o.Offer_DT,120&#x29; end as AFR_insert_timestamp&#xa;	, &#x27;comment&#x27; as AFR_category&#xa;	, &#x27;job&#x27; as AFR_type&#xa;from Offer o&#xa;left join Match m on m.Match_Number &#x3d; o.Match_Number&#xa;left join Person p on p.Person_Number &#x3d; m.Candidate_Number&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; m.Job_Order_Number&#xa;left join Company c on c.Company_Number &#x3d; m.Company_Number&#xa;--where o.Match_Number &#x3d; 113971&#xa;order by o.Match_Number</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1380,50 +1217,27 @@ order by o.Match_Number</sql>
       <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Placement details as activities</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>select p.Match_Number, p.Stage_Id
-	, concat('AFR',m.Job_Order_Number) as AFR_JobExtID
-	, concat_ws(char(10),'[Placement Info]'
-		, coalesce('Stage: ' + convert(nvarchar(max),p.Stage_Id),'')
-		, coalesce('Placement Date: ' + convert(nvarchar(10),p.Placement_DT,120),NULL)
-		, coalesce('Start Date: ' + convert(nvarchar(20),p.Start_DT,120),'')
-		, coalesce('Recruiter Fee Amount: ' + convert(nvarchar(max),p.Recruiter_Fee_Amt),'')
-		, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
-		, coalesce('Candidate Name: ' + coalesce(pp.Name_First,'') + ' ' + coalesce(pp.Name_Middle,'') + ' ' + coalesce(pp.Name_Last,''),NULL)
-		, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
-		, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
-		, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
-		, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
-		) as AFR_comment_activities
-	, -10 as AFR_user_account_id
-	, case when p.Placement_DT is NULL then GETDATE()
-	else convert(datetime,p.Placement_DT,120) end as AFR_insert_timestamp
-	, 'comment' as AFR_category
-	, 'job' as AFR_type
-from Placement p
-left join Match m on m.Match_Number = p.Match_Number
-left join Person pp on pp.Person_Number = m.Candidate_Number
-left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
-left join Company c on c.Company_Number = m.Company_Number
-order by p.Match_Number</sql>
+    <sql>select p.Match_Number, p.Stage_Id&#xa;	, concat&#x28;&#x27;AFR&#x27;,m.Job_Order_Number&#x29; as AFR_JobExtID&#xa;	, concat_ws&#x28;char&#x28;10&#x29;,&#x27;&#x5b;Placement Info&#x5d;&#x27;&#xa;		, coalesce&#x28;&#x27;Stage&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;max&#x29;,p.Stage_Id&#x29;,&#x27;&#x27;&#x29;&#xa;		, coalesce&#x28;&#x27;Placement Date&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;10&#x29;,p.Placement_DT,120&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Start Date&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;20&#x29;,p.Start_DT,120&#x29;,&#x27;&#x27;&#x29;&#xa;		, coalesce&#x28;&#x27;Recruiter Fee Amount&#x3a; &#x27; &#x2b; convert&#x28;nvarchar&#x28;max&#x29;,p.Recruiter_Fee_Amt&#x29;,&#x27;&#x27;&#x29;&#xa;		, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Candidate_Number&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;pp.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;pp.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;pp.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,m.Job_Order_Number&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Company Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;, m.Company_Number&#x29;,NULL&#x29;&#xa;		, coalesce&#x28;&#x27;Company Name&#x3a; &#x27; &#x2b; nullif&#x28;c.Company_Name,&#x27;&#x27;&#x29;,NULL&#x29;&#xa;		&#x29; as AFR_comment_activities&#xa;	, -10 as AFR_user_account_id&#xa;	, case when p.Placement_DT is NULL then GETDATE&#x28;&#x29;&#xa;	else convert&#x28;datetime,p.Placement_DT,120&#x29; end as AFR_insert_timestamp&#xa;	, &#x27;comment&#x27; as AFR_category&#xa;	, &#x27;job&#x27; as AFR_type&#xa;from Placement p&#xa;left join Match m on m.Match_Number &#x3d; p.Match_Number&#xa;left join Person pp on pp.Person_Number &#x3d; m.Candidate_Number&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; m.Job_Order_Number&#xa;left join Company c on c.Company_Number &#x3d; m.Company_Number&#xa;order by p.Match_Number</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1435,17 +1249,18 @@ order by p.Match_Number</sql>
       <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
     <name>Update Custom field</name>
     <type>InsertUpdate</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
     <commit>100</commit>
@@ -1456,26 +1271,26 @@ order by p.Match_Number</sql>
       <key>
         <name>AFR_additional_type</name>
         <field>additional_type</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <key>
         <name>VCJobID</name>
         <field>additional_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <key>
         <name>AFR_form_id</name>
         <field>form_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <key>
         <name>AFR_field_id</name>
         <field>field_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <value>
         <name>additional_type</name>
@@ -1508,7 +1323,7 @@ order by p.Match_Number</sql>
         <update>Y</update>
       </value>
     </lookup>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1520,17 +1335,18 @@ order by p.Match_Number</sql>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
-    <name>Update Custom field (Dropdown Single value)</name>
+    <name>Update Custom field &#x28;Dropdown Single value&#x29;</name>
     <type>InsertUpdate</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR PROD</connection>
     <commit>100</commit>
@@ -1541,26 +1357,26 @@ order by p.Match_Number</sql>
       <key>
         <name>AFR_additional_type</name>
         <field>additional_type</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <key>
         <name>VCJobID</name>
         <field>additional_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <key>
         <name>AFR_form_id</name>
         <field>form_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <key>
         <name>AFR_field_id</name>
         <field>field_id</field>
-        <condition>=</condition>
-        <name2 />
+        <condition>&#x3d;</condition>
+        <name2/>
       </key>
       <value>
         <name>additional_type</name>
@@ -1593,7 +1409,7 @@ order by p.Match_Number</sql>
         <update>Y</update>
       </value>
     </lookup>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1605,101 +1421,27 @@ order by p.Match_Number</sql>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step>
-    <name>Job Application as activities v2</name>
+    <name>JobApp  activities v3</name>
     <type>TableInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <connection>AFR DB</connection>
-    <sql>--JOB APPLICATION HISTORY AS CANDIDATE &amp; JOB ACTIVITIES
-with JobAppOwners as (select m.Match_Number, m.Account_Manager_Person_Number, m.Recruiter_Person_Number, concat_ws(',',u.Email,u2.Email) as JobAppOwners
-	from Match m
-	left join AFR_User u on m.Account_Manager_Person_Number = u.UserID
-	left join AFR_User u2 on m.Recruiter_Person_Number = u2.UserID)
-
---MAIN SCRIPT
-, Activities as (select m.Candidate_Number
-, m.Job_Order_Number
-, concat_ws(char(10), coalesce('Match Number: ' + convert(varchar(10),s.Match_Number),'')
-	, iif(s.Created_DTTM is NULL,NULL,concat('Created date: ', convert(varchar(20),s.Created_DTTM,120)))
-	, coalesce('Created by: ' + concat(u.Firstname,' ',u.Lastname,' - ',u.Email),NULL)
-	, coalesce('Stage Id: ' + convert(varchar(10),s.Stage_Id),NULL)
-	, coalesce('Match Stage: ' + ms.Description,NULL)
-	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
-	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
-	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
-	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
-	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
-	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
-	, coalesce('Job Owners: ' + jao.JobAppOwners,NULL)
-	) as Activities
-, -10 as User_account_id
-, 'comment' as Category
-, 'job' as Type
-, s.Created_DTTM as Insert_timestamp
---, convert(varchar(20),s.Created_DTTM,120) as Insert_timestamp
-from Stage s --343854
-left join Match_Stage ms on ms.Match_Stage_Id = s.Match_Stage_Id
-left join AFR_User u on u.UserID = s.Created_By_Person_Number
-left join Match m on m.Match_Number = s.Match_Number
-left join Company c on c.Company_Number = m.Company_Number
-left join Person p on p.Person_Number = m.Candidate_Number
-left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
-left join JobAppOwners jao on jao.Match_Number = m.Match_Number
-
-UNION ALL
-
-select m.Candidate_Number
-, m.Job_Order_Number
-, concat_ws(char(10), coalesce('Match Number: ' + convert(varchar(10),i.Match_Number),'')
-	, iif(i.Interview_DT is NULL,NULL,concat('Interview date: ', convert(varchar(20),i.Interview_DT,120)))
-	, coalesce('Interview with: ' + nullif(i.Interview_With,''),NULL)
-	, coalesce('Stage Id: ' + convert(varchar(10),i.Stage_Id),NULL)
-	, coalesce('Interview Number: ' + convert(varchar(10),i.Interview_Number),NULL)
-	, coalesce('Interview Type: ' + it.Description,NULL)
-	, coalesce('Interview Sequence Number: ' + convert(varchar(10),i.Interview_Sequence_Number),NULL)
-	, coalesce('Interview Description: ' + i.Interview_Description,NULL)
-	, coalesce('Candidate Number: ' + convert(varchar(10),m.Candidate_Number),NULL)
-	, coalesce('Candidate Name: ' + coalesce(p.Name_First,'') + ' ' + coalesce(p.Name_Middle,'') + ' ' + coalesce(p.Name_Last,''),NULL)
-	, coalesce('Job Order Number: ' + convert(varchar(10),m.Job_Order_Number),NULL)
-	, coalesce('Job Title: ' + nullif(j.Position_Title,''),NULL)
-	, coalesce('Company Number: ' + convert(varchar(10), m.Company_Number),NULL)
-	, coalesce('Company Name: ' + nullif(c.Company_Name,''),NULL)
-	) as Activities
-, -10 as User_account_id
-, 'comment' as category
-, 'job' as Type
-, i.Interview_DT as Insert_timestamp
-from Interview i
-left join Match m on m.Match_Number = i.Match_Number
-left join Company c on c.Company_Number = m.Company_Number
-left join Person p on p.Person_Number = m.Candidate_Number
-left join Job_Order j on j.Job_Order_Number = m.Job_Order_Number
-left join Interview_Type it on it.Interview_Type_Id = i.Interview_Type_Id)
-
-select concat('AFR',Candidate_Number) as AFR_CandidateExtID
-, concat('AFR',Job_Order_Number) as AFR_JobExtID
-, STRING_AGG(Activities, concat(char(10),char(13))) within group (order by Insert_timestamp desc) as AFR_comment_activities
-, max(Insert_timestamp) as AFR_Insert_timestamp
-, max(User_account_id) as AFR_User_account_id
-, max(category) as AFR_category
-, max(Type) as AFR_type
-from Activities
-where Candidate_Number is not NULL and Job_Order_Number is not NULL
-group by Candidate_Number, Job_Order_Number</sql>
+    <sql>with JobApp as &#x28;select s.Match_Number&#xd;&#xa;	, m.Candidate_Number&#xd;&#xa;	, m.Job_Order_Number&#xd;&#xa;	, m.Company_Number&#xd;&#xa;	, concat_ws&#x28;&#x27;&#x3b; &#x27;&#xd;&#xa;		, coalesce&#x28;&#x27;Stage&#x3a; &#x27; &#x2b; ms.Description,NULL&#x29;&#xd;&#xa;		, iif&#x28;s.Created_DTTM is NULL,NULL,concat&#x28;&#x27;Created date&#x3a; &#x27;, convert&#x28;varchar&#x28;20&#x29;,s.Created_DTTM,120&#x29;&#x29;&#x29;&#xd;&#xa;		, coalesce&#x28;&#x27;Created by&#x3a; &#x27; &#x2b; concat&#x28;u.Firstname,&#x27; &#x27;,u.Lastname,&#x27; - &#x27;,u.Email&#x29;,NULL&#x29;&#xd;&#xa;		&#x29; as Stage&#xd;&#xa;	, s.Created_DTTM as CreatedDate&#xd;&#xa;	from Stage s --371126&#xd;&#xa;	left join Match_Stage ms on ms.Match_Stage_Id &#x3d; s.Match_Stage_Id --371126&#xd;&#xa;	left join AFR_User u on u.UserID &#x3d; s.Created_By_Person_Number --371126&#xd;&#xa;	left join Match m on m.Match_Number &#x3d; s.Match_Number --371126&#xd;&#xa;	&#xd;&#xa;	--UNION ALL&#xd;&#xa;	&#xd;&#xa;	--select i.Match_Number&#xd;&#xa;	--, m.Candidate_Number&#xd;&#xa;	--, m.Job_Order_Number&#xd;&#xa;	--, m.Company_Number&#xd;&#xa;	--, concat_ws&#x28;&#x27;&#x3b; &#x27;&#xd;&#xa;	--	, concat&#x28;&#x27;Stage&#x3a; Interview - &#x27;,coalesce&#x28;it.Description,NULL&#x29;&#x29;&#xd;&#xa;	--	, iif&#x28;s.Created_DTTM is NULL,NULL,concat&#x28;&#x27;Created date&#x3a; &#x27;, convert&#x28;varchar&#x28;20&#x29;,s.Created_DTTM,120&#x29;&#x29;&#x29;&#xd;&#xa;	--	, coalesce&#x28;&#x27;Created by&#x3a; &#x27; &#x2b; concat&#x28;u.Firstname,&#x27; &#x27;,u.Lastname,&#x27; - &#x27;,u.Email&#x29;,NULL&#x29;&#xd;&#xa;	--	&#x29; as Stage&#xd;&#xa;	--, i.Interview_DT as InterviewDate&#xd;&#xa;	--from Interview i --16130&#xd;&#xa;	--left join &#x28;select Match_Number, Created_DTTM, Created_By_Person_Number&#xd;&#xa;	--	, row_number&#x28;&#x29; over&#x28;partition by Match_Number order by Created_DTTM desc&#x29; as rn&#xd;&#xa;	--	from Stage&#xd;&#xa;	--	where Match_Stage_Id &#x3d; 4&#x29; as s on s.Match_Number &#x3d; i.Match_Number&#xd;&#xa;	--left join Match m on m.Match_Number &#x3d; i.Match_Number&#xd;&#xa;	--left join Interview_Type it on it.Interview_Type_Id &#x3d; i.Interview_Type_Id&#xd;&#xa;	--left join AFR_User u on u.UserID &#x3d; s.Created_By_Person_Number&#xd;&#xa;	--where s.rn &#x3d; 1&#x29;&#xd;&#xa;	&#x29;&#xd;&#xa;&#xd;&#xa;, JobAppGroup as &#x28;select Match_Number, Candidate_Number, Job_Order_Number, Company_Number&#xd;&#xa;	, string_agg&#x28;Stage,char&#x28;10&#x29;&#x29; within group &#x28;ORDER BY CreatedDate desc&#x29; as JobAppStage&#xd;&#xa;	, max&#x28;CreatedDate&#x29; as CreatedDate&#xd;&#xa;	from JobApp&#xd;&#xa;	group by Match_Number, Candidate_Number, Job_Order_Number, Company_Number&#x29;&#xd;&#xa;&#xd;&#xa;select ja.Match_Number&#xd;&#xa;	, concat&#x28;&#x27;AFR&#x27;,ja.Candidate_Number&#x29; as AFR_CandidateExtID&#xd;&#xa;	, concat&#x28;&#x27;AFR&#x27;,ja.Job_Order_Number&#x29; as AFR_JobExtID&#xd;&#xa;	, ja.Company_Number&#xd;&#xa;	, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x5b;Historical Stages&#x5d;&#x27;&#xd;&#xa;		, concat&#x28;coalesce&#x28;&#x27;Company Name&#x3a; &#x27; &#x2b; nullif&#x28;c.Company_Name,&#x27;&#x27;&#x29;,NULL&#x29;, &#x27;&#x3b; &#x27; ,coalesce&#x28;&#x27;Job Title&#x3a; &#x27; &#x2b; nullif&#x28;j.Position_Title,&#x27;&#x27;&#x29;,NULL&#x29;&#x29;&#xd;&#xa;		, concat&#x28;char&#x28;10&#x29;,JobAppStage,char&#x28;10&#x29;&#x29;&#xd;&#xa;		, coalesce&#x28;&#x27;Job Order Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,ja.Job_Order_Number&#x29;,NULL&#x29;&#xd;&#xa;		, coalesce&#x28;&#x27;Company Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;, ja.Company_Number&#x29;,NULL&#x29;&#xd;&#xa;		, coalesce&#x28;&#x27;Match Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,ja.Match_Number&#x29;,&#x27;&#x27;&#x29;&#xd;&#xa;		, coalesce&#x28;&#x27;Candidate Number&#x3a; &#x27; &#x2b; convert&#x28;varchar&#x28;10&#x29;,ja.Candidate_Number&#x29;,NULL&#x29;&#xd;&#xa;		, coalesce&#x28;&#x27;Candidate Name&#x3a; &#x27; &#x2b; coalesce&#x28;p.Name_First,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Middle,&#x27;&#x27;&#x29; &#x2b; &#x27; &#x27; &#x2b; coalesce&#x28;p.Name_Last,&#x27;&#x27;&#x29;,NULL&#x29;&#xd;&#xa;	&#x29; as AFR_comment_activities&#xd;&#xa;	, -10 as AFR_User_account_id&#xd;&#xa;	, CreatedDate as AFR_Insert_timestamp&#xd;&#xa;	, &#x27;comment&#x27; as AFR_category&#xd;&#xa;	, &#x27;candidate&#x27; as AFR_type&#xd;&#xa;from JobAppGroup ja&#xd;&#xa;left join Company c on c.Company_Number &#x3d; ja.Company_Number&#xd;&#xa;left join Person p on p.Person_Number &#x3d; ja.Candidate_Number&#xd;&#xa;left join Job_Order j on j.Job_Order_Number &#x3d; ja.Job_Order_Number&#xd;&#xa;--where ja.Match_Number &#x3d; 73187</sql>
     <limit>0</limit>
-    <lookup />
+    <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema />
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1707,11 +1449,12 @@ group by Candidate_Number, Job_Order_Number</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>464</yloc>
+      <xloc>240</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
-  </step>
+    </step>
+
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>

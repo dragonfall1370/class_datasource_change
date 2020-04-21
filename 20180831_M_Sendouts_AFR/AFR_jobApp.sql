@@ -21,7 +21,7 @@ with AFRStage as (
     when Interview_Sequence_Number = 1 then 3
     else 0 end as VC_stage
 	from Interview
-	)
+	) --314413
 
 /* Interview max sequence
 
@@ -40,8 +40,8 @@ with AFRStage as (
 	from AFRStage a
 	left join Match m on m.Match_Number = a.Match_Number)
 
---select * from HighestStage --291110
---where rn = 1 --144766
+--select * from HighestStage --3144413
+--where rn = 1 --154545
 
 --JOB APPLICATION
 	--select * from HighestStage
@@ -89,5 +89,5 @@ left join VCStatus ss on hs.Match_Number = ss.Match_Number
 left join Match m on m.Match_Number = hs.Match_Number
 left join Company c on c.Company_Number = m.Company_Number
 left join JobAppOwners jao on jao.Match_Number = m.Match_Number
-where hs.rn = 1 --144766 distinct
+where hs.rn = 1 --154545 distinct
 --and VC_status = 'Rejected'
