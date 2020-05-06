@@ -1,0 +1,4034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>candidate_deletedsectors</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/08/07 09:49:56.778</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/08/07 09:49:56.778</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>activities</note>
+      <xloc>64</xloc>
+      <yloc>16</yloc>
+      <width>57</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>candidate</note>
+      <xloc>1008</xloc>
+      <yloc>16</yloc>
+      <width>63</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Candidate new note</note>
+      <xloc>1008</xloc>
+      <yloc>400</yloc>
+      <width>117</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Upsell mapping</note>
+      <xloc>1008</xloc>
+      <yloc>608</yloc>
+      <width>94</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>NextPhase from</name>
+    <server>localhost</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>NextPhasePROD</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>NextPhase to</name>
+    <server>10.0.9.121</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>nextphase.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>Insert applicant actions</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>Insert notebook</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup 2</from>
+      <to>Contact lookup 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Company lookup 2</from>
+      <to>Job lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Contact lookup 2 2</from>
+      <to>Job lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Applicant actions</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Interviews</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup 2</from>
+      <to>Candidate lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Notebook</from>
+      <to>Company lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate Source</from>
+      <to>Candidate lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>Candidate source lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate source lookup</from>
+      <to>Update candidate source</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate reg</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate info</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>candidate reg date</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Update candidate info</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate gdpr</from>
+      <to>Candidate lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Update candidate gdpr</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate New Note</from>
+      <to>Candidate lookup 4</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 4</from>
+      <to>Insert Candidate New Note</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 4</from>
+      <to>Candidate new tab</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Extract Candidate Documents</from>
+      <to>lookup candidateid</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>lookup candidateid</from>
+      <to>update candidate_document</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>Insert interviews</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 3</from>
+      <to>Insert gdpr notes</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>FE lookup</from>
+      <to>VC SFE</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Functional Exp</from>
+      <to>Vincere FE</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Sub FE</from>
+      <to>FE lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 5</from>
+      <to>update candidate skills</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate skills</from>
+      <to>Candidate lookup 5</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>FE lookup 3</from>
+      <to>SFE lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>SFE lookup</from>
+      <to>Insert candidate FESFE</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate FE/SFE</from>
+      <to>Candidate lookup 5</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 5</from>
+      <to>FE lookup 3</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate edu summary</from>
+      <to>Candidate lookup 5</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 5</from>
+      <to>update candidate edu</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 5</from>
+      <to>Concat Fields</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Concat Fields</from>
+      <to>update candidate edu</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Applicant actions</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>--APPLICANT ACTIONS ACTIVITIES
+with userinfo as (
+        select u.UserId,u.LoginName,u.UserName,u.UserFullName,u.JobTitle,u.Inactive
+        from Users u)
+
+select coalesce('NP'+ convert(varchar(max), aa.ApplicantId),NULL) as cand_ext_id
+, coalesce('NP'+ convert(varchar(max), aa.JobId),NULL) as job_ext_id
+, coalesce('NP'+ convert(varchar(max), aa.ClientContactId),NULL) as con_ext_id
+, coalesce('NP'+ convert(varchar(max), aa.ClientId),NULL) as com_ext_id
+, -10 as user_account_id
+, aa.createdOn
+, 'comment' as category
+, concat_ws(char(10), '[Applicant Actions]'
+	, coalesce('Consultants: '+ u.UserFullName,NULL)
+	, coalesce('Created by: '+ u2.UserFullName,NULL)
+	, coalesce('Status: '+ aas.Description,NULL)
+	, coalesce('Status Date: '+ convert(varchar(max), aa.StatusDate, 120),NULL)
+	, coalesce('Notes: '+ aa.Notes,NULL)
+	) as comment_activities
+from ApplicantActions aa
+left join ApplicantActionStatus aas on aas.ApplicantActionStatusId = aa.StatusId
+left join userinfo u on u.UserId = aa.ConsultantUserId --consultants
+left join userinfo u2 on u2.UserId = aa.CreatedUserId --created
+where aa.ApplicantId in (select objectId from cand_2sector) --49 rows
+--where aa.ApplicantActionId = 113</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate FE/SFE</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with candidateinIDobject as (
+        select o.ObjectID,o.LocationId,o.FileAs,o.FlagText,o.SourceId,o.CreatedOn
+        from dbo.Objects o
+        where o.ObjectTypeId=1 --candidate
+)
+
+, cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+
+, fesfe as (select --distinct am.Description as FEUnique --23 rows
+	a.AttributeMasterId as FEID
+	, am.Description as FE
+	, am.ParentAttributeMasterId
+	, am.AllowClient
+	, am.AllowContact
+	, am.AllowApplicant
+	, a.AttributeId as SFEID
+	, case when a.Notes is NULL or a.Notes = '' then a.Description
+		else a.Notes end as SFE
+	, a.Description --reference
+	from Attributes a
+	left join AttributeMaster am on am.AttributeMasterId = a.AttributeMasterId
+	where am.Description not like '%DO NOT USE%'
+	--and am.AllowApplicant = 'Y'
+)
+, mappedskills as (select o.ObjectID
+	, fesfe.FE
+	, fesfe.SFE
+	, fe.attribute_master
+	, fe.attributes
+	, fe.VCFE
+	, fe.VCSFE
+	from ObjectAttributes o
+	left join fesfe on fesfe.SFEID = o.AttributeId
+	inner join fe_sfe_skills fe on fe.attributes = fesfe.SFE and fe.attribute_master = fesfe.FE
+	where 1=1
+	and o.ObjectID in (select ObjectId from cand_2sector)
+	and fe.VCFE is not NULL
+	)
+
+select concat('NP', objectID) as cand_ext_id
+, VCFE
+, VCSFE
+, current_timestamp as insert_timestamp
+from (select distinct objectID, VCFE, VCSFE from mappedskills) a --117 rows
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate New Note</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with candidateinIDobject as (
+        select o.ObjectID,o.LocationId,o.FileAs,o.FlagText,o.SourceId,o.CreatedOn
+        from dbo.Objects o
+        where o.ObjectTypeId=1 --candidate
+)
+, alladdress as (
+        select ad.ObjectId,ad.AddressId,adt.Description,ad.Building,ad.Street,ad.District,ad.City,ad.PostCode
+		, lvct.ValueName as 'County'
+		, lvc.ValueName as 'Country'
+		, lvc.SystemCode as CountryCode
+		, row_number() OVER(partition by ad.ObjectID order by ad.AddressID desc) AS rn
+        from dbo.Address ad
+        left join dbo.AddressTypes adt on ad.AddressTypeId = adt.AddressTypeId
+        left join dbo.ListValues lvc on lvc.ListValueId = ad.CountryValueId --country
+        left join dbo.ListValues lvct on lvct.ListValueId = ad.CountyValueId --county
+) --select distinct Country from alladdress
+, candidate_address as (--All addresses group by candidate
+        select ObjectId
+		, string_agg(concat_ws(', '
+				, nullif(trim(Building),'')
+				, nullif(trim(Street),'')
+				, nullif(trim(District),'')
+				, nullif(trim(City),'')
+				, nullif(trim(PostCode),'')
+				, nullif(trim(County),'')
+				, nullif(trim(Country),'')), char(10)) as candidate_address
+        from alladdress
+        group by ObjectId
+)
+, address_1 as (
+        select  aad.ObjectId
+                , nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.Building),'') as Building
+                , nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.Street),'') as Street
+                , nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.District),'') as District
+                , nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.City),'') as City
+                , nullif(TRIM(' ,''".+|*[]\/{}' FROM aad.PostCode),'') as PostCode
+                , nullif(TRIM(' ,''".+|*[]\/{}' FROM aad.County),'') as County
+                , nullif(TRIM(' ,''".+|*[]\/{}' FROM aad.Country),'') as Country
+				, nullif(TRIM(' ,''".+|*[]\/{}' FROM aad.CountryCode),'') as CountryCode
+                , concat_ws(', ',
+					nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.Building),''),
+					nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.Street),''),
+					nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.District),''),
+					nullif(TRIM(' ,''".+|*()[]\/{}' FROM aad.City),''),
+					nullif(TRIM(' ,''".+|*[]\/{}' FROM aad.PostCode),''),
+					nullif(TRIM(' ,''".+|*[]\/{}' FROM aad.County),''),
+					nullif(TRIM(' ,''".+|*[]\/{}' FROM aad.Country),'')) as 'candidate_address'
+        from alladdress aad
+        where rn =1
+		)
+, mobilephone as (--MOBILES AS PRIMARY PHONE
+		select p.ObjectID,p.PhoneId,p.CreatedOn
+		, case when patindex('%[a-zA-Z]%',Num) > 0 then left(trim(num), patindex('%[a-zA-Z]%',Num) - 1) 
+			else trim(Num) end as phone
+        from dbo.Phones p
+        where p.CommunicationTypeId = 83 --Mobile
+		) --reused for other entities
+, mobile as (--CANDIDATE MOBILE AS PRIMARY PHONE
+		select ObjectID
+		, string_agg(nullif(phone,''),',') as mobile
+		from mobilephone
+		group by ObjectID
+		)
+, otherphone as (--ALL OTHER PHONES
+				select p.ObjectID, p.PhoneId, p.CreatedOn, p.CommunicationTypeId
+				, case when patindex('%[a-zA-Z]%',Num) > 0 then left(trim(num), patindex('%[a-zA-Z]%',Num) - 1) 
+				else trim(Num) end as phone
+        from Phones p
+        where p.CommunicationTypeId in (80, 84, 79, 81, 82, 87, 88) --CommunicationTypes: fax, pager, phone, day, evening, office, home
+		) 
+, otherphone_group as (select ObjectID, CommunicationTypeId
+				, string_agg(nullif(phone, ''),', ') as otherphone
+				from otherphone
+				group by ObjectID, CommunicationTypeId
+		)
+, allphone as (select ObjectID
+		, string_agg(concat_ws(' '
+			, case when CommunicationTypeId = 80 then 'Fax:'
+					when CommunicationTypeId = 84 then 'Pager:'
+					when CommunicationTypeId = 79 then 'Phone:'
+					when CommunicationTypeId = 81 then 'Phone (Day):'
+					when CommunicationTypeId = 82 then 'Phone (Evening):'
+					when CommunicationTypeId = 87 then 'Phone (Home):'
+					when CommunicationTypeId = 88 then 'Phone (Office):'
+					end
+			, nullif(otherphone,'')
+			), char(10)) as allphone
+		from otherphone_group
+		group by ObjectID
+		)
+, othernetwork as (--ALL URL, NETWORK
+        select p.ObjectID, CommunicationTypeId, STRING_AGG(TRIM('.' FROM p.Num),',') as othernetwork
+        from Phones p
+        where p.CommunicationTypeId in (89, 90) --CommunicationTypes: URL, Social Networking
+		group by p.ObjectID, CommunicationTypeId
+		)
+, allnetwork as (select ObjectID
+		, string_agg(concat_ws(' '
+			, case when CommunicationTypeId = 89 then 'URL:'
+					when CommunicationTypeId = 90 then 'Social networking:'
+					end
+			, nullif(othernetwork,'')
+			), char(10)) as allnetwork
+		from othernetwork
+		group by ObjectID
+		)
+/* 
+, email as (--EMAIL
+        select p.ObjectID, p.PhoneId
+		, TRIM('.' FROM p.Num) as Email--,ROW_NUMBER() OVER(PARTITION BY p.ObjectID ORDER BY p.CreatedOn ASC) AS rn
+        from Phones p
+        where p.CommunicationTypeId=78 --CommunicationTypes: Email --Email cannot be retrieved from PrimaryEmailAddressPhoneId
+        and p.Num like '%_@_%.__%'
+		)
+*/
+, email as (select p.ObjectID, p.PhoneId
+		, TRIM('.' FROM p.Num) as Email--,ROW_NUMBER() OVER(PARTITION BY p.ObjectID ORDER BY p.CreatedOn ASC) AS rn
+        from Applicants a
+		left join Phones p on p.PhoneId = a.PrimaryEmailAddressPhoneId
+        --where p.CommunicationTypeId=78 --CommunicationTypes: Email --Email cannot be retrieved from PrimaryEmailAddressPhoneId
+        and p.Num like '%_@_%.__%'
+		)
+, mail_transform as (select ObjectID, PhoneId
+				, replace(replace(translate (Email, '!'':"&lt;&gt;[]();,+', '             '), char(10), ' '), char(13), ' ') as Email
+				from email
+		)
+, mail_split as (select ObjectID, PhoneId
+				, trim(value) as email
+				from mail_transform
+				cross apply string_split(Email, ' ')
+				where Email like '%_@_%.__%'
+			) --select * from mail_split where ObjectId = 52038
+, dup as (select ObjectID --EMAIL CHECK DUPLICATION
+		, trim(' ' from email) as EmailAddress
+		, row_number() over(partition by trim(' ' from email) order by ObjectID asc) as rn --distinct email if emails exist more than once
+		, row_number() over(partition by ObjectID order by PhoneId desc) as Contactrn --distinct if contacts may have more than 1 email
+		from mail_split
+		where Email like '%_@_%.__%'
+		)
+, primaryEmail as (select ObjectID --PRIMARY EMAIL
+		, case when rn > 1 then concat(rn,'_',EmailAddress)
+		else EmailAddress end as PrimaryEmail
+		from dup
+		where EmailAddress is not NULL and EmailAddress &lt;&gt; ''
+		and Contactrn = 1
+		)
+, officeemail as (--OFFICE EMAIL
+        select p.ObjectID, STRING_AGG(TRIM('.' FROM p.Num),',') as officeemail
+        from dbo.Phones p
+        where p.CommunicationTypeId=85 --Email (Office)
+        and p.Num like '%_@_%.__%'
+        group by p.ObjectID
+)
+, personemail as (--PERSON EMAIL
+        select p.ObjectID, STRING_AGG(TRIM('.' FROM p.Num),',') as personemail
+        from dbo.Phones p
+        where p.CommunicationTypeId=86 --Email (Personal)
+        and p.Num like '%_@_%.__%'
+        group by p.ObjectID
+)
+, consultant as (select ac.ApplicantConsultantId
+				, ac.ApplicantId
+				, ac.userId
+				, u.EmailAddress
+				, u.UserFullName
+				, ac.UserRelationshipId
+				, ur.Description
+				, g.GroupName
+				from ApplicantConsultants ac
+				left join Users u on u.UserId = ac.UserId
+				left join UserRelationships ur on ur.UserRelationshipId = ac.UserRelationshipId
+				left join Groups g on g.GroupId = ac.UserGroupId
+)
+, owners as (select ApplicantId
+				, string_agg(EmailAddress, ',') within group (order by UserRelationshipId) as owners
+				from consultant
+				group by ApplicantId
+			)
+, consultant_info as (
+        select ApplicantId
+		, string_agg(
+			concat_ws(' - '
+				, nullif(UserFullName,'')
+				, coalesce('Relationship: ' + nullif(Description, ''), NULL)
+				, coalesce('Group name: ' + nullif(GroupName, ''), NULL)
+				--, , coalesce('[Commission(%): ' + convert(varchar(max),CommissionPerc, 1)+ ']',NULL))
+			), ', ') as consultant_info
+        from consultant
+        group by ApplicantId
+)
+, userinfo as (--USER
+        select u.UserId,u.LoginName,u.UserName,u.UserFullName,u.JobTitle,u.Inactive
+        from Users u
+)
+, person_info as (--CANDIDATE INFO
+		select p.PersonID, p.PersonName, p.Surname, p.Dob, p.Notes
+                , p.GenderValueId
+                , case when lv1.ValueName='Female' then 'FEMALE'
+					when lv1.ValueName='Male' then 'MALE'  
+					else null end as Gender
+                , p.MaritalStatusValueId
+				, lv2.ValueName as Marital
+                , p.TitleValueId
+				--, lv3.ValueName as Title
+				, case 
+					when lv3.ValueName = 'Dame' then 'MISS'
+					when lv3.ValueName = 'Dr' then 'DR'
+					when lv3.ValueName = 'Miss' then 'MISS'
+					when lv3.ValueName = 'Mr' then 'MR'
+					when lv3.ValueName = 'Mrs' then 'MRS'
+					when lv3.ValueName = 'Ms' then 'MISS'
+					when lv3.ValueName = 'Sir' then 'MR'
+				end as Title
+                , p.Salutation
+				, p.NationalityId
+				, case when n.Nationality = 'Dutch' then 'NL'
+					when n.Nationality = 'German' then 'DE'
+					when n.Nationality = 'French' then 'FR'
+					when n.Nationality = 'Jamaican' then 'JM'
+					when n.Nationality = 'N Zealander' then 'NZ'
+					when n.Nationality = 'Lithuanian' then 'LT'
+					when n.Nationality = 'Maltese' then 'MT'
+					when n.Nationality = 'Chilean' then 'CL'
+					when n.Nationality = 'Venezuelan' then 'VE'
+					when n.Nationality = 'USA' then 'US'
+					when n.Nationality = 'Lebanese' then 'LB'
+					when n.Nationality = 'Moroccan' then 'MA'
+					when n.Nationality = 'Estonian' then 'EE'
+					when n.Nationality = 'Egyptian' then 'EG'
+					when n.Nationality = 'Pakistani' then 'PK'
+					when n.Nationality = 'Swiss' then 'CH'
+					when n.Nationality = 'Cuban' then 'CU'
+					when n.Nationality = 'Ukranian' then 'UA'
+					when n.Nationality = 'Hong Kong (Chinese)' then 'HK'
+					when n.Nationality = 'Swedish' then 'SE'
+					when n.Nationality = 'Japanese' then 'JP'
+					when n.Nationality = 'Taiwanese' then 'TW'
+					when n.Nationality = 'Peruvian' then 'PE'
+					when n.Nationality = 'Czech' then 'CZ'
+					when n.Nationality = 'Jordanian' then 'JO'
+					when n.Nationality = 'Portugese' then 'PT'
+					when n.Nationality = 'Vincentian' then 'VC'
+					when n.Nationality = 'Philipino' then 'PH'
+					when n.Nationality = 'Norwegian' then 'NO'
+					when n.Nationality = 'Danish' then 'DK'
+					when n.Nationality = 'Romanian' then 'RO'
+					when n.Nationality = 'Kenyan' then 'KE'
+					when n.Nationality = 'Thai' then 'TH'
+					when n.Nationality = 'Hungarian' then 'HU'
+					when n.Nationality = 'Latvian' then 'LV'
+					when n.Nationality = 'Chinese' then 'CN'
+					when n.Nationality = 'Colombian' then 'CO'
+					when n.Nationality = 'Myanmar' then 'MM'
+					when n.Nationality = 'Netherland' then 'NL'
+					when n.Nationality = 'Turkish' then 'TR'
+					when n.Nationality = 'Malawian' then 'MW'
+					when n.Nationality = 'Fijian' then 'FJ'
+					when n.Nationality = 'Nepalese' then 'NP'
+					when n.Nationality = 'Slovakian' then 'SK'
+					when n.Nationality = 'Iranian' then 'IR'
+					when n.Nationality = 'Russian' then 'RU'
+					when n.Nationality = 'Montenegri' then 'ME'
+					when n.Nationality = 'Sri Lankan' then 'LK'
+					when n.Nationality = 'Bulgarian' then 'BG'
+					when n.Nationality = 'CROATIAN' then 'HR'
+					when n.Nationality = 'Eritrean' then 'ER'
+					when n.Nationality = 'Canadian' then 'CA'
+					when n.Nationality = 'Namibian' then 'NA'
+					when n.Nationality = 'Panamanian' then 'PA'
+					when n.Nationality = 'Serbian' then 'RS'
+					when n.Nationality = 'Sudanese' then 'SD'
+					when n.Nationality = 'Israeli' then 'IL'
+					when n.Nationality = 'Mexican' then 'MX'
+					when n.Nationality = 'SYRIAN' then 'SY'
+					when n.Nationality = 'Congolese' then 'CG'
+					when n.Nationality = 'Irish' then 'IE'
+					when n.Nationality = 'Yemen' then 'YE'
+					when n.Nationality = 'Macedonian' then 'MK'
+					when n.Nationality = 'Spanish' then 'ES'
+					when n.Nationality = 'Filipino' then 'PH'
+					when n.Nationality = 'Finnish' then 'FI'
+					when n.Nationality = 'Malaysian' then 'MY'
+					when n.Nationality = 'Vietnamese' then 'VN'
+					when n.Nationality = 'Polish' then 'PL'
+					when n.Nationality = 'Liberian' then 'LR'
+					when n.Nationality = 'Icelandic' then 'IS'
+					when n.Nationality = 'Guyanese' then 'GY'
+					when n.Nationality = 'Indian' then 'IN'
+					when n.Nationality = 'Cypriot' then 'CY'
+					when n.Nationality = 'Nigerian' then 'NG'
+					when n.Nationality = 'Italian' then 'IT'
+					when n.Nationality = 'Greek' then 'GR'
+					when n.Nationality = 'Korean' then 'KR'
+					when n.Nationality = 'British' then 'GB'
+					when n.Nationality = 'Australian' then 'AU'
+					when n.Nationality = 'South African' then 'ZA'
+					when n.Nationality = 'Iraqi' then 'IQ'
+					when n.Nationality = 'Ugandan' then 'UG'
+					when n.Nationality = 'Argentinean' then 'AR'
+					when n.Nationality = 'American' then 'US'
+					when n.Nationality = 'Zimbabwean' then 'ZW'
+					when n.Nationality = 'Belgian' then 'BE'
+					when n.Nationality = 'Austrian' then 'AT'
+					when n.Nationality = 'Brazilian' then 'BR'
+					else NULL end as Nationality
+        from Person p
+        left join ListValues lv1 on p.GenderValueId=lv1.ListValueId
+        left join ListValues lv2 on p.MaritalStatusValueId=lv2.ListValueId
+        left join ListValues lv3 on p.TitleValueId=lv3.ListValueId
+        left join Nationality n on n.NationalityId=p.NationalityId
+		)
+, candidate_source as (--CANDIDATE SOURCE #Inject
+		select a.ApplicantId, s.SourceId, s.SystemCode, s.Description
+        from Applicants a
+		left join dbo.Sources s on s.SourceId=a.SourceId
+		)
+, location as (--LOCATION
+		select l.LocationId,l.Code,l.Description
+        from dbo.Locations l
+)
+, candidateprofile as (--PROFILE DOCUMENT
+        select ap.ApplicantId,dbo.RTF2TXT(ap.ProfileDocument) as candidateprofile
+        from dbo.ApplicantProfile ap
+		)
+, sector_all as (select so.SectorObjectId
+		, so.SectorId
+		, s.SectorName
+		, so.ObjectId
+		, so.Notes
+		from SectorObjects so
+		left join Sectors s on so.SectorId = s.SectorId
+		--where so.SectorId = 50 --Old jobs
+		)
+, sector_share as (
+		select ObjectId
+		, string_agg(SectorName, ', ') as sector_share
+		from sector_all
+		group by ObjectId
+		)
+
+, work_history as (select wh.ApplicantID,
+			STRING_AGG(
+                concat('&lt;p>'
+					, concat_ws('&lt;br/>'
+						, coalesce('Client name: ' + wh.Company,NULL)
+						, coalesce('From Date: ' + convert(nvarchar(max),wh.FromDate,120),NULL)
+						, coalesce('To Date: ' + convert(nvarchar(max),wh.ToDate,120),NULL)
+						, coalesce('Chronology: ' + case when wh.ToDate is null then 'Current' else 'Past' end, NULL)
+						, coalesce('Position: ' + coalesce(nullif(att.Description,''), att.Notes),NULL)
+						, coalesce('Description: ' + nullif(wh.Description,''),NULL)
+						, coalesce('Department: ' + nullif(wh.Department,''),NULL)
+						, coalesce('Salary: ' + convert(nvarchar(max), wh.Rate),NULL)
+						, coalesce('Length: ' + nullif(l.ValueName, ''),NULL)
+						, coalesce('Work History Type: ' + wht.Description,NULL)
+						--, coalesce('Created On: ' + convert(nvarchar(max),wh.CreatedOn,120),NULL)
+						, coalesce('Report To: ' + nullif(concat_ws(' ',pi.PersonName,pi.Surname),''),NULL)
+						, coalesce('Feedback Score: ' + convert(nvarchar(max),pl.FeedbackScore),NULL)
+						, coalesce('Employment Type: ' + et.Description + ' - ' + et.SystemCode,NULL)
+						, coalesce('Notes: ' + wh.Description,NULL)
+					),'&lt;/p>'),'&lt;br/>') within group (order by wh.ToDate desc, wh.FromDate desc, WorkHistoryId desc) as WorkHistory
+		from WorkHistory wh
+        left join WorkHistoryTypes wht on wht.WorkHistoryTypeId=wh.WorkHistoryTypeId
+        left join EmploymentTypes et on et.EmploymentTypeId=wh.EmploymentTypeId
+        left join Placements pl on pl.PlacementID=wh.PlacementID
+        left join Attributes att on att.AttributeId=wh.PositionAttributeId
+        left join person_info pi on pi.PersonID=wh.ReportsToPersonId
+        left join ListValues l on l.ListValueId=wh.RateUnitId
+        left join dbo.Applicants a on a.ApplicantID=wh.ApplicantID
+		where wh.ApplicantID is not NULL
+        group by wh.ApplicantID)
+
+, candidate_cv as (select cv.ApplicantId
+		, STRING_AGG(concat_ws('_','NP_CV',cv.CVId,concat(cv.ApplicantId,cvc.FileExtension)),',') 
+			within group (order by cv.CVId desc) as candidate_cv
+        from CV
+        left join CVContents cvc on cvc.CVId = cv.CVId
+        where cvc.FileExtension in ('.pdf','.doc','.rtf','.xls','.xlsx','.docx','.png','.jpg','.jpeg','.gif','.bmp','.msg','.txt','.htm','.html')
+        GROUP BY cv.ApplicantId
+		)
+, candidate_cvsend as (select aa.ApplicantId
+		, string_agg(concat_ws('_','NP_CVS', d.DocumentID, concat(aa.ApplicantId, dc.FileExtension)),',') 
+			within group (order by d.DocumentID desc) as candidate_cvsend
+		from CVSendDocuments cvs
+		left join ApplicantActions aa on aa.ApplicantActionId = cvs.ApplicantActionId
+		left join Documents d on d.DocumentID = cvs.DocumentId
+		left join DocumentContent dc on d.DocumentId = dc.DocumentId
+		where cvs.CVId is NULL --10321 --CV already parsed
+		and dc.FileExtension in ('.pdf','.doc','.rtf','.xls','.xlsx','.docx','.png','.jpg','.jpeg','.gif','.bmp','.msg','.txt','.htm','.html')
+		group by aa.ApplicantId
+		)
+, custom_columns as (--CUSTOM DEFINED COLUMNS
+		select adc.ApplicantId
+		, concat_ws('&lt;br/>'
+				, coalesce('Driving Licence: ' + nullif(adc.DrivingLicence,''),NULL)
+				, coalesce('Transport: ' + nullif(lv.ValueName,''),NULL) --CustomDefinedColumns: LookupListId
+				, coalesce('Type of Drivin: ' + nullif(adc.Alpha2,''),NULL)
+				, coalesce('Relocate?: ' + nullif(adc.Flag1,''),NULL)
+				--, coalesce('National Insurance No.: ' + nullif(adc.NationalInsurance,''),NULL)
+				--, coalesce('Contractor Company Name: ' + nullif(adc.ContractorCompanyName,''),NULL)
+				--, coalesce('Umbrella Company?: ' + nullif(adc.Umbrella,''),NULL)
+				--, coalesce('VAT no. (for limited company Contractors only): ' + nullif(adc.VATno,''),NULL)
+				--, coalesce('Company Number: ' + nullif(adc.Companynumber,''),NULL)
+				--, coalesce('Middle Name: ' + nullif(adc.MiddleName,''),NULL)
+				--, coalesce('Unique Taxpayer Ref: ' + nullif(adc.WorkerUTR,''),NULL)
+			) as custom_columns
+		from ApplicantSectorDefinedColumns adc
+		left join ListValues lv on lv.ListValueId = adc.Alpha1
+		)
+, cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+--MAIN SCRIPT
+select  
+        concat('NP',a.ApplicantId) as cand_ext_id
+		, 'RDB Notes' as title
+-----NOTE----
+        , concat('&lt;p>',
+			concat_ws('&lt;br/>'
+                , coalesce('External ID: ' + convert(varchar(max),a.ApplicantId),NULL)
+                , coalesce('Created By: ' + u.UserFullName,NULL)
+                , coalesce('Created On: ' + convert(varchar(max),a.CreatedOn,120),NULL)
+				, coalesce('Assessed By: ' + u3.UserFullName,NULL)
+                , coalesce('Assessment Date: ' + convert(varchar(max),a.AssessmentDate,120),NULL)
+                --, coalesce('File As: ' + nullif(ci.FileAs,''),NULL)
+                --, coalesce('Flag Text: ' + nullif(ci.FlagText,''),NULL)
+                , coalesce('Candidate Status: ' + case when ast.Description = 'DNU' then 'DNU' else NULL end,NULL)
+				, coalesce('Employment Type: ' + nullif(et.Description,''),NULL)
+				--, coalesce('Status Date: ' + convert(varchar(max),a.StatusDate,120),NULL)
+                , coalesce('Noticed Period: ' + lv.ValueName,NULL)
+                , coalesce('Available Date: ' + convert(varchar(max),a.AvailableDate,120),NULL)
+                --, coalesce('Call At Work: ' + a.WorkCall,NULL)
+				, coalesce('Candidate Location: ' + nullif(l.Description,''),NULL)
+                , coalesce('Min Basic: ' + convert(varchar(max),a.MinBasic),NULL)
+                , coalesce('Min Package: ' + convert(varchar(max),a.MinPackage),NULL)
+                , coalesce('Current Package: ' + convert(varchar(max),a.CurrentPackage),NULL)
+				, coalesce('Rate: ' + convert(varchar(max),a.rate),NULL)
+				--, coalesce('Share this person: ' + nullif(ss.sector_share,''),NULL)
+				, coalesce('Personal Email: ' + nullif(pse.personemail,''),NULL)
+                , coalesce('&lt;br/>' + '--Communication Type--' + '&lt;br/>' + nullif(ap.allphone,''),NULL)
+				, coalesce('&lt;br/>' + '--Social networking--' + '&lt;br/>' + nullif(aw.allnetwork,''),NULL)
+				, coalesce('&lt;br/>' + '--Consultant Info--' + '&lt;br/>' + nullif(ci.consultant_info,''), NULL)
+				, coalesce('&lt;br/>' + '--Contractor Details--' + '&lt;br/>' + nullif(cc.custom_columns,''), NULL)
+                , coalesce('&lt;br/>' + '--Profile--' + '&lt;br/>' + coalesce(nullif(cf.candidateprofile,''),'NONE'),NULL)
+                , coalesce('&lt;br/>' + '--Notes--' + '&lt;br/>' + coalesce(nullif(pi.Notes,''),'NONE'),NULL)
+			), '&lt;/p>'
+        ) as cand_rdb_notes
+		, getdate() as insert_timestamp
+from dbo.Applicants a
+left join person_info pi on pi.PersonID = a.ApplicantId
+left join owners o on o.ApplicantId = a.ApplicantId
+left join userinfo u on u.UserId = a.CreatedUserId
+left join userinfo u2 on u2.UserId = a.UpdatedUserId
+left join userinfo u3 on u3.UserId = a.AssessedBy --Assess by | AssessmentDate
+--left join candidateinIDobject cid on cid.ObjectID = a.ApplicantId
+left join ApplicantStatus ast on ast.ApplicantStatusId = a.StatusId
+left join ListValues lv on lv.ListValueId = a.AvailabilityId
+left join ListValues lv2 on lv2.ListValueId = a.PriorityValueId
+left join Locations l on l.LocationId = a.LocationId --locations
+left join address_1 ad on ad.ObjectId = a.ApplicantId --current address
+left join sector_share ss on ss.ObjectID = a.ApplicantId --share this person
+left join officeemail oe on oe.ObjectId = a.ApplicantId --Work Email
+left join primaryEmail pe on pe.ObjectID = a.ApplicantId --Primary Email from CommunicationTypes: Email
+left join personemail pse on pse.ObjectID = a.ApplicantId --Personal Email
+left join mobile m on m.ObjectID = a.ApplicantId --Mobile
+left join candidate_cv ccv on ccv.ApplicantId = a.ApplicantId --Candidate cv
+left join candidate_cvsend cd on cd.ApplicantId = a.ApplicantId --Candidate documents
+left join candidateprofile cf on cf.ApplicantId = a.ApplicantId
+left join work_history wh on wh.ApplicantId = a.ApplicantId
+left join allphone ap on ap.ObjectId = a.ApplicantId --all other phones
+left join allnetwork aw on aw.ObjectId = a.ApplicantId --all other networking
+left join consultant_info ci on ci.ApplicantId = a.ApplicantId --all consultant group info
+left join custom_columns cc on cc.ApplicantId = a.ApplicantId --all custom columns
+left join EmploymentTypes et on et.EmploymentTypeId = a.EmploymentTypeId --Employment types
+where 1=1
+and a.ApplicantId in (select ObjectId from cand_2sector)</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate Source</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+
+select concat('NP',a.ApplicantId) as cand_ext_id
+, s.SourceId, s.SystemCode
+, s.Description
+, case s.Description
+	when 'CV - Library' then 'CV Library'
+	when 'CV-Library CV' then 'CV Library CV search'
+	when 'Emed' then 'Emed'
+	when 'Emed CV' then 'Emed CV search'
+	when 'Facebook' then 'Facebook'
+	when 'Glassdoor' then 'Glassdoor'
+	when 'Indeed' then 'Indeed' --existing
+	when 'Indeed CV' then 'Indeed CV search'
+	when 'Jobsite' then 'Jobsite'
+	when 'Jobsite CV' then 'Jobsite CV search'
+	when 'LinkedIn Advert' then 'LinkedIn' --existing
+	when 'LinkedIn Profile' then 'LinkedIn' --existing
+	when 'LinkedIn Recruiter' then 'LinkedIn' --existing
+	when 'Next Phase Website' then 'Next Phase Website'
+	when 'Prof Passport' then 'Prof Passport'
+	when 'Reed' then 'Reed'
+	when 'Reed CV' then 'Reed CV search'
+	when 'Referral' then 'Referral' --existing
+	when 'Shane' then 'Shane'
+	when 'Total Jobs' then 'Totaljobs'
+	when 'Totaljobs CV' then 'Totaljobs CV search'
+	else 'Legacy' end as candidate_source
+from Applicants a
+left join dbo.Sources s on s.SourceId=a.SourceId
+where a.ApplicantId in (select ObjectId from cand_2sector) --49 candidates</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate edu summary</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with candidateinIDobject as (
+        select o.ObjectID,o.LocationId,o.FileAs,o.FlagText,o.SourceId,o.CreatedOn
+        from dbo.Objects o
+        where o.ObjectTypeId=1 --candidate
+)
+
+, cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+
+, fesfe as (select --distinct am.Description as FEUnique --23 rows
+	a.AttributeMasterId as FEID
+	, am.Description as FE
+	, am.ParentAttributeMasterId
+	, am.AllowClient
+	, am.AllowContact
+	, am.AllowApplicant
+	, a.AttributeId as SFEID
+	, case when a.Notes is NULL or a.Notes = '' then a.Description
+		else a.Notes end as SFE
+	, a.Description --reference
+	from Attributes a
+	left join AttributeMaster am on am.AttributeMasterId = a.AttributeMasterId
+	where am.Description not like '%DO NOT USE%'
+	--and am.AllowApplicant = 'Y'
+)
+, mappedskills as (select o.ObjectID
+	, fesfe.FE
+	, fesfe.SFE
+	, fe.education
+	from ObjectAttributes o
+	left join fesfe on fesfe.SFEID = o.AttributeId
+	inner join fe_sfe_skills fe on fe.attributes = fesfe.SFE and fe.attribute_master = fesfe.FE
+	where 1=1
+	and o.ObjectID in (select ObjectId from cand_2sector)
+	and fe.education is not NULL
+	)
+
+select concat('NP', ObjectID) as cand_ext_id
+, concat('Languages: ', nullif(string_agg(education, ', '),'')) as cand_edu
+from (select distinct objectID, education from mappedskills) a --2512 rows
+--where ObjectID = 103456
+group by ObjectID --0 rows
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>768</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate gdpr</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+
+, gdpr as (select gc.PersonId
+		, gct.Description as consent_type
+		, gc.ConsentDateUtc
+		, gc.ConsentExpiryDateUtc
+		, gcs.Description as via_method
+		, concat_ws(char(10)
+			, coalesce('Consent Type: ' + nullif(gct.Description,''), NULL)
+			, coalesce('Date Received: ' + nullif(convert(varchar(10), gc.ConsentDateUtc, 120),''), NULL)
+			, coalesce('Expiry Date: ' + nullif(convert(varchar(10), gc.ConsentExpiryDateUtc, 120),''), NULL)
+			, coalesce('Via method: ' + nullif(gcs.Description,''), NULL)
+			) as gdpr_notes
+		from GDPRConsents gc
+		left join GDPRConsentTypes gct on gct.GDPRConsentTypeId = gc.GDPRConsentTypeId
+		left join GDPRConsentSources gcs on gcs.GDPRConsentSourceId = gc.GDPRConsentSourceId
+		)
+
+select concat('NP', PersonId) as cand_ext_id
+, string_agg(gdpr_notes, char(10)) as gdpr_notes
+, current_timestamp as insert_timestamp
+from gdpr
+where PersonId in (select ObjectId from cand_2sector)
+group by PersonId --4 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate info</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+
+, person_info as (--CANDIDATE INFO
+		select p.PersonID, p.PersonName, p.Surname, p.Dob, p.Notes
+                , p.GenderValueId
+                , case when lv1.ValueName='Female' then 'FEMALE'
+					when lv1.ValueName='Male' then 'MALE'  
+					else null end as Gender
+                , p.MaritalStatusValueId
+				, lv2.ValueName as Marital
+                , p.TitleValueId
+				--, lv3.ValueName as Title
+				, case 
+					when lv3.ValueName = 'Dame' then 'MISS'
+					when lv3.ValueName = 'Dr' then 'DR'
+					when lv3.ValueName = 'Miss' then 'MISS'
+					when lv3.ValueName = 'Mr' then 'MR'
+					when lv3.ValueName = 'Mrs' then 'MRS'
+					when lv3.ValueName = 'Ms' then 'MISS'
+					when lv3.ValueName = 'Sir' then 'MR'
+				end as Title
+                , p.Salutation
+				, p.NationalityId
+				, case when n.Nationality = 'Dutch' then 'NL'
+					when n.Nationality = 'German' then 'DE'
+					when n.Nationality = 'French' then 'FR'
+					when n.Nationality = 'Jamaican' then 'JM'
+					when n.Nationality = 'N Zealander' then 'NZ'
+					when n.Nationality = 'Lithuanian' then 'LT'
+					when n.Nationality = 'Maltese' then 'MT'
+					when n.Nationality = 'Chilean' then 'CL'
+					when n.Nationality = 'Venezuelan' then 'VE'
+					when n.Nationality = 'USA' then 'US'
+					when n.Nationality = 'Lebanese' then 'LB'
+					when n.Nationality = 'Moroccan' then 'MA'
+					when n.Nationality = 'Estonian' then 'EE'
+					when n.Nationality = 'Egyptian' then 'EG'
+					when n.Nationality = 'Pakistani' then 'PK'
+					when n.Nationality = 'Swiss' then 'CH'
+					when n.Nationality = 'Cuban' then 'CU'
+					when n.Nationality = 'Ukranian' then 'UA'
+					when n.Nationality = 'Hong Kong (Chinese)' then 'HK'
+					when n.Nationality = 'Swedish' then 'SE'
+					when n.Nationality = 'Japanese' then 'JP'
+					when n.Nationality = 'Taiwanese' then 'TW'
+					when n.Nationality = 'Peruvian' then 'PE'
+					when n.Nationality = 'Czech' then 'CZ'
+					when n.Nationality = 'Jordanian' then 'JO'
+					when n.Nationality = 'Portugese' then 'PT'
+					when n.Nationality = 'Vincentian' then 'VC'
+					when n.Nationality = 'Philipino' then 'PH'
+					when n.Nationality = 'Norwegian' then 'NO'
+					when n.Nationality = 'Danish' then 'DK'
+					when n.Nationality = 'Romanian' then 'RO'
+					when n.Nationality = 'Kenyan' then 'KE'
+					when n.Nationality = 'Thai' then 'TH'
+					when n.Nationality = 'Hungarian' then 'HU'
+					when n.Nationality = 'Latvian' then 'LV'
+					when n.Nationality = 'Chinese' then 'CN'
+					when n.Nationality = 'Colombian' then 'CO'
+					when n.Nationality = 'Myanmar' then 'MM'
+					when n.Nationality = 'Netherland' then 'NL'
+					when n.Nationality = 'Turkish' then 'TR'
+					when n.Nationality = 'Malawian' then 'MW'
+					when n.Nationality = 'Fijian' then 'FJ'
+					when n.Nationality = 'Nepalese' then 'NP'
+					when n.Nationality = 'Slovakian' then 'SK'
+					when n.Nationality = 'Iranian' then 'IR'
+					when n.Nationality = 'Russian' then 'RU'
+					when n.Nationality = 'Montenegri' then 'ME'
+					when n.Nationality = 'Sri Lankan' then 'LK'
+					when n.Nationality = 'Bulgarian' then 'BG'
+					when n.Nationality = 'CROATIAN' then 'HR'
+					when n.Nationality = 'Eritrean' then 'ER'
+					when n.Nationality = 'Canadian' then 'CA'
+					when n.Nationality = 'Namibian' then 'NA'
+					when n.Nationality = 'Panamanian' then 'PA'
+					when n.Nationality = 'Serbian' then 'RS'
+					when n.Nationality = 'Sudanese' then 'SD'
+					when n.Nationality = 'Israeli' then 'IL'
+					when n.Nationality = 'Mexican' then 'MX'
+					when n.Nationality = 'SYRIAN' then 'SY'
+					when n.Nationality = 'Congolese' then 'CG'
+					when n.Nationality = 'Irish' then 'IE'
+					when n.Nationality = 'Yemen' then 'YE'
+					when n.Nationality = 'Macedonian' then 'MK'
+					when n.Nationality = 'Spanish' then 'ES'
+					when n.Nationality = 'Filipino' then 'PH'
+					when n.Nationality = 'Finnish' then 'FI'
+					when n.Nationality = 'Malaysian' then 'MY'
+					when n.Nationality = 'Vietnamese' then 'VN'
+					when n.Nationality = 'Polish' then 'PL'
+					when n.Nationality = 'Liberian' then 'LR'
+					when n.Nationality = 'Icelandic' then 'IS'
+					when n.Nationality = 'Guyanese' then 'GY'
+					when n.Nationality = 'Indian' then 'IN'
+					when n.Nationality = 'Cypriot' then 'CY'
+					when n.Nationality = 'Nigerian' then 'NG'
+					when n.Nationality = 'Italian' then 'IT'
+					when n.Nationality = 'Greek' then 'GR'
+					when n.Nationality = 'Korean' then 'KR'
+					when n.Nationality = 'British' then 'GB'
+					when n.Nationality = 'Australian' then 'AU'
+					when n.Nationality = 'South African' then 'ZA'
+					when n.Nationality = 'Iraqi' then 'IQ'
+					when n.Nationality = 'Ugandan' then 'UG'
+					when n.Nationality = 'Argentinean' then 'AR'
+					when n.Nationality = 'American' then 'US'
+					when n.Nationality = 'Zimbabwean' then 'ZW'
+					when n.Nationality = 'Belgian' then 'BE'
+					when n.Nationality = 'Austrian' then 'AT'
+					when n.Nationality = 'Brazilian' then 'BR'
+					else NULL end as Nationality
+        from Person p
+        left join ListValues lv1 on p.GenderValueId=lv1.ListValueId
+        left join ListValues lv2 on p.MaritalStatusValueId=lv2.ListValueId
+        left join ListValues lv3 on p.TitleValueId=lv3.ListValueId
+        left join Nationality n on n.NationalityId=p.NationalityId)
+
+select concat('NP', ApplicantId) as cand_ext_id
+, pi.Marital as [candidate-marital]
+, case pi.Marital
+	when 'Widower' then 4 --Widowed
+	when 'Single' then 1
+	when 'Divorced' then 3
+	when 'Married' then 2
+	when 'Widow' then 4
+	else NULL end as maritalstatus --Cohab status
+, pi.Salutation as PreferredName
+, convert(varchar(max),a.RateUnit) as RateUnit
+, lv.ValueName
+, case 
+	when lv.ValueName = 'Day' then 'day'
+	when lv.ValueName = 'Hour' then 'hour'
+	when lv.ValueName = 'Week' then 'week'
+	when lv.ValueName = 'Year' then 'year'
+	else NULL end as contract_interval
+from Applicants a
+left join person_info pi on pi.PersonID = a.ApplicantId
+left join ListValues lv on lv.ListValueId = a.RateUnit
+where a.ApplicantId in (select ObjectId from cand_2sector)
+--and a.RateUnit is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 4</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 5</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>848</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate new tab</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <schema/>
+    <table>candidate_note</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>title</column_name>
+        <stream_name>title</stream_name>
+      </field>
+      <field>
+        <column_name>note</column_name>
+        <stream_name>cand_rdb_notes</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate reg</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+
+select concat('NP', ApplicantId) as cand_ext_id
+, CreatedOn
+from Applicants
+where ApplicantId in (select ObjectId from cand_2sector)</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate skills</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with candidateinIDobject as (
+        select o.ObjectID,o.LocationId,o.FileAs,o.FlagText,o.SourceId,o.CreatedOn
+        from dbo.Objects o
+        where o.ObjectTypeId=1 --candidate
+)
+
+, cand_2sector as (select ObjectId, count(sectorId) as counts
+		from SectorObjects
+		where SectorId in (47, 48)
+		and objectid in (select ObjectID from Objects where ObjectTypeId = 1)
+		group by ObjectId
+		having count(sectorId) > 1) --49 rows
+
+, fesfe as (select --distinct am.Description as FEUnique --23 rows
+	a.AttributeMasterId as FEID
+	, am.Description as FE
+	, am.ParentAttributeMasterId
+	, am.AllowClient
+	, am.AllowContact
+	, am.AllowApplicant
+	, a.AttributeId as SFEID
+	, case when a.Notes is NULL or a.Notes = '' then a.Description
+		else a.Notes end as SFE
+	, a.Description --reference
+	from Attributes a
+	left join AttributeMaster am on am.AttributeMasterId = a.AttributeMasterId
+	where am.Description not like '%DO NOT USE%'
+	--and am.AllowApplicant = 'Y'
+)
+, mappedskills as (select o.*
+	, fesfe.FE
+	, fesfe.sfe
+	, fe.attribute_master
+	, fe.attributes
+	, fe.skills
+	from ObjectAttributes o
+	left join fesfe on fesfe.SFEID = o.AttributeId
+	inner join fe_sfe_skills fe on fe.attributes = fesfe.SFE
+	where 1=1
+	and o.ObjectID in (select ObjectId from cand_2sector)
+	and fe.skills is not NULL --2332 not distinct
+	)
+/* REFERENCE CHECK
+select * from mappedskills 
+where 1=1
+and ObjectID = 105687
+and fe like '%.Pharma LIMS%'
+*/
+
+--MAIN SCRIPT
+select concat('NP', ObjectID) as cand_ext_id
+, string_agg(skills, ', ') as cand_skills
+from (select distinct ObjectID, skills from mappedskills where skills is not NULL) a
+group by ObjectID --2</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>848</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate source lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate_source</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>candidate_source</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandSourceID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Company lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>com_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCompanyID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Concat Fields</name>
+    <type>ConcatFields</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>char(10)</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>N</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>file</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>txt</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>VC_edu</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>cand_edu</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <ConcatFields>
+      <targetFieldName>edu_merged</targetFieldName>
+      <targetFieldLength>0</targetFieldLength>
+      <removeSelectedFields>N</removeSelectedFields>
+    </ConcatFields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>768</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Contact lookup 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>con_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCContactID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Extract Candidate Documents</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>select ParentId as CandidateExtID
+	, Name as RealName
+	, concat(Id, right(NAME,CHARINDEX('.',reverse(NAME)))) as UploadedName
+	from Attachment
+	where ParentId in (select Id from Contact)
+	and (NAME like '%.doc%' or NAME like '%.pdf' or NAME like '%.rtf' or NAME like '%.xls%' or NAME like '%.html' or NAME like '%.msg')
+order by ParentId</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>656</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>FE lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCFE</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCFE_ID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>FE lookup 3</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCFE</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCFEID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Functional Exp</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>/* Create FE sequence before running */
+
+select distinct trim(VCFE) as VCFE
+, trim(VCSFE) as VCSFE
+, current_timestamp as insert_timestamp
+from fe_sfe_skills
+where VCFE is not NULL
+order by VCFE, VCSFE</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Candidate New Note</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>candidate_note</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>VCCandidateID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>title</name>
+        <rename>title</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>note</name>
+        <rename>note</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert applicant actions</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>createdOn</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>comment_activities</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert candidate FESFE</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>candidate_functional_expertise</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCFEID</name>
+        <field>functional_expertise_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCSFEID</name>
+        <field>sub_functional_expertise_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_id</name>
+        <rename>VCCandidateID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>functional_expertise_id</name>
+        <rename>VCFEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>sub_functional_expertise_id</name>
+        <rename>VCSFEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert gdpr notes</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <schema/>
+    <table>candidate_gdpr_compliance</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>notes</column_name>
+        <stream_name>gdpr_notes</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert interviews</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>interview_datetime</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>comment_activities</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>type</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert notebook</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <schema>public</schema>
+    <table>activity</table>
+    <commit>200</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>user_account_id</column_name>
+        <stream_name>user_account_id</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>content</column_name>
+        <stream_name>comment_activities</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Interviews</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>--INTERVIEW ACTIVITIES
+with userinfo as (
+        select u.UserId,u.LoginName,u.UserName,u.UserFullName,u.JobTitle,u.Inactive
+        from Users u)
+
+select coalesce('NP'+ convert(varchar(max), nullif(a.ApplicantId,'')),NULL) as cand_ext_id
+, coalesce('NP'+ convert(varchar(max), nullif(a.JobId,'')),NULL) as job_ext_id
+, coalesce('NP'+ convert(varchar(max), nullif(a.ClientContactId,'')),NULL) as con_ext_id
+, coalesce('NP'+ convert(varchar(max), nullif(a.ClientId,'')),NULL) as com_ext_id
+, -10 as user_account_id
+, convert(datetime,i.InterviewDate,120) + convert(datetime, i.InterviewTime,120) as interview_datetime
+, 'comment' as category
+, 'candidate' as type
+, it.Description
+, iot.Description
+, concat_ws(char(10), '[Interviews]'
+	, coalesce('Created by: '+ u.UserFullName,NULL)
+	, coalesce('Updated by: '+ u2.UserFullName,NULL)
+	, coalesce('Interview Type: '+ it.Description,NULL)
+	, coalesce('Applicant Confirmed: '+ i.ApplicantConfirmed,NULL)
+	, coalesce('Client Contact Confirmed: '+ i.ClientContactConfirmed,NULL)
+	, coalesce('Interview Date/Time: '+ convert(varchar(max), (convert(datetime,i.InterviewDate,120) + convert(datetime, i.InterviewTime,120)), 120),NULL)
+	, coalesce('Notes: '+ i.Notes,NULL)
+	, coalesce('Interview Outcome: '+ iot.Description,NULL)
+	) as comment_activities
+from Interviews i
+left join InterviewOutcomes iot on iot.InterviewOutcomeId = i.InterviewOutcomeId
+left join InterviewTypes it on it.InterviewTypeId = i.InterviewTypeId
+left join ApplicantActions a on a.ApplicantActionId = i.ApplicantActionId
+left join userinfo u on u.UserId = i.CreatedUserId
+left join userinfo u2 on u2.UserId = i.UpdatedUserId
+where i.ApplicantActionId is not NULL
+and a.ApplicantId in (select objectId from cand_2sector) --13 rows
+--and i.InterviewId = 13165</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Notebook</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>with phone as (
+        select p.ObjectID,p.Num,p.CommunicationTypeId
+        from dbo.Phones p
+        where p.CommunicationTypeId in (78,85,86) --Email, Email (Office), Email (Personal)
+		and p.Num like '%_@_%.__%'
+)
+, companyID as (
+        select DISTINCT o.ObjectID
+        from dbo.Objects o
+        where ObjectTypeId=2
+)
+, contactIDlist as (
+        select cc.ClientContactId,o.ObjectID,row_number() over (partition by o.ObjectID order by cc.ClientContactId desc) as rn
+        from dbo.ClientContacts cc
+        left join dbo.Objects o on cc.ContactPersonId=o.ObjectID
+        where o.ObjectTypeId=3
+)
+, contactID as (
+        select ClientContactId,ObjectID
+        from contactIDlist
+        where rn=1
+)
+, candidateID as (
+        select DISTINCT o.ObjectID
+        from dbo.Objects o
+        where ObjectTypeId=1
+)
+, contact as (      
+        select cc.ClientContactId,o.ObjectID,COALESCE(p1.Num,p3.Num,p2.Num) as Email
+        from dbo.ClientContacts cc 
+        inner join dbo.Objects o on cc.ContactPersonId=o.ObjectID
+        left join (select ObjectID, STRING_AGG(Num,',') as Num from Phone where CommunicationTypeId=78 group by ObjectID) p1 on p1.ObjectID=o.ObjectID
+        left join (select ObjectID, STRING_AGG(Num,',') as Num from Phone where CommunicationTypeId=85 group by ObjectID) p3 on p3.ObjectID=o.ObjectID
+        left join (select ObjectID, STRING_AGG(Num,',') as Num from Phone where CommunicationTypeId=86 group by ObjectID) p2 on p2.ObjectID=o.ObjectID
+		where o.ObjectTypeId=3
+)
+, candidate as (
+        select a.ApplicantId,o.ObjectID,COALESCE(p1.Num,p2.Num,p3.Num) as Email
+        from dbo.Applicants a
+        inner join dbo.Objects o on a.ApplicantId=o.ObjectID
+        left join (select ObjectID, STRING_AGG(Num,',') as Num from Phone where CommunicationTypeId=78 group by ObjectID) p1 on p1.ObjectID=o.ObjectID
+        left join (select ObjectID, STRING_AGG(Num,',') as Num from Phone where CommunicationTypeId=85 group by ObjectID) p3 on p3.ObjectID=o.ObjectID
+        left join (select ObjectID, STRING_AGG(Num,',') as Num from Phone where CommunicationTypeId=86 group by ObjectID) p2 on p2.ObjectID=o.ObjectID
+		where o.ObjectTypeId=1​
+)
+, emailtolist as (
+        select distinct nl.NotebookItemId
+		, coalesce(nullif(co.Email,''), nullif(ca.Email,',')) as AddressMail
+        from NotebookLinks nl
+        left join contact co on nl.ObjectId = co.ObjectId
+        left join candidate ca on nl.ObjectId = ca.ObjectId
+        where nl.NotebookLinkTypeId=18 --Email TO
+UNION
+        select distinct nl.NotebookItemId
+		, coalesce(nullif(co.Email,''),nullif(ca.Email,',')) as AddressMail
+        from NotebookLinks nl
+        left join contact co on nl.ObjectId=co.ObjectId
+        left join candidate ca on nl.ObjectId=ca.ObjectId
+        where nl.NotebookLinkTypeId=19 --Email CC
+UNION
+        select distinct nl.NotebookItemId
+		, coalesce(nullif(co.Email,''),nullif(ca.Email,',')) as AddressMail
+        from NotebookLinks nl
+        left join contact co on nl.ObjectId=co.ObjectId
+        left join candidate ca on nl.ObjectId=ca.ObjectId
+        where nl.NotebookLinkTypeId=20 --Email BCC
+)
+, emailto as (
+        select distinct NotebookItemId, STRING_AGG(convert(varchar(max),nullif(AddressMail,'')),',') as AddressMail
+        from emailtolist
+        group by NotebookItemId
+) 
+, emailfromlist as (select distinct nl.NotebookItemId
+		, coalesce(nullif(co.Email,''),nullif(ca.Email,',')) as AddressMail
+        from NotebookLinks nl
+        left join contact co on nl.ObjectId = co.ObjectId
+        left join candidate ca on nl.ObjectId = ca.ObjectId
+        where nl.NotebookLinkTypeId=28 --Email From
+) 
+/*
+select NotebookItemId, count(*)
+from emailfromlist
+group by NotebookItemId
+having count(*) > 1 --check: select * from emailfromlist where NotebookItemId = 431117
+*/
+, emailfrom as (
+        select NotebookItemId, STRING_AGG(convert(varchar(max),nullif(AddressMail,'')),',') as AddressMail
+        from emailfromlist
+        group by NotebookItemId
+)
+, emailReference as (
+        select nl.NotebookItemId,STRING_AGG(COALESCE(co.Email,ca.Email),',') as AddressMail
+        from NotebookLinks nl
+        left join contact co on nl.ObjectId=co.ObjectId
+        left join candidate ca on nl.ObjectId=ca.ObjectId
+        where nl.NotebookLinkTypeId=21 --Reference
+        group by nl.NotebookItemId        
+), emailSMS as (
+        select nl.NotebookItemId,STRING_AGG(COALESCE(co.Email,ca.Email),',') as AddressMail
+        from NotebookLinks nl
+        left join contact co on nl.ObjectId=co.ObjectId
+        left join candidate ca on nl.ObjectId=ca.ObjectId
+        where nl.NotebookLinkTypeId=24 --SMS
+        group by nl.NotebookItemId        
+), emailPrimary as (
+        select nl.NotebookItemId,STRING_AGG(COALESCE(co.Email,ca.Email),',') as AddressMail
+        from NotebookLinks nl
+        left join contact co on nl.ObjectId=co.ObjectId
+        left join candidate ca on nl.ObjectId=ca.ObjectId
+        where nl.NotebookLinkTypeId=27 --Primary
+        group by nl.NotebookItemId        
+), notebookdetailcompany as (
+        select DISTINCT nl.NotebookItemId,nl.ClientId--,coo.Email as contactEmail,caa.Email as candidateemail
+        from dbo.NotebookLinks nl
+        where 1=1
+        and nl.ClientId is not null  
+        )
+, notebookdetailcontact as (
+        select DISTINCT nl.NotebookItemId,co.ClientContactId--,coo.Email as contactEmail,caa.Email as candidateemail
+        from dbo.NotebookLinks nl
+        left join dbo.NotebookLinkTypes nlt on nlt.NotebookLinkTypeId=nl.NotebookLinkTypeId
+        inner join contactID co on nl.ObjectId=co.ObjectId
+        where 1=1
+), notebookdetailcandidate as (
+        select DISTINCT nl.NotebookItemId,co.ObjectId--,coo.Email as contactEmail,caa.Email as candidateemail
+        from dbo.NotebookLinks nl
+        left join dbo.NotebookLinkTypes nlt on nlt.NotebookLinkTypeId=nl.NotebookLinkTypeId
+        inner join candidateID co on nl.ObjectId=co.ObjectId
+        where 1=1
+), notebookdetailjob as (
+        select DISTINCT nl.NotebookItemId,nl.JobId--,coo.Email as contactEmail,caa.Email as candidateemail
+        from dbo.NotebookLinks nl
+        where 1=1
+        and nl.JobId is not null 
+)
+, notebooklist as (
+        select ni.NotebookItemId
+                , ncom.ClientId as CompanyID
+                , nco.ClientContactId as ContactID
+                , nca.ObjectId as CandidateID
+                , nj.JobId as JobId
+                , et.AddressMail as 'emailto'
+                , ef.AddressMail as 'emailfrom'--ef.ClientId,ef.JobId,
+        from dbo.NotebookItems ni
+        left join emailto et on ni.NotebookItemId=et.NotebookItemId
+        left join emailfrom ef on ni.NotebookItemId=ef.NotebookItemId
+        left join notebookdetailcompany ncom on ni.NotebookItemId=ncom.NotebookItemId 
+        left join notebookdetailcontact nco on ni.NotebookItemId=nco.NotebookItemId 
+        left join notebookdetailcandidate nca on ni.NotebookItemId=nca.NotebookItemId 
+        left join notebookdetailjob nj on ni.NotebookItemId=nj.NotebookItemId 
+)
+, userinfo as (
+        select u.UserId,u.LoginName,u.UserName,u.UserFullName,u.JobTitle,u.Inactive
+        from Users u)
+
+, tasklist as (select NotebookItemId
+		, string_agg(concat_ws(char(10)
+			, COALESCE('Subject: '+ Subject,NULL)
+			, COALESCE('Start date: '+ convert(varchar(max),StartDate,120),NULL)
+			, COALESCE('Due Date: '+ convert(varchar(max),DueDate,120),NULL)
+		), char(10)) as tasklist
+		from tasks
+		where NotebookItemId is not NULL
+		group by NotebookItemId)
+--MAIN SCRIPT
+select ni.NotebookItemId
+        , COALESCE('NP'+ convert(varchar(max), nullif(nli.CompanyID,'')),NULL) as com_ext_id
+        , COALESCE('NP' + convert(varchar(max),nullif(nli.ContactID,'')),NULL) as con_ext_id
+        , COALESCE('NP' + convert(varchar(max),nullif(nli.JobId,'')),NULL) as job_ext_id
+        , COALESCE('NP' + convert(varchar(max),nullif(nli.CandidateID,'')),NULL) as cand_ext_id
+        , -10 as user_account_id
+        , ni.CreatedOn as insert_timestamp
+        , 'comment' as category
+        , concat_ws(char(10), '[Notebook]'
+			, coalesce('Notebook Type: '+ nt.NotebookType,NULL)
+			, coalesce('Subject: '+ ni.Subject,NULL)
+			, coalesce('From: '+ nli.emailfrom,NULL)
+			, coalesce('Recipients: '+ nli.emailto,NULL)
+			, coalesce('Folder Name: '+ nf.FolderName,NULL)
+			, coalesce('Protected: ' + ni.Protected,NULL)
+			, coalesce('Hot Item: ' + ni.HotItem,NULL)
+			, coalesce('Created by: ' + uic.UserFullName,NULL)
+			, coalesce('Created On: ' + convert(nvarchar(max),ni.CreatedOn,120),NULL)
+			, coalesce('Updated by: '  +uiu.UserFullName,NULL)
+			, coalesce('Updated On: ' + convert(nvarchar(max),ni.UpdatedOn,120),NULL)
+			, coalesce('--Task--' + char(10) + uiu.UserFullName,NULL)
+			, coalesce('--Memo--' + char(10) + nullif(tn.Memo,''),NULL)
+        ) as comment_activities
+from notebooklist nli
+left join dbo.NotebookItems ni on ni.NotebookItemId=nli.NotebookItemId
+left join NotebookFolders nf on nf.NotebookFolderId=ni.NotebookFolderId
+left join dbo.NotebookTypes nt on nt.NotebookTypeId=ni.NotebookTypeId
+--left join dbo.NotebookItemContent nic on nic.NotebookItemId=ni.NotebookItemId
+left join dbo.tmp_notebook2 tn on tn.NotebookItemId = ni.NotebookItemId
+left join userinfo uic on ni.CreatedUserId=uic.UserId
+left join userinfo uiu on ni.UpdatedOn=uiu.UserId
+left join tasklist tl on tl.NotebookItemId = ni.NotebookItemId
+where 1=1
+--and ni.NotebookItemId=383801
+--and nli.CompanyID=21
+--and tn.Createdon >= '2016-08-16 09:08:52.980'
+--and (nli.CompanyID is not NULL or nli.ContactID is not NULL or nli.JobId is not NULL or nli.CandidateID is not NULL)
+and nli.CandidateID in (select ObjectId from cand_2sector) --751 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>SFE lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>sub_functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>VCFEID</name>
+        <field>functional_expertise_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCSFE</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCSFEID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sub FE</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase from</connection>
+    <sql>select distinct VCFE
+, VCSFE
+, current_timestamp as insert_timestamp
+from fe_sfe_skills
+where VCFE is not NULL
+order by VCFE, VCSFE</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update candidate gdpr</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>1000</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate_gdpr_compliance</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>notes</name>
+        <rename>gdpr_notes</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update candidate info</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>1000</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>contract_interval</name>
+        <rename>contract_interval</rename>
+      </value>
+      <value>
+        <name>maritalstatus</name>
+        <rename>maritalstatus</rename>
+      </value>
+      <value>
+        <name>nickname</name>
+        <rename>PreferredName</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update candidate source</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>candidate_source_id</name>
+        <rename>VCCandSourceID</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC SFE</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <schema>public</schema>
+    <table>sub_functional_expertise</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>functional_expertise_id</column_name>
+        <stream_name>VCFE_ID</stream_name>
+      </field>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>VCSFE</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Vincere FE</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <schema>public</schema>
+    <table>functional_expertise</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>vcfe</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidate reg date</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>CreatedOn</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup candidateid</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>CandidateExtID</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>candidateid</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>656</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update candidate edu</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>education_summary</name>
+        <rename>cand_edu</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>768</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update candidate skills</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>NextPhase to</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <key>
+        <name>VCCandidateID</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>skills</name>
+        <rename>cand_skills</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>848</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>update candidate_document</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection/>
+    <skip_lookup>N</skip_lookup>
+    <commit>200</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>candidate_document</table>
+      <key>
+        <name>candidateid</name>
+        <field>candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>UploadedName</name>
+        <field>uploaded_filename</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>uploaded_filename</name>
+        <rename>RealName</rename>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1344</xloc>
+      <yloc>656</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
