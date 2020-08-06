@@ -67,6 +67,7 @@ select vc_candidate_id as candidate_id
 , value_data
 , index
 from merged_new m
+where vc_candidate_id not in (select candidate_id from configurable_form_group_value where children_id = 11321) --add for avoiding add new ones
 on conflict ON CONSTRAINT configurable_form_group_value_pkey
 	do update
 	set value_data = excluded.value_data;

@@ -317,7 +317,7 @@ UNION ALL
 --本人辞退 | Decline
 select [キャンディデイト PANO ] as cand_ext_id
 , [JOB PANO ] as job_ext_id
-, 'Shortlisted - Rejected' as app_status, [本人辞退実施日], NULL as rejected_date
+, 'Shortlisted - Rejected' as app_status, [本人辞退実施日], [本人辞退実施日] as rejected_date --corrected on 07/07/2020
 , 'Rejected - Candidate' as sub_status
 , 28 as order_id
 , '本人辞退' as pa_ja_status

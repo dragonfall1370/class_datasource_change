@@ -1,9 +1,24 @@
+--APPLICABLE FOR CONTACT MERGED (PROD)
+with merged_new as (select pd.id, pd.company_id, pd.contact_id, pd.company_id_bkup, contact_id_bkup
+	, m.new_company_id
+	, m.merged_contact_id
+	from position_description pd
+	join (select * from mike_tmp_contact_dup_check where rn=1) m on m.contact_id = pd.contact_id --11540 rows
+	)
+
+update position_description pd
+set contact_id = m.merged_contact_id
+from merged_new m
+where m.id = pd.id
+
+
+--APPLICABLE FOR REVIEW2
 with contact_company as (select c.id, c.external_id 
 	, c.company_id, c.company_id_bkup
 	, m.vc_pa_company_id
 	, m.vc_company_id
 	from contact c
-	join mike_tmp_company_dup_check2 m on m.vc_pa_company_id = c.company_id --new tmp table for company merge
+	join mike_tmp_company_dup_check2 m on m.vc_pa_company_id = c.company_id --new tmp table for company merge (if only company dup check incorrect)
 	where 1=1
 	and deleted_timestamp is NULL
 	and (external_id ilike 'REC%' or external_id ilike 'DEF%')--9614 rows

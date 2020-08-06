@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#x2f;</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -428,18 +428,18 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2019&#x2f;11&#x2f;29 15&#x3a;35&#x3a;13.787</created_date>
+    <created_date>2019/11/29 15:35:13.787</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019&#x2f;11&#x2f;29 15&#x3a;35&#x3a;13.787</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <modified_date>2019/11/29 15:35:13.787</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
-      <note>FE &#x2f; SFE</note>
+      <note>FE / SFE from PA</note>
       <xloc>32</xloc>
       <yloc>16</yloc>
-      <width>52</width>
+      <width>97</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -457,8 +457,8 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Industry &#x2f; Sub industry</note>
-      <xloc>736</xloc>
+      <note>Industry / Sub industry</note>
+      <xloc>1088</xloc>
       <yloc>16</yloc>
       <width>130</width>
       <heigth>26</heigth>
@@ -478,7 +478,7 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Brand &#x28;name added manually&#x29;</note>
+      <note>Brand (name added manually)</note>
       <xloc>32</xloc>
       <yloc>320</yloc>
       <width>170</width>
@@ -501,7 +501,7 @@
     <notepad>
       <note>Brand entity</note>
       <xloc>32</xloc>
-      <yloc>512</yloc>
+      <yloc>608</yloc>
       <width>74</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -521,8 +521,8 @@
     </notepad>
     <notepad>
       <note>User account</note>
-      <xloc>944</xloc>
-      <yloc>320</yloc>
+      <xloc>1120</xloc>
+      <yloc>368</yloc>
       <width>80</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -540,13 +540,139 @@
       <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>FE/SFE from New List</note>
+      <xloc>592</xloc>
+      <yloc>32</yloc>
+      <width>123</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Branch settings (copied from Review2)</note>
+      <xloc>32</xloc>
+      <yloc>912</yloc>
+      <width>213</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>--PA Contact Brands
+select *
+from team_group
+where group_type = 'BRAND' --1125-Professionals | 1126-Staffing
+
+insert into team_group_contact(contact_id, team_group_id, insert_timestamp)
+(select id as contact_id
+, 1125 team_group_id
+, current_timestamp insert_timestamp 
+from contact
+where external_id ilike 'REC%'
+and deleted_timestamp is NULL --37511
+
+UNION ALL
+select id as contact_id
+, 1126 team_group_id
+, current_timestamp insert_timestamp 
+from contact
+where external_id ilike 'REC%'
+and deleted_timestamp is NULL --37511
+)</note>
+      <xloc>880</xloc>
+      <yloc>672</yloc>
+      <width>420</width>
+      <heigth>344</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Branch - Placements</note>
+      <xloc>32</xloc>
+      <yloc>1072</yloc>
+      <width>120</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Lookup [candidate_id]_bkup after merged
+[position_candidate] backup for all migrated</note>
+      <xloc>656</xloc>
+      <yloc>1184</yloc>
+      <width>245</width>
+      <heigth>42</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
-    <name>From &#x28;DB&#x29;</name>
+    <name>From (DB)</name>
     <server>localhost</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>randstadreview2</database>
+    <database>randstadprod</database>
     <port>1433</port>
     <username>sa</username>
     <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
@@ -554,45 +680,51 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
   <connection>
-    <name>To &#x28;REVIEW2&#x29;</name>
-    <server>10.10.10.92</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>randstad-review2.vincere.io</database>
-    <port>5432</port>
-    <username>dbapplication_user</username>
-    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>To &#x28;PROD&#x29;</name>
-    <server>10.10.10.16</server>
+    <name>To (PROD)</name>
+    <server>rdbm1</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>randstad.vincere.io</database>
@@ -603,15 +735,93 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>To (REVIEW2)</name>
+    <server>rdbm1</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>randstad-review2.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
   <order>
@@ -626,13 +836,13 @@
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>Sub FE</from>
+      <from>Sub FE (from PA)</from>
       <to>FE lookup</to>
       <enabled>N</enabled>
     </hop>
     <hop>
       <from>Team group DB</from>
-      <to>Insert &#x2f; Update</to>
+      <to>Insert / Update</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -717,12 +927,12 @@
     </hop>
     <hop>
       <from>User lookup 2</from>
-      <to>Insert &#x2f; Update 2</to>
+      <to>Insert / Update 2</to>
       <enabled>N</enabled>
     </hop>
     <hop>
       <from>Team group lookup</from>
-      <to>Insert&#x2f;update user brand</to>
+      <to>Insert/update user brand</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -732,20 +942,149 @@
     </hop>
     <hop>
       <from>User lookup 2</from>
-      <to>Insert &#x2f; Update PROD</to>
+      <to>Insert / Update PROD</to>
       <enabled>N</enabled>
     </hop>
     <hop>
       <from>Industry lookup</from>
-      <to>Sub industry</to>
-      <enabled>Y</enabled>
+      <to>Insert sub industry</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Sub Industry</from>
+      <to>Industry lookup</to>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Industry</from>
-      <to>Industry lookup</to>
-      <enabled>Y</enabled>
+      <to>Insert Industry</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>FE lookup 2</from>
+      <to>Insert SFE</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Functional Exp 2</from>
+      <to>Insert FE</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Sub FE</from>
+      <to>FE lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Branch</from>
+      <to>Insert branch</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Team group lookup</from>
+      <to>PROD Audit</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Team group user</from>
+      <to>User join (PROD)</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>User join (PROD)</from>
+      <to>Team group lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Brand lookup</from>
+      <to>Insert / Update company brand</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Placement Branch</from>
+      <to>Branch lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Position Candidate</from>
+      <to>Offer</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>Insert placement branch</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>Insert/update user brand 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>PROD Audit Branch</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup 2</from>
+      <to>Job lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Branch lookup</from>
+      <to>Candidate lookup 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Job lookup 2</from>
+      <to>Position Candidate</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer Branch</from>
+      <to>Branch lookup</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Offer</from>
+      <to>PROD Offer Audit Branch</to>
+      <enabled>N</enabled>
     </hop>
   </order>
+  <step>
+    <name>Branch</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (REVIEW2)</connection>
+    <sql>select *
+from team_group
+where group_type = 'BRANCH'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Brand candidate</name>
     <type>TableInput</type>
@@ -757,77 +1096,27 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>--Candidate Brand&#xd;&#xa;select c.&#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;, c.&#x5b;&#x4eba;&#x6750;&#x62c5;&#x5f53;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;, PAUserName&#xd;&#xa;, PAUserMailAddress&#xd;&#xa;, case when PAUserMailAddress is not NULL then CandidateBrand&#xd;&#xa;	else &#x27;CA&#x27; end as pa_brand --added rule on 20200207&#xd;&#xa;, &#x27;BRAND&#x27; as group_type&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from csv_can c&#xd;&#xa;left join UserBrand u on u.PAUserID &#x3d; c.&#x5b;&#x4eba;&#x6750;&#x62c5;&#x5f53;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where 1&#x3d;1&#xd;&#xa;--and PAUserMailAddress is not NULL --removed on 20200224&#xd;&#xa;and c.&#x5b;&#x30c1;&#x30a7;&#x30c3;&#x30af;&#x9805;&#x76ee;&#x5d; not like &#x27;&#x25;&#x30c1;&#x30e3;&#x30ec;&#x30f3;&#x30b8;&#x30c9;&#x4eba;&#x6750;&#x25;&#x27;</sql>
+    <connection>From (DB)</connection>
+    <sql>--Candidate Brand
+select c.[PANO ] as cand_ext_id
+, c.[人材担当ユーザID]
+, PAUserName
+, PAUserMailAddress
+, case when PAUserMailAddress is not NULL then CandidateBrand
+	else 'CA' end as pa_brand --added rule on 20200207
+, 'BRAND' as group_type
+, current_timestamp as insert_timestamp
+from csv_can c
+left join UserBrand u on u.PAUserID = c.[人材担当ユーザID]
+where 1=1
+--and PAUserMailAddress is not NULL --removed on 20200224
+and c.[チェック項目] not like '%チャレンジド人材%'</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>240</xloc>
-      <yloc>608</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Brand company</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>--Company Brand&#xd;&#xa;select c.&#x5b;PANO &#x5d; as com_ext_id&#xd;&#xa;, c.&#x5b;&#x4f01;&#x696d;&#x62c5;&#x5f53;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;, PAUserName&#xd;&#xa;, PAUserMailAddress&#xd;&#xa;, case when PAUserMailAddress is not NULL then CompanyBrand&#xd;&#xa;	else &#x27;Professionals&#x27; end as pa_brand --added rule on 20200207&#xd;&#xa;, &#x27;BRAND&#x27; as group_type&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from csv_recf c&#xd;&#xa;left join UserBrand u on u.PAUserID &#x3d; c.&#x5b;&#x4f01;&#x696d;&#x62c5;&#x5f53;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>240</xloc>
-      <yloc>512</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Brand job</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>--Job Brand&#xd;&#xa;select j.&#x5b;PANO &#x5d; as job_ext_id&#xd;&#xa;, j.&#x5b;JOB&#x62c5;&#x5f53;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;, PAUserName&#xd;&#xa;, PAUserMailAddress&#xd;&#xa;, case when PAUserMailAddress is not NULL then JobBrand&#xd;&#xa;	else &#x27;Professionals&#x27; end as pa_brand --added rule on 20200207&#xd;&#xa;, &#x27;BRAND&#x27; as group_type&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from csv_job j&#xd;&#xa;left join UserBrand u on u.PAUserID &#x3d; j.&#x5b;JOB&#x62c5;&#x5f53;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where 1&#x3d;1&#xd;&#xa;--and PAUserMailAddress is not NULL&#xd;&#xa;and j.&#x5b;&#x96c7;&#x7528;&#x533a;&#x5206;&#x5d; not like &#x27;&#x25;&#x969c;&#x304c;&#x3044;&#x8005;&#x63a1;&#x7528;&#x6b63;&#x793e;&#x54e1;&#x25;&#x27;&#xd;&#xa;and j.&#x5b;&#x96c7;&#x7528;&#x533a;&#x5206;&#x5d; not like &#x27;&#x25;&#x969c;&#x304c;&#x3044;&#x8005;&#x63a1;&#x7528;&#x5951;&#x7d04;&#x793e;&#x54e1;&#x25;&#x27;&#xd;&#xa;and j.&#x5b;&#x96c7;&#x7528;&#x533a;&#x5206;&#x5d; not like &#x27;&#x25;&#x969c;&#x304c;&#x3044;&#x8005;&#x63a1;&#x7528;&#x7d39;&#x4ecb;&#x4e88;&#x5b9a;&#x6d3e;&#x9063;&#x25;&#x27;&#xd;&#xa;--140385 rows</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -840,8 +1129,97 @@
       <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>Brand company</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--Company Brand
+select c.[PANO ] as com_ext_id
+, c.[企業担当ユーザID]
+, PAUserName
+, PAUserMailAddress
+, case when PAUserMailAddress is not NULL then CompanyBrand
+	else 'Professionals' end as pa_brand --added rule on 20200207
+, 'BRAND' as group_type
+, current_timestamp as insert_timestamp
+from csv_recf c
+left join UserBrand u on u.PAUserID = c.[企業担当ユーザID]</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Brand job</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>--Job Brand
+select j.[PANO ] as job_ext_id
+, j.[JOB担当者ユーザID]
+, PAUserName
+, PAUserMailAddress
+, case when PAUserMailAddress is not NULL then JobBrand
+	else 'Professionals' end as pa_brand --added rule on 20200207
+, 'BRAND' as group_type
+, current_timestamp as insert_timestamp
+from csv_job j
+left join UserBrand u on u.PAUserID = j.[JOB担当者ユーザID]
+where 1=1
+--and PAUserMailAddress is not NULL
+and j.[雇用区分] not like '%障がい者採用正社員%'
+and j.[雇用区分] not like '%障がい者採用契約社員%'
+and j.[雇用区分] not like '%障がい者採用紹介予定派遣%'
+--140385 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>800</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Brand lookup</name>
     <type>DBLookup</type>
@@ -853,7 +1231,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -866,13 +1244,13 @@
       <key>
         <name>pa_brand</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>group_type</name>
         <field>group_type</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -882,6 +1260,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -891,11 +1270,10 @@
     </remotesteps>
     <GUI>
       <xloc>592</xloc>
-      <yloc>608</yloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Candidate lookup</name>
     <type>DBLookup</type>
@@ -907,7 +1285,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -920,7 +1298,7 @@
       <key>
         <name>cand_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -936,6 +1314,7 @@
         <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -945,11 +1324,10 @@
     </remotesteps>
     <GUI>
       <xloc>416</xloc>
-      <yloc>608</yloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Company lookup</name>
     <type>DBLookup</type>
@@ -961,7 +1339,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -974,7 +1352,7 @@
       <key>
         <name>com_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -990,6 +1368,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -999,11 +1378,10 @@
     </remotesteps>
     <GUI>
       <xloc>416</xloc>
-      <yloc>512</yloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>FE lookup</name>
     <type>DBLookup</type>
@@ -1015,7 +1393,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1028,7 +1406,7 @@
       <key>
         <name>vc_fe</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -1038,6 +1416,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1050,8 +1429,55 @@
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>FE lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>functional_expertise</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>fe</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCFE_ID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Functional Exp</name>
     <type>TableInput</type>
@@ -1063,13 +1489,35 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>with split_sfe as &#x28;select vc_fe_en&#xa;	, vc_fe_ja&#xa;	, vc_sfe&#xa;	, trim&#x28;value&#x29; as vc_sfe_split&#xa;	from PA_fe_sfe&#xa;	cross apply string_split&#x28;vc_sfe, char&#x28;10&#x29;&#x29;&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;, fe_sfe as &#x28;select vc_fe_en&#xa;	, vc_fe_ja&#xa;	, vc_sfe&#xa;	, vc_sfe_split&#xa;	, left&#x28;vc_sfe_split, charindex&#x28;&#x27;&#x2f;&#x27;, vc_sfe_split&#x29; - 2&#x29; as vc_sfe_en&#xa;	, right&#x28;vc_sfe_split, len&#x28;vc_sfe_split&#x29; - charindex&#x28;&#x27;&#x2f;&#x27;, vc_sfe_split&#x29; - 1&#x29; as vc_sfe_ja&#xa;	, row_number&#x28;&#x29; over&#x28;partition by vc_fe_en order by case when charindex&#x28;&#x27;&#x5b;P&#x5d;&#x27;, vc_sfe_split&#x29; &#x3d; 1 then 1 else 2 end asc, vc_sfe_split asc&#x29; as rn&#xa;	from split_sfe&#x29;&#xa;&#xa;--FILTER SCRIPT &#x7c; FE&#xa;select distinct concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, vc_fe_en, &#x27; &#x2f; &#x27;, vc_fe_ja&#x29; as fe&#xa;, current_timestamp as insert_timestamp&#xa;from fe_sfe&#xa;order by fe</sql>
+    <connection>From (DB)</connection>
+    <sql>with split_sfe as (select vc_fe_en
+	, vc_fe_ja
+	, vc_sfe
+	, trim(value) as vc_sfe_split
+	from PA_fe_sfe
+	cross apply string_split(vc_sfe, char(10)))
+
+--MAIN SCRIPT
+, fe_sfe as (select vc_fe_en
+	, vc_fe_ja
+	, vc_sfe
+	, vc_sfe_split
+	, left(vc_sfe_split, charindex('/', vc_sfe_split) - 2) as vc_sfe_en
+	, right(vc_sfe_split, len(vc_sfe_split) - charindex('/', vc_sfe_split) - 1) as vc_sfe_ja
+	, row_number() over(partition by vc_fe_en order by case when charindex('[P]', vc_sfe_split) = 1 then 1 else 2 end asc, vc_sfe_split asc) as rn
+	from split_sfe)
+
+--FILTER SCRIPT | FE
+select distinct concat('【PP】', vc_fe_en, ' / ', vc_fe_ja) as fe
+, current_timestamp as insert_timestamp
+from fe_sfe
+order by fe</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1082,10 +1530,135 @@
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Insert &#x2f; Update</name>
+    <name>Functional Exp 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select distinct trim(concat('【PP】', replace(fe, char(10), ' / '))) as fe
+--, sfe
+from vc_new_fe_sfe_list
+order by fe
+--, sfe</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Industry</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select distinct concat('【PP】', replace(industry, char(10), ' / ')) as industry
+--, sub_industry
+from vc_new_industry_list
+order by industry
+--, sub_industry</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Industry lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>industry</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>parent_id</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCIndustryID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1296</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert / Update</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -1104,7 +1677,7 @@
       <key>
         <name>NAME</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -1128,6 +1701,7 @@
         <update>Y</update>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1140,10 +1714,9 @@
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Insert &#x2f; Update 2</name>
+    <name>Insert / Update 2</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -1153,7 +1726,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <commit>100</commit>
     <update_bypassed>Y</update_bypassed>
     <lookup>
@@ -1162,7 +1735,7 @@
       <key>
         <name>pa_email</name>
         <field>email</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -1286,6 +1859,7 @@
         <update>Y</update>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1294,12 +1868,442 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
+      <xloc>1472</xloc>
       <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>Insert / Update PROD</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>user_account</table>
+      <key>
+        <name>pa_email</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>name</name>
+        <rename>name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>email</name>
+        <rename>pa_email</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>super_user</name>
+        <rename>super_user</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>internal_recruiter</name>
+        <rename>internal_recruiter</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>line_manager</name>
+        <rename>line_manager</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>internal_staff</name>
+        <rename>internal_staff</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>hr</name>
+        <rename>hr</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>interviewer</name>
+        <rename>interviewer</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>email_api</name>
+        <rename>email_api</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>locked_user</name>
+        <rename>locked_user</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>user_location</name>
+        <rename>user_location</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>timezone</name>
+        <rename>timezone</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>requisition_signatory</name>
+        <rename>requisition_signatory</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>matrix_manager</name>
+        <rename>matrix_manager</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>business_partner</name>
+        <rename>business_partner</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>system_admin</name>
+        <rename>system_admin</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>director</name>
+        <rename>director</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>manager</name>
+        <rename>manager</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>consultant</name>
+        <rename>consultant</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>researcher</name>
+        <rename>researcher</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>date_format</name>
+        <rename>date_format</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>first_name</name>
+        <rename>first_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>last_name</name>
+        <rename>last_name</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1472</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert / Update company brand</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>team_group_company</table>
+      <key>
+        <name>VCCompanyID</name>
+        <field>company_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>company_id</name>
+        <rename>VCCompanyID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>team_group_id</name>
+        <rename>VCTeamID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert FE</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>functional_expertise</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>business_units</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>department</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>expertise</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Industry</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>vertical</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>industry</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1296</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert SFE</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>sub_functional_expertise</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>functional_expertise_id</column_name>
+        <stream_name>VCFE_ID</stream_name>
+      </field>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>sfe</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert branch</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>team_group</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>name</stream_name>
+      </field>
+      <field>
+        <column_name>owner_id</column_name>
+        <stream_name>owner_id</stream_name>
+      </field>
+      <field>
+        <column_name>group_type</column_name>
+        <stream_name>group_type</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Insert brand candidate</name>
     <type>TableOutput</type>
@@ -1311,7 +2315,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <schema>public</schema>
     <table>team_group_candidate</table>
     <commit>1000</commit>
@@ -1329,19 +2333,20 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>candidate_id</column_name>
-          <stream_name>VCCandidateID</stream_name>
-        </field>
-        <field>
-          <column_name>team_group_id</column_name>
-          <stream_name>VCTeamID</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>team_group_id</column_name>
+        <stream_name>VCTeamID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1351,11 +2356,10 @@
     </remotesteps>
     <GUI>
       <xloc>768</xloc>
-      <yloc>608</yloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Insert brand company</name>
     <type>TableOutput</type>
@@ -1367,7 +2371,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <schema>public</schema>
     <table>team_group_company</table>
     <commit>1000</commit>
@@ -1385,19 +2389,20 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>company_id</column_name>
-          <stream_name>VCCompanyID</stream_name>
-        </field>
-        <field>
-          <column_name>team_group_id</column_name>
-          <stream_name>VCTeamID</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
+      <field>
+        <column_name>company_id</column_name>
+        <stream_name>VCCompanyID</stream_name>
+      </field>
+      <field>
+        <column_name>team_group_id</column_name>
+        <stream_name>VCTeamID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1407,11 +2412,10 @@
     </remotesteps>
     <GUI>
       <xloc>768</xloc>
-      <yloc>512</yloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Insert brand job</name>
     <type>TableOutput</type>
@@ -1423,7 +2427,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <schema>public</schema>
     <table>team_group_position</table>
     <commit>1000</commit>
@@ -1441,19 +2445,20 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>position_id</column_name>
-          <stream_name>VCJobID</stream_name>
-        </field>
-        <field>
-          <column_name>team_group_id</column_name>
-          <stream_name>VCTeamID</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
+      <field>
+        <column_name>position_id</column_name>
+        <stream_name>VCJobID</stream_name>
+      </field>
+      <field>
+        <column_name>team_group_id</column_name>
+        <stream_name>VCTeamID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1463,11 +2468,62 @@
     </remotesteps>
     <GUI>
       <xloc>768</xloc>
-      <yloc>704</yloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>Insert sub industry</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <schema>public</schema>
+    <table>vertical</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>sub_industry</stream_name>
+      </field>
+      <field>
+        <column_name>parent_id</column_name>
+        <stream_name>VCIndustryID</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1472</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Insert teamgr user</name>
     <type>TableOutput</type>
@@ -1479,7 +2535,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <schema>public</schema>
     <table>team_group_user</table>
     <commit>1000</commit>
@@ -1497,19 +2553,20 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>user_id</column_name>
-          <stream_name>VCUserID</stream_name>
-        </field>
-        <field>
-          <column_name>team_group_id</column_name>
-          <stream_name>VCTeamID</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
+      <field>
+        <column_name>user_id</column_name>
+        <stream_name>VCUserID</stream_name>
+      </field>
+      <field>
+        <column_name>team_group_id</column_name>
+        <stream_name>VCTeamID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1522,8 +2579,66 @@
       <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>Insert/update user brand</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>team_group_user</table>
+      <key>
+        <name>vcuserid</name>
+        <field>user_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCTeamID</name>
+        <field>team_group_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>user_id</name>
+        <rename>vcuserid</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>team_group_id</name>
+        <rename>VCTeamID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Microsoft Excel Output</name>
     <type>ExcelOutput</type>
@@ -1541,7 +2656,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>F&#x3a;&#x5c;VC_Randstad_JP&#x5c;Working&#x5c;20200221_new_users</name>
+      <name>F:\VC_Randstad_JP\Working\20200221_new_users</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1558,7 +2673,7 @@
       <splitevery>0</splitevery>
       <usetempfiles>N</usetempfiles>
       <tempdirectory/>
-      </file>
+    </file>
     <template>
       <enabled>N</enabled>
       <append>N</append>
@@ -1697,22 +2812,23 @@
       </field>
     </fields>
     <custom>
-    <header_font_name>arial</header_font_name>
-    <header_font_size>10</header_font_size>
-    <header_font_bold>N</header_font_bold>
-    <header_font_italic>N</header_font_italic>
-    <header_font_underline>no</header_font_underline>
-    <header_font_orientation>horizontal</header_font_orientation>
-    <header_font_color>black</header_font_color>
-    <header_background_color>none</header_background_color>
-    <header_row_height>255</header_row_height>
-    <header_alignment>left</header_alignment>
-    <header_image/>
-    <row_font_name>arial</row_font_name>
-    <row_font_size>10</row_font_size>
-    <row_font_color>black</row_font_color>
-    <row_background_color>none</row_background_color>
-      </custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1721,12 +2837,11 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
+      <xloc>1472</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>New brand users</name>
     <type>ExcelOutput</type>
@@ -1744,7 +2859,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>F&#x3a;&#x5c;VC_Randstad_JP&#x5c;Working&#x5c;20200323_new_brand_users.xls</name>
+      <name>F:\VC_Randstad_JP\Working\20200323_new_brand_users.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1761,7 +2876,7 @@
       <splitevery>0</splitevery>
       <usetempfiles>N</usetempfiles>
       <tempdirectory/>
-      </file>
+    </file>
     <template>
       <enabled>N</enabled>
       <append>N</append>
@@ -1900,22 +3015,23 @@
       </field>
     </fields>
     <custom>
-    <header_font_name>arial</header_font_name>
-    <header_font_size>10</header_font_size>
-    <header_font_bold>N</header_font_bold>
-    <header_font_italic>N</header_font_italic>
-    <header_font_underline>no</header_font_underline>
-    <header_font_orientation>horizontal</header_font_orientation>
-    <header_font_color>black</header_font_color>
-    <header_background_color>none</header_background_color>
-    <header_row_height>255</header_row_height>
-    <header_alignment>left</header_alignment>
-    <header_image/>
-    <row_font_name>arial</row_font_name>
-    <row_font_size>10</row_font_size>
-    <row_font_color>black</row_font_color>
-    <row_background_color>none</row_background_color>
-      </custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1924,12 +3040,134 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
+      <xloc>1472</xloc>
       <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>PROD Audit</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding>UTF-8</encoding>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>E:\DataMigration\Randstad\Working\AuditCheck\20200622_user_brand_prod.xls</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>PAUserID</name>
+        <type>String</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>PAUserName</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>PAUserMailAddress</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>vcuserid</name>
+        <type>Integer</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>vc_user_name</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>vc_user_email</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>Brand</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>group_type</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCTeamID</name>
+        <type>Integer</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>insert_timestamp</name>
+        <type>Timestamp</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Sub FE</name>
     <type>TableInput</type>
@@ -1941,13 +3179,73 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>with split_sfe as &#x28;select vc_fe_en&#xd;&#xa;	, vc_fe_ja&#xd;&#xa;	, vc_sfe&#xd;&#xa;	, trim&#x28;value&#x29; as vc_sfe_split&#xd;&#xa;	from PA_fe_sfe&#xd;&#xa;	cross apply string_split&#x28;vc_sfe, char&#x28;10&#x29;&#x29;&#x29;&#xd;&#xa;&#xd;&#xa;--MAIN SCRIPT&#xd;&#xa;, fe_sfe as &#x28;select vc_fe_en&#xd;&#xa;	, vc_fe_ja&#xd;&#xa;	, vc_sfe&#xd;&#xa;	, vc_sfe_split&#xd;&#xa;	, left&#x28;vc_sfe_split, charindex&#x28;&#x27;&#x2f;&#x27;, vc_sfe_split&#x29; - 2&#x29; as vc_sfe_en&#xd;&#xa;	, right&#x28;vc_sfe_split, len&#x28;vc_sfe_split&#x29; - charindex&#x28;&#x27;&#x2f;&#x27;, vc_sfe_split&#x29; - 1&#x29; as vc_sfe_ja&#xd;&#xa;	, row_number&#x28;&#x29; over&#x28;partition by vc_fe_en order by case when charindex&#x28;&#x27;&#x5b;P&#x5d;&#x27;, vc_sfe_split&#x29; &#x3d; 1 then 1 else 2 end asc, vc_sfe_split asc&#x29; as rn&#xd;&#xa;	from split_sfe&#x29;&#xd;&#xa;&#xd;&#xa;--FILTER SCRIPT &#x7c; FE&#xd;&#xa;select distinct concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, vc_fe_en, coalesce&#x28;&#x27; &#x2f; &#x27; &#x2b;  nullif&#x28;vc_fe_ja,&#x27;&#x27;&#x29;, &#x27;&#x27;&#x29;&#x29; as vc_fe&#xd;&#xa;, vc_sfe_split&#xd;&#xa;, replace&#x28;trim&#x28;vc_sfe_split&#x29;, &#x27;&#x5b;P&#x5d;&#x27;, &#x27;&#x27;&#x29; as vc_sfe_en&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from fe_sfe --150 rows&#xd;&#xa;--order by fe, rn</sql>
+    <connection>From (DB)</connection>
+    <sql>select trim(concat('【PP】', replace(fe, char(10), ' / '))) as fe
+, sfe
+from vc_new_fe_sfe_list
+--where fe = 'Executive'
+order by fe, sfe</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sub FE (from PA)</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>with split_sfe as (select vc_fe_en
+	, vc_fe_ja
+	, vc_sfe
+	, trim(value) as vc_sfe_split
+	from PA_fe_sfe
+	cross apply string_split(vc_sfe, char(10)))
+
+--MAIN SCRIPT
+, fe_sfe as (select vc_fe_en
+	, vc_fe_ja
+	, vc_sfe
+	, vc_sfe_split
+	, left(vc_sfe_split, charindex('/', vc_sfe_split) - 2) as vc_sfe_en
+	, right(vc_sfe_split, len(vc_sfe_split) - charindex('/', vc_sfe_split) - 1) as vc_sfe_ja
+	, row_number() over(partition by vc_fe_en order by case when charindex('[P]', vc_sfe_split) = 1 then 1 else 2 end asc, vc_sfe_split asc) as rn
+	from split_sfe)
+
+--FILTER SCRIPT | FE
+select distinct concat('【PP】', vc_fe_en, coalesce(' / ' +  nullif(vc_fe_ja,''), '')) as vc_fe
+, vc_sfe_split
+, replace(trim(vc_sfe_split), '[P]', '') as vc_sfe_en
+, current_timestamp as insert_timestamp
+from fe_sfe --150 rows
+--order by fe, rn</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1960,8 +3258,42 @@
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>Sub Industry</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select concat('【PP】', replace(industry, char(10), ' / ')) as industry
+, sub_industry
+from vc_new_industry_list
+order by industry, sub_industry</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Team group DB</name>
     <type>TableInput</type>
@@ -1973,13 +3305,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
-    <sql>select NAME&#xa;, GROUP_ID&#xa;, -10 as owner_id&#xa;, getdate&#x28;&#x29; as insert_timestamp&#xa;, &#x27;BRAND&#x27; as group_type --TEAM &#x7c; BRAND &#x7c; &#xa;from AccessGroups&#xa;order by NAME</sql>
+    <connection>From (DB)</connection>
+    <sql>select NAME
+, GROUP_ID
+, -10 as owner_id
+, getdate() as insert_timestamp
+, 'BRAND' as group_type --TEAM | BRAND | 
+from AccessGroups
+order by NAME</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1992,8 +3331,7 @@
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Team group lookup</name>
     <type>DBLookup</type>
@@ -2005,7 +3343,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -2018,13 +3356,13 @@
       <key>
         <name>Brand</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>group_type</name>
         <field>group_type</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -2034,6 +3372,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2046,8 +3385,7 @@
       <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Team group user</name>
     <type>TableInput</type>
@@ -2059,13 +3397,46 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>with all_brand as &#x28;select PAUserID&#xd;&#xa;	, PAUserName&#xd;&#xa;	, PAUserMailAddress&#xd;&#xa;	, CompanyBrand as Brand&#xd;&#xa;	from UserBrand&#xd;&#xa;	where CompanyBrand is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION ALL&#xd;&#xa;	&#xd;&#xa;	select PAUserID&#xd;&#xa;	, PAUserName&#xd;&#xa;	, PAUserMailAddress&#xd;&#xa;	, JobBrand&#xd;&#xa;	from UserBrand&#xd;&#xa;	where JobBrand is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION ALL&#xd;&#xa;	select PAUserID&#xd;&#xa;	, PAUserName&#xd;&#xa;	, PAUserMailAddress&#xd;&#xa;	, CandidateBrand&#xd;&#xa;	from UserBrand&#xd;&#xa;	where CandidateBrand is not NULL&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select distinct PAUserID&#xd;&#xa;	, PAUserName&#xd;&#xa;	, trim&#x28;PAUserMailAddress&#x29; PAUserMailAddress&#xd;&#xa;	, trim&#x28;Brand&#x29; Brand&#xd;&#xa;	, &#x27;BRAND&#x27; as group_type&#xd;&#xa;	, current_timestamp as insert_timestamp&#xd;&#xa;	, 0 manager&#xd;&#xa;from all_brand</sql>
+    <connection>From (DB)</connection>
+    <sql>with all_brand as (select PAUserID
+	, PAUserName
+	, trim(lower(PAUserMailAddress)) as PAUserMailAddress
+	, CompanyBrand as Brand
+	from UserBrand
+	where CompanyBrand is not NULL
+	
+	UNION ALL
+	
+	select PAUserID
+	, PAUserName
+	, trim(lower(PAUserMailAddress))
+	, JobBrand
+	from UserBrand
+	where JobBrand is not NULL
+	
+	UNION ALL
+	select PAUserID
+	, PAUserName
+	, trim(lower(PAUserMailAddress))
+	, CandidateBrand
+	from UserBrand
+	where CandidateBrand is not NULL
+)
+
+select distinct PAUserID
+	, PAUserName
+	, trim(PAUserMailAddress) PAUserMailAddress
+	, trim(Brand) Brand
+	, 'BRAND' as group_type
+	, current_timestamp as insert_timestamp
+	, 0 manager
+from all_brand</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2078,8 +3449,7 @@
       <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>User account</name>
     <type>TableInput</type>
@@ -2091,153 +3461,42 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select UserID&#xd;&#xa;, UserName as name&#xd;&#xa;, trim&#x28;EmailAddress&#x29; as pa_email&#xd;&#xa;, 0 super_user&#xd;&#xa;, 0 internal_recruiter&#xd;&#xa;, 0 line_manager&#xd;&#xa;, current_timestamp insert_timestamp&#xd;&#xa;, 1 internal_staff&#xd;&#xa;, 0 hr&#xd;&#xa;, 0 interviewer&#xd;&#xa;, &#x27;STANDARD&#x27; email_api&#xd;&#xa;, 1 locked_user --import as locked_user&#xd;&#xa;, &#x27;Japan&#x27; user_location&#xd;&#xa;, &#x27;Asia&#x2f;Tokyo&#x27; timezone&#xd;&#xa;, 1 requisition_signatory&#xd;&#xa;, 0 matrix_manager&#xd;&#xa;, 0 business_partner&#xd;&#xa;, 0 system_admin&#xd;&#xa;, 0 director&#xd;&#xa;, 0 manager&#xd;&#xa;, 0 consultant&#xd;&#xa;, 0 researcher&#xd;&#xa;, &#x27;yyyy&#x5e74;MM&#x6708;dd&#x65e5;&#x27; date_format&#xd;&#xa;, N&#x27;&#x3000;&#x27; as first_name&#xd;&#xa;, UserName as last_name&#xd;&#xa;, 1 display_training&#xd;&#xa;, 1 display_intro&#xd;&#xa;from UserMapping&#xd;&#xa;order by UserID desc</sql>
+    <connection>From (DB)</connection>
+    <sql>select UserID
+, UserName as name
+, trim(EmailAddress) as pa_email
+, 0 super_user
+, 0 internal_recruiter
+, 0 line_manager
+, current_timestamp insert_timestamp
+, 1 internal_staff
+, 0 hr
+, 0 interviewer
+, 'STANDARD' email_api
+, 1 locked_user --import as locked_user
+, 'Japan' user_location
+, 'Asia/Tokyo' timezone
+, 1 requisition_signatory
+, 0 matrix_manager
+, 0 business_partner
+, 0 system_admin
+, 0 director
+, 0 manager
+, 0 consultant
+, 0 researcher
+, 'yyyy年MM月dd日' date_format
+, N'　' as first_name
+, UserName as last_name
+, 1 display_training
+, 1 display_intro
+from UserMapping
+order by UserID desc</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>944</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>User brand</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select PAUserID&#xd;&#xa;, PAUserName as name&#xd;&#xa;, trim&#x28;PAUserMailAddress&#x29; as pa_email&#xd;&#xa;, 0 super_user&#xd;&#xa;, 0 internal_recruiter&#xd;&#xa;, 0 line_manager&#xd;&#xa;, current_timestamp insert_timestamp&#xd;&#xa;, 1 internal_staff&#xd;&#xa;, 0 hr&#xd;&#xa;, 0 interviewer&#xd;&#xa;, &#x27;STANDARD&#x27; email_api&#xd;&#xa;, 1 locked_user --import as locked_user&#xd;&#xa;, &#x27;Japan&#x27; user_location&#xd;&#xa;, &#x27;Asia&#x2f;Tokyo&#x27; timezone&#xd;&#xa;, 1 requisition_signatory&#xd;&#xa;, 0 matrix_manager&#xd;&#xa;, 0 business_partner&#xd;&#xa;, 0 system_admin&#xd;&#xa;, 0 director&#xd;&#xa;, 0 manager&#xd;&#xa;, 0 consultant&#xd;&#xa;, 0 researcher&#xd;&#xa;, &#x27;yyyy&#x5e74;MM&#x6708;dd&#x65e5;&#x27; date_format&#xd;&#xa;, N&#x27;&#x3000;&#x27; as first_name&#xd;&#xa;, PAUserName as last_name&#xd;&#xa;, 1 display_training&#xd;&#xa;, 1 display_intro&#xd;&#xa;from UserBrand&#xd;&#xa;order by PAUserID desc</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>944</xloc>
-      <yloc>512</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>User lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>user_account</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>PAUserMailAddress</name>
-        <field>email</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name/>
-        <field>deleted_timestamp</field>
-        <condition>IS NULL</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>VCUserID</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>User lookup 2</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;PROD&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>user_account</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>pa_email</name>
-        <field>email</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name/>
-        <field>deleted_timestamp</field>
-        <condition>IS NULL</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>VCUserID</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2250,8 +3509,279 @@
       <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>User brand</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select PAUserID
+, PAUserName as name
+, trim(PAUserMailAddress) as pa_email
+, 0 super_user
+, 0 internal_recruiter
+, 0 line_manager
+, current_timestamp insert_timestamp
+, 1 internal_staff
+, 0 hr
+, 0 interviewer
+, 'STANDARD' email_api
+, 1 locked_user --import as locked_user
+, 'Japan' user_location
+, 'Asia/Tokyo' timezone
+, 1 requisition_signatory
+, 0 matrix_manager
+, 0 business_partner
+, 0 system_admin
+, 0 director
+, 0 manager
+, 0 consultant
+, 0 researcher
+, 'yyyy年MM月dd日' date_format
+, N'　' as first_name
+, PAUserName as last_name
+, 1 display_training
+, 1 display_intro
+from UserBrand
+order by PAUserID desc</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>User brand 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>select PAID
+, Name
+, trim(Email) as pa_email
+, 0 super_user
+, 0 internal_recruiter
+, 0 line_manager
+, current_timestamp insert_timestamp
+, 1 internal_staff
+, 0 hr
+, 0 interviewer
+, 'STANDARD' email_api
+, 1 locked_user --import as locked_user
+, 'Japan' user_location
+, 'Asia/Tokyo' timezone
+, 1 requisition_signatory
+, 0 matrix_manager
+, 0 business_partner
+, 0 system_admin
+, 0 director
+, 0 manager
+, 0 consultant
+, 0 researcher
+, 'yyyy年MM月dd日' date_format
+, N'　' as first_name
+, Name as last_name
+, 1 display_training
+, 1 display_intro
+from [20200323_pa_not_added_user]
+order by PAID desc</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>User join (PROD)</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select case when id is NULL then -10
+		else id end as VCUserID
+, name as vc_user_name
+, email as vc_user_email
+from user_account
+where 1=1
+and deleted_timestamp is NULL
+--and locked_user = 0
+and lower(email) = ?</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>PAUserMailAddress</name>
+        <type>String</type>
+      </field>
+    </parameter>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>User lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (REVIEW2)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>user_account</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>PAUserMailAddress</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCUserID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>User lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>user_account</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>pa_email</name>
+        <field>email</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCUserID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1296</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>VC SFE</name>
     <type>TableOutput</type>
@@ -2263,7 +3793,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <schema>public</schema>
     <table>sub_functional_expertise</table>
     <commit>1000</commit>
@@ -2281,19 +3811,20 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>functional_expertise_id</column_name>
-          <stream_name>VCFE_ID</stream_name>
-        </field>
-        <field>
-          <column_name>name</column_name>
-          <stream_name>vc_sfe_en</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
+      <field>
+        <column_name>functional_expertise_id</column_name>
+        <stream_name>VCFE_ID</stream_name>
+      </field>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>vc_sfe_en</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2306,8 +3837,7 @@
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Vincere FE</name>
     <type>TableOutput</type>
@@ -2319,10 +3849,10 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <schema>public</schema>
     <table>functional_expertise</table>
-    <commit>1000</commit>
+    <commit>100</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
@@ -2337,27 +3867,28 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>name</column_name>
-          <stream_name>fe</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
-        <field>
-          <column_name>business_units</column_name>
-          <stream_name>fe</stream_name>
-        </field>
-        <field>
-          <column_name>department</column_name>
-          <stream_name>fe</stream_name>
-        </field>
-        <field>
-          <column_name>expertise</column_name>
-          <stream_name>fe</stream_name>
-        </field>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>business_units</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>department</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>expertise</column_name>
+        <stream_name>fe</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2370,8 +3901,7 @@
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>job lookup</name>
     <type>DBLookup</type>
@@ -2383,7 +3913,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -2396,7 +3926,7 @@
       <key>
         <name>job_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -2412,6 +3942,7 @@
         <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2421,72 +3952,12 @@
     </remotesteps>
     <GUI>
       <xloc>416</xloc>
-      <yloc>704</yloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Insert&#x2f;update user brand</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <commit>100</commit>
-    <update_bypassed>Y</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>team_group_user</table>
-      <key>
-        <name>VCUserID</name>
-        <field>user_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>VCTeamID</name>
-        <field>team_group_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>user_id</name>
-        <rename>VCUserID</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>team_group_id</name>
-        <rename>VCTeamID</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>insert_timestamp</name>
-        <rename>insert_timestamp</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>User brand 2</name>
+    <name>Placement Branch</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -2496,13 +3967,162 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select PAID&#xd;&#xa;, Name&#xd;&#xa;, trim&#x28;Email&#x29; as pa_email&#xd;&#xa;, 0 super_user&#xd;&#xa;, 0 internal_recruiter&#xd;&#xa;, 0 line_manager&#xd;&#xa;, current_timestamp insert_timestamp&#xd;&#xa;, 1 internal_staff&#xd;&#xa;, 0 hr&#xd;&#xa;, 0 interviewer&#xd;&#xa;, &#x27;STANDARD&#x27; email_api&#xd;&#xa;, 1 locked_user --import as locked_user&#xd;&#xa;, &#x27;Japan&#x27; user_location&#xd;&#xa;, &#x27;Asia&#x2f;Tokyo&#x27; timezone&#xd;&#xa;, 1 requisition_signatory&#xd;&#xa;, 0 matrix_manager&#xd;&#xa;, 0 business_partner&#xd;&#xa;, 0 system_admin&#xd;&#xa;, 0 director&#xd;&#xa;, 0 manager&#xd;&#xa;, 0 consultant&#xd;&#xa;, 0 researcher&#xd;&#xa;, &#x27;yyyy&#x5e74;MM&#x6708;dd&#x65e5;&#x27; date_format&#xd;&#xa;, N&#x27;&#x3000;&#x27; as first_name&#xd;&#xa;, Name as last_name&#xd;&#xa;, 1 display_training&#xd;&#xa;, 1 display_intro&#xd;&#xa;from &#x5b;20200323_pa_not_added_user&#x5d;&#xd;&#xa;order by PAID desc</sql>
+    <connection>From (DB)</connection>
+    <sql>---Organize in row_number, with highest stage, latest date
+with jobapp as (select cand_ext_id
+, job_ext_id
+, app_status
+, action_date
+, rejected_date
+, concat(cand_ext_id, job_ext_id) as jobapp_rn
+, row_number() over(partition by cand_ext_id, job_ext_id
+		order by action_date desc,
+				case app_status
+				when 'Shortlisted - Pending' then 1
+				when 'Shortlisted - Rejected' then 1
+				when 'Sent - Pending' then 2
+				when 'Sent - Rejected' then 2
+				when '1st Interview - Pending' then 3
+				when '1st Interview - Rejected' then 3
+				when '2nd+ Interview - Pending' then 4
+				when '2nd+ Interview - Rejected' then 4
+				when 'Offered - received' then 5
+				when 'Placed - Starting' then 6
+				when 'Placed - Active' then 7
+				end desc) as rn
+, rank() over(partition by cand_ext_id, job_ext_id
+		order by --action_date desc,
+				case app_status
+				when 'Shortlisted - Pending' then 1
+				when 'Shortlisted - Rejected' then 1
+				when 'Sent - Pending' then 2
+				when 'Sent - Rejected' then 2
+				when '1st Interview - Pending' then 3
+				when '1st Interview - Rejected' then 3
+				when '2nd+ Interview - Pending' then 4
+				when '2nd+ Interview - Rejected' then 4
+				when 'Offered - received' then 5
+				when 'Placed - Starting' then 6
+				when 'Placed - Active' then 6
+				end desc) as rank_rn
+, sub_status
+from pa_final_jobapp2
+where cand_ext_id &lt;&gt; 'CDT000000' and job_ext_id &lt;&gt; 'JOB000000'
+)
+
+---Job Type | Employment Type | 雇用区分
+, jobtype as (select [PANO ] as job_ext_id
+	, value as jobtype
+	from csv_job
+	cross apply string_split([雇用区分], char(10))
+	where [雇用区分] &lt;&gt; '')
+
+, jobtype_employment as (select job_ext_id
+	, case jobtype
+		when '正社員' then 1
+		when '契約社員' then 3
+		when '紹介予定派遣' then 5
+		when '【新卒】　正社員' then 2
+		when '【新卒】　契約社員' then 4
+		when '【新卒】　紹介予定派遣' then 6
+		else 0 end as jobtype
+	, case jobtype 
+		when '正社員' then 1
+		when '契約社員' then 3
+		when '紹介予定派遣' then 5
+		when '【新卒】　正社員' then 2
+		when '【新卒】　契約社員' then 4
+		when '【新卒】　紹介予定派遣' then 6
+		else 0 end as employment_type
+	from jobtype)
+
+, type_employment_rn as (select job_ext_id
+	, jobtype
+	, row_number() over(partition by job_ext_id order by jobtype asc) as jobtype_rn
+	, employment_type
+	, row_number() over(partition by job_ext_id order by employment_type asc) as employmentype_rn
+	from jobtype_employment
+	where jobtype > 0 and employment_type > 0)
+
+, final_jobtype as (select job_ext_id
+	, case 
+		when jobtype in (1, 2) then 'PERMANENT'
+		when jobtype in (3, 4) then 'CONTRACT'
+		when jobtype in (5, 6) then 'TEMPORARY_TO_PERMANENT'
+		else 'PERMANENT' end as jobtype
+	, case 
+		when employment_type in (1, 2) then 'FULL_TIME'
+		when employment_type in (3, 4) then 'FULL_TIME'
+		else NULL end as employment_type
+	from type_employment_rn
+	where jobtype_rn = 1)
+
+/* Check reference
+select *
+from jobapp --CDT183041	JOB117535
+*/
+
+, jobappfilter as (select *
+	, case 
+		when app_status in ('Shortlisted - Pending', 'Shortlisted - Rejected') then 'SHORTLISTED'
+		when app_status in ('Sent - Pending', 'Sent - Rejected') then 'SENT'
+		when app_status in ('1st Interview - Pending', '1st Interview - Rejected') then 'FIRST_INTERVIEW'
+		when app_status in ('2nd+ Interview - Pending', '2nd+ Interview - Rejected') then 'SECOND_INTERVIEW'
+		when app_status in ('Offered - received') then 'OFFERED'
+		when app_status in ('Placed - Starting', 'Placed - Active') then 'PLACED'
+		else NULL end as stage
+	from jobapp
+	where rn = rank_rn
+	--and cand_ext_id = 'CDT183041' and job_ext_id = 'JOB117535' --check conditions if ok
+)
+
+, offer as (select [キャンディデイト PANO ]
+		, [JOB PANO ]
+		, [売上 担当者1]
+		, [売上 担当者1ユーザID]
+		, [売上 担当者2]
+		, [売上 担当者2ユーザID]
+		, coalesce(nullif([売上 担当者1],''), nullif([売上 担当者2], '')) as consultant
+	from csv_contract
+	where coalesce(nullif([売上 担当者1],''), nullif([売上 担当者2], '')) is not NULL --8561
+	)
+
+, branch_offer as (select [キャンディデイト PANO ]
+		, [JOB PANO ]
+		, coalesce(nullif(lp.vc_office_jap, '') + ' (' + nullif(lp.vc_office_en, '') + ')', NULL) as branch
+		from offer o
+		left join (select * from LP_Office where category = 'candidate') lp on lp.pa_office = o.consultant
+		) --select * from branch_offer --8561
+
+select ja.cand_ext_id
+	, ja.job_ext_id
+	, ja.original_stage
+	, case when jt.jobtype = 'CONTRACT' then 302
+	when jt.jobtype = 'TEMPORARY_TO_PERMANENT' then 303
+	else 301 end as position_status --placed_job_type
+	, ja.stage
+	, ja.sub_status
+	, ja.action_date
+	, ja.stage5
+	, ja.offer_date as offer_date_original
+	, ja.stage6
+	, ja.placed_date as placed_date_original
+	, c.branch
+	, 'offer' as record_type
+	, 'BRANCH' as group_type
+from vc_final_jobapp2 ja
+left join (select * from branch_offer where branch is not NULL) c on c.[キャンディデイト PANO ] = ja.cand_ext_id and c.[JOB PANO ] = ja.job_ext_id
+left join final_jobtype jt on jt.job_ext_id = ja.job_ext_id
+where 1=1
+and ja.original_stage in ('Placed - Starting', 'Placed - Active')
+and c.branch is not NULL
+order by ja.cand_ext_id, ja.job_ext_id --6633</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2511,172 +4131,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>608</yloc>
+      <xloc>240</xloc>
+      <yloc>1120</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Insert &#x2f; Update PROD</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;PROD&#x29;</connection>
-    <commit>100</commit>
-    <update_bypassed>Y</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>user_account</table>
-      <key>
-        <name>pa_email</name>
-        <field>email</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>name</name>
-        <rename>name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>email</name>
-        <rename>pa_email</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>super_user</name>
-        <rename>super_user</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>internal_recruiter</name>
-        <rename>internal_recruiter</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>line_manager</name>
-        <rename>line_manager</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>insert_timestamp</name>
-        <rename>insert_timestamp</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>internal_staff</name>
-        <rename>internal_staff</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>hr</name>
-        <rename>hr</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>interviewer</name>
-        <rename>interviewer</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>email_api</name>
-        <rename>email_api</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>locked_user</name>
-        <rename>locked_user</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>user_location</name>
-        <rename>user_location</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>timezone</name>
-        <rename>timezone</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>requisition_signatory</name>
-        <rename>requisition_signatory</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>matrix_manager</name>
-        <rename>matrix_manager</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>business_partner</name>
-        <rename>business_partner</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>system_admin</name>
-        <rename>system_admin</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>director</name>
-        <rename>director</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>manager</name>
-        <rename>manager</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>consultant</name>
-        <rename>consultant</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>researcher</name>
-        <rename>researcher</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>date_format</name>
-        <rename>date_format</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>first_name</name>
-        <rename>first_name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>last_name</name>
-        <rename>last_name</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>608</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Industry lookup</name>
+    <name>Branch lookup</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -2686,35 +4147,36 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
-      <schema>public</schema>
-      <table>vertical</table>
+      <schema/>
+      <table>team_group</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
-        <name>industry</name>
+        <name>branch</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name/>
-        <field>parent_id</field>
-        <condition>IS NULL</condition>
+        <name>group_type</name>
+        <field>group_type</field>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
         <name>id</name>
-        <rename>VCIndustryID</rename>
+        <rename>VCTeamID</rename>
         <default/>
-        <type>Integer</type>
+        <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2723,46 +4185,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>80</yloc>
+      <xloc>416</xloc>
+      <yloc>1120</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Industry</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, replace&#x28;industry, char&#x28;10&#x29;, &#x27; &#x2f; &#x27;&#x29;&#x29; as industry&#xd;&#xa;, sub_industry&#xd;&#xa;from vc_new_industry_list&#xd;&#xa;order by industry, sub_industry</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Sub industry</name>
+    <name>Insert placement branch</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -2772,10 +4201,10 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (PROD)</connection>
     <schema>public</schema>
-    <table>vertical</table>
-    <commit>1000</commit>
+    <table>branch_record</table>
+    <commit>100</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
@@ -2790,15 +4219,20 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>name</column_name>
-          <stream_name>sub_industry</stream_name>
-        </field>
-        <field>
-          <column_name>parent_id</column_name>
-          <stream_name>VCIndustryID</stream_name>
-        </field>
+      <field>
+        <column_name>branch_id</column_name>
+        <stream_name>VCTeamID</stream_name>
+      </field>
+      <field>
+        <column_name>record_id</column_name>
+        <stream_name>VCOfferID</stream_name>
+      </field>
+      <field>
+        <column_name>record_type</column_name>
+        <stream_name>record_type</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -2807,15 +4241,700 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1120</xloc>
-      <yloc>80</yloc>
+      <xloc>1104</xloc>
+      <yloc>1120</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
+  </step>
+  <step>
+    <name>Insert/update user brand 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>team_group_user</table>
+      <key>
+        <name>vcuserid</name>
+        <field>user_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCTeamID</name>
+        <field>team_group_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>user_id</name>
+        <rename>vcuserid</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>team_group_id</name>
+        <rename>VCTeamID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>insert_timestamp</name>
+        <rename>insert_timestamp</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>1216</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Offer</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>offer</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCJobAppID</name>
+        <field>position_candidate_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCOfferID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>1120</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Position Candidate</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>VCJobID</name>
+        <field>position_description_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCCandidateID</name>
+        <field>candidate_id_bkup</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobAppID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>1120</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>PROD Audit Branch</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding>UTF-8</encoding>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>E:\mike\VC_Randstad\Working\PROD\20200710_placement_branch</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>cand_ext_id</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCCandidateID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>job_ext_id</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCJobID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>VCJobAppID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>VCOfferID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>branch</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCTeamID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>record_type</name>
+        <type>String</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>1040</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Candidate lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>candidate</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>cand_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCandidateID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>1232</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Job lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (PROD)</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>position_description</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>job_ext_id</name>
+        <field>external_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCJobID</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>1120</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Offer Branch</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>---Organize in row_number, with highest stage, latest date
+with jobapp as (select cand_ext_id
+, job_ext_id
+, app_status
+, action_date
+, rejected_date
+, concat(cand_ext_id, job_ext_id) as jobapp_rn
+, row_number() over(partition by cand_ext_id, job_ext_id
+		order by action_date desc,
+				case app_status
+				when 'Shortlisted - Pending' then 1
+				when 'Shortlisted - Rejected' then 1
+				when 'Sent - Pending' then 2
+				when 'Sent - Rejected' then 2
+				when '1st Interview - Pending' then 3
+				when '1st Interview - Rejected' then 3
+				when '2nd+ Interview - Pending' then 4
+				when '2nd+ Interview - Rejected' then 4
+				when 'Offered - received' then 5
+				when 'Placed - Starting' then 6
+				when 'Placed - Active' then 7
+				end desc) as rn
+, rank() over(partition by cand_ext_id, job_ext_id
+		order by --action_date desc,
+				case app_status
+				when 'Shortlisted - Pending' then 1
+				when 'Shortlisted - Rejected' then 1
+				when 'Sent - Pending' then 2
+				when 'Sent - Rejected' then 2
+				when '1st Interview - Pending' then 3
+				when '1st Interview - Rejected' then 3
+				when '2nd+ Interview - Pending' then 4
+				when '2nd+ Interview - Rejected' then 4
+				when 'Offered - received' then 5
+				when 'Placed - Starting' then 6
+				when 'Placed - Active' then 6
+				end desc) as rank_rn
+, sub_status
+from pa_final_jobapp2
+where cand_ext_id &lt;&gt; 'CDT000000' and job_ext_id &lt;&gt; 'JOB000000'
+)
 
+---Job Type | Employment Type | 雇用区分
+, jobtype as (select [PANO ] as job_ext_id
+	, value as jobtype
+	from csv_job
+	cross apply string_split([雇用区分], char(10))
+	where [雇用区分] &lt;&gt; '')
+
+, jobtype_employment as (select job_ext_id
+	, case jobtype
+		when '正社員' then 1
+		when '契約社員' then 3
+		when '紹介予定派遣' then 5
+		when '【新卒】　正社員' then 2
+		when '【新卒】　契約社員' then 4
+		when '【新卒】　紹介予定派遣' then 6
+		else 0 end as jobtype
+	, case jobtype 
+		when '正社員' then 1
+		when '契約社員' then 3
+		when '紹介予定派遣' then 5
+		when '【新卒】　正社員' then 2
+		when '【新卒】　契約社員' then 4
+		when '【新卒】　紹介予定派遣' then 6
+		else 0 end as employment_type
+	from jobtype)
+
+, type_employment_rn as (select job_ext_id
+	, jobtype
+	, row_number() over(partition by job_ext_id order by jobtype asc) as jobtype_rn
+	, employment_type
+	, row_number() over(partition by job_ext_id order by employment_type asc) as employmentype_rn
+	from jobtype_employment
+	where jobtype > 0 and employment_type > 0)
+
+, final_jobtype as (select job_ext_id
+	, case 
+		when jobtype in (1, 2) then 'PERMANENT'
+		when jobtype in (3, 4) then 'CONTRACT'
+		when jobtype in (5, 6) then 'TEMPORARY_TO_PERMANENT'
+		else 'PERMANENT' end as jobtype
+	, case 
+		when employment_type in (1, 2) then 'FULL_TIME'
+		when employment_type in (3, 4) then 'FULL_TIME'
+		else NULL end as employment_type
+	from type_employment_rn
+	where jobtype_rn = 1)
+
+/* Check reference
+select *
+from jobapp --CDT183041	JOB117535
+*/
+
+, jobappfilter as (select *
+	, case 
+		when app_status in ('Shortlisted - Pending', 'Shortlisted - Rejected') then 'SHORTLISTED'
+		when app_status in ('Sent - Pending', 'Sent - Rejected') then 'SENT'
+		when app_status in ('1st Interview - Pending', '1st Interview - Rejected') then 'FIRST_INTERVIEW'
+		when app_status in ('2nd+ Interview - Pending', '2nd+ Interview - Rejected') then 'SECOND_INTERVIEW'
+		when app_status in ('Offered - received') then 'OFFERED'
+		when app_status in ('Placed - Starting', 'Placed - Active') then 'PLACED'
+		else NULL end as stage
+	from jobapp
+	where rn = rank_rn
+	--and cand_ext_id = 'CDT183041' and job_ext_id = 'JOB117535' --check conditions if ok
+)
+
+, offer as (select [キャンディデイト PANO ]
+		, [JOB PANO ]
+		, [売上 担当者1]
+		, [売上 担当者1ユーザID]
+		, [売上 担当者2]
+		, [売上 担当者2ユーザID]
+		, coalesce(nullif([売上 担当者1],''), nullif([売上 担当者2], '')) as consultant
+	from csv_contract
+	where coalesce(nullif([売上 担当者1],''), nullif([売上 担当者2], '')) is not NULL --8561
+	)
+
+, branch_offer as (select [キャンディデイト PANO ]
+		, [JOB PANO ]
+		, coalesce(nullif(lp.vc_office_jap, '') + ' (' + nullif(lp.vc_office_en, '') + ')', NULL) as branch
+		from offer o
+		left join (select * from LP_Office where category = 'candidate') lp on lp.pa_office = o.consultant
+		) --select * from branch_offer --8561
+
+select ja.cand_ext_id
+	, ja.job_ext_id
+	, ja.original_stage
+	, case when jt.jobtype = 'CONTRACT' then 302
+	when jt.jobtype = 'TEMPORARY_TO_PERMANENT' then 303
+	else 301 end as position_status --placed_job_type
+	, ja.stage
+	, ja.sub_status
+	, ja.action_date
+	, ja.stage5
+	, ja.offer_date as offer_date_original
+	, ja.stage6
+	, ja.placed_date as placed_date_original
+	, c.branch
+	, 'offer' as record_type
+	, 'BRANCH' as group_type
+from vc_final_jobapp2 ja
+left join (select * from branch_offer where branch is not NULL) c on c.[キャンディデイト PANO ] = ja.cand_ext_id and c.[JOB PANO ] = ja.job_ext_id
+left join final_jobtype jt on jt.job_ext_id = ja.job_ext_id
+where 1=1
+and ja.original_stage in ('Offered - received')
+and c.branch is not NULL
+order by ja.cand_ext_id, ja.job_ext_id --11</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>1232</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>PROD Offer Audit Branch</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding>UTF-8</encoding>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>E:\mike\VC_Randstad\Working\PROD\20200710_offer_branch</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>cand_ext_id</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCCandidateID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>job_ext_id</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCJobID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>VCJobAppID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>VCOfferID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>branch</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>VCTeamID</name>
+        <type>BigNumber</type>
+        <format>#</format>
+      </field>
+      <field>
+        <name>record_type</name>
+        <type>String</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>1232</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

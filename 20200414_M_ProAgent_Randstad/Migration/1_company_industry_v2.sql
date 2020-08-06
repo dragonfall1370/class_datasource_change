@@ -23,7 +23,6 @@ with split_ind as (select pa_name
 	cross apply string_split(replace(replace([その他業種], '[業種]', '|'), char(10), ''), '|')
 	where coalesce(nullif([その他業種],''), NULL) is not NULL)
 
---MAIN SCRIPT
 , company_industry as (select [PANO ]
 	, [業種1] as original
 	, trim([業種1]) as pa_industry

@@ -15,8 +15,8 @@ where coalesce(nullif([入学年月 年1], ''), nullif([卒退区分1], '')
 UNION ALL
 
 select [PANO ]
-	, [卒業年月 年2] --period year from
-	, [卒業年月 月2] --period month from
+	, [入学年月 年2] --period year from --updated 20200708
+	, [入学年月 月2] --period month from --updated 20200708
 	, [卒業年月 年2] --period year to
 	, [卒業年月 月2] --period month to
 	, [卒退区分2] --classification 2

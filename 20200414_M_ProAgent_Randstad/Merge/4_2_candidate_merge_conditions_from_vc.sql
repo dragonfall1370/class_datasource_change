@@ -24,7 +24,9 @@ with pa_candidate as (select id, email
 		from candidate c
 		join mike_tmp_pa_candidate_merged m on m.candidate_id = c.id
 		where deleted_timestamp is NULL
-		and external_id ilike 'CDT%')
+		and external_id ilike 'CDT%'
+		and m.primary_email is not NULL --PA candidate not having primary email
+		)
 
 , pa_candidate_rn as (select id
 		, lower(trim(pa_email)) pa_email
@@ -32,7 +34,7 @@ with pa_candidate as (select id, email
 		, external_id
 		, insert_timestamp
 		, update_date
-		from pa_candidate)
+		from pa_candidate) --select * from pa_candidate_rn | 157788
 
 , vc_candidate as (select id, email, first_name, last_name
 		, substring(email, position(']' in email) + 1, length(email)) as vc_email
@@ -42,7 +44,7 @@ with pa_candidate as (select id, email
 		join candidate_extension ce on ce.candidate_id = c.id
 		where deleted_timestamp is NULL
 		and (external_id is NULL or external_id not ilike 'CDT%')
-		and email ilike '%_@_%.__%')
+		and email ilike '%_@_%.__%') --select * from vc_candidate | 77636
 		
 , vc_candidate_rn as (select id
 		, lower(trim(vc_email)) vc_email
@@ -51,7 +53,7 @@ with pa_candidate as (select id, email
 		, insert_timestamp
 		, last_activity_date
 		from vc_candidate
-		where vc_email ilike '%_@_%.__%')
+		where vc_email ilike '%_@_%.__%') --select * from vc_candidate_rn
 --select * from vc_candidate_rn
 
 --MAIN SCRIPT

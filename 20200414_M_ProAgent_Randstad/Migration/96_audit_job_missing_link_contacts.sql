@@ -74,3 +74,94 @@ where [採用担当者ID] in (select concat('REC-', [採用担当者ID]) from cs
 select *
 from csv_rec
 where [採用担当者ID] = 'REC-78654'
+
+
+---Additional check for job missing contacts links
+select *
+from mike_tmp_company_dup_check2 --6284
+
+select *
+from mike_tmp_company_dup_check --4884
+
+select *
+from mike_tmp_company_dup_check2
+where com_ext_id = 'CPY000714'
+
+--
+with job_company as (select pd.id, pd.contact_id, pd.company_id, pd.company_id_bkup, pd.contact_id_bkup, pd.external_id
+	, pd.contact_id
+	, pd.contact_id_bkup
+	, c.company_id as new_contact_company_id
+	, c.company_id_bkup as old_contact_company_id
+	from position_description pd
+	join (select id, company_id, company_id_bkup, external_id from contact 
+	      	where company_id_bkup <> company_id and company_id_bkup > 0) c on c.id = pd.contact_id
+	)
+
+update position_description pd
+set company_id = jc.new_contact_company_id
+from job_company jc
+where jc.id = pd.id --VC job id in both tables | 15915 rows
+and jc.company_id <> jc.new_contact_company_id
+
+--Check special case
+select id, name
+from company
+where external_id = 'CPY000714' --company_id=40702
+
+select *
+from contact
+where 1=1
+--and company_id = 40702 --contact_id=65314
+and company_id = 14657 --merge with com_ext_id = 'CPY000714'
+
+--Check special case for job > default contact = 'DEFCPY000714' | update to correct and merged contact in VC
+select id, external_id, company_id, contact_id, company_id_bkup, contact_id_bkup
+from position_description
+where company_id = 14657
+and company_id_bkup = 40702
+
+select id, external_id, company_id, company_id_bkup, insert_timestamp, deleted_timestamp
+from contact
+where id = 65314
+
+select id, first_name, last_name, external_id, company_id, company_id_bkup, insert_timestamp, deleted_timestamp
+from contact
+where external_id = 'REC-207239' --id=62813
+
+select *
+from mike_tmp_contact_dup_check2
+where contact_id = 38204 --merge with contact_id=26586
+
+select id, first_name, last_name, external_id, company_id, company_id_bkup, insert_timestamp, deleted_timestamp
+from contact
+where id in (26586, 62813, 65314)
+
+select id, external_id, company_id, company_id_bkup, contact_id, contact_id_bkup
+from position_description
+where company_id = 14657
+and contact_id = 65314 --140 jobs
+
+update position_description
+set contact_id = 26586 --switch to VC merged contact 26586 via contact_id=62813
+where company_id = 14657
+and contact_id = 65314 --wrong contact from PA instead of correct contact_id=62813
+
+--
+select id, external_id, company_id, company_id_bkup, insert_timestamp, deleted_timestamp
+from contact
+where 1=1
+--and external_id ilike 'DEF%' --6 default contacts
+and external_id in ('REC-155683' --id=37729
+										, 'REC-253581' --id=42711
+										, 'REC-78654' --id=??
+										, 'REC-250767' --id=40338
+										)
+
+select *
+from contact
+where external_id = 'REC-78654'
+
+select *
+from contact_deleted
+order by id desc

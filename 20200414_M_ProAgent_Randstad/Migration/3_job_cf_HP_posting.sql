@@ -3,8 +3,8 @@ select [PANO ] as job_ext_id
 	, 'add_job_info' as additional_type
 	, 1003 as form_id
 	, 1048 as field_id
-	, case when [HP公開] = '公開' then 'Release'
-		when [HP公開] = '非公開' then 'Private'
+	, case when [HP公開] = '公開' then 'Open' --'Release'
+		when [HP公開] = '非公開' then 'Closed' --'Private'
 		else NULL end as field_value
 	, current_timestamp as insert_timestamp
 from csv_job

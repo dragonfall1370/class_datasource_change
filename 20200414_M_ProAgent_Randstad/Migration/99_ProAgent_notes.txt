@@ -50,5 +50,5 @@ using upsert in postgres for appending values
 
 
 --UNICODE CHAR
-using postgres to update so need to prevent using unicode chars or encoding chars
+using postgres to update so as to prevent using unicode chars or encoding chars
 

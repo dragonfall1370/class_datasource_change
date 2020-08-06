@@ -9,6 +9,7 @@ with jobcontact as (select distinct [PANO ], [企業 PANO ], [採用担当者ID]
 		from csv_job)
 
 
+/* PROD temp table added
 , open_enddate as (select [Job PANo]
 		, coalesce(nullif(convert(date, [Open], 120),''), NULL) as open_date
 		, coalesce(nullif(convert(date, [Close], 120),''), NULL) as end_date
@@ -16,7 +17,8 @@ with jobcontact as (select distinct [PANO ], [企業 PANO ], [採用担当者ID]
 		from csv_Job_Situation
 		where coalesce(nullif([Open],''), nullif([Close],''), nullif([Other],'')) is not NULL)
 
-/* From REVIEW 2, final_jobtype will be run from temporary table
+
+--From REVIEW 2, final_jobtype will be run from temporary table
 ---Job Type | Employment Type | 雇用区分
 , jobtype as (select [PANO ] as job_ext_id
 	, value as jobtype
@@ -40,6 +42,7 @@ else 0
 '【新卒】　契約社員' then 'FULL_TIME' > 4
 '【新卒】　紹介予定派遣' then NULL > 6
 else 0 
+---
 
 , jobtype_employment as (select job_ext_id
 	, case jobtype
@@ -116,26 +119,23 @@ from final_jobtype
 select j.[PANO ] as [position-externalId]
 , j.[企業 PANO ] as original_com
 , j.[採用担当者ID] as original_contact
-, case when j.[企業 PANO ] not in (select [PANO ] from csv_recf) then 'REC-999999999' --default contact
-		when j.[企業 PANO ] in (select [PANO ] from jobcontact) then default_contactID --default contact in each company
+, case when not exists (select 1 from csv_recf where [PANO ] = j.[企業 PANO ]) then 'REC-999999999' --default company&contact
+		when exists (select 1 from jobcontact where [PANO ] = j.[PANO ]) then default_contactID --default contact in each company
 		else concat('REC-', j.[採用担当者ID]) end as [position-contactId]
 , case when j.[PANO ] in (select [PANO ] from dup where rn > 1) then concat_ws(' - ', j.[ポジション名], dup.rn)
 		else coalesce(nullif(j.[ポジション名],''), 'No job title') end as [position-title]
 , j.募集状況 --check the status of job
 , coalesce(nullif(oe.open_date,''), convert(date, j.[登録日], 120)) as [position-startDate]
---, case --added new rule on 05-Mar-2020
---		when j.[募集状況] = 'Close' then 
---			(case when dateadd(year, 1, coalesce(oe.open_date, j.[登録日])) >= now() then now() - interval '1 month'
---				else dateadd(year, 1, coalesce(oe.open_date, j.[登録日])) end)
---		when oe.end_date is NULL and j.[募集状況] <> 'Close' then dateadd(year, 1, coalesce(oe.open_date, j.[登録日]))
---		else convert(date, oe.end_date, 120) end as [position-endDate]
+
 --New rule since 31-Mar-2020
 , dateadd(year, 3, coalesce(nullif(oe.open_date,''), convert(date, j.[登録日], 120))) as [position-endDate]
 , convert(date, oe.other_date, 120) as submission_date --#CF
 , convert(numeric, coalesce(try_parse(採用人数 as numeric using 'ja-JP'), 2)) as [position-headcount]
 , 'JPY' as [position-currency]
-, trim(u.EmailAddress) as [position-owners] --JOB担当者ユーザID
 
+--Update owners rule 01-Jul-2020
+, case when j.[JOB担当者ユーザID] in ('FPC163', 'FPC207') then NULL --JOB担当者ユーザID
+		else trim(u.EmailAddress) end as [position-owners] --updated on 20200224
 --Job brief
 , concat_ws(concat(char(10),char(13))
 	, coalesce('【紹介料（料率or金額）】' + char(10) + nullif([紹介料（料率or金額）], ''), NULL) --Referral fee (rate or amount)
@@ -159,3 +159,4 @@ left join final_jobtype jt on jt.job_ext_id = j.[PANO ]
 where j.[雇用区分] not like '%障がい者採用正社員%'
 and j.[雇用区分] not like '%障がい者採用契約社員%'
 and j.[雇用区分] not like '%障がい者採用紹介予定派遣%' --140960
+--and j.[企業 PANO ] in ('CPY001004', 'CPY018374', 'CPY000714', 'CPY018332', 'CPY018996', 'CPY000921')

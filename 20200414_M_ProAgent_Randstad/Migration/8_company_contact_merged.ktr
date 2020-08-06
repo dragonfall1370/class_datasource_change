@@ -588,7 +588,7 @@
     <server>localhost</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>randstadreview2</database>
+    <database>randstadprod</database>
     <port>1433</port>
     <username>sa</username>
     <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
@@ -609,11 +609,11 @@
     </attributes>
   </connection>
   <connection>
-    <name>To &#x28;REVIEW2&#x29;</name>
-    <server>10.10.10.92</server>
+    <name>To &#x28;prod&#x29;</name>
+    <server>rdbm1</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>randstad-review2.vincere.io</database>
+    <database>randstad.vincere.io</database>
     <port>5432</port>
     <username>dbapplication_user</username>
     <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
@@ -636,27 +636,27 @@
     <hop>
       <from>PA company</from>
       <to>Company lookup</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Company lookup</from>
       <to>VC company merged</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>PA contact</from>
       <to>Company lookup 2</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Company lookup 2</from>
       <to>Contact lookup</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Contact lookup</from>
       <to>VC contact merged</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>PA job title &#x7c; name</from>
@@ -730,6 +730,234 @@
     </hop>
   </order>
   <step>
+    <name>CF Bz Details&#x2a;&#x2a;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>--&#x23;CF Business Details &#x7c; 1002 &#x7c; Text Area&#xd;&#xa;with latest_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 form_id&#xd;&#xa;	, 1002 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2255 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;, older_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 &#xd;&#xa;	, 1002 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29;&#xd;&#xa;	and vc_company_id not in &#x28;select vc_company_id from latest_company&#x29; --2395 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select &#x2a;&#xd;&#xa;from latest_company&#xd;&#xa;UNION&#xd;&#xa;select &#x2a;&#xd;&#xa;from older_company</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>CF Name of representative&#x2a;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>--&#x23;CF Name of representative &#x7c; 11274 &#x7c; Free Text&#xd;&#xa;---Latest PA companies&#xd;&#xa;with latest_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 form_id&#xd;&#xa;	, 11274 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2255 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;, older_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 &#xd;&#xa;	, 11274 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29;&#xd;&#xa;	and vc_company_id not in &#x28;select vc_company_id from latest_company&#x29; --2395 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select &#x2a;&#xd;&#xa;from latest_company&#xd;&#xa;UNION&#xd;&#xa;select &#x2a;&#xd;&#xa;from older_company</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>CF PANO&#x2a;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>--&#x23;CF PANO &#x7c; 11275 &#x7c; Free Text&#xd;&#xa;---Latest PA companies&#xd;&#xa;with latest_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 form_id&#xd;&#xa;	, 11275 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2255 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;---Older PA companies&#xd;&#xa;, older_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 &#xd;&#xa;	, 11275 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29;&#xd;&#xa;	and vc_company_id not in &#x28;select vc_company_id from latest_company&#x29; --2395 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select &#x2a;&#xd;&#xa;from latest_company&#xd;&#xa;UNION&#xd;&#xa;select &#x2a;&#xd;&#xa;from older_company</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>CF additional_id lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>additional_form_values</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>additional_type</name>
+        <field>additional_type</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>contact_id</name>
+        <field>additional_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>form_id</name>
+        <field>form_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>field_id</name>
+        <field>field_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>field_value</name>
+        <rename>VCFieldValue</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>CF company lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>additional_form_values</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>additional_type</name>
+        <field>additional_type</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>vc_pa_company_id</name>
+        <field>additional_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>form_id</name>
+        <field>form_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>field_id</name>
+        <field>field_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>field_value</name>
+        <rename>VCFieldValue</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>Company lookup</name>
     <type>DBLookup</type>
     <description/>
@@ -740,7 +968,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -784,6 +1012,405 @@
     </step>
 
   <step>
+    <name>Company lookup 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>company</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>com_ext_id</name>
+        <field>external_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCCompanyID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Contact lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>contact</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>con_ext_id</name>
+        <field>external_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name/>
+        <field>deleted_timestamp</field>
+        <condition>IS NULL</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCContactID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Current location lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>common_location</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>contact_id</name>
+        <field>contact_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCLocationID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#x2f; Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>additional_form_values</table>
+      <key>
+        <name>additional_type</name>
+        <field>additional_type</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>form_id</name>
+        <field>form_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>field_id</name>
+        <field>field_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>merged_contact_id</name>
+        <field>additional_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>additional_type</name>
+        <rename>additional_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>additional_id</name>
+        <rename>merged_contact_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>form_id</name>
+        <rename>form_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_id</name>
+        <rename>field_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_value</name>
+        <rename>VCFieldValue</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#x2f; Update company CF&#x2a;&#x2a;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>additional_form_values</table>
+      <key>
+        <name>additional_type</name>
+        <field>additional_type</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>form_id</name>
+        <field>form_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>field_id</name>
+        <field>field_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>vc_company_id</name>
+        <field>additional_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>additional_type</name>
+        <rename>additional_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>additional_id</name>
+        <rename>vc_company_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>form_id</name>
+        <rename>form_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_id</name>
+        <rename>field_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_value</name>
+        <rename>VCFieldValue</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Insert company CF&#x2a;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>additional_form_values</table>
+      <key>
+        <name>additional_type</name>
+        <field>additional_type</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>form_id</name>
+        <field>form_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>field_id</name>
+        <field>field_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>vc_company_id</name>
+        <field>additional_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>additional_type</name>
+        <rename>additional_type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>additional_id</name>
+        <rename>vc_company_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>form_id</name>
+        <rename>form_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_id</name>
+        <rename>field_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>field_value</name>
+        <rename>VCFieldValue</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>PA company</name>
     <type>TableInput</type>
     <description/>
@@ -816,6 +1443,485 @@
     </step>
 
   <step>
+    <name>PA company info</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>select m.vc_pa_company_id&#xd;&#xa;, m.com_ext_id&#xd;&#xa;, c.website as pa_website&#xd;&#xa;, m.vc_company_id&#xd;&#xa;, c2.website&#xd;&#xa;from mike_tmp_company_dup_check m&#xd;&#xa;join company c on  c.id &#x3d; m.vc_pa_company_id&#xd;&#xa;join company c2 on c2.id &#x3d; m.vc_company_id&#xd;&#xa;where 1&#x3d;1&#xd;&#xa;and m.rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2310 &#x7c; already check company latest date&#xd;&#xa;--and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c;&#x3d; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2574&#xd;&#xa;and c.website is not NULL --only migrated valid --1963 rows</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>PA company location</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>select m.vc_pa_company_id&#xd;&#xa;, m.com_ext_id&#xd;&#xa;, m.vc_company_id --merged company&#xd;&#xa;, cl.id as location_id&#xd;&#xa;, &#x27;PA-VC&#x27; &#x7c;&#x7c; cl.id&#x3a;&#x3a;text as location_ext_id&#xd;&#xa;, cl.state&#xd;&#xa;, cl.city&#xd;&#xa;, cl.district&#xd;&#xa;, cl.post_code&#xd;&#xa;, cl.address&#xd;&#xa;, cl.location_name&#xd;&#xa;, &#x27;&#x3010;Merged from PA&#x3a; &#x27; &#x7c;&#x7c; m.com_ext_id &#x7c;&#x7c; &#x27;&#x3011;&#x27; as note&#xd;&#xa;from mike_tmp_company_dup_check m&#xd;&#xa;join company_location cl on cl.company_id &#x3d; m.vc_pa_company_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>PA contact</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From &#x28;DB&#x29;</connection>
+    <sql>--PA MAIN SCRIPT&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; com_ext_id&#xd;&#xa;, &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; con_ext_id&#xd;&#xa;, &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;&#x5d; contact_name&#xd;&#xa;, &#x5b;&#x30d5;&#x30ea;&#x30ac;&#x30ca;&#x5d; contact_name_kana&#xd;&#xa;, &#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5d; contact_email&#xd;&#xa;, convert&#x28;datetime, &#x5b;&#x767b;&#x9332;&#x65e5;&#x5d;, 120&#x29; reg_date&#xd;&#xa;, convert&#x28;datetime, &#x5b;&#x66f4;&#x65b0;&#x65e5;&#x5d;, 120&#x29; update_date&#xd;&#xa;, &#x5b;&#x66f4;&#x65b0;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; update_by&#xd;&#xa;, &#x5b;&#x66f4;&#x65b0;&#x8005;&#x5d; update_by_user&#xd;&#xa;from csv_rec</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>PA contact location</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>select &#x2a;&#xd;&#xa;from mike_tmp_contact_dup_check&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;pa_update_date, insert_timestamp&#x29; &#x3e; coalesce&#x28;last_activity_date, vc_insert_timestamp&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>PA job title &#x7c; name</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>select m.company_id&#xd;&#xa;, m.company_id_bkup&#xd;&#xa;, m.contact_id&#xd;&#xa;, m.pa_contact_name&#xd;&#xa;, m.pa_contact_name_kana&#xd;&#xa;, m.new_company_id&#xd;&#xa;, m.merged_contact_id&#xd;&#xa;, c.job_title&#xd;&#xa;from mike_tmp_contact_dup_check m&#xd;&#xa;join contact c on c.id &#x3d; m.contact_id&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;m.pa_update_date, m.insert_timestamp&#x29; &#x3e; coalesce&#x28;m.last_activity_date, m.vc_insert_timestamp&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>PANO additional</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>select m.merged_contact_id&#xd;&#xa;	, m.contact_id&#xd;&#xa;	, m.rn&#xd;&#xa;	, a.field_value&#xd;&#xa;	, &#x27;add_con_info&#x27; additional_type&#xd;&#xa;	, 1140 form_id&#xd;&#xa;	, 11276 field_id&#xd;&#xa;	from mike_tmp_contact_dup_check2 m&#xd;&#xa;	join &#x28;select &#x2a; from additional_form_values where form_id &#x3d; 1140 and field_id &#x3d; 11276&#x29; a on a.additional_id &#x3d; m.contact_id&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and a.field_value is not NULL and a.field_value &#x3c;&#x3e; &#x27;&#x27;&#xd;&#xa;	and contact_id not in &#x28;select contact_id from mike_tmp_contact_dup_check&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>PANO new contacts</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>select &#x2a;&#xd;&#xa;, &#x27;add_con_info&#x27; additional_type&#xd;&#xa;, 1140 form_id&#xd;&#xa;, 11276 field_id&#xd;&#xa;from mike_tmp_contact_dup_check&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;pa_update_date, insert_timestamp&#x29; &#x3e; coalesce&#x28;last_activity_date, vc_insert_timestamp, &#x27;1900-01-01&#x27;&#x29; --139</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>PANO old contacts</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <sql>select &#x2a;&#xd;&#xa;, &#x27;add_con_info&#x27; additional_type&#xd;&#xa;, 1140 form_id&#xd;&#xa;, 11276 field_id&#xd;&#xa;from mike_tmp_contact_dup_check&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;pa_update_date, insert_timestamp&#x29; &#x3c;&#x3d; coalesce&#x28;last_activity_date, vc_insert_timestamp, &#x27;1900-01-01&#x27;&#x29; --1586</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Update comp info</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>company</table>
+      <key>
+        <name>vc_company_id</name>
+        <field>id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+        </key>
+      <value>
+        <name>website</name>
+        <rename>pa_website</rename>
+        </value>
+      </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Update info</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>contact</table>
+      <key>
+        <name>merged_contact_id</name>
+        <field>id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+        </key>
+      <value>
+        <name>job_title</name>
+        <rename>job_title</rename>
+        </value>
+      <value>
+        <name>last_name</name>
+        <rename>pa_contact_name</rename>
+        </value>
+      <value>
+        <name>last_name_kana</name>
+        <rename>pa_contact_name_kana</rename>
+        </value>
+      </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Update location</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>contact</table>
+      <key>
+        <name>merged_contact_id</name>
+        <field>id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+        </key>
+      <value>
+        <name>current_location_id</name>
+        <rename>VCLocationID</rename>
+        </value>
+      </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>VC company location</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <schema/>
+    <table>company_location</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>company_id</column_name>
+          <stream_name>vc_company_id</stream_name>
+        </field>
+        <field>
+          <column_name>state</column_name>
+          <stream_name>state</stream_name>
+        </field>
+        <field>
+          <column_name>city</column_name>
+          <stream_name>city</stream_name>
+        </field>
+        <field>
+          <column_name>district</column_name>
+          <stream_name>district</stream_name>
+        </field>
+        <field>
+          <column_name>post_code</column_name>
+          <stream_name>post_code</stream_name>
+        </field>
+        <field>
+          <column_name>address</column_name>
+          <stream_name>address</stream_name>
+        </field>
+        <field>
+          <column_name>location_name</column_name>
+          <stream_name>location_name</stream_name>
+        </field>
+        <field>
+          <column_name>note</column_name>
+          <stream_name>note</stream_name>
+        </field>
+        <field>
+          <column_name>location_ext_id</column_name>
+          <stream_name>location_ext_id</stream_name>
+        </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>VC company merged</name>
     <type>TableOutput</type>
     <description/>
@@ -826,7 +1932,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <schema/>
     <table>mike_tmp_pa_company_merged</table>
     <commit>1000</commit>
@@ -896,92 +2002,6 @@
     </step>
 
   <step>
-    <name>Company lookup 2</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>company</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>com_ext_id</name>
-        <field>external_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name/>
-        <field>deleted_timestamp</field>
-        <condition>IS NULL</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>VCCompanyID</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PA contact</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>--PA MAIN SCRIPT&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; com_ext_id&#xd;&#xa;, &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; con_ext_id&#xd;&#xa;, &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;&#x5d; contact_name&#xd;&#xa;, &#x5b;&#x30d5;&#x30ea;&#x30ac;&#x30ca;&#x5d; contact_name_kana&#xd;&#xa;, &#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5d; contact_email&#xd;&#xa;, convert&#x28;datetime, &#x5b;&#x767b;&#x9332;&#x65e5;&#x5d;, 120&#x29; reg_date&#xd;&#xa;, convert&#x28;datetime, &#x5b;&#x66f4;&#x65b0;&#x65e5;&#x5d;, 120&#x29; update_date&#xd;&#xa;, &#x5b;&#x66f4;&#x65b0;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; update_by&#xd;&#xa;, &#x5b;&#x66f4;&#x65b0;&#x8005;&#x5d; update_by_user&#xd;&#xa;from csv_rec</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
     <name>VC contact merged</name>
     <type>TableOutput</type>
     <description/>
@@ -992,7 +2012,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <schema/>
     <table>mike_tmp_pa_contact_merged</table>
     <commit>1000</commit>
@@ -1065,1026 +2085,6 @@
     <GUI>
       <xloc>1248</xloc>
       <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Contact lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>contact</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>con_ext_id</name>
-        <field>external_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name/>
-        <field>deleted_timestamp</field>
-        <condition>IS NULL</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>VCContactID</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PA job title &#x7c; name</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select m.company_id&#xd;&#xa;, m.company_id_bkup&#xd;&#xa;, m.contact_id&#xd;&#xa;, m.pa_contact_name&#xd;&#xa;, m.pa_contact_name_kana&#xd;&#xa;, m.new_company_id&#xd;&#xa;, m.merged_contact_id&#xd;&#xa;, c.job_title&#xd;&#xa;from mike_tmp_contact_dup_check m&#xd;&#xa;join contact c on c.id &#x3d; m.contact_id&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;m.pa_update_date, m.insert_timestamp&#x29; &#x3e; coalesce&#x28;m.last_activity_date, m.vc_insert_timestamp&#x29;</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Update info</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>100</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>Y</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>contact</table>
-      <key>
-        <name>merged_contact_id</name>
-        <field>id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-        </key>
-      <value>
-        <name>job_title</name>
-        <rename>job_title</rename>
-        </value>
-      <value>
-        <name>last_name</name>
-        <rename>pa_contact_name</rename>
-        </value>
-      <value>
-        <name>last_name_kana</name>
-        <rename>pa_contact_name_kana</rename>
-        </value>
-      </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PA contact location</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select &#x2a;&#xd;&#xa;from mike_tmp_contact_dup_check&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;pa_update_date, insert_timestamp&#x29; &#x3e; coalesce&#x28;last_activity_date, vc_insert_timestamp&#x29;</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Update location</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>100</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>Y</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>contact</table>
-      <key>
-        <name>merged_contact_id</name>
-        <field>id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-        </key>
-      <value>
-        <name>current_location_id</name>
-        <rename>VCLocationID</rename>
-        </value>
-      </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Current location lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>common_location</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>contact_id</name>
-        <field>contact_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>VCLocationID</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PANO new contacts</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select &#x2a;&#xd;&#xa;, &#x27;add_con_info&#x27; additional_type&#xd;&#xa;, 1140 form_id&#xd;&#xa;, 11276 field_id&#xd;&#xa;from mike_tmp_contact_dup_check&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;pa_update_date, insert_timestamp&#x29; &#x3e; coalesce&#x28;last_activity_date, vc_insert_timestamp, &#x27;1900-01-01&#x27;&#x29; --139</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>640</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PANO old contacts</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select &#x2a;&#xd;&#xa;, &#x27;add_con_info&#x27; additional_type&#xd;&#xa;, 1140 form_id&#xd;&#xa;, 11276 field_id&#xd;&#xa;from mike_tmp_contact_dup_check&#xd;&#xa;where rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;pa_update_date, insert_timestamp&#x29; &#x3c;&#x3d; coalesce&#x28;last_activity_date, vc_insert_timestamp, &#x27;1900-01-01&#x27;&#x29; --1586</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>720</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <commit>100</commit>
-    <update_bypassed>Y</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>additional_form_values</table>
-      <key>
-        <name>additional_type</name>
-        <field>additional_type</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>form_id</name>
-        <field>form_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>field_id</name>
-        <field>field_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>merged_contact_id</name>
-        <field>additional_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>additional_type</name>
-        <rename>additional_type</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>additional_id</name>
-        <rename>merged_contact_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>form_id</name>
-        <rename>form_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>field_id</name>
-        <rename>field_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>field_value</name>
-        <rename>VCFieldValue</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>720</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>CF additional_id lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>additional_form_values</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>additional_type</name>
-        <field>additional_type</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>contact_id</name>
-        <field>additional_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>form_id</name>
-        <field>form_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>field_id</name>
-        <field>field_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>field_value</name>
-        <rename>VCFieldValue</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>720</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PA company info</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select m.vc_pa_company_id&#xd;&#xa;, m.com_ext_id&#xd;&#xa;, c.website as pa_website&#xd;&#xa;, m.vc_company_id&#xd;&#xa;, c2.website&#xd;&#xa;from mike_tmp_company_dup_check m&#xd;&#xa;join company c on  c.id &#x3d; m.vc_pa_company_id&#xd;&#xa;join company c2 on c2.id &#x3d; m.vc_company_id&#xd;&#xa;where 1&#x3d;1&#xd;&#xa;and m.rn &#x3d; 1&#xd;&#xa;and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2310 &#x7c; already check company latest date&#xd;&#xa;--and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c;&#x3d; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2574&#xd;&#xa;and c.website is not NULL --only migrated valid --1963 rows</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Update comp info</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>100</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>Y</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>company</table>
-      <key>
-        <name>vc_company_id</name>
-        <field>id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-        </key>
-      <value>
-        <name>website</name>
-        <rename>pa_website</rename>
-        </value>
-      </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PA company location</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select m.vc_pa_company_id&#xd;&#xa;, m.com_ext_id&#xd;&#xa;, m.vc_company_id --merged company&#xd;&#xa;, cl.id as location_id&#xd;&#xa;, &#x27;PA-VC&#x27; &#x7c;&#x7c; cl.id&#x3a;&#x3a;text as location_ext_id&#xd;&#xa;, cl.state&#xd;&#xa;, cl.city&#xd;&#xa;, cl.district&#xd;&#xa;, cl.post_code&#xd;&#xa;, cl.address&#xd;&#xa;, cl.location_name&#xd;&#xa;, &#x27;&#x3010;Merged from PA&#x3a; &#x27; &#x7c;&#x7c; m.com_ext_id &#x7c;&#x7c; &#x27;&#x3011;&#x27; as note&#xd;&#xa;from mike_tmp_company_dup_check m&#xd;&#xa;join company_location cl on cl.company_id &#x3d; m.vc_pa_company_id</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>VC company location</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <schema/>
-    <table>company_location</table>
-    <commit>100</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>company_id</column_name>
-          <stream_name>vc_company_id</stream_name>
-        </field>
-        <field>
-          <column_name>state</column_name>
-          <stream_name>state</stream_name>
-        </field>
-        <field>
-          <column_name>city</column_name>
-          <stream_name>city</stream_name>
-        </field>
-        <field>
-          <column_name>district</column_name>
-          <stream_name>district</stream_name>
-        </field>
-        <field>
-          <column_name>post_code</column_name>
-          <stream_name>post_code</stream_name>
-        </field>
-        <field>
-          <column_name>address</column_name>
-          <stream_name>address</stream_name>
-        </field>
-        <field>
-          <column_name>location_name</column_name>
-          <stream_name>location_name</stream_name>
-        </field>
-        <field>
-          <column_name>note</column_name>
-          <stream_name>note</stream_name>
-        </field>
-        <field>
-          <column_name>location_ext_id</column_name>
-          <stream_name>location_ext_id</stream_name>
-        </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>CF PANO&#x2a;</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>--&#x23;CF PANO &#x7c; 11275 &#x7c; Free Text&#xd;&#xa;---Latest PA companies&#xd;&#xa;with latest_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 form_id&#xd;&#xa;	, 11275 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2255 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;---Older PA companies&#xd;&#xa;, older_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 &#xd;&#xa;	, 11275 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29;&#xd;&#xa;	and vc_company_id not in &#x28;select vc_company_id from latest_company&#x29; --2395 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select &#x2a;&#xd;&#xa;from latest_company&#xd;&#xa;UNION&#xd;&#xa;select &#x2a;&#xd;&#xa;from older_company</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>560</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>CF Name of representative&#x2a;</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>--&#x23;CF Name of representative &#x7c; 11274 &#x7c; Free Text&#xd;&#xa;---Latest PA companies&#xd;&#xa;with latest_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 form_id&#xd;&#xa;	, 11274 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2255 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;, older_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 &#xd;&#xa;	, 11274 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29;&#xd;&#xa;	and vc_company_id not in &#x28;select vc_company_id from latest_company&#x29; --2395 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select &#x2a;&#xd;&#xa;from latest_company&#xd;&#xa;UNION&#xd;&#xa;select &#x2a;&#xd;&#xa;from older_company</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>640</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert company CF&#x2a;</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <commit>100</commit>
-    <update_bypassed>Y</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>additional_form_values</table>
-      <key>
-        <name>additional_type</name>
-        <field>additional_type</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>form_id</name>
-        <field>form_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>field_id</name>
-        <field>field_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>vc_company_id</name>
-        <field>additional_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>additional_type</name>
-        <rename>additional_type</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>additional_id</name>
-        <rename>vc_company_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>form_id</name>
-        <rename>form_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>field_id</name>
-        <rename>field_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>field_value</name>
-        <rename>VCFieldValue</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>640</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>CF company lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>additional_form_values</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>additional_type</name>
-        <field>additional_type</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>vc_pa_company_id</name>
-        <field>additional_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>form_id</name>
-        <field>form_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>field_id</name>
-        <field>field_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>field_value</name>
-        <rename>VCFieldValue</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>240</xloc>
-      <yloc>640</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update company CF&#x2a;&#x2a;</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>additional_form_values</table>
-      <key>
-        <name>additional_type</name>
-        <field>additional_type</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>form_id</name>
-        <field>form_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>field_id</name>
-        <field>field_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>vc_company_id</name>
-        <field>additional_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>additional_type</name>
-        <rename>additional_type</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>additional_id</name>
-        <rename>vc_company_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>form_id</name>
-        <rename>form_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>field_id</name>
-        <rename>field_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>field_value</name>
-        <rename>VCFieldValue</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>720</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>CF Bz Details&#x2a;&#x2a;</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>--&#x23;CF Business Details &#x7c; 1002 &#x7c; Text Area&#xd;&#xa;with latest_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 form_id&#xd;&#xa;	, 1002 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3e; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29; --2255 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;, older_company as &#x28;select &#x2a;&#xd;&#xa;	, &#x27;add_com_info&#x27; additional_type&#xd;&#xa;	, 1001 &#xd;&#xa;	, 1002 field_id&#xd;&#xa;	from mike_tmp_company_dup_check&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and coalesce&#x28;vc_pa_update_date, vc_pa_reg_date&#x29; &#x3c; coalesce&#x28;vc_latest_date, &#x27;1900-01-01&#x27;&#x29;&#xd;&#xa;	and vc_company_id not in &#x28;select vc_company_id from latest_company&#x29; --2395 rows&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select &#x2a;&#xd;&#xa;from latest_company&#xd;&#xa;UNION&#xd;&#xa;select &#x2a;&#xd;&#xa;from older_company</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>720</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>PANO additional</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select m.merged_contact_id&#xd;&#xa;	, m.contact_id&#xd;&#xa;	, m.rn&#xd;&#xa;	, a.field_value&#xd;&#xa;	, &#x27;add_con_info&#x27; additional_type&#xd;&#xa;	, 1140 form_id&#xd;&#xa;	, 11276 field_id&#xd;&#xa;	from mike_tmp_contact_dup_check2 m&#xd;&#xa;	join &#x28;select &#x2a; from additional_form_values where form_id &#x3d; 1140 and field_id &#x3d; 11276&#x29; a on a.additional_id &#x3d; m.contact_id&#xd;&#xa;	where 1&#x3d;1&#xd;&#xa;	and rn &#x3d; 1&#xd;&#xa;	and a.field_value is not NULL and a.field_value &#x3c;&#x3e; &#x27;&#x27;&#xd;&#xa;	and contact_id not in &#x28;select contact_id from mike_tmp_contact_dup_check&#x29;</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
     </step>

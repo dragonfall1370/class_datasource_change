@@ -1,8 +1,12 @@
 --Candidate desired industry | VC temp table
-create table mike_tmp_desired_industry(
+create table mike_tmp_desired_industry (
 candidate_id bigint
+, vc_industry character varying(3000)
+, vc_sub_industry character varying(3000)
+, parent_id int
 , industry_id int
-, insert_timestamp timestamp
+, pa_rn int --priority industry
+--, insert_timestamp timestamp
 )
 
 --Candidate desired FE/SFE | VC temp table
@@ -37,6 +41,20 @@ SELECT candidate_id, array_to_json(array_agg(ele)) AS json_value
 			FROM mike_tmp_desired_industry
 		) tmp 
 	GROUP BY candidate_id
+	
+-->> Desired Industry - Sub industry
+with desired_ind as (SELECT candidate_id
+	, json_agg(row_to_json((
+				SELECT ColumnName 
+				FROM (SELECT distinct parent_id::text, industry_id::text) AS ColumnName ("desiredIndustryId", "desiredSubIndustryId")
+					))  order by parent_id, pa_rn, industry_id) AS json_value
+	FROM mike_tmp_desired_industry2
+	GROUP BY candidate_id)
+
+update candidate c
+set desired_industry_json = json_value
+from desired_ind d
+where c.id = d.candidate_id
 
 ---FE/SFE---
 --Desired FE/SFE --Slow***
@@ -60,7 +78,22 @@ SELECT candidate_id, array_to_json(array_agg(ele)) AS json_value
 			FROM mike_tmp_desired_fe_sfe
 		) tmp 
 	GROUP BY candidate_id --101384 rows
-	
+
+
+--->>Desired FE / SFE --NEW
+with desired_fe_sfe as (SELECT candidate_id
+	, json_agg(row_to_json((
+				SELECT ColumnName 
+				FROM (SELECT distinct vc_sfe_id::text, vc_fe_id::text) AS ColumnName ("desiredSubFunctionId", "desiredFunctionalExpertiseId")
+					))) AS json_value
+	FROM mike_tmp_desired_fe_sfe
+	GROUP BY candidate_id)
+
+update candidate c
+set desired_functional_expertise_json = json_value
+from desired_fe_sfe d
+where c.id = d.candidate_id
+
 
 -->> UPDATE DESIRED INDUSTRY <<--
 update candidate c

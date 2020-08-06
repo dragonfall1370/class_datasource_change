@@ -52,6 +52,25 @@ on conflict on constraint additional_form_values_pkey
 	do update
 	set field_value = excluded.field_value;
 
+--[Duplicate] in Cognitive pathway > ID: 66
+select *
+from additional_form_values
+where field_id = 11302
+and additional_id in (select vc_pa_candidate_id from mike_tmp_candidate_dup_check)
+
+
+insert into additional_form_values (additional_type, additional_id, form_id, field_id, field_value)
+select 'add_cand_info' additional_type
+, vc_pa_candidate_id as additional_id
+, 1139 form_id
+, 11302 field_id
+, '66' field_value
+from mike_tmp_candidate_dup_check
+on conflict on constraint additional_form_values_pkey
+	do update
+	set field_value = excluded.field_value;
+
+
 --#CF PANO | 11303 | Free Text
 with merged_new as (select m.vc_candidate_id
 	, m.vc_pa_candidate_id
@@ -79,7 +98,7 @@ on conflict on constraint additional_form_values_pkey
 	do update
 	set field_value = excluded.field_value;
 	
---#CF Website ID | 1284 | Free Text
+--#CF Website ID | 1284 | Free Text | as Registration route
 with merged_new as (select m.vc_candidate_id
 	, m.vc_pa_candidate_id
 	, m.rn
@@ -102,6 +121,34 @@ select 'add_cand_info' additional_type
 , vc_candidate_id as additional_id
 , 1139 form_id
 , 1284 field_id
+, field_value
+from merged_new m
+on conflict on constraint additional_form_values_pkey
+	do update
+	set field_value = excluded.field_value;
+
+
+--#CF Gender | 11304 | Drop down
+with merged_new as (select m.vc_candidate_id
+	, m.vc_pa_candidate_id
+	, m.rn
+	, a.field_value
+	, 'add_cand_info' additional_type
+	, 1139 form_id
+	, 11304 field_id
+	from mike_tmp_candidate_dup_check m
+	join (select * from additional_form_values where form_id = 1139 and field_id = 11304) a on a.additional_id = m.vc_pa_candidate_id
+	where 1=1
+	and rn = 1
+	and a.field_value is not NULL and a.field_value <> ''
+	)
+	
+--IF USING OVERWRITE
+insert into additional_form_values (additional_type, additional_id, form_id, field_id, field_value)
+select 'add_cand_info' additional_type
+, vc_candidate_id as additional_id
+, 1139 form_id
+, 11304 field_id
 , field_value
 from merged_new m
 on conflict on constraint additional_form_values_pkey
@@ -201,3 +248,4 @@ from merged_new m
 on conflict on constraint additional_form_values_pkey
 	do update
 	set field_value = excluded.field_value;
+	

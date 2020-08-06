@@ -22,7 +22,7 @@ with con_industry as (select distinct m.vc_new_ind_id --industry ID
 
 insert into contact_industry (industry_id, contact_id, insert_timestamp)
 select distinct vc_new_ind_id industry_id
-, contact_id company_id
+, contact_id
 , current_timestamp insert_timestamp
 from con_industry
 on conflict on constraint contact_industry__pkey

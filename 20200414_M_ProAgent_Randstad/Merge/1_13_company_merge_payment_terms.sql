@@ -78,6 +78,7 @@ from merged_payment_terms_2 m
 where m.vc_company_id = c.id
 
 
+-->>UPDATE CASES WITH OLDER COMPANY HAVING INFO
 with merged_payment as (select m.vc_company_id
 	, m.vc_pa_company_id
 	, m.com_ext_id
@@ -93,7 +94,7 @@ with merged_payment as (select m.vc_company_id
 	and coalesce(nullif(billing_group_name, ''), nullif(company_number, ''), nullif(company_payment_term, ''), nullif(trading_name, '')) is not NULL
 	) --21 rows
 
--->>UPDATE CASES WITH OLDER COMPANY HAVING INFO
+
 update company c
 set billing_group_name = case when nullif(c.billing_group_name, '') is NULL then m.pa_billing_group_name else c.billing_group_name end
 , company_number = case when nullif(c.company_number, '') is NULL then m.pa_company_number else c.company_number end

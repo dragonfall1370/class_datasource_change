@@ -603,10 +603,10 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>company document name</note>
+      <note>company document name&#x2a;</note>
       <xloc>16</xloc>
       <yloc>784</yloc>
-      <width>152</width>
+      <width>157</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -644,13 +644,76 @@
       <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>n&#x2f;a</note>
+      <xloc>1104</xloc>
+      <yloc>848</yloc>
+      <width>29</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>n&#x2f;a</note>
+      <xloc>416</xloc>
+      <yloc>64</yloc>
+      <width>29</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>activity_company&#xa;select max&#x28;id&#x29; from activity &#x7c; last&#x28;id&#x29; 240546&#xa;&#xa;insert into activity_company&#x28;activity_id, company_id, insert_timestamp&#x29;&#xa;select id&#xa;, company_id&#xa;, insert_timestamp&#xa;from activity&#xa;where id &#x3e; 288342 --max&#x28;id&#x29; in activity&#xa;and company_id &#x3e; 0</note>
+      <xloc>48</xloc>
+      <yloc>1248</yloc>
+      <width>388</width>
+      <heigth>169</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>From &#x28;DB&#x29;</name>
     <server>localhost</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>randstadreview2</database>
+    <database>randstadprod</database>
     <port>1433</port>
     <username>sa</username>
     <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
@@ -671,11 +734,11 @@
     </attributes>
   </connection>
   <connection>
-    <name>To &#x28;REVIEW2&#x29;</name>
-    <server>10.10.10.92</server>
+    <name>To &#x28;prod&#x29;</name>
+    <server>rdbm1</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>randstad-review2.vincere.io</database>
+    <database>randstad.vincere.io</database>
     <port>5432</port>
     <username>dbapplication_user</username>
     <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
@@ -847,7 +910,7 @@
     <hop>
       <from>lookup company</from>
       <to>lookup industry</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>lookup industry</from>
@@ -895,16 +958,6 @@
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>lookup company_legal_document</from>
-      <to>update legal_document</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>lookup companyid</from>
-      <to>lookup company_legal_document</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Listed Stock</from>
       <to>Company lookup 7</to>
       <enabled>N</enabled>
@@ -942,7 +995,7 @@
     <hop>
       <from>company sub industry</from>
       <to>lookup company</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>lookup sub industry</from>
@@ -952,12 +1005,22 @@
     <hop>
       <from>lookup industry</from>
       <to>lookup sub industry</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>lookup sub industry</from>
       <to>Ind_sub check</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Database join</from>
+      <to>Insert CF 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>lookup companyid</from>
+      <to>update company document</to>
+      <enabled>N</enabled>
     </hop>
   </order>
   <step>
@@ -1131,6 +1194,38 @@
     </step>
 
   <step>
+    <name>CF Contract Date</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From &#x28;DB&#x29;</connection>
+    <sql>select &#x5b;PANO &#x5d; as com_ext_id&#xa;, &#x27;add_com_info&#x27; as additional_type&#xa;, 1001 as form_id&#xa;, 11331 as field_id&#xa;, convert&#x28;datetime, &#x5b;&#x5951;&#x7d04;&#x65e5;&#x5d;, 120&#x29; as field_date_value&#xa;, current_timestamp as insert_timestamp&#xa;from csv_recf&#xa;where nullif&#x28;&#x5b;&#x5951;&#x7d04;&#x65e5;&#x5d;,&#x27;&#x27;&#x29; is not NULL</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>944</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>Com legal doc start date</name>
     <type>TableInput</type>
     <description/>
@@ -1174,7 +1269,7 @@
       <schema_name/>
     </partitioning>
     <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x5b;PANO &#x5d; as com_ext_id&#xd;&#xa;	, &#x27;add_com_info&#x27; as additional_type&#xd;&#xa;	, 1001 as form_id&#xd;&#xa;	, 9999 as field_id&#xd;&#xa;	, trim&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d;&#x29; as field_value&#xd;&#xa;	, try_parse&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d; collate SQL_Latin1_General_CP1_CI_AS as int&#x29; as employees&#xd;&#xa;	, current_timestamp as insert_timestamp&#xd;&#xa;from csv_recf&#xd;&#xa;where nullif&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;--and &#x5b;PANO&#x5d; &#x3d; &#x27;CPY015169&#x27;&#xd;&#xa;and try_parse&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d; collate SQL_Latin1_General_CP1_CI_AS as int&#x29; is not NULL</sql>
+    <sql>select &#x5b;PANO &#x5d; as com_ext_id&#xa;	, &#x27;add_com_info&#x27; as additional_type&#xa;	, 1001 as form_id&#xa;	, 9999 as field_id&#xa;	, trim&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d;&#x29; as field_value&#xa;	, try_parse&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d; collate SQL_Latin1_General_CP1_CI_AS as int&#x29; as employees&#xa;	, current_timestamp as insert_timestamp&#xa;from csv_recf&#xa;where nullif&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;--and &#x5b;PANO&#x5d; &#x3d; &#x27;CPY015169&#x27;&#xa;and try_parse&#x28;&#x5b;&#x5f93;&#x696d;&#x54e1;&#x5d; collate SQL_Latin1_General_CP1_CI_AS as int&#x29; is not NULL</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1206,7 +1301,7 @@
       <schema_name/>
     </partitioning>
     <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x5b;PANO &#x5d; as com_ext_id&#xd;&#xa;, coalesce&#x28;nullif&#x28;&#x5b;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;1&#x5d;, &#x27;&#x27;&#x29;, &#x27;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;&#x27;&#x29; as location_name --tbc if using this field as location_name &#x7c; updated 20200218&#xd;&#xa;--, concat_ws&#x28;&#x27;, &#x27;&#xd;&#xa;--	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	&#x29; as location_name&#xd;&#xa;, concat_ws&#x28;&#x27;, &#x27;&#xd;&#xa;	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	&#x29; as location_address&#xd;&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d; as location_state&#xd;&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d; as post_code&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from csv_recf&#xd;&#xa;where coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;1&#x5d;, &#x27;&#x27;&#x29;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;&#xd;&#xa;select &#x5b;PANO &#x5d;&#xd;&#xa;, coalesce&#x28;nullif&#x28;&#x5b;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;2&#x5d;, &#x27;&#x27;&#x29;, &#x27;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;&#x27;&#x29; as location_name&#xd;&#xa;--, concat_ws&#x28;&#x27;, &#x27;&#xd;&#xa;--	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	&#x29; as location_name&#xd;&#xa;, concat_ws&#x28;&#x27;, &#x27;&#xd;&#xa;	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	&#x29; as location_address&#xd;&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d; as location_state&#xd;&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d; as post_code&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from csv_recf&#xd;&#xa;where coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;2&#x5d;, &#x27;&#x27;&#x29;&#x29; is not NULL&#xd;&#xa;--total 29242</sql>
+    <sql>select &#x5b;PANO &#x5d; as com_ext_id&#xa;, coalesce&#x28;nullif&#x28;&#x5b;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;1&#x5d;, &#x27;&#x27;&#x29;, &#x27;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;&#x27;&#x29; as location_name --tbc if using this field as location_name &#x7c; updated 20200218&#xa;--, concat_ws&#x28;&#x27;, &#x27;&#xa;--	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;--	&#x29; as location_name&#xa;, concat_ws&#x28;&#x27;, &#x27;&#xa;	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;1&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	&#x29; as location_address&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d; as location_state&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d; as post_code&#xa;, current_timestamp as insert_timestamp&#xa;from csv_recf&#xa;where coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;1&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;1&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;1&#x5d;, &#x27;&#x27;&#x29;&#x29; is not NULL&#xa;&#xa;UNION ALL&#xa;&#xa;select &#x5b;PANO &#x5d;&#xa;, coalesce&#x28;nullif&#x28;&#x5b;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;2&#x5d;, &#x27;&#x27;&#x29;, &#x27;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;&#x27;&#x29; as location_name&#xa;--, concat_ws&#x28;&#x27;, &#x27;&#xa;--	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;--	&#x29; as location_name&#xa;, concat_ws&#x28;&#x27;, &#x27;&#xa;	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;2&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	&#x29; as location_address&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d; as location_state&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d; as post_code&#xa;, current_timestamp as insert_timestamp&#xa;from csv_recf&#xa;where coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;2&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;2&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x4f4f;&#x6240;&#x8a73;&#x7d30;2&#x5d;, &#x27;&#x27;&#x29;&#x29; is not NULL&#xa;--total 29242</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1270,7 +1365,7 @@
       <schema_name/>
     </partitioning>
     <connection>From &#x28;DB&#x29;</connection>
-    <sql>declare &#xd;&#xa;	&#x40;string1 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;&#x5d;&#x27;, --location name&#xd;&#xa;	&#x40;string2 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x6240;&#x5728;&#x5730;&#x3012;&#x5d;&#x27;, --location zip code&#xd;&#xa;	&#x40;string3 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x6240;&#x5728;&#x5730;&#x4f4f;&#x6240;&#x5d;&#x27;, --location address&#xd;&#xa;	&#x40;splitvalue nchar&#x28;1&#x29; &#x3d; nchar&#x28;9999&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;with com_address as &#x28;select &#x5b;PANO &#x5d; as com_ext_id&#xd;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x6240;&#x5728;&#x5730;&#x5d; --additional addresses&#xd;&#xa;	, value as com_address&#xd;&#xa;	from csv_recf&#xd;&#xa;	cross apply string_split&#x28;replace&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x6240;&#x5728;&#x5730;&#x5d;, &#x40;string1, &#x40;splitvalue&#x29;, &#x40;splitvalue&#x29;&#xd;&#xa;	where &#x5b;&#x305d;&#x306e;&#x4ed6;&#x6240;&#x5728;&#x5730;&#x5d; &#x3c;&#x3e; &#x27;&#x27;&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;, alt_addr as &#x28;select com_ext_id&#xd;&#xa;	, com_address&#xd;&#xa;	, left&#x28;com_address, charindex&#x28;&#x40;string2, com_address&#x29;- 1&#x29; as location_name&#xd;&#xa;	, substring&#x28;com_address&#xd;&#xa;				, charindex&#x28;&#x40;string2, com_address&#x29; &#x2b; len&#x28;&#x40;string2&#x29;&#xd;&#xa;				, charindex&#x28;&#x40;string3, com_address&#x29; - charindex&#x28;&#x40;string2, com_address&#x29; - len&#x28;&#x40;string2&#x29;&#x29; as post_code&#xd;&#xa;	, case when len&#x28;com_address&#x29; - charindex&#x28;&#x40;string3, com_address&#x29; - len&#x28;&#x40;string3&#x29; &#x2b; 1 &#x3e; 0&#xd;&#xa;			then right&#x28;com_address, len&#x28;com_address&#x29; - charindex&#x28;&#x40;string3, com_address&#x29; - len&#x28;&#x40;string3&#x29; &#x2b; 1&#x29;&#xd;&#xa;			else NULL end as location_address&#xd;&#xa;	from com_address&#xd;&#xa;	where com_address &#x3c;&#x3e; &#x27;&#x27;&#x29;&#xd;&#xa;&#xd;&#xa;select com_ext_id&#xd;&#xa;, coalesce&#x28;nullif&#x28;location_name, &#x27;&#x27;&#x29;, location_address&#x29; as location_name&#xd;&#xa;, concat_ws&#x28;&#x27;, &#x27;&#xd;&#xa;	, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;post_code, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;location_name, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;location_address, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	&#x29; as location_address_full&#xd;&#xa;, nullif&#x28;location_address, &#x27;&#x27;&#x29; as location_address&#xd;&#xa;, post_code&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from alt_addr</sql>
+    <sql>declare &#xa;	&#x40;string1 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x4f01;&#x696d;&#x62e0;&#x70b9;&#x540d;&#x5d;&#x27;, --location name&#xa;	&#x40;string2 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x6240;&#x5728;&#x5730;&#x3012;&#x5d;&#x27;, --location zip code&#xa;	&#x40;string3 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x6240;&#x5728;&#x5730;&#x4f4f;&#x6240;&#x5d;&#x27;, --location address&#xa;	&#x40;splitvalue nchar&#x28;1&#x29; &#x3d; nchar&#x28;9999&#x29;&#x3b;&#xa;&#xa;&#xa;with com_address as &#x28;select &#x5b;PANO &#x5d; as com_ext_id&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x6240;&#x5728;&#x5730;&#x5d; --additional addresses&#xa;	, value as com_address&#xa;	from csv_recf&#xa;	cross apply string_split&#x28;replace&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x6240;&#x5728;&#x5730;&#x5d;, &#x40;string1, &#x40;splitvalue&#x29;, &#x40;splitvalue&#x29;&#xa;	where &#x5b;&#x305d;&#x306e;&#x4ed6;&#x6240;&#x5728;&#x5730;&#x5d; &#x3c;&#x3e; &#x27;&#x27;&#xa;&#x29;&#xa;&#xa;, alt_addr as &#x28;select com_ext_id&#xa;	, com_address&#xa;	, left&#x28;com_address, charindex&#x28;&#x40;string2, com_address&#x29;- 1&#x29; as location_name&#xa;	, substring&#x28;com_address&#xa;				, charindex&#x28;&#x40;string2, com_address&#x29; &#x2b; len&#x28;&#x40;string2&#x29;&#xa;				, charindex&#x28;&#x40;string3, com_address&#x29; - charindex&#x28;&#x40;string2, com_address&#x29; - len&#x28;&#x40;string2&#x29;&#x29; as post_code&#xa;	, case when len&#x28;com_address&#x29; - charindex&#x28;&#x40;string3, com_address&#x29; - len&#x28;&#x40;string3&#x29; &#x2b; 1 &#x3e; 0&#xa;			then right&#x28;com_address, len&#x28;com_address&#x29; - charindex&#x28;&#x40;string3, com_address&#x29; - len&#x28;&#x40;string3&#x29; &#x2b; 1&#x29;&#xa;			else NULL end as location_address&#xa;	from com_address&#xa;	where com_address &#x3c;&#x3e; &#x27;&#x27;&#x29;&#xa;&#xa;select com_ext_id&#xa;, coalesce&#x28;nullif&#x28;location_name, &#x27;&#x27;&#x29;, location_address&#x29; as location_name&#xa;, concat_ws&#x28;&#x27;, &#x27;&#xa;	, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;post_code, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;nullif&#x28;location_name, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;nullif&#x28;location_address, &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	&#x29; as location_address_full&#xa;, nullif&#x28;location_address, &#x27;&#x27;&#x29; as location_address&#xa;, post_code&#xa;, current_timestamp as insert_timestamp&#xa;from alt_addr</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1317,7 +1412,7 @@
     </remotesteps>
     <GUI>
       <xloc>64</xloc>
-      <yloc>848</yloc>
+      <yloc>864</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -1333,7 +1428,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <schema/>
     <table>candidate_document</table>
     <commit>100</commit>
@@ -1395,6 +1490,10 @@
           <column_name>visible</column_name>
           <stream_name>visible</stream_name>
         </field>
+        <field>
+          <column_name>company_id</column_name>
+          <stream_name>VCCompanyID</stream_name>
+        </field>
     </fields>
     <cluster_schema/>
     <remotesteps>
@@ -1421,7 +1520,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1475,7 +1574,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1529,7 +1628,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1583,7 +1682,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1637,7 +1736,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1691,7 +1790,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1745,7 +1844,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1831,7 +1930,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <rowlimit>0</rowlimit>
     <sql>select cffv.form_id as join_form_id&#xa;, cffv.field_id as join_field_id&#xa;, cfl.translate as join_field_translate&#xa;, cffv.field_value as join_field_value&#xa;from configurable_form_language cfl&#xa;left join configurable_form_field_value cffv on cffv.title_language_code &#x3d; cfl.language_code&#xa;where cfl.language &#x3d; &#x27;en&#x27;&#xa;and cffv.form_id &#x3d; &#x3f;&#xa;and cffv.field_id &#x3d; &#x3f;&#xa;and cfl.translate &#x3d; &#x3f;</sql>
     <outer_join>Y</outer_join>
@@ -1929,6 +2028,156 @@
     </step>
 
   <step>
+    <name>Ind_sub check</name>
+    <type>TypeExitExcelWriterStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <makeSheetActive>Y</makeSheetActive>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <startingCell>A1</startingCell>
+    <appendOmitHeader>N</appendOmitHeader>
+    <appendOffset>0</appendOffset>
+    <appendEmpty>0</appendEmpty>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <forceFormulaRecalculation>N</forceFormulaRecalculation>
+    <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
+    <appendLines>N</appendLines>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>E&#x3a;&#x5c;mike&#x5c;VC_Randstad&#x5c;Working&#x5c;PROD&#x5c;20200704_check_pa_company_industry_sub.xls</name>
+      <extention>xlsx</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <stream_data>N</stream_data>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <protected_by/>
+      <splitevery>0</splitevery>
+      <if_file_exists>new</if_file_exists>
+      <if_sheet_exists>new</if_sheet_exists>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <sheet_enabled>N</sheet_enabled>
+      <filename>template.xls</filename>
+      <sheetname/>
+      <hidden>N</hidden>
+    </template>
+    <fields>
+      <field>
+        <name>com_ext_id</name>
+        <type>String</type>
+        <format/>
+        <title>com_ext_id</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>vc_industry</name>
+        <type>String</type>
+        <format/>
+        <title>vc_industry</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>vc_sub_industry</name>
+        <type>String</type>
+        <format/>
+        <title>vc_sub_industry</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>insert_timestamp</name>
+        <type>Timestamp</type>
+        <format/>
+        <title>insert_timestamp</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>VCCompanyID</name>
+        <type>Integer</type>
+        <format/>
+        <title>VCCompanyID</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>VCParentID</name>
+        <type>Integer</type>
+        <format/>
+        <title>VCParentID</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>VCSubIndustryID</name>
+        <type>Integer</type>
+        <format/>
+        <title>VCSubIndustryID</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1200</xloc>
+      <yloc>1248</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>Insert CF</name>
     <type>TableOutput</type>
     <description/>
@@ -1939,7 +2188,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <schema/>
     <table>additional_form_values</table>
     <commit>1000</commit>
@@ -1997,6 +2246,142 @@
     </step>
 
   <step>
+    <name>Insert CF 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>additional_type</column_name>
+          <stream_name>additional_type</stream_name>
+        </field>
+        <field>
+          <column_name>additional_id</column_name>
+          <stream_name>VCCompanyID</stream_name>
+        </field>
+        <field>
+          <column_name>form_id</column_name>
+          <stream_name>form_id</stream_name>
+        </field>
+        <field>
+          <column_name>field_id</column_name>
+          <stream_name>field_id</stream_name>
+        </field>
+        <field>
+          <column_name>field_value</column_name>
+          <stream_name>join_field_value</stream_name>
+        </field>
+        <field>
+          <column_name>insert_timestamp</column_name>
+          <stream_name>insert_timestamp</stream_name>
+        </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>752</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Insert CF Date</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <schema/>
+    <table>additional_form_values</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>additional_type</column_name>
+          <stream_name>additional_type</stream_name>
+        </field>
+        <field>
+          <column_name>additional_id</column_name>
+          <stream_name>VCCompanyID</stream_name>
+        </field>
+        <field>
+          <column_name>form_id</column_name>
+          <stream_name>form_id</stream_name>
+        </field>
+        <field>
+          <column_name>field_id</column_name>
+          <stream_name>field_id</stream_name>
+        </field>
+        <field>
+          <column_name>field_date_value</column_name>
+          <stream_name>field_date_value</stream_name>
+        </field>
+        <field>
+          <column_name>insert_timestamp</column_name>
+          <stream_name>insert_timestamp</stream_name>
+        </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>944</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>Insert activities</name>
     <type>TableOutput</type>
     <description/>
@@ -2007,7 +2392,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <schema>public</schema>
     <table>activity</table>
     <commit>200</commit>
@@ -2075,7 +2460,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <schema/>
     <table>company_location</table>
     <commit>1000</commit>
@@ -2139,7 +2524,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <schema/>
     <table>company_location</table>
     <commit>1000</commit>
@@ -2272,7 +2657,7 @@
       <schema_name/>
     </partitioning>
     <connection>From &#x28;DB&#x29;</connection>
-    <sql>declare &#xd;&#xa;	&#x40;string1 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x65e5;&#x6642;&#x5d;&#x27;, --date&#xd;&#xa;	&#x40;string2 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x5bfe;&#x5fdc;&#x8005;ID&#x5d;&#x27;, --user id&#xd;&#xa;	&#x40;string3 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x5bfe;&#x5fdc;&#x8005;&#x5d;&#x27;, --user name&#xd;&#xa;	&#x40;string4 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x30e1;&#x30e2;&#x5d;&#x27;,&#xd;&#xa;	&#x40;splitvalue nchar&#x28;1&#x29; &#x3d; nchar&#x28;9999&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;with com_activity as &#x28;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;	, &#x5b;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x5d;&#xd;&#xa;	, value as com_activity&#xd;&#xa;	from csv_recf_history&#xd;&#xa;	cross apply string_split&#x28;replace&#x28;&#x5b;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x5d;, &#x40;string1, &#x40;splitvalue&#x29;, &#x40;splitvalue&#x29;&#xd;&#xa;	where &#x5b;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x5d; &#x3c;&#x3e; &#x27;&#x27;&#x29;&#xd;&#xa;&#xd;&#xa;, com_act_trim as &#x28;select com_ext_id&#xd;&#xa;	, com_activity&#xd;&#xa;	, left&#x28;com_activity, charindex&#x28;&#x40;string2, com_activity&#x29;- 1&#x29; as activity_date&#xd;&#xa;	, substring&#x28;replace&#x28;com_activity, &#x40;string2, &#x40;splitvalue&#x29;&#xd;&#xa;			, charindex&#x28;&#x40;string2, com_activity&#x29; &#x2b; 1&#xd;&#xa;			, charindex&#x28;&#x40;string3, com_activity&#x29; - charindex&#x28;&#x40;string2, com_activity&#x29; - len&#x28;&#x40;string2&#x29;&#x29; as user_account_id&#xd;&#xa;	, substring&#x28;replace&#x28;com_activity, &#x40;string3, &#x40;splitvalue&#x29;&#xd;&#xa;			, charindex&#x28;&#x40;string3, com_activity&#x29; &#x2b; 1&#xd;&#xa;			, charindex&#x28;&#x40;string4, com_activity&#x29; - charindex&#x28;&#x40;string3, com_activity&#x29; - len&#x28;&#x40;string3&#x29;&#x29; as username&#xd;&#xa;	, case when len&#x28;com_activity&#x29; - charindex&#x28;&#x40;string4, com_activity&#x29; - len&#x28;&#x40;string4&#x29; &#x2b; 1 &#x3e; 0&#xd;&#xa;			then right&#x28;com_activity, len&#x28;com_activity&#x29; - charindex&#x28;&#x40;string4, com_activity&#x29; - len&#x28;&#x40;string4&#x29; &#x2b; 1&#x29;&#xd;&#xa;			else NULL end as memo&#xd;&#xa;	from com_activity&#xd;&#xa;	where com_activity &#x3c;&#x3e; &#x27;&#x27;&#x29;&#xd;&#xa;&#xd;&#xa;--MAIN SCRIPT&#xd;&#xa;select c.com_ext_id&#xd;&#xa;, c.user_account_id&#xd;&#xa;, c.activity_date&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, c.activity_date, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x3011;&#x27;&#xd;&#xa;		, coalesce&#x28;trim&#x28;memo&#x29;, NULL&#x29;&#xd;&#xa;		, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; c.username, NULL&#x29;&#xd;&#xa;		, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x5bfe;&#x5fdc;&#x8005;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; c.user_account_id, NULL&#x29;&#xd;&#xa;		&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;, u.EmailAddress&#xd;&#xa;from com_act_trim c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.user_account_id&#xd;&#xa;where memo is not NULL --39063 rows</sql>
+    <sql>declare &#xa;	&#x40;string1 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x65e5;&#x6642;&#x5d;&#x27;, --date&#xa;	&#x40;string2 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x5bfe;&#x5fdc;&#x8005;ID&#x5d;&#x27;, --user id&#xa;	&#x40;string3 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x5bfe;&#x5fdc;&#x8005;&#x5d;&#x27;, --user name&#xa;	&#x40;string4 nvarchar&#x28;50&#x29; &#x3d; N&#x27;&#x5b;&#x30e1;&#x30e2;&#x5d;&#x27;,&#xa;	&#x40;splitvalue nchar&#x28;1&#x29; &#x3d; nchar&#x28;9999&#x29;&#x3b;&#xa;&#xa;with com_activity as &#x28;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;	, &#x5b;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x5d;&#xa;	, value as com_activity&#xa;	from csv_recf_history&#xa;	cross apply string_split&#x28;replace&#x28;&#x5b;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x5d;, &#x40;string1, &#x40;splitvalue&#x29;, &#x40;splitvalue&#x29;&#xa;	where &#x5b;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x5d; &#x3c;&#x3e; &#x27;&#x27;&#x29;&#xa;&#xa;, com_act_trim as &#x28;select com_ext_id&#xa;	, com_activity&#xa;	, left&#x28;com_activity, charindex&#x28;&#x40;string2, com_activity&#x29;- 1&#x29; as activity_date&#xa;	, substring&#x28;replace&#x28;com_activity, &#x40;string2, &#x40;splitvalue&#x29;&#xa;			, charindex&#x28;&#x40;string2, com_activity&#x29; &#x2b; 1&#xa;			, charindex&#x28;&#x40;string3, com_activity&#x29; - charindex&#x28;&#x40;string2, com_activity&#x29; - len&#x28;&#x40;string2&#x29;&#x29; as user_account_id&#xa;	, substring&#x28;replace&#x28;com_activity, &#x40;string3, &#x40;splitvalue&#x29;&#xa;			, charindex&#x28;&#x40;string3, com_activity&#x29; &#x2b; 1&#xa;			, charindex&#x28;&#x40;string4, com_activity&#x29; - charindex&#x28;&#x40;string3, com_activity&#x29; - len&#x28;&#x40;string3&#x29;&#x29; as username&#xa;	, case when len&#x28;com_activity&#x29; - charindex&#x28;&#x40;string4, com_activity&#x29; - len&#x28;&#x40;string4&#x29; &#x2b; 1 &#x3e; 0&#xa;			then right&#x28;com_activity, len&#x28;com_activity&#x29; - charindex&#x28;&#x40;string4, com_activity&#x29; - len&#x28;&#x40;string4&#x29; &#x2b; 1&#x29;&#xa;			else NULL end as memo&#xa;	from com_activity&#xa;	where com_activity &#x3c;&#x3e; &#x27;&#x27;&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;select distinct c.com_ext_id&#xa;, c.user_account_id&#xa;, c.activity_date&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, c.activity_date, 120&#x29;&#x29; as insert_timestamp&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x5bfe;&#x5fdc;&#x5c65;&#x6b74;&#x30e1;&#x30e2;&#x3011;&#x27;&#xa;		, coalesce&#x28;trim&#x28;memo&#x29;, NULL&#x29;&#xa;		, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; c.username, NULL&#x29;&#xa;		, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x5bfe;&#x5fdc;&#x8005;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; c.user_account_id, NULL&#x29;&#xa;		&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;, u.EmailAddress&#xa;from com_act_trim c&#xa;left join UserMapping u on u.UserID &#x3d; c.user_account_id&#xa;where memo is not NULL --39519 rows</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -2336,7 +2721,7 @@
       <schema_name/>
     </partitioning>
     <connection>From &#x28;DB&#x29;</connection>
-    <sql>--Company activities&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x767b;&#x9332;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x8a2a;&#x554f;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x6765;&#x8a2a;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x96fb;&#x8a71;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xd;&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x9762;&#x63a5;&#x3011;&#x27;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;&#x29; as comment_activities&#xd;&#xa;, &#x27;comment&#x27; as category&#xd;&#xa;, &#x27;company&#x27; as type&#xd;&#xa;, dateadd&#x28;hour, 9, convert&#x28;datetime, &#x5b;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xd;&#xa;, &#x5b;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xd;&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xd;&#xa;from csv_recf_history c&#xd;&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xd;&#xa;where nullif&#x28;&#x5b;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL</sql>
+    <sql>--Company activities&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x767b;&#x9332;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x65b0;&#x898f;&#x958b;&#x62d3;&#x5b9f;&#x65bd;&#x65e5;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x60c5;&#x5831;&#x53d7;&#x4ed8;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x8a2a;&#x554f;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x8a2a;&#x554f;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x8a2a;&#x554f;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x6765;&#x8a2a;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x6765;&#x8a2a;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x6765;&#x8a2a;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x96fb;&#x8a71;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x96fb;&#x8a71;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x96fb;&#x8a71;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x30e1;&#x30fc;&#x30eb;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#xff32;&#xff30;&#x62c5;&#x5f53;&#x5909;&#x66f4;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x53d6;&#x5f15;&#x4e2d;&#x6b62;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x63a5;&#x89e6;&#x4e0d;&#x53ef;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x305d;&#x306e;&#x4ed6;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;&#xa;&#xa;UNION ALL&#xa;select &#x5b;&#x4f01;&#x696d; PANO &#x5d; as com_ext_id&#xa;, concat_ws&#x28;char&#x28;10&#x29;, &#x27;&#x3010;&#x9762;&#x63a5;&#x3011;&#x27;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;	, coalesce&#x28;char&#x28;10&#x29; &#x2b; &#x27;&#x3010;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x3011;&#x27; &#x2b; char&#x28;10&#x29; &#x2b; nullif&#x28;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005; , &#x27;&#x27;&#x29;, NULL&#x29;&#xa;&#x29; as comment_activities&#xa;, &#x27;comment&#x27; as category&#xa;, &#x27;company&#x27; as type&#xa;, dateadd&#x28;hour, -9, convert&#x28;datetime, &#x5b;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, 120&#x29;&#x29; as insert_timestamp&#xa;, &#x5b;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d; as user_account_id --linked with user mapping&#xa;, coalesce&#x28;nullif&#x28;u.EmailAddress, &#x27;&#x27;&#x29;, &#x27;sysadmin&#x40;vincere.io&#x27;&#x29; as user_email&#xa;from csv_recf_history c&#xa;left join UserMapping u on u.UserID &#x3d; c.&#x5b;&#x9762;&#x63a5;&#x5bfe;&#x5fdc;&#x8005;&#x30e6;&#x30fc;&#x30b6;ID&#x5d;&#xa;where nullif&#x28;&#x5b;&#x9762;&#x63a5;&#x5b9f;&#x65bd;&#x65e5;&#x5d;, &#x27;&#x27;&#x29; is not NULL</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -2453,9 +2838,9 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
+    <update_bypassed>Y</update_bypassed>
     <lookup>
       <schema>public</schema>
       <table>additional_form_values</table>
@@ -2539,7 +2924,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -2584,7 +2969,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -2680,7 +3065,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -2737,7 +3122,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -2782,7 +3167,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -2836,9 +3221,9 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <rowlimit>0</rowlimit>
-    <sql>select case when id is NULL then -10&#xa;		else id end as vc_user_id&#xa;, name as vc_user_name&#xa;, email as vc_user_email&#xa;from user_account&#xa;where 1&#x3d;1&#xd;&#xa;and deleted_timestamp is NULL&#xa;--and locked_user &#x3d; 0&#xa;and lower&#x28;email&#x29; &#x3d; &#x3f;</sql>
+    <sql>select case when id is NULL then -10&#xa;		else id end as vc_user_id&#xa;, name as vc_user_name&#xa;, email as vc_user_email&#xa;from user_account&#xa;where 1&#x3d;1&#xa;and deleted_timestamp is NULL&#xa;--and locked_user &#x3d; 0&#xa;and lower&#x28;email&#x29; &#x3d; &#x3f;</sql>
     <outer_join>Y</outer_join>
     <replace_vars>N</replace_vars>
     <parameter>
@@ -2862,6 +3247,58 @@
     </step>
 
   <step>
+    <name>VC company sub industry</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <schema/>
+    <table>company_industry</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>industry_id</column_name>
+          <stream_name>VCSubIndustryID</stream_name>
+        </field>
+        <field>
+          <column_name>company_id</column_name>
+          <stream_name>VCCompanyID</stream_name>
+        </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1200</xloc>
+      <yloc>1168</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>VC company_industry</name>
     <type>InsertUpdate</type>
     <description/>
@@ -2872,14 +3309,14 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
+    <update_bypassed>Y</update_bypassed>
     <lookup>
       <schema>public</schema>
       <table>company_industry</table>
       <key>
-        <name>VCIndustryID</name>
+        <name>VCParentID</name>
         <field>industry_id</field>
         <condition>&#x3d;</condition>
         <name2/>
@@ -2892,7 +3329,7 @@
       </key>
       <value>
         <name>industry_id</name>
-        <rename>VCIndustryID</rename>
+        <rename>VCParentID</rename>
         <update>Y</update>
       </value>
       <value>
@@ -2932,7 +3369,7 @@
       <schema_name/>
     </partitioning>
     <connection>From &#x28;DB&#x29;</connection>
-    <sql>--COMPANY INDUSTRY&#xa;with other_ind as &#x28;select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;&#xa;	, trim&#x28;value&#x29; as other_ind&#xa;	from csv_recf&#xa;	cross apply string_split&#x28;replace&#x28;replace&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;, &#x27;&#x5b;&#x696d;&#x7a2e;&#x5d;&#x27;, &#x27;&#x7c;&#x27;&#x29;, char&#x28;10&#x29;, &#x27;&#x27;&#x29;, &#x27;&#x7c;&#x27;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;, company_industry as &#x28;select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x696d;&#x7a2e;1&#x5d; as original&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29; as industry&#xa;	, concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, p.industry_en&#x29; as vc_industry&#xa;	from csv_recf&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	&#xa;	UNION&#xa;	&#xa;	select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x696d;&#x7a2e;2&#x5d; as original&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29; as industry&#xa;	, concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, p.industry_en&#x29; as vc_industry&#xa;	from csv_recf&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	&#xa;	UNION&#xa;	&#xa;	select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d; as original&#xa;	, other_ind as industry&#xa;	, concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, p.industry_en&#x29; as vc_industry&#xa;	from other_ind&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;other_ind&#x29;&#xa;	where coalesce&#x28;nullif&#x28;other_ind,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	--total 37622&#xa;&#x29;&#xa;&#xa;--select distinct vc_industry from company_industry&#xa;&#xa;select distinct &#x5b;PANO &#x5d; as com_ext_id&#xa;, trim&#x28;vc_industry&#x29; as vc_industry&#xa;, current_timestamp as insert_timestamp&#xa;from company_industry --35647 rows</sql>
+    <sql>--COMPANY INDUSTRY&#xa;with split_ind as &#x28;select pa_name&#xa;	, industry_en&#xa;	, industry_ja&#xa;	, concat_ws&#x28;&#x27;&#x27;, &#x27;&#x3010;PP&#x3011;&#x27;, industry_en, coalesce&#x28;&#x27; &#x2f; &#x27; &#x2b; nullif&#x28;industry_ja, &#x27;&#x27;&#x29;, NULL&#x29;&#x29; as vc_industry&#xa;	, sub_industry&#xa;	, trim&#x28;value&#x29; as vc_sub_industry&#xa;	from PA_industry&#xa;	cross apply string_split&#x28;sub_industry, char&#x28;10&#x29;&#x29;&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;, ind_sub as &#x28;select pa_name&#xa;	, vc_industry&#xa;	, sub_industry&#xa;	, vc_sub_industry&#xa;	, row_number&#x28;&#x29; over&#x28;partition by vc_industry order by case when charindex&#x28;&#x27;&#x5b;P&#x5d;&#x27;, vc_sub_industry&#x29; &#x3d; 1 then 1 else 2 end asc, vc_sub_industry asc&#x29; as rn&#xa;	from split_ind&#x29; --select &#x2a; from ind_sub&#xa;&#xa;, other_ind as &#x28;select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;&#xa;	, trim&#x28;value&#x29; as other_ind&#xa;	from csv_recf&#xa;	cross apply string_split&#x28;replace&#x28;replace&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;, &#x27;&#x5b;&#x696d;&#x7a2e;&#x5d;&#x27;, &#x27;&#x7c;&#x27;&#x29;, char&#x28;10&#x29;, &#x27;&#x27;&#x29;, &#x27;&#x7c;&#x27;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;, company_industry as &#x28;select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x696d;&#x7a2e;1&#x5d; as original&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29; as pa_industry&#xa;	, vc_industry&#xa;	, vc_sub_industry&#xa;	from csv_recf&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	&#xa;	UNION&#xa;	&#xa;	select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x696d;&#x7a2e;2&#x5d; as original&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29; as pa_industry&#xa;	, vc_industry&#xa;	, vc_sub_industry&#xa;	from csv_recf&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	&#xa;	UNION&#xa;	&#xa;	select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d; as original&#xa;	, other_ind as pa_industry&#xa;	, vc_industry&#xa;	, vc_sub_industry&#xa;	from other_ind&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;other_ind&#x29;&#xa;	where coalesce&#x28;nullif&#x28;other_ind,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	--total 37622&#xa;&#x29;&#xa;&#xa;--select distinct vc_industry from company_industry&#xa;select distinct &#x5b;PANO &#x5d; as com_ext_id&#xa;, trim&#x28;vc_industry&#x29; as vc_industry&#xa;--, replace&#x28;vc_sub_industry, &#x27;&#x5b;P&#x5d;&#x27;, &#x27;&#x27;&#x29; as vc_sub_industry&#xa;, current_timestamp as insert_timestamp&#xa;from company_industry --75904 rows&#xa;--where &#x5b;PANO &#x5d; &#x3d; &#x27;CPY000028&#x27;&#xa;order by com_ext_id</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -3017,6 +3454,38 @@
     </step>
 
   <step>
+    <name>company sub industry</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From &#x28;DB&#x29;</connection>
+    <sql>--COMPANY INDUSTRY&#xa;with split_ind as &#x28;select pa_name&#xa;	, industry_en&#xa;	, industry_ja&#xa;	, concat_ws&#x28;&#x27;&#x27;, &#x27;&#x3010;PP&#x3011;&#x27;, industry_en, coalesce&#x28;&#x27; &#x2f; &#x27; &#x2b; nullif&#x28;industry_ja, &#x27;&#x27;&#x29;, NULL&#x29;&#x29; as vc_industry&#xa;	, sub_industry&#xa;	, trim&#x28;value&#x29; as vc_sub_industry&#xa;	from PA_industry&#xa;	cross apply string_split&#x28;sub_industry, char&#x28;10&#x29;&#x29;&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;, ind_sub as &#x28;select pa_name&#xa;	, vc_industry&#xa;	, sub_industry&#xa;	, vc_sub_industry&#xa;	, row_number&#x28;&#x29; over&#x28;partition by vc_industry order by case when charindex&#x28;&#x27;&#x5b;P&#x5d;&#x27;, vc_sub_industry&#x29; &#x3d; 1 then 1 else 2 end asc, vc_sub_industry asc&#x29; as rn&#xa;	from split_ind&#x29; --select &#x2a; from ind_sub&#xa;&#xa;, other_ind as &#x28;select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;&#xa;	, trim&#x28;value&#x29; as other_ind&#xa;	from csv_recf&#xa;	cross apply string_split&#x28;replace&#x28;replace&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;, &#x27;&#x5b;&#x696d;&#x7a2e;&#x5d;&#x27;, &#x27;&#x7c;&#x27;&#x29;, char&#x28;10&#x29;, &#x27;&#x27;&#x29;, &#x27;&#x7c;&#x27;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;, company_industry as &#x28;select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x696d;&#x7a2e;1&#x5d; as original&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29; as pa_industry&#xa;	, vc_industry&#xa;	, vc_sub_industry&#xa;	from csv_recf&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	&#xa;	UNION&#xa;	&#xa;	select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x696d;&#x7a2e;2&#x5d; as original&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29; as pa_industry&#xa;	, vc_industry&#xa;	, vc_sub_industry&#xa;	from csv_recf&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	&#xa;	UNION&#xa;	&#xa;	select &#x5b;PANO &#x5d;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d; as original&#xa;	, other_ind as pa_industry&#xa;	, vc_industry&#xa;	, vc_sub_industry&#xa;	from other_ind&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;other_ind&#x29;&#xa;	where coalesce&#x28;nullif&#x28;other_ind,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xa;	--total 37622&#xa;&#x29;&#xa;&#xa;--select distinct vc_industry from company_industry&#xa;select distinct &#x5b;PANO &#x5d; as com_ext_id&#xa;, trim&#x28;vc_industry&#x29; as vc_industry&#xa;, replace&#x28;vc_sub_industry, &#x27;&#x5b;P&#x5d;&#x27;, &#x27;&#x27;&#x29; as vc_sub_industry&#xa;, current_timestamp as insert_timestamp&#xa;from company_industry --75904 rows&#xa;--where &#x5b;PANO &#x5d; &#x3d; &#x27;CPY000028&#x27;&#xa;order by com_ext_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>1168</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
     <name>legal_document start date</name>
     <type>Update</type>
     <description/>
@@ -3027,7 +3496,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <skip_lookup>N</skip_lookup>
     <commit>1000</commit>
     <use_batch>N</use_batch>
@@ -3076,7 +3545,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -3120,54 +3589,6 @@
     </step>
 
   <step>
-    <name>lookup company_legal_document</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>company_legal_document</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>companyid</name>
-        <field>company_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>legal_doc_id</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>368</xloc>
-      <yloc>848</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
     <name>lookup companyid</name>
     <type>DBLookup</type>
     <description/>
@@ -3178,7 +3599,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -3216,7 +3637,7 @@
     </remotesteps>
     <GUI>
       <xloc>208</xloc>
-      <yloc>848</yloc>
+      <yloc>864</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -3232,7 +3653,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <cache>N</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -3265,6 +3686,60 @@
     <GUI>
       <xloc>1056</xloc>
       <yloc>1072</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>lookup sub industry</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To &#x28;prod&#x29;</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>vc_sub_industry</name>
+        <field>name</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>VCParentID</name>
+        <field>parent_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCSubIndustryID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>1168</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -3334,7 +3809,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <skip_lookup>N</skip_lookup>
     <commit>1000</commit>
     <use_batch>N</use_batch>
@@ -3369,7 +3844,7 @@
     </step>
 
   <step>
-    <name>update legal_document</name>
+    <name>update company document</name>
     <type>Update</type>
     <description/>
     <distribute>Y</distribute>
@@ -3379,7 +3854,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To &#x28;prod&#x29;</connection>
     <skip_lookup>N</skip_lookup>
     <commit>1000</commit>
     <use_batch>N</use_batch>
@@ -3395,8 +3870,8 @@
         <name2/>
         </key>
       <key>
-        <name>legal_doc_id</name>
-        <field>legal_doc_id</field>
+        <name>companyid</name>
+        <field>company_id</field>
         <condition>&#x3d;</condition>
         <name2/>
         </key>
@@ -3413,396 +3888,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>848</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert CF Date</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <schema/>
-    <table>additional_form_values</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>additional_type</column_name>
-          <stream_name>additional_type</stream_name>
-        </field>
-        <field>
-          <column_name>additional_id</column_name>
-          <stream_name>VCCompanyID</stream_name>
-        </field>
-        <field>
-          <column_name>form_id</column_name>
-          <stream_name>form_id</stream_name>
-        </field>
-        <field>
-          <column_name>field_id</column_name>
-          <stream_name>field_id</stream_name>
-        </field>
-        <field>
-          <column_name>field_date_value</column_name>
-          <stream_name>field_date_value</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>944</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>CF Contract Date</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x5b;PANO &#x5d; as com_ext_id&#xd;&#xa;, &#x27;add_com_info&#x27; as additional_type&#xd;&#xa;, 1001 as form_id&#xd;&#xa;, 11331 as field_id&#xd;&#xa;, convert&#x28;datetime, &#x5b;&#x5951;&#x7d04;&#x65e5;&#x5d;, 120&#x29; as field_date_value&#xd;&#xa;, current_timestamp as insert_timestamp&#xa;from csv_recf&#xa;where nullif&#x28;&#x5b;&#x5951;&#x7d04;&#x65e5;&#x5d;,&#x27;&#x27;&#x29; is not NULL</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>944</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>company sub industry</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>--COMPANY INDUSTRY&#xd;&#xa;with split_ind as &#x28;select pa_name&#xd;&#xa;	, industry_en&#xd;&#xa;	, industry_ja&#xd;&#xa;	, concat_ws&#x28;&#x27;&#x27;, &#x27;&#x3010;PP&#x3011;&#x27;, industry_en, coalesce&#x28;&#x27; &#x2f; &#x27; &#x2b; nullif&#x28;industry_ja, &#x27;&#x27;&#x29;, NULL&#x29;&#x29; as vc_industry&#xd;&#xa;	, sub_industry&#xd;&#xa;	, trim&#x28;value&#x29; as vc_sub_industry&#xd;&#xa;	from PA_industry&#xd;&#xa;	cross apply string_split&#x28;sub_industry, char&#x28;10&#x29;&#x29;&#x29;&#xd;&#xa;&#xd;&#xa;--MAIN SCRIPT&#xd;&#xa;, ind_sub as &#x28;select pa_name&#xd;&#xa;	, vc_industry&#xd;&#xa;	, sub_industry&#xd;&#xa;	, vc_sub_industry&#xd;&#xa;	, row_number&#x28;&#x29; over&#x28;partition by vc_industry order by case when charindex&#x28;&#x27;&#x5b;P&#x5d;&#x27;, vc_sub_industry&#x29; &#x3d; 1 then 1 else 2 end asc, vc_sub_industry asc&#x29; as rn&#xd;&#xa;	from split_ind&#x29; --select &#x2a; from ind_sub&#xd;&#xa;&#xd;&#xa;, other_ind as &#x28;select &#x5b;PANO &#x5d;&#xd;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;&#xd;&#xa;	, trim&#x28;value&#x29; as other_ind&#xd;&#xa;	from csv_recf&#xd;&#xa;	cross apply string_split&#x28;replace&#x28;replace&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;, &#x27;&#x5b;&#x696d;&#x7a2e;&#x5d;&#x27;, &#x27;&#x7c;&#x27;&#x29;, char&#x28;10&#x29;, &#x27;&#x27;&#x29;, &#x27;&#x7c;&#x27;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#x29;&#xd;&#xa;&#xd;&#xa;--MAIN SCRIPT&#xd;&#xa;, company_industry as &#x28;select &#x5b;PANO &#x5d;&#xd;&#xa;	, &#x5b;&#x696d;&#x7a2e;1&#x5d; as original&#xd;&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29; as pa_industry&#xd;&#xa;	, vc_industry&#xd;&#xa;	, vc_sub_industry&#xd;&#xa;	from csv_recf&#xd;&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;1&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION&#xd;&#xa;	&#xd;&#xa;	select &#x5b;PANO &#x5d;&#xd;&#xa;	, &#x5b;&#x696d;&#x7a2e;2&#x5d; as original&#xd;&#xa;	, trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29; as pa_industry&#xd;&#xa;	, vc_industry&#xd;&#xa;	, vc_sub_industry&#xd;&#xa;	from csv_recf&#xd;&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x696d;&#x7a2e;2&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION&#xd;&#xa;	&#xd;&#xa;	select &#x5b;PANO &#x5d;&#xd;&#xa;	, &#x5b;&#x305d;&#x306e;&#x4ed6;&#x696d;&#x7a2e;&#x5d; as original&#xd;&#xa;	, other_ind as pa_industry&#xd;&#xa;	, vc_industry&#xd;&#xa;	, vc_sub_industry&#xd;&#xa;	from other_ind&#xd;&#xa;	left join ind_sub p on p.pa_name &#x3d; trim&#x28;other_ind&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;other_ind,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	--total 37622&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;--select distinct vc_industry from company_industry&#xd;&#xa;select distinct &#x5b;PANO &#x5d; as com_ext_id&#xd;&#xa;, trim&#x28;vc_industry&#x29; as vc_industry&#xd;&#xa;, replace&#x28;vc_sub_industry, &#x27;&#x5b;P&#x5d;&#x27;, &#x27;&#x27;&#x29; as vc_sub_industry&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from company_industry --75904 rows&#xd;&#xa;--where &#x5b;PANO &#x5d; &#x3d; &#x27;CPY000028&#x27;&#xd;&#xa;order by com_ext_id</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>1168</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>lookup sub industry</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <cache>N</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>vertical</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>vc_sub_industry</name>
-        <field>name</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>VCParentID</name>
-        <field>parent_id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>VCSubIndustryID</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>1168</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>VC company sub industry</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <schema/>
-    <table>company_industry</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>industry_id</column_name>
-          <stream_name>VCSubIndustryID</stream_name>
-        </field>
-        <field>
-          <column_name>company_id</column_name>
-          <stream_name>VCCompanyID</stream_name>
-        </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1200</xloc>
-      <yloc>1168</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Ind_sub check</name>
-    <type>TypeExitExcelWriterStep</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <header>Y</header>
-    <footer>N</footer>
-    <makeSheetActive>Y</makeSheetActive>
-    <rowWritingMethod>overwrite</rowWritingMethod>
-    <startingCell>A1</startingCell>
-    <appendOmitHeader>N</appendOmitHeader>
-    <appendOffset>0</appendOffset>
-    <appendEmpty>0</appendEmpty>
-    <rowWritingMethod>overwrite</rowWritingMethod>
-    <forceFormulaRecalculation>N</forceFormulaRecalculation>
-    <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
-    <appendLines>N</appendLines>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <file>
-      <name>F&#x3a;&#x5c;VC_Randstad_JP&#x5c;Working&#x5c;Industry&#x5c;20200410_check_pa_company_industry_sub</name>
-      <extention>xlsx</extention>
-      <do_not_open_newfile_init>N</do_not_open_newfile_init>
-      <split>N</split>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <sheetname>Sheet1</sheetname>
-      <autosizecolums>N</autosizecolums>
-      <stream_data>N</stream_data>
-      <protect_sheet>N</protect_sheet>
-      <password>Encrypted </password>
-      <protected_by/>
-      <splitevery>0</splitevery>
-      <if_file_exists>new</if_file_exists>
-      <if_sheet_exists>new</if_sheet_exists>
-      </file>
-    <template>
-      <enabled>N</enabled>
-      <sheet_enabled>N</sheet_enabled>
-      <filename>template.xls</filename>
-      <sheetname/>
-      <hidden>N</hidden>
-    </template>
-    <fields>
-      <field>
-        <name>com_ext_id</name>
-        <type>String</type>
-        <format/>
-        <title>com_ext_id</title>
-        <titleStyleCell/>
-        <styleCell/>
-        <commentField/>
-        <commentAuthorField/>
-        <formula>N</formula>
-        <hyperlinkField/>
-      </field>
-      <field>
-        <name>vc_industry</name>
-        <type>String</type>
-        <format/>
-        <title>vc_industry</title>
-        <titleStyleCell/>
-        <styleCell/>
-        <commentField/>
-        <commentAuthorField/>
-        <formula>N</formula>
-        <hyperlinkField/>
-      </field>
-      <field>
-        <name>vc_sub_industry</name>
-        <type>String</type>
-        <format/>
-        <title>vc_sub_industry</title>
-        <titleStyleCell/>
-        <styleCell/>
-        <commentField/>
-        <commentAuthorField/>
-        <formula>N</formula>
-        <hyperlinkField/>
-      </field>
-      <field>
-        <name>insert_timestamp</name>
-        <type>Timestamp</type>
-        <format/>
-        <title>insert_timestamp</title>
-        <titleStyleCell/>
-        <styleCell/>
-        <commentField/>
-        <commentAuthorField/>
-        <formula>N</formula>
-        <hyperlinkField/>
-      </field>
-      <field>
-        <name>VCCompanyID</name>
-        <type>Integer</type>
-        <format/>
-        <title>VCCompanyID</title>
-        <titleStyleCell/>
-        <styleCell/>
-        <commentField/>
-        <commentAuthorField/>
-        <formula>N</formula>
-        <hyperlinkField/>
-      </field>
-      <field>
-        <name>VCParentID</name>
-        <type>Integer</type>
-        <format/>
-        <title>VCParentID</title>
-        <titleStyleCell/>
-        <styleCell/>
-        <commentField/>
-        <commentAuthorField/>
-        <formula>N</formula>
-        <hyperlinkField/>
-      </field>
-      <field>
-        <name>VCSubIndustryID</name>
-        <type>Integer</type>
-        <format/>
-        <title>VCSubIndustryID</title>
-        <titleStyleCell/>
-        <styleCell/>
-        <commentField/>
-        <commentAuthorField/>
-        <formula>N</formula>
-        <hyperlinkField/>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1200</xloc>
-      <yloc>1248</yloc>
+      <xloc>368</xloc>
+      <yloc>864</yloc>
       <draw>Y</draw>
     </GUI>
     </step>

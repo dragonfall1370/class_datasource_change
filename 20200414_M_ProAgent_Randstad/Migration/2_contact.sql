@@ -47,19 +47,21 @@ with dup as (select [採用担当者ID], [メール]
 --MAIN SCRIPT
 select c.[企業 PANO ] as [contact-companyId]
 , trim(c.[採用担当者ID]) as [contact-externalId]
+
 /* CHANGE SCRIPT TO FULLY IMPORT CONTACTS
 , case when c.[採用担当者ID] in (select [採用担当者ID] from last_name where rn > 1) then concat([採用担当者], '【', c.[採用担当者ID], '】')
 	else coalesce(nullif([採用担当者],''), concat('Lastname - ', c.[採用担当者ID])) end as [contact-lastName]
 , case when dup.rn > 1 then concat_ws('_', dup.rn, trim(c.[メール]))
 	else trim(c.[メール]) end as [contact-email]
 */
+
 , concat('【', c.[採用担当者ID], '】', [採用担当者]) as [contact-lastName]
 , coalesce(c.[採用担当者ID] + '_' + nullif(trim(dup.[メール]),''), NULL) as [contact-email]
 , c.[フリガナ] as [contact-lastNameKana]
 , concat_ws(' ', c.[部署], c.[役職]) as [contact-jobTitle]
 --, case when [連絡先種類1] = '電話' then trim(c.[連絡先 電話,FAX1]) --ＦＡＸ, 電話, 携帯
 --	else NULL end as [contact-phone]
-, nullif(cp.con_phone,'0') as [contact-phone]
+, nullif(replace(cp.con_phone, ':', ''),'0') as [contact-phone]
 --, concat_ws('', coalesce('[' + 連絡先種類2 + ']', NULL), [連絡先 電話,FAX2]) as mobile --#CF
 , c.[所在地 〒] as addr_no
 , c.[所在地 都道府県] as addr_state

@@ -39,7 +39,8 @@ with dup as (select [PANO ], [会社名], row_number() over(partition by lower([
 	from allfax
 	where fax is not NULL
 	group by com_ext_id)
-	
+
+--Company documents	| checking final backup if file without extension
 , doc as (select seq
 	, recf_id as company_id
 	, pano as com_ext_id
@@ -63,7 +64,8 @@ select c.[PANO ] as [company-externalId] --#CF
 , case when len(c.[URL]) > 100 then left(c.[URL], patindex('%/%/%', replace(c.[URL], '//', '')) + 2)
 	else trim(c.[URL]) end as [company-website]
 --Company Owners
-, trim(u.EmailAddress) as [company-owners] --c.[企業担当ユーザID] --userID | c.[企業担当] --user
+, case when c.[企業担当ユーザID] in ('FPC163', 'FPC207') then NULL --updated on 20200224 --c.[企業担当ユーザID] --userID | c.[企業担当] --user
+		else trim(u.EmailAddress) end as [company-owners]
 , cp.com_phone as [company-phone]
 , cf.com_fax as [company-fax]
 --Notes

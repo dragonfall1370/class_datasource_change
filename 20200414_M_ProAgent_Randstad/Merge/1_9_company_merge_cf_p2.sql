@@ -7,7 +7,7 @@ with latest_company as (select *
 	from (select * from mike_tmp_company_dup_check2 where vc_pa_company_id not in (select vc_pa_company_id from mike_tmp_company_dup_check)) a
 	where 1=1
 	and rn = 1
-	and coalesce(vc_pa_update_date, vc_pa_reg_date) > coalesce(vc_latest_date, '1900-01-01') --549 rows
+	and coalesce(vc_pa_update_date, vc_pa_reg_date) > coalesce(vc_latest_date, vc_reg_date, '1900-01-01') --549 rows
 )
 
 ---Older PA companies
@@ -18,7 +18,7 @@ with latest_company as (select *
 	from (select * from mike_tmp_company_dup_check2 where vc_pa_company_id not in (select vc_pa_company_id from mike_tmp_company_dup_check)) a
 	where 1=1
 	and rn = 1
-	and coalesce(vc_pa_update_date, vc_pa_reg_date) < coalesce(vc_latest_date, '1900-01-01')
+	and coalesce(vc_pa_update_date, vc_pa_reg_date) < coalesce(vc_latest_date, vc_reg_date,'1900-01-01')
 	and vc_company_id not in (select vc_company_id from latest_company) --2395 rows
 )
 

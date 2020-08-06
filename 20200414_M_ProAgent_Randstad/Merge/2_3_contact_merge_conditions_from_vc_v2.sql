@@ -33,7 +33,7 @@ with pa_contact as (select c.company_id
 	and c.company_id in (select distinct company_id from pa_contact)
 	and c.id not in (select distinct contact_id from pa_contact)
 	order by c.company_id, c.id
-	) --5526 rows
+	) --select * from vc_contact --5526 rows
 	
 , pa_vc_email_name as (select pa.company_id
 	, pa.company_id_bkup

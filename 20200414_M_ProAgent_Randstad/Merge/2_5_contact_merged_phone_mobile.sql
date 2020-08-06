@@ -15,7 +15,7 @@ with merged_phone as (select m.merged_contact_id
 	, string_agg(phone, chr(10)) as phone_group
 	from merged_phone
 	where mobile_phone is not NULL or phone is not NULL
-	group by merged_contact_id)
+	group by merged_contact_id) --select * from merged_phone_group --2134
 
 , merged_new as (select c.id
 	, m.merged_contact_id
@@ -28,7 +28,7 @@ with merged_phone as (select m.merged_contact_id
 	, case when c.phone is NULL or c.phone = '' then concat_ws(',', c.mobile_phone, m.mobile_phone_group) --mobile phone only
 			else concat_ws(',', c.mobile_phone, m.phone_group, m.mobile_phone_group) end as new_mobile_phone --phone & mobile phone
 	from contact c
-	join merged_phone_group m on m.merged_contact_id = c.id)
+	join merged_phone_group m on m.merged_contact_id = c.id) --select * from merged_new
 
 --UPDATE PHONE	
 update contact c

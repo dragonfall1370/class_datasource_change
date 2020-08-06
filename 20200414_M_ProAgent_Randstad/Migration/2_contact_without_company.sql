@@ -69,5 +69,5 @@ select 'CPY9999999' as [contact-companyId]
 from csv_rec c
 left join dup on dup.採用担当者ID = c.採用担当者ID
 left join con_phone cp on cp.con_ext_id = c.採用担当者ID
-where c.[企業 PANO ] not in (select [PANO ] from csv_recf)
+where not exists (select 1 from csv_recf where [PANO ] = c.[企業 PANO ])
 --672 rows

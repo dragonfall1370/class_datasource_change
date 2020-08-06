@@ -77,7 +77,7 @@ and [PANO ] in ('CDT223957', 'CDT223540')
 	, [勤務歴 業種1] as origin_industry
 	, i.industry_en as industry
 	, [勤務歴 職種カテゴリー1] as origin_fe
-	, concat('【PP】', vc_fe_en, coalesce(' / ' + nullif(vc_fe_ja,''), NULL)) as vc_fe
+	, coalesce('【PP】' + coalesce(nullif(vc_fe_en, '') + ' / ' + nullif(vc_fe_ja,''), NULL), NULL) as vc_fe
 	, [勤務歴 職種1] as origin_sfe1
 	, replace(trim(fe.vc_sfe_split), '[P]', '') as vc_sfe
 	, '' as dateRangeFrom
@@ -103,7 +103,7 @@ UNION ALL
 	, [勤務歴 業種2] as origin_industry
 	, i.industry_en as industry
 	, [勤務歴 職種カテゴリー2] as origin_fe
-	, concat('【PP】', vc_fe_en, coalesce(' / ' + nullif(vc_fe_ja,''), NULL)) as vc_fe
+	, coalesce('【PP】' + coalesce(nullif(vc_fe_en, '') + ' / ' + nullif(vc_fe_ja,''), NULL), NULL) as vc_fe
 	, [勤務歴 職種2] as origin_sfe1
 	, replace(trim(fe.vc_sfe_split), '[P]', '') as vc_sfe
 	, '' as dateRangeFrom
@@ -129,7 +129,7 @@ UNION ALL
 	, [勤務歴 業種3] as origin_industry
 	, i.industry_en as industry
 	, [勤務歴 職種カテゴリー3] as origin_fe
-	, concat('【PP】', vc_fe_en, coalesce(' / ' + nullif(vc_fe_ja,''), NULL)) as vc_fe
+	, coalesce('【PP】' + coalesce(nullif(vc_fe_en, '') + ' / ' + nullif(vc_fe_ja,''), NULL), NULL) as vc_fe
 	, [勤務歴 職種3] as origin_sfe1
 	, replace(trim(fe.vc_sfe_split), '[P]', '') as vc_sfe
 	, '' as dateRangeFrom
@@ -169,6 +169,6 @@ and pa_category_name = '旅行・ホテル・ブライダル関連'
 */
 
 select *
-into cand_work_history_fe_sfe
+--into cand_work_history_fe_sfe
 from dummy_wh
 --where cand_ext_id = 'CDT001120'

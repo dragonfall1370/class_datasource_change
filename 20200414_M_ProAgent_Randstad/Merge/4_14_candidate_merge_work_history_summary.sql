@@ -16,14 +16,14 @@ with merged_experience as (select m.vc_candidate_id
 	
 /* AUDIT MERGED NOTE
 select c.id
-, c.note
-, concat_ws('<br/>' || '<br/>', c.experience, n.experience_group)
+, c.experience
+, concat_ws('<br/>' || '<br/>', '【Work History】' || '<br/>' || nullif(replace(c.experience, chr(10), '<br/>'), ''), '<br/>' || n.experience_group)
 from candidate c
-join experience_group n on n.vc_candidate_id = c.id --
+join experience_group n on n.vc_candidate_id = c.id
 */ --9838 rows
 
 update candidate c
-set experience = concat_ws('<br/>' || '<br/>', c.experience, n.experience_group)
+set experience = concat_ws('<br/>' || '<br/>', '【Work History】' || '<br/>' || nullif(replace(c.experience, chr(10), '<br/>'), ''), '<br/>' || n.experience_group)
 from experience_group n
 where n.vc_candidate_id = c.id
 

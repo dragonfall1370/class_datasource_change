@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#x2f;</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -428,10 +428,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2019&#x2f;09&#x2f;17 15&#x3a;58&#x3a;16.201</created_date>
+    <created_date>2019/09/17 15:58:16.201</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019&#x2f;09&#x2f;17 15&#x3a;58&#x3a;16.201</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <modified_date>2019/09/17 15:58:16.201</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -478,11 +478,22 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>--Add column in common_location--&#xd;&#xa;alter table common_location&#xd;&#xa;add column contact_id bigint&#xd;&#xa;&#xd;&#xa;--Update current_location_id --&#xa;update contact&#xa;set current_location_id &#x3d; common_location.id&#xa;from common_location&#xa;where common_location.contact_id &#x3d; contact.id&#xa;and contact.external_id is not NULL&#xa;and contact.deleted_timestamp is NULL</note>
+      <note>--Add column in common_location--
+alter table common_location
+add column contact_id bigint
+
+--Update current_location_id --
+update contact
+set current_location_id = common_location.id
+from common_location
+where common_location.contact_id = contact.id
+and contact.external_id is not NULL
+and contact.deleted_timestamp is NULL
+and common_location.contact_id is not NULL</note>
       <xloc>720</xloc>
       <yloc>224</yloc>
       <width>268</width>
-      <heigth>185</heigth>
+      <heigth>201</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -500,11 +511,11 @@
     </notepad>
   </notepads>
   <connection>
-    <name>From &#x28;DB&#x29;</name>
+    <name>From (DB)</name>
     <server>localhost</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>randstadreview2</database>
+    <database>randstadprod</database>
     <port>1433</port>
     <username>sa</username>
     <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
@@ -512,24 +523,54 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
   <connection>
-    <name>To &#x28;REVIEW2&#x29;</name>
-    <server>10.10.10.92</server>
+    <name>To (prod)</name>
+    <server>rdbm1</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>randstad-review2.vincere.io</database>
+    <database>randstad.vincere.io</database>
     <port>5432</port>
     <username>dbapplication_user</username>
     <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
@@ -537,15 +578,42 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
   <order>
@@ -611,13 +679,31 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>--Contact current location&#xd;&#xa;select &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as con_ext_id --added contact_external_id in case&#xd;&#xa;--, concat_ws&#x28;&#x27;, &#x27;&#xd;&#xa;--	, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730;&#x8a73;&#x7d30;&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;--	&#x29; as location_name&#xd;&#xa;, &#x27;&#x62c5;&#x5f53;&#x8005;&#x4f4f;&#x6240;&#x27; as location_name --updated 20200212&#xd;&#xa;, concat_ws&#x28;&#x27;, &#x27;&#xd;&#xa;	--, coalesce&#x28;&#x27;&#x3012;&#x27; &#x2b; nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	, coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730;&#x8a73;&#x7d30;&#x5d;, &#x27;&#x27;&#x29;, NULL&#x29;&#xd;&#xa;	&#x29; as location_address&#xd;&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;&#x5d; as location_state&#xd;&#xa;, &#x5b;&#x6240;&#x5728;&#x5730; &#x3012;&#x5d; as post_code&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from csv_rec&#xd;&#xa;where coalesce&#x28;nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x90fd;&#x9053;&#x5e9c;&#x770c;&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730; &#x3012;&#x5d;, &#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x6240;&#x5728;&#x5730;&#x8a73;&#x7d30;&#x5d;, &#x27;&#x27;&#x29;&#x29; is not NULL</sql>
+    <connection>From (DB)</connection>
+    <sql>--Contact current location
+select [採用担当者ID] as con_ext_id --added contact_external_id in case
+--, concat_ws(', '
+--	, coalesce('〒' + nullif([所在地 〒], ''), NULL)
+--	, coalesce(nullif([所在地 都道府県], ''), NULL)
+--	, coalesce(nullif([所在地詳細], ''), NULL)
+--	) as location_name
+, '担当者住所' as location_name --updated 20200212
+, concat_ws(', '
+	--, coalesce('〒' + nullif([所在地 〒], ''), NULL)
+	, coalesce(nullif([所在地 都道府県], ''), NULL)
+	, coalesce(nullif([所在地詳細], ''), NULL)
+	) as location_address
+, [所在地 都道府県] as location_state
+, [所在地 〒] as post_code
+, current_timestamp as insert_timestamp
+from csv_rec
+where coalesce(nullif([所在地 都道府県], ''), nullif([所在地 〒], ''), nullif([所在地詳細], '')) is not NULL</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>Y</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -630,8 +716,7 @@
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Contact Reg Date</name>
     <type>TableInput</type>
@@ -643,13 +728,16 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as con_ext_id&#xa;, convert&#x28;datetime, &#x767b;&#x9332;&#x65e5;, 120&#x29; as reg_date&#xa;from csv_rec</sql>
+    <connection>From (DB)</connection>
+    <sql>select [採用担当者ID] as con_ext_id
+, convert(datetime, 登録日, 120) as reg_date
+from csv_rec</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -662,8 +750,7 @@
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Contact Skills</name>
     <type>TableInput</type>
@@ -675,13 +762,17 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as con_ext_id&#xa;, &#x5b;&#x30e1;&#x30e2;&#x5d; as skills --&#x23;CF&#xa;from csv_rec&#xa;where &#x5b;&#x30e1;&#x30e2;&#x5d; &#x3c;&#x3e; &#x27;&#x27;</sql>
+    <connection>From (DB)</connection>
+    <sql>select [採用担当者ID] as con_ext_id
+, [メモ] as skills --#CF
+from csv_rec
+where [メモ] &lt;&gt; ''</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -694,8 +785,7 @@
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Contact mobile</name>
     <type>TableInput</type>
@@ -707,13 +797,37 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>with allmobile as &#x28;select &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as con_ext_id&#xa;	, trim&#x28;&#x5b;&#x9023;&#x7d61;&#x5148; &#x96fb;&#x8a71;,FAX1&#x5d;&#x29; as mobile&#xa;	from csv_rec&#xa;	where &#x5b;&#x9023;&#x7d61;&#x5148;&#x7a2e;&#x985e;1&#x5d; in &#x28;&#x27;&#x643a;&#x5e2f;&#x27;&#x29; and nullif&#x28;&#x5b;&#x9023;&#x7d61;&#x5148; &#x96fb;&#x8a71;,FAX1&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;	&#xa;	UNION ALL&#xa;	select &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as con_ext_id&#xa;	, trim&#x28;&#x5b;&#x9023;&#x7d61;&#x5148; &#x96fb;&#x8a71;,FAX2&#x5d;&#x29; as mobile&#xa;	from csv_rec&#xa;	where &#x5b;&#x9023;&#x7d61;&#x5148;&#x7a2e;&#x985e;2&#x5d; in &#x28;&#x27;&#x643a;&#x5e2f;&#x27;&#x29; and nullif&#x28;&#x5b;&#x9023;&#x7d61;&#x5148; &#x96fb;&#x8a71;,FAX2&#x5d;, &#x27;&#x27;&#x29; is not NULL&#xa;	&#x29;&#xa;&#xa;, con_mobile as &#x28;select con_ext_id&#xa;	, string_agg&#x28;mobile, &#x27;,&#x27;&#x29; as con_mobile&#xa;	from allmobile&#xa;	where mobile is not NULL&#xa;	group by con_ext_id&#x29;&#xa;&#xa;--MAIN SCRIPT&#xa;select c.&#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as con_ext_id&#xa;, cm.con_mobile&#xa;from csv_rec c&#xa;left join con_mobile cm on cm.con_ext_id &#x3d; c.&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#xa;where cm.con_mobile is not NULL</sql>
+    <connection>From (DB)</connection>
+    <sql>with allmobile as (select [採用担当者ID] as con_ext_id
+	, trim([連絡先 電話,FAX1]) as mobile
+	from csv_rec
+	where [連絡先種類1] in ('携帯') and nullif([連絡先 電話,FAX1], '') is not NULL
+	
+	UNION ALL
+	select [採用担当者ID] as con_ext_id
+	, trim([連絡先 電話,FAX2]) as mobile
+	from csv_rec
+	where [連絡先種類2] in ('携帯') and nullif([連絡先 電話,FAX2], '') is not NULL
+	)
+
+, con_mobile as (select con_ext_id
+	, string_agg(mobile, ',') as con_mobile
+	from allmobile
+	where mobile is not NULL
+	group by con_ext_id)
+
+--MAIN SCRIPT
+select c.[採用担当者ID] as con_ext_id
+, cm.con_mobile
+from csv_rec c
+left join con_mobile cm on cm.con_ext_id = c.採用担当者ID
+where cm.con_mobile is not NULL</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -726,8 +840,7 @@
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Current location</name>
     <type>TableOutput</type>
@@ -739,7 +852,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <schema/>
     <table>common_location</table>
     <commit>1000</commit>
@@ -757,31 +870,32 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>contact_id</column_name>
-          <stream_name>VCContactID</stream_name>
-        </field>
-        <field>
-          <column_name>location_name</column_name>
-          <stream_name>location_name</stream_name>
-        </field>
-        <field>
-          <column_name>address</column_name>
-          <stream_name>location_address</stream_name>
-        </field>
-        <field>
-          <column_name>state</column_name>
-          <stream_name>location_state</stream_name>
-        </field>
-        <field>
-          <column_name>post_code</column_name>
-          <stream_name>post_code</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
+      <field>
+        <column_name>contact_id</column_name>
+        <stream_name>VCContactID</stream_name>
+      </field>
+      <field>
+        <column_name>location_name</column_name>
+        <stream_name>location_name</stream_name>
+      </field>
+      <field>
+        <column_name>address</column_name>
+        <stream_name>location_address</stream_name>
+      </field>
+      <field>
+        <column_name>state</column_name>
+        <stream_name>location_state</stream_name>
+      </field>
+      <field>
+        <column_name>post_code</column_name>
+        <stream_name>post_code</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -794,8 +908,7 @@
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>PANO</name>
     <type>TableInput</type>
@@ -807,13 +920,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as con_ext_id&#xd;&#xa;	, &#x27;add_con_info&#x27; as additional_type&#xd;&#xa;	, 1140 as form_id&#xd;&#xa;	, 11276 as field_id&#xd;&#xa;	, &#x5b;&#x63a1;&#x7528;&#x62c5;&#x5f53;&#x8005;ID&#x5d; as field_value&#xd;&#xa;	, current_timestamp as insert_timestamp&#xd;&#xa;from csv_rec</sql>
+    <connection>From (DB)</connection>
+    <sql>select [採用担当者ID] as con_ext_id
+	, 'add_con_info' as additional_type
+	, 1140 as form_id
+	, 11276 as field_id
+	, [採用担当者ID] as field_value
+	, current_timestamp as insert_timestamp
+from csv_rec</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -826,8 +946,7 @@
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Update Contact CF</name>
     <type>InsertUpdate</type>
@@ -839,7 +958,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <commit>100</commit>
     <update_bypassed>N</update_bypassed>
     <lookup>
@@ -848,25 +967,25 @@
       <key>
         <name>additional_type</name>
         <field>additional_type</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>VCContactID</name>
         <field>additional_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>form_id</name>
         <field>form_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>field_id</name>
         <field>field_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -900,6 +1019,7 @@
         <update>Y</update>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -912,8 +1032,7 @@
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Update reg date</name>
     <type>Update</type>
@@ -925,7 +1044,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -937,14 +1056,15 @@
       <key>
         <name>VCContactID</name>
         <field>id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
-        </key>
+      </key>
       <value>
         <name>insert_timestamp</name>
         <rename>reg_date</rename>
-        </value>
-      </lookup>
+      </value>
+    </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -957,8 +1077,7 @@
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Update skills</name>
     <type>Update</type>
@@ -970,7 +1089,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -982,14 +1101,15 @@
       <key>
         <name>VCContactID</name>
         <field>id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
-        </key>
+      </key>
       <value>
         <name>skills</name>
         <rename>skills</rename>
-        </value>
-      </lookup>
+      </value>
+    </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1002,8 +1122,7 @@
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>contact lookup</name>
     <type>DBLookup</type>
@@ -1015,7 +1134,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1028,7 +1147,7 @@
       <key>
         <name>con_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -1044,6 +1163,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1056,8 +1176,7 @@
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>contact lookup 2</name>
     <type>DBLookup</type>
@@ -1069,7 +1188,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <cache>N</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
@@ -1082,7 +1201,7 @@
       <key>
         <name>con_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -1098,6 +1217,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1110,8 +1230,7 @@
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>mobile</name>
     <type>Update</type>
@@ -1123,7 +1242,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -1135,14 +1254,15 @@
       <key>
         <name>VCContactID</name>
         <field>id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
-        </key>
+      </key>
       <value>
         <name>mobile_phone</name>
         <rename>con_mobile</rename>
-        </value>
-      </lookup>
+      </value>
+    </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1155,11 +1275,11 @@
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

@@ -94,11 +94,9 @@ from CAN_resume)
 select --top 1000 
 	c.[PANO ] as [candidate-externalId] --#CF inject then
 	, convert(datetime, c.[登録日], 120) as reg_date
-	--, N'　' as [candidate-firstName]
-	, '氏名' as [candidate-firstName]
+	, '氏名' as [candidate-firstName] --replace with N'　' (double byte blank later)
 	, coalesce(nullif([氏名],''), 'No Last name') as [candidate-Lastname]
-	--, N'　' as [candidate-firstNameKana]
-	, 'フリガナ' as [candidate-firstNameKana]
+	, 'フリガナ' as [candidate-firstNameKana] --replace with N'　' (double byte blank later)
 	, [フリガナ] as [candidate-lastNameKana]
 	, convert(date, c.[生年月日], 120) as [candidate-dob]
 	, c.[人材担当ユーザID] --candidate owners

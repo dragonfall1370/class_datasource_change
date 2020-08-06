@@ -40,7 +40,8 @@ select cand_ext_id
 from doc_final 
 where ext = 0
 --and UploadedName like '480510%'
-and cand_ext_id in ('CDT062667', 'CDT062763', 'CDT063457', 'CDT094872', 'CDT095026', 'CDT095247') --migrated candidate documents
+--and cand_ext_id in ('CDT062667', 'CDT062763', 'CDT063457', 'CDT094872', 'CDT095026', 'CDT095247') --migrated candidate documents
+and cand_ext_id in ('CDT152336', 'CDT076813', 'CDT078522') --special cases
 order by UploadedName
 
 

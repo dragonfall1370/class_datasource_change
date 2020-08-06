@@ -79,6 +79,7 @@ select ja.cand_ext_id
 		else NULL end as stage
 , ja.sub_status
 , ja.action_date
+, ja.rejected_date
 --Additional info | added from 20200107
 , ja.order_id
 , ja.pa_ja_status

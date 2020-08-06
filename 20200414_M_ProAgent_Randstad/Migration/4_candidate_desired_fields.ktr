@@ -6,7 +6,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <directory>&#x2f;</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -427,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2019&#x2f;12&#x2f;04 13&#x3a;25&#x3a;50.987</created_date>
+    <created_date>2019/12/04 13:25:50.987</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019&#x2f;12&#x2f;04 13&#x3a;25&#x3a;50.987</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <modified_date>2019/12/04 13:25:50.987</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -477,7 +477,7 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Json handling &#x28;if DB server running slow&#x29;</note>
+      <note>Json handling (if DB server running slow)</note>
       <xloc>928</xloc>
       <yloc>16</yloc>
       <width>225</width>
@@ -520,11 +520,11 @@
     </notepad>
   </notepads>
   <connection>
-    <name>From &#x28;DB&#x29;</name>
+    <name>From (DB)</name>
     <server>localhost</server>
     <type>MSSQL</type>
     <access>Native</access>
-    <database>randstadreview2</database>
+    <database>randstadprod</database>
     <port>1433</port>
     <username>sa</username>
     <password>Encrypted 2be98afc86aa7f2d5f94aea35e083b8df</password>
@@ -532,21 +532,102 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
   <connection>
-    <name>To &#x28;REVIEW2&#x29;</name>
-    <server>10.10.10.92</server>
+    <name>To (prod)</name>
+    <server>rdbm1</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>randstad.vincere.io</database>
+    <port>5432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>To (REVIEW2)</name>
+    <server>rdbm1</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>randstad-review2.vincere.io</database>
@@ -557,15 +638,42 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
     </attributes>
   </connection>
   <order>
@@ -626,28 +734,28 @@
     </hop>
     <hop>
       <from>Candidate lookup 2</from>
-      <to>Work history tmp table &#x28;&#x2a;&#x29;</to>
+      <to>Work history tmp table (*)</to>
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>Work history &#x28;&#x2a;&#x29;</from>
+      <from>Work history (*)</from>
       <to>Candidate lookup 2</to>
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>Work history in_fe_sfe &#x28;&#x2a;&#x29;</from>
+      <from>Work history in_fe_sfe (*)</from>
       <to>Candidate lookup 2</to>
       <enabled>N</enabled>
     </hop>
     <hop>
       <from>Candidate lookup 2</from>
-      <to>WH in_fe_sfe tmp table &#x28;&#x2a;&#x29;</to>
+      <to>WH in_fe_sfe tmp table (*)</to>
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>Work history json &#x2a;</from>
+      <from>Work history json *</from>
       <to>Update 2</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>VC candidate desired industry</from>
@@ -657,6 +765,26 @@
     <hop>
       <from>VC desired FE SFE</from>
       <to>Update desired FE SFE</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>lookup industry 2</from>
+      <to>lookup sub industry 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Candidate lookup</from>
+      <to>lookup industry 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>lookup sub industry 2</from>
+      <to>Insert tmp cand industry (prod)</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>SFE Lookup</from>
+      <to>Insert cand FESFE audit</to>
       <enabled>N</enabled>
     </hop>
   </order>
@@ -685,7 +813,7 @@
     <appendLines>N</appendLines>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>D&#x3a;&#x5c;Randstad&#x5c;Industry_ouput</name>
+      <name>D:\Randstad\Industry_ouput</name>
       <extention>xlsx</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <split>N</split>
@@ -702,7 +830,7 @@
       <splitevery>0</splitevery>
       <if_file_exists>new</if_file_exists>
       <if_sheet_exists>new</if_sheet_exists>
-      </file>
+    </file>
     <template>
       <enabled>N</enabled>
       <sheet_enabled>N</sheet_enabled>
@@ -760,6 +888,7 @@
         <hyperlinkField/>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -772,8 +901,7 @@
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>CSV file input</name>
     <type>CsvInput</type>
@@ -785,12 +913,12 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>D&#x3a;&#x5c;Randstad&#x5c;Restore_randstad_desired_industry.csv</filename>
+    <filename>D:\Randstad\Restore_randstad_desired_industry.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
     <separator>,</separator>
-    <enclosure>&#x22;</enclosure>
+    <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
     <lazy_conversion>Y</lazy_conversion>
@@ -802,8 +930,8 @@
       <field>
         <name>id</name>
         <type>BigNumber</type>
-        <format>&#x23;</format>
-        <currency>&#x24;</currency>
+        <format>#</format>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -814,7 +942,7 @@
         <name>desired_industry_json</name>
         <type>String</type>
         <format/>
-        <currency>&#x24;</currency>
+        <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>91</length>
@@ -822,6 +950,7 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -834,8 +963,7 @@
       <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Candidate Desired FE SFE</name>
     <type>TableInput</type>
@@ -847,13 +975,103 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>with cand_fe_sfe as &#x28;select &#x5b;PANO &#x5d; as cand_ext_id&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;1&#x5d; as fe&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;1&#x5d; as sfe&#xa;	from csv_can c&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;1&#x5d;,&#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;1&#x5d;,&#x27;&#x27;&#x29;&#x29; is not NULL&#xa;&#xa;	UNION ALL&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;2&#x5d; as fe&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;2&#x5d; as sfe&#xa;	from csv_can c&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;2&#x5d;,&#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;2&#x5d;,&#x27;&#x27;&#x29;&#x29; is not NULL&#xa;&#xa;	UNION ALL&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;3&#x5d; as fe&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;3&#x5d; as sfe&#xa;	from csv_can c&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;3&#x5d;,&#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;3&#x5d;,&#x27;&#x27;&#x29;&#x29; is not NULL&#xa;&#xa;	UNION ALL&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;4&#x5d; as fe&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;4&#x5d; as sfe&#xa;	from csv_can c&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;4&#x5d;,&#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;4&#x5d;,&#x27;&#x27;&#x29;&#x29; is not NULL&#xa;&#xa;	UNION ALL&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;5&#x5d; as fe&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;5&#x5d; as sfe&#xa;	from csv_can c&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;5&#x5d;,&#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;5&#x5d;,&#x27;&#x27;&#x29;&#x29; is not NULL&#xa;&#xa;	UNION ALL&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;6&#x5d; as fe&#xa;	, &#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;6&#x5d; as sfe&#xa;	from csv_can c&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;&#x30ab;&#x30c6;&#x30b4;&#x30ea;&#x30fc;6&#x5d;,&#x27;&#x27;&#x29;, nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x8077;&#x7a2e;6&#x5d;,&#x27;&#x27;&#x29;&#x29; is not NULL&#xa;&#x29;&#xa;&#xa;, cand_final as &#x28;select distinct cand_ext_id&#xa;	, fe&#xa;	, sfe&#xa;	from cand_fe_sfe&#xa;	where fe is not NULL and fe not in &#x28;&#x27;&#xff1c;&#x4eee;&#xff1e;&#x27;&#x29; and sfe &#x3c;&#x3e; &#x27;&#x27;&#x29;&#xa;&#xa;, split_sfe as &#x28;select pa_category&#xa;	, pa_category_name&#xa;	, vc_fe_en&#xa;	, vc_fe_ja&#xa;	, vc_sfe&#xa;	, trim&#x28;value&#x29; as vc_sfe_split&#xa;	from PA_fe_sfe&#xa;	cross apply string_split&#x28;vc_sfe, char&#x28;10&#x29;&#x29;&#x29;&#xa;&#xa;, fe_sfe as &#x28;select pa_category&#xa;	, pa_category_name&#xa;	, vc_fe_en&#xa;	, vc_fe_ja&#xa;	, vc_sfe&#xa;	, vc_sfe_split&#xa;	, left&#x28;vc_sfe_split, charindex&#x28;&#x27;&#x2f;&#x27;, vc_sfe_split&#x29; - 2&#x29; as vc_sfe_en&#xa;	, right&#x28;vc_sfe_split, len&#x28;vc_sfe_split&#x29; - charindex&#x28;&#x27;&#x2f;&#x27;, vc_sfe_split&#x29; - 1&#x29; as vc_sfe_ja&#xa;	, row_number&#x28;&#x29; over&#x28;partition by vc_fe_en order by case when charindex&#x28;&#x27;&#x5b;P&#x5d;&#x27;, vc_sfe_split&#x29; &#x3d; 1 then 1 else 2 end asc, vc_sfe_split asc&#x29; as rn&#xa;	from split_sfe&#x29;&#xa;&#xa;&#xa;select distinct j.cand_ext_id&#xa;, j.fe&#xa;, concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, vc_fe_en, coalesce&#x28;&#x27; &#x2f; &#x27; &#x2b; nullif&#x28;vc_fe_ja,&#x27;&#x27;&#x29;, NULL&#x29;&#x29; as vc_fe&#xa;, j.sfe&#xa;, replace&#x28;trim&#x28;fe.vc_sfe_split&#x29;, &#x27;&#x5b;P&#x5d;&#x27;, &#x27;&#x27;&#x29; as vc_sfe&#xa;from cand_final j&#xa;left join fe_sfe fe on fe.pa_category &#x3d; j.fe and fe.pa_category_name &#x3d; j.sfe&#xa;--318302 rows&#xa;&#xa;&#x2f;&#x2a; This case is excluded, not mentioned in mapping&#xa;UNION&#xa;select distinct j.cand_ext_id&#xa;, j.fe&#xa;, concat&#x28;&#x27;&#x3010;PP&#x3011;&#x27;, vc_fe_en, coalesce&#x28;&#x27; &#x2f; &#x27; &#x2b; nullif&#x28;vc_fe_ja,&#x27;&#x27;&#x29;, NULL&#x29;&#x29; as vc_fe&#xa;, &#x27;&#x27; as sfe&#xa;, &#x27;&#x27; as vc_sfe&#xa;from cand_final j&#xa;left join fe_sfe fe on fe.pa_category &#x3d; j.fe&#xa;where j.sfe &#x3d; &#x27;&#x27;&#xa;--total&#x3a; 355760 rows &#x2a;&#x2f;</sql>
+    <connection>From (DB)</connection>
+    <sql>with cand_fe_sfe as (select [PANO ] as cand_ext_id
+	, [希望職種カテゴリー1] as fe
+	, [希望職種1] as sfe
+	from csv_can c
+	where coalesce(nullif([希望職種カテゴリー1],''), nullif([希望職種1],'')) is not NULL
+
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, [希望職種カテゴリー2] as fe
+	, [希望職種2] as sfe
+	from csv_can c
+	where coalesce(nullif([希望職種カテゴリー2],''), nullif([希望職種2],'')) is not NULL
+
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, [希望職種カテゴリー3] as fe
+	, [希望職種3] as sfe
+	from csv_can c
+	where coalesce(nullif([希望職種カテゴリー3],''), nullif([希望職種3],'')) is not NULL
+
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, [希望職種カテゴリー4] as fe
+	, [希望職種4] as sfe
+	from csv_can c
+	where coalesce(nullif([希望職種カテゴリー4],''), nullif([希望職種4],'')) is not NULL
+
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, [希望職種カテゴリー5] as fe
+	, [希望職種5] as sfe
+	from csv_can c
+	where coalesce(nullif([希望職種カテゴリー5],''), nullif([希望職種5],'')) is not NULL
+
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, [希望職種カテゴリー6] as fe
+	, [希望職種6] as sfe
+	from csv_can c
+	where coalesce(nullif([希望職種カテゴリー6],''), nullif([希望職種6],'')) is not NULL
+)
+
+, cand_final as (select distinct cand_ext_id
+	, fe
+	, sfe
+	from cand_fe_sfe
+	where fe is not NULL and fe not in ('＜仮＞') and sfe &lt;&gt; '')
+
+, split_sfe as (select pa_category
+	, pa_category_name
+	, vc_fe_en
+	, vc_fe_ja
+	, vc_sfe
+	, trim(value) as vc_sfe_split
+	from PA_fe_sfe
+	cross apply string_split(vc_sfe, char(10)))
+
+, fe_sfe as (select pa_category
+	, pa_category_name
+	, vc_fe_en
+	, vc_fe_ja
+	, vc_sfe
+	, vc_sfe_split
+	, left(vc_sfe_split, charindex('/', vc_sfe_split) - 2) as vc_sfe_en
+	, right(vc_sfe_split, len(vc_sfe_split) - charindex('/', vc_sfe_split) - 1) as vc_sfe_ja
+	, row_number() over(partition by vc_fe_en order by case when charindex('[P]', vc_sfe_split) = 1 then 1 else 2 end asc, vc_sfe_split asc) as rn
+	from split_sfe)
+
+
+select distinct j.cand_ext_id
+, j.fe
+, concat(coalesce('【PP】' + nullif(vc_fe_en, ''), NULL), coalesce(' / ' + nullif(vc_fe_ja,''), NULL), NULL) as vc_fe
+, j.sfe
+, replace(trim(fe.vc_sfe_split), '[P]', '') as vc_sfe
+from cand_final j
+left join fe_sfe fe on fe.pa_category = j.fe and fe.pa_category_name = j.sfe
+--where cand_ext_id in ('CDT090091', 'CDT093289', 'CDT095725') --audit data incorrect mapping
+-- rows
+
+/* This case is excluded, not mentioned in mapping
+UNION
+select distinct j.cand_ext_id
+, j.fe
+, concat('【PP】', vc_fe_en, coalesce(' / ' + nullif(vc_fe_ja,''), NULL)) as vc_fe
+, '' as sfe
+, '' as vc_sfe
+from cand_final j
+left join fe_sfe fe on fe.pa_category = j.fe
+where j.sfe = ''
+--total: 355760 rows */</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -866,8 +1084,7 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Candidate Desired Industry</name>
     <type>TableInput</type>
@@ -879,13 +1096,96 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>--Desired Industry&#xd;&#xa;with cand_industry as &#x28;select &#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;	, trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;1&#x5d;&#x29; as industry&#xd;&#xa;	, coalesce&#x28;&#x27;&#x3010;PP&#x3011;&#x27;&#x2b; nullif&#x28; p.industry_en,&#x27;&#x27;&#x29;, NULL&#x29; as vc_industry&#xd;&#xa;	from csv_can c&#xd;&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;1&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;1&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION ALL&#xd;&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;	, trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;2&#x5d;&#x29; as industry&#xd;&#xa;	, coalesce&#x28;&#x27;&#x3010;PP&#x3011;&#x27;&#x2b; nullif&#x28; p.industry_en,&#x27;&#x27;&#x29;, NULL&#x29; as vc_industry&#xd;&#xa;	from csv_can c&#xd;&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;2&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;2&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION ALL&#xd;&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;	, trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;3&#x5d;&#x29; as industry&#xd;&#xa;	, coalesce&#x28;&#x27;&#x3010;PP&#x3011;&#x27;&#x2b; nullif&#x28; p.industry_en,&#x27;&#x27;&#x29;, NULL&#x29; as vc_industry&#xd;&#xa;	from csv_can c&#xd;&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;3&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;3&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION ALL&#xd;&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;	, trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;4&#x5d;&#x29; as industry&#xd;&#xa;	, coalesce&#x28;&#x27;&#x3010;PP&#x3011;&#x27;&#x2b; nullif&#x28; p.industry_en,&#x27;&#x27;&#x29;, NULL&#x29; as vc_industry&#xd;&#xa;	from csv_can c&#xd;&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;4&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;4&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION ALL&#xd;&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;	, trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;5&#x5d;&#x29; as industry&#xd;&#xa;	, coalesce&#x28;&#x27;&#x3010;PP&#x3011;&#x27;&#x2b; nullif&#x28; p.industry_en,&#x27;&#x27;&#x29;, NULL&#x29; as vc_industry&#xd;&#xa;	from csv_can c&#xd;&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;5&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;5&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;	&#xd;&#xa;	UNION ALL&#xd;&#xa;	select &#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;	, trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;6&#x5d;&#x29; as industry&#xd;&#xa;	, coalesce&#x28;&#x27;&#x3010;PP&#x3011;&#x27;&#x2b; nullif&#x28; p.industry_en,&#x27;&#x27;&#x29;, NULL&#x29; as vc_industry&#xd;&#xa;	from csv_can c&#xd;&#xa;	left join PA_industry p on p.pa_name &#x3d; trim&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;6&#x5d;&#x29;&#xd;&#xa;	where coalesce&#x28;nullif&#x28;&#x5b;&#x5e0c;&#x671b;&#x696d;&#x7a2e;6&#x5d;,&#x27;&#x27;&#x29;, NULL&#x29; is not NULL&#xd;&#xa;&#x29;&#xd;&#xa;&#xd;&#xa;select distinct cand_ext_id&#xd;&#xa;, vc_industry&#xd;&#xa;, current_timestamp as insert_timestamp&#xd;&#xa;from cand_industry</sql>
+    <connection>From (DB)</connection>
+    <sql>--Desired Industry
+with split_industry as (select pa_name
+	, concat_ws(' / ', industry_en, industry_ja) as industry
+	, industry_en
+	, trim(value) as vc_sub_ind
+	from PA_industry
+	cross apply string_split(sub_industry, char(10)))
+
+--using for mapping records
+, ind_sub as (select pa_name
+	, concat_ws('', '【PP】', industry) as industry
+	, industry_en
+	, vc_sub_ind
+	, replace(vc_sub_ind, '[P]', '') as sub_industry
+	, row_number() over(partition by industry order by case when charindex('[P]', vc_sub_ind) = 1 then 1 else 2 end asc, vc_sub_ind asc) as rn
+	, row_number() over(partition by pa_name order by case when charindex('[P]', vc_sub_ind) = 1 then 1 else 2 end asc, vc_sub_ind asc) as pa_rn
+	--rn using for mapping
+	from split_industry) --select * from ind_sub
+
+--MAIN SCRIPT
+, cand_industry as (select [PANO ] as cand_ext_id
+	, trim([希望業種1]) as industry
+	, industry as vc_industry
+	, sub_industry as vc_sub_industry
+	, pa_rn
+	from csv_can c
+	left join ind_sub p on p.pa_name = trim([希望業種1])
+	where coalesce(nullif([希望業種1],''), NULL) is not NULL
+	
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, trim([希望業種2]) as industry
+	, industry as vc_industry
+	, sub_industry vc_sub_industry
+	, pa_rn
+	from csv_can c
+	left join ind_sub p on p.pa_name = trim([希望業種2])
+	where coalesce(nullif([希望業種2],''), NULL) is not NULL
+	
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, trim([希望業種3]) as industry
+	, industry as vc_industry
+	, sub_industry vc_sub_industry
+	, pa_rn
+	from csv_can c
+	left join ind_sub p on p.pa_name = trim([希望業種3])
+	where coalesce(nullif([希望業種3],''), NULL) is not NULL
+	
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, trim([希望業種4]) as industry
+	, industry as vc_industry
+	, sub_industry vc_sub_industry
+	, pa_rn
+	from csv_can c
+	left join ind_sub p on p.pa_name = trim([希望業種4])
+	where coalesce(nullif([希望業種4],''), NULL) is not NULL
+	
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, trim([希望業種5]) as industry
+	, industry as vc_industry
+	, sub_industry vc_sub_industry
+	, pa_rn
+	from csv_can c
+	left join ind_sub p on p.pa_name = trim([希望業種5])
+	where coalesce(nullif([希望業種5],''), NULL) is not NULL
+	
+	UNION ALL
+	select [PANO ] as cand_ext_id
+	, trim([希望業種6]) as industry
+	, industry as vc_industry
+	, sub_industry vc_sub_industry
+	, pa_rn
+	from csv_can c
+	left join ind_sub p on p.pa_name = trim([希望業種6])
+	where coalesce(nullif([希望業種6],''), NULL) is not NULL
+)
+
+select *
+from cand_industry
+--where cand_ext_id = 'CDT061361'</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -898,8 +1198,7 @@
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Candidate lookup</name>
     <type>DBLookup</type>
@@ -911,7 +1210,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -924,7 +1223,7 @@
       <key>
         <name>cand_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -940,6 +1239,7 @@
         <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -952,8 +1252,7 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Candidate lookup 2</name>
     <type>DBLookup</type>
@@ -965,7 +1264,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -978,7 +1277,7 @@
       <key>
         <name>cand_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -994,6 +1293,7 @@
         <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1006,8 +1306,7 @@
       <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Candidate lookup 5</name>
     <type>DBLookup</type>
@@ -1019,7 +1318,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1032,7 +1331,7 @@
       <key>
         <name>cand_ext_id</name>
         <field>external_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
@@ -1048,6 +1347,7 @@
         <type>BigNumber</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1060,8 +1360,7 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>FE lookup</name>
     <type>DBLookup</type>
@@ -1073,7 +1372,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1086,7 +1385,7 @@
       <key>
         <name>vc_fe</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -1096,6 +1395,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1108,8 +1408,7 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Industry lookup</name>
     <type>DBLookup</type>
@@ -1121,7 +1420,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1134,7 +1433,7 @@
       <key>
         <name>vc_industry</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -1144,6 +1443,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1156,8 +1456,7 @@
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Insert Candidate FESFE</name>
     <type>TableOutput</type>
@@ -1169,7 +1468,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <schema/>
     <table>mike_tmp_desired_fe_sfe</table>
     <commit>1000</commit>
@@ -1187,35 +1486,36 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>candidate_id</column_name>
-          <stream_name>VCCandidateID</stream_name>
-        </field>
-        <field>
-          <column_name>fe</column_name>
-          <stream_name>fe</stream_name>
-        </field>
-        <field>
-          <column_name>vc_fe</column_name>
-          <stream_name>vc_fe</stream_name>
-        </field>
-        <field>
-          <column_name>vc_fe_id</column_name>
-          <stream_name>VCFEID</stream_name>
-        </field>
-        <field>
-          <column_name>sfe</column_name>
-          <stream_name>sfe</stream_name>
-        </field>
-        <field>
-          <column_name>vc_sfe</column_name>
-          <stream_name>vc_sfe</stream_name>
-        </field>
-        <field>
-          <column_name>vc_sfe_id</column_name>
-          <stream_name>VCSFEID</stream_name>
-        </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>fe</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_fe</column_name>
+        <stream_name>vc_fe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_fe_id</column_name>
+        <stream_name>VCFEID</stream_name>
+      </field>
+      <field>
+        <column_name>sfe</column_name>
+        <stream_name>sfe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_sfe</column_name>
+        <stream_name>vc_sfe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_sfe_id</column_name>
+        <stream_name>VCSFEID</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1228,8 +1528,79 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
+  <step>
+    <name>Insert cand FESFE audit</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (prod)</connection>
+    <schema/>
+    <table>mike_tmp_desired_fe_sfe_audit</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>fe</column_name>
+        <stream_name>fe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_fe</column_name>
+        <stream_name>vc_fe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_fe_id</column_name>
+        <stream_name>VCFEID</stream_name>
+      </field>
+      <field>
+        <column_name>sfe</column_name>
+        <stream_name>sfe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_sfe</column_name>
+        <stream_name>vc_sfe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_sfe_id</column_name>
+        <stream_name>VCSFEID</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Insert tmp cand industry</name>
     <type>TableOutput</type>
@@ -1241,7 +1612,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <schema/>
     <table>mike_tmp_desired_industry</table>
     <commit>1000</commit>
@@ -1259,19 +1630,20 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>candidate_id</column_name>
-          <stream_name>VCCandidateID</stream_name>
-        </field>
-        <field>
-          <column_name>industry_id</column_name>
-          <stream_name>VCIndustryID</stream_name>
-        </field>
-        <field>
-          <column_name>insert_timestamp</column_name>
-          <stream_name>insert_timestamp</stream_name>
-        </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>industry_id</column_name>
+        <stream_name>VCIndustryID</stream_name>
+      </field>
+      <field>
+        <column_name>insert_timestamp</column_name>
+        <stream_name>insert_timestamp</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1284,11 +1656,10 @@
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>PA languages</name>
-    <type>TableInput</type>
+    <name>Insert tmp cand industry (prod)</name>
+    <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1297,13 +1668,50 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>---Language skills&#xd;&#xa;with cand_lang as &#x28;select &#x5b;PANO &#x5d; as cand_ext_id&#xd;&#xa;--, &#x5b;&#x82f1;&#x8a9e; &#x8a9e;&#x5b66;&#x540d;&#x79f0;&#x5d; as cand_lang&#xd;&#xa;, &#x27;en&#x27; as candlanguage --English language code&#xd;&#xa;, case when &#x5b;&#x82f1;&#x8a9e; &#x7dcf;&#x5408;&#x5d; &#x3d; &#x27;&#x521d;&#x7d1a;&#x27; then &#x27;1&#x27; --Beginner&#xd;&#xa;	when &#x5b;&#x82f1;&#x8a9e; &#x7dcf;&#x5408;&#x5d; &#x3d; &#x27;&#x4e2d;&#x7d1a;&#x27; then &#x27;2&#x27; --Intermediate&#xd;&#xa;	when &#x5b;&#x82f1;&#x8a9e; &#x7dcf;&#x5408;&#x5d; &#x3d; &#x27;&#x4e0a;&#x7d1a;&#x27; then &#x27;4&#x27; --Fluent&#xd;&#xa;	else &#x27;2&#x27; end as langlevel&#xd;&#xa;from csv_can&#xd;&#xa;where nullif&#x28;&#x5b;&#x82f1;&#x8a9e; &#x8a9e;&#x5b66;&#x540d;&#x79f0;&#x5d;, &#x27;&#x27;&#x29; is not NULL and nullif&#x28;&#x5b;&#x82f1;&#x8a9e; &#x7dcf;&#x5408;&#x5d;, &#x27;&#x27;&#x29; is not NULL --updated 20200106&#xd;&#xa;&#xd;&#xa;UNION ALL&#xd;&#xa;&#xd;&#xa;select &#x5b;PANO &#x5d;&#xd;&#xa;, &#x27;ja&#x27; as candlanguage&#xd;&#xa;, &#x27;5&#x27; as langlevel --native&#xd;&#xa;from csv_can&#x29;&#xd;&#xa;&#xd;&#xa;select cand_ext_id&#xd;&#xa;, candlanguage&#xd;&#xa;, langlevel&#xd;&#xa;, row_number&#x28;&#x29; over&#x28;partition by cand_ext_id order by candlanguage desc&#x29; rn&#xd;&#xa;from cand_lang</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <connection>To (prod)</connection>
+    <schema/>
+    <table>mike_tmp_desired_industry</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>vc_industry</column_name>
+        <stream_name>vc_industry</stream_name>
+      </field>
+      <field>
+        <column_name>parent_id</column_name>
+        <stream_name>VCParentID</stream_name>
+      </field>
+      <field>
+        <column_name>vc_sub_industry</column_name>
+        <stream_name>vc_sub_industry</stream_name>
+      </field>
+      <field>
+        <column_name>industry_id</column_name>
+        <stream_name>VCSubIndustryID</stream_name>
+      </field>
+      <field>
+        <column_name>pa_rn</column_name>
+        <stream_name>pa_rn</stream_name>
+      </field>
+    </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1312,12 +1720,11 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>64</yloc>
+      <xloc>416</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Language tmp table</name>
     <type>TableOutput</type>
@@ -1329,7 +1736,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <schema/>
     <table>mike_tmp_pa_languages</table>
     <commit>1000</commit>
@@ -1347,27 +1754,28 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>cand_ext_id</column_name>
-          <stream_name>cand_ext_id</stream_name>
-        </field>
-        <field>
-          <column_name>candidate_id</column_name>
-          <stream_name>VCCandidateID</stream_name>
-        </field>
-        <field>
-          <column_name>candlanguage</column_name>
-          <stream_name>candlanguage</stream_name>
-        </field>
-        <field>
-          <column_name>langlevel</column_name>
-          <stream_name>langlevel</stream_name>
-        </field>
-        <field>
-          <column_name>rn</column_name>
-          <stream_name>rn</stream_name>
-        </field>
+      <field>
+        <column_name>cand_ext_id</column_name>
+        <stream_name>cand_ext_id</stream_name>
+      </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>candlanguage</column_name>
+        <stream_name>candlanguage</stream_name>
+      </field>
+      <field>
+        <column_name>langlevel</column_name>
+        <stream_name>langlevel</stream_name>
+      </field>
+      <field>
+        <column_name>rn</column_name>
+        <stream_name>rn</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1380,8 +1788,61 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
+  </step>
+  <step>
+    <name>PA languages</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>From (DB)</connection>
+    <sql>---Language skills
+with cand_lang as (select [PANO ] as cand_ext_id
+--, [英語 語学名称] as cand_lang
+, 'en' as candlanguage --English language code
+, case when [英語 総合] = '初級' then '1' --Beginner
+	when [英語 総合] = '中級' then '2' --Intermediate
+	when [英語 総合] = '上級' then '4' --Fluent
+	else '2' end as langlevel
+from csv_can
+where nullif([英語 語学名称], '') is not NULL and nullif([英語 総合], '') is not NULL --updated 20200106
 
+UNION ALL
+
+select [PANO ]
+, 'ja' as candlanguage
+, '5' as langlevel --native
+from csv_can)
+
+select cand_ext_id
+, candlanguage
+, langlevel
+, row_number() over(partition by cand_ext_id order by candlanguage desc) rn
+from cand_lang</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>SFE Lookup</name>
     <type>DBLookup</type>
@@ -1393,7 +1854,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1406,13 +1867,13 @@
       <key>
         <name>VCFEID</name>
         <field>functional_expertise_id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>vc_sfe</name>
         <field>name</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
@@ -1422,6 +1883,7 @@
         <type>Integer</type>
       </value>
     </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1434,8 +1896,7 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Update</name>
     <type>Update</type>
@@ -1447,7 +1908,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (REVIEW2)</connection>
     <skip_lookup>N</skip_lookup>
     <commit>100</commit>
     <use_batch>N</use_batch>
@@ -1459,14 +1920,15 @@
       <key>
         <name>id</name>
         <field>id</field>
-        <condition>&#x3d;</condition>
+        <condition>=</condition>
         <name2/>
-        </key>
+      </key>
       <value>
         <name>desired_industry_json</name>
         <rename>desired_industry_json</rename>
-        </value>
-      </lookup>
+      </value>
+    </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1479,10 +1941,226 @@
       <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>WH in_fe_sfe tmp table &#x28;&#x2a;&#x29;</name>
+    <name>Update 2</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (prod)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>200</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <key>
+        <name>candidate_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>experience_details_json</name>
+        <rename>cand_work_history_json</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update desired FE SFE</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (REVIEW2)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>200</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <key>
+        <name>candidate_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>desired_functional_expertise_json</name>
+        <rename>json_value</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update desired industry</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (REVIEW2)</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>200</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>Y</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>candidate</table>
+      <key>
+        <name>candidate_id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>desired_industry_json</name>
+        <rename>json_value</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC candidate desired industry</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (REVIEW2)</connection>
+    <sql>SELECT candidate_id
+, json_agg(row_to_json((
+        SELECT ColumnName 
+			FROM (SELECT industry_id) 
+            AS ColumnName ("desiredIndustryId")
+        ))) AS json_value
+--into mike_tmp_final_wh_all_json --#TEMP TABLE
+FROM mike_tmp_desired_industry
+--where candidate_id = 264827
+GROUP BY candidate_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>VC desired FE SFE</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (REVIEW2)</connection>
+    <sql>SELECT candidate_id
+, json_agg(row_to_json((
+        SELECT ColumnName 
+			FROM ( SELECT vc_sfe_id, vc_fe_id) 
+            AS ColumnName ("desiredSubFunctionId", "desiredFunctionalExpertiseId")
+        ))  order by vc_fe_id, vc_sfe_id) AS json_value
+--into mike_tmp_final_wh_all_json --#TEMP TABLE
+FROM mike_tmp_desired_fe_sfe
+--where candidate_id = 264827
+GROUP BY candidate_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>WH in_fe_sfe tmp table (*)</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1492,7 +2170,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <schema/>
     <table>mike_tmp_wh_industry_fe_sfe</table>
     <commit>1000</commit>
@@ -1510,59 +2188,60 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>candidate_id</column_name>
-          <stream_name>VCCandidateID</stream_name>
-        </field>
-        <field>
-          <column_name>cand_ext_id</column_name>
-          <stream_name>cand_ext_id</stream_name>
-        </field>
-        <field>
-          <column_name>currentemployer</column_name>
-          <stream_name>currentEmployer</stream_name>
-        </field>
-        <field>
-          <column_name>jobtitle</column_name>
-          <stream_name>jobTitle</stream_name>
-        </field>
-        <field>
-          <column_name>origin_industry</column_name>
-          <stream_name>origin_industry</stream_name>
-        </field>
-        <field>
-          <column_name>industry</column_name>
-          <stream_name>industry</stream_name>
-        </field>
-        <field>
-          <column_name>origin_fe</column_name>
-          <stream_name>origin_fe</stream_name>
-        </field>
-        <field>
-          <column_name>vc_fe</column_name>
-          <stream_name>vc_fe</stream_name>
-        </field>
-        <field>
-          <column_name>origin_sfe1</column_name>
-          <stream_name>origin_sfe1</stream_name>
-        </field>
-        <field>
-          <column_name>vc_sfe</column_name>
-          <stream_name>vc_sfe</stream_name>
-        </field>
-        <field>
-          <column_name>daterangefrom</column_name>
-          <stream_name>dateRangeFrom</stream_name>
-        </field>
-        <field>
-          <column_name>daterangeto</column_name>
-          <stream_name>dateRangeTo</stream_name>
-        </field>
-        <field>
-          <column_name>company</column_name>
-          <stream_name>company</stream_name>
-        </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>cand_ext_id</column_name>
+        <stream_name>cand_ext_id</stream_name>
+      </field>
+      <field>
+        <column_name>currentemployer</column_name>
+        <stream_name>currentEmployer</stream_name>
+      </field>
+      <field>
+        <column_name>jobtitle</column_name>
+        <stream_name>jobTitle</stream_name>
+      </field>
+      <field>
+        <column_name>origin_industry</column_name>
+        <stream_name>origin_industry</stream_name>
+      </field>
+      <field>
+        <column_name>industry</column_name>
+        <stream_name>industry</stream_name>
+      </field>
+      <field>
+        <column_name>origin_fe</column_name>
+        <stream_name>origin_fe</stream_name>
+      </field>
+      <field>
+        <column_name>vc_fe</column_name>
+        <stream_name>vc_fe</stream_name>
+      </field>
+      <field>
+        <column_name>origin_sfe1</column_name>
+        <stream_name>origin_sfe1</stream_name>
+      </field>
+      <field>
+        <column_name>vc_sfe</column_name>
+        <stream_name>vc_sfe</stream_name>
+      </field>
+      <field>
+        <column_name>daterangefrom</column_name>
+        <stream_name>dateRangeFrom</stream_name>
+      </field>
+      <field>
+        <column_name>daterangeto</column_name>
+        <stream_name>dateRangeTo</stream_name>
+      </field>
+      <field>
+        <column_name>company</column_name>
+        <stream_name>company</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1575,10 +2254,9 @@
       <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Work history &#x28;&#x2a;&#x29;</name>
+    <name>Work history (*)</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1588,13 +2266,15 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x2a; &#xd;&#xa;from cand_work_history</sql>
+    <connection>From (DB)</connection>
+    <sql>select * 
+from cand_work_history</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1607,10 +2287,9 @@
       <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Work history in_fe_sfe &#x28;&#x2a;&#x29;</name>
+    <name>Work history in_fe_sfe (*)</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1620,13 +2299,17 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>From &#x28;DB&#x29;</connection>
-    <sql>select &#x2a;&#xd;&#xa;from cand_work_history_fe_sfe&#xd;&#xa;where 1&#x3d;1&#xd;&#xa;and coalesce&#x28;industry, vc_sfe&#x29; is not NULL</sql>
+    <connection>From (DB)</connection>
+    <sql>select *
+from cand_work_history_fe_sfe
+where 1=1
+and coalesce(industry, vc_sfe) is not NULL</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1639,10 +2322,43 @@
       <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Work history tmp table &#x28;&#x2a;&#x29;</name>
+    <name>Work history json *</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>To (prod)</connection>
+    <sql>select *
+from mike_tmp_final_wh_all_json
+--where candidate_id between 115077 and 125087</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Work history tmp table (*)</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1652,7 +2368,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
+    <connection>To (prod)</connection>
     <schema/>
     <table>mike_tmp_wh_all</table>
     <commit>1000</commit>
@@ -1670,43 +2386,44 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
-        <field>
-          <column_name>candidate_id</column_name>
-          <stream_name>VCCandidateID</stream_name>
-        </field>
-        <field>
-          <column_name>cand_ext_id</column_name>
-          <stream_name>cand_ext_id</stream_name>
-        </field>
-        <field>
-          <column_name>currentemployer</column_name>
-          <stream_name>currentEmployer</stream_name>
-        </field>
-        <field>
-          <column_name>jobtitle</column_name>
-          <stream_name>jobTitle</stream_name>
-        </field>
-        <field>
-          <column_name>daterangefrom</column_name>
-          <stream_name>dateRangeFrom</stream_name>
-        </field>
-        <field>
-          <column_name>daterangeto</column_name>
-          <stream_name>dateRangeTo</stream_name>
-        </field>
-        <field>
-          <column_name>company</column_name>
-          <stream_name>company</stream_name>
-        </field>
-        <field>
-          <column_name>rn</column_name>
-          <stream_name>rn</stream_name>
-        </field>
-        <field>
-          <column_name>origin_employer</column_name>
-          <stream_name>origin_employer</stream_name>
-        </field>
+      <field>
+        <column_name>candidate_id</column_name>
+        <stream_name>VCCandidateID</stream_name>
+      </field>
+      <field>
+        <column_name>cand_ext_id</column_name>
+        <stream_name>cand_ext_id</stream_name>
+      </field>
+      <field>
+        <column_name>currentemployer</column_name>
+        <stream_name>currentEmployer</stream_name>
+      </field>
+      <field>
+        <column_name>jobtitle</column_name>
+        <stream_name>jobTitle</stream_name>
+      </field>
+      <field>
+        <column_name>daterangefrom</column_name>
+        <stream_name>dateRangeFrom</stream_name>
+      </field>
+      <field>
+        <column_name>daterangeto</column_name>
+        <stream_name>dateRangeTo</stream_name>
+      </field>
+      <field>
+        <column_name>company</column_name>
+        <stream_name>company</stream_name>
+      </field>
+      <field>
+        <column_name>rn</column_name>
+        <stream_name>rn</stream_name>
+      </field>
+      <field>
+        <column_name>origin_employer</column_name>
+        <stream_name>origin_employer</stream_name>
+      </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1719,11 +2436,10 @@
       <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Work history json &#x2a;</name>
-    <type>TableInput</type>
+    <name>lookup industry 2</name>
+    <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1732,13 +2448,30 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>select &#x2a;&#xd;&#xa;from mike_tmp_final_wh_all_json&#xd;&#xa;--where candidate_id between 115077 and 125087</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <connection>To (prod)</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>vc_industry</name>
+        <field>name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>VCParentID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1747,15 +2480,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
+      <xloc>240</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Update 2</name>
-    <type>Update</type>
+    <name>lookup sub industry 2</name>
+    <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1764,26 +2496,36 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>200</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>Y</error_ignored>
-    <ignore_flag_field/>
+    <connection>To (prod)</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
     <lookup>
-      <schema/>
-      <table>candidate</table>
+      <schema>public</schema>
+      <table>vertical</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>candidate_id</name>
-        <field>id</field>
-        <condition>&#x3d;</condition>
+        <name>vc_sub_industry</name>
+        <field>name</field>
+        <condition>=</condition>
         <name2/>
-        </key>
+      </key>
+      <key>
+        <name>VCParentID</name>
+        <field>parent_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
       <value>
-        <name>experience_details_json</name>
-        <rename>cand_work_history_json</rename>
-        </value>
-      </lookup>
+        <name>id</name>
+        <rename>VCSubIndustryID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1792,169 +2534,15 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>176</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>VC candidate desired industry</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>SELECT candidate_id&#xd;&#xa;, json_agg&#x28;row_to_json&#x28;&#x28;&#xd;&#xa;        SELECT ColumnName &#xd;&#xa;			FROM &#x28;SELECT industry_id&#x29; &#xd;&#xa;            AS ColumnName &#x28;&#x22;desiredIndustryId&#x22;&#x29;&#xd;&#xa;        &#x29;&#x29;&#x29; AS json_value&#xd;&#xa;--into mike_tmp_final_wh_all_json --&#x23;TEMP TABLE&#xd;&#xa;FROM mike_tmp_desired_industry&#xd;&#xa;--where candidate_id &#x3d; 264827&#xd;&#xa;GROUP BY candidate_id</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>928</xloc>
+      <xloc>240</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
-  <step>
-    <name>VC desired FE SFE</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <sql>SELECT candidate_id&#xd;&#xa;, json_agg&#x28;row_to_json&#x28;&#x28;&#xd;&#xa;        SELECT ColumnName &#xd;&#xa;			FROM &#x28; SELECT vc_sfe_id, vc_fe_id&#x29; &#xd;&#xa;            AS ColumnName &#x28;&#x22;desiredSubFunctionId&#x22;, &#x22;desiredFunctionalExpertiseId&#x22;&#x29;&#xd;&#xa;        &#x29;&#x29;  order by vc_fe_id, vc_sfe_id&#x29; AS json_value&#xd;&#xa;--into mike_tmp_final_wh_all_json --&#x23;TEMP TABLE&#xd;&#xa;FROM mike_tmp_desired_fe_sfe&#xd;&#xa;--where candidate_id &#x3d; 264827&#xd;&#xa;GROUP BY candidate_id</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>928</xloc>
-      <yloc>352</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Update desired industry</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>200</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>Y</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>candidate</table>
-      <key>
-        <name>candidate_id</name>
-        <field>id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-        </key>
-      <value>
-        <name>desired_industry_json</name>
-        <rename>json_value</rename>
-        </value>
-      </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1312</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Update desired FE SFE</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>To &#x28;REVIEW2&#x29;</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>200</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>Y</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>candidate</table>
-      <key>
-        <name>candidate_id</name>
-        <field>id</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-        </key>
-      <value>
-        <name>desired_functional_expertise_json</name>
-        <rename>json_value</rename>
-        </value>
-      </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1312</xloc>
-      <yloc>352</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
+  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

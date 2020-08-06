@@ -1,5 +1,5 @@
 --DEFAULT CONTACT FOR JOBS
-select distinct case when [企業 PANO ] not in (select [PANO ] from csv_recf) then 'CPY9999999'
+select distinct case when not exists (select 1 from csv_recf where [PANO ] = [企業 PANO ]) then 'CPY9999999'
 			else [企業 PANO ] end as [contact-companyId]
 		, [採用担当者ID] as con_ext_id
 		, concat('DEF', [企業 PANO ]) as [contact-externalId]

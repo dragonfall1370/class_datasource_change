@@ -28,7 +28,7 @@ and use_quick_fee_forecast = 0
 
 --Update Contract offer_personal_info
 update offer_personal_info o
-set client_contact_name = concat_ws(' ', c.last_name, c.first_name)
+set client_contact_name = concat_ws(' ', c.first_name, c.last_name)
 from contact c
 where 1=1
 and o.client_contact_id = c.id

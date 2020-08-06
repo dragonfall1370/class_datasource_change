@@ -1,10 +1,25 @@
---#CF | Open to HP | Drop down
+---#CF | Open to HP (step 1) | RADIO_BUTTON
+select [PANO ] as job_ext_id
+	, 'add_job_info' as additional_type
+	, 1003 as form_id
+	, 1048 as field_id
+	, case when [HP公開] = '公開' then 'Open' --'Release'
+		when [HP公開] = '非公開' then 'Closed' --'Private'
+		--else NULL 
+		end as field_value
+	, current_timestamp as insert_timestamp
+from csv_job
+where nullif([HP公開], '') is not NULL
+
+
+--#CF | Open to HP (step 2) | Drop down
 select [PANO ] as job_ext_id
 	, 'add_job_info' as additional_type
 	, 1003 as form_id
 	, 1048 as field_id
 	, case when [募集状況] = 'Close' then 'Closed' --'Private' | 非公開 <> 'Open' | '公開'
-		else NULL end as field_value
+		--else NULL 
+		end as field_value
 	, current_timestamp as insert_timestamp
 from csv_job
 where [募集状況] = 'Close'

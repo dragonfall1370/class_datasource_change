@@ -24,6 +24,7 @@ on conflict on constraint team_group_candidate_team_group_id_candidate_id_key
 	do nothing
 	
 
+-->NOT USING FOR CANDIDATE BRANCH
 --| MAIN SCRIPT <BRANCH> |--
 insert into team_group_candidate (candidate_id, team_group_id, insert_timestamp)
 select id as candidate_id

@@ -11,7 +11,7 @@ and 勤務地 <> ''
 --and [PANO ] = 'JOB011870'
 )
 
-select job_ext_id
+select distinct job_ext_id
 , 'add_job_info' as additional_type
 , 1003 as form_id
 , 1113 as field_id
@@ -28,7 +28,7 @@ select job_ext_id
 	when '群馬県' then 'GUNMA'
 	when '埼玉県' then 'SAITAMA'
 	when '千葉県' then 'CHIBA'
-	when '東京都' then 'TOKYO-23 wards'
+	when '東京都' then 'TOKYO' --mapping changed after 7/7/2020: 'TOKYO-23 wards'
 	when '神奈川県' then 'KANAGAWA'
 	when '新潟県' then 'NIIGATA'
 	when '富山県' then 'TOYAMA'
@@ -65,5 +65,7 @@ select job_ext_id
 	when '沖縄県' then 'OKINAWA'
 	when '海外' then 'OVERSEAS'
 else NULL end as field_value
+, current_timestamp as insert_timestamp
 from job_loc
 where nullif(prefecture, '') is not NULL
+--and job_ext_id = 'JOB000090' --131412 rows

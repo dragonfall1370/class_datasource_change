@@ -5,11 +5,11 @@ with latest_company as (select m.vc_company_id
 	, 'add_com_info' additional_type
 	, 1001 form_id
 	, 11331 field_id
-	from mike_tmp_company_dup_check2 m
+	from mike_tmp_company_dup_check m
 	join (select * from additional_form_values where form_id = 1001 and field_id = 11331) a on a.additional_id = m.vc_pa_company_id
 	where 1=1
 	and rn = 1
-	and coalesce(vc_pa_update_date, vc_pa_reg_date) > coalesce(vc_latest_date, '1900-01-01') --2255 rows
+	and coalesce(vc_pa_update_date, vc_pa_reg_date) > coalesce(vc_latest_date, vc_reg_date, '1900-01-01') --2255 rows
 	and a.field_date_value is not NULL
 )
 
@@ -24,10 +24,10 @@ with latest_company as (select m.vc_company_id
 	join (select * from additional_form_values where form_id = 1001 and field_id = 11331) a on a.additional_id = m.vc_pa_company_id
 	where 1=1
 	and rn = 1
-	and coalesce(vc_pa_update_date, vc_pa_reg_date) < coalesce(vc_latest_date, '1900-01-01')
+	and coalesce(vc_pa_update_date, vc_pa_reg_date) < coalesce(vc_latest_date, vc_reg_date, '1900-01-01')
 	and vc_company_id not in (select vc_company_id from latest_company)
 	and a.field_date_value is not NULL
-)
+) --select * from older_company
 
 --IF USING OVERWRITE
 , cf_group as (select *

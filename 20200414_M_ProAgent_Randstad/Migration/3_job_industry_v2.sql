@@ -1,4 +1,4 @@
----
+---Industry / sub industry first
 with com_industry as (select c.company_id
 	, c.industry_id
 	, v.parent_id
@@ -47,4 +47,22 @@ select position_id
 , seq
 , insert_timestamp
 from job_ind
-order by position_id, seq
+order by position_id, seq;
+
+
+--> Update Industry in Main table
+with job_ind as (select position_id, industry_id, seq, insert_timestamp
+		, row_number() over (partition by position_id order by industry_id asc) as rn
+		from position_description_industry
+		where 1=1
+		and parent_id is NULL
+		and insert_timestamp >= '' --injection date)
+
+		
+update position_description pd
+set vertical_id = ci.industry_id
+from job_ind ji
+where 1=1
+and ji.position_id = pd.id
+and pd.external_id ilike 'JOB%'
+and pd.deleted_timestamp is NULL

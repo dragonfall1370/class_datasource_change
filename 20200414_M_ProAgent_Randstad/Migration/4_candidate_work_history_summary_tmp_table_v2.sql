@@ -1,11 +1,11 @@
 --#Inject | Work History Summary --Candidate Work History
 select [PANO ] as cand_ext_id
 , replace(concat_ws('<br/>'
-	, coalesce('【事業内容1】' + '<br/>' + nullif([勤務歴 事業内容1], ''), NULL) --business content 1
-	, coalesce('【事業内容2】'  + '<br/>' + nullif([勤務歴 事業内容2], ''), NULL) --business content 2
+	, coalesce('<strong>【事業内容1】</strong>' + '<br/>' + nullif([勤務歴 事業内容1], ''), NULL) --business content 1
+	, coalesce('<strong>【事業内容2】</strong>'  + '<br/>' + nullif([勤務歴 事業内容2], ''), NULL) --business content 2
 	--, coalesce('【雇用形態1】' + nullif([勤務歴 雇用形態1], '') + '<br/>', NULL) --employment status 1 --removed on 20200210
 	--, coalesce('【雇用形態2】' + nullif([勤務歴 雇用形態2], '') + '<br/>', NULL) --employment status 2 --removed on 20200210
-	, coalesce('【その他勤務歴】'  + '<br/>' + nullif(勤務歴メモ, ''), NULL) --other work history
+	, coalesce('<strong>【その他勤務歴】</strong>'  + '<br/>' + nullif(勤務歴メモ, ''), NULL) --other work history
 	, coalesce('<br/>' + nullif(その他勤務歴, '') + '<br/>', NULL) --other business content
 	, coalesce('<br/>' + nullif(trim([自己ＰＲ]),''), NULL) --Self PR
 	), char(10), '<br/>') as work_history_summary

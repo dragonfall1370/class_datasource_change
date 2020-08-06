@@ -163,3 +163,21 @@ update candidate c
 set status = lc.pa_status
 from latest_candidate lc
 where lc.vc_candidate_id = c.id
+
+
+--->>MET/ NOT MET (no need to lastest)
+with latest_candidate as (select m.*
+	, c.status as pa_status
+	--, c2.status as current_status
+	from mike_tmp_candidate_dup_check m
+	join candidate c on c.id = m.vc_pa_candidate_id
+	--join candidate c2 on c2.id = m.vc_candidate_id
+	where 1=1
+	and rn = 1 --already get latest candidate to update
+	and c.status = 1  --MET --2440 rows
+	)
+	
+update candidate c
+set status = lc.pa_status
+from latest_candidate lc
+where lc.vc_candidate_id = c.id

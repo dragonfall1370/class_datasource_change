@@ -5,7 +5,7 @@ with latest_candidate as (select m.*
 	join candidate c on c.id = m.vc_pa_candidate_id
 	where 1=1
 	and rn = 1 --already get latest candidate to update
-	and vc_pa_latest_date > coalesce(vc_latest_date, '1900-01-01') --5668 rows
+	and vc_pa_latest_date > coalesce(vc_latest_date, vc_reg_date) --5668 rows
 	and c.company_count is not NULL
 	)
 
@@ -53,7 +53,7 @@ select m.vc_pa_candidate_id
 	from mike_tmp_candidate_dup_check m 
 	join candidate c on m.vc_candidate_id = c.id
 	where 1=1
-	and c.skill_details_json is not NULL
+	and c.skill_details_json <> ''
 	--and m.vc_candidate_id = 42215
 )
 
@@ -83,7 +83,7 @@ with latest_candidate_firstname as (select m.*
 	--join candidate c2 on c2.id = m.vc_candidate_id
 	where 1=1
 	and rn = 1 --already get latest candidate to update
-	and vc_pa_latest_date > coalesce(vc_latest_date, '1900-01-01') --5668 rows
+	and vc_pa_latest_date > coalesce(vc_latest_date, vc_reg_date) --5668 rows
 	)
 	
 , latest_candidate_lastname as (select m.*
@@ -94,7 +94,7 @@ with latest_candidate_firstname as (select m.*
 	--join candidate c2 on c2.id = m.vc_candidate_id
 	where 1=1
 	and rn = 1 --already get latest candidate to update
-	and vc_pa_latest_date > coalesce(vc_latest_date, '1900-01-01') --5668 rows
+	and vc_pa_latest_date > coalesce(vc_latest_date, vc_reg_date) --5668 rows
 	)
 	
 , latest_cand_firstname_kana as (select m.*
@@ -105,7 +105,7 @@ with latest_candidate_firstname as (select m.*
 	--join candidate c2 on c2.id = m.vc_candidate_id
 	where 1=1
 	and rn = 1 --already get latest candidate to update
-	and vc_pa_latest_date > coalesce(vc_latest_date, '1900-01-01') --5668 rows
+	and vc_pa_latest_date > coalesce(vc_latest_date, vc_reg_date) --5668 rows
 	)
 	
 , latest_cand_lastname_kana as (select m.*
@@ -116,7 +116,7 @@ with latest_candidate_firstname as (select m.*
 	--join candidate c2 on c2.id = m.vc_candidate_id
 	where 1=1
 	and rn = 1 --already get latest candidate to update
-	and vc_pa_latest_date > coalesce(vc_latest_date, '1900-01-01') --5668 rows
+	and vc_pa_latest_date > coalesce(vc_latest_date, vc_reg_date) --5668 rows
 	)
 	
 --MAIN SCRIPT

@@ -6,12 +6,12 @@ select m.vc_candidate_id as candidate_id
 --, m.external_id
 , a.user_account_id
 , a.insert_timestamp
-, '【Merged from PA: ' || m.external_id || '】' || chr(10) || chr(13) || a.content as content
+, '【Merged from PA: ' || m.cand_ext_id || '】' || chr(10) || chr(13) || a.content as content
 , a.category
 , a.type
 from activity a
 join mike_tmp_candidate_dup_check m on m.vc_pa_candidate_id = a.candidate_id --21926 rows
-and a.candidate_id in (219653, 207588, 201023)
+--and a.candidate_id in (219653, 207588, 201023)
 
 --->>ACTIVITY INDEX AFTER MEGRED<<---
 insert into activity_candidate (activity_id, candidate_id, insert_timestamp)
@@ -19,8 +19,9 @@ select id
 , candidate_id
 , insert_timestamp
 from activity
-where id > 1022212
+where id > 650378
 and candidate_id > 0
+and id not in (select activity_id from activity_candidate)
 
 /*---check from tmp table
 select *
@@ -36,6 +37,10 @@ order by candidate_id desc
 select *
 from candidate_document
 where candidate_id in (219653, 207588, 201023)
+
+select max(id), count(*)
+from candidate_document
+where candidate_id > 0
 ---*/
 
 -->>MERGE DOCUMENTS
@@ -55,8 +60,8 @@ select m.vc_candidate_id as candidate_id
 , cd.document_types_id
 , cd.customer_portal
 , cd.visible
-, cd.uploaded_filename_bk
+, m.vc_pa_candidate_id || '_' || cd.uploaded_filename_bk as uploaded_filename_bk --format: [merged_candidate_id]_[createddate]_[migrated_document_name]
 from candidate_document cd
 join mike_tmp_candidate_dup_check m on m.vc_pa_candidate_id = cd.candidate_id --19836 rows
 where cd.document_type <> 'candidate_photo' --candidate_photo must be checked by the latest date
-and cd.candidate_id in (219653, 207588, 201023)
+--and cd.candidate_id in (219653, 207588, 201023)
