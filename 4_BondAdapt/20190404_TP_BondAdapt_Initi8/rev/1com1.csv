@@ -1,0 +1,19 @@
+Errors,company-externalId,company-name,company-phone,company-website,company-locationAddress,company-locationCity,company-locationState,company-locationZipCode,company-locationCountry,company-locationName,company-document,company-owners,company-note
+"Row [8]  was skipped because Name [Amlin], external_id [90522] is already existed but different;",90522,Amlin,020 7746 1000,www.amlin.com,"St Helen's, 1 Undershaft",London,London,EC3A 8ND,GB,"London, London, UNITED KINGDOM",394563.rtf,,"Status: Active
+Last Contacted: 2015-09-18
+By: Carl Ashdown
+Last Perm Job: 2015-04-16
+Managed By: Louise Rowson
+Contract: Stephen Hellier
+"
+"Row [1887]  was skipped because Name [JustGiving], external_id [391744] is already existed but different;",391744,JustGiving,08450 782 064,,"First Floor, 30 Eastbourne Terrace",,,,,,2042672.rtf,,"Status: Incomplete
+Client Type: Head Office
+Contract: Stephen Hellier
+"
+"Row [4309]  was skipped because Name [Groupama], external_id [90729] is already existed but different;",90729,Groupama,08708 508 510,http://www.groupama.co.uk/,"6th Floor, 1 America Square",London,London,EC3N 2LB,GB,"London, London, UNITED KINGDOM",446135.rtf,,"Status: Incomplete
+Last Contacted: 2015-03-03
+By: Simran Jutley
+Last Perm Job: 2011-09-27
+Managed By: Danielle Green
+Contract: Stephen Hellier
+"

@@ -1,0 +1,18 @@
+Errors,position-externalId,position-contactId,(contact-firstName),(contact-lastName),(job-client),(company-name),position-title,position-type,position-currency,Salary From,Salary To,position-startDate,position-endDate,position-note,position-document,source,skills,Date Filled,Time Filled,JOB CATEGORY
+Row [1960]  was skipped because  Contact External Id [205525] not found;,205529,default81532,James,Richardson,81532,AXA Insurance (London),Database analyst,PERMANENT,,19000,29000,2011-05-05,,"Job ID: 881576
+Owner: Jessica Miles
+Status: Filled Direct Job
+Fee %: 20.00
+Calculated Fee: 3800.00
+Actual Fee: 3800.00
+No. of CVs/Profiles Sent: 9
+No. of Int's Arranged: 3
+",,,,05/07/2011 00:00:00,16:44,Data Analyst
+Row [1961]  was skipped because  Contact External Id [205525] not found;,215056,default81532,James,Richardson,81532,AXA Insurance (London),Data Analyst,PERMANENT,,20000,25000,2011-06-27,,"Job ID: 881710
+Owner: Christopher Gunn
+Status: Closed
+Fee %: 0.00
+Calculated Fee: 0.00
+Actual Fee: 0.00
+No. of CVs/Profiles Sent: 3
+",,,,,,Data Analyst

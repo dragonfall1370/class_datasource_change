@@ -1,0 +1,10 @@
+Errors,company-externalId,client_id,company-name,company-phone,company-website,company-locationAddress,company-locationCity,company-locationState,company-locationZipCode,company-locationCountry,company-locationName,company-document,insert_timestamp,company-owners,company-note
+"Row [642]  was skipped because Name [Test Client 3], external_id [81856] is already existed but different;",81856,1094260,Test Client 3 2,,,test,,,,,,,25/02/2009 16:02:12,,"ID: 1094260
+Status: Incomplete
+Created By: Bond 01
+Last Contacted: 2009-02-26
+By: Bond 01
+Last Updated: 2016-08-01
+By: Sam Covey
+Contract: Bond 01
+"

@@ -1,0 +1,19 @@
+Errors,position-externalId,#JOB_ID,position-contactId,position-title,position-type,position-currency,position-owners,position-startDate,position-endDate,position-note,position-document
+Row [1962]  was skipped because  Contact External Id [205525] not found,205529,881576,default,Database analyst,PERMANENT,,,2011-05-05,,"Job ID: 881576
+Owner: Jessica Miles
+Status: Filled Direct Job
+Fee %: 20.00
+Calculated Fee: 3800.00
+Actual Fee: 3800.00
+Updated Date: Jul  5 2011  3:44PM
+Updated By: Jessica Miles
+",
+Row [1963]  was skipped because  Contact External Id [205525] not found,215056,881710,default,Data Analyst,PERMANENT,,Chris.Gunn@initi8recruitment.com,2011-06-27,,"Job ID: 881710
+Owner: Christopher Gunn
+Status: Closed
+Fee %: 0.00
+Calculated Fee: 0.00
+Actual Fee: 0.00
+Updated Date: Dec 12 2011  1:57PM
+Updated By: Christopher Gunn
+",
