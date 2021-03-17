@@ -1,0 +1,3015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>4_demormalise_kpi</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2020/10/13 16:37:36.131</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2020/10/13 16:37:36.131</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>from (local)</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>randstad_20201002</database>
+    <port>5433</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ff228dc6fa8c</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>from (prod)</name>
+    <server>18.141.9.123</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>randstad.vincere.io</database>
+    <port>25432</port>
+    <username>dbapplication_user</username>
+    <password>Encrypted 2be98afc819e8b9aebe11bd63cb8b9ae3</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>25432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>[REV] Last month time</from>
+      <to>Sort rows</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Row denormaliser</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Row denormaliser</from>
+      <to>Microsoft Excel writer</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Row denormaliser</from>
+      <to>Formula</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Formula</from>
+      <to>Microsoft Excel writer</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Row denormaliser</from>
+      <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>If field value is null</from>
+      <to>Microsoft Excel writer</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>[PROD] Current week</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Microsoft Excel writer</name>
+    <type>TypeExitExcelWriterStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <makeSheetActive>Y</makeSheetActive>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <startingCell>A1</startingCell>
+    <appendOmitHeader>N</appendOmitHeader>
+    <appendOffset>0</appendOffset>
+    <appendEmpty>0</appendEmpty>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <forceFormulaRecalculation>N</forceFormulaRecalculation>
+    <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
+    <appendLines>N</appendLines>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>E:\DataMigration\Randstad\CustomWork\CustomReport\DOMO\Export\randstad_domo_goals_export</name>
+      <extention>xlsx</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <split>N</split>
+      <add_date>Y</add_date>
+      <add_time>Y</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <stream_data>N</stream_data>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <protected_by/>
+      <splitevery>0</splitevery>
+      <if_file_exists>new</if_file_exists>
+      <if_sheet_exists>new</if_sheet_exists>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <sheet_enabled>N</sheet_enabled>
+      <filename>template.xls</filename>
+      <sheetname/>
+      <hidden>N</hidden>
+    </template>
+    <fields>
+      <field>
+        <name>Date From</name>
+        <type>Date</type>
+        <format>yyyy-mm-dd</format>
+        <title>Date From</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Date To</name>
+        <type>Date</type>
+        <format>yyyy-mm-dd</format>
+        <title>Date To</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Team</name>
+        <type>String</type>
+        <format/>
+        <title>Team</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Consultant Name</name>
+        <type>String</type>
+        <format/>
+        <title>Consultant Name</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>NCADs</name>
+        <type>Integer</type>
+        <format/>
+        <title>NCADs</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>CV's Sent</name>
+        <type>Integer</type>
+        <format/>
+        <title>CV's Sent</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>1st Interviews</name>
+        <type>Integer</type>
+        <format/>
+        <title>1st Interviews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Final Interviews</name>
+        <type>Integer</type>
+        <format/>
+        <title>Final Interviews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Offers</name>
+        <type>Integer</type>
+        <format/>
+        <title>Offers</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Placements</name>
+        <type>Integer</type>
+        <format/>
+        <title>Placements</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Appointment Booked</name>
+        <type>Integer</type>
+        <format/>
+        <title>Appointment Booked</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>ACON Met</name>
+        <type>Integer</type>
+        <format/>
+        <title>ACON Met</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>ACON CV's Sent</name>
+        <type>Integer</type>
+        <format/>
+        <title>ACON CV's Sent</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>ACON 1st Interviews</name>
+        <type>Integer</type>
+        <format/>
+        <title>ACON 1st Interviews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>CA NCADs</name>
+        <type>Integer</type>
+        <format/>
+        <title>CA NCADs</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>CA CV's Sent</name>
+        <type>Integer</type>
+        <format/>
+        <title>CA CV's Sent</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>CA 1st Interivews</name>
+        <type>Integer</type>
+        <format/>
+        <title>CA 1st Interivews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Sales Calls</name>
+        <type>Integer</type>
+        <format/>
+        <title>Sales Calls</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>New Jobs</name>
+        <type>Integer</type>
+        <format/>
+        <title>New Jobs</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>BIlling Actuals (GP)</name>
+        <type>Integer</type>
+        <format/>
+        <title>BIlling Actuals (GP)</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - NCADs</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - NCADs</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - CV's Sent</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - CV's Sent</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - 1st Interviews</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - 1st Interviews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - Final Interviews</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - Final Interviews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - Offers</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - Offers</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - Placements</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - Placements</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - Appointment Booked</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - Appointment Booked</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - ACON Met</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - ACON Met</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - ACON CV's Sent</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - ACON CV's Sent</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - ACON 1st Interviews</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - ACON 1st Interviews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - CA NCADs</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - CA NCADs</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - CA CV's Sent</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - CA CV's Sent</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - CA 1st Interivews</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - CA 1st Interivews</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - Sales Calls</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - Sales Calls</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - New Jobs</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - New Jobs</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+      <field>
+        <name>Target - Billing Targets</name>
+        <type>Integer</type>
+        <format/>
+        <title>Target - Billing Targets</title>
+        <titleStyleCell/>
+        <styleCell/>
+        <commentField/>
+        <commentAuthorField/>
+        <formula>N</formula>
+        <hyperlinkField/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Row denormaliser</name>
+    <type>Denormaliser</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <key_field>kpi_name_final</key_field>
+    <group>
+      <field>
+        <name>Consultant Name</name>
+      </field>
+      <field>
+        <name>Date From</name>
+      </field>
+      <field>
+        <name>Date To</name>
+      </field>
+      <field>
+        <name>Team</name>
+      </field>
+    </group>
+    <fields>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>NCAD</key_value>
+        <target_name>NCADs</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>CV Sent</key_value>
+        <target_name>CV's Sent</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>1st Interview</key_value>
+        <target_name>1st Interviews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>Final Interview</key_value>
+        <target_name>Final Interviews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>Offers</key_value>
+        <target_name>Offers</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>Placements | Permanent</key_value>
+        <target_name>Placements</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>ACON - Appointment Booked</key_value>
+        <target_name>Appointment Booked</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>ACON - MET</key_value>
+        <target_name>ACON Met</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>ACON - CV Sent</key_value>
+        <target_name>ACON CV's Sent</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>ACON - 1st Interview</key_value>
+        <target_name>ACON 1st Interviews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>CA - NCAD</key_value>
+        <target_name>CA NCADs</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>CA - CV Sent</key_value>
+        <target_name>CA CV's Sent</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>CA - 1st Interview</key_value>
+        <target_name>CA 1st Interivews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>Client Call</key_value>
+        <target_name>Sales Calls</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>Jobs | New</key_value>
+        <target_name>New Jobs</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>actual</field_name>
+        <key_value>Placement Based Revenue</key_value>
+        <target_name>BIlling Actuals (GP)</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>NCAD</key_value>
+        <target_name>Target - NCADs</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>CV Sent</key_value>
+        <target_name>Target - CV's Sent</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>1st Interview</key_value>
+        <target_name>Target - 1st Interviews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>Final Interview</key_value>
+        <target_name>Target - Final Interviews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>Offers</key_value>
+        <target_name>Target - Offers</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>Placements | Permanent</key_value>
+        <target_name>Target - Placements</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>ACON - Appointment Booked</key_value>
+        <target_name>Target - Appointment Booked</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>ACON - MET</key_value>
+        <target_name>Target - ACON Met</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>ACON - CV Sent</key_value>
+        <target_name>Target - ACON CV's Sent</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>ACON - 1st Interview</key_value>
+        <target_name>Target - ACON 1st Interviews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>CA - NCAD</key_value>
+        <target_name>Target - CA NCADs</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>CA - CV Sent</key_value>
+        <target_name>Target - CA CV's Sent</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>CA - 1st Interview</key_value>
+        <target_name>Target - CA 1st Interivews</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>Client Call</key_value>
+        <target_name>Target - Sales Calls</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>Jobs | New</key_value>
+        <target_name>Target - New Jobs</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>target</field_name>
+        <key_value>Placement Based Revenue</key_value>
+        <target_name>Target - Billing Targets</target_name>
+        <target_type>Integer</target_type>
+        <target_format/>
+        <target_length>-1</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>Date From</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Date To</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Consultant Name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Team</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[REV] Last month time</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>from (local)</connection>
+    <sql>with consultant_team as (select tgu.user_id
+		, string_agg(tg.name, ',') as team
+	from team_group_user tgu
+	left join (select * from team_group where group_type = 'TEAM') tg on tg.id = tgu.team_group_id
+	where 1=1
+	--and team_group_id in (1125, 1124, 1123) --Professionals, 障がい者, CA
+	group by tgu.user_id
+	)
+
+, kpi_activated as (
+	select id
+	, kpi_name
+	, coalesce(nullif(kln.alt_name, ''), kl.kpi_name) as kpi_name_final
+	, seq
+	, coalesce(activated, 0) as is_active
+	, case when related_type = 1 then 'Candidate'
+			when related_type = 2 then 'Contact'
+			when related_type = 3 then 'Company'
+			when related_type = 4 then 'Job'
+			when related_type = 5 then 'Application'
+			when related_type = 6 then 'Deal'
+			when related_type = 7 then 'Job lead'
+			else 'Other'
+		end as entity
+	, case when id in (57, 58, 59, 82) then 'fee'
+		else 'action' end as kpi_type
+	from kpi_library kl
+	left join (select * from kpi_library_alt_name where language = 'en') kln on kln.kpi_library_id = kl.id
+	where activated = 1 --activated kpi
+	and related_type &lt;&gt; 6 --exclude 'Deal'
+	and id in (74, 5, 7, 73, 76, 1, 3, 75, 78, 22, 24, 77, 80, 18, 20, 79
+	,35 ,37 ,70 ,72 ,69 ,71 ,17 ,61 ,86 ,85 ,34 ,88 ,87 ,60 ,39 ,40 ,81 ,41 
+	,63 ,45 ,46 ,47 ,48 ,49 ,50 ,51 ,84 ,52 ,53 ,54 ,55 ,56 ,82 ,57 ,59 ,58 ,64 ,65
+	,89 ,90 ,91 ,92 ,93, 94, 95, 57, 58, 59, 82)
+	order by kl.seq
+)
+
+, curency_code as (
+	select c.key
+	  , case when coalesce(ce.value, 0) = 0 THEN 1 ELSE 1/ce.value END::double precision as value
+	from currencies c
+	join currencies_exchange ce ON c.code = ce.code_to
+	where ce.code_from = 'JPY'
+)
+
+--TARGERTS
+, targets as (select ka.user_account_id as consultant_key
+			, ka.kpi_library_id as kpi_lib_key
+			, ka.time_frame
+			, ka.target_score
+			, ka.start_date as start_date
+			, ka.end_date as end_date	
+			--, coalesce(ka.end_date, ka.start_date + '1 month'::interval) as end_date --added 1 month if end_date is NULL | remove this line
+			, case when kpi_type = 'fee' then round((ka.target_score * coalesce(cc.value, 1))::integer, 1)
+					else ka.target_score end as target
+			, kpi_type
+			, ua.name
+		from kpi_assignment ka
+				join user_account ua on ka.user_account_id = ua.id
+				join kpi_activated k on k.id = ka.kpi_library_id
+				left join curency_code cc on cc.key = ka.currency_type
+		where ua.id &lt;&gt; -10 
+		and ua.deleted_timestamp is null
+		and ka.target_score is not NULL
+		--and ua.id = 28983 --checking 1 consultant
+		--and ka.end_date is not NULL --filter with end_date
+		--and ka.end_date >= now() --only valid timeframe
+		and ka.start_date between date_trunc('week', '2020-10-02'::date) and date_trunc('week', '2020-10-02'::date) + interval '1 week' - '1 day'::interval --current week view
+		and ka.time_frame = 1 --week view
+		order by k.kpi_type, ka.user_account_id
+		) --select * from targets
+
+, cand_owner as (select id as candidate_id
+			, (json_array_elements(candidate_owner_json::json)->>'ownerId')::int as candidate_owner_key
+	from candidate
+	where candidate_owner_json is not null)
+
+
+, job_owner as (select pac.position_id
+		, user_id
+		, name as job_owner
+		, total_job_owner
+		--, row_number() over	(partition by pac.position_id order by name asc) as row_num
+	from position_agency_consultant pac
+	left join (select position_id, count (user_id) as total_job_owner 
+				from position_agency_consultant 
+				group by position_id) as c on pac.position_id = c.position_id
+	left join user_account ua on pac.user_id = ua.id)
+
+
+--ACTUAL ACTIONS
+, kca as (select unnest(string_to_array(kpi_related_lib, ','))::int as kpi_lib_key
+				, kca.candidate_id
+				, coalesce(kca.position_id, aj.job_id) as position_id
+				, coalesce(kca.contact_id, acon.contact_id) as contact_id
+				, coalesce(kca.company_id, ac.company_id) as company_id
+				, kca.user_account_id
+				, kca.insert_timestamp		
+				, kca.comment_id
+				, kca.id as comment_action_id
+			from kpi_comment_action kca
+			left join activity a on (a.id = kca.comment_id or a.id =  kca.task_id)
+			left join activity_job as aj on aj.activity_id = kca.comment_id
+			left join activity_company as ac on ac.activity_id = kca.comment_id
+			left join activity_contact as acon on acon.activity_id = kca.comment_id
+			where kpi_related_lib is not null
+			and kpi_related_lib &lt;&gt; ''
+			and kca.insert_timestamp between date_trunc('week', '2020-10-02'::date) and date_trunc('week', '2020-10-02'::date) + interval '1 week' - '1 day'::interval --current week view
+			)
+
+, actual_actions as (select consultant_key
+			, kpi_lib_key
+			, count(distinct comment_action_id) as actual
+			--, date_key
+			--, shortlisted_key
+			--, comment_action_id
+			--, candidate_key
+			--, job_key
+			--, contact_key
+			--, company_key
+		from
+			(select kca.user_account_id as consultant_key
+				, kpi_lib_key
+				--, kpi_related_lib
+				, fu_convert_time_zone(kca.insert_timestamp, '', ua.timezone) AS date_key
+				, coalesce(kca.candidate_id, -1) as candidate_key
+				, coalesce(kca.position_id, -1) as job_key
+				, coalesce(kca.contact_id, -1) as contact_key
+				, coalesce(kca.company_id, -1) as company_key
+				, coalesce(pd.position_category, 3) as position_category
+			, pc.shortlisted_user_id as shortlisted_key
+			, kca.comment_action_id
+			from kca
+			join user_account ua ON kca.user_account_id = ua.ID
+			left join position_description as pd on pd.id = kca.position_id
+			left join position_candidate AS pc ON pc.position_description_id = kca.position_id AND pc.candidate_id = kca.candidate_id
+			where ua.id &lt;&gt; -10 
+			and ua.deleted_timestamp is null
+			and kca.user_account_id IS NOT NULL
+			and kpi_lib_key in 
+				(5, 1, 22, 18, 35, 37, 70, 72, 69, 71, 17, 61, 34, 60, 39, 40, 41, 63, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 64, 65
+				, 7, 73, 3, 75, 24, 77, 20, 79, 42, 43, 85, 87, 89 ,90 ,91 ,92 ,93, 94, 95)
+			) as b
+		group by consultant_key, kpi_lib_key
+		) --select * from actual_actions where consultant_key = 29099 and kpi_lib_key = 77 --check actual actions
+	
+--ACTUAL REVENUE
+, tmp_1_rev as (
+	select o.position_candidate_id as pcid
+	  , ors.amount * cc.value AS pc_amount_1 
+	  , ors.user_id as consultant_key_1
+	  , ors.offer_id
+	from offer_revenue_split ors
+	join offer o ON ors.offer_id = o.id
+	left join curency_code cc ON o.currency_type = cc.key
+	where 1=1
+) 
+, tmp_a as (select position_id, count(distinct user_id) as cnt from position_agency_consultant group by position_id)
+
+, tmp_b as (
+	select pc.id as pcid
+	  , pac.user_id as consultant_key_1
+	  , pc.shortlisted_user_id as shortlisted_key_1
+	from position_candidate pc
+	inner join position_agency_consultant pac ON pc.position_description_id = pac.position_id
+	WHERE pc.id NOT IN (SELECT pcid from tmp_1_rev)
+) 
+, tmp_other_item as (
+	select o.position_candidate_id as pcid
+	  , sum(oii.item_quantity * oii.item_charge) as other_invoice
+	from offer_invoice_item oii
+	inner join offer o ON oii.offer_id = o.id
+	group by o.position_candidate_id
+)
+, pd_account_temp AS
+( 
+	SELECT pac.position_id
+	  , COALESCE(array_to_string(array_agg(ua.name), '', ''::text), ''''::text) AS agency_consultant_names
+	FROM position_agency_consultant pac 
+	INNER JOIN user_account ua ON pac.user_id = ua.id
+	WHERE ua.deleted_timestamp is null
+	GROUP BY position_id
+)
+, tmp_1_pro as (		
+		SELECT * 
+		FROM 
+		(	SELECT tmp.pcid, tmp.position_id, cid, pc_timestamp, status
+				, (projected_profit + COALESCE(tmp_other_item.other_invoice, 0))* cc.value / tmp_a.cnt AS pc_amount_1
+				, gross_annual_salary * cc.value AS gross_annual_salary
+				, pay_rate * cc.value AS pay_rate
+				, projected_charge_rate * cc.value AS projected_charge_rate
+				, fee_model_type, position_type, head_count, date_key
+				, tmp.position_category
+				, tmp.shortlisted_key_1
+				, tmp.id
+			FROM 
+			(	SELECT pc.id AS pcid
+				  , pc.position_description_id AS position_id
+				  , pc.candidate_id AS cid
+				  , pc.shortlisted_user_id as shortlisted_key_1
+					, CASE	
+						WHEN pc.status >= 300 AND pc.status &lt;= 303 AND COALESCE(opi.placed_date, pc.hire_date) IS NOT NULL THEN COALESCE(opi.placed_date, pc.hire_date) 	 			
+						ELSE pc.associated_date END AS pc_timestamp
+				  , 300 as status
+					, o.projected_profit AS o_projected_profit, o.currency_type AS o_currency_type
+					, CASE 
+						WHEN o.projected_profit IS NOT NULL THEN o.projected_profit			
+						WHEN comp.projected_profit IS NOT NULL THEN comp.projected_profit 
+						ELSE 0 
+					END AS projected_profit
+					, CASE 
+						WHEN o.gross_annual_salary IS NOT NULL THEN o.gross_annual_salary			
+						WHEN comp.gross_annual_salary IS NOT NULL THEN comp.gross_annual_salary 
+						ELSE 0 
+					END AS gross_annual_salary
+					, CASE
+						WHEN o.pay_rate IS NOT NULL THEN o.pay_rate			
+						WHEN comp.pay_rate IS NOT NULL THEN comp.pay_rate 
+						ELSE 0 
+					END AS pay_rate
+					, CASE 
+						WHEN  o.projected_charge_rate IS NOT NULL THEN o.projected_charge_rate			
+						WHEN comp.projected_charge_rate IS NOT NULL THEN comp.projected_charge_rate 
+						ELSE 0 
+					END AS projected_charge_rate
+					, CASE 
+						WHEN o.currency_type IS NOT NULL THEN o.currency_type 
+						WHEN comp.currency_type IS NOT NULL THEN comp.currency_type		
+					END AS currency_type 
+					, comp_m.fee_model_type
+					, COALESCE(o.position_type, pd.position_type) as position_type
+					, pd.head_count
+					, COALESCE(opi.placed_date, pc.hire_date, opi.offer_date, pc.offer_date, pc.associated_date) date_key
+					, pd.position_category
+					, o.id
+				FROM position_candidate pc
+				LEFT JOIN compensation comp ON pc.position_description_id = comp.position_id		
+				LEFT JOIN compensation_fee_model comp_m ON comp_m.compensation_id = comp.id
+				JOIN pd_account_temp pat ON pc.position_description_id = pat.position_id
+				JOIN position_description pd ON pc.position_description_id = pd.id
+				JOIN candidate c ON c.id = pc.candidate_id
+				LEFT JOIN offer o ON pc.id = o.position_candidate_id
+				LEFT OUTER JOIN offer_personal_info opi ON o.id = opi.offer_id
+				WHERE pc.status > 200 AND pc.status &lt;= 303
+					AND c.deleted_timestamp IS NULL 
+					AND pc.rejected_date IS NULL
+					AND pd.floated_job = 0	
+					AND ((comp.projected_profit >= 0 AND comp.currency_type IS NOT NULL) OR (o.projected_profit >= 0 AND o.currency_type IS NOT NULL))
+					AND (pc.id IN (select distinct pcid from tmp_1_rev) OR pc.id NOT IN (SELECT position_candidate_id from offer))
+			) tmp 
+			LEFT JOIN curency_code cc ON tmp.currency_type = cc.key
+			LEFT JOIN tmp_a ON tmp_a.position_id = tmp.position_id
+			LEFT JOIN tmp_other_item ON tmp_other_item.pcid = tmp.pcid
+		) tmp2 		
+)
+, tmp_1 as (
+	select tmp_1_pro.pcid
+		, tmp_1_pro.position_id
+		, tmp_1_pro.cid
+		, tmp_1_pro.pc_timestamp
+		, tmp_1_pro.status
+		, tmp_1_pro.pc_amount_1
+		, tmp_1_pro.gross_annual_salary
+		, tmp_1_pro.pay_rate
+		, tmp_1_pro.projected_charge_rate
+		, tmp_1_pro.fee_model_type
+		, tmp_1_pro.position_type
+		, tmp_1_pro.head_count
+		, tmp_1_pro.date_key
+		, tmp_1_pro.position_category
+		, tmp_1_pro.id
+		, coalesce(tmp_1_rev.pc_amount_1, 0) as pc_amount --https://hrboss.atlassian.net/browse/DATA-1053
+		, coalesce(tmp_1_rev.consultant_key_1, tmp_b.consultant_key_1, -1000) as consultant_key
+		, coalesce(tmp_1_pro.shortlisted_key_1, tmp_b.shortlisted_key_1, -1) as shortlisted_key
+	from tmp_1_pro 
+	left outer join tmp_1_rev ON tmp_1_pro.pcid = tmp_1_rev.pcid and tmp_1_pro.id = tmp_1_rev.offer_id
+	left outer join tmp_b ON tmp_1_pro.pcid = tmp_b.pcid
+	where 1=1
+	and tmp_1_pro.date_key between date_trunc('week', '2020-10-02'::date) and date_trunc('week', '2020-10-02'::date) + interval '1 week' - '1 day'::interval --current week view
+)
+, tmp_3 as (select *
+		, rank() over (partition by position_id order by status desc, pc_amount desc ) as ord	
+	from tmp_1
+)
+, tmp_4 as (
+	select tmp_3.position_id as job_key
+	    , cid as candidate_key
+		, pc_amount as actual 
+		, CASE WHEN fee_model_type = 3 THEN 59
+			WHEN position_type = 1 THEN 57 --NFI / Fees | Permanent
+			ELSE 58 --NFI / Margin | Contract &amp; Temporary
+		END as kpi_lib_key
+		, tmp_3.consultant_key
+		, tmp_3.shortlisted_key
+		, date_key
+		, tmp_3.position_category
+		, tmp_3.id as offer_id
+		, pcid
+		, pc_amount
+	from tmp_3
+	INNER JOIN user_account ua ON tmp_3.consultant_key = ua.ID
+	--https://hrboss.atlassian.net/browse/DATA-1029
+	--where pc_amount > 0
+)
+
+, actual_fee as (
+	select consultant_key
+		, kpi_lib_key
+		, sum(actual) as actual_fee
+	from tmp_4
+	group by consultant_key, kpi_lib_key
+	)
+	
+--COMBINE ACTUAL ACTIONS AND FEES
+, actual as (select *
+	, 'action' as actual_type
+	from actual_actions
+	
+	UNION ALL
+	select *
+	, 'fee' as actual_type
+	from actual_fee
+	)
+	
+--COMPARE TARGETS / ACTUAL
+select t.start_date::date "Date From"
+, t.end_date::date "Date To"
+, ct.team "Team"
+--, t.consultant_key
+, t.name "Consultant Name"
+--, t.kpi_lib_key
+, ka.kpi_name_final
+--, t.time_frame
+, t.target
+, coalesce(a.actual, 0) as actual
+, t.kpi_type
+from targets t
+left join actual a on t.consultant_key = a.consultant_key and t.kpi_lib_key = a.kpi_lib_key
+left join kpi_activated ka on ka.id = t.kpi_lib_key
+left join consultant_team ct on t.consultant_key = ct.user_id
+where 1=1
+--and ka.kpi_name_final = 'CA - CV Sent' --check kpi name
+order by t.name, t.kpi_lib_key</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>Date From</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>Date From</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>Date To</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>Date To</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Team</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>Team</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Consultant Name</name>
+        <length>200</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>Consultant Name</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>kpi_name_final</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>kpi_name_final</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>target</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>target</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>actual</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>actual</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>kpi_type</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Last month time</origin>
+        <comments>kpi_type</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Formula</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>848</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue>0</replaceAllByValue>
+    <replaceAllMask/>
+    <selectFields>Y</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>NCADs</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>CV's Sent</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>1st Interviews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Final Interviews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Offers</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Placements</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Appointment Booked</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ACON Met</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ACON CV's Sent</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ACON 1st Interviews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>CA NCADs</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>CA CV's Sent</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>CA 1st Interivews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Sales Calls</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>New Jobs</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>BIlling Actuals (GP)</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - NCADs</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - CV's Sent</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - 1st Interviews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - Final Interviews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - Offers</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - Placements</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - Appointment Booked</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - ACON Met</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - ACON CV's Sent</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - ACON 1st Interviews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - CA NCADs</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - CA CV's Sent</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - CA 1st Interivews</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - Sales Calls</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - New Jobs</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Target - Billing Targets</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>848</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>[PROD] Current week</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>from (prod)</connection>
+    <sql>with consultant_team as (select tgu.user_id
+		, string_agg(tg.name, ',') as team
+	from team_group_user tgu
+	left join (select * from team_group where group_type = 'TEAM') tg on tg.id = tgu.team_group_id
+	where 1=1
+	--and team_group_id in (1125, 1124, 1123) --Professionals, 障がい者, CA
+	group by tgu.user_id
+	)
+
+, kpi_activated as (
+	select id
+	, kpi_name
+	, coalesce(nullif(kln.alt_name, ''), kl.kpi_name) as kpi_name_final
+	, seq
+	, coalesce(activated, 0) as is_active
+	, case when related_type = 1 then 'Candidate'
+			when related_type = 2 then 'Contact'
+			when related_type = 3 then 'Company'
+			when related_type = 4 then 'Job'
+			when related_type = 5 then 'Application'
+			when related_type = 6 then 'Deal'
+			when related_type = 7 then 'Job lead'
+			else 'Other'
+		end as entity
+	, case when id in (57, 58, 59, 82) then 'fee'
+		else 'action' end as kpi_type
+	from kpi_library kl
+	left join (select * from kpi_library_alt_name where language = 'en') kln on kln.kpi_library_id = kl.id
+	where activated = 1 --activated kpi
+	and related_type &lt;&gt; 6 --exclude 'Deal'
+	and id in (74, 5, 7, 73, 76, 1, 3, 75, 78, 22, 24, 77, 80, 18, 20, 79
+	,35 ,37 ,70 ,72 ,69 ,71 ,17 ,61 ,86 ,85 ,34 ,88 ,87 ,60 ,39 ,40 ,81 ,41 
+	,63 ,45 ,46 ,47 ,48 ,49 ,50 ,51 ,84 ,52 ,53 ,54 ,55 ,56 ,82 ,57 ,59 ,58 ,64 ,65
+	,89 ,90 ,91 ,92 ,93, 94, 95, 57, 58, 59, 82)
+	order by kl.seq
+)
+
+, curency_code as (
+	select c.key
+	  , case when coalesce(ce.value, 0) = 0 THEN 1 ELSE 1/ce.value END::double precision as value
+	from currencies c
+	join currencies_exchange ce ON c.code = ce.code_to
+	where ce.code_from = 'JPY'
+)
+
+--TARGERTS
+, targets as (select ka.user_account_id as consultant_key
+			, ka.kpi_library_id as kpi_lib_key
+			, ka.time_frame
+			, ka.target_score
+			, ka.start_date as start_date
+			, ka.end_date as end_date	
+			--, coalesce(ka.end_date, ka.start_date + '1 month'::interval) as end_date --added 1 month if end_date is NULL | remove this line
+			, case when kpi_type = 'fee' then round((ka.target_score * coalesce(cc.value, 1))::integer, 1)
+					else ka.target_score end as target
+			, kpi_type
+			, ua.name
+		from kpi_assignment ka
+				join user_account ua on ka.user_account_id = ua.id
+				join kpi_activated k on k.id = ka.kpi_library_id
+				left join curency_code cc on cc.key = ka.currency_type
+		where ua.id &lt;&gt; -10 
+		and ua.deleted_timestamp is null
+		and ka.target_score is not NULL
+		--and ua.id = 28983 --checking 1 consultant
+		--and ka.end_date is not NULL --filter with end_date
+		--and ka.end_date >= now() --only valid timeframe
+		and ka.start_date between date_trunc('week', current_timestamp) and date_trunc('week', current_timestamp) + interval '1 week' - '1 day'::interval --current week view
+		and ka.time_frame = 1 --week view
+		order by k.kpi_type, ka.user_account_id
+		) --select * from targets
+
+, cand_owner as (select id as candidate_id
+			, (json_array_elements(candidate_owner_json::json)->>'ownerId')::int as candidate_owner_key
+	from candidate
+	where candidate_owner_json is not null)
+
+
+, job_owner as (select pac.position_id
+		, user_id
+		, name as job_owner
+		, total_job_owner
+		--, row_number() over	(partition by pac.position_id order by name asc) as row_num
+	from position_agency_consultant pac
+	left join (select position_id, count (user_id) as total_job_owner 
+				from position_agency_consultant 
+				group by position_id) as c on pac.position_id = c.position_id
+	left join user_account ua on pac.user_id = ua.id)
+
+
+--ACTUAL ACTIONS
+, kca as (select unnest(string_to_array(kpi_related_lib, ','))::int as kpi_lib_key
+				, kca.candidate_id
+				, coalesce(kca.position_id, aj.job_id) as position_id
+				, coalesce(kca.contact_id, acon.contact_id) as contact_id
+				, coalesce(kca.company_id, ac.company_id) as company_id
+				, kca.user_account_id
+				, kca.insert_timestamp		
+				, kca.comment_id
+				, kca.id as comment_action_id
+			from kpi_comment_action kca
+			left join activity a on (a.id = kca.comment_id or a.id =  kca.task_id)
+			left join activity_job as aj on aj.activity_id = kca.comment_id
+			left join activity_company as ac on ac.activity_id = kca.comment_id
+			left join activity_contact as acon on acon.activity_id = kca.comment_id
+			where kpi_related_lib is not null
+			and kpi_related_lib &lt;&gt; ''
+			and kca.insert_timestamp between date_trunc('week', current_timestamp) and date_trunc('week', current_timestamp) + interval '1 week' - '1 day'::interval --current week view
+			)
+
+, actual_actions as (select consultant_key
+			, kpi_lib_key
+			, count(distinct comment_action_id) as actual
+			--, date_key
+			--, shortlisted_key
+			--, comment_action_id
+			--, candidate_key
+			--, job_key
+			--, contact_key
+			--, company_key
+		from
+			(select kca.user_account_id as consultant_key
+				, kpi_lib_key
+				--, kpi_related_lib
+				, fu_convert_time_zone(kca.insert_timestamp, '', ua.timezone) AS date_key
+				, coalesce(kca.candidate_id, -1) as candidate_key
+				, coalesce(kca.position_id, -1) as job_key
+				, coalesce(kca.contact_id, -1) as contact_key
+				, coalesce(kca.company_id, -1) as company_key
+				, coalesce(pd.position_category, 3) as position_category
+			, pc.shortlisted_user_id as shortlisted_key
+			, kca.comment_action_id
+			from kca
+			join user_account ua ON kca.user_account_id = ua.ID
+			left join position_description as pd on pd.id = kca.position_id
+			left join position_candidate AS pc ON pc.position_description_id = kca.position_id AND pc.candidate_id = kca.candidate_id
+			where ua.id &lt;&gt; -10 
+			and ua.deleted_timestamp is null
+			and kca.user_account_id IS NOT NULL
+			and kpi_lib_key in 
+				(5, 1, 22, 18, 35, 37, 70, 72, 69, 71, 17, 61, 34, 60, 39, 40, 41, 63, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 64, 65
+				, 7, 73, 3, 75, 24, 77, 20, 79, 42, 43, 85, 87, 89 ,90 ,91 ,92 ,93, 94, 95)
+			) as b
+		group by consultant_key, kpi_lib_key
+		) --select * from actual_actions where consultant_key = 29099 and kpi_lib_key = 77 --check actual actions
+	
+--ACTUAL REVENUE
+, tmp_1_rev as (
+	select o.position_candidate_id as pcid
+	  , ors.amount * cc.value AS pc_amount_1 
+	  , ors.user_id as consultant_key_1
+	  , ors.offer_id
+	from offer_revenue_split ors
+	join offer o ON ors.offer_id = o.id
+	left join curency_code cc ON o.currency_type = cc.key
+	where 1=1
+) 
+, tmp_a as (select position_id, count(distinct user_id) as cnt from position_agency_consultant group by position_id)
+
+, tmp_b as (
+	select pc.id as pcid
+	  , pac.user_id as consultant_key_1
+	  , pc.shortlisted_user_id as shortlisted_key_1
+	from position_candidate pc
+	inner join position_agency_consultant pac ON pc.position_description_id = pac.position_id
+	WHERE pc.id NOT IN (SELECT pcid from tmp_1_rev)
+) 
+, tmp_other_item as (
+	select o.position_candidate_id as pcid
+	  , sum(oii.item_quantity * oii.item_charge) as other_invoice
+	from offer_invoice_item oii
+	inner join offer o ON oii.offer_id = o.id
+	group by o.position_candidate_id
+)
+, pd_account_temp AS
+( 
+	SELECT pac.position_id
+	  , COALESCE(array_to_string(array_agg(ua.name), '', ''::text), ''''::text) AS agency_consultant_names
+	FROM position_agency_consultant pac 
+	INNER JOIN user_account ua ON pac.user_id = ua.id
+	WHERE ua.deleted_timestamp is null
+	GROUP BY position_id
+)
+, tmp_1_pro as (		
+		SELECT * 
+		FROM 
+		(	SELECT tmp.pcid, tmp.position_id, cid, pc_timestamp, status
+				, (projected_profit + COALESCE(tmp_other_item.other_invoice, 0))* cc.value / tmp_a.cnt AS pc_amount_1
+				, gross_annual_salary * cc.value AS gross_annual_salary
+				, pay_rate * cc.value AS pay_rate
+				, projected_charge_rate * cc.value AS projected_charge_rate
+				, fee_model_type, position_type, head_count, date_key
+				, tmp.position_category
+				, tmp.shortlisted_key_1
+				, tmp.id
+			FROM 
+			(	SELECT pc.id AS pcid
+				  , pc.position_description_id AS position_id
+				  , pc.candidate_id AS cid
+				  , pc.shortlisted_user_id as shortlisted_key_1
+					, CASE	
+						WHEN pc.status >= 300 AND pc.status &lt;= 303 AND COALESCE(opi.placed_date, pc.hire_date) IS NOT NULL THEN COALESCE(opi.placed_date, pc.hire_date) 	 			
+						ELSE pc.associated_date END AS pc_timestamp
+				  , 300 as status
+					, o.projected_profit AS o_projected_profit, o.currency_type AS o_currency_type
+					, CASE 
+						WHEN o.projected_profit IS NOT NULL THEN o.projected_profit			
+						WHEN comp.projected_profit IS NOT NULL THEN comp.projected_profit 
+						ELSE 0 
+					END AS projected_profit
+					, CASE 
+						WHEN o.gross_annual_salary IS NOT NULL THEN o.gross_annual_salary			
+						WHEN comp.gross_annual_salary IS NOT NULL THEN comp.gross_annual_salary 
+						ELSE 0 
+					END AS gross_annual_salary
+					, CASE
+						WHEN o.pay_rate IS NOT NULL THEN o.pay_rate			
+						WHEN comp.pay_rate IS NOT NULL THEN comp.pay_rate 
+						ELSE 0 
+					END AS pay_rate
+					, CASE 
+						WHEN  o.projected_charge_rate IS NOT NULL THEN o.projected_charge_rate			
+						WHEN comp.projected_charge_rate IS NOT NULL THEN comp.projected_charge_rate 
+						ELSE 0 
+					END AS projected_charge_rate
+					, CASE 
+						WHEN o.currency_type IS NOT NULL THEN o.currency_type 
+						WHEN comp.currency_type IS NOT NULL THEN comp.currency_type		
+					END AS currency_type 
+					, comp_m.fee_model_type
+					, COALESCE(o.position_type, pd.position_type) as position_type
+					, pd.head_count
+					, COALESCE(opi.placed_date, pc.hire_date, opi.offer_date, pc.offer_date, pc.associated_date) date_key
+					, pd.position_category
+					, o.id
+				FROM position_candidate pc
+				LEFT JOIN compensation comp ON pc.position_description_id = comp.position_id		
+				LEFT JOIN compensation_fee_model comp_m ON comp_m.compensation_id = comp.id
+				JOIN pd_account_temp pat ON pc.position_description_id = pat.position_id
+				JOIN position_description pd ON pc.position_description_id = pd.id
+				JOIN candidate c ON c.id = pc.candidate_id
+				LEFT JOIN offer o ON pc.id = o.position_candidate_id
+				LEFT OUTER JOIN offer_personal_info opi ON o.id = opi.offer_id
+				WHERE pc.status > 200 AND pc.status &lt;= 303
+					AND c.deleted_timestamp IS NULL 
+					AND pc.rejected_date IS NULL
+					AND pd.floated_job = 0	
+					AND ((comp.projected_profit >= 0 AND comp.currency_type IS NOT NULL) OR (o.projected_profit >= 0 AND o.currency_type IS NOT NULL))
+					AND (pc.id IN (select distinct pcid from tmp_1_rev) OR pc.id NOT IN (SELECT position_candidate_id from offer))
+			) tmp 
+			LEFT JOIN curency_code cc ON tmp.currency_type = cc.key
+			LEFT JOIN tmp_a ON tmp_a.position_id = tmp.position_id
+			LEFT JOIN tmp_other_item ON tmp_other_item.pcid = tmp.pcid
+		) tmp2 		
+)
+, tmp_1 as (
+	select tmp_1_pro.pcid
+		, tmp_1_pro.position_id
+		, tmp_1_pro.cid
+		, tmp_1_pro.pc_timestamp
+		, tmp_1_pro.status
+		, tmp_1_pro.pc_amount_1
+		, tmp_1_pro.gross_annual_salary
+		, tmp_1_pro.pay_rate
+		, tmp_1_pro.projected_charge_rate
+		, tmp_1_pro.fee_model_type
+		, tmp_1_pro.position_type
+		, tmp_1_pro.head_count
+		, tmp_1_pro.date_key
+		, tmp_1_pro.position_category
+		, tmp_1_pro.id
+		, coalesce(tmp_1_rev.pc_amount_1, 0) as pc_amount --https://hrboss.atlassian.net/browse/DATA-1053
+		, coalesce(tmp_1_rev.consultant_key_1, tmp_b.consultant_key_1, -1000) as consultant_key
+		, coalesce(tmp_1_pro.shortlisted_key_1, tmp_b.shortlisted_key_1, -1) as shortlisted_key
+	from tmp_1_pro 
+	left outer join tmp_1_rev ON tmp_1_pro.pcid = tmp_1_rev.pcid and tmp_1_pro.id = tmp_1_rev.offer_id
+	left outer join tmp_b ON tmp_1_pro.pcid = tmp_b.pcid
+	where 1=1
+	and tmp_1_pro.date_key between date_trunc('week', current_timestamp) and date_trunc('week', current_timestamp) + interval '1 week' - '1 day'::interval --current week view
+)
+, tmp_3 as (select *
+		, rank() over (partition by position_id order by status desc, pc_amount desc ) as ord	
+	from tmp_1
+)
+, tmp_4 as (
+	select tmp_3.position_id as job_key
+	    , cid as candidate_key
+		, pc_amount as actual 
+		, CASE WHEN fee_model_type = 3 THEN 59
+			WHEN position_type = 1 THEN 57 --NFI / Fees | Permanent
+			ELSE 58 --NFI / Margin | Contract &amp; Temporary
+		END as kpi_lib_key
+		, tmp_3.consultant_key
+		, tmp_3.shortlisted_key
+		, date_key
+		, tmp_3.position_category
+		, tmp_3.id as offer_id
+		, pcid
+		, pc_amount
+	from tmp_3
+	INNER JOIN user_account ua ON tmp_3.consultant_key = ua.ID
+	--https://hrboss.atlassian.net/browse/DATA-1029
+	--where pc_amount > 0
+)
+
+, actual_fee as (
+	select consultant_key
+		, kpi_lib_key
+		, sum(actual) as actual_fee
+	from tmp_4
+	group by consultant_key, kpi_lib_key
+	)
+	
+--COMBINE ACTUAL ACTIONS AND FEES
+, actual as (select *
+	, 'action' as actual_type
+	from actual_actions
+	
+	UNION ALL
+	select *
+	, 'fee' as actual_type
+	from actual_fee
+	)
+	
+--COMPARE TARGETS / ACTUAL
+select t.start_date::date "Date From"
+, coalesce(t.end_date, date_trunc('week', current_timestamp) + interval '1 week' - '1 day'::interval)::date "Date To"
+, ct.team "Team"
+--, t.consultant_key
+, t.name "Consultant Name"
+--, t.kpi_lib_key
+, ka.kpi_name_final
+--, t.time_frame
+, t.target
+, coalesce(a.actual, 0) as actual
+, t.kpi_type
+from targets t
+left join actual a on t.consultant_key = a.consultant_key and t.kpi_lib_key = a.kpi_lib_key
+left join kpi_activated ka on ka.id = t.kpi_lib_key
+left join consultant_team ct on t.consultant_key = ct.user_id
+where 1=1
+--and ka.kpi_name_final = 'CA - CV Sent' --check kpi name
+--order by t.name, kpi_lib_key</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>Date From</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>Date From</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>Date To</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>Date To</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Team</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>Team</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Consultant Name</name>
+        <length>200</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>Consultant Name</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>kpi_name_final</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>kpi_name_final</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>target</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>target</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>actual</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>actual</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>kpi_type</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>[PROD] Current week</origin>
+        <comments>kpi_type</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Asia/Bangkok</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes/>
+</transformation>
