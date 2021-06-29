@@ -12,3 +12,24 @@
 
 #Google credentia;
 google-sheets-4f0fcdc59c49.json
+*.log
+*.db
+*.ini
+s3_connection_string.py
+.idea
+*.zip
+*.csv
+*.json
+*.doc
+*.docx
+*.pdf
+*.odt
+*.rtf
+*.msg
+*.rar
+*.7z
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+_DS_Store

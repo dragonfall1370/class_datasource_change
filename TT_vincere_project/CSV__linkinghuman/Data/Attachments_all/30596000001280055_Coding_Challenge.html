@@ -1,0 +1,883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="address=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Coding Challenge</title>
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+<style type="text/css">
+#outlook a {
+	padding: 0px !important;
+}
+html {
+	width: 100% !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+	-webkit-text-size-adjust: none !important;
+	-ms-text-size-adjust: none !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	text-align: center !important;
+}
+body {
+	display: block !important;
+	margin: 0px;
+	padding: 0px;
+	-webkit-text-size-adjust: none !important;
+	-ms-text-size-adjust: none !important;
+	text-align: center !important;
+}
+v\:* {
+	behavior: url(#default#VML);
+	display: block !important;
+}
+.ExternalClass * {
+	line-height: auto !important;
+}
+.ExternalClass {
+	width: 100% !important;
+}
+a, a:hover {
+	text-decoration: none;
+	padding: 0px !important;
+}
+img {
+	border: 0px none !important;
+	outline: none !important;
+	text-decoration: none !important;
+	-ms-interpolation-mode: bicubic;
+}
+a img {
+	border: 0px none !important;
+}
+table, table td {
+	mso-table-lspace: 0px;
+	mso-table-rspace: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	mso-cellspacing: 0px;
+	mso-padding-alt: 0px 0px 0px 0px;
+}
+a.grey, a.grey:visited {
+	color: #666666 !important;
+	text-decoration: none !important;
+}
+a.grey_light, a.grey_light:visited {
+	color: #999999 !important;
+	text-decoration: none !important;
+}
+a.grey_light_link, a.grey_light_link:visited {
+	color: #999999 !important;
+	text-decoration: underline !important;
+}
+a.grey_dark, a.grey_dark:visited {
+	color: #3D3D3D !important;
+	text-decoration: none !important;
+}
+a.grey_link, a.grey_link:visited {
+	color: #666666 !important;
+	text-decoration: underline !important;
+}
+a.pink, a.pink:visited {
+	color: #387089 !important;
+	text-decoration: underline !important;
+}
+a.pink_ttl, a.pink_ttl:visited {
+	color: #387089 !important;
+	text-decoration: none !important;
+}
+
+@media only screen and (max-width:480px), only screen and (max-device-width:480px) {
+/*BASE*/
+*[class="wrapper"] {
+	width: 320px !important;
+	max-width: 320px !important;
+	min-width: 320px !important;
+}
+*[class="hide_320"] {
+	display: none !important;
+	visibility: hidden !important;
+}
+.no-padding-right {
+	padding-right: 0 !important;
+}
+*[class="hide_480"] {
+	display: none !important;
+	visibility: hidden !important;
+}
+*[class="show_480"] {
+	display: block !important;
+	visibility: visible !important;
+}
+*[class="ttl_2lines"] {
+	height: 65px !important;
+	padding: 0px 20px !important;
+}
+*[class="ttl_2lines_top"] {
+	height: 19px !important;
+}
+*[class="ttl_2lines_fix"] {
+	height: 65px !important;
+	padding: 0px 20px !important;
+}
+*[class="ttl_2lines_top_fix"] {
+	height: 19px !important;
+}
+/*PREHEADER*/
+*[class="header"] {
+	height: 33px !important;
+	line-height: 15px !important;
+}
+*[class="header_brk"] {
+	width: 100% !important;
+	display: inline-block !important;
+}
+/*MENU*/
+*[class="logo"] {
+	width: 18px !important;
+}
+*[class="tab1"] {
+	width: 90px !important;
+}
+*[class="tab2"] {
+	width: 140px !important;
+}
+*[class="tab3"] {
+	width: 90px !important;
+}
+/*HERO_MAIN*/
+*[class="hero_img"]{width:320px !important;height:420px !important;background:url('https://tobyelliott.io/coding-challenge/hero_mob.jpg') !important;background-size:320px 420px !important;}
+*[class="hero_a"]{width:320px !important;height:420px !important;}
+*[class="hero_cta"]{padding-top:18px !important;}
+*[class="hero_hor_marg"]{width:17px !important;}
+*[class="hero_ver_marg"]{height:20px !important;}
+
+/*POD1*/
+.white-bg {
+	background-color: #FFFFFF;
+}
+*[class="more_cont"] {
+	width: 100% !important;
+	margin-bottom: 10px !important;
+}
+.pod1_img{width:320px !important;height:163px !important;background:url('https://tobyelliott.io/coding-challenge/pod1_mob.jpg') !important;background-size:320px 163px !important;}
+*[class="pod1_a"]{width:320px !important;height:163px !important;}
+*[class="more_cont_last"] {
+	width: 100% !important;
+}
+
+/*RECIPES*/
+.full-width {
+	height: auto !important;
+	width: 100% !important;
+}
+.padding {
+	padding-right: 30px !important;
+	padding-left: 30px !important;
+}
+
+/*BANNER_IMG*/
+*[class="banner_img"]{width:320px !important;height:176px !important;background:url('https://tobyelliott.io/coding-challenge/banner_mob.jpg') !important;background-size:320px 176px !important;}
+*[class="banner_a"]{width:320px !important;height:176px !important;}
+
+/*HELP*/
+.large-padding {
+	padding-right: 60px !important;
+	padding-left: 60px !important;
+}
+	
+/*PARTNERS*/
+*[class="more_cont_large"] {
+	width: 100% !important;
+	margin-bottom: 20px !important;
+}
+*[class="more_cont_last_large"] {
+	width: 100% !important;
+	margin-bottom: 5px !important;
+}
+/*FOOTER*/
+*[class="foo_ico_cont"] {
+	width: 290px !important;
+}
+*[class="foo_ico"] {
+	width: 58px !important;
+}
+}
+</style>
+</head>
+<body bgcolor="#EEEFEB" style="min-width:100%;padding:0px;margin:0px;-webkit-text-size-adjust:none;background-color:#EEEFEB;font-family:Arial, Helvetica, sans-serif;">
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="border-collapse:collapse;border-spacing:0px;mso-table-lspace:0px;mso-table-rspace:0px;background-color:#FFFFFF;border-bottom:solid 1px #EEEFEB;">
+	<tr>
+		<td align="center" valign="top"><table class="wrapper" width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="width:600px;min-width:600px;max-width:600px;">
+				<tr>
+					<td class="header" height="25" align="center" valign="middle" bgcolor="#FFFFFF" style="height:25px;line-height:25px;mso-line-height-rule:exactly;background-color:#FFFFFF;"><span style="font-family:Arial, Helvetica, sans-serif;color:#999999;font-size:10px;">PRE-HEADER | <span class="header_brk">Email not displaying correctly? <a class="grey_light_link" href="#" target="_blank" style="color:#999999;"><span class="grey_light_link" style="text-decoration:underline;"><strong>Click here</strong></span></a></span></span></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="border-collapse:collapse;border-spacing:0px;mso-table-lspace:0px;mso-table-rspace:0px;background-color:#FFFFFF;">
+	<tr>
+		<td align="center" valign="top"><table class="wrapper" width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="width:600px;min-width:600px;max-width:600px;">
+				<tr>
+					<td height="70" align="left" valign="top" style="height:70px;"><table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="logo" width="15" align="left" valign="top" style="width:15px;">&nbsp;</td>
+								<td align="left" valign="top"><a href="http://www.altaire.com" target="_blank" style="display:inline-block;"><img src="https://tobyelliott.io/coding-challenge/logo.png" alt="LOGO" border="0" width="280" height="70" style="width:283px;height:70px;display:block;color:#FF9900;" /></a></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="border-collapse:collapse;border-spacing:0px;mso-table-lspace:0px;mso-table-rspace:0px;background-color:#FFFFFF;">
+	<tr>
+		<td align="center" valign="top"><table class="wrapper" width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="width:600px;min-width:600px;max-width:600px;">
+				<tr>
+					<td align="center" valign="middle"><table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="tab1" width="130" height="34" align="center" valign="middle" style="width:130px;height:34px;"><a href="http://www.altaire.com" target="_blank" style="text-decoration:none;display:block;"><span class="grey" style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:13px;line-height:34px;mso-line-height-rule:exactly;">Menu 1</span></a></td>
+								<td class="tab2" width="170" height="34" align="center" valign="middle" style="width:170px;height:34px;"><a href="http://www.altaire.com" target="_blank" style="text-decoration:none;display:block;"><span class="grey" style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:13px;line-height:34px;mso-line-height-rule:exactly;">Menu 2</span></a></td>
+								<td class="hide_320" width="170" height="34" align="center" valign="middle" style="width:170px;height:34px;"><a href="http://www.altaire.com" target="_blank" style="text-decoration:none;display:block;"><span class="grey" style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:13px;line-height:34px;mso-line-height-rule:exactly;">Menu 3</span></a></td>
+								<td class="tab3" width="130" height="34" align="center" valign="middle" style="width:130px;height:34px;"><table align="center" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="20" height="34" align="left" valign="middle" style="width:20px;height:34px;"><img src="https://tobyelliott.io/coding-challenge/icon_login.png" alt="" border="0" width="14" height="14" style="width:14px;height:14px;" /></td>
+											<td height="34" align="left" valign="middle" style="height:34px;"><a href="http://www.altaire.com" target="_blank" style="text-decoration:none;display:block;"><span class="grey" style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:13px;line-height:34px;mso-line-height-rule:exactly;">Log&nbsp;in</span></a></td>
+										</tr>
+									</table></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEFEB" style="border-collapse:collapse;border-spacing:0px;mso-table-lspace:0px;mso-table-rspace:0px;background-color:#EEEFEB;">
+	<tr>
+		<td align="center" valign="top"><table class="wrapper" width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="width:600px;min-width:600px;max-width:600px;">
+				<tr>
+					<td height="20" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+				<!-- HERO_IMG -->
+				<tr>
+					<td class="hero_img" width="600" height="346" align="left" valign="top" bgcolor="#FFFFFF" style="width:600px;height:346px;background-color:#FFFFFF;"><a class="hero_a" href="http://www.altaire.com" target="_blank" style="display:block;color:#F09900;"><img class="hide_320" src="https://tobyelliott.io/coding-challenge/hero.jpg" alt="" border="0" width="600" height="346" style="width:600px;height:346px;display:block;color:#F09900;font-size:24px;" /></a></td>
+				</tr>
+				<!-- END_HERO_IMG --> 
+				<!-- HERO_COPY_TTL_CTA -->
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFFFF" style="background-color:#FFFFFF;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="hero_hor_marg" width="25" align="left" valign="top" style="width:25px;">&nbsp;</td>
+								<td align="left" valign="top"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td class="hero_ver_marg" height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td align="left" valign="middle" style="line-height:34px;mso-line-height-rule:exactly;"><span class="hero_ttl" style="font-family:Arial, Helvetica, sans-serif;color:#387089;font-size:28px;">Some title here</span></td>
+										</tr>
+										<tr>
+											<td height="15" align="left" valign="top" style="height:15px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td align="left" valign="middle" style="line-height:18px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:13px;">Hello,</span></td>
+										</tr>
+										<tr>
+											<td height="18" align="left" valign="top" style="height:18px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td align="left" valign="middle" style="line-height:18px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl lorem, efficitur accumsan enim. Donec sodales scelerisque rutrum. Quisque pellentesque scelerisque metus.</span></td>
+										</tr>
+										<tr>
+											<td height="18" align="left" valign="top" style="height:18px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td align="left" valign="middle" style="line-height:18px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:13px;">Nam vehicula, metus eu sagittis tempor, elit tortor fermentum sem, bibendum cursus turpis neque ac mi. Cras dignissim nulla eu dolor pulvinar pretium mattis vel augue.</span></td>
+										</tr>
+										<tr>
+											<td height="18" align="left" valign="top" style="height:18px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td align="left" valign="middle" style="line-height:18px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:13px;">Integer fermentum lorem ut lorem hendrerit sollicitudin.</span></td>
+										</tr>
+										<tr>
+											<td height="18" align="left" valign="top" style="height:18px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td class="hero_cta" align="right" valign="middle"><a href="http://www.altaire.com" target="_blank" style="display:inline-block;"><img src="https://tobyelliott.io/coding-challenge/hero_cta.jpg" alt="Shop now" border="0" width="132" height="40" style="width:132px;height:40px;display:block;color:#387089;" /></a></td>
+										</tr>
+										<tr>
+											<td class="hero_ver_marg" height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+									</table></td>
+								<td class="hero_hor_marg" width="25" align="left" valign="top" style="width:25px;">&nbsp;</td>
+							</tr>
+						</table></td>
+				</tr>
+				<!-- END_HERO_COPY_TTL_CTA --> 
+				
+				<tr>
+					<td height="30" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+				<!-- POD1 -->
+				<tr>
+					<td align="left" valign="middle"">
+						<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="center" valign="middle"><span class="mid_ttl" style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:20px;line-height:25px;mso-line-height-rule:exactly;">Title title</span></td>
+							</tr>
+							<tr>
+								<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left" class="white-bg" valign="top">
+									<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="left" valign="middle">
+												<table class="more_cont" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td class="pod1_img no-padding-right" width="190" height="317" align="left" valign="top" style="padding-right:15px;width:190px;height:317px;"><a class="pod1_a" href="http://www.altaire.com" target="_blank" style="display:block;color:#3D3D3D;"><img class="hide_320" src="https://tobyelliott.io/coding-challenge/pod1.jpg" alt="A person typing" border="0" width="190" height="317" style="font-family:Arial, Helvetica, sans-serif;width:190px;height:317px;display:block;color:#3D3D3D;font-size:13px;" /></a></td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td class="pod1_img" width="190" height="317" align="left" valign="top" style="width:190px;height:317px;"><a class="pod1_a" href="http://www.altaire.com" target="_blank" style="display:block;color:#3D3D3D;"><img class="hide_320" src="https://tobyelliott.io/coding-challenge/pod1.jpg" alt="A person typing" border="0" width="190" height="317" style="font-family:Arial, Helvetica, sans-serif;width:190px;height:317px;display:block;color:#3D3D3D;font-size:13px;" /></a></td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont_last" width="190" align="right" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td class="pod1_img" width="190" height="317" align="left" valign="top" style="width:190px;height:317px;"><a class="pod1_a" href="http://www.altaire.com" target="_blank" style="display:block;color:#3D3D3D;"><img class="hide_320" src="https://tobyelliott.io/coding-challenge/pod1.jpg" alt="A person typing" border="0" width="190" height="317" style="font-family:Arial, Helvetica, sans-serif;width:190px;height:317px;display:block;color:#3D3D3D;font-size:13px;" /></a></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- END_POD1 -->
+				<tr>
+					<td height="30" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+				<!-- RECIPES -->
+				<tr>
+					<td align="left" valign="middle">
+						<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="center" valign="middle"><span class="mid_ttl" style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:20px;line-height:25px;mso-line-height-rule:exactly;">Title title</span></td>
+							</tr>
+							<tr>
+								<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left" valign="top">
+									<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="left" valign="middle">
+												<table class="more_cont_large" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td class="no-padding-right" height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;padding-right:15px;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img class="full-width" src="https://tobyelliott.io/coding-challenge/recipe_1.jpg" alt="HTML code" width="190" height="96" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+													</tr>
+													<tr>
+														<td align="left" class="no-padding-right" valign="middle" style="padding-right:15px;">
+															<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+																<tr>
+																	<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title 1</strong></span></a></td>
+																</tr>
+																<!-- <tr>
+																	<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr> -->
+																<tr>
+																	<td align="center" class="padding" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;padding-right:20px;padding-left:20px;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Lorem ipsum dolor sit amet, usu et graeco contentiones, ea pri facer scripserit delicatissimi.</span></td>
+																</tr>
+																<tr>
+																	<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img src="https://tobyelliott.io/coding-challenge/recipes_cta.png" alt="Let's go" width="109" height="30" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+																</tr>
+																<tr>
+																	<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont_large" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img class="full-width" src="https://tobyelliott.io/coding-challenge/recipe_1.jpg" alt="HTML code" width="190" height="96" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+													</tr>
+													<tr>
+														<td align="left" class="no-padding-right" valign="middle">
+															<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+																<tr>
+																	<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title 1</strong></span></a></td>
+																</tr>
+																<!-- <tr>
+																	<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr> -->
+																<tr>
+																	<td align="center" class="padding" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;padding-right:20px;padding-left:20px;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Lorem ipsum dolor sit amet, usu et graeco contentiones, ea pri facer scripserit delicatissimi.</span></td>
+																</tr>
+																<tr>
+																	<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img src="https://tobyelliott.io/coding-challenge/recipes_cta.png" alt="Let's go" width="109" height="30" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+																</tr>
+																<tr>
+																	<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont_last" width="190" align="right" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img class="full-width" src="https://tobyelliott.io/coding-challenge/recipe_1.jpg" alt="HTML code" width="190" height="96" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+													</tr>
+													<tr>
+														<td align="left" valign="middle">
+															<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+																<tr>
+																	<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title 1</strong></span></a></td>
+																</tr>
+																<!-- <tr>
+																	<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr> -->
+																<tr>
+																	<td align="center" class="padding" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;padding-right:20px;padding-left:20px;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Lorem ipsum dolor sit amet, usu et graeco contentiones, ea pri facer scripserit delicatissimi.</span></td>
+																</tr>
+																<tr>
+																	<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img src="https://tobyelliott.io/coding-challenge/recipes_cta.png" alt="Let's go" width="109" height="30" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+																</tr>
+																<tr>
+																	<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- END_RECIPES -->
+				<tr>
+					<td height="20" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+				<!-- BANNER_IMG -->
+				<tr>
+					<td class="banner_img" width="600" height="176" align="left" valign="top" style="width:600px;height:176px;"><a class="banner_a" href="http://www.altaire.com" target="_blank" style="display:block;color:#3D3D3D;"><img class="hide_320" src="https://tobyelliott.io/coding-challenge/banner.jpg" alt="Laptop" border="0" width="600" height="176" style="font-family:Arial, Helvetica, sans-serif;width:600px;height:176px;display:block;color:#3D3D3D;font-size:13px;" /></a></td>
+				</tr>
+				<!-- END_BANNER_IMG -->
+				<tr>
+					<td height="30" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+				<!-- BENEFITS -->
+				<tr>
+					<td align="left" valign="middle">
+						<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="center" valign="middle"><span class="mid_ttl" style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:20px;line-height:25px;mso-line-height-rule:exactly;">Title title</span></td>
+							</tr>
+							<tr>
+								<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left" valign="top" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+									<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="15" align="left" valign="top" style="width:15px;">&nbsp;</td>
+											<td align="left" valign="middle">
+												<table class="more_cont" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img src="https://tobyelliott.io/coding-challenge/benefit_1.png" alt="1" width="69" height="69" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+													</tr>
+													<tr>
+														<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title 1</strong></span></a></td>
+													</tr>
+													<tr>
+														<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Lorem ipsum dolor <br />
+															sit amet</span></td>
+													</tr>
+													<tr>
+														<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr class="hide_480">
+														<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img src="https://tobyelliott.io/coding-challenge/benefit_2.png" alt="1" width="69" height="69" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+													</tr>
+													<tr>
+														<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title 2</strong></span></a></td>
+													</tr>
+													<tr>
+														<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Lorem ipsum dolor <br class="hide_320"/>
+															sit amet</span></td>
+													</tr>
+													<tr>
+														<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont_last" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr class="hide_480">
+														<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><img src="https://tobyelliott.io/coding-challenge/benefit_3.png" alt="1" width="69" height="69" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></a></td>
+													</tr>
+													<tr>
+														<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title 3</strong></span></a></td>
+													</tr>
+													<tr>
+														<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Lorem ipsum dolor <br class="hide_320"/>
+															sit amet</span></td>
+													</tr>
+													<tr>
+														<td height="30" align="left" valign="top" style="height:30px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+												</table>
+											</td>
+											<td width="15" align="left" valign="top" style="width:15px;">&nbsp;</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- END_BENEFITS -->
+				<tr>
+					<td height="20" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+				<!-- HELP -->
+				<tr>
+					<td align="left" valign="middle">
+						<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="left" valign="middle">
+									<table class="more_cont" width="290" align="left" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;width:290px;">
+										<tr>
+											<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;">
+												<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td align="right" valign="middle"><img src="https://tobyelliott.io/coding-challenge/help_icon1.png" alt="?" width="27" height="27" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></td>
+														<td width="10" align="left" valign="top" style="width:10px;">&nbsp;</td>
+														<td align="left" valign="middle"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title</strong></span></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td align="center" class="large-padding" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Visit our <a class="pink" href="http://www.altaire.com" target="_blank" style="color:#387089;"><span class="pink" style="text-decoration:underline;">Website</span></a> Lorem ipsum dolor <br class="hide_320"/>
+												sit amet, usu et graeco contentiones</span></td>
+										</tr>
+										<tr>
+											<td height="40" align="left" valign="top" style="height:40px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+									</table>
+									
+									<!--[if mso]></td><td><![endif]-->
+									
+									<table class="more_cont_last" width="290" align="right" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;width:290px;">
+										<tr>
+											<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;">
+												<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td align="right" valign="middle"><img src="https://tobyelliott.io/coding-challenge/help_icon1.png" alt="?" width="27" height="27" style="color:#3D3D3D;display:block;font-family:Arial, Helvetica, sans-serif;font-size:13px;" /></td>
+														<td width="10" align="left" valign="top" style="width:10px;">&nbsp;</td>
+														<td align="left" valign="middle"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#3D3D3D;"><strong>Title</strong></span></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+										<tr>
+											<td align="center" class="large-padding" valign="middle" style="line-height:22px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Add <a class="pink" href="mailto:email@email.co.uk" style="color:#387089;"><span class="pink" style="text-decoration:underline;">email@email.co.uk</span></a> <br class="hide_320"/>
+												to lorem ipsum dolor sit amet</span></td>
+										</tr>
+										<tr>
+											<td height="40" align="left" valign="top" style="height:40px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- END_HELP -->
+				<tr>
+					<td height="20" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+				<!-- PARTNERS -->
+				<tr>
+					<td align="left" valign="middle" bgcolor="#FFFFFF" style="background-color:#FFFFFF;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="center" valign="middle"><span class="mid_ttl" style="font-family:Arial, Helvetica, sans-serif;color:#3D3D3D;font-size:16px;line-height:25px;mso-line-height-rule:exactly;"><strong>And much more</strong></span></td>
+							</tr>
+							<tr>
+								<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left" valign="top"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="15" align="left" valign="top" style="width:15px;">&nbsp;</td>
+											<td align="left" valign="middle"><table class="more_cont_large" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#387089;">Brand</span></a></td>
+													</tr>
+													<tr>
+														<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center" valign="middle" style="line-height:18px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Click <a class="pink" href="http://www.altaire.com" target="_blank" style="color:#387089;"><span class="pink" style="text-decoration:underline;">here</span></a> to visit <br class="hide_320"/>
+															our website</span></td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont_large" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#387089;">Brand</span></a></td>
+													</tr>
+													<tr>
+														<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center" valign="middle" style="line-height:18px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Click <a class="pink" href="http://www.altaire.com" target="_blank" style="color:#387089;"><span class="pink" style="text-decoration:underline;">here</span></a> to visit <br class="hide_320"/>
+															our website</span></td>
+													</tr>
+												</table>
+												
+												<!--[if mso]></td><td><![endif]-->
+												
+												<table class="more_cont_last_large" width="190" align="left" border="0" cellspacing="0" cellpadding="0" style="width:190px;">
+													<tr>
+														<td height="20" align="center" valign="middle" style="height:20px;line-height:20px;mso-line-height-rule:exactly;"><a class="pink_ttl" href="http://www.altaire.com" target="_blank" style="color:#387089;text-decoration:none;"><span class="more_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#387089;">Brand</span></a></td>
+													</tr>
+													<tr>
+														<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center" valign="middle" style="line-height:18px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#3D3D3D;">Click <a class="pink" href="http://www.altaire.com" target="_blank" style="color:#387089;"><span class="pink" style="text-decoration:underline;">here</span></a> to visit <br class="hide_320"/>
+															our website</span></td>
+													</tr>
+												</table></td>
+											<td width="15" align="left" valign="top" style="width:15px;">&nbsp;</td>
+										</tr>
+									</table></td>
+							</tr>
+							<tr>
+								<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+						</table></td>
+				</tr>
+				<!-- END_PARTNERS -->
+				<tr>
+					<td height="20" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<!-- END_SECTIONS --> 
+<!-- FOOTER -->
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#DFDFDF" style="border-collapse:collapse;border-spacing:0px;mso-table-lspace:0px;mso-table-rspace:0px;background-color:#DFDFDF;">
+	<tr>
+		<td align="center" valign="top"><table class="wrapper" width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="width:600px;min-width:600px;max-width:600px;">
+				<tr>
+					<td align="left" valign="top"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" bgcolor="#DFDFDF" style="background-color:#DFDFDF;">
+							<tr>
+								<td height="20" align="left" valign="top" style="height:20px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left" valign="top"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="25" align="left" valign="top" style="width:25px;">&nbsp;</td>
+											<td align="left" valign="top"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td height="30" align="center" valign="middle" style="height:30px;"><span class="section_ttl" style="font-family:Arial, Helvetica, sans-serif;font-size:20px;line-height:30px;mso-line-height-rule:exactly;color:#666666;">Check us out on</span></td>
+													</tr>
+													<tr>
+														<td height="15" align="left" valign="top" style="height:15px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center" valign="top"><table class="foo_ico_cont" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="hide_320" width="75" align="left" valign="top" style="width:75px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																	<td class="foo_ico_cont" width="400" align="left" valign="top" style="width:400px;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td class="foo_ico" width="80" align="center" valign="top" style="width:80px;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td align="center" valign="top"><a href="http://www.altaire.com" target="_blank" style="display:block;"><img src="https://tobyelliott.io/coding-challenge/social_facebook.png" alt="" border="0" width="32" height="32" style="width:32px;height:32px;display:block;" /></a></td>
+																						</tr>
+																						<tr>
+																							<td height="30" align="center" valign="middle" style="height:30px;"><span style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:11px;line-height:30px;mso-line-height-rule:exactly;">Facebook</span></td>
+																						</tr>
+																					</table></td>
+																				<td class="foo_ico" width="80" align="center" valign="top" style="width:80px;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td align="center" valign="top"><a href="http://www.altaire.com" target="_blank" style="display:block;"><img src="https://tobyelliott.io/coding-challenge/social_twitter.png" alt="" border="0" width="32" height="32" style="width:32px;height:32px;display:block;" /></a></td>
+																						</tr>
+																						<tr>
+																							<td height="30" align="center" valign="middle" style="height:30px;"><span style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:11px;line-height:30px;mso-line-height-rule:exactly;">Twitter</span></td>
+																						</tr>
+																					</table></td>
+																				<td class="foo_ico" width="80" align="center" valign="top" style="width:80px;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td align="center" valign="top"><a href="http://www.altaire.com" target="_blank" style="display:block;"><img src="https://tobyelliott.io/coding-challenge/social_google.png" alt="" border="0" width="32" height="32" style="width:32px;height:32px;display:block;" /></a></td>
+																						</tr>
+																						<tr>
+																							<td height="30" align="center" valign="middle" style="height:30px;"><span style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:11px;line-height:30px;mso-line-height-rule:exactly;">Google+</span></td>
+																						</tr>
+																					</table></td>
+																				<td class="foo_ico" width="80" align="center" valign="top" style="width:80px;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td align="center" valign="top"><a href="http://www.altaire.com" target="_blank" style="display:block;"><img src="https://tobyelliott.io/coding-challenge/social_youtube.png" alt="" border="0" width="32" height="32" style="width:32px;height:32px;display:block;" /></a></td>
+																						</tr>
+																						<tr>
+																							<td height="30" align="center" valign="middle" style="height:30px;"><span style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:11px;line-height:30px;mso-line-height-rule:exactly;">YouTube</span></td>
+																						</tr>
+																					</table></td>
+																				<td class="foo_ico" width="80" align="center" valign="top" style="width:80px;"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td align="center" valign="top"><a href="http://www.altaire.com" target="_blank" style="display:block;"><img src="https://tobyelliott.io/coding-challenge/social_instagram.png" alt="" border="0" width="32" height="32" style="width:32px;height:32px;display:block;" /></a></td>
+																						</tr>
+																						<tr>
+																							<td height="30" align="center" valign="middle" style="height:30px;"><span style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:11px;line-height:30px;mso-line-height-rule:exactly;">Instagram</span></td>
+																						</tr>
+																					</table></td>
+																			</tr>
+																		</table></td>
+																	<td class="hide_320" width="75" align="left" valign="top" style="width:75px;">&nbsp;</td>
+																</tr>
+															</table></td>
+													</tr>
+													<tr>
+														<td height="15" align="left" valign="top" style="height:15px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;border-bottom:solid 1px #cccccc;">&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="left" valign="top"><table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td width="5" align="left" valign="top" style="width:5px;">&nbsp;</td>
+																	<td align="left" valign="top"><table align="left" border="0" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td height="15" align="left" valign="top" style="height:15px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																			</tr>
+																			<tr>
+																				<td height="19" align="left" valign="middle" style="height:19px;line-height:19px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;color:#666666;font-size:13px;"><strong>Terms and conditions</strong></span></td>
+																			</tr>
+																			<tr>
+																				<td height="10" align="left" valign="top" style="height:10px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+																			</tr>
+																			<tr>
+																				<td align="left" valign="middle" style="line-height:19px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#666666;">Lorem ipsum dolor sit amet, usu et graeco contentiones, ea pri facer scripserit delicatissimi. Ex etiam convenire mea, tota mutat phaedrum cu vim. Mundi albucius repudiare at vim, vel ea dictas veritus graecis. Dolore aperiri consequuntur te nam, nec ad elit possit oportere, stet mollis torquatos ea sea. Mel wisi aperiri recteque ex, id illum summo honestatis eam. Regione molestie vim ea, prima autem contentiones eam ad, tale posse delicatissimi id eos. Per fastidii oportere cu, cu mea congue aliquip. <br />
+																					<br />
+																					</span></td>
+																			</tr>
+																			<tr>
+																				<td align="left" valign="middle" style="line-height:19px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#666666;">Lorem ipsum dolor sit amet, usu et graeco contentiones, ea pri facer scripserit delicatissimi. Ex etiam convenire mea, tota mutat phaedrum cu vim. Mundi albucius repudiare at vim, vel ea dictas veritus graecis. Dolore aperiri consequuntur te nam, nec ad elit possit oportere, stet mollis torquatos ea sea. Mel wisi aperiri recteque ex, id illum summo honestatis eam. Regione molestie vim ea, prima autem contentiones eam ad, tale posse delicatissimi id eos. Per fastidii oportere cu, cu mea congue aliquip. <br />
+																					<br />
+																					</span></td>
+																			</tr>
+																			<tr>
+																				<td align="left" valign="middle" style="line-height:19px;mso-line-height-rule:exactly;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#666666;">Lorem ipsum dolor sit amet, usu et graeco contentiones, ea pri facer scripserit delicatissimi. Ex etiam convenire mea, tota mutat phaedrum cu vim. Mundi albucius repudiare at vim, vel ea dictas veritus graecis. Dolore aperiri consequuntur te nam, nec ad elit possit oportere, stet mollis torquatos ea sea. Mel wisi aperiri recteque ex, id illum summo honestatis eam. Regione molestie vim ea, prima autem contentiones eam ad, tale posse delicatissimi id eos. Per fastidii oportere cu, cu mea congue aliquip. <br />
+																					<br />
+																					</span></td>
+																			</tr>
+																		</table></td>
+																	<td width="5" align="left" valign="top" style="width:5px;">&nbsp;</td>
+																</tr>
+															</table></td>
+													</tr>
+												</table></td>
+											<td width="25" align="left" valign="top" style="width:25px;">&nbsp;</td>
+										</tr>
+									</table></td>
+							</tr>
+							<tr>
+								<td height="25" align="left" valign="top" style="height:25px;font-size:0px;line-height:0px;mso-line-height-rule:exactly;">&nbsp;</td>
+							</tr>
+						</table></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<!-- END_FOOTER -->
+</body>
+</html>

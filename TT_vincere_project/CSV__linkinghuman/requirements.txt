@@ -1,0 +1,11 @@
+pandas
+six
+pymssql
+geopy
+boto
+Deprecated
+googlemaps
+psycopg2
+sqlalchemy
+lxml
+beautifulsoup4

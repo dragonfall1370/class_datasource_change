@@ -1,0 +1,47 @@
+Sally McGrath
+
+I am a flexible and self driven coder with strong design skills and technical experience. I prefer to work remotely but am happy to come in for meetings and team stuff. My key strengths are accessibility, semantics, structured data, speed, pragmatism, and real fluency with the basics.
+
+Some Relevant Experience:
+
+> Senior Front End Developer
+OTW/ AO3
+September 2007 to November 2011
+
+I built this nonprofit software in a large distributed international team, growing from a group of friends to an Alexa 1000 site in five years. I developed on the interface, UX, UI and branding, including design briefs, wireframes, user testing, right through to coding the whole front end and producing documentation and training materials. Between 2007 and 2011 I wrote 10% of the codebase (open source and reviewable on github), including a novel component skin system and highly accessible, cross browser compliant front end. Rails, HTML, CSS, JS. 
+
+> New Media Artist
+May 2006 to Present
+
+I am an internationally exhibited new media artist (video remix). My work has been exhibited in numerous shows, including The Library of Congress, New York Museum of the Moving Image, Hammer Museum UCLA, Vancouver Art Gallery, and many more. I can provide a more complete portfolio if desired, but for the purposes of this CV I mention this only to demonstrate my competence with film editing, motion graphics, and software packages like Photoshop, After Effects, Premiere, Final Cut, etc.
+
+> Multidisciplinary Creative - Freelance
+July 2011 to March 2015
+
+During this time I worked as a freelance creative, taking various commissions in book cover design, wireframe and UX design briefs, ad and trailer creation and editing and VFX. I am happy to provide testimonials from clients.
+
+> Technical Consultant
+robotsandcake.org
+February 2014 to Present
+
+I designed and built the unique voice dictation CMS that delivers the website robotsandcake.org. I am supporting the front end and product development as it grows.
+
+> Creative and Technical Director
+Limograf Limited
+April 2015 to Present
+
+I develop the sites under the Limograf umbrella, largely highly optimised static sites written in Jekyll: Liquid, YAML, HTML, CSS, JQuery. (At the moment we're in Jekyll; we are switching to Go and React in the new year, perhaps because I am restless.) I lead the UX, branding, and code. Through Limograf I also do part time contracting in front end code review, development, cross browser compliance and accessibility, structured data and so on for enterprise level SAAS. I can provide testimonials.
+
+> Lead Developer
+inventability.net
+June 2016 to Present
+
+I design, build, and maintain the website inventability.net, a project of Limograf Limited. It's designed specifically for severely disabled people and is highly accessible. I am happy to talk through the design decisions made on this site and demonstrate ways to implement open design reasoning and principles, while retaining your look and feel, on your corporate system.
+
+
+
+
+
+
+
+

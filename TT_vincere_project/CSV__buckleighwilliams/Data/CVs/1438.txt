@@ -1,0 +1,99 @@
+Mr. Hamid BOUALI
+Software engineer (B.Sc. in Computer Science and Engineering)
+Reading, RG1 3QJ
+Tel.: 078 47 57 67 78
+hd.bouali@gmail.com
+
+Written and spoken languages:English, French.
+
+Professional Profile
+- Object oriented analysis, design and programming.
+- Windows/Unix/Linux object oriented software development (C/C++/Visual C++/Borland C++ Builder.
+- Database software development (SQL Server, Sybase, MySQL, Interbase, Oracle).
+- Networking/Internet software development (sockets, TCP/IP).
+- Maintain existing software and write documentation.
+
+
+Experience
+02/2017 - present:
+Ancoa software Ltd., London - UK
+Software developer
+· Maintained data conversion applications (C++/STL/Qt/XML/Linux/Windows).
+· Developed a real-time data conversion application (C++/STL/Qt/ZeroMQ/XML/Linux).
+
+
+02/2014 - 02/01/2015:
+BNP Paribas CIB, Paris - France
+Software developer
+· Developed/maintained multiple modules of trading software within the equity derivatives development team (ETG) (Visual C++ 2008/STL/multithreading/Linux/Windows): feature development, bug/memory leaks correction, applications’ crashes correction (core analysis with gdb).
+· Developed/maintained GUI application (Drive) for trading software (Java/Eclipse RCP/JFace).
+· Unit, functional and regression testing (C++), Swtbot testing (Java/Junit).
+
+
+04/2011 - 02/2014:
+Getraline, Versailles - France
+Software developer
+· Design and development of an engine processing inventories of fixtures (I/O) and technical audits (C++/Qt/STL/multithreading/XML/Linux/Windows/MySQL).
+· Designed and developed a front-end server for IP communication (C++/Qt/STL/multithreading/socket/XML/Linux/Windows/MS SQL Server 2008).
+· Designed and implemented a multiprotocol front-end server (C++/Qt/STL/multithreading/socket/Linux/Windows/MS SQL Server 2008).
+
+
+09/2008 - 10/2010:
+Nagra France (Formerly Canal + Technologies), Paris - France (www.nagravision.com)
+Software developer
+· Development/Maintenance of object oriented applications of the DBC system - Digital Broadcast Center (Visual C++ 2003/STL/Delphi 5 & 7/multithreading/socket/XML/Windows XP & 2008/MS SQL Server 2000 & 2008/CM Synergy).
+· Optimised the performance of these applications: SQL and database optimisation.
+· Unit testing, regression testing, and assistance to releases.
+
+
+09/2007 - 08/2008:
+Arval, Rueil-Malmaison - France (a BNP Paribas company, www.arval.fr)
+Software developer
+· Maintained existing software, in particular an application for customer offers quotation and reporting (Visual C++ 2003/Sybase 12.5).
+· Designed and developed object oriented Client/Server software (Delphi 6/Windows XP/ Sybase 12.5/Serena Dimensions), along with unit testing, and regression testing.
+
+
+06/2003 - 09/2007:
+Mediagrif Interactive Technologies Inc., Montreal, Quebec - Canada (www.mediagrif.com)
+Software developer
+· Designed/developed the JMS software (Jobber Management System) for the complete management of the automotive aftermarket (Builder C++ 2006/STL/multithreading/Windows/Interbase 7.5/VSS).
+· Analysed/developed the B2B e-commerce internet ordering module for the automotive aftermarket (Builder C++ 2006/STL/multithreading/socket/XML/Windows/Interbase 7.5).
+· Implemented the end of day closing/processing module (Builder C++ 2006/Windows/ Interbase).
+· Optimised the performance of all developed software: SQL and database optimisation.
+
+
+12/2001 - 06/2003:
+EROS Inc. - Operational research in Healthcare team, Montreal - Canada (www.erosinfo.com)
+Software developer
+· Developed a database server for the Client/Server software PLAISIR (C++/STL/Codebase/Linux).
+· Developed Communication and DataProvider components, and client applications for PLAISIR (Visual C++ 6.0/STL/socket/Windows).
+· Implemented the Client/Server software PRNVisuel (Visual C++/multithreading/socket/Windows).
+· Maintained existing modules of PLAISIR (C/Codebase/Linux).
+
+
+10/1997 - 01/2001:
+The Greater Algiers Information Server - Algiers, Algeria
+Software engineer
+· Developed a Client/Server software for conciliation of customer accounts (Builder C++ 5/STL/SQL/multithreading/socket/Windows).
+· Developed a web server activity reporting software (Delphi 5/Window).
+· Installed and administered Tacacs+ server (C/Linux, Cisco 4700 routers), secondary DNS/mail server (Sendmail/POP3/Linux), web server IIS, primary DNS Windows NT Server of the company.
+
+
+Education
+1992: El Idrissi high school, Algiers - Algeria: Baccalaureate (mathematics), graduated with honours.
+
+1992 - 1997: University of Sciences and Technology Houari Boumediene (USTHB) - Algiers, Algeria
+    Engineer diploma in Computer Science and Engineering, graduated with first class honours
+    Ranked 22nd/229 students class - GPA 15/20, (Equivalent of a Bachelor in Computer Science and
+    Engineering from the University of Toronto, Canada).
+
+    Engineer diploma thesis in Computer Science and Engineering (5th year: 1996 - 1997)
+    Designed/developed a cross assembler for Motorola MC68000 processors, Windows/Borland C++ 4.0.
+
+
+Technical Skills Summary
+
+Programming Languages : C++/C, Java, Delphi, C#, ASP.NET, Intel x86/Motorola 68k assemblies, XML, HTML, UMLIDE:Visual Studio, Qt, Eclipse, C++ Builder, Delphi, Borland C++
+RDBMS : SQL Server, MySQL, PostgreSQL, Sybase, Interbase, Oracle, Paradox, DbaseSource versioning:Git, SVN, CM Synergy, Serena Dimensions, VSSOperating
+Systems : Windows(10/8/7/2008 Server/XP/2000/NT/9x), Unix, Linux, MS-DOS
+Networking : TCP/IP, DNS, HTTP, FTP, SMTP, POP3, DHCP Protocols, Tacacs+ authentication Servers, and web, mail, DNS, Proxy Servers, IP Routing, Cisco IOS, Cisco routers

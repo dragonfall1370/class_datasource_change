@@ -1,0 +1,29 @@
+I have used Crystal reports for automating letter batches and for invoices at Prism medical.
+I have optimised a ERP invoice using crystal reports.
+I created the sales dashboard which showed departmental progress in the month highlighting the number of application per cal staff and if they had met their targets against the month.
+THe managers thier praised this report as it automated what was a manual daily report.
+I also created a call stats graph SSRs report showing individual and departmental data which was appreciated by the business manager. This report I had to liase with this manager to work out his KPIs and how he wanted the information to help him assess the business.
+
+I learnt SSIS and SSRs at motormile and worked in a team to get 100 gb of customer white data into a database. 
+
+I want to learn the full micorosft BI stack so that I can be complete BI developer and handle all MI queries. It allows you to do a complete and proper analysis.
+
+
+
+Experience with SQL Server (where you’ve worked with it? When you’ve worked with it?
+talkttalk + 7 years , motormile, prism and carfinance247 = 2 years
+
+Experience with SSIS and SSRS (where/when you’ve worked with it?) motormile and carfinance247 
+
+Willingness to learn and how you’ve demonstrated this (in a technical sense)
+I underwent the online training for qlikview and also spent a weekend to learning excel VBA so that I could complete a police invetigation for call records for a particular company.
+
+Evidence of how you’ve got your ‘hands dirty’.
+I incorporated windows batch files with SSIS routines to automate a a daily csv file load.
+
+How quickly you’ve picked up new technical skills and overcome problems?
+SSIS was difficult to get the data size for certain columns and to clean data. Used tools such as text editors and excel to clean data.
+LEarnt SSRS expressions to carry out logic for dispaly fields.
+
+Passion for IT
+Been doing IT 9 years plus now.

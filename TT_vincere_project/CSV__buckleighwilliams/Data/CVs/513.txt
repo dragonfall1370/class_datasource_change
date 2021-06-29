@@ -1,0 +1,127 @@
+David Acton
+
+31 Harrogate Terrace, Murton, Seaham, County Durham SR7 9PQ
+
+0191 5264320  ivan@oddcat.org
+
+
+Profile
+-------
+
+A programmer of more than 20 years experience, I have a strong
+background in C, C++ and Python and a good working knowledge of other
+languages, many programming environments and other development tools.
+I also have much experience in technical writing and documentation.
+
+Skills and experience
+---------------------
+
+C++: Very strong understanding of object-oriented programming, with
+eight years practical experience of C++ development.
+
+C: I have written several complete commercial applications in C.
+
+Python: Four years of Python experience, developing full applications
+and numerous support scripts.
+
+Linux: Eight years experience working in a Linux environment
+(RedHat, then Debian), my knowledge includes the use of all the common
+programming tools (gcc, Gnu make, emacs), as well as more specialized
+C tools such as flex & bison, and cross-language/platform development
+tools (e.g. SWIG, MinGW32) and libraries (Qt, wxWidgets etc.).
+Although I use Python for everyday scripting purposes, I have some
+experience of writing Perl and Linux shell scripts also.
+
+Other: mySQL, XML, HTML, Javascript (including AJAX techniques).  Good
+working knowledge of a wide variety of Linux and Windows desktop
+applications.  ARM and 8-bit assembly-language programming experience.
+
+Writing: I have written manuals and documentation for many
+applications and, in previous employment, numerous articles on
+programming and technical matters.
+
+
+Achievements with current employer (Alphawave Ltd)
+--------------------------------------------------
+
+Developed from scratch a complete cross-platform GUI in C++ for
+control and monitoring software that is currently used worldwide by
+clients such as the World Bank, the FCO and the BBC.
+
+Produced C drivers to control a wide range of hardware (via
+serial/ethernet etc) including satellite modems, high-powered
+amplifiers, antenna controllers and spectrum analyzers.
+
+Developed a Qt-based GUI (for Linux & Windows) in C++ for
+filter-testing hardware.
+
+Produced various pieces of custom-written code for individual
+customers' needs, including redundancy control and 'mimic' panels.
+
+
+Career Summary
+--------------
+
+1999 - 2007	Programmer, Alphawave Ltd
+
+My main role at Alphawave has been to develop a GUI for the 'CAM'
+application which allows users to monitor and control remote hardware
+(e.g. over a satellite overhead channel).  Written in C++, the CAM GFX
+is a self-contained cross-platform application.  I have subsequently
+developed the orginal product to integrate Python scripting to the C++
+core, and have also produced an HTML-serving version of the
+application.  (More details can be found at
+http://www.alphawave.net/cam.html)
+
+Another large project was a GAMP-compliant GUI/database for a
+filter-testing unit.  This I constructed in C++ using the Qt
+cross-platform library.
+
+1989 - 1999	Freelance programmer & technical writer
+
+I converted the US Gold Scrabble program (TSP) from PC format to run
+on both ARM-based Acorn hardware and Philips CDi.
+
+I completed a wide variety of projects for Acorn machines, including
+demonstration software for Acorn themselves, a GUI/database for
+biofeedback hardware, video-subtitling software and a high-density
+floppy disc filing system.
+
+I continued to write for Acorn User magazine, now centred around
+32-bit ARM technology, including various regular columns and features
+over the years.  I also supported my previous software for Autocue Ltd
+for several years, adding functionality when requested by customers
+and making on-site visits.
+
+1988 - 1989	Programmer, Capicorn Consulting
+
+My role at Capricorn was to develop teleprompting software on
+custom-built 8-bit hardware for a third-party client (Autocue Ltd).
+
+1986 - 1988	Technical Assistant, Acorn User Magazine
+
+My work here involved preparing 8-bit software for publication,
+writing reviews and articles, preparing monthy cover-discs etc.
+
+
+Other interests and achievements
+--------------------------------
+
+Our young son takes up most of my spare time now, and provides most of
+my entertainment!  I have played in many Scrabble tournaments over the
+years including a couple of World Championships.  I also love
+crosswords and other wordplay.  (I was also a Countdown Series
+Champion some time ago.)  I have a banjo which I play really quite
+badly, and enjoy new challenges, the most recent being to learn
+Spanish.
+
+Education
+
+Denbigh School 1979-1984
+
+A Level Pure Maths (A), Statistics (A), Maths for Engineering &
+Industry (B), Physics (B), Economics (C), General Studies (A)
+
+I went on from school to study Maths & Economics at York University
+for a year, and having taken a year out for work experience in London
+decided I would be happiest continuing in full-time employment.

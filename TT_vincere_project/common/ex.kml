@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name></name>
+		<description> | Created with https://batchgeo.com</description>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+				<name>Apple Store Cross Gates</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(518) 869-3192</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 1</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/crossgates/</value>
+							</Data>
+									</ExtendedData>
+								<address>1 Crossgates Mall Road Albany NY 12203</address>
+				<Point>
+					<coordinates>-73.8498873,42.689901,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+				<name>Apple Store Walden Galleria</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(716) 685-2762</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 2</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/walden/</value>
+							</Data>
+									</ExtendedData>
+								<address>Duke Rd  AND  Walden Ave Buffalo NY 14225</address>
+				<Point>
+					<coordinates>-78.7619931,42.9088002,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#2</styleUrl>
+				<name>Apple Store Roosevelt Field</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(516) 248-3347</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 3</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/rooseveltfield/</value>
+							</Data>
+									</ExtendedData>
+								<address>630 Old Country Rd Garden City NY 11530</address>
+				<Point>
+					<coordinates>-73.6135758,40.7399709,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#2</styleUrl>
+				<name>Apple Store Walt Whitman</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(631) 425-1563</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 3</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/waltwhitman/</value>
+							</Data>
+									</ExtendedData>
+								<address>160 Walt Whitman Rd Huntington Station NY 11746</address>
+				<Point>
+					<coordinates>-73.4106894,40.8229235,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+				<name>Apple Store Carousel</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(315) 422-8484</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 2</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/carousel/</value>
+							</Data>
+									</ExtendedData>
+								<address>9553 Carousel Center Drive Syracuse NY 13290</address>
+				<Point>
+					<coordinates>-76.1709896,43.0673192,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+				<name>Apple Store Staten Island</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(718) 477-4180</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 1</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/statenisland/</value>
+							</Data>
+									</ExtendedData>
+								<address>2655 Richmond Ave Staten Island NY 10314</address>
+				<Point>
+					<coordinates>-74.1659503,40.5817346,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+				<name>Apple Store Eastview</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(585) 421-3030</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 1</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/eastview/</value>
+							</Data>
+									</ExtendedData>
+								<address>7979 Victor Road Victor NY 14564</address>
+				<Point>
+					<coordinates>-77.4437127,43.0299456,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+				<name>Apple Store Palisades</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(845) 353-6756</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 2</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/palisades/</value>
+							</Data>
+									</ExtendedData>
+								<address>1591 Palisades Center Drive West Nyack NY 10994</address>
+				<Point>
+					<coordinates>-73.9534118,41.0982941,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#2</styleUrl>
+				<name>Apple Store The Westchester</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(914) 428-1877</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 3</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/thewestchester/</value>
+							</Data>
+									</ExtendedData>
+								<address>125 Westchester Ave White Plains NY 10601</address>
+				<Point>
+					<coordinates>-73.7585515,41.0315151,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+				<name>Apple Store SoHo</name>				<ExtendedData>
+												<Data name='Phone Number'>
+								<value>(212) 226-3126</value>
+							</Data>
+												<Data name='Group'>
+								<value>Example Group 2</value>
+							</Data>
+												<Data name='URL'>
+								<value>http://www.apple.com/retail/soho/</value>
+							</Data>
+									</ExtendedData>
+								<address>103 Prince Street New York NY 10012</address>
+				<Point>
+					<coordinates>-73.9989341,40.7251231,0</coordinates>
+				</Point>
+			</Placemark>
+		<Style id="0"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/red_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style><Style id="1"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/blue_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style><Style id="2"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/green_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style>	</Document>
+</kml>

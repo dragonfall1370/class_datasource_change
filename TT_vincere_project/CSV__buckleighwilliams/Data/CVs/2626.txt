@@ -1,0 +1,91 @@
+Peter Yates
+7 Cloughs Avenue                                                                Mobile: 0773 3075 395
+Chadderton                                                                E-mail: pd.yates@gmail.com
+Oldham                                                                 Web: http://www.peteryates.net
+OL9 0NR
+
+Skills
+   • Languages: Ruby, Python, Delphi (5-7), PHP, BASH, Javascript, SQL
+   • Markup/Frameworks: HTML, XHTML, HAML, CSS, XML, YAML, XSLT, JQuery, Rails,
+     Django
+
+   • Operating Systems: Linux (Debian, Red Hat, SuSE, Gentoo), MacOS X (10.3-10.5), Windows (95,
+     NT4, 98, 2000, XP, Server 2003)
+   • Relational Database Management Systems: PostgreSQL 7.3-9.0, MySQL 4.1-5.0, Microsoft
+     SQL Server 2000, an extensive knowledge of user deﬁned functions, stored procedures, views, indexes,
+     procedural languages (including PL/Ruby, PL/Python, PL/pgSQL and Microsoft T-SQL), DTS
+     Packages
+   • Testing: RSpec, Cucumber
+   • Miscellaneous: Subversion, Git, Vim, L TEX, Cron, Apache HTTPD, BASH, ZSH
+                                          A
+
+
+Education
+       Manchester Metropolitan University                                                   2001-2004
+   •
+       BSc. Hons Information Technology (2:1)
+
+       North Chadderton Sixth Form College                                                  1999-2001
+   •
+       A-Levels in Biology, Information Technology, Chemistry
+
+       North Chadderton School                                                              1994-1999
+   •
+       9 GCSE (A-C) including: Science, Maths, English
+
+Employment History
+      Software Developer                                               January 2011 - February 2011
+  •
+      Insider Media/Newsco (contract)
+
+        – diagnosed and provided ﬁxes for a number of bugs with the internal editorial content
+          management system
+        – added new functionality to the CMS giving writers the ability to publish articles en masse and
+          have RSS feeds automatically generated
+        – implemented a source control and deployment infrastructure
+        – rewrote the database backup procedure and associated scheduling
+
+      Web Developer                                               November 2008 - September 2010
+  •
+      Setﬁre Media
+
+        – developed web sites and applications for large clients including being a member of the
+          onthebeach.co.uk rewrite team
+        – implemented unit and integration tests for all projects, development undertaken in a BDD
+          environment
+        – performed a variety of system administration tasks on Debian 5.0 and CentOS 5 servers
+        – held responsibility for database administration on all projects, tasks included query optimisation,
+          setting up replication and managing permissions on MySQL 5.1 and PostgreSQL 8.3+
+
+      Senior Information Analyst                                      August 2007 - November 2008
+  •
+      Salford Royal Foundation Trust
+
+        – designed and implemented performance-related reports to help trust meet NHS targets
+        – wrote queries and created Microsoft SQL Server 2000 database objects using Microsoft T-SQL
+        – assisted with the advancement of the internal development methodology
+        – performed database optimisation, troubleshooting and maintenance
+
+      Software Engineer                                                  October 2006 - August 2007
+  •
+      Clicks And Links Ltd.
+
+        – developed and maintained web sites written in Ruby On Rails, Zope and Django
+        – designed database back-ends for web applications in PostgreSQL
+
+      Database Programmer                                                 November 2005 - May 2006
+  •
+      Harrington Brooks Accountants Ltd.                                  (six-month ﬁxed-term contract)
+
+        – developed back-end data objects for new IVA system in Microsoft SQL Server 2000
+        – provided technical assistance to IT team while bug-ﬁxing internal systems in Visual Basic 6.0
+        – implemented source control with Subversion
+
+      Programmer                                                   November 2004 - November 2005
+  •
+      Egton Medical Information Services
+
+        – developed software used in the primary care sector for management of medical records and
+          administrative purposes
+        – obtained Microsoft Certiﬁed Professional qualiﬁcation in Programming SQL Server 2000 (2073)
+
