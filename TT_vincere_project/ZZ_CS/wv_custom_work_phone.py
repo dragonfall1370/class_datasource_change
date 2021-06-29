@@ -78,7 +78,6 @@ vincere_custom_migration.psycopg2_bulk_update_tracking(candidate_mphone, connect
 
 
 
-# %%
 
 
 
